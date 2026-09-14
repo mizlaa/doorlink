@@ -243,7 +243,33 @@ not code" sections at the end are the quick version.
 
 ---
 
-## 8. What would help most
+## 8. Claude is working in parallel — how we avoid collisions
+
+Backend and feature work continues on `main` while you have the UI
+branch out. To keep the merge clean, Claude is staying **additive in the
+visual layer**:
+
+- **Claude will not touch** `src/components/ui/`, `tailwind.config.ts`,
+  or the markup of screens that already exist. Those are yours for the
+  duration.
+- **Claude will add** new routes, new `src/lib/` modules, and new server
+  actions. New screens are built from the existing primitives, so they
+  inherit your improvements to `Button`, `Field`, `Panel` and the rest
+  automatically.
+- **The one file we may both edit** is a nav list — `Header.tsx`'s
+  `NAV_LINKS`/`accountLinks`, `MobileTabBar.tsx`'s `tabs`, and
+  `admin/layout.tsx`'s `ADMIN_NAV`. If you restructure navigation, expect
+  a one-array conflict there and keep the entries; they are
+  permission-gated and dropping one hides a working screen from the role
+  that needs it.
+
+If you find a screen that is not in this document, it was added after
+your branch was cut. It will be using the primitives correctly but will
+not have had your eye on it — worth a pass before you call it done.
+
+---
+
+## 9. What would help most
 
 In rough order of value:
 
