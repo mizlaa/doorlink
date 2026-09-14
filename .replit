@@ -1,0 +1,41 @@
+# Replit configuration.
+#
+# This exists so Replit does not have to guess how to run Doorlink.
+# Without it, Replit detects Next.js, infers a Vercel project, and offers
+# to "port" the app into its own PNPM_WORKSPACE stack — which moves the
+# real application into .migration-backup/ and replaces the root with an
+# empty workspace scaffold. That is a framework migration, not an import,
+# and it is explicitly out of scope (see FRONTEND_HANDOFF.md).
+#
+# Doorlink is Next.js 15 on npm. It runs as-is:
+#
+#     npm install
+#     npm run dev
+#
+# If Replit still offers to convert this project to a pnpm workspace or
+# any other stack: decline.
+
+run = "npm run dev -- --hostname 0.0.0.0 --port $PORT"
+entrypoint = "src/app/page.tsx"
+modules = ["nodejs-20", "postgresql-16"]
+
+hidden = [".next", "node_modules", ".git"]
+
+[nix]
+channel = "stable-24_05"
+
+[env]
+# Next binds to this; Replit sets PORT itself in most templates, and 3000
+# is the fallback so `npm run dev` behaves the same here as locally.
+PORT = "3000"
+
+[deployment]
+build = ["sh", "-c", "npm install && npm run build"]
+run = ["sh", "-c", "npm run start -- --hostname 0.0.0.0 --port $PORT"]
+
+[[ports]]
+localPort = 3000
+externalPort = 80
+
+[gitHubImport]
+requiredFiles = [".replit", "package.json", "next.config.mjs"]
