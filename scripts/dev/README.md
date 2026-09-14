@@ -13,3 +13,15 @@ them are imported by the application.
 - `reset-commission.ts` — puts the commission rate back to its default
   and clears its change history, so `/admin/settings` can be walked from
   a known starting point.
+- `seed-demo-dispute.ts` — puts a job into dispute and files a report, so
+  `/admin/disputes` and `/admin/reports` have something real in them.
+  Creates the job first if none exists.
+
+## A trap worth knowing
+
+Do not run `npm run build` while `npm run dev` is running. They share
+`.next`, and the build overwrites the chunks the dev server is serving —
+every script and stylesheet then 404s, nothing hydrates, and the app
+looks fine while every button is dead. It presents as a mysterious UI bug
+rather than a build problem. If interactivity stops working for no
+reason: stop dev, `rm -rf .next`, start dev again.

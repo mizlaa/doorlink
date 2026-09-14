@@ -24,6 +24,11 @@ const ADMIN_NAV: Array<{
     permission: 'lead:write:any',
   },
   { href: '/admin/verification', label: 'Verification', permission: 'admin:settings' },
+  { href: '/admin/users', label: 'Users', permission: 'admin:settings' },
+  { href: '/admin/disputes', label: 'Disputes', permission: 'admin:settings' },
+  { href: '/admin/reports', label: 'Reports', permission: 'admin:settings' },
+  { href: '/admin/subscriptions', label: 'Subscriptions', permission: 'admin:settings' },
+  { href: '/admin/metrics', label: 'Metrics', permission: 'admin:settings' },
   { href: '/admin/settings', label: 'Settings', permission: 'admin:settings' },
 ]
 
