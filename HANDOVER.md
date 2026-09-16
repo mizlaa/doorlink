@@ -31,9 +31,15 @@ protection stops working.
 2. Never Import from Vercel
 3. Confirm tree: `src/app/`, `prisma/`, `next.config.mjs`, `.replit`
 4. Git pane: checkout **`replit-ui-improvements`**, not `main`
-5. Secrets: `DATABASE_URL`, `DIRECT_URL`
-6. Once: `npm install`, `npm run db:push`, `npm run db:seed`, Run
-7. Keep the Repl **private**. Do not Deploy for design work.
+5. Secrets: `DATABASE_URL` and `DIRECT_URL`. On Replit they can be the
+   **same** URL. Save Secrets, then open a **new** Shell so the env updates.
+6. Once: `npm install`, `npm run db:push`, `npm run db:seed`, Run.
+   A 500 about a missing `Document` table means `db:push` has not run.
+7. If Agent starts “Port imported Vercel app” / `PNPM_WORKSPACE`: **Cancel**.
+   If the file tree shows `pnpm-workspace.yaml` or `artifacts/` at the root,
+   recover (see `WORKFLOW.md` / `REVIEW.md`). Do not push that scaffold.
+8. Keep the Repl **private**. Invite collaborators with **Invite** — do not
+   share a password. Do not Deploy for design work.
 
 **Connected** when a commit you make on `replit-ui-improvements` in Replit
 appears on GitHub.
