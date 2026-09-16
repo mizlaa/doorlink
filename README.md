@@ -9,6 +9,10 @@ roller shutter, motor and locking industry.
 Next.js 15 (App Router) · TypeScript · Tailwind · PostgreSQL via Prisma ·
 Supabase-ready auth and storage · Vercel-compatible.
 
+**Replit:** import this repository from **GitHub only** (`mizlaa/doorlink`).
+Do not use Replit’s “Import from Vercel” — that path migrates the stack.
+See `WORKFLOW.md` and `replit.md`.
+
 DoorLink is free to use, with a peer-to-peer marketplace — anyone with an
 account can list a part for sale, and buyers connect with sellers directly
 (contact reveal, not a payment checkout) to arrange the exchange themselves.

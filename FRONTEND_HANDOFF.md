@@ -249,12 +249,15 @@ keep it driven by `can(session.role, …)` rather than hard-coding menus.
 So you do not design around something that is not there, or assume
 something is missing when it is deliberate:
 
-- No universal search. Each area searches itself.
-- No onboarding flows.
-- Admin has catalogue, marketplace, verification and settings. No users,
-  reports, disputes or subscriptions screens, and no metrics panel.
+- **Universal search exists** at `/search` (manuals, products, technicians,
+  services, parts). Individual areas still have their own search too.
+- **Onboarding exists** at `/welcome` (setup checklist after registration).
+- **Admin** includes catalogue, marketplace, verification, settings, and
+  also **users**, **reports**, **disputes**, **subscriptions**, and
+  **metrics** — all wired, plain UI.
 - No worker availability UI (the schema exists).
-- No message attachments (blocked on storage) and no report/safety flow.
+- No message attachments (blocked on storage).
+- No user-facing report/safety flow (admin **reports** queue exists).
 - No worker reply to a review (the column exists).
 
 `DEVELOPMENT.md` has the full history and the reasoning behind the
@@ -265,9 +268,11 @@ not code" sections at the end are the quick version.
 
 ## 8. Claude is working in parallel — how we avoid collisions
 
-Backend and feature work continues on `main` while you have the UI
-branch out. To keep the merge clean, Claude is staying **additive in the
-visual layer**:
+**Neither side commits to `main`.** Replit works on `replit-ui-improvements`;
+Claude Code works on `claude/<feature>`. Both merge back through pull
+requests only. See `WORKFLOW.md` for the day-to-day steps.
+
+To keep merges clean, Claude stays **additive in the visual layer**:
 
 - **Claude will not touch** `src/components/ui/`, `tailwind.config.ts`,
   or the markup of screens that already exist. Those are yours for the
@@ -276,12 +281,13 @@ visual layer**:
   actions. New screens are built from the existing primitives, so they
   inherit your improvements to `Button`, `Field`, `Panel` and the rest
   automatically.
-- **The one file we may both edit** is a nav list — `Header.tsx`'s
-  `NAV_LINKS`/`accountLinks`, `MobileTabBar.tsx`'s `tabs`, and
-  `admin/layout.tsx`'s `ADMIN_NAV`. If you restructure navigation, expect
-  a one-array conflict there and keep the entries; they are
-  permission-gated and dropping one hides a working screen from the role
-  that needs it.
+- **Shared files we may both edit:** nav lists (`Header.tsx`'s
+  `NAV_LINKS`/`accountLinks`, `MobileTabBar.tsx`'s `tabs`,
+  `admin/layout.tsx`'s `ADMIN_NAV`); `package.json` and
+  `package-lock.json` (union both sides); route `page.tsx` files (you own
+  markup inside `return()`, backend owns logic above it); `.replit` (must
+  stay npm + Next — see `replit.md`). On nav conflicts, keep **every**
+  entry from both sides; they are permission-gated.
 
 If you find a screen that is not in this document, it was added after
 your branch was cut. It will be using the primitives correctly but will

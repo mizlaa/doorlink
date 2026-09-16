@@ -19,7 +19,16 @@ run = "npm run dev -- --hostname 0.0.0.0 --port $PORT"
 entrypoint = "src/app/page.tsx"
 modules = ["nodejs-20", "postgresql-16"]
 
-hidden = [".next", "node_modules", ".git"]
+hidden = [".next", "node_modules"]
+
+language = "nodejs"
+
+[packager]
+language = "nodejs"
+
+[packager.features]
+guessImports = false
+packageSearch = true
 
 [nix]
 channel = "stable-24_05"
