@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { getSession } from '@/lib/auth'
 import { can } from '@/lib/rbac'
-import { devSignOutAction } from '@/lib/dev-session'
+import { signOutAction } from '@/lib/auth-session'
 import { prisma } from '@/lib/prisma'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { unreadNotificationCount } from '@/lib/notifications'
@@ -122,7 +122,7 @@ export async function Header() {
             </Link>
           ))}
           {session ? (
-            <AccountMenu name={session.name} links={accountLinks} signOutAction={devSignOutAction} />
+            <AccountMenu name={session.name} links={accountLinks} signOutAction={signOutAction} />
           ) : (
             <Link
               href="/sign-in"
@@ -138,7 +138,7 @@ export async function Header() {
           <MobileNavToggle
             links={mobileLinks}
             session={session ? { name: session.name } : null}
-            signOutAction={devSignOutAction}
+            signOutAction={signOutAction}
           />
         </div>
       </div>
