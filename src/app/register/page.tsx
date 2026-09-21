@@ -2,24 +2,30 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { RegisterForm } from '@/components/auth/RegisterForm'
 import { NotConnected } from '@/components/ui/NotConnected'
+import { isConnected } from '@/lib/integrations'
 
 export const metadata: Metadata = {
   title: 'Register',
 }
 
 export default function RegisterPage() {
-  const devModeAvailable = process.env.NODE_ENV !== 'production'
+  const supabaseAuth = isConnected('auth')
+  const devModeAvailable = !supabaseAuth && process.env.NODE_ENV !== 'production'
 
   return (
     <div className="mx-auto max-w-sm px-4 py-16">
       <h1 className="text-2xl font-semibold text-graphite">Create an account</h1>
       <p className="mt-2 text-sm text-graphite-soft">
-        No password is set. This creates a development-only session, not real authentication.
+        {supabaseAuth
+          ? 'Choose an account type and set a password. Demo seed accounts are not created in Supabase automatically.'
+          : 'No password is set. This creates a development-only session, not real authentication.'}
       </p>
 
       <div className="mt-8">
-        {devModeAvailable ? (
-          <RegisterForm />
+        {supabaseAuth ? (
+          <RegisterForm mode="supabase" />
+        ) : devModeAvailable ? (
+          <RegisterForm mode="dev" />
         ) : (
           <NotConnected feature="Registration" reason="No authentication provider is connected in production yet." />
         )}

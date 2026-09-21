@@ -3,9 +3,10 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { z } from 'zod'
-import { OrgMemberRole, OrgType, Role } from '@prisma/client'
+import { Role } from '@prisma/client'
 import { prisma } from './prisma'
 import { isDatabaseUnreachable } from './db-errors'
+import { registerDoorlinkUser } from './register-user'
 import { DEV_SESSION_COOKIE } from './session-cookie'
 
 // Everything in this file is the dev-only stand-in for real authentication:
@@ -88,30 +89,7 @@ export async function devRegisterAction(_prevState: RegisterState, formData: For
     const existing = await prisma.user.findUnique({ where: { email } })
     if (existing) return { error: 'An account with that email already exists.' }
 
-    const user = await prisma.user.create({ data: { name, email, role } })
-
-    if (role === Role.TECHNICIAN) {
-      await prisma.technicianProfile.create({ data: { userId: user.id } })
-    }
-
-    // Self-registering as a supplier or manufacturer creates the business
-    // account, but never a catalogue entry — linking an organization to a
-    // verified Manufacturer record is an admin action (Module 5), not
-    // something a signup form gets to do for itself.
-    if ((role === Role.SUPPLIER || role === Role.MANUFACTURER) && organizationName) {
-      const org = await prisma.organization.create({
-        data: {
-          name: organizationName,
-          type: role === Role.SUPPLIER ? OrgType.SUPPLIER : OrgType.MANUFACTURER,
-        },
-      })
-      await prisma.organizationMember.create({
-        data: { organizationId: org.id, userId: user.id, role: OrgMemberRole.OWNER },
-      })
-      if (role === Role.SUPPLIER) {
-        await prisma.supplierProfile.create({ data: { organizationId: org.id } })
-      }
-    }
+    const user = await registerDoorlinkUser({ name, email, role, organizationName })
 
     const store = await cookies()
     store.set(DEV_SESSION_COOKIE, user.email, { httpOnly: true, sameSite: 'lax', path: '/' })

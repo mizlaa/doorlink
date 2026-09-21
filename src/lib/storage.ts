@@ -43,10 +43,11 @@ export function isPubliclyServable(key: string): boolean {
  */
 export function resolveFileUrl(key: string): string | null {
   if (activeStorageBackend() === 'supabase') {
-    const base = process.env.NEXT_PUBLIC_SUPABASE_URL
-    const bucket = process.env.SUPABASE_STORAGE_BUCKET
-    if (!base || !bucket) return null
-    return `${base.replace(/\/$/, '')}/storage/v1/object/public/${bucket}/${key}`
+    // doorlink-documents is a private bucket. A /object/public/ URL would
+    // 403 and, worse, win over sourceUrl in manualAccess for records that
+    // were never uploaded. Private keys use signedFileUrl; hosted library
+    // manuals keep their publisher link until objects are deliberately public.
+    return null
   }
 
   if (!isPubliclyServable(key)) return null
@@ -91,6 +92,7 @@ export async function uploadFile(input: {
     response = await fetch(endpoint, {
       method: 'POST',
       headers: {
+        apikey: serviceKey,
         Authorization: `Bearer ${serviceKey}`,
         'Content-Type': input.contentType,
         // The bucket may be public; an object under it need not be.
@@ -151,7 +153,11 @@ export async function signedFileUrl(key: string, expiresInSeconds = 300): Promis
   try {
     const response = await fetch(`${root}/storage/v1/object/sign/${bucket}/${key}`, {
       method: 'POST',
-      headers: { Authorization: `Bearer ${serviceKey}`, 'Content-Type': 'application/json' },
+      headers: {
+        apikey: serviceKey,
+        Authorization: `Bearer ${serviceKey}`,
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({ expiresIn: expiresInSeconds }),
     })
     if (!response.ok) return null

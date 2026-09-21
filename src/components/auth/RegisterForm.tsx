@@ -1,7 +1,7 @@
 'use client'
 
 import { useActionState, useState } from 'react'
-import { devRegisterAction, type RegisterState } from '@/lib/dev-session'
+import { registerAction, type RegisterState } from '@/lib/auth-session'
 import { Field, Input, Select } from '@/components/ui/Field'
 import { Button } from '@/components/ui/Button'
 
@@ -14,8 +14,8 @@ const ROLE_OPTIONS = [
 
 const initialState: RegisterState = {}
 
-export function RegisterForm() {
-  const [state, formAction, isPending] = useActionState(devRegisterAction, initialState)
+export function RegisterForm({ mode }: { mode: 'dev' | 'supabase' }) {
+  const [state, formAction, isPending] = useActionState(registerAction, initialState)
   const [role, setRole] = useState('CUSTOMER')
   const needsOrganization = role === 'SUPPLIER' || role === 'MANUFACTURER'
 
@@ -28,6 +28,12 @@ export function RegisterForm() {
       <Field label="Email" htmlFor="email">
         <Input id="email" name="email" type="email" required placeholder="you@example.com" />
       </Field>
+
+      {mode === 'supabase' && (
+        <Field label="Password" htmlFor="password" hint="At least 8 characters.">
+          <Input id="password" name="password" type="password" required autoComplete="new-password" />
+        </Field>
+      )}
 
       <Field label="Account type" htmlFor="role">
         <Select id="role" name="role" value={role} onChange={(event) => setRole(event.target.value)}>
