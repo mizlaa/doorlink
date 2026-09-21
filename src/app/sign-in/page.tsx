@@ -2,25 +2,30 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SignInForm } from '@/components/auth/SignInForm'
 import { NotConnected } from '@/components/ui/NotConnected'
+import { isConnected } from '@/lib/integrations'
 
 export const metadata: Metadata = {
   title: 'Sign in',
 }
 
 export default function SignInPage() {
-  const devModeAvailable = process.env.NODE_ENV !== 'production'
+  const supabaseAuth = isConnected('auth')
+  const devModeAvailable = !supabaseAuth && process.env.NODE_ENV !== 'production'
 
   return (
     <div className="mx-auto max-w-sm px-4 py-16">
       <h1 className="text-2xl font-semibold text-graphite">Sign in</h1>
       <p className="mt-2 text-sm text-graphite-soft">
-        Doorlink doesn&apos;t have a real authentication provider connected yet. Sign-in here uses a
-        development-only session, not a password.
+        {supabaseAuth
+          ? 'Sign in with the email and password for your Doorlink account.'
+          : 'Doorlink uses a development-only session here — no password — until Supabase auth is configured.'}
       </p>
 
       <div className="mt-8">
-        {devModeAvailable ? (
-          <SignInForm />
+        {supabaseAuth ? (
+          <SignInForm mode="supabase" />
+        ) : devModeAvailable ? (
+          <SignInForm mode="dev" />
         ) : (
           <NotConnected feature="Sign-in" reason="No authentication provider is connected in production yet." />
         )}
