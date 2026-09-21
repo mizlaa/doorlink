@@ -1,0 +1,193 @@
+I have already developed the Garage Door Calculator and its underlying code/logic in Claude Code, and all of the latest development has now been merged into the GitHub repository.
+
+Your job is to take the existing calculator code and development from the GitHub project and properly integrate it into the Doorlink app.
+
+IMPORTANT:
+
+* Do NOT rebuild the calculator logic from scratch.
+* Do NOT replace, delete, or overwrite the existing Claude Code development.
+* Treat the existing GitHub code as the source of truth for the calculator’s calculations, formulas, logic and functionality.
+* First inspect the existing project and understand how the calculator currently works.
+* Reuse the existing calculator code wherever possible.
+* Only create the UI, routing, components, integration and supporting functionality needed to make it work properly inside the Doorlink app.
+
+GARAGE CALCULATOR CONFIGURATION SECTION
+
+Create a dedicated section inside Doorlink called:
+
+Garage Calculator Configuration
+
+This should be a proper section of the app, not just a standalone calculator page.
+
+The section should allow users to access and configure the garage door calculator in a clean, professional and easy-to-use interface.
+
+The flow should be:
+
+Garage Calculator
+→ Select Calculator Type
+→ Enter Measurements / Specifications
+→ Configure Required Options
+→ Calculate
+→ Display Results
+→ Review / Save / Use Results
+
+INTERFACE
+
+Design the interface to match the existing Doorlink application.
+
+Keep it:
+
+* Professional
+* Clean
+* Modern
+* Easy for technicians to use
+* Mobile-friendly
+* Fast
+* Simple to navigate
+* Consistent with the existing Doorlink UI
+
+Do NOT create an overly complicated interface.
+
+The calculator should feel like a native Doorlink feature rather than an external website embedded into the app.
+
+CALCULATOR TYPES
+
+Inspect the calculator development already created in GitHub and expose the calculator functionality that already exists.
+
+If the existing code supports multiple calculation types, present them clearly in the Garage Calculator Configuration section.
+
+For example, if applicable:
+
+* Garage Door Spring Calculator
+* Door Measurements
+* Weight / Load calculations
+* Spring specifications
+* Other calculator functionality already present in the Claude Code development
+
+Do not invent formulas or calculation methods that aren’t already in the existing code.
+
+CONFIGURATION
+
+Create a clear configuration area where the user can enter the required information.
+
+Use appropriate:
+
+* Number fields
+* Dropdowns
+* Toggles
+* Measurement selectors
+* Calculation options
+* Validation messages
+* Help/information indicators
+
+Make the input process extremely straightforward.
+
+Where possible, show the unit beside the field, such as:
+
+* mm
+* cm
+* m
+* kg
+* lb
+* inches
+
+Use the existing calculator’s supported units and calculations rather than creating conflicting ones.
+
+RESULTS
+
+After the user calculates something, present the results in a clear results panel.
+
+The results should:
+
+* Be easy to read
+* Clearly identify each calculated value
+* Show the relevant units
+* Highlight important results
+* Explain what the result represents where appropriate
+
+Do not hide important calculation results behind unnecessary menus.
+
+VALIDATION
+
+Add proper validation around the existing calculator logic.
+
+Users should receive clear messages if:
+
+* A required field is empty
+* A value is invalid
+* A value is outside the supported range
+* The calculation cannot be completed
+
+Do not silently produce incorrect results.
+
+DOORLINK INTEGRATION
+
+Add the Garage Calculator Configuration section into the existing Doorlink navigation.
+
+Find the most logical location within the current app structure and integrate it without disrupting existing features.
+
+Make sure:
+
+* Existing Doorlink pages continue working
+* Existing navigation continues working
+* Existing authentication/permissions remain intact
+* Existing styling remains intact
+* Existing database functionality is not broken
+* Existing Claude Code features are preserved
+
+RESPONSIVE DESIGN
+
+The calculator must work properly on:
+
+* iPhone
+* Android
+* Tablet
+* Desktop
+
+The mobile version is particularly important because Doorlink will be used by technicians in the field.
+
+Make buttons and input fields large enough to comfortably use on a phone.
+
+CODE QUALITY
+
+Before making changes:
+
+1. Inspect the existing GitHub/Claude Code implementation.
+2. Identify the calculator files and existing logic.
+3. Understand the current project architecture.
+4. Determine the correct location for the new Doorlink section.
+5. Reuse the existing calculator logic.
+6. Build the interface around that logic.
+7. Integrate it into Doorlink.
+8. Test the complete user flow.
+9. Fix any errors discovered during testing.
+
+Do NOT make unnecessary changes to unrelated parts of the application.
+
+IMPORTANT SOURCE-OF-TRUTH RULE
+
+The existing GitHub/Claude Code calculator development is the source of truth.
+
+Replit is responsible for integrating and presenting the functionality inside Doorlink.
+
+Do not create a separate competing version of the calculator.
+
+If you discover that something in the existing calculator code needs to be changed for integration, explain what needs changing and make the smallest safe change possible.
+
+FINAL CHECK
+
+Once complete, test:
+
+Garage Calculator Configuration
+→ Open calculator
+→ Enter valid information
+→ Calculate
+→ Verify results
+→ Test invalid inputs
+→ Test mobile layout
+→ Test desktop layout
+→ Confirm existing Doorlink functionality still works.
+
+Also check the browser console and application logs for errors and fix any errors directly related to this integration.
+
+The final result should look and feel like a professionally built native Doorlink feature, with the existing Claude Code calculator engine powering the calculations.
