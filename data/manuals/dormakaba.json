@@ -21,12 +21,13 @@
         {
           "kind": "SPEC_SHEET",
           "title": "ES 200 EASY Sliding Door Operator Technical Product Brochure (EN)",
-          "language": "en",
           "sourceUrl": "https://my.dormakaba.com/medias/dormakaba-sliding-door-operator-ES200EASY-technical-brochure-en.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Manufacturer's own media domain. The surfaced URL carried a long base64 context query string, which is a session or CMS parameter rather than part of the document's address; the bare path is recorded and the harvester will confirm whether it resolves. Recorded as a spec sheet, not an installation manual, because the title says brochure. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Manufacturer's own media domain. The surfaced URL carried a long base64 context query string, which is a session or CMS parameter rather than part of the document's address; the bare path is recorded and the harvester will confirm whether it resolves. Recorded as a spec sheet, not an installation manual, because the title says brochure. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -42,13 +43,15 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "Dorma ES 200 Sliding Door Operator Guide (NZ, 2016)",
-          "documentCode": "120000000582",
           "sourceUrl": "https://www.scribd.com/document/701060338/120000000582-ES200-NZ-2016-6-LR",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "Scribd",
           "region": "NZ",
           "rights": "LINK_ONLY",
-          "evidence": "Document-sharing site, not a manufacturer source, and Scribd commonly gates downloads. Recorded because the document code and the NZ regional edition are identifiable from the title. The harvester will likely mark this RESTRICTED. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "120000000582",
+          "evidence": "Document-sharing site, not a manufacturer source, and Scribd commonly gates downloads. Recorded because the document code and the NZ regional edition are identifiable from the title. The harvester will likely mark this RESTRICTED. Not fetched - egress blocked.",
+          "altSources": []
         },
         {
           "kind": "USER_MANUAL",
@@ -58,6 +61,7 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing of the user-facing document, kept alongside the installation material already on this model because they serve different readers. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -94,6 +98,7 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator product page rather than a single document - search reports 24 ED100 manuals behind it across installation, service, mounting, owner's and maintenance types. Recorded at that level because no individual document URL surfaced, and picking one arbitrarily would misrepresent which document this record points at. Not fetched - egress blocked.",
           "altSources": [
             {

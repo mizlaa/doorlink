@@ -20,13 +20,14 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "ROBO600 Instructions and Warnings for Installation",
-          "documentCode": "IDV0772A01EN",
-          "language": "en",
           "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/IDV0772A01EN.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Manufacturer's own domain, and the search result title names ROBO600 explicitly. Document code read from the filename. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "IDV0772A01EN",
+          "evidence": "Manufacturer's own domain, and the search result title names ROBO600 explicitly. Document code read from the filename. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -48,7 +49,9 @@
           "publisher": "ManualsLib",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. A manufacturer-hosted sliding-gate manual was also surfaced but its title did not name a model, so it was not attributed to this one. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. A manufacturer-hosted sliding-gate manual was also surfaced but its title did not name a model, so it was not attributed to this one. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -70,6 +73,7 @@
           "publisher": "ManualsLib",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -98,13 +102,14 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "Wingo 3524 HS Swing Gate Operator Installer Instructions",
-          "documentCode": "et_wingo_installer_2016.003.001",
-          "version": "2016.003.001",
           "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/et_wingo_installer_2016.003.001.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Nice",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "2016.003.001",
+          "documentCode": "et_wingo_installer_2016.003.001",
           "evidence": "On niceforyou.com, the manufacturer's own manuals directory. The file name is the document code and carries the edition 2016.003.001. The WG-series aliases come from a Wingo declaration document that lists WG4000, WG5000, WG4024, WG5024 and WG3524HS together - they are recorded as aliases so a search lands, not as a claim that this installer manual covers all five. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -132,13 +137,15 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "Nice RB500HS / RB600 / RB1000 Instructions and Warnings for Installation and Use (EN)",
-          "documentCode": "idv0620a01en",
           "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/idv0620a01en.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Nice",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On niceforyou.com. Document code idv0620a01en is the file name; the trailing en is the language and a01 the edition. One manual covers three drives, so they share this record. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "idv0620a01en",
+          "evidence": "On niceforyou.com. Document code idv0620a01en is the file name; the trailing en is the language and a01 the edition. One manual covers three drives, so they share this record. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -155,13 +162,15 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "Nice RUN1500 for Sliding Gates - Instructions and Warnings for Installation and Use (EN)",
-          "documentCode": "idv0659a01en",
           "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/idv0659a01en.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Nice",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On niceforyou.com, document code idv0659a01en from the file name. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "idv0659a01en",
+          "evidence": "On niceforyou.com, document code idv0659a01en from the file name. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -170,17 +179,20 @@
       "name": "Nice Sliding Gate Operator (document idv0420a00en)",
       "category": "gate-motors",
       "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Nice - Instructions and Warnings for Installation and Use, For Sliding Gates (EN)",
-          "documentCode": "idv0420a00en",
           "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/idv0420a00en.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Nice",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On niceforyou.com. The model code here is the document code, because neither the file name nor the search result named the product - only that it is for sliding gates. Recorded that way rather than guessed into an existing Robus or Run record, since attaching it to the wrong drive is worse than an unlovely model code. Whoever verifies this link should retitle the record from the document's cover. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "idv0420a00en",
+          "evidence": "On niceforyou.com. The model code here is the document code, because neither the file name nor the search result named the product - only that it is for sliding gates. Recorded that way rather than guessed into an existing Robus or Run record, since attaching it to the wrong drive is worse than an unlovely model code. Whoever verifies this link should retitle the record from the document's cover. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -189,17 +201,493 @@
       "name": "Nice (document IDV0777A00EN)",
       "category": "gate-motors",
       "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Nice instruction manual IDV0777A00EN",
-          "documentCode": "IDV0777A00EN",
           "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/IDV0777A00EN.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Nice",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On niceforyou.com. The search result gave no title or product for this document at all - only the URL. It is recorded by its document code alone so the file is not lost, and nothing about its product, type or scope is asserted. This is the weakest record in the library and is exactly what the review queue is for. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "IDV0777A00EN",
+          "evidence": "On niceforyou.com. The search result gave no title or product for this document at all - only the URL. It is recorded by its document code alone so the file is not lost, and nothing about its product, type or scope is asserted. This is the weakest record in the library and is exactly what the review queue is for. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Electromechanical Road Barrier",
+      "name": "Electromechanical Road Barrier",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "SAFETY_DOCUMENT",
+          "title": "Nice Road Barrier User, Installation and Safety Instructions (IDV0384A04EN)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/idv0384a04en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "HO7124",
+      "name": "HO7124",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "HO7124 / HO7224 Swing Gate Opener Instructions and Warnings (IDV0657A00EN)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/idv0657a00en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "IDV0615A00EN",
+      "name": "IDV0615A00EN",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Instructions and Warnings for Installation and Use, For Sliding Gates",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/idv0615a00en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LFAB4024",
+      "name": "LFAB4024",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "LFAB4024 / LFAB4000 / XLFAB5024 / LFAB4024HS Swing Gate Opener Instructions (IDV0532A01EN)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/idv0532a01en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "M3BAR / M5BAR / M7BAR / L9BAR",
+      "name": "M3BAR / M5BAR / M7BAR / L9BAR",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice M/L-Bar Electromechanical Road Barrier Manual (IS0647A03EN)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/IS0647A03EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MC824H",
+      "name": "MC824H",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice MC824H Control Unit Manual (IDV0606A00EN)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/idv0606a00en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MINDY A60",
+      "name": "MINDY A60",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice Mindy A60 Control Unit Instructions and Warnings (IST125R01.4858)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/IST125R01.4858.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MINDY A400",
+      "name": "MINDY A400",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice Mindy A400 Control Unit Manual (IST101R01.4858)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/ist101r01.4858.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ROBUS RB400 / RB600 / RB1000 / RB250HS / RB500HS",
+      "name": "ROBUS RB400 / RB600 / RB1000 / RB250HS / RB500HS",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Nice Robus Instructions and Warnings for Installation and Use",
+          "sourceUrl": "https://www.aelec.cl/wp-content/uploads/2024/08/Manual-NICE-Robus-400-600-1000-250HS-500HS.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice Robus Sliding Gate Opener Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/Nice_RB250HS_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SN6011",
+      "name": "SN6011",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Nice SN6011 Garage Door Instructions and Warnings for Installation and Use (IDV0613A00EN)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/idv0613a00en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SN6021 / SN6031 / SN6041",
+      "name": "SN6021 / SN6031 / SN6041",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice SN6021, SN6031, SN6041 Instructions and Warnings (IDV0614A00EN)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/idv0614a00en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SPOP",
+      "name": "SPOP",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Swing Gate Opener Instructions and Warnings for Installation (IDV0787A00EN)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/IDV0787A00EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SUMO",
+      "name": "SUMO",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice Sumo Garage Door Opener Manual (ISTSUR02.4865)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/ISTSUR02.4865.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TOONA",
+      "name": "TOONA",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice Toona Swing Gate Opener Instructions and Warnings (ISTTOR02.4865)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/isttor02.4865.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TOONA 5 / TOONA 7",
+      "name": "TOONA 5 / TOONA 7",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Apollo / Nice Toona 5 and Toona 7 Installation Manual",
+          "sourceUrl": "https://www.apollogateopeners.com/store/pdf/toona_manual5.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Tubular Motor",
+      "name": "Tubular Motor",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Nice Tubular Motor Instructions and Warnings for Installation and Use (IDV0270F00EN)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/IDV0270F00EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Nice Tubular Motor Instructions and Warnings for Installation and Use (IDV0443A00EN)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/idv0443a00en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Nice Tubular Motor Instructions and Warnings for Installation and Use (IDV0539A00EN)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/idv0539a00en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "WIDE S / WIDE M / WIDE L",
+      "name": "WIDE S / WIDE M / WIDE L",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice Wide S, M, L Electromechanical Road Barrier Manual (IDV0698A00EN)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/idv0698a00en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Wingo4024",
+      "name": "Wingo4024",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Wingo4024 Instructions and Warnings for Installation and Use (IS0191A00EN)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/IS0191A00EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "WINGO 2024",
+      "name": "WINGO 2024",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice Wingo 2024 Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/Nice_Wingo_2024_manual411586.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "1500",
+      "name": "1500",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Apollo Model 1500 / 1600 Vehicular Swing Gate Opener Installation Reference Manual (D0873)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/installrefmanual_1500_d0873.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "1500 / 1600",
+      "name": "1500 / 1600",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Apollo Model 1500 / 1600 Swing Gate Operator Manual",
+          "sourceUrl": "https://apollogateopeners.com/store/pdf/1500-1600manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SIGNO",
+      "name": "SIGNO",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Nice Apollo Signo Barrier Gate Installation Manual (ISTSG Rev 00.01)",
+          "sourceUrl": "https://apollogateopeners.com/store/pdf/nice-apollo-signo-barrier-gate-installation-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

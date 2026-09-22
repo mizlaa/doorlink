@@ -7,5 +7,66 @@
     "supportUrl": null,
     "note": "US garage door manufacturer. Recorded with no documents. The only Clopay result was a document-sharing copy of an installation manual with no model, edition or code identifiable from the listing - not enough to record a document against a model, and a manufacturer record with an unattributable PDF hung off it would be worse than an honest blank. Clopay needs a search of its own."
   },
-  "models": []
+  "models": [
+    {
+      "modelCode": "525 / 525V",
+      "name": "525 / 525V",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Clopay Models 525 and 525V Commercial and Industrial Sectional Doors Installation and Maintenance Manual",
+          "sourceUrl": "https://www.americanoutbackbuildings.com/Assets/Manuals/Clopay%20Models%20525%20and%20525V%20Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Residential Sectional Insulated Steel Doors",
+      "name": "Residential Sectional Insulated Steel Doors",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Clopay Residential Sectional Insulated Steel Doors Installation Instructions",
+          "sourceUrl": "https://inspectapedia.com/interiors/Garage-Door-Installation-Manual-Clopay.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Wood Garage Doors",
+      "name": "Wood Garage Doors",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Clopay Wood Garage Door Installation Instructions",
+          "sourceUrl": "https://www.doorvana.com/wp-content/uploads/2020/06/Clopay-Wood-Garage-Door-Installation-Instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
 }

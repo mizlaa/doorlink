@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "Optex",
+    "slug": "optex",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "OA-AXIS II",
+      "name": "OA-AXIS II",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Optex OA-Axis II Manual (EN)",
+          "sourceUrl": "https://s3-eu-west-1.amazonaws.com/optex-europe/sensor-downloads/Automatic-Door-Sensors/Manuals/optex-oa-axis-II-manual-en.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

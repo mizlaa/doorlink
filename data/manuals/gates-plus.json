@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "Gates Plus",
+    "slug": "gates-plus",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "MGS300 / MGS500 / MGS1000",
+      "name": "MGS300 / MGS500 / MGS1000",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Professional Sliding Gate Motor Manual for MGS300, MGS500, MGS1000",
+          "sourceUrl": "https://www.gatesplus.com.au/pdf/MGS300-500-1000.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

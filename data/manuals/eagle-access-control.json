@@ -1,0 +1,109 @@
+{
+  "manufacturer": {
+    "name": "Eagle Access Control",
+    "slug": "eagle-access-control",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "1000 / 2000 SERIES",
+      "name": "1000 / 2000 SERIES",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Eagle 1000 / 2000 Series Slide Gate Operator Manual",
+          "sourceUrl": "https://eagleoperators.com/wp-content/uploads/2021/07/Eagle_1000_2000_Manual-1_compressed.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "EAGLE I",
+      "name": "EAGLE I",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Eagle I Slide Gate Operator Installation and Owners Manual (Rev A)",
+          "sourceUrl": "https://eagleoperators.com/wp-content/uploads/2022/02/Eagle-1-Slide-Rev-A.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "EAGLE-100 SERIES",
+      "name": "EAGLE-100 SERIES",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Eagle-100 Series Swing Gate Operators Installation and Owners Manual",
+          "sourceUrl": "https://eagleoperators.com/wp-content/uploads/2022/02/Eagle-100-Installation-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "EAGLE-E7",
+      "name": "EAGLE-E7",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Eagle-E7 Swing Gate Operator Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/Eagle_E7_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "EAGLE-II",
+      "name": "EAGLE-II",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Eagle-II Installation Manual",
+          "sourceUrl": "https://eagleoperators.com/wp-content/uploads/2022/02/Eagle-II-English-Installation-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

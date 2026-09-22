@@ -13,7 +13,9 @@
       "name": "V2 AYROS Series Sliding Gate Actuator",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["Ayros Series"],
+      "aliases": [
+        "Ayros Series"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,6 +25,7 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing of the installer manual. Search describes the Ayros as a 230V/120V irreversible rack actuator for sliding gates to 1200 kg; that description is not recorded as a specification because it was read from a search summary, not from the document. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -44,6 +47,7 @@
       "name": "V2 ALFARISS Sliding Gate Actuator",
       "category": "gate-motors",
       "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -53,6 +57,7 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -66,6 +71,46 @@
               "label": "Manualzz copy of the owner's manual"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "CITY7",
+      "name": "CITY7",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "V2 City7 Control Unit Manual (IL n. 252)",
+          "sourceUrl": "https://ismartgate.com/manuals/V2_City7_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GOLD400A / GOLD600A",
+      "name": "GOLD400A / GOLD600A",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "V2 Gold400A / Gold600A Manual (IL n. 269-1)",
+          "sourceUrl": "https://ismartgate.com/manuals/V2_Elettronica_Gold400a_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

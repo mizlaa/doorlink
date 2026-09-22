@@ -13,18 +13,23 @@
       "name": "Cherubini Roller Tubular Motor",
       "category": "roller-shutter-motors",
       "region": "EU",
-      "aliases": ["A4516", "6R51"],
+      "aliases": [
+        "A4516",
+        "6R51"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Cherubini Roller Installation Instructions (EN)",
-          "documentCode": "A4516 6R51",
           "sourceUrl": "https://www.cherubini-group.com/files/uploads/istruzioni/ist_standard/2023/Roller_A4516_6R51_EN.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Cherubini",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On cherubini-group.com, the manufacturer's own domain, in its standard-instructions tree. Document codes A4516 and 6R51 and the EN language are read from the file name; the 2023 folder is the edition year the manufacturer filed it under. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "A4516 6R51",
+          "evidence": "On cherubini-group.com, the manufacturer's own domain, in its standard-instructions tree. Document codes A4516 and 6R51 and the EN language are read from the file name; the 2023 folder is the edition year the manufacturer filed it under. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -33,7 +38,9 @@
       "name": "Cherubini ORA ZRX Dual Radio Tubular Motor",
       "category": "roller-shutter-motors",
       "region": "EU",
-      "aliases": ["ORA-ZRX"],
+      "aliases": [
+        "ORA-ZRX"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -43,7 +50,9 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Search describes the ORA ZRX as a dual-radio motor with electronic limit switch for awnings and pergolas. An \"ORA Plug Mini\" was searched for explicitly and returned nothing, so no record is made for it. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Search describes the ORA ZRX as a dual-radio motor with electronic limit switch for awnings and pergolas. An \"ORA Plug Mini\" was searched for explicitly and returned nothing, so no record is made for it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -52,7 +61,10 @@
       "name": "Cherubini Plug & Play Tubular Motor",
       "category": "roller-shutter-motors",
       "region": "EU",
-      "aliases": ["Plug and Play", "Plug&Play"],
+      "aliases": [
+        "Plug and Play",
+        "Plug&Play"
+      ],
       "documents": [
         {
           "kind": "QUICK_START",
@@ -62,6 +74,7 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing of the short-form instructions, for tubular motors with electronic limit switches for roller blinds and screens. Typed as QUICK_START because the document itself is titled Short, so the full instructions are a known gap. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -78,7 +91,9 @@
       "name": "Cherubini Plug & Play Ocean Easy Tubular Motor",
       "category": "roller-shutter-motors",
       "region": "EU",
-      "aliases": ["Ocean Easy"],
+      "aliases": [
+        "Ocean Easy"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -88,7 +103,9 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Search describes the Ocean Easy as a tubular motor with an easy connector and manual override device. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Search describes the Ocean Easy as a tubular motor with an easy connector and manual override device. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

@@ -1,0 +1,49 @@
+{
+  "manufacturer": {
+    "name": "Mhouse",
+    "slug": "mhouse",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "MHOUSEKIT GD0",
+      "name": "MHOUSEKIT GD0",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "MhouseKit GD0 Sectional / Overhead Door Automation Instructions (ISTGD0-GBR01)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/ISTGD0-GBR01.4865.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "WG20",
+      "name": "WG20",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Mhouse WG20 Swing Gate Automation Installation Instructions and Warnings (ISTWG20-GB)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/ISTWG20-GB.4865.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

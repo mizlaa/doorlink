@@ -1,0 +1,100 @@
+{
+  "manufacturer": {
+    "name": "Label",
+    "slug": "label",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "NEPTIS",
+      "name": "NEPTIS",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Label Neptis User Manual 2017",
+          "sourceUrl": "https://labeluk.com/wp-content/uploads/2021/10/neptis-user-manual-2017.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NEPTIS 16005",
+      "name": "NEPTIS 16005",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Label Neptis 16005 User Manual",
+          "sourceUrl": "https://www.labeluk.com/wp-content/uploads/2017/08/neptis-16005-user-manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NEPTIS PLUS",
+      "name": "NEPTIS PLUS",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Label Neptis Plus Installation Manual (CD0450EN Rel 1.0)",
+          "sourceUrl": "https://labeluk.com/wp-content/uploads/2022/05/neptis-plus-installazione-en-rel.1.0-cd0450en-18052021-web.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Label Neptis Plus User Manual (CD0450EN Rel 1.0)",
+          "sourceUrl": "https://labeluk.com/wp-content/uploads/2022/05/manuale-uso-neptis-plus-en-rel.1.0-cd0450en-04-2021-18052021-high.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NEPTIS SLT-B / LET-B / SMT-B",
+      "name": "NEPTIS SLT-B / LET-B / SMT-B",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Label Neptis Operator for Automatic Swing Doors Installation Manual",
+          "sourceUrl": "https://labeluk.com/wp-content/uploads/2019/04/neptis2_installationmanual-1.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

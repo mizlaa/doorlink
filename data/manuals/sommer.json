@@ -13,7 +13,13 @@
       "name": "SOMMER duo vision 650 Garage Door Drive",
       "category": "garage-door-openers",
       "region": "EU",
-      "aliases": ["duo vision 500", "duo vision 800", "duo rapido 650", "duo vision", "3010V000"],
+      "aliases": [
+        "duo vision 500",
+        "duo vision 800",
+        "duo rapido 650",
+        "duo vision",
+        "3010V000"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,6 +29,7 @@
           "publisher": "SOMMER",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "On sommer.eu, the manufacturer's own domain, English edition. Note the Archiv path segment: SOMMER files this under archived instructions, so it covers a superseded range and a current replacement may exist elsewhere in the tree. Recorded anyway, because installed duo vision drives still need it. One document covers all four drives, so they share this record as aliases. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -49,20 +56,147 @@
       "name": "SOMMER 2060 evo+ / 2080 Garage Door Opener (US)",
       "category": "garage-door-openers",
       "region": "US",
-      "aliases": ["2080", "evo+", "evo plus", "46900V024"],
+      "aliases": [
+        "2080",
+        "evo+",
+        "evo plus",
+        "46900V024"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "2060 evo+ / 2080 Garage Door Opener Manual, Rev C (US-EN)",
-          "documentCode": "46900V024",
-          "revision": "Rev-C",
-          "version": "12-2022",
           "sourceUrl": "https://www.sommer.eu/SOMMER/Downloads/Montageanleitung/Garagentorantriebe/USA/evo/usa_evo-plus_46900V024_122022_0-DRE_Rev-C_US-EN.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "SOMMER",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On sommer.eu, in the current (non-archive) branch of the instructions tree, under a USA folder - which is why the region is US even though the host is the German site. Document code 46900V024, date 122022 and Rev-C are all segments of the file name. Not fetched - egress blocked."
+          "language": "en",
+          "version": "12-2022",
+          "documentCode": "46900V024",
+          "revision": "Rev-C",
+          "evidence": "On sommer.eu, in the current (non-archive) branch of the instructions tree, under a USA folder - which is why the region is US even though the host is the German site. Document code 46900V024, date 122022 and Rev-C are all segments of the file name. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DUO VISION 500 / 650 / 800",
+      "name": "DUO VISION 500 / 650 / 800",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer Duo Vision 500, 650, 800 Manual",
+          "sourceUrl": "https://arridgegaragedoors.co.uk/uploads/pdfs/Sommer%20Duo%20500%20650%20800.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TWIST 200 E",
+      "name": "TWIST 200 E",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer Twist 200 E Swing Gate Operator Manual (46685V001 EN)",
+          "sourceUrl": "https://www.sommer.eu/SOMMER/Downloads/Montageanleitung/Drehtorantriebe/twist%20200%20E/twist-200-E_46685V001_EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TWIST 200 EL",
+      "name": "TWIST 200 EL",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer Twist 200 EL Swing Gate Operator Manual (46736V001 EN)",
+          "sourceUrl": "https://www.sommer.eu/SOMMER/Downloads/Montageanleitung/Drehtorantriebe/twist%20200%20EL/twist-200-EL_46736V001_EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TWIST 350 RAPIDO",
+      "name": "TWIST 350 RAPIDO",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer Twist 350 Rapido Swing Gate Operator Manual (46800V001 EN)",
+          "sourceUrl": "https://www.sommer.eu/SOMMER/Downloads/Montageanleitung/Drehtorantriebe/twist%20350%20-%20350%20rapido/twist-350-rapido_46800V001_EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TWIST UG / UG+",
+      "name": "TWIST UG / UG+",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer Twist UG / UG+ Swing Gate Operator Manual (S10451-00001 EN)",
+          "sourceUrl": "https://www.sommer.eu/SOMMER/Downloads/Montageanleitung/Drehtorantriebe/twist%20UG/twist-UG_S10451-00001_EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TWIST XL",
+      "name": "TWIST XL",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer Twist XL Swing Gate Operator Manual (46676V001 EN)",
+          "sourceUrl": "https://www.sommer.eu/SOMMER/Downloads/Montageanleitung/Drehtorantriebe/twist%20XL/twist-XL_46676V001_EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

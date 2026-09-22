@@ -1,0 +1,69 @@
+{
+  "manufacturer": {
+    "name": "Boon Edam",
+    "slug": "boon-edam",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "CRYSTAL TOURNIKET",
+      "name": "CRYSTAL TOURNIKET",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "SAFETY_DOCUMENT",
+          "title": "Boon Edam Crystal Tourniket Safety and Operating Instructions",
+          "sourceUrl": "https://www.specifiedby.com/boon-edam-ltd/crystal-tourniket-the-all-glass-revolving-door/Boon-Edam_Crystal-Tourniket_Instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DUOTOUR DT (Gen 2)",
+      "name": "DUOTOUR DT (Gen 2)",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Boon Edam Duotour Gen 2 Operating Manual",
+          "sourceUrl": "https://d3eu1jnerk19h.cloudfront.net/documents/products/Boon-Edam-Duotour-Gen-2-Operating-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TOURNEX",
+      "name": "TOURNEX",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Boon Edam Tournex Installation Manual",
+          "sourceUrl": "https://d3eu1jnerk19h.cloudfront.net/documents/products/Boon-Edam-Tournex-Installation-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

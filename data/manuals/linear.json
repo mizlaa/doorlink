@@ -13,17 +13,22 @@
       "name": "Linear / OSCO SLR, SLC, SLD Slide Gate Operator",
       "category": "gate-motors",
       "region": "US",
-      "aliases": ["SLR", "SLD", "OSCO SLC"],
+      "aliases": [
+        "SLR",
+        "SLD",
+        "OSCO SLC"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "SLR / SLC / SLD Slide Gate Operator Installation Guide",
-          "documentCode": "227968-X26",
           "sourceUrl": "https://linear-solutions.com/wp-content/uploads/227968-X26_WEB.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Linear",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "227968-X26",
           "evidence": "On linear-solutions.com, the manufacturer's own domain. Document number 227968-X26 from the file name; the _WEB suffix marks it as the web edition of that document. One guide covers all three operators, so they share this record. Search reports the guide states conformance with UL325 - noted here, not recorded as a compliance claim, since this library does not assert regulatory status. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -40,7 +45,10 @@
       "name": "Linear LDCO800 Belt or Chain Drive DC Garage Door Operator",
       "category": "garage-door-openers",
       "region": "US",
-      "aliases": ["LDCO 800", "228355C"],
+      "aliases": [
+        "LDCO 800",
+        "228355C"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -50,6 +58,7 @@
           "publisher": "Devanco Canada",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Distributor copy, direct PDF. No linear-solutions.com URL for the LDCO800 surfaced, so it stays third-party while the SLC guide is manufacturer-hosted. The document number 228355C appears in a usermanual.wiki listing title; it is kept as an alias rather than recorded as this document's code, because it was read from an aggregator's page title, not from this file. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -77,6 +86,7 @@
           "publisher": "ManualsLib",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing of the homeowner-facing document, kept separate from the installation manual because they are different documents for different readers. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -85,6 +95,57 @@
               "label": "Internet Archive copy of the LDCO800 user guide"
             }
           ]
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Linear LDCO800 Garage Door Operator Manual",
+          "sourceUrl": "https://continentaldoorco.com/content/uploads/2016/02/LDCO800.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SWG",
+      "name": "SWG",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Linear OSCO SWG Swing Gate Operator Installation Guide (P1227)",
+          "sourceUrl": "https://linear-solutions.com/wp-content/uploads/P1227-X10_WEB.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "VS-GSWG",
+      "name": "VS-GSWG",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Linear VS-GSWG Swing Gate Operator Installation Guide (P1250)",
+          "sourceUrl": "https://linear-solutions.com/wp-content/uploads/P1250-X11_WEB.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

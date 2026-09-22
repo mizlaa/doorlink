@@ -1,0 +1,49 @@
+{
+  "manufacturer": {
+    "name": "Napoleon / Lynx",
+    "slug": "napoleon-lynx",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "LDT / LDTB",
+      "name": "LDT / LDTB",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Napoleon Lynx Medium Duty Door Operator Owner's Manual",
+          "sourceUrl": "https://www.lynx-nsw.com/uploads/1/0/8/5/108596519/ldt_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MCJ / MCJH / MCJB / MCJBH",
+      "name": "MCJ / MCJH / MCJB / MCJBH",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Napoleon Lynx Medium Duty Jack Shaft Operator Owner's Manual",
+          "sourceUrl": "https://www.lynx-nsw.com/uploads/1/0/8/5/108596519/mcj_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

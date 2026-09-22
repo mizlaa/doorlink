@@ -13,7 +13,12 @@
       "name": "Magnetic MHTM MicroDrive Barrier",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["MHTM", "MicroDrive", "MHTM MicroDrive Access", "MHTM MicroDrive Parking"],
+      "aliases": [
+        "MHTM",
+        "MicroDrive",
+        "MHTM MicroDrive Access",
+        "MHTM MicroDrive Parking"
+      ],
       "documents": [
         {
           "kind": "USER_MANUAL",
@@ -23,6 +28,7 @@
           "publisher": "Magnetic Gate Openers",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Distributor copy, direct PDF, covering the Access and Parking variants together. Search reports the manual restricts the barriers to road-vehicle access control and explicitly excludes railway crossings, and requires MAGNETIC safety light barriers - noted here because a technician should know those constraints exist, not recorded as fields, since they were read from a summary rather than the document. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -49,7 +55,10 @@
       "name": "Magnetic MHTM MicroDrive Access Series Barrier",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["MicroDrive Access Pro L", "Access Pro L"],
+      "aliases": [
+        "MicroDrive Access Pro L",
+        "Access Pro L"
+      ],
       "documents": [
         {
           "kind": "USER_MANUAL",
@@ -59,7 +68,9 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing for the Access series specifically. Kept apart from the combined Access-and-Parking manual above because the aggregator files them as two documents. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing for the Access series specifically. Kept apart from the combined Access-and-Parking manual above because the aggregator files them as two documents. Not fetched - egress blocked.",
+          "altSources": []
         },
         {
           "kind": "QUICK_START",
@@ -69,7 +80,69 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing, filed under the FAAC name - Magnetic is part of the FAAC group, which is why a FAAC-branded document appears here. Typed QUICK_START on the document's own terms: search quotes it saying the short instructions do not replace the full operating instructions and assume prior experience. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing, filed under the FAAC name - Magnetic is part of the FAAC group, which is why a FAAC-branded document appears here. Typed QUICK_START on the document's own terms: search quotes it saying the short instructions do not replace the full operating instructions and assume prior experience. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MGC / MGC-PRO",
+      "name": "MGC / MGC-PRO",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Magnetic AutoControl Barrier MHTM MicroDrive Control Unit MGC and MGC-Pro Description",
+          "sourceUrl": "https://www.faac.se/data/pdf/58160006_en_version03_mgc_mgcpro.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MHTM TOLL / TOLL HIGHSPEED",
+      "name": "MHTM TOLL / TOLL HIGHSPEED",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Magnetic AutoControl Barrier MHTM Toll / Toll HighSpeed Operating Instructions",
+          "sourceUrl": "https://magneticgateopeners.com/store/pdfs/MHTM-TOLL-TOLLHIGHSPEED-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MICRODRIVE",
+      "name": "MICRODRIVE",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Magnetic AutoControl MicroDrive Barrier Manual",
+          "sourceUrl": "https://magneticgateopeners.com/store/pdfs/microdrive-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

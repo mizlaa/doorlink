@@ -26,7 +26,9 @@
           "publisher": "Roller Shutters Australia",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Australian reseller copy. Ozroll's own installation advice page lists ODS instructions but did not expose a direct PDF URL, so the official link is recorded at manufacturer level instead of guessed. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Australian reseller copy. Ozroll's own installation advice page lists ODS instructions but did not expose a direct PDF URL, so the official link is recorded at manufacturer level instead of guessed. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -49,7 +51,9 @@
           "publisher": "ManualsLib",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "This model was carried as a gap - named in earlier search results alongside the L10 but with no documentation URL of its own. An aggregator brand index now lists ODS T10, T20 and T35 manuals, so the gap closes, but weakly: this URL is the brand index, not a document page for the T20, because no per-model URL surfaced. Whoever verifies it should replace this with the T20's own listing. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "This model was carried as a gap - named in earlier search results alongside the L10 but with no documentation URL of its own. An aggregator brand index now lists ODS T10, T20 and T35 manuals, so the gap closes, but weakly: this URL is the brand index, not a document page for the T20, because no per-model URL surfaced. Whoever verifies it should replace this with the T20's own listing. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -74,19 +78,23 @@
           "publisher": "Roller Shutter Repairs Adelaide",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Australian repairer's guide page rather than a manufacturer PDF. Recorded as third-party and as a web page, not a document file. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Australian repairer's guide page rather than a manufacturer PDF. Recorded as third-party and as a web page, not a document file. Not fetched - egress blocked.",
+          "altSources": []
         },
         {
           "kind": "INSTALL_MANUAL",
           "title": "Ozroll ODS E-Port Controller Installation Instructions (15.920.253 B)",
-          "documentCode": "15.920.253",
-          "revision": "B",
           "sourceUrl": "https://ozrolltech.com.au/cms/wp-content/uploads/2021/06/15.920.253-B-E-Port-INSTALLATION-Instructions-1.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Ozroll",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "On ozrolltech.com.au, the manufacturer's own domain. Document number 15.920.253 and revision B are both in the file name, in Ozroll's dotted part-number form. The E-Port controller's own part number 15.600.001 comes from a reseller listing, so it is kept as an alias rather than recorded as this document's code. Search names three sibling documents on the same installation-advice page - E-Port LED Diagnostics, E-Port Wallplate Installation and ODS Installation Instructions - none of which gave a URL; that page is already registered as a harvest target. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "15.920.253",
+          "revision": "B",
+          "evidence": "On ozrolltech.com.au, the manufacturer's own domain. Document number 15.920.253 and revision B are both in the file name, in Ozroll's dotted part-number form. The E-Port controller's own part number 15.600.001 comes from a reseller listing, so it is kept as an alias rather than recorded as this document's code. Search names three sibling documents on the same installation-advice page - E-Port LED Diagnostics, E-Port Wallplate Installation and ODS Installation Instructions - none of which gave a URL; that page is already registered as a harvest target. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -95,17 +103,60 @@
       "name": "Ozroll Drive System (range brochure)",
       "category": "roller-shutter-motors",
       "region": "AU",
+      "aliases": [],
       "documents": [
         {
           "kind": "SPEC_SHEET",
           "title": "Ozroll Drive System Components Brochure",
-          "documentCode": "cr1055",
           "sourceUrl": "https://www.waverleygaragedoors.com.au/pdf/cr1055-ods-brochure.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "Waverley Garage Doors",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Reseller-hosted range brochure, not a model manual — recorded as a spec sheet against the range rather than attributed to L10 or T20. Document code cr1055 read from the filename. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "cr1055",
+          "evidence": "Reseller-hosted range brochure, not a model manual — recorded as a spec sheet against the range rather than attributed to L10 or T20. Document code cr1055 read from the filename. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "E-3WAY SWITCH",
+      "name": "E-3WAY SWITCH",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Ozroll E-3Way Switch Instructions",
+          "sourceUrl": "https://www.rollershutters.com.au/wp-content/uploads/2018/08/E-3Way-Switch-Instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Manual Controls",
+      "name": "Manual Controls",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Rollashield Manual Operation - Spring Assist and Winders",
+          "sourceUrl": "https://rollashield.com.au/cms/wp-content/uploads/2022/01/Manual-Operation-Spring-Assist-and-Winders.-20.01.2022.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

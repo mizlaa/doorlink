@@ -13,7 +13,11 @@
       "name": "record STA 20 Sliding Door Operator",
       "category": "automatic-pedestrian-doors",
       "region": "GLOBAL",
-      "aliases": ["STA20", "system 20", "record system 20"],
+      "aliases": [
+        "STA20",
+        "system 20",
+        "record system 20"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,6 +27,7 @@
           "publisher": "record",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "On recorddoors.com, the manufacturer's own domain, under an English sliding-doors downloads path. Origin is recorded as manufacturer but verification stays unset - not fetched, egress blocked - so this does not show an Official badge.",
           "altSources": [
             {
@@ -45,6 +50,7 @@
           "publisher": "record UK Direct",
           "region": "UK",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Hosted by record UK Direct, the UK arm's own web shop. Recorded as third-party rather than manufacturer because recordukdirect.co.uk is a separate domain from recorddoors.com and the relationship was not confirmed. Search describes it as the operating manual covering handling and fault rectification. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -67,7 +73,9 @@
           "publisher": "record UK Direct",
           "region": "UK",
           "rights": "LINK_ONLY",
-          "evidence": "Retrofit guide dated 25-03-2019 per the search result title. Covers fitting an STA20 in place of a Besam SL500, so it is filed under the STA20 rather than under Besam. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Retrofit guide dated 25-03-2019 per the search result title. Covers fitting an STA20 in place of a Besam SL500, so it is filed under the STA20 rather than under Besam. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -76,7 +84,9 @@
       "name": "record STM 20",
       "category": "automatic-pedestrian-doors",
       "region": "GLOBAL",
-      "aliases": ["STM20"],
+      "aliases": [
+        "STM20"
+      ],
       "documents": [
         {
           "kind": "USER_MANUAL",
@@ -86,7 +96,49 @@
           "publisher": "ManualsLib",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. The listing title says only \"Manual\" with no document type, so the kind here is the aggregator's framing rather than a type read off the document. No recorddoors.com URL for the STM 20 was surfaced. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. The listing title says only \"Manual\" with no document type, so the kind here is the aggregator's framing rather than a type read off the document. No recorddoors.com URL for the STM 20 was surfaced. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "STA 20 Basic",
+      "name": "STA 20 Basic",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Record STA 20 Basic Quick Set Up with Record Sensors",
+          "sourceUrl": "https://www.recordukdirect.co.uk/media/Redesign/Manuals%20with%20QR%20Codes/STA20%20BasicQuickSetUpwithQRCode.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SYSTEM 20",
+      "name": "SYSTEM 20",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Record System 20 Instruction Manual (BAL_SYS20_EN_2V3)",
+          "sourceUrl": "https://record-doors.com.ua/wp-content/uploads/docs/Sets_of_drives/KIT_STA%20_1_DDu/Instruction/BAL_SYS20_EN_2V3_REC_102-020110469.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

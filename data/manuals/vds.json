@@ -13,6 +13,7 @@
       "name": "VDS Tubular Motors for Roller Shutters",
       "category": "roller-shutter-motors",
       "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -22,7 +23,9 @@
           "publisher": "VDS Automation",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On vdsautomation.com, the manufacturer's own domain, in its istruzioni directory; English edition per the _ENG suffix. The model code here is the document's own name - tapparella, Italian for roller shutter - because the instructions cover the tubular motor range rather than one motor, and no individual model code was visible. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On vdsautomation.com, the manufacturer's own domain, in its istruzioni directory; English edition per the _ENG suffix. The model code here is the document's own name - tapparella, Italian for roller shutter - because the instructions cover the tubular motor range rather than one motor, and no individual model code was visible. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

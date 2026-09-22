@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "Richmond",
+    "slug": "richmond",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "GTR156",
+      "name": "GTR156",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Richmond GTR156 Sliding Gate Opener User Manual (Revision 20a)",
+          "sourceUrl": "https://www.richmondau.com/wp-content/uploads/2019/04/GTR156-instruction-manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

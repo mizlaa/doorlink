@@ -13,7 +13,11 @@
       "name": "Mighty Mule FM500 Single Gate Opener",
       "category": "gate-motors",
       "region": "US",
-      "aliases": ["MM500", "500", "E-Z Gate Opener"],
+      "aliases": [
+        "MM500",
+        "500",
+        "E-Z Gate Opener"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,6 +27,7 @@
           "publisher": "GTO Access Systems",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "On mightymule.com, the manufacturer's own domain. Surfaced over plain HTTP and recorded that way rather than rewritten to HTTPS, so the link checker reports what the host actually serves. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -44,7 +49,9 @@
       "name": "Mighty Mule MM562 Dual Gate Opener",
       "category": "gate-motors",
       "region": "US",
-      "aliases": ["562"],
+      "aliases": [
+        "562"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -54,7 +61,9 @@
           "publisher": "GTO Access Systems",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On mightymule.com over HTTPS. Its colophon reads \"Printed in China for GTO Access Systems, LLC\", which is where the publisher comes from. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On mightymule.com over HTTPS. Its colophon reads \"Printed in China for GTO Access Systems, LLC\", which is where the publisher comes from. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -63,19 +72,24 @@
       "name": "Mighty Mule 200 Gate Opener (GTO)",
       "category": "gate-motors",
       "region": "US",
-      "aliases": ["MM200", "200"],
+      "aliases": [
+        "MM200",
+        "200"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "GTO / Mighty Mule 200 Installation Manual, R200INST rev 01/05/09",
-          "documentCode": "R200INST",
-          "revision": "rev 01/05/09",
           "sourceUrl": "https://ismartgate.com/manuals/Mighty_Mule_200_manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "ismartgate",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Third-party copy. Document code R200INST and revision 01/05/09 are printed on the document alongside a 2008 GTO, Inc. copyright - so this is the older GTO-branded generation, not the current Mighty Mule one, and the model name says so. No mightymule.com URL for it surfaced. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "R200INST",
+          "revision": "rev 01/05/09",
+          "evidence": "Third-party copy. Document code R200INST and revision 01/05/09 are printed on the document alongside a 2008 GTO, Inc. copyright - so this is the older GTO-branded generation, not the current Mighty Mule one, and the model name says so. No mightymule.com URL for it surfaced. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -84,18 +98,22 @@
       "name": "Mighty Mule FM352 Single Gate Opener (GTO)",
       "category": "gate-motors",
       "region": "US",
-      "aliases": ["MM352", "350"],
+      "aliases": [
+        "MM352",
+        "350"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "GTO / Mighty Mule FM352 Installation Manual, R352INST rev 07/13/09",
-          "documentCode": "R352INST",
-          "revision": "rev 07/13/09",
           "sourceUrl": "http://www.gateopenersunlimited.com/GTOPRO-Manuals/Mighty-Mule-FM352.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "Gate Openers Unlimited",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "R352INST",
+          "revision": "rev 07/13/09",
           "evidence": "Distributor copy, plain HTTP as surfaced. Document code R352INST and revision 07/13/09 printed on the document, with a 2008 GTO, Inc. copyright. The 350 is kept only as an alias because an aggregator lists a \"Mighty Mule 350\" manual separately and whether it is this same document was not established. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -104,6 +122,66 @@
               "label": "manuals.plus listing for a Mighty Mule 350 automatic gate opener manual"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "350",
+      "name": "350",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Mighty Mule 350 Installation Manual (R350INST)",
+          "sourceUrl": "https://ismartgate.com/manuals/Mighty_Mule_350_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MM500",
+      "name": "MM500",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Mighty Mule / GTO MM500 Installation Manual",
+          "sourceUrl": "https://www.hooverfence.com/mas_assets/theme/hooverfence/pdfs/gto-manual-mm500.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MM560",
+      "name": "MM560",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Mighty Mule MM560 Installation Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/Mighty_Mule_MM560_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

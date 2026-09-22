@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "Richards-Wilcox",
+    "slug": "richards-wilcox",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "DC SERIES",
+      "name": "DC SERIES",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Richards-Wilcox DC Direct Drive Commercial Door Operator Installation Manual",
+          "sourceUrl": "https://www.rwdoors.com/wp-content/uploads/2022/02/DCSeries_InstallationGuide_Dec2021.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

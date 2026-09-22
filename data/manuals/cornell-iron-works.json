@@ -1,0 +1,89 @@
+{
+  "manufacturer": {
+    "name": "Cornell Iron Works",
+    "slug": "cornell-iron-works",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "DEFENDER SERIES",
+      "name": "DEFENDER SERIES",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Cornell Defender Series Door Installation Instructions (ES-10-442)",
+          "sourceUrl": "https://www.cornelliron.com/docs/default-source/1v-manuals/cornell/es-10-442-installation-instructions-defender-series-cornell26bc5d4f86346a78840eff00003b6d5a.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "F SERIES",
+      "name": "F SERIES",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Cornell F Series Operator Installation Instructions and Operation Manual",
+          "sourceUrl": "https://www.cornelliron.com/docs/default-source/1v-manuals/installation-instructions/alarmgard/f-operator.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "FS SERIES",
+      "name": "FS SERIES",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Cornell FS Series Installation Instructions and Operation Manual",
+          "sourceUrl": "https://www.cornelliron.com/docs/default-source/1v-manuals/installation-instructions/fs.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MGH / MGR",
+      "name": "MGH / MGR",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Cornell MGH/MGR Installation Instructions and Operation Manual",
+          "sourceUrl": "https://www.cornelliron.com/docs/default-source/1v-manuals/installation-instructions/mgh-mgr.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

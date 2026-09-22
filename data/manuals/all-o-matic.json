@@ -1,0 +1,69 @@
+{
+  "manufacturer": {
+    "name": "All-O-Matic",
+    "slug": "all-o-matic",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "SL-100 AC / SL-150 AC",
+      "name": "SL-100 AC / SL-150 AC",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "All-O-Matic SL-100 AC / SL-150 AC Slider Manual",
+          "sourceUrl": "https://allomatic.net/gate-operator-manuals/sliders/sliders-sl100-ac-sl150-ac-manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SW-300DC / SW-325DC / SW-350DC",
+      "name": "SW-300DC / SW-325DC / SW-350DC",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "All-O-Matic SW-300DC, SW-325DC, SW-350DC Installation Manual",
+          "sourceUrl": "https://allomatic.net/gate-operator-manuals/swingers/swinger-sw-300-325-350DC-manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SW-350",
+      "name": "SW-350",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "All-O-Matic SW-350 AC Swing Gate Operator Manual (09.2022)",
+          "sourceUrl": "https://ismartgate.com/manuals/All-O-Matic_SW-350_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

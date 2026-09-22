@@ -1,0 +1,169 @@
+{
+  "manufacturer": {
+    "name": "ASI Doors",
+    "slug": "asi-doors",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "DURA-ROLL 109",
+      "name": "DURA-ROLL 109",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASI Doors Dura-Roll 109 Owner's Manual (17B071)",
+          "sourceUrl": "https://www.asidoors.com/wp-content/uploads/2020/05/Owners-Manual-Model-109.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ISO-ROLL 215",
+      "name": "ISO-ROLL 215",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASI Doors ISO-Roll 215 Owner's Manual (17A336)",
+          "sourceUrl": "https://www.asidoors.com/wp-content/uploads/2024/09/ASI-215_ISO-Roll_Owners_Manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "IXP 2600",
+      "name": "IXP 2600",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASI Doors Model IXP 2600 Single Impactable Sliding Cooler/Freezer Door Owner's Manual",
+          "sourceUrl": "https://www.asidoors.com/wp-content/uploads/2020/05/Owners-Manual-Model-2600.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MODEL 160 / 170",
+      "name": "MODEL 160 / 170",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASI Doors Model 170 Manual / 160 Power Bi-Part Sliding Fiberglass Door Owner's Manual",
+          "sourceUrl": "https://www.asidoors.com/wp-content/uploads/2020/05/Owners-Manual-Model-160-170.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MODEL 209",
+      "name": "MODEL 209",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASI Doors Model 209 Owner's Manual",
+          "sourceUrl": "https://www.asidoors.com/wp-content/uploads/2020/05/Owners-Manual-Model-209.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MODEL 415",
+      "name": "MODEL 415",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASI Doors Model 415 High-Speed Fabric Roll-Up Door Owner's Manual (17A251)",
+          "sourceUrl": "https://www.asidoors.com/wp-content/uploads/2020/05/Owners-Manual-Model-415.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MODEL 1240 / 1250",
+      "name": "MODEL 1240 / 1250",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASI Doors Model 1240 Manual / 1250 Power Single Sliding Door Owner's Manual",
+          "sourceUrl": "https://www.asidoors.com/wp-content/uploads/2020/05/Owners-Manual-Model-1240-1250.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MODEL 2100",
+      "name": "MODEL 2100",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASI Doors Model 2100 Owner's Manual",
+          "sourceUrl": "https://www.asidoors.com/wp-content/uploads/2020/05/Owners-Manual-Model-2100.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

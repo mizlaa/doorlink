@@ -1,0 +1,149 @@
+{
+  "manufacturer": {
+    "name": "CEDES",
+    "slug": "cedes",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "CEGARD/MAX NT",
+      "name": "CEGARD/MAX NT",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CEDES cegard/Max NT Installation and Operation Manual (106258)",
+          "sourceUrl": "https://media.cedes.com/filer_public/40/e0/40e017a8-1cd4-45ba-8805-dd1769ebac12/106258_cegardmax_nt_manual_230121a.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CEGARD/MINI",
+      "name": "CEGARD/MINI",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CEDES cegard/Mini Installation and Operation Manual (105235 v30)",
+          "sourceUrl": "https://media.cedes.com/filer_public/be/39/be39191f-c38d-4100-bba3-04c38aec8eb1/105235_manual_cegardmini_v30.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CEGARD/MINI-2000-32-NA",
+      "name": "CEGARD/MINI-2000-32-NA",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "CEDES cegard/Mini-2000-32-NA Manual (111239 v2.1)",
+          "sourceUrl": "https://media.cedes.com/filer_public/75/d6/75d6110c-7cd0-4a45-a084-581ad10597a3/111239_manual_cegard_mini_2000_32na.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CEGARD/PRO CABSAFE 2D",
+      "name": "CEGARD/PRO CABSAFE 2D",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "CEDES cegard/Pro CabSafe 2D Light Curtain Manual (116106 v12)",
+          "sourceUrl": "https://media.cedes.com/filer_public/79/b0/79b015b2-e100-431d-aaac-49cf57eb763e/116106_cegardpro_cabsafe_2d_manual_v12.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CEGARD/SMART CONTROLLER",
+      "name": "CEGARD/SMART CONTROLLER",
+      "category": "roller-shutter-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CEDES cegard/Smart Controller Installation and Operation Manual (117845en v11)",
+          "sourceUrl": "https://media.cedes.com/filer_public/aa/6f/aa6fc992-63f5-4216-8c56-8dc32ca8df56/117845en_manual_cegardsmart_controller_v11.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CEGARD/SMART LIGHT CURTAIN",
+      "name": "CEGARD/SMART LIGHT CURTAIN",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CEDES cegard/Smart Light Curtain Installation and Operation Manual (117941en v10)",
+          "sourceUrl": "https://media.cedes.com/filer_public/3f/c8/3fc87cb6-3a9c-4899-a067-900b0ac89294/117941en_manual_cegardsmart_lc_v10.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CGSM-B-OR1 / CGSM-B-PC1",
+      "name": "CGSM-B-OR1 / CGSM-B-PC1",
+      "category": "roller-shutter-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "CEDES cegard/Smart Controller CGSM-B-OR1 Operating Manual (118 730 v010)",
+          "sourceUrl": "https://media.cedes.com/filer_public/55/34/5534194b-daa4-4292-a510-da27c1bc13b9/118_730_operating_manual_cgsm-b-or1_-b-pc1_v010.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

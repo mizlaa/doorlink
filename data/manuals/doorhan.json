@@ -13,7 +13,10 @@
       "name": "DoorHan Sliding-1300 Sliding Gate Operator",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["SLIDING 1300", "SLIDING-2100"],
+      "aliases": [
+        "SLIDING 1300",
+        "SLIDING-2100"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,6 +26,7 @@
           "publisher": "Vihepo",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Reseller copy, a direct PDF. One manual covers the 1300 and 2100, so the 2100 is recorded as an alias rather than given a copy of the same file. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -44,18 +48,24 @@
       "name": "DoorHan Sliding-300 / 800 Sliding Gate Operator",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["SLIDING-800", "SLIDING 300", "SLIDING 800"],
+      "aliases": [
+        "SLIDING-800",
+        "SLIDING 300",
+        "SLIDING 800"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Operator Sliding-300 / 800 Installation and Operating Manual (2012)",
-          "version": "2012",
           "sourceUrl": "https://ismartgate.com/manuals/DoorHan_300-800_manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "ismartgate",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Hosted by a smart-controller vendor. The document's own copyright line reads (C) DoorHan, 2012, which is where the version comes from - a date printed in the document, not one inferred from the URL. Not fetched - egress blocked."
+          "language": "en",
+          "version": "2012",
+          "evidence": "Hosted by a smart-controller vendor. The document's own copyright line reads (C) DoorHan, 2012, which is where the version comes from - a date printed in the document, not one inferred from the URL. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -64,7 +74,9 @@
       "name": "DoorHan Shaft-30 Industrial Door Operator",
       "category": "garage-door-openers",
       "region": "EU",
-      "aliases": ["SHAFT 30"],
+      "aliases": [
+        "SHAFT 30"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -74,6 +86,7 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing. Search reports three Shaft-30 manuals exist there under two titles (Installation Manual, and Installation and Operating Manual); only the one with a stable listing URL is recorded, so the others are a known gap rather than a guess at their addresses. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -87,6 +100,26 @@
               "label": "Guidesimo copy"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "SECTIONAL-800PRO-CE",
+      "name": "SECTIONAL-800PRO-CE",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "DoorHan Sectional-800PRO-CE Installation and Operation Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/DoorHan_800PRO_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

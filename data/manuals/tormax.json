@@ -13,19 +13,24 @@
       "name": "iMotion 1301 Swing Door Operator",
       "category": "automatic-pedestrian-doors",
       "region": "US",
-      "aliases": ["1301", "iMotion1301"],
+      "aliases": [
+        "1301",
+        "iMotion1301"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "iMotion 1301 Swing Door Operator Installation and Operating Manual",
-          "documentCode": "US801279",
-          "version": "V6.17",
           "sourceUrl": "https://www.addisonautomatics.com/wp-content/uploads/manuals/Tormax/US801279_1301_Installation_and_Operating_Manual_V6.17.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "Addison Automatics",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor copy. Document code US801279 and version V6.17 read from the filename — the US prefix suggests a North American edition, which is why the region is recorded as US rather than global. Not fetched - egress blocked."
+          "language": "en",
+          "version": "V6.17",
+          "documentCode": "US801279",
+          "evidence": "Distributor copy. Document code US801279 and version V6.17 read from the filename — the US prefix suggests a North American edition, which is why the region is recorded as US rather than global. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -34,7 +39,9 @@
       "name": "1102 Swing Door Operator",
       "category": "automatic-pedestrian-doors",
       "region": "US",
-      "aliases": ["TTX 1102"],
+      "aliases": [
+        "TTX 1102"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -44,6 +51,7 @@
           "publisher": "Addison Automatics",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Distributor copy. The filename names both 1102 and 1201, so this document likely covers both; only 1102 is recorded as a model because 1201 was not otherwise identified. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -60,7 +68,10 @@
       "name": "TX9200 / TX9500 Series Sliding Door Operator",
       "category": "automatic-pedestrian-doors",
       "region": "US",
-      "aliases": ["TX 9200", "TX9500"],
+      "aliases": [
+        "TX 9200",
+        "TX9500"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -70,6 +81,7 @@
           "publisher": "AB Supply",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Distributor copy. One manual covers both the TX9200 and TX9500 series. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -86,7 +98,10 @@
       "name": "TX9430 / TX9420 Telescopic Sliding Door Operator",
       "category": "automatic-pedestrian-doors",
       "region": "US",
-      "aliases": ["TX 9430", "TX9420"],
+      "aliases": [
+        "TX 9430",
+        "TX9420"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -96,7 +111,9 @@
           "publisher": "Addison Automatics",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor copy. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Distributor copy. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -105,17 +122,60 @@
       "name": "2101 Sliding Door Drive",
       "category": "automatic-pedestrian-doors",
       "region": "GLOBAL",
+      "aliases": [],
       "documents": [
         {
           "kind": "USER_MANUAL",
           "title": "2101 Sliding Door Drive Instructions for Use",
-          "documentCode": "t1672-e",
           "sourceUrl": "https://www.scribd.com/document/509095635/t1672-e-instructions-for-use-2101",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "Scribd",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Document-sharing site, which commonly gates downloads — verification will likely mark this restricted. Kept because the document code t1672-e and the model are identifiable from the title. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "t1672-e",
+          "evidence": "Document-sharing site, which commonly gates downloads — verification will likely mark this restricted. Kept because the document code t1672-e and the model are identifiable from the title. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "2201",
+      "name": "2201",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Tormax 2201 Instructions for Use (T-1165 e)",
+          "sourceUrl": "https://www.specifiedby.com/tormax-uk/tormax-2201/tormax-united-kingdom_TORMAX-2201_Operations_Instructions-for-use.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "WIN DRIVE 2201",
+      "name": "WIN DRIVE 2201",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Tormax SLIDEDOOR Win Drive 2201 Operating Instructions",
+          "sourceUrl": "https://cms.esi.info/Media/documents/65776_1328289670343.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

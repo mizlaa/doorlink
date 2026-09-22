@@ -1,0 +1,69 @@
+{
+  "manufacturer": {
+    "name": "ALEKO",
+    "slug": "aleko",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "AC5700",
+      "name": "AC5700",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "ALEKO AC5700 Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/Aleko_AC5700_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "AS1200NOR",
+      "name": "AS1200NOR",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ALEKO Swing Gate Opener User's Manual AS1200NOR",
+          "sourceUrl": "https://images.thdstatic.com/catalog/pdfImages/c5/c532d5d5-7bbc-4473-ac60-d9c6c3f00c66.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "AS 450 / AS 900",
+      "name": "AS 450 / AS 900",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ALEKO Swing Gate Opener User's Manual AS450/900",
+          "sourceUrl": "https://images.thdstatic.com/catalog/pdfImages/9e/9ee90eee-f25f-4ef4-94d6-905d564d3771.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

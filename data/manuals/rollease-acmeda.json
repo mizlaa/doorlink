@@ -26,7 +26,9 @@
           "publisher": "C&C Curtains and Blinds",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Australian reseller copy. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Australian reseller copy. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -48,7 +50,9 @@
           "publisher": "Manuals+",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -57,6 +61,7 @@
       "name": "AC RF Tubular Motor",
       "category": "roller-shutter-motors",
       "region": "GLOBAL",
+      "aliases": [],
       "documents": [
         {
           "kind": "PROGRAMMING_GUIDE",
@@ -66,7 +71,9 @@
           "publisher": "AV Outlet",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "US reseller copy. Region recorded from the reseller's market, not confirmed from the document. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "US reseller copy. Region recorded from the reseller's market, not confirmed from the document. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -89,7 +96,9 @@
           "publisher": "Rollease Acmeda",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On rolleaseacmeda.com, the manufacturer's own domain, in its open docs tree - not the sign-in-gated member area. Part code MTDCBRF and version v1.2 are in the file name; the 433 MHz bi-directional description is from the document's own title line. The sfvrsn query parameter is the CMS cache-buster and may change. Region is US from the /us/ path segment, not from the motor's market. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On rolleaseacmeda.com, the manufacturer's own domain, in its open docs tree - not the sign-in-gated member area. Part code MTDCBRF and version v1.2 are in the file name; the 433 MHz bi-directional description is from the document's own title line. The sfvrsn query parameter is the CMS cache-buster and may change. Region is US from the /us/ path segment, not from the motor's market. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -111,7 +120,49 @@
           "publisher": "Rollease Acmeda",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On rolleaseacmeda.com's open docs tree. Part code MTDCBSW25-1-1 and version v1.0 from the file name. Kept separate from the ARC motor: a wand-controlled switch motor and a 433 MHz radio motor are commissioned differently. Region is US from the /us/ path segment, not from the motor's market. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On rolleaseacmeda.com's open docs tree. Part code MTDCBSW25-1-1 and version v1.0 from the file name. Kept separate from the ARC motor: a wand-controlled switch motor and a 433 MHz radio motor are commissioned differently. Region is US from the /us/ path segment, not from the motor's market. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "AUTOMATE WIREFREE S45",
+      "name": "AUTOMATE WIREFREE S45",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Rollease Acmeda Automate Wirefree Medium Motor System Reference Guide",
+          "sourceUrl": "https://www.rolleaseacmeda.com/docs/default-source/au/motorised-rollers/automate-wirefree-motorised-s45/srg-wirefree-medium-motor.pdf?sfvrsn=52bee33c_30",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Medium Roller Blinds",
+      "name": "Medium Roller Blinds",
+      "category": "roller-shutter-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Rollease Acmeda Medium Roller Blind Assembly Manual v1.6",
+          "sourceUrl": "https://www.rolleaseacmeda.com/docs/default-source/au/rollers/medium-roller-blinds_am.pdf?sfvrsn=8199f03c_14",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

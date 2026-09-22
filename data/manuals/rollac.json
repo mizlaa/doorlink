@@ -1,0 +1,40 @@
+{
+  "manufacturer": {
+    "name": "Rollac",
+    "slug": "rollac",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "Rolling Shutters",
+      "name": "Rolling Shutters",
+      "category": "roller-shutter-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Rollac Rolling Shutter Installation Manual - Complete Technical Guide",
+          "sourceUrl": "https://rollac.com/wp-content/uploads/2024/11/Shutter_Install_Guide.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "QUICK_START",
+          "title": "Rollac Rolling Shutter Installation Manual - Quick Start Guide",
+          "sourceUrl": "https://rollac.com/wp-content/uploads/2024/11/Quick_Start_Install_Guide.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

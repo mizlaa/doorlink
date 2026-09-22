@@ -13,17 +13,24 @@
       "name": "Tousek PULL T4 / T5 / T8 / T10 / T15 Sliding Gate Operator",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["PULL T4", "PULL T8", "PULL T10", "PULL T15", "PULL-T5"],
+      "aliases": [
+        "PULL T4",
+        "PULL T8",
+        "PULL T10",
+        "PULL T15",
+        "PULL-T5"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "PULL T4, T5, T8, T10, T15 Sliding Gate Operators Mounting and Installation Manual (EN)",
-          "version": "09-2020",
           "sourceUrl": "https://tousek.com/download/EN/EN_01_PULL-T4-T5-T8-T10-T15.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Tousek",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "09-2020",
           "evidence": "On tousek.com, the manufacturer's own domain, English edition. Search dates it September 2020; recorded as 09-2020 because that is the month stated, not a day-level date. One manual covers five drives, so they share this record as aliases. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -50,17 +57,21 @@
       "name": "Tousek PULL T24 / T24speed Sliding Gate Operator",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["PULL T24speed", "PULL-T24"],
+      "aliases": [
+        "PULL T24speed",
+        "PULL-T24"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "PULL T24, T24speed Sliding Gate Operators Mounting and Installation Manual (EN)",
-          "version": "10-2021",
           "sourceUrl": "https://tousek.com/download/EN/EN_01_PULL-T24-T24speed.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Tousek",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "10-2021",
           "evidence": "On tousek.com, English edition, dated October 2021 by the search result. Kept apart from the T4-T15 manual because Tousek publishes them as two documents. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -82,7 +93,9 @@
       "name": "Tousek TURN UP Swing Gate Operator",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["TURN-UP"],
+      "aliases": [
+        "TURN-UP"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -92,7 +105,9 @@
           "publisher": "Tousek",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On tousek.com, English edition. The EN_03 prefix is Tousek's section number for swing gate operators, matching EN_01 for sliding - useful for guessing nothing, but useful for a harvester walking the tree. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On tousek.com, English edition. The EN_03 prefix is Tousek's section number for swing gate operators, matching EN_01 for sliding - useful for guessing nothing, but useful for a harvester walking the tree. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -101,18 +116,144 @@
       "name": "Tousek TURN 10 / TURN 20 Swing Gate Operator",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["TURN 20", "TURN-10", "TURN-20"],
+      "aliases": [
+        "TURN 20",
+        "TURN-10",
+        "TURN-20"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "TURN 10, TURN 20 Swing Gate Operator Installation and Operating Instructions (EN)",
-          "documentCode": "420007",
           "sourceUrl": "http://download.tousek.at/montage/EN_TURN-10-20_420007.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Tousek",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On download.tousek.at, Tousek's second document host, in its montage branch. Part number 420007 from the file name. Surfaced over plain HTTP and recorded that way rather than rewritten to HTTPS, so the link checker reports what the host actually serves. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "420007",
+          "evidence": "On download.tousek.at, Tousek's second document host, in its montage branch. Part number 420007 from the file name. Surfaced over plain HTTP and recorded that way rather than rewritten to HTTPS, so the link checker reports what the host actually serves. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "PULL T5 / T8 / T10",
+      "name": "PULL T5 / T8 / T10",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Tousek Pull T5, T8, T10 Sliding Gate Operators Mounting and Installation Manual (490023)",
+          "sourceUrl": "http://download.tousek.at/part/E/E_PULL-T5-T8-T10_490023.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "PULL TSA",
+      "name": "PULL TSA",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "SAFETY_DOCUMENT",
+          "title": "Tousek Pull TSA Safety Sensor Mounting and Installation Manual",
+          "sourceUrl": "http://download.tousek.at/montage/EN_PULL-TSA.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "REX FORCE",
+      "name": "REX FORCE",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Tousek REX Force Swing Gate Operator Mounting and Operating Manual",
+          "sourceUrl": "http://download.tousek.at/montage/EN_REX-Force.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SONIC 24",
+      "name": "SONIC 24",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Tousek Sonic 24 Swing Gate Operator Mounting and Installation Manual",
+          "sourceUrl": "https://www.global-access.com.au/wp-content/uploads/2025/04/TOUSEK-SONIC-24-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ST 51",
+      "name": "ST 51",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Tousek ST 51 Swing Gate Control Unit Connection and Installation Manual",
+          "sourceUrl": "http://download.tousek.at/montage/EN_ST-51.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ST 63",
+      "name": "ST 63",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Tousek ST 63 Control Unit Connection and Installation Manual",
+          "sourceUrl": "http://download.tousek.at/montage/EN_ST-63.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

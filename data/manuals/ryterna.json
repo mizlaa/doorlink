@@ -13,7 +13,9 @@
       "name": "Ryterna Side-Hinged Garage Door",
       "category": "garage-door-openers",
       "region": "EU",
-      "aliases": ["Side hinged"],
+      "aliases": [
+        "Side hinged"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,7 +25,49 @@
           "publisher": "Ryterna",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On ryterna.com, the manufacturer's own domain. The model code is the door type rather than a product code, because the document covers the side-hinged range and none was visible. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On ryterna.com, the manufacturer's own domain. The model code is the door type rather than a product code, because the document covers the side-hinged range and none was visible. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "R30",
+      "name": "R30",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Ryterna R30 Sectional Door Installation Manual",
+          "sourceUrl": "https://www.ryterna.com/wp-content/uploads/R30.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TL LHR-RM",
+      "name": "TL LHR-RM",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Ryterna TL LHR-RM Sectional Garage Door Installation Instructions",
+          "sourceUrl": "https://ryternagaragedoors.co.uk/wp-content/uploads/2017/07/TL_LHR_RM_installation.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

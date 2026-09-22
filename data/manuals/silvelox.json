@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "Silvelox",
+    "slug": "silvelox",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "OVERLAP 2.0",
+      "name": "OVERLAP 2.0",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Silvelox Overlap 2.0 Sectional Garage Door Installation Manual",
+          "sourceUrl": "https://www.thegaragedoorcentre.co.uk/userfiles/downloads/installation_manual_overlap_2_0___1__32113.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

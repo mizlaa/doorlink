@@ -1,0 +1,60 @@
+{
+  "manufacturer": {
+    "name": "Haas Door",
+    "slug": "haas-door",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "Commercial Steel Doors",
+      "name": "Commercial Steel Doors",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Haas Door Installation and Maintenance Service Manual for Commercial Steel Doors",
+          "sourceUrl": "https://irp.cdn-website.com/cad27352/files/uploaded/Commercial-Installation-Booklet.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Residential Steel Doors",
+      "name": "Residential Steel Doors",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Haas Door Installation and Owners Manual for Residential Steel Doors",
+          "sourceUrl": "https://irp.cdn-website.com/cad27352/files/uploaded/Residential-Installation-Instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Haas Door Residential Garage Door Installation and Owners Manual",
+          "sourceUrl": "https://accessentry.ca/wp-content/uploads/2025/07/haas-res-installation-instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

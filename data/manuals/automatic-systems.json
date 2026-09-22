@@ -1,0 +1,69 @@
+{
+  "manufacturer": {
+    "name": "Automatic Systems",
+    "slug": "automatic-systems",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "BL41 / BL4x",
+      "name": "BL41 / BL4x",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Automatic Systems BL4x Technical Manual (NAM-BL4x-MT-EN-C)",
+          "sourceUrl": "https://www.automatic-systems.com/wp-content/uploads/sites/6/2018/02/bl41-tm-en-3.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BL52 / BL53",
+      "name": "BL52 / BL53",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Automatic Systems BL52 / BL53 Electrical Rising Barrier Manual",
+          "sourceUrl": "https://elics.ru/files/instruction/automatic-systems/bl-52.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BL229",
+      "name": "BL229",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Automatic Systems BL229 Technical Manual",
+          "sourceUrl": "https://devancocanada.com/files/manuals/BL229:Technical-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

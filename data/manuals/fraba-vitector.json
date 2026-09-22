@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "FRABA Vitector",
+    "slug": "fraba-vitector",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "Safety Edges and Sensors",
+      "name": "Safety Edges and Sensors",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "SAFETY_DOCUMENT",
+          "title": "FRABA Vitector Safety Systems for Industrial Applications General Catalog",
+          "sourceUrl": "https://www.vitector.com/media/vitector_media/documents_1/E_VITECTOR_GeneralCatalog.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

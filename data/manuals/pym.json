@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "PYM",
+    "slug": "pym",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "A2203-JX",
+      "name": "A2203-JX",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "PYM A2203-JX 1300kg Automatic Sliding Gate Opener User's Manual",
+          "sourceUrl": "https://ffcr.com.au/wp-content/uploads/2023/03/MANUAL-PYM-A2203-JX-1300kgs-Siding-Gate-Opener.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

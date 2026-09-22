@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "US Automatic",
+    "slug": "us-automatic",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "PATRIOT",
+      "name": "PATRIOT",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "US Automatic Patriot Installation / Owners Manual",
+          "sourceUrl": "https://usautomaticgateopeners.com/store/pdfs/Patriot_Eng_Spn_Combined.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

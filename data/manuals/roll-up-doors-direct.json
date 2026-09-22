@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "Roll Up Doors Direct",
+    "slug": "roll-up-doors-direct",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "EASYROLLER",
+      "name": "EASYROLLER",
+      "category": "roller-shutter-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "EasyRoller Residential / Light-Duty Commercial Door Instruction Manual (160490_01)",
+          "sourceUrl": "https://m.rollupdoorsdirect.com/RUDD%20PDF/EasyRoller-Instruction-Manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

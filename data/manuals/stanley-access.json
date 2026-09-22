@@ -13,19 +13,84 @@
       "name": "Stanley MC521 Slide Door Controller",
       "category": "remotes-accessories",
       "region": "US",
-      "aliases": ["MC-521", "MC521 Plus"],
+      "aliases": [
+        "MC-521",
+        "MC521 Plus"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Stanley MC521 Slide Door Installation and Operations Manual, Rev D",
-          "revision": "Rev D",
-          "version": "3-11-07",
           "sourceUrl": "https://d3eu1jnerk19h.cloudfront.net/documents/MC521-Slide-Door-Installation-and-Operations-Manual-Rev-D-3-11-07.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "Door Controls USA",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor CDN copy - the same cloudfront host that serves their Besam documents, which is why it is recorded as Door Controls USA rather than as an anonymous CDN. Revision D and the date 3-11-07 are both in the file name; the date is recorded verbatim as a version because its day/month order is not stated. Filed under accessories because the MC521 is the controller, not the operator. Not fetched - egress blocked."
+          "language": "en",
+          "version": "3-11-07",
+          "revision": "Rev D",
+          "evidence": "Distributor CDN copy - the same cloudfront host that serves their Besam documents, which is why it is recorded as Door Controls USA rather than as an anonymous CDN. Revision D and the date 3-11-07 are both in the file name; the date is recorded verbatim as a version because its day/month order is not stated. Filed under accessories because the MC521 is the controller, not the operator. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DURA-GLIDE 2000AG",
+      "name": "DURA-GLIDE 2000AG",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Stanley Dura-Glide 2000AG All-Glass Sliding Door Installation Instructions",
+          "sourceUrl": "https://www.addisonautomatics.com/wp-content/uploads/manuals/stanley/2000%20all%20glass%20instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MODEL J",
+      "name": "MODEL J",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Stanley Model J Control Manual",
+          "sourceUrl": "https://absupply.net/pdf/Stanley%20Model%20J%20Control%20Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Slide Door Systems",
+      "name": "Slide Door Systems",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Stanley Automatic Slide Door Systems Owner's Operation and Maintenance Manual",
+          "sourceUrl": "https://s3.amazonaws.com/s3-absupply-net/pdf/Stanley_Slide-Door-Systems_Owners-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

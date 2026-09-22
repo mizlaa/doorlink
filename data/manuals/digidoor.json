@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "DigiDoor",
+    "slug": "digidoor",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "DIGIDOOR II",
+      "name": "DIGIDOOR II",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DigiDoor II Garage Door Operator Manual",
+          "sourceUrl": "https://automationafrica.co.za/wp-content/uploads/2020/01/digidoorii.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

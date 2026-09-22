@@ -1,0 +1,60 @@
+{
+  "manufacturer": {
+    "name": "Elite Access Systems",
+    "slug": "elite-access-systems",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "SL3000UL",
+      "name": "SL3000UL",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Elite Series Commercial High-Traffic AC Slide Gate Operator SL3000UL Manual (0139375)",
+          "sourceUrl": "https://jansensupply.com/docs/0139375.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Elite SL3000UL Owner's Manual",
+          "sourceUrl": "https://www.hooverfence.com/mas_assets/media/hooverfence/pdfs/owners-manual-SL3000UL.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SL3000UL DC3",
+      "name": "SL3000UL DC3",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Elite SL-3000-UL Series Gate Opener Instruction Manual",
+          "sourceUrl": "https://files.d-tools.com/Visualizations/Approved/Elite%20Gates/Documents/Elite%20Gates_SL3000ULDC3_Manual1.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "Dorma",
+    "slug": "dorma",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "ES 200",
+      "name": "ES 200",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Dorma ES 200 Sliding Door Operator Manual",
+          "sourceUrl": "http://doormanuals.co.uk/wp-content/uploads/2018/06/Dorma-ES-200.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

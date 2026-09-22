@@ -1,0 +1,89 @@
+{
+  "manufacturer": {
+    "name": "Videx",
+    "slug": "videx",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "GSM Door Intercom",
+      "name": "GSM Door Intercom",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Videx GSM Door Intercom System Technical Manual (Edition 2.0.7)",
+          "sourceUrl": "https://doorentrydirect.com/acrobat/videx/Instructions/GSM/GSMManual2_0.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "VR4K-1",
+      "name": "VR4K-1",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Videx VR4K-1 Vandal Resistant One Button Door Entry Kit Technical Manual",
+          "sourceUrl": "https://faac.blob.core.windows.net/web/1/accessories-and-control-boards/accessories/videx-intercom-systems/vandal-resistant-audio-intercom/vr4k1-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "VR4K-2",
+      "name": "VR4K-2",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Videx VR4K-2 Vandal Resistant Two Button Door Entry Kit Technical Manual",
+          "sourceUrl": "https://www.videxuk.com/wp-content/uploads/2016/12/VR4K2Manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "VRDK1",
+      "name": "VRDK1",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Videx VRDK1 Vandal Resistant One Button Door Entry Kit Technical Manual",
+          "sourceUrl": "https://doorentrydirect.com/acrobat/videx/Instructions/VR/Videx-VRDK1-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

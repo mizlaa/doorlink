@@ -25,6 +25,7 @@
           "origin": "MANUFACTURER_ORIGINAL",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Manufacturer's own domain, commercial download area. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -53,7 +54,9 @@
           "publisher": "ManualsLib",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -62,6 +65,10 @@
       "name": "DEIMOS Rack Sliding Gate Actuator",
       "category": "gate-motors",
       "region": "GLOBAL",
+      "aliases": [
+        "DEIMOS BT",
+        "Deimos Ultra"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -71,7 +78,9 @@
           "publisher": "ManualsLib",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": []
         },
         {
           "kind": "INSTALL_MANUAL",
@@ -81,6 +90,7 @@
           "publisher": "Electric Gates UK (trade)",
           "region": "UK",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Reseller copy, direct PDF, bilingual Italian and English per its own cover. The 1970/01 path segment is an epoch-zero upload date - the reseller's CMS had no real date, so nothing about the document's edition can be read from the URL, and none is recorded. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -95,10 +105,6 @@
             }
           ]
         }
-      ],
-      "aliases": [
-        "DEIMOS BT",
-        "Deimos Ultra"
       ]
     },
     {
@@ -106,6 +112,7 @@
       "name": "ARES Sliding Gate Operator",
       "category": "gate-motors",
       "region": "GLOBAL",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -115,7 +122,9 @@
           "publisher": "ManualsLib",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -124,6 +133,7 @@
       "name": "ECOSOL PHOBOS Solar Swing Gate Kit",
       "category": "gate-motors",
       "region": "GLOBAL",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -133,7 +143,169 @@
           "publisher": "BFT Gate Openers",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor store copy. Region recorded as US from the distributor's market; not confirmed from the document. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Distributor store copy. Region recorded as US from the distributor's market; not confirmed from the document. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ARES HQSC D",
+      "name": "ARES HQSC D",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Ares Installation and User's Manual",
+          "sourceUrl": "https://manuals.easygates.co.uk/PDF/bft/AresHQSCDEnglish06-11.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GIOTTO 30-60 BT",
+      "name": "GIOTTO 30-60 BT",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BFT Giotto 30-60 24V Boom Barrier Manual",
+          "sourceUrl": "https://www.bft-automation.com/fileadmin/user_upload/commercial_download/GIOTTO_30.60_-_24V_-_BOOM_BARRIER_-_MANUAL.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GIOTTO BT A U",
+      "name": "GIOTTO BT A U",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BFT Giotto BT A U Instruction Manual",
+          "sourceUrl": "https://www.bftautomationuk.com/files/42/All-instruction-manuals/43/Giotto-BT-A-U---Instruction-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GIOTTO BT A ULTRA 36",
+      "name": "GIOTTO BT A ULTRA 36",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Giotto Ultra 36 Automatic Barrier Installation Manual (D814017)",
+          "sourceUrl": "https://bftgateopeners.com/store/media/pdfs/BFT-Giotto-Ultra-36-Automatic-Barrier-Opener_Installation-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MICHELANGELO 24V",
+      "name": "MICHELANGELO 24V",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Michelangelo 24V Boom Barrier Installation and User's Manual",
+          "sourceUrl": "https://www.bft-automation.com/fileadmin/user_upload/commercial_download/MICHELANGELO_-_24V_-_BOOM_BARRIER_-_MANUAL_02.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "PHOBOS N L BT / THALIA",
+      "name": "PHOBOS N L BT / THALIA",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Phobos N L BT Thalia Control Board Installation Manual",
+          "sourceUrl": "https://bftgateopeners.com/store/media/pdfs/bft-phobos-n-l-bt-thalia-control-board-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RIGEL 5",
+      "name": "RIGEL 5",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BFT Rigel 5 Control Panel Manual",
+          "sourceUrl": "https://bftgateopeners.com/store/media/pdfs/bft-rigel-5-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "THALIA L",
+      "name": "THALIA L",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BFT Thalia L Instruction Manual (D814123)",
+          "sourceUrl": "https://www.bftautomationuk.com/files/42/All-instruction-manuals/71/Thalia-L---Instruction-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "Skylink",
+    "slug": "skylink",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "ATOMS / ATR SERIES",
+      "name": "ATOMS / ATR SERIES",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Skylink Atoms Series Garage Door Opener Owner's Manual (2020)",
+          "sourceUrl": "https://www.skylinkhome.com/wp-content/uploads/2016/03/ATR-Series-Manual-2020.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

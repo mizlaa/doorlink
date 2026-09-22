@@ -1,0 +1,69 @@
+{
+  "manufacturer": {
+    "name": "Janus International",
+    "slug": "janus-international",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "650",
+      "name": "650",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Janus 650 Self Storage Unit Doors Installation Guide",
+          "sourceUrl": "https://cdn2.hubspot.net/hubfs/4335336/Installation%20Guides/650-Installation-Guide.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "1000",
+      "name": "1000",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Janus 1000 Rolling Door Installation Guide",
+          "sourceUrl": "https://www.janusintl.com/hubfs/Installation%20Guides/1000%20INSTALLATION%20GUIDE..pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "PANTHEON COMMERCIAL",
+      "name": "PANTHEON COMMERCIAL",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Janus Pantheon Commercial Installation Guide",
+          "sourceUrl": "https://cdn2.hubspot.net/hubfs/4335336/janus_2019/pdf/Pantheon-Commercial-Installation-Guide.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

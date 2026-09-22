@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "Erreka",
+    "slug": "erreka",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "EPE-B",
+      "name": "EPE-B",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Manual de instrucciones cuadro EPEB / EPEB-PAL",
+          "sourceUrl": "https://access.erreka.com/wp-content/uploads/2020/11/Manual_instrucciones_cuadro_EPEB-EPEB-PAL.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

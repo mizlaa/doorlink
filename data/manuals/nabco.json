@@ -13,18 +13,24 @@
       "name": "NABCO GT1175 Standard Slide Door Operator",
       "category": "automatic-pedestrian-doors",
       "region": "US",
-      "aliases": ["GT 1175", "1175", "Gyro Tech 1175", "1175 Whisper Slide"],
+      "aliases": [
+        "GT 1175",
+        "1175",
+        "Gyro Tech 1175",
+        "1175 Whisper Slide"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "GT1175 Standard Slide Doors Installation Manual, Rev 10-19-16",
-          "documentCode": "C-00105",
-          "version": "Rev 10-19-16",
           "sourceUrl": "https://www.nabcoentrances.com/wp-content/uploads/2016/09/C-00105-1175-Standard-Slide-Doors-Rev-10-19-16.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "NABCO Entrances",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "Rev 10-19-16",
+          "documentCode": "C-00105",
           "evidence": "On nabcoentrances.com, the manufacturer's own domain. Document code C-00105 and revision 10-19-16 from the file name; 52 pages, covering the U30 microprocessor control, per the search result. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -42,24 +48,27 @@
         {
           "kind": "QUICK_START",
           "title": "GT1175 Standard Slide Doors Quick Set-Up and Parts Guide, Rev 8-10-16",
-          "documentCode": "C-00105",
-          "version": "Rev 8-10-16",
           "sourceUrl": "https://www.nabcoentrances.com/wp-content/uploads/2015/11/C-00105-1175-Standard-Slide-Doors-Rev-8-10-16.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "NABCO Entrances",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On nabcoentrances.com. Shares document code C-00105 with the installation manual above but carries a different revision, a different title (Quick Set-Up and Parts Guide) and a different length (64 pages against 52). Recorded as a separate document rather than an older revision of the same one, because the titles disagree and which supersedes which cannot be settled without opening them. Not fetched - egress blocked."
+          "language": "en",
+          "version": "Rev 8-10-16",
+          "documentCode": "C-00105",
+          "evidence": "On nabcoentrances.com. Shares document code C-00105 with the installation manual above but carries a different revision, a different title (Quick Set-Up and Parts Guide) and a different length (64 pages against 52). Recorded as a separate document rather than an older revision of the same one, because the titles disagree and which supersedes which cannot be settled without opening them. Not fetched - egress blocked.",
+          "altSources": []
         },
         {
           "kind": "INSTALL_MANUAL",
           "title": "GT1175 Installation Manual U01, 7-22-96",
-          "version": "U01 7-22-96",
           "sourceUrl": "https://www.nabcoentrances.com/wp-content/uploads/2018/12/GT1175-Installation-Manual-U01-7-22-96.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "NABCO Entrances",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "U01 7-22-96",
           "evidence": "On nabcoentrances.com. The 1996 edition for the U01 control, kept alongside the current one because doors of that age are still in service and the newer manual does not cover the older controller. Its result title reads \"gyro tech - 1175 whisper slide\", which is the document's own heading. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -68,6 +77,28 @@
               "label": "Manufacturer's literature page for this document"
             }
           ]
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "NABCO GT1175 Electrical Installation Manual with U30 (C-00198)",
+          "sourceUrl": "https://www.nabcoentrances.com/wp-content/uploads/2016/10/C-00198-U30-E-Electrical-Manual-Rev-10-12-16.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "NABCO GT1175 Slide Door Owner's Manual (C-00109)",
+          "sourceUrl": "http://www.nabcoentrances.com/wp-content/uploads/2017/06/C-00109-SlideOwnerManual-Rev-5-19-17.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     },
@@ -76,19 +107,44 @@
       "name": "NABCO GT1175 (H105) Hurricane Slide Door Operator",
       "category": "automatic-pedestrian-doors",
       "region": "US",
-      "aliases": ["H105", "1175 Hurricane"],
+      "aliases": [
+        "H105",
+        "1175 Hurricane"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "GT1175 (H105) Hurricane Installation Manual, Rev 1-16-19",
-          "documentCode": "C-00357",
-          "version": "Rev 1-16-19",
           "sourceUrl": "https://www.addisonautomatics.com/wp-content/uploads/manuals/nabco_gyrotech/1175%20Hurricane.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "Addison Automatics",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor copy; 47 pages, part number C-00357, revision 1-16-19, all from the document's own header as shown in the search result. No nabcoentrances.com URL for the Hurricane variant surfaced, so it stays third-party while its standard-slide siblings are manufacturer-hosted. Kept as its own model because a hurricane-rated build is not interchangeable with the standard one. Not fetched - egress blocked."
+          "language": "en",
+          "version": "Rev 1-16-19",
+          "documentCode": "C-00357",
+          "evidence": "Distributor copy; 47 pages, part number C-00357, revision 1-16-19, all from the document's own header as shown in the search result. No nabcoentrances.com URL for the Hurricane variant surfaced, so it stays third-party while its standard-slide siblings are manufacturer-hosted. Kept as its own model because a hurricane-rated build is not interchangeable with the standard one. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GT1175 All Glass",
+      "name": "GT1175 All Glass",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "NABCO GT1175 All Glass Slide Door Installation Manual (C-00371)",
+          "sourceUrl": "https://www.nabcoentrances.com/wp-content/uploads/2020/08/C-00371-1175-AllGlass-Slide-Door-w_OPUS.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

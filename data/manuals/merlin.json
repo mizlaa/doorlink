@@ -26,6 +26,7 @@
           "publisher": "Edenroc Garage Doors",
           "region": "AU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Australian installer-hosted copy. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -60,7 +61,31 @@
           "publisher": "ManyManuals",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Merlin MT100EVO Tiltmaster Owners Copy Manual (114D4626G)",
+          "sourceUrl": "https://garagedooropenerremotes.com.au/wp-content/uploads/2017/08/MT100EVO-Tiltmaster-manual-114D4626G.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Merlin MT100EVO Tiltmaster Sectional and Tilt Door Opener Installation Manual",
+          "sourceUrl": "https://wholesalegaragedoors.com.au/wp-content/uploads/2022/06/Merlin-MT100EVO-Tiltmaster-Sectional-and-Tilt-Door-Opener-Installation-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     },
@@ -84,7 +109,9 @@
           "publisher": "ManyManuals",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. A file size of 2.91 MB was mentioned in the search summary but is not recorded here, because it was not confirmed by fetching the file. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. A file size of 2.91 MB was mentioned in the search summary but is not recorded here, because it was not confirmed by fetching the file. Not fetched - egress blocked.",
+          "altSources": []
         },
         {
           "kind": "INSTALL_MANUAL",
@@ -94,6 +121,7 @@
           "publisher": "Remote Openers",
           "region": "AU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Reseller copy, direct PDF, for the MT60P variant. Dominator NSW's index names the same document as MT60P-114A4217F.pdf; 114A4217F is Chamberlain's document numbering, kept as an alias rather than recorded as this file's documentCode because this file does not carry it. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -129,7 +157,29 @@
           "publisher": "Motepro",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Reseller copy. The SilentDrive Essential product name comes from the search result's rendering of the document; Dominator NSW lists the same manual as 114A5183B-MR655MYQ.pdf, so 114A5183B is Chamberlain's number for it and is kept as an alias. An MR555MYQ manual surfaced during earlier Danmar research and was deliberately not attributed there - it belongs to this Merlin MR family, but no MR555 model is created here because that document was not re-confirmed in this search. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Reseller copy. The SilentDrive Essential product name comes from the search result's rendering of the document; Dominator NSW lists the same manual as 114A5183B-MR655MYQ.pdf, so 114A5183B is Chamberlain's number for it and is kept as an alias. An MR555MYQ manual surfaced during earlier Danmar research and was deliberately not attributed there - it belongs to this Merlin MR family, but no MR555 model is created here because that document was not re-confirmed in this search. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MT1100MYQ",
+      "name": "MT1100MYQ",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Merlin Commander myQ MT1100MYQ User Manual",
+          "sourceUrl": "https://edenrocgaragedoors.com.au/wp-content/uploads/2020/07/Merlin-Commander-myQ-MT1100MYQ-User-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

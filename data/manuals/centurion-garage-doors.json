@@ -1,0 +1,69 @@
+{
+  "manufacturer": {
+    "name": "Centurion Garage Doors",
+    "slug": "centurion-garage-doors",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "Garage Door Opener",
+      "name": "Garage Door Opener",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Centurion Garage Door Opener Installation Instructions",
+          "sourceUrl": "https://www.cgdoors.com.au/wp-content/uploads/2022/02/Centurion-Garage-Door-Opener-Installation-Instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RDO10C",
+      "name": "RDO10C",
+      "category": "roller-shutter-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Centurion Roller Door Opener RDO10C User Manual",
+          "sourceUrl": "https://www.cgdoors.com.au/wp-content/uploads/2022/02/Centurion-Roller-Door-Opener-RDO10C-User-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SDO10",
+      "name": "SDO10",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Centurion SDO10 Instruction Manual",
+          "sourceUrl": "https://www.waverleygaragedoors.com.au/instruction-manuals/Centurion%20sdo10%20.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

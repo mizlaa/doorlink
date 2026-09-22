@@ -1,0 +1,49 @@
+{
+  "manufacturer": {
+    "name": "Manusa",
+    "slug": "manusa",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "ACTIVA+",
+      "name": "ACTIVA+",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Manusa Activa+ Single Operator Installation Manual",
+          "sourceUrl": "https://manusa.parkan.ua/assets/files/MANUAL_install_Manusa_Activa_1H_en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "VISIO+",
+      "name": "VISIO+",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Manusa Visio+ Operator Instruction Manual D01380EN-v5",
+          "sourceUrl": "https://autodoorspecialists.com/wp-content/uploads/2024/12/Visio-User-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

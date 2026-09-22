@@ -13,7 +13,9 @@
       "name": "Viking F-1 Swing Gate Operator (1st generation)",
       "category": "gate-motors",
       "region": "US",
-      "aliases": ["F1"],
+      "aliases": [
+        "F1"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,7 +25,9 @@
           "publisher": "ismartgate",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Third-party copy. The 1st-generation qualifier is in the file name, so a later generation exists and this manual does not cover it - recorded in the model name so nobody reaches for the wrong one. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Third-party copy. The 1st-generation qualifier is in the file name, so a later generation exists and this manual does not cover it - recorded in the model name so nobody reaches for the wrong one. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -32,7 +36,9 @@
       "name": "Viking K-2 Slide Gate Operator",
       "category": "gate-motors",
       "region": "US",
-      "aliases": ["K2"],
+      "aliases": [
+        "K2"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -42,7 +48,9 @@
           "publisher": "TS Distributors",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor copy, direct PDF. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Distributor copy, direct PDF. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -51,7 +59,9 @@
       "name": "Viking B-12 Barrier Gate Operator",
       "category": "gate-motors",
       "region": "US",
-      "aliases": ["B12"],
+      "aliases": [
+        "B12"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -61,7 +71,9 @@
           "publisher": "LA Ornamental",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor copy, from a directory the distributor names Viking_Access_PDF Files. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Distributor copy, from a directory the distributor names Viking_Access_PDF Files. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -70,6 +82,7 @@
       "name": "Viking X390 Single and Dual Gate System",
       "category": "gate-motors",
       "region": "US",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -79,7 +92,9 @@
           "publisher": "LA Ornamental",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor copy. The file name says compressed, so this is a re-processed copy rather than the manufacturer's original file - worth knowing if a diagram in it is unreadable. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Distributor copy. The file name says compressed, so this is a re-processed copy rather than the manufacturer's original file - worth knowing if a diagram in it is unreadable. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -88,7 +103,9 @@
       "name": "Viking G-5 Residential and Commercial Swing Gate Opener",
       "category": "gate-motors",
       "region": "US",
-      "aliases": ["G5"],
+      "aliases": [
+        "G5"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -98,7 +115,9 @@
           "publisher": "Performance Gate Openers",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor copy, direct PDF. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Distributor copy, direct PDF. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -107,7 +126,9 @@
       "name": "Viking I-8 Underground Gate Operator",
       "category": "gate-motors",
       "region": "US",
-      "aliases": ["I8"],
+      "aliases": [
+        "I8"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -117,7 +138,69 @@
           "publisher": "ManualsLib",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. The underground application in the model name comes from Viking's own download page, which search describes as split into swing, slide, underground and solar - not from the document. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. The underground application in the model name comes from Viking's own download page, which search describes as split into swing, slide, underground and solar - not from the document. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "G-5 (1st Gen)",
+      "name": "G-5 (1st Gen)",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Viking G5 Swing Gate Operator Manual",
+          "sourceUrl": "https://www.gatesnfences.com/files/G5-1stGen-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "H-10 (2nd Gen)",
+      "name": "H-10 (2nd Gen)",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Viking H10 2nd Gen Slide Gate Operator Manual",
+          "sourceUrl": "https://laornamental.com/pdf-files/Viking_Access_PDF%20Files/Viking-H10-2nd-Gen-Slide-Gate-Operator-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "R-6",
+      "name": "R-6",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Viking R-6 Swing Gate Operator Installation Manual",
+          "sourceUrl": "https://www.tsdistributors.com/pdfs/Viking%20R-6%20Swing%20Gate%20Operator%20Installation%20Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

@@ -1,0 +1,49 @@
+{
+  "manufacturer": {
+    "name": "ELKA",
+    "slug": "elka",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "M315",
+      "name": "M315",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "ELKA M315 Manual",
+          "sourceUrl": "https://www.intelligentsecurity.org/resources/access-control/ELKA-M315-Manual_Watermark.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NOVA",
+      "name": "NOVA",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "ELKA Nova Slide Gate Opener Operation, Installation and Service Instructions",
+          "sourceUrl": "https://www.torautomation24.de/documents/elka/EN_ELKA-NOVA-Schiebetorantrieb-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}
