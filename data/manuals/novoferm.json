@@ -23,14 +23,16 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "Novoferm R-500 / R-700 Manual",
-          "documentCode": "WN 931002-67-6-50",
-          "version": "06-2020",
           "sourceUrl": "https://www.novoferm.pl/fileadmin/user_upload/manual.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Novoferm",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On novoferm.pl, Novoferm's Polish arm. The document code WN 931002-67-6-50 and the date 06-2020 come from the document's own header as rendered in the search result, not from the file name - the file is called just manual.pdf, which is a generic name and a reason to re-check that this URL still serves this document when the link is verified. Not fetched - egress blocked."
+          "language": "en",
+          "version": "06-2020",
+          "documentCode": "WN 931002-67-6-50",
+          "evidence": "On novoferm.pl, Novoferm's Polish arm. The document code WN 931002-67-6-50 and the date 06-2020 come from the document's own header as rendered in the search result, not from the file name - the file is called just manual.pdf, which is a generic name and a reason to re-check that this URL still serves this document when the link is verified. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -52,6 +54,7 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing. No novoferm.com URL for the Novoport III surfaced, so it stays third-party while the R-500 is manufacturer-hosted. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -85,7 +88,9 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Tormatic is the brand on this operator's documentation; it is filed under Novoferm here because the aggregator does, not because the corporate relationship was confirmed. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Tormatic is the brand on this operator's documentation; it is filed under Novoferm here because the aggregator does, not because the corporate relationship was confirmed. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -106,7 +111,9 @@
           "publisher": "Aggregator",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. The document names Novoferm tormatic GmbH and tormatic.de as the manufacturer, which is how the Tormatic branding on these operators connects to Novoferm. No novoferm.com or tormatic.de document URL surfaced. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. The document names Novoferm tormatic GmbH and tormatic.de as the manufacturer, which is how the Tormatic branding on these operators connects to Novoferm. No novoferm.com or tormatic.de document URL surfaced. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -127,7 +134,9 @@
           "publisher": "Aggregator",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Kept separate from the NovoPort III and IV: the Speed is a distinct variant with its own manual, not an edition of theirs. No novoferm.com or tormatic.de document URL surfaced. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Kept separate from the NovoPort III and IV: the Speed is a distinct variant with its own manual, not an edition of theirs. No novoferm.com or tormatic.de document URL surfaced. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -148,7 +157,29 @@
           "publisher": "Aggregator",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing, 31 pages per a second aggregator. A GTA 403 was searched for in the same query and returned nothing; the 403 that exists is the Novomatic, and no GTA record is made. No novoferm.com or tormatic.de document URL surfaced. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing, 31 pages per a second aggregator. A GTA 403 was searched for in the same query and returned nothing; the 403 that exists is the Novomatic, and no GTA record is made. No novoferm.com or tormatic.de document URL surfaced. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NOVOMATIC 443",
+      "name": "NOVOMATIC 443",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Novoferm Novomatic 443 Original Assembly and Operating Instructions (N-443)",
+          "sourceUrl": "https://www.novoferm.co.uk/fileadmin/novoferm_uk/Bilder/Brochures/Novomatic-443.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

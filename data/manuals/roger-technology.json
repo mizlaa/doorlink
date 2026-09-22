@@ -26,6 +26,7 @@
           "publisher": "ManualsLib",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -43,13 +44,15 @@
         {
           "kind": "USER_MANUAL",
           "title": "Use and Maintenance Manual — Swing Gates (Rev. 02)",
-          "revision": "02",
           "sourceUrl": "https://knowledgebase.egates.co.uk/wp-content/uploads/2021/02/Use-Maintenance-Manual-Swing-Gates.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "eGates (UK)",
           "region": "UK",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor knowledge base. Revision 02 and the 30/03/2020 date come from the search result title. This is a range-level swing gate manual rather than BE20-specific; attached here because BE20 is the swing series it names. Not fetched - egress blocked."
+          "language": "en",
+          "revision": "02",
+          "evidence": "Distributor knowledge base. Revision 02 and the 30/03/2020 date come from the search result title. This is a range-level swing gate manual rather than BE20-specific; attached here because BE20 is the swing series it names. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -58,6 +61,7 @@
       "name": "TW110 Box",
       "category": "gate-motors",
       "region": "GLOBAL",
+      "aliases": [],
       "documents": [
         {
           "kind": "SPEC_SHEET",
@@ -67,7 +71,9 @@
           "publisher": "Distributor storefront",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Hosted on a Shopify CDN belonging to a reseller rather than on a manufacturer domain, so the publisher is recorded generically rather than named with false precision. Date 2025-06 read from the filename. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Hosted on a Shopify CDN belonging to a reseller rather than on a manufacturer domain, so the publisher is recorded generically rather than named with false precision. Date 2025-06 read from the filename. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -86,13 +92,14 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "BH30 Series Instructions and Recommendations for the Installer, Rev13 27/08/2024",
-          "revision": "Rev13",
-          "version": "27/08/2024",
           "sourceUrl": "https://www.manualslib.com/manual/2113042/Roger-Technology-Bh30-Series.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "27/08/2024",
+          "revision": "Rev13",
           "evidence": "Aggregator listing. Revision 13 dated 27/08/2024 is Roger Technology's own revision marking as reported by the search; four separate listings for this series surfaced across two aggregators, which is a sign the document is revised often and that this record should be re-checked rather than trusted to stay current. The brushless motor and B70/1DC control unit pairing is noted here rather than recorded as specifications, having come from a search summary. No rogertechnology.com URL surfaced. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -137,7 +144,29 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing of the user-facing document; no installer manual for the R30 surfaced, which is a recorded gap rather than a reason to file this as one. R23 was searched for in the same query and returned nothing of its own; it is kept as an alias only so a search lands somewhere in the R range. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing of the user-facing document; no installer manual for the R30 surfaced, which is a recorded gap rather than a reason to file this as one. R23 was searched for in the same query and returned nothing of its own; it is kept as an alias only so a search lands somewhere in the R range. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "H70/200AC",
+      "name": "H70/200AC",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "QUICK_START",
+          "title": "Roger Technology H70/200AC Quick Start Rev01",
+          "sourceUrl": "https://www.rtsouth.co.uk/_img/docs/pdf_1639758749.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

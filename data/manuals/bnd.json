@@ -13,6 +13,7 @@
       "name": "Controll-A-Door 4",
       "category": "garage-door-openers",
       "region": "AU",
+      "aliases": [],
       "documents": [
         {
           "kind": "USER_MANUAL",
@@ -21,7 +22,9 @@
           "origin": "MANUFACTURER_ORIGINAL",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Surfaced by web search on the manufacturer's own domain (bnd.com.au). Not fetched — egress blocked."
+          "language": "en",
+          "evidence": "Surfaced by web search on the manufacturer's own domain (bnd.com.au). Not fetched — egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -30,16 +33,19 @@
       "name": "Roll-A-Pro Rolling Door Opener",
       "category": "garage-door-openers",
       "region": "AU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Roll-A-Pro RDO-1v4 Instruction Manual",
-          "documentCode": "161061_04",
           "sourceUrl": "https://admin.bnd.com.au/media/agsotypa/161061_04_rdo-1v4-roll-a-pro_-online-instruction_manual.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Surfaced by web search on a bnd.com.au subdomain. The document code in the filename (161061_04) is taken from the URL, not inferred. Not fetched — egress blocked."
+          "language": "en",
+          "documentCode": "161061_04",
+          "evidence": "Surfaced by web search on a bnd.com.au subdomain. The document code in the filename (161061_04) is taken from the URL, not inferred. Not fetched — egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -48,6 +54,7 @@
       "name": "Controll-A-Door R Automatic Rolling Garage Door Opener",
       "category": "garage-door-openers",
       "region": "AU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -57,6 +64,7 @@
           "publisher": "Wholesale Garage Doors",
           "region": "AU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Hosted by an Australian reseller, not by B&D. Recorded as third-party for that reason. Not fetched — egress blocked.",
           "altSources": [
             {
@@ -74,6 +82,7 @@
           "publisher": "Motepro",
           "region": "AU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Reseller copy, direct PDF. No bnd.com.au URL for the Controll-A-Door R surfaced, so this stays third-party while the RDO-1v4 is manufacturer-hosted. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -82,6 +91,26 @@
               "label": "ManualsLib listing"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "Roll-A-Shutter 8/50 and 6,8,10,12/100 Series",
+      "name": "Roll-A-Shutter 8/50 and 6,8,10,12/100 Series",
+      "category": "roller-shutter-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "B&D Roll-A-Shutter Installation Instructions (165010_01)",
+          "sourceUrl": "https://admin.bnd.com.au/media/4tvpflya/165010_01_roll-a-shutter_6-8-1012-100.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

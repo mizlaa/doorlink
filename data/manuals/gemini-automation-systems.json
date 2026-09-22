@@ -1,0 +1,69 @@
+{
+  "manufacturer": {
+    "name": "Gemini Automation Systems",
+    "slug": "gemini-automation-systems",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "12V DC",
+      "name": "12V DC",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Gemini 12V DC Gate Motor Manual",
+          "sourceUrl": "https://gmsouthafrica.co.za/wp-content/uploads/2020/06/Gemini12vDC-1.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "24V DC SLIDER",
+      "name": "24V DC SLIDER",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Gemini 24V DC Slider Gate Motor Manual",
+          "sourceUrl": "https://geminigates.co.za/wp-content/uploads/manuals/Gemini-24V-DC-Slider_Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "AC SWING",
+      "name": "AC SWING",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Gemini AC Swing Gate Motor Manual",
+          "sourceUrl": "https://www.geminigates.co.za/wp-content/uploads/manuals/AC-Swing-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

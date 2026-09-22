@@ -13,7 +13,10 @@
       "name": "ASSA ABLOY Albany RR300 High-Performance Door",
       "category": "industrial-high-speed-doors",
       "region": "US",
-      "aliases": ["RR300 Stainless", "RR300 Plus"],
+      "aliases": [
+        "RR300 Stainless",
+        "RR300 Plus"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,6 +26,7 @@
           "publisher": "Cisco-Eagle",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Distributor copy. Covers the stainless variant specifically, per the file name; the RR300 Plus is kept only as an alias because search listed it as a related model without a document of its own. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -39,18 +43,22 @@
       "name": "ASSA ABLOY Albany RR200 High-Performance Door",
       "category": "industrial-high-speed-doors",
       "region": "US",
-      "aliases": ["6410R0231"],
+      "aliases": [
+        "6410R0231"
+      ],
       "documents": [
         {
           "kind": "USER_MANUAL",
           "title": "Operating Instructions, Albany High-Performance Doors",
-          "documentCode": "6410R0231",
           "sourceUrl": "https://www.cisco-eagle.com/uploads/AlbanyDoor-Interior/AlbanyRR200OwnersManual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "Cisco-Eagle",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor copy. Document number 6410R0231 from the result title; the file name assigns it to the RR200, while the document's own title says only \"Albany High-Performance Doors\" - so the model attribution comes from the distributor's naming, not the document. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "6410R0231",
+          "evidence": "Distributor copy. Document number 6410R0231 from the result title; the file name assigns it to the RR200, while the document's own title says only \"Albany High-Performance Doors\" - so the model attribution comes from the distributor's naming, not the document. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -59,7 +67,10 @@
       "name": "ASSA ABLOY RR3000 Series High-Performance Door",
       "category": "industrial-high-speed-doors",
       "region": "GLOBAL",
-      "aliases": ["RR3000 ISO", "RR3000 Exterior Rigid"],
+      "aliases": [
+        "RR3000 ISO",
+        "RR3000 Exterior Rigid"
+      ],
       "documents": [
         {
           "kind": "SPEC_SHEET",
@@ -69,6 +80,7 @@
           "publisher": "ASSA ABLOY Entrance Systems",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "On assaabloyentrance.com, the manufacturer's own domain. Typed SPEC_SHEET, not a manual: its own path says product-leaflets, and presenting sales literature as an installation manual would be the exact substitution this library exists to avoid. The RR3000's installation manual remains a gap. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -85,6 +97,7 @@
       "name": "ASSA ABLOY RP300 High Speed Door",
       "category": "industrial-high-speed-doors",
       "region": "ASIA",
+      "aliases": [],
       "documents": [
         {
           "kind": "USER_MANUAL",
@@ -94,7 +107,29 @@
           "publisher": "ASSA ABLOY",
           "region": "ASIA",
           "rights": "LINK_ONLY",
-          "evidence": "On assaabloy.com, the group's own domain, under its Korean market tree; English edition per the file name. Region is ASIA from that path, not from reading the document. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On assaabloy.com, the group's own domain, under its Korean market tree; English edition per the file name. Region is ASIA from that path, not from reading the document. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RR300 FREEZE / RR300 CHILL",
+      "name": "RR300 FREEZE / RR300 CHILL",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Albany RR300 Freeze and Chill Doors Mechanical Install and Owner's Manual",
+          "sourceUrl": "https://www.cisco-eagle.com/uploads/AlbanyDoor-Interior/AlbanyRR300Chill-FreezeMechInstallOwnersManual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

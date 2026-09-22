@@ -1,0 +1,91 @@
+{
+  "manufacturer": {
+    "name": "Aiphone",
+    "slug": "aiphone",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "GT SERIES",
+      "name": "GT SERIES",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "QUICK_START",
+          "title": "Aiphone GT Quick Start Installation Guide 2.0 (Australia)",
+          "sourceUrl": "https://www.aiphone.com.au/wp-content/uploads/2020/09/GT_Quick_Start_Installation_Guide-2.0.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "QUICK_START",
+          "title": "Aiphone GT Series Quick Start Installation Guide",
+          "sourceUrl": "https://www.aiphone.com/wp-content/uploads/GT-Series-GT-Quick-Start-Installation-Guide.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Aiphone GT Series QuikStart Guide (UK)",
+          "sourceUrl": "https://www.aiphone.co.uk/wp-content/uploads/2015/04/GT-Series-QuikStart-Guide.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GT SYSTEM",
+      "name": "GT SYSTEM",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Aiphone GT System Apartment Intercom System Installation Manual",
+          "sourceUrl": "https://www.a1securitycameras.com/content/product_documents/7459/aiphone-GT-Installation-Operation-Manual-A1.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GT SYSTEM Standard / Expanded",
+      "name": "GT SYSTEM Standard / Expanded",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Aiphone GT System Standard and Expanded System Installation Manual",
+          "sourceUrl": "https://www.alarmax.com/customer/docs/skudocs/gt-standard-expanded-installation-manual-1.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "manufacturer": {
+    "name": "Miller Edge",
+    "slug": "miller-edge",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "GEM-102 / 103 / 104",
+      "name": "GEM-102 / 103 / 104",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Miller Edge Gate Edge Module Instruction Manual",
+          "sourceUrl": "https://www.milleredge.com/PDFs/inst_instruction/GEM_inst.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MC110",
+      "name": "MC110",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Miller Edge MC110 Sensing Edge Installation Instructions",
+          "sourceUrl": "http://www.milleredge.com/PDFs/inst_instruction/MC110_INST.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MC271",
+      "name": "MC271",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Miller Edge MC271 Sensing Edge Installation Instructions",
+          "sourceUrl": "https://milleredge.com/PDFs/inst_instruction/MC271_Inst.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ME123",
+      "name": "ME123",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Miller Edge ME123 Sensing Edge Installation Instructions",
+          "sourceUrl": "http://www.milleredge.com/PDFs/inst_instruction/ME123_inst.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ME Series",
+      "name": "ME Series",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Miller Edge ME Series Sensing Edge Installation Instructions",
+          "sourceUrl": "http://www.milleredge.com/PDFs/inst_instruction/ME_all_inst.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MG110",
+      "name": "MG110",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Miller Edge MG110 Sensing Edge Installation Instructions",
+          "sourceUrl": "https://www.milleredge.com/PDFs/inst_instruction/MG110_inst.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MGR20 / MGS20",
+      "name": "MGR20 / MGS20",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Miller Edge MGR20, MGS20 Sensing Edge Installation Manual",
+          "sourceUrl": "https://www.devancocanada.com/files/manuals/MGR20:Installation-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MT / MU",
+      "name": "MT / MU",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Miller Edge MT/MU Sensing Edge Installation Instructions",
+          "sourceUrl": "https://www.milleredge.com/PDFs/inst_instruction/MTMU_inst.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

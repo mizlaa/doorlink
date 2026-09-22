@@ -13,18 +13,25 @@
       "name": "Rytec Spiral SST / STT High-Performance Door",
       "category": "industrial-high-speed-doors",
       "region": "US",
-      "aliases": ["Spiral STT", "SST", "STT", "SmartSurround"],
+      "aliases": [
+        "Spiral STT",
+        "SST",
+        "STT",
+        "SmartSurround"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Spiral SST and STT Installation Manual",
-          "documentCode": "1072125-0",
           "sourceUrl": "https://www.rytecdoors.com/sites/default/files/documents/Spiral-SmartSurround-Install-Manual-1072125-0_1.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Rytec",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On rytecdoors.com, the manufacturer's own domain. Document number 1072125-0 read from the file name; the _1 suffix is the host's duplicate-upload marker, not part of the number. One manual covers the SST and STT, so both are on this record. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "1072125-0",
+          "evidence": "On rytecdoors.com, the manufacturer's own domain. Document number 1072125-0 read from the file name; the _1 suffix is the host's duplicate-upload marker, not part of the number. One manual covers the SST and STT, so both are on this record. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -33,18 +40,23 @@
       "name": "Rytec Spiral HZ High-Performance Door",
       "category": "industrial-high-speed-doors",
       "region": "US",
-      "aliases": ["SpiralHZ", "HZ"],
+      "aliases": [
+        "SpiralHZ",
+        "HZ"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Rytec Spiral HZ Installation Manual",
-          "documentCode": "0915016",
           "sourceUrl": "https://s3.amazonaws.com/ddn.rytecdoors.com/0915016.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Rytec",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On ddn.rytecdoors.com, Rytec's own S3 document bucket - a manufacturer host despite the amazonaws.com address, which is why the origin is not third-party. Document number 0915016 is the whole file name. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "0915016",
+          "evidence": "On ddn.rytecdoors.com, Rytec's own S3 document bucket - a manufacturer host despite the amazonaws.com address, which is why the origin is not third-party. Document number 0915016 is the whole file name. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -53,18 +65,24 @@
       "name": "Rytec Spiral VP Direct Drive (SVP-D)",
       "category": "industrial-high-speed-doors",
       "region": "US",
-      "aliases": ["SVP-D", "Spiral VP Direct Drive", "Spiral VP"],
+      "aliases": [
+        "SVP-D",
+        "Spiral VP Direct Drive",
+        "Spiral VP"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Spiral VP Direct Drive (SVP-D) Installation Manual",
-          "version": "2016-09-22",
           "sourceUrl": "https://www.rytecdoors.com/sites/default/files/documents/SPIRAL%20VP%20Direct%20Drive%20(SVP-D)%20Install%20(2016-09-22)_0.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Rytec",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On rytecdoors.com. The file name carries a date rather than a document number, so 2016-09-22 is recorded as the version - that is Rytec's own edition marker on the file, not a date this library inferred. Not fetched - egress blocked."
+          "language": "en",
+          "version": "2016-09-22",
+          "evidence": "On rytecdoors.com. The file name carries a date rather than a document number, so 2016-09-22 is recorded as the version - that is Rytec's own edition marker on the file, not a date this library inferred. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -73,19 +91,24 @@
       "name": "Rytec Spiral Models L and L/R (9-1/2 inch Side Column)",
       "category": "industrial-high-speed-doors",
       "region": "US",
-      "aliases": ["Spiral L/R", "Spiral LR"],
+      "aliases": [
+        "Spiral L/R",
+        "Spiral LR"
+      ],
       "documents": [
         {
           "kind": "USER_MANUAL",
           "title": "Rytec Spiral Owner's Manual, Models L and L/R (9-1/2 inch Side Column), Rev-AA",
-          "revision": "Rev-AA",
-          "version": "2017-04-19",
           "sourceUrl": "https://store.motorcitywashworks.com/Team360/SpeedDoors/Documents/Spiral%20Owner's%20(Rev-AA)(2017-04-19).pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "Motor City Wash Works",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor copy - the only source that surfaced for this manual, so it is not promoted to manufacturer-hosted like its siblings. Revision Rev-AA and date 2017-04-19 are both in the file name. Not fetched - egress blocked."
+          "language": "en",
+          "version": "2017-04-19",
+          "revision": "Rev-AA",
+          "evidence": "Distributor copy - the only source that surfaced for this manual, so it is not promoted to manufacturer-hosted like its siblings. Revision Rev-AA and date 2017-04-19 are both in the file name. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -94,29 +117,36 @@
       "name": "Rytec Turbo-Seal Self-Repair High-Performance Door",
       "category": "industrial-high-speed-doors",
       "region": "US",
-      "aliases": ["Turbo Seal Self Repair", "Turbo-Seal"],
+      "aliases": [
+        "Turbo Seal Self Repair",
+        "Turbo-Seal"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Turbo-Seal Self-Repair Installation Manual",
-          "version": "12-12-14",
           "sourceUrl": "https://www.rytecdoors.com/sites/default/files/documents/Turbo-Seal_Self_Repair_Install%20(12-12-14).pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Rytec",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On rytecdoors.com. The bracketed 12-12-14 is the edition marker in Rytec's file name; recorded verbatim rather than expanded into a date, because the day/month order is not stated. Not fetched - egress blocked."
+          "language": "en",
+          "version": "12-12-14",
+          "evidence": "On rytecdoors.com. The bracketed 12-12-14 is the edition marker in Rytec's file name; recorded verbatim rather than expanded into a date, because the day/month order is not stated. Not fetched - egress blocked.",
+          "altSources": []
         },
         {
           "kind": "USER_MANUAL",
           "title": "Turbo-Seal Self-Repair Owner's Manual",
-          "version": "1-05-15",
           "sourceUrl": "https://www.rytecdoors.com/sites/default/files/documents/Turbo-Seal_Self_Repair_Owners_(1-05-15).pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Rytec",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On rytecdoors.com. The owner's manual companion to the installation manual above; both are recorded because a technician and an operator need different documents. Edition marker recorded verbatim. Not fetched - egress blocked."
+          "language": "en",
+          "version": "1-05-15",
+          "evidence": "On rytecdoors.com. The owner's manual companion to the installation manual above; both are recorded because a technician and an operator need different documents. Edition marker recorded verbatim. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -125,18 +155,42 @@
       "name": "Rytec Turbo-Seal Insulated High-Performance Door",
       "category": "industrial-high-speed-doors",
       "region": "US",
-      "aliases": ["Turbo Seal Insulated"],
+      "aliases": [
+        "Turbo Seal Insulated"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Turbo-Seal Insulated Installation Manual",
-          "documentCode": "1170740-0",
           "sourceUrl": "https://s3.amazonaws.com/ddn.rytecdoors.com/1170740-0.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Rytec",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On Rytec's own S3 document bucket. Document number 1170740-0 is the file name; the title comes from the search result, which shows the document's internal name as Turbo-Seal Insulated Install.book. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "1170740-0",
+          "evidence": "On Rytec's own S3 document bucket. Document number 1170740-0 is the file name; the title comes from the search result, which shows the document's internal name as Turbo-Seal Insulated Install.book. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SPIRAL LH / HZ",
+      "name": "SPIRAL LH / HZ",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Rytec Spiral LH-HZ Installation Manual",
+          "sourceUrl": "https://www.rytecdoors.com/sites/default/files/documents/Spiral_LH-HZ_Install_(9-19-13).pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

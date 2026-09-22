@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "Craftsman",
+    "slug": "craftsman",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "139.53985DM",
+      "name": "139.53985DM",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Craftsman Garage Door Opener Owner's Manual",
+          "sourceUrl": "https://manuals.plus/wp-content/sideloads/cragtsman-craftsman-garage-door-opener-owner-s-manual-optimized.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

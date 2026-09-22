@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "SEAV",
+    "slug": "seav",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "LRS 2102",
+      "name": "LRS 2102",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "SEAV LRS 2102 Electronic Control Unit Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/SEAV_LRS_2102_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

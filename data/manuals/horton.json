@@ -7,5 +7,57 @@
     "supportUrl": "https://www.hortondoors.com/resources/pdf-library/",
     "note": "US automatic door manufacturer. Recorded with no documents: its PDF library is registered as a harvest target, but no individual document URL surfaced. A second Horton index exists on a distributor and is explicitly marked registered-members-only; it is deliberately not registered as a target and must not be crawled."
   },
-  "models": []
+  "models": [
+    {
+      "modelCode": "C2150",
+      "name": "C2150",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Horton C2150 Control Manual (H202)",
+          "sourceUrl": "https://absupply.net/pdf/c2150_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Horton C2150 Control Manual (H210)",
+          "sourceUrl": "https://www.addisonautomatics.com/wp-content/uploads/manuals/horton/2150%20version%2010%20quality.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "C2150L",
+      "name": "C2150L",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Horton C2150L Control Manual (H201)",
+          "sourceUrl": "https://absupply.net/pdf/Horton_C2150L_Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
 }

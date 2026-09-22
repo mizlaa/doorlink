@@ -1,0 +1,109 @@
+{
+  "manufacturer": {
+    "name": "Simu",
+    "slug": "simu",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "DMI5",
+      "name": "DMI5",
+      "category": "roller-shutter-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Simu DMI5 Wired Roller Shutter Motorization Instructions",
+          "sourceUrl": "https://docs.simu.com/downloads/simu_v4/fipdmi5_en_a4_2p_2024.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DMI5Hz / DMI6Hz",
+      "name": "DMI5Hz / DMI6Hz",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Simu DMI5Hz - DMI6Hz Motor Instructions",
+          "sourceUrl": "https://rollac.com/wp-content/uploads/downloads/Downloads/Shutter%20Support/Wiring%20Diagrams%20and%20Limit%20Switch%20Adjustments/Simu/simu_dmi_hz_motor_instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "T3.5 / T5",
+      "name": "T3.5 / T5",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "SPEC_SHEET",
+          "title": "Simu Progressive End-Limit System Wired Motor T3.5 - T5 Technical Data Sheet",
+          "sourceUrl": "https://docs.simu.com/downloads/simu_v4/technicaldata_sheet_t5_-_gb.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "T5 DMI",
+      "name": "T5 DMI",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Simu T5 DMI 240V Wired Tubular Motor with Manual Override Factsheet",
+          "sourceUrl": "https://wpstaq-ap-southeast-2-media.s3.amazonaws.com/cwproducts/wp-content/uploads/media/2023/02/16-CWP020_SIMU_T5_DMI_Factsheet_Web.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "T5Hz.02+ / T6Hz.02+",
+      "name": "T5Hz.02+ / T6Hz.02+",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Simu T5Hz.02+ / T6Hz.02+ Motor Instructions",
+          "sourceUrl": "https://rollac.com/wp-content/uploads/downloads/Downloads/Shutter%20Support/Wiring%20Diagrams%20and%20Limit%20Switch%20Adjustments/Simu/simu_hz_motor_instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

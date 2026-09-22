@@ -13,18 +13,23 @@
       "name": "Raynor ControlHoist Standard Jackshaft Commercial Operator",
       "category": "garage-door-openers",
       "region": "US",
-      "aliases": ["5973130", "ControlHoist Standard"],
+      "aliases": [
+        "5973130",
+        "ControlHoist Standard"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "ControlHoist Standard Jackshaft Industrial Duty Belt Drive Operator Manual",
-          "documentCode": "5973130",
           "sourceUrl": "https://raynor.com/wp-content/uploads/literature/5973130-ControlHoist-standard-jackshaft.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Raynor Garage Doors",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On raynor.com, the manufacturer's own domain. Part number 5973130 is the file name prefix. Search describes this operator as for commercial and industrial sectional overhead and rolling doors. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "5973130",
+          "evidence": "On raynor.com, the manufacturer's own domain. Part number 5973130 is the file name prefix. Search describes this operator as for commercial and industrial sectional overhead and rolling doors. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -33,18 +38,23 @@
       "name": "Raynor ControlHoist Basic Jackshaft Operator",
       "category": "garage-door-openers",
       "region": "US",
-      "aliases": ["5973128", "ControlHoist Basic"],
+      "aliases": [
+        "5973128",
+        "ControlHoist Basic"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "ControlHoist Basic Jackshaft Operator Manual",
-          "documentCode": "5973128",
           "sourceUrl": "https://raynor.com/wp-content/uploads/literature/5973128-ControlHoist-basic-jackshaft.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Raynor Garage Doors",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On raynor.com. Part number 5973128. Search reports this variant is rated to 14 foot doors and 600 lb balance weight - noted here rather than recorded as specifications, because those were read from a search summary and not from the document. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "5973128",
+          "evidence": "On raynor.com. Part number 5973128. Search reports this variant is rated to 14 foot doors and 600 lb balance weight - noted here rather than recorded as specifications, because those were read from a search summary and not from the document. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -53,18 +63,22 @@
       "name": "Raynor ControlHoist Standard Trolley Industrial Duty Operator",
       "category": "garage-door-openers",
       "region": "US",
-      "aliases": ["5973129"],
+      "aliases": [
+        "5973129"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "ControlHoist Standard Trolley Industrial Duty Operator Manual",
-          "documentCode": "5973129",
           "sourceUrl": "https://raynor.com/wp-content/uploads/literature/5973129-ControlHoist-standard-trolley.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Raynor Garage Doors",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On raynor.com. Part number 5973129. Jackshaft and trolley are different mountings with separate manuals, so they are separate models here rather than variants of one. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "5973129",
+          "evidence": "On raynor.com. Part number 5973129. Jackshaft and trolley are different mountings with separate manuals, so they are separate models here rather than variants of one. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -73,18 +87,23 @@
       "name": "Raynor ControlHoist Optima Trolley Industrial Duty Gearhead Drive",
       "category": "garage-door-openers",
       "region": "US",
-      "aliases": ["5973131", "ControlHoist Optima"],
+      "aliases": [
+        "5973131",
+        "ControlHoist Optima"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "ControlHoist Optima Trolley Industrial Duty Gearhead Drive Operator Manual",
-          "documentCode": "5973131",
           "sourceUrl": "https://raynor.com/wp-content/uploads/literature/5973131-ControlHoist-optima-trolley.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Raynor Garage Doors",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On raynor.com. Part number 5973131. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "5973131",
+          "evidence": "On raynor.com. Part number 5973131. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -93,18 +112,23 @@
       "name": "Raynor CMT 070M",
       "category": "garage-door-openers",
       "region": "US",
-      "aliases": ["BOOK3027", "CMT070M"],
+      "aliases": [
+        "BOOK3027",
+        "CMT070M"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Raynor CMT 070M Installation and Instruction Manual (BOOK3027, EN)",
-          "documentCode": "BOOK3027",
           "sourceUrl": "https://raynor.com/wp-content/uploads/literature/BOOK3027_CMT_070M_ENG_instructions.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Raynor Garage Doors",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On raynor.com. Document code BOOK3027 and the model CMT 070M are both in the file name, as is the English edition - so a non-English edition of this document probably exists in the same directory. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "BOOK3027",
+          "evidence": "On raynor.com. Document code BOOK3027 and the model CMT 070M are both in the file name, as is the English edition - so a non-English edition of this document probably exists in the same directory. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -113,18 +137,43 @@
       "name": "Raynor Sectional Overhead Doors (CSI specification)",
       "category": "garage-door-openers",
       "region": "US",
-      "aliases": ["08360", "08 36 16"],
+      "aliases": [
+        "08360",
+        "08 36 16"
+      ],
       "documents": [
         {
           "kind": "SPEC_SHEET",
           "title": "CSI Section 08360 (08 36 16) Sectional Overhead Doors",
-          "documentCode": "08360",
           "sourceUrl": "https://raynor.com/wp-content/uploads/csi/08360rgdR60.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Raynor Garage Doors",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On raynor.com, in its csi branch. Typed SPEC_SHEET, not a manual: a CSI section is an architect's specification document for writing the door into a building spec, not something a technician installs from. Recorded because it is real documentation, filed honestly so nobody reaches for it at a door. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "08360",
+          "evidence": "On raynor.com, in its csi branch. Typed SPEC_SHEET, not a manual: a CSI section is an architect's specification document for writing the door into a building spec, not something a technician installs from. Recorded because it is real documentation, filed honestly so nobody reaches for it at a door. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "8365WRGD",
+      "name": "8365WRGD",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Raynor Garage Door Operator Manual (114A5097B-8365WRGD-267)",
+          "sourceUrl": "https://raynor.com/wp-content/uploads/literature/114A5097B-8365WRGD-267-Manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

@@ -31,7 +31,9 @@
           "publisher": "Teckentrup",
           "region": "UK",
           "rights": "LINK_ONLY",
-          "evidence": "On teckentrup.co.uk, the manufacturer's UK domain. The sectional model codes listed as aliases come from the UK downloads page, which names SW 40, SW 80, SLW 40, SLW 80, SL 40, SL 80 and SLX 40 as having installation instructions - they are aliases so a search lands, not a claim that this one document covers all seven. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On teckentrup.co.uk, the manufacturer's UK domain. The sectional model codes listed as aliases come from the UK downloads page, which names SW 40, SW 80, SLW 40, SLW 80, SL 40, SL 80 and SLX 40 as having installation instructions - they are aliases so a search lands, not a claim that this one document covers all seven. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -52,8 +54,10 @@
           "publisher": "Teckentrup",
           "region": "UK",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "10I2017",
           "evidence": "On teckentrup.co.uk. The cover reads 10I2017, Teckentrup's month-and-year form, recorded verbatim as the version rather than reformatted into a date. Not fetched - egress blocked.",
-          "version": "10I2017"
+          "altSources": []
         }
       ]
     },
@@ -74,8 +78,10 @@
           "publisher": "Teckentrup",
           "region": "UK",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "06I2019",
           "evidence": "On teckentrup.co.uk. Cover dated 06I2019, recorded verbatim. Not fetched - egress blocked.",
-          "version": "06I2019"
+          "altSources": []
         }
       ]
     },
@@ -96,8 +102,30 @@
           "publisher": "Teckentrup",
           "region": "UK",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "March 2022",
           "evidence": "On teckentrup.co.uk. Dated March 2022 in the file name. This is the domestic garage door, not the industrial sectional recorded above - different products despite similar names. Not fetched - egress blocked.",
-          "version": "March 2022"
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CARTECK SECTIONAL",
+      "name": "CARTECK SECTIONAL",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Teckentrup CarTeck Sectional Garage Door Fitting Instructions",
+          "sourceUrl": "https://www.teckentrup.co.uk/assets/content/images/Teckentrup-CarTeck-Sectional-Garage-Door-Fitting-Instructions.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

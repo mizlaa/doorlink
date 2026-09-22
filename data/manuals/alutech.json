@@ -13,17 +13,25 @@
       "name": "Alutech Levigato LG Series Garage Door Operator",
       "category": "garage-door-openers",
       "region": "EU",
-      "aliases": ["LG-600F-868", "LG-800", "LG-800-868-GB", "LG-1000F", "LG-1200", "Levigato"],
+      "aliases": [
+        "LG-600F-868",
+        "LG-800",
+        "LG-800-868-GB",
+        "LG-1000F",
+        "LG-1200",
+        "Levigato"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Levigato Operator Assembly and Operation Manual (02.2018)",
-          "version": "02.2018",
           "sourceUrl": "https://www.gliderol.co.uk/downloads/6630001183a94897Levigato_Operator_Instruction_Manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "Gliderol UK",
           "region": "UK",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "02.2018",
           "evidence": "Distributor copy. The document's own header reads \"02.2018 www.alutech-group.com\", so the version is the edition printed on the manual and the manufacturer attribution comes from the document itself - but the file is on a distributor's domain, so the origin stays third-party. The LG variants share this record as aliases because one manual covers the series. Not fetched - egress blocked.",
           "altSources": [
             {

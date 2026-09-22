@@ -21,12 +21,13 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "BX-74 / BX-78 Sliding Gate Operator Installation Manual",
-          "documentCode": "FA00127-EN",
           "sourceUrl": "https://motepro.com.au/Manuals/CAME/Slide/BX-74_BX-78.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "Motepro",
           "region": "AU",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "FA00127-EN",
           "evidence": "Australian trade supplier mirror, chosen as canonical over the UK mirrors because Doorlink serves Australia. Document code FA00127-EN read from a search result title. One manual covers both BX-74 and BX-78, so the same document is recorded against each model rather than split. Not fetched - egress blocked. Document code FA00127-EN comes from the manual's own cover, as rendered in a search result for the Arden Gate Automation copy recorded below; the same document circulates on several UK resellers.",
           "altSources": [
             {
@@ -76,13 +77,15 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "BX-74 / BX-78 Sliding Gate Operator Installation Manual",
-          "documentCode": "FA00127-EN",
           "sourceUrl": "https://www.manualslib.com/manual/1195425/Came-Bx-78.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "ManualsLib",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing for the BX-78 entry of the shared BX-74/BX-78 manual. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "FA00127-EN",
+          "evidence": "Aggregator listing for the BX-78 entry of the shared BX-74/BX-78 manual. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -104,6 +107,7 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing for the series as a whole, kept alongside the model-specific BX-74 and BX-78 records rather than merged into them: whether it is the same document under a broader title or a separate series manual could not be established. The Kit variants are aliases here because a search result lists them together with the bare model numbers. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -112,6 +116,299 @@
               "label": "ManualsDir listing, 24 pages, covering BX-78 Kit, BX-74 Kit, BX74 and BX78"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "AX3024 / AX5024",
+      "name": "AX3024 / AX5024",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME AXO Series AX3024 / AX5024 Installation Manual",
+          "sourceUrl": "https://www.intelligentsecurity.org/resources/gates/CAME-AX3024-Manual_Watermark.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "AXO AX302304 / AX402306 / AX412306 / AX71230",
+      "name": "AXO AX302304 / AX402306 / AX412306 / AX71230",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME AXO Series 240V Installation Manual",
+          "sourceUrl": "https://trade.electricgatesuk.net/wp-content/uploads/2015/02/came-AXO-240v.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BKS08AGS / BKS12AGS / BKS18AGS",
+      "name": "BKS08AGS / BKS12AGS / BKS18AGS",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "CAME BK Series Sliding Gate Operator Manual (801MS-0150)",
+          "sourceUrl": "https://www.came-danmark.dk/media/blfa_files/801MS-0150.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BX-10",
+      "name": "BX-10",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME BX-10 Sliding Gate Operator Installation Manual (FA01137-EN)",
+          "sourceUrl": "http://docs.came.com/pdf/FA01137-EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BX-74 / BX-78",
+      "name": "BX-74 / BX-78",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME BX Series Installation Manual BX-74 / BX-78",
+          "sourceUrl": "https://trade.electricgatesuk.net/wp-content/uploads/2015/02/CAME-BX-74-78.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME BX-74 / BX-78 Automation for Sliding Gates Installation Manual (FA00127-EN)",
+          "sourceUrl": "https://www.ardengateautomation.co.uk/downloads/1435242990CAME_BX-74_BX-78_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BX-243",
+      "name": "BX-243",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BX-243 Automation Systems for Sliding Gates Installation Manual (FA00669-EN)",
+          "sourceUrl": "https://www.came.no/wp-content/uploads/2020/05/BX-243.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "FERNI F1024",
+      "name": "FERNI F1024",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME Ferni F1024 Automation for Swing Gates Installation Manual (119DU32EN)",
+          "sourceUrl": "https://www.vartai.eu/uploads/userfiles/pdf/Kiemo%20vartai/Atveriami%20vartai/Ferni/FERNI-F1024-EN.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "FERNI FE4024 SERIES",
+      "name": "FERNI FE4024 SERIES",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME Ferni FE4024 Series Automation for Swing Gates Installation Manual",
+          "sourceUrl": "https://trade.electricgatesuk.net/wp-content/uploads/2016/01/CAME-FERNI.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "G4000 / G4001 / G4000N",
+      "name": "G4000 / G4001 / G4000N",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME Gard G4000 Series Street Barrier Installation Manual (FA01117M04)",
+          "sourceUrl": "https://static.came.com/doc/FA01117M04.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME Gard Series G4000 Installation Manual (FA01117-EN-ZL38)",
+          "sourceUrl": "https://www.vartai.eu/uploads/userfiles/pdf/Kelio%20uztvarai/G4000/FA01117-EN-ZL38.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ZA3N",
+      "name": "ZA3N",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME ZA3N Control Panel for 230V Operators Installation Manual",
+          "sourceUrl": "https://www.vartai.eu/uploads/userfiles/pdf/Aksesuarai/Valdymo%20plokstes/ZA3-EN.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ZL19N",
+      "name": "ZL19N",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME ZL19N Control Panel Installation Manual",
+          "sourceUrl": "https://www.came-danmark.dk/media/blfa_files/ZL19N.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ZL92",
+      "name": "ZL92",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME ZL92 Control Panel for 24V Gearmotors Installation Manual (319V21EN)",
+          "sourceUrl": "https://manuals.easygates.co.uk/PDF/misc/came-zl92-manual-en.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ZLJ24",
+      "name": "ZLJ24",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME ZLJ24 Control Panel for 24V Operators Installation Manual",
+          "sourceUrl": "https://manuals.easygates.co.uk/PDF/misc/ZLJ24.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME ZLJ24 Control Panel Installation Manual (FA00038-EN)",
+          "sourceUrl": "https://www.came-danmark.dk/media/blfa_files/ZLJ24.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "GateXpert",
+    "slug": "gatexpert",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "PY300DCL",
+      "name": "PY300DCL",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "GateXpert PY300DCL Sliding Gate Opener User Manual",
+          "sourceUrl": "https://www.gatexpert-store.com/Content/upload/pdf/202237304/r202208221118067939613.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

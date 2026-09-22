@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "C.H.I. Overhead Doors",
+    "slug": "c-h-i-overhead-doors",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "Commercial Sectional Doors",
+      "name": "Commercial Sectional Doors",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "C.H.I. Commercial Sectional Doors Installation Instructions",
+          "sourceUrl": "https://www.bartondoor.com/uploads/product-manuals/documents/CHI-COM-Doors-10_-com-instructions_5-7-2018.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

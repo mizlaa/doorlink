@@ -13,15 +13,17 @@
       "name": "SD800 Sectional Garage Door Opener",
       "category": "garage-door-openers",
       "region": "AU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "SD800 Sectional Garage Door Opener Installation and Operating Instructions",
-          "version": "v8",
           "sourceUrl": "https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/installation_manual_sd800-v8-0820.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "region": "AU",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "v8",
           "evidence": "Surfaced by web search on the manufacturer's own domain. Version v8 and the 08/20 date are read from the filename, not inferred. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -39,12 +41,13 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "SD800 Sectional Garage Door Opener Installation and Operating Instructions (V6 05/19)",
-          "version": "V6 05/19",
           "sourceUrl": "https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/installation_manual_sd800-v6-0519.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Steel-Line Automation",
           "region": "AU",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "V6 05/19",
           "evidence": "On steel-lineautomation.com.au, the manufacturer's own domain. The version is encoded in the file name as v<n>-<mmyy>, here V6 05/19 - an earlier edition, kept because openers installed under it are still in service. Both editions are recorded rather than only the newest, because a technician at a door needs the manual that matches what is on the wall. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -53,6 +56,126 @@
               "label": "Reseller copy; its cover reads V7.09/19, so it is a third edition between the two manufacturer-hosted ones"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "Garage Door Openers",
+      "name": "Garage Door Openers",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Steel-Line Automation Garage Door Opener Pro Control System Instructions and User Guide",
+          "sourceUrl": "https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/garage_door_opener_pro_control_system_instructions_and_user_guide.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "OL4",
+      "name": "OL4",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Steel-Line Model OL4 Residential Garage Door Opener Manual (L4110B-4)",
+          "sourceUrl": "https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/steel-line_ol4_manual_l4110b-4_170906_v1.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "OL6.5",
+      "name": "OL6.5",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Steel-Line OL6.5 Sectional Garage Door Opener Installation Instructions and Owner's Manual",
+          "sourceUrl": "https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/ol6.5_sectional_garage_door_opener_-_users_manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RD800",
+      "name": "RD800",
+      "category": "roller-shutter-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Steel-Line RD800 Roller Door Opener Installation and Operating Instructions",
+          "sourceUrl": "https://motepro.com.au/Manuals/SteelLine/Rolling/RD800.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Roller Door",
+      "name": "Roller Door",
+      "category": "roller-shutter-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Steel-Line Roller Door Homeowner's Manual",
+          "sourceUrl": "https://www.steel-line.com.au/downloads/technical-support/roller_door_owners_manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Sectional Door",
+      "name": "Sectional Door",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Steel-Line Sectional Garage Door Homeowner's Manual",
+          "sourceUrl": "https://www.steel-line.com.au/downloads/technical-support/sectional_garage_door_owners_manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

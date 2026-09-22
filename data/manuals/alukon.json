@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "Alukon",
+    "slug": "alukon",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "Roller Shutter Systems",
+      "name": "Roller Shutter Systems",
+      "category": "roller-shutter-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Alukon Technisches Handbuch (Technical Manual)",
+          "sourceUrl": "https://www.alukon.com/fileadmin/user_upload/haendlerbereich/Verkaufsfoerderung/Technisches_Handbuch.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

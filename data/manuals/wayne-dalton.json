@@ -13,7 +13,14 @@
       "name": "Wayne-Dalton 9100 Garage Door (TorqueMaster)",
       "category": "garage-door-openers",
       "region": "US",
-      "aliases": ["TorqueMaster 9100", "TorqueMaster Plus 9100", "9400", "9600", "TorqueMaster Plus 9400", "TorqueMaster Plus 9600"],
+      "aliases": [
+        "TorqueMaster 9100",
+        "TorqueMaster Plus 9100",
+        "9400",
+        "9600",
+        "TorqueMaster Plus 9400",
+        "TorqueMaster Plus 9600"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,6 +30,7 @@
           "publisher": "Lowe's",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Retailer-hosted product document. Search reports the manual covers the TorqueMaster Plus 9100, 9400 and 9600 as well as the 9400 and 9600, so those are recorded as aliases on one record rather than as six models each holding the same PDF. Two cautions: the aggregators file this under \"garage door opener\", but the 9100 is a door and TorqueMaster is its counterbalance system, so the title here says door rather than opener; and the file name is a retailer part number, not a Wayne-Dalton document code, so none is recorded. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -50,7 +58,69 @@
           "publisher": "ManualsLib",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing of the quick-start edition, kept separate from the full manual above because it is a different document, not another copy. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing of the quick-start edition, kept separate from the full manual above because it is a different document, not another copy. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "3663-372",
+      "name": "3663-372",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Wayne-Dalton 3663-372 Installation Instructions and Owner's Manual",
+          "sourceUrl": "https://archive.org/download/manualsonline-id-a5efa5ff-7d72-413c-aaeb-7af67a339844/a5efa5ff-7d72-413c-aaeb-7af67a339844.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Commercial Sheet Door",
+      "name": "Commercial Sheet Door",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Wayne Dalton Commercial Sheet Door Installation Instructions (291341)",
+          "sourceUrl": "https://waynedalton-prod-assets-new.azureedge.net/assets/docs/default-source/install/comm/sheet/291341.pdf?sfvrsn=ead9fd5e_20",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MODEL 926",
+      "name": "MODEL 926",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Wayne-Dalton Model 926 Medium Duty Rolling Steel Service Door Manual",
+          "sourceUrl": "https://www.etodoors.com/uploads/Image/Waynedalton/926Series.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

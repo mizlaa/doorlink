@@ -13,7 +13,10 @@
       "name": "SEA Full Tank SP Hydraulic Swing Gate Operator",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["FULL TANK", "FULLTANK SP"],
+      "aliases": [
+        "FULL TANK",
+        "FULLTANK SP"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,7 +26,9 @@
           "publisher": "SEA",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On en.seateam.com, the manufacturer's own English site, served through its download handler. English edition per the file name. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On en.seateam.com, the manufacturer's own English site, served through its download handler. English edition per the file name. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -32,7 +37,9 @@
       "name": "SEA Full Tank 100 Hydraulic Swing Gate Operator",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["FULLTANK 100"],
+      "aliases": [
+        "FULLTANK 100"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -42,7 +49,9 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Kept separate from the Full Tank SP because the two are listed as distinct products and no document covering both was surfaced. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Kept separate from the Full Tank SP because the two are listed as distinct products and no document covering both was surfaced. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -51,18 +60,23 @@
       "name": "SEA Gate 1 DG R2BF Control Board",
       "category": "remotes-accessories",
       "region": "EU",
-      "aliases": ["GATE1 DG R2BF", "GATE 1 DG"],
+      "aliases": [
+        "GATE1 DG R2BF",
+        "GATE 1 DG"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Gate 1 DG R2BF Installation Manual Rev. 07 (ENG)",
-          "version": "Rev. 07",
           "sourceUrl": "https://download.seateam.com/INS_app/download4.php?file=Li9tYW51YWxpL0luc3RhbGxhdGlvbiBNYW51YWxzL0VsZWN0cm9uaWMvQ09OVFJPTCBCT0FSRFMgQU5EIFBST0dSQU1NRVJTL0dBVEUlMjAxJTIwREclMjBSMkJGL0dBVEUlMjAxJTIwREclMjBSMkJGJTIwUmV2LiUyMDA3JTIwRU5HLnBkZg%3D%3D",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "SEA",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On download.seateam.com, the manufacturer's own download host. The file parameter is base64 and decodes to ./manuali/Installation Manuals/Electronic/CONTROL BOARDS AND PROGRAMMERS/GATE 1 DG R2BF/GATE 1 DG R2BF Rev. 07 ENG.pdf - which is where the title, revision and language come from. An encoded parameter is a fragile link, so the containing index is registered as a portal too. Not fetched - egress blocked."
+          "language": "en",
+          "version": "Rev. 07",
+          "evidence": "On download.seateam.com, the manufacturer's own download host. The file parameter is base64 and decodes to ./manuali/Installation Manuals/Electronic/CONTROL BOARDS AND PROGRAMMERS/GATE 1 DG R2BF/GATE 1 DG R2BF Rev. 07 ENG.pdf - which is where the title, revision and language come from. An encoded parameter is a fragile link, so the containing index is registered as a portal too. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -71,6 +85,7 @@
       "name": "SEA Lepus Series Sliding Gate Motor Reducer",
       "category": "gate-motors",
       "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "QUICK_START",
@@ -80,7 +95,9 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing of the quick start guide - not the full installation manual, which was not surfaced. Recorded as QUICK_START so the gap is visible rather than implied. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing of the quick start guide - not the full installation manual, which was not surfaced. Recorded as QUICK_START so the gap is visible rather than implied. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -89,6 +106,7 @@
       "name": "SEA Flipper Electromechanical Swing Gate Operator",
       "category": "gate-motors",
       "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -98,7 +116,69 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing of the fitting instructions and safety advice. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing of the fitting instructions and safety advice. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GATE 1 24V DC",
+      "name": "GATE 1 24V DC",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "SEA Gate 1 24V DC Ammeter Manual",
+          "sourceUrl": "https://www.intelligentsecurity.org/resources/gates/SEA-Gate-1-24V-DC-Ammeter-Manual_Watermark.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GATE 2 DG R1B",
+      "name": "GATE 2 DG R1B",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "SEA Gate 2 DG R1B Manual (Cod. 23023025)",
+          "sourceUrl": "https://www.intelligentsecurity.org/resources/gates/SEA-Gate-2-DG-R1B-Manual_Watermark.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ORION",
+      "name": "ORION",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "SEA Orion Box Chain Sliding Gate Operator Manual",
+          "sourceUrl": "https://laornamental.com/pdf-files/SEA/SEA-Orion-Box-Chain-Sliding-Gate-Operator-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

@@ -26,7 +26,9 @@
           "publisher": "ManualsLib",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. ATA's own manual index exists but the search result did not expose a direct PDF URL for this model, so none is recorded. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. ATA's own manual index exists but the search result did not expose a direct PDF URL for this model, so none is recorded. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -48,7 +50,9 @@
           "publisher": "ManualsLib",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing only. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing only. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -70,6 +74,7 @@
           "publisher": "Motepro",
           "region": "AU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Australian trade supplier mirror. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -86,6 +91,7 @@
       "name": "EasyRoller (GDO-11 series)",
       "category": "garage-door-openers",
       "region": "AU",
+      "aliases": [],
       "documents": [],
       "note": "Model searched for explicitly; no documentation URL was surfaced for this version. Recorded with no documents so the model is searchable and the gap is visible, rather than substituting another version's manual."
     },
@@ -108,12 +114,13 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "GDO-6v4 EasyRoller Rolling Door Opener Installation Manual (AU)",
-          "documentCode": "160422_02",
           "sourceUrl": "https://media.umbraco.io/ata-automation/xovk2qbc/160422_02_gdo-6v4_online-installation_manual_1.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Automatic Technology",
           "region": "AU",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "160422_02",
           "evidence": "On media.umbraco.io under an ata-automation path - ATA's own CMS media host. Document number 160422_02 and the v4 revision are in the file name. As with B&D's CMS host, the opaque key segment makes this a link to expect to rot. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -141,13 +148,115 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "GDO-6 EasyRoller Rolling Door Opener Installation Manual (NZ edition)",
-          "documentCode": "nz160422_04",
           "sourceUrl": "https://media.umbraco.io/ata-automation/nybf5rbf/nz160422_04_gdo-6_online-installation_manual.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Automatic Technology",
           "region": "NZ",
           "rights": "LINK_ONLY",
-          "evidence": "Also on ATA's CMS media host. The nz prefix and the _04 suffix mark this as the New Zealand edition at a later revision than the Australian 160422_02 - the same regional-edition pattern as Centurion, so it is stored as a separate document rather than an alternate link on the AU one. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "nz160422_04",
+          "evidence": "Also on ATA's CMS media host. The nz prefix and the _04 suffix mark this as the New Zealand edition at a later revision than the Australian 160422_02 - the same regional-edition pattern as Centurion, so it is stored as a separate document rather than an alternate link on the AU one. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ESV-24MS EasySlider",
+      "name": "ESV-24MS EasySlider",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "ATA EasySlider ESV-24MS Sliding Gate Opener Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/Automatic_Technology_ATA_ESV_24MS_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GDO-2 V6",
+      "name": "GDO-2 V6",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "ATA GDO-2 SecuraLift V6 Garage Door Opener Manual",
+          "sourceUrl": "https://waverleygaragedoors.com.au/instruction-manuals/ATA_gdo-2v6.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GDO-2 V7",
+      "name": "GDO-2 V7",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "ATA GDO-2 SecuraLift V7 Garage Door Opener Manual",
+          "sourceUrl": "https://www.purplepatchdoors.com.au/wp-content/uploads/2022/02/ATA-GDO2-V7-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GDO-5",
+      "name": "GDO-5",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ATA GDO-5 Roll Up Garage Door Opener Owners Copy Instruction Manual",
+          "sourceUrl": "https://www.aggdoors.com.au/wp-content/uploads/2015/09/ATA-GDO5-AS-Instruction-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GDO-10V3L2 TORO",
+      "name": "GDO-10V3L2 TORO",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "ATA GDO-10V3L2 Toro Roll Up Garage Door Opener Manual (160033_01)",
+          "sourceUrl": "https://www.aggdoors.com.au/wp-content/uploads/2015/09/ATA-160033_01_GDO-10V3L2-TC128-Manual_lores.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

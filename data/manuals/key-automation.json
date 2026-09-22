@@ -13,18 +13,22 @@
       "name": "Key Automation SUN2 Sliding Gate Gear Motor",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["SUN 2", "580SUN2"],
+      "aliases": [
+        "SUN 2",
+        "580SUN2"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "SUN2 Instructions and Warnings for Installation and Use",
-          "documentCode": "580SUN2",
-          "version": "REV04",
           "sourceUrl": "https://www.keyautomation.com/media/products/images/MANUALS/580SUN2%20REV04.PDF",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Key Automation",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "REV04",
+          "documentCode": "580SUN2",
           "evidence": "On keyautomation.com, the manufacturer's own domain, in its MANUALS directory. Document code 580SUN2 and revision REV04 read from the file name. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -46,19 +50,24 @@
       "name": "Key Automation SUN3 Sliding Gate Gear Motor",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["SUN 3", "580SUN3"],
+      "aliases": [
+        "SUN 3",
+        "580SUN3"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "SUN3 Instructions and Warnings for Installation and Use",
-          "documentCode": "580SUN3",
-          "version": "REV02",
           "sourceUrl": "https://www.keyautomation.com/media/products/images/MANUALS/580SUN3%20REV02.PDF",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Key Automation",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On keyautomation.com in its MANUALS directory. Document code 580SUN3 and revision REV02 from the file name. The result title shows the document is bilingual (Instructions and warnings / Istruzioni). Not fetched - egress blocked."
+          "language": "en",
+          "version": "REV02",
+          "documentCode": "580SUN3",
+          "evidence": "On keyautomation.com in its MANUALS directory. Document code 580SUN3 and revision REV02 from the file name. The result title shows the document is bilingual (Instructions and warnings / Istruzioni). Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -67,7 +76,11 @@
       "name": "Key Automation RAY25 24V Swing Gate Gear Motor",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["RAY 25", "900RAY2224", "RAY Series"],
+      "aliases": [
+        "RAY 25",
+        "900RAY2224",
+        "RAY Series"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -77,6 +90,7 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing for the RAY series - the gear motor for hinged gates. No 580RAY PDF on keyautomation.com surfaced, so this stays third-party rather than being guessed into the MANUALS directory alongside its SUN siblings. Part code 900RAY2224 comes from the manufacturer's own RAY25 24V product page, recorded below. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -98,6 +112,7 @@
       "name": "Key Automation 14A",
       "category": "gate-motors",
       "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -107,7 +122,29 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. The listing gives no product family or gate type, so none is asserted here beyond the model code. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. The listing gives no product family or gate type, so none is asserted here beyond the model code. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RAY",
+      "name": "RAY",
+      "category": "roller-shutter-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Key Automation RAY Residential Gate Operator and Controller User Manual (v.12.5.17)",
+          "sourceUrl": "https://device.report/m/8ee51d34886afd4f8c371507f7e4eda987e96701a3e595e4dd7477c358b56d4d.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

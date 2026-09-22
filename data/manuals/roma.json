@@ -1,0 +1,49 @@
+{
+  "manufacturer": {
+    "name": "ROMA",
+    "slug": "roma",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "Rolladen",
+      "name": "Rolladen",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "ROMA Rolladen Wartungsanleitung (Maintenance Instructions)",
+          "sourceUrl": "https://www.tor-und-fenstertechnik.de/images/pdf/ROMA_Rolladen_Wartung.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Roller Shutters",
+      "name": "Roller Shutters",
+      "category": "roller-shutter-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ROMA Operating and Maintenance Manual for Roller Shutters (5000990 BPA)",
+          "sourceUrl": "https://www.roma.de/media/file/iv2ti6VPKE/020dc943/5000990_BPA_Rollladen_A5_ML_EN_02-2026.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

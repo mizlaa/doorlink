@@ -20,13 +20,13 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "740 / 741 Sliding Gate Operator Manual (Rev. D)",
-          "documentCode": "732484",
-          "revision": "D",
-          "language": "en",
           "sourceUrl": "https://faac.blob.core.windows.net/web/1/gate-automation/faac-sliding-gates/740-230v-sliding-gate-operator/740-741-732484-revd-en.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "732484",
+          "revision": "D",
           "evidence": "FAAC's own CDN. Document code 732484 and revision D read from the filename. One manual covers both 740 and 741. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -55,7 +55,9 @@
           "publisher": "ManualsLib",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing for the 741 entry of the shared 740/741 documentation. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing for the 741 entry of the shared 740/741 documentation. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -72,12 +74,13 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "FAAC S418 Electromechanical Swing Gate Operator Manual",
-          "documentCode": "104301.5",
           "sourceUrl": "https://www.faac.help/en/documents/s418",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "FAAC",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "104301.5",
           "evidence": "On faac.help, FAAC's own documentation site. This URL is the model's document page, not the PDF itself. Document code 104301.5 is read from the file name of the Encon Electronics copy recorded below, which is the manufacturer's numbering rather than the distributor's. Region is US because the distributor copies print FAAC International Inc.'s US address on their covers. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -106,6 +109,328 @@
               "label": "ManualsLib listing of the user manual - a different document for a different reader"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "390",
+      "name": "390",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "FAAC 390 Swing Gate System Installation Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/FAAC_390_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "390 24V",
+      "name": "390 24V",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 390 24V Articulated Arm Swing Gate Operator Manual",
+          "sourceUrl": "http://www.faacgateopeners.com/FAAC-Manuals/FAAC-390-Low-Voltage-Swing-Gate-Operators.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "402",
+      "name": "402",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 402 Hydraulic Swing Gate Operator Manual",
+          "sourceUrl": "https://www.affordableopeners.com/manuals/Manufacturer/faac/402_operators.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "402 (230V)",
+      "name": "402 (230V)",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 402 230V Swing Gate Operator Manual (732143 Rev A EN)",
+          "sourceUrl": "https://faac.blob.core.windows.net/web/1/gate-automation/faac-swing-gates/402-230v-swing-gate-operator/402-732143-reva-en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "402 / 455 D",
+      "name": "402 / 455 D",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "FAAC 402 Operator and 455 D Control Panel Installation Manual",
+          "sourceUrl": "http://www.faacgateopeners.com/FAAC-Manuals/FAAC-402-swing-gate-operator.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "740/741 (UK)",
+      "name": "740/741 (UK)",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "740 / 741 Installation Manual",
+          "sourceUrl": "https://www.faac.co.uk/productfiles/50_Manual_rad5FB75.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "746 / 844 with CP81",
+      "name": "746 / 844 with CP81",
+      "category": "roller-shutter-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "FAAC 746 and 844 Sliding Gate Automation with CP81 Controller Installation Manual",
+          "sourceUrl": "https://www.gatesplus.com.au/pdf/SlidingCP81.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "746 E R Z16 / Z20",
+      "name": "746 E R Z16 / Z20",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 746 E R Sliding Gate Operator Instructions (780D 732099 Rev D EN)",
+          "sourceUrl": "https://faac.blob.core.windows.net/web/1/gate-automation/faac-sliding-gates/746-er-230v-sliding-gate-operator/746-e-r-780d-732099-revd-en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "844",
+      "name": "844",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 844 Chain and Rack and Pinion Gate Operators Manual",
+          "sourceUrl": "http://www.faacgateopeners.com/FAAC-Manuals/FAAC-844-Chain-and-Rack-and-Pinion-Gate-Operators.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "B680H",
+      "name": "B680H",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC B680H Translation of the Original Instructions (732719 Rev E EN)",
+          "sourceUrl": "https://www.faac.se/data/pdf/manual_b680h_732719_reve_en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "E024 U",
+      "name": "E024 U",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC E024 U Control Board Manual",
+          "sourceUrl": "https://seaccesstech.com/wp-content/uploads/faac/E024UboardManual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "E024S",
+      "name": "E024S",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC E024S Control Board Manual (Rev D GB)",
+          "sourceUrl": "https://faac.blob.core.windows.net/web/1/accessories-and-control-boards/control-boards/for-swing-gates/e024s-control-board/e024s-revd-gb.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "J275/600 HA / J275/800 HA",
+      "name": "J275/600 HA / J275/800 HA",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC J275 Bollards Manual",
+          "sourceUrl": "https://fastgateopeners.com/store/media/pdf/j275-bollards-manual.PDF",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC J275 HA Automatic Bollard Instructions (732649 Rev D EN)",
+          "sourceUrl": "https://faac.blob.core.windows.net/web/1/root/j275-ha-732649-revd-en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC J275/600 HA, J275/800 HA Manual (732649 Rev C EN)",
+          "sourceUrl": "https://faac.blob.core.windows.net/web/1/bollards/j275-bollard-series/j275-600-800ha-732649-revc-en1.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BLIZZARD 400 C ENC / 800 C ENC",
+      "name": "BLIZZARD 400 C ENC / 800 C ENC",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Genius Blizzard 400C ENC, 800C ENC Manual",
+          "sourceUrl": "https://motepro.com.au/Manuals/Genius/Blizzard-400-800.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BLIZZARD 500 C / 900 C",
+      "name": "BLIZZARD 500 C / 900 C",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Genius Blizzard 500C, 900C Instruction Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/Genius_Blizzard_500C_900C_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

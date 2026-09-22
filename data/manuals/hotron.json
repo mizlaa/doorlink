@@ -1,0 +1,49 @@
+{
+  "manufacturer": {
+    "name": "Hotron",
+    "slug": "hotron",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "HR100-CT",
+      "name": "HR100-CT",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hotron HR100-CT User Manual",
+          "sourceUrl": "https://hotron.com/wp-content/uploads/2020/09/hr100-ct_en1.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SSS-4",
+      "name": "SSS-4",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "SAFETY_DOCUMENT",
+          "title": "Hotron SSS-4 Safety Sensor for Swing Doors Installation Instructions",
+          "sourceUrl": "https://www.hotron.com/sites/default/files/products/downloads/sss-4_installation_instructions.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

@@ -7,5 +7,26 @@
     "supportUrl": "https://www.chamberlaindiy.com.au/documents-and-downloads/",
     "note": "Garage door opener manufacturer with an Australian site carrying its own documents-and-downloads area, and a global support portal at support.chamberlaingroup.com. Searched for this session; both portals were surfaced but no direct model-level PDF URL was, so no document records are claimed. The portals are recorded here so a technician has somewhere to go."
   },
-  "models": []
+  "models": [
+    {
+      "modelCode": "B970",
+      "name": "B970",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Chamberlain B970 Belt Drive Owner's Manual",
+          "sourceUrl": "https://images.orgill.com/weblarge/10022/Chamberlain_B970_Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
 }

@@ -1,0 +1,49 @@
+{
+  "manufacturer": {
+    "name": "Rite-Hite",
+    "slug": "rite-hite",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "FASTRAX",
+      "name": "FASTRAX",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Rite-Hite FasTrax Combined Installation / Service / Operation Manual (39500155 / AMEN00065)",
+          "sourceUrl": "http://www.ritehite.net/ark/rhweb/rhtrunk.nsf/b7b2c942575c982b862572580004d864/555c90374a513f3b86258584005637e8/$FILE/FSTX_Combined_ISOM_AMEN00065_2020_07_06_Web.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "FASTRAX FR",
+      "name": "FASTRAX FR",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Rite-Hite FasTrax FR High Performance Modular Door Manual",
+          "sourceUrl": "https://static1.squarespace.com/static/555bcd65e4b09c119716ad9a/t/5be9b74b8a922d4a2923f49f/1542043476774/FasTraxFRG.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

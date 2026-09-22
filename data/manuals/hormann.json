@@ -25,7 +25,20 @@
           "publisher": "Easyfit Garage Door",
           "region": "UK",
           "rights": "LINK_ONLY",
-          "evidence": "UK installer-hosted copy. No hormann.com URL was surfaced for this model. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "UK installer-hosted copy. No hormann.com URL was surfaced for this model. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hormann SupraMatic E2 Garage Door Operator Fitting, Operating and Maintenance Instructions",
+          "sourceUrl": "https://www.hormann.co.uk/fileadmin/_country/dok/SupraMatic_Operator_E2_Garage_Door_Operator.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     },
@@ -34,6 +47,7 @@
       "name": "SupraMatic S Garage Door Operator",
       "category": "garage-door-openers",
       "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -43,7 +57,9 @@
           "publisher": "Bluemate",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Third-party copy. The search result title is in German, so the language of this copy was not confirmed and is left at the default. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Third-party copy. The search result title is in German, so the language of this copy was not confirmed and is left at the default. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -52,6 +68,7 @@
       "name": "SupraMatic P Series 4 Garage Door Operator",
       "category": "garage-door-openers",
       "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "USER_MANUAL",
@@ -61,7 +78,9 @@
           "publisher": "Manuals+",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing keyed by retail ASIN rather than a manufacturer part number, which is a weaker identification. Recorded as such. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing keyed by retail ASIN rather than a manufacturer part number, which is a weaker identification. Recorded as such. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -70,22 +89,24 @@
       "name": "ProMatic Series 4 Garage Door Operator",
       "category": "garage-door-openers",
       "region": "EU",
+      "aliases": [
+        "ProMatic 4",
+        "GDO 94205"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Hörmann ProMatic Series 4 Garage Door Operator Installation Instructions (GDO 94205)",
-          "documentCode": "GDO 94205",
           "sourceUrl": "https://www.scribd.com/document/678497572/hormann-installation-operator-promatic-series-4-gdo-94205",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "Scribd",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "This model was previously recorded as a gap - searched for, nothing found. A document-sharing copy has now surfaced, carrying Hörmann's own document number GDO 94205 in its title, so the gap is closed with a weak source rather than left open. Two caveats stand: document-sharing sites commonly gate downloads, so verification will likely mark this restricted, and no hormann.com URL for the ProMatic Series 4 has been found. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "GDO 94205",
+          "evidence": "This model was previously recorded as a gap - searched for, nothing found. A document-sharing copy has now surfaced, carrying Hörmann's own document number GDO 94205 in its title, so the gap is closed with a weak source rather than left open. Two caveats stand: document-sharing sites commonly gate downloads, so verification will likely mark this restricted, and no hormann.com URL for the ProMatic Series 4 has been found. Not fetched - egress blocked.",
+          "altSources": []
         }
-      ],
-      "aliases": [
-        "ProMatic 4",
-        "GDO 94205"
       ]
     },
     {
@@ -106,6 +127,7 @@
           "publisher": "The Garage Door Centre",
           "region": "UK",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Reseller copy, direct PDF. Search describes the Series 3 documentation as covering BiSecur technology, which is why that appears in the model name; the file name itself says only Supramatic (Series 3). Kept separate from the SupraMatic P Series 4 and the E2 and S records already here, because Hörmann's series numbers mark genuinely different operators. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -135,7 +157,9 @@
           "publisher": "Hörmann",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On hormann.us, the manufacturer's US domain, served through a download handler. The URL carries an opaque hash segment, so it is the kind of link that rots without warning - the tech-support index already registered for this manufacturer is the route back in if it does. Filed under accessories because the FCT3b is a keypad. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On hormann.us, the manufacturer's US domain, served through a download handler. The URL carries an opaque hash segment, so it is the kind of link that rots without warning - the tech-support index already registered for this manufacturer is the route back in if it does. Filed under accessories because the FCT3b is a keypad. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -154,13 +178,14 @@
         {
           "kind": "TECHNICAL_DOCUMENT",
           "title": "Industrial Sectional Doors, Depth 42 mm - Technical Manual, Issue 01.03.2019 (Series 50)",
-          "documentCode": "EBD_INDBR50_Sectionaltor_42_EN",
-          "version": "01.03.2019",
           "sourceUrl": "https://www.hoermann.com/fileadmin/_country/dok/EBD_INDBR50_Sectionaltor_42_EN.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Hörmann",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "01.03.2019",
+          "documentCode": "EBD_INDBR50_Sectionaltor_42_EN",
           "evidence": "On hoermann.com, the manufacturer's own domain, in its document tree. The EBD prefix and INDBR50 (industrial, series 50) are Hörmann's own naming; the issue date 01.03.2019 is from the document's own title line. Typed TECHNICAL_DOCUMENT rather than INSTALL_MANUAL because Hörmann calls it a technical manual and it covers specifications and track applications across the range, not one door's fitting steps. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -183,12 +208,13 @@
         {
           "kind": "SPEC_SHEET",
           "title": "Industrial Sectional Door SPU F42 - Product Catalogue (EN)",
-          "documentCode": "86786",
           "sourceUrl": "https://cdn.hoermann-cloud.de/fileadmin/_country/kataloge/pdf/86786_Ind_Sec_Doors_SPU_F42_EN.pdf?v=1508834138",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Hörmann",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "86786",
           "evidence": "On cdn.hoermann-cloud.de, Hörmann's own CDN. Typed SPEC_SHEET because its path says kataloge - this is the product catalogue, not a manual, and search renders its cover as sales copy. Recorded honestly so nobody reaches for it expecting fitting steps. The v= query parameter is a cache-buster and may change. Document number 86786 from the file name. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -202,6 +228,430 @@
               "label": "Reseller copy of the SPU F42 and SPU 67 Thermo brochure"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "Control 545 FU",
+      "name": "Control 545 FU",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Hormann Control 545 FU Instructions (4514547 B1)",
+          "sourceUrl": "https://hormann.co.uk/media-centre/download/220232sv/4514547_B1_Steuerung_545_FU_EN_komprimiert_.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ECOSTAR LIFTRONIC",
+      "name": "ECOSTAR LIFTRONIC",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hormann EcoStar Liftronic Operators Instructions for Fitting, Operating and Maintenance (TR10L0015)",
+          "sourceUrl": "https://www.thegaragedoorcentre.co.uk/download/Hormann%20Ecostar%20Liftronic%20Operators.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Entrance Gate Operators",
+      "name": "Entrance Gate Operators",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Hörmann Entrance Gate Operators Documentation",
+          "sourceUrl": "https://www.thegaragedoorcentre.co.uk/download/Hormann%20gate%20operators.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Garage Door and Gate Operators",
+      "name": "Garage Door and Gate Operators",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Hormann Garage Door and Entrance Gate Operators Catalogue (85945 EN-UK)",
+          "sourceUrl": "https://www.hoermann.com/fileadmin/_country/kataloge/pdf/85945-Garage_Door_and_Entrance_Gate_Operators_EN-UK.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "HS 5 BiSecur",
+      "name": "HS 5 BiSecur",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Hörmann HS 5 BiSecur Hand Transmitter Manual",
+          "sourceUrl": "https://www.vartai.eu/uploads/userfiles/pdf/Pulteliai/Hormann/hormann%20hs%205%20bs/Hormann-HS5-bs.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hörmann HS 5 BiSecur Hand Transmitter Operating Instructions",
+          "sourceUrl": "https://www.thegaragedoorcentre.co.uk/userfiles/downloads/Hormann%20HS5%20Remote%20Controls.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hörmann HS 5 BiSecur Hand Transmitter Operating Instructions (TR20A084-C)",
+          "sourceUrl": "https://bautech.ch/wp-content/uploads/2020/04/Handsender-HS5_BS.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "HSE 2 BiSecur",
+      "name": "HSE 2 BiSecur",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hörmann HSE 2 BiSecur Hand Transmitter Operating Instructions",
+          "sourceUrl": "https://www.thegaragedoorcentre.co.uk/download/Hormann%20HSE2%20Remote%20Controls.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LINEAMATIC",
+      "name": "LINEAMATIC",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hormann LineaMatic Sliding Gate Operator Instructions for Fitting, Operating and Maintenance (TR10A058-C)",
+          "sourceUrl": "https://www.hormann.fr/fileadmin/_country/dok/TR10A058_Motorisation_pour_portail_coulissant_LineaMatic_EN_FR.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "PROMATIC",
+      "name": "PROMATIC",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Hormann ProMatic Garage Door Operator Installation, Operating and Maintenance Instructions",
+          "sourceUrl": "https://tronicline.com/wp-content/uploads/2019/12/Hormann-Promatic-installation.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "PROMATIC 4",
+      "name": "PROMATIC 4",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hormann ProMatic 4 Instructions for Fitting, Operating and Maintenance (TR10A378-C)",
+          "sourceUrl": "https://www.hormann.co.uk/media-centre/download/185627en/TR10A378_C_ProMatic_4_EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hormann ProMatic 4 Instructions for Fitting, Operating and Maintenance (TR10A378-C)",
+          "sourceUrl": "https://asset-center.com/original/627/185627_originalfile.pdf?response-content-disposition=attachment%3B+filename%3D%22TR10A378-C_ProMatic_4_EN.pdf%22",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Rolling Shutters and Grilles",
+      "name": "Rolling Shutters and Grilles",
+      "category": "roller-shutter-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Hormann Rolling Shutters and Rolling Grilles Documentation (84555)",
+          "sourceUrl": "https://www.hormann.co.uk/fileadmin/_country/kataloge/pdf/84555-Rolltore_und_Rollgitter-EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ROLLMATIC",
+      "name": "ROLLMATIC",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Hormann RollMatic Operator Fitting Instructions",
+          "sourceUrl": "https://www.thegaragedoorcentre.co.uk/download/Hormann%20Rollmatic%20Operator%20Fitting%20Instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Hormann RollMatic Operators Instructions (TR10A073-B)",
+          "sourceUrl": "https://www.garagedoorsonline.co.uk/userfiles/download/Hormann%20Rollmatic%20Operators.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Sectional Garage Doors",
+      "name": "Sectional Garage Doors",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Hormann Sectional Garage Doors Instructions (EBD 84607)",
+          "sourceUrl": "https://www.hormann.co.uk/media-centre/download/311111en/02_EN_EBD_84607_Garage_Sektionaltor.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SilentDrive 8500",
+      "name": "SilentDrive 8500",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "SilentDrive 8500 Installation Instructions & Owner's Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/Hrmann_SilentDrive_8500_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SUPRAMATIC 3",
+      "name": "SUPRAMATIC 3",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hormann SupraMatic 3 Instructions for Fitting, Operating and Maintenance (TR10A108-E)",
+          "sourceUrl": "https://asset-center.com/original/390/188390_originalfile.pdf?response-content-disposition=attachment%3B+filename%3D%22TR10A108-E_SupraMatic_3_EN.pdf%22",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SUPRAMATIC 4",
+      "name": "SUPRAMATIC 4",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hormann SupraMatic 4 Instructions for Fitting, Operating and Maintenance (TR10A360-B)",
+          "sourceUrl": "https://asset-center.com/original/518/185518_originalfile.pdf?response-content-disposition=attachment%3B+filename%3D%22TR10A360-B_SupraMatic_4_EN.pdf%22",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SUPRAMATIC A / A55",
+      "name": "SUPRAMATIC A / A55",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Hormann Supramatic A (A55) Garage Door Operator Manual",
+          "sourceUrl": "https://mgdor.com/Hormann/hormann-opener-manual-a55-supramatic-a.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SUPRAMATIC HT",
+      "name": "SUPRAMATIC HT",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hormann SupraMatic HT Instructions for Fitting, Operating and Maintenance (TR10A122)",
+          "sourceUrl": "https://asset-center.com/original/938/188938_originalfile.pdf?response-content-disposition=attachment%3B+filename%3D%22SupraMatic_HT_en--1.pdf%22",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SupraMatic S (US)",
+      "name": "SupraMatic S (US)",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "SupraMatic S Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/Hrmann_Supramatic_S_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SUPRAMATIC SERIES 4",
+      "name": "SUPRAMATIC SERIES 4",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hormann SupraMatic Series 4 Instructions for Fitting, Operating and Maintenance (TR10A360)",
+          "sourceUrl": "https://www.garagedoorsonline.co.uk/userfiles/download/hormann_installation_operator_supramatic_series_4_gdo_22303.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

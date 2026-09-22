@@ -13,7 +13,10 @@
       "name": "Aprimatic ZT4 Swing Gate Operator",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["ZT4 C", "ZT SF"],
+      "aliases": [
+        "ZT4 C",
+        "ZT SF"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,6 +26,7 @@
           "publisher": "Intelligent Security",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Reseller copy, and the file name says it is watermarked - so it is a marked-up redistribution, not a clean manufacturer PDF. Recorded as the source because it is a direct PDF; the aggregator listings below carry the same document. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -54,7 +58,10 @@
       "name": "Aprimatic R251FM 24V Swing Gate Operator",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["R251", "R251 FM"],
+      "aliases": [
+        "R251",
+        "R251 FM"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -64,7 +71,9 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Recorded under the full R251FM designation with R251 as an alias, because the document names the FM variant and the bare R251 was not separately confirmed. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Recorded under the full R251FM designation with R251 as an alias, because the document names the FM variant and the bare R251 was not separately confirmed. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

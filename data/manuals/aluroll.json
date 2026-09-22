@@ -13,7 +13,10 @@
       "name": "Aluroll Secureroll Classic and Compact Roller Garage Door",
       "category": "roller-shutter-motors",
       "region": "UK",
-      "aliases": ["Secureroll", "Secureroll Compact"],
+      "aliases": [
+        "Secureroll",
+        "Secureroll Compact"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,7 +26,49 @@
           "publisher": "Chamberlain Doors",
           "region": "UK",
           "rights": "LINK_ONLY",
-          "evidence": "Installer-hosted copy. The document's own heading reads \"Classic & Compact Roller Garage Door Installation Manual - Manufactured by:\", which is what ties it to Aluroll. Note the host is Chamberlain Doors, a UK door installer, and has nothing to do with Chamberlain the opener manufacturer already in this library - a collision worth flagging before someone merges them. The 2025/01 path segment is the installer's upload month, not the document's edition. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Installer-hosted copy. The document's own heading reads \"Classic & Compact Roller Garage Door Installation Manual - Manufactured by:\", which is what ties it to Aluroll. Note the host is Chamberlain Doors, a UK door installer, and has nothing to do with Chamberlain the opener manufacturer already in this library - a collision worth flagging before someone merges them. The 2025/01 path segment is the installer's upload month, not the document's edition. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CLASSIC / COMPACT",
+      "name": "CLASSIC / COMPACT",
+      "category": "roller-shutter-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Aluroll Classic and Compact Shutter Installation Manual",
+          "sourceUrl": "https://www.ukrollershutters.com/wp-content/uploads/2021/12/Classic_-Compact-Shutter-Installation-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CLASSIC / COMPACT / ELITE",
+      "name": "CLASSIC / COMPACT / ELITE",
+      "category": "roller-shutter-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Aluroll Roller Garage Door Installation Manual",
+          "sourceUrl": "https://arridgegaragedoors.co.uk/uploads/pdfs/New+Roller+Garage+Door+Installation+Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

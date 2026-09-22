@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "Steel-Craft",
+    "slug": "steel-craft",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "THERMODOR",
+      "name": "THERMODOR",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Steel-Craft Thermodor Installation Instructions and Maintenance Manual",
+          "sourceUrl": "https://steel-craft.ca/manuals/InstallationThermodor.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

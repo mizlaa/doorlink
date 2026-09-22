@@ -1,0 +1,69 @@
+{
+  "manufacturer": {
+    "name": "Prastel",
+    "slug": "prastel",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "MT4000-2 / MT10000-4",
+      "name": "MT4000-2 / MT10000-4",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Prastel MT4000-2, MT10000-4 Manual",
+          "sourceUrl": "https://www.intelligentsecurity.org/resources/access-control/Prastel-MT4000-2,-MT10000-4-Manual_Watermark.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MT10000-4",
+      "name": "MT10000-4",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Prastel MT4000-2 / MT10000-4 Manual (EN-32)",
+          "sourceUrl": "https://manuals.easygates.co.uk/PDF/prastel/mt10000-en-32.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "UNIK2E SK",
+      "name": "UNIK2E SK",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Prastel UNIK2E Technical Installation Manual for Automatic Gates",
+          "sourceUrl": "https://ismartgate.com/manuals/Prastel_UNIK2ESK_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "manufacturer": {
+    "name": "4Ddoors",
+    "slug": "4ddoors",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "4DR1",
+      "name": "4DR1",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "4Ddoors 4DR1 v1 User Manual",
+          "sourceUrl": "https://www.4ddoors.com.au/assets/uploads/documents/4Ddoors-4DR1-v1-User-Manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "4DR2",
+      "name": "4DR2",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "4Ddoors 4DR2 Installation Instruction and User Guide",
+          "sourceUrl": "https://www.4ddoors.com.au/assets/uploads/documents/4Ddoors-4DR2.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "4DS1",
+      "name": "4DS1",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "4Ddoors 4DS1 v1 User Manual",
+          "sourceUrl": "https://www.4ddoors.com.au/assets/uploads/documents/4Ddoors-4DS1-v1-User-Manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "4DS2",
+      "name": "4DS2",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "4Ddoors 4DS2 Sectional and Tilting Door Operator Installation Instructions and User Guide",
+          "sourceUrl": "https://4ddoors.com.au/assets/uploads/documents/4Ddoors_4DS2_v1.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "203 / 403",
+      "name": "203 / 403",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "4Ddoors 203-403 Garage Door Operator Homeowners Manual",
+          "sourceUrl": "https://www.quickliftdoors.com.au/user_uploads/documents/4Ddoors-203-403-Homeowners-v1.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GA403 / 403 TG",
+      "name": "GA403 / 403 TG",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "4Ddoors GA403 / 403 TG Instructions for Fitting, Operating and Maintenance",
+          "sourceUrl": "https://www.egaragesystems.com.au/pdf/4d-doors/manuals/gate-garage-motor-manuals/4Ddoors-GA403-403-TG_2021-08-26-010344.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

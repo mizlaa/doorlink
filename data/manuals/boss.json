@@ -13,7 +13,10 @@
       "name": "Boss BOL4 Sectional Door Operator",
       "category": "garage-door-openers",
       "region": "AU",
-      "aliases": ["BOL-4", "BOL 4"],
+      "aliases": [
+        "BOL-4",
+        "BOL 4"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,7 +26,9 @@
           "publisher": "Motepro",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Reseller copy, and a direct PDF. The model code and the sectional application both come from the URL path (Manuals/Boss/Sectional/BOL4.pdf), which is the reseller's filing, not the document's own title - so the attribution is the reseller's. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Reseller copy, and a direct PDF. The model code and the sectional application both come from the URL path (Manuals/Boss/Sectional/BOL4.pdf), which is the reseller's filing, not the document's own title - so the attribution is the reseller's. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -32,6 +37,7 @@
       "name": "Boss Remote Handset",
       "category": "remotes-accessories",
       "region": "AU",
+      "aliases": [],
       "documents": [
         {
           "kind": "PROGRAMMING_GUIDE",
@@ -41,7 +47,9 @@
           "publisher": "East Coast Garage Doors",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Reseller copy. The document covers coding a handset and names no specific handset model, so the record carries no model code beyond the generic one - inventing a part number to make it look precise would be worse than the vagueness. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Reseller copy. The document covers coding a handset and names no specific handset model, so the record carries no model code beyond the generic one - inventing a part number to make it look precise would be worse than the vagueness. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

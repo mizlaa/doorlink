@@ -1,0 +1,109 @@
+{
+  "manufacturer": {
+    "name": "Maximum Controls",
+    "slug": "maximum-controls",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "ARMS 1300-2300",
+      "name": "ARMS 1300-2300",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Maximum Controls Arms 1300-2300 Installation and Owners Manual",
+          "sourceUrl": "https://max.us.com/wp-content/uploads/2021/04/maximum-controls-arms-1300-2300-installation-v1.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MAX 1500 / 2200 / F18 PRO",
+      "name": "MAX 1500 / 2200 / F18 PRO",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Maximum Controls MAX 1500-2200 F18 PRO Matrix III Installation Guide (V7a)",
+          "sourceUrl": "https://max.us.com/wp-content/uploads/2019/01/MAX-1500-2200-F18-PRO-Matrix-III-Installation-V7a-1.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MAX 1500 / MAX 2200",
+      "name": "MAX 1500 / MAX 2200",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Maximum Controls MAX 1500 / 2200 UL 325 Manual",
+          "sourceUrl": "https://max.us.com/wp-content/uploads/2016/03/Max-1500.2200-UL-325-2016-V7.3.16.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MAX 1700FS",
+      "name": "MAX 1700FS",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Maximum Controls MAX 1700FS Fail Safe Slide Gate Operator Quick Install Guide",
+          "sourceUrl": "https://max.us.com/wp-content/uploads/2017/04/Maximum-Controls-MAX-1700FS-Quick-Install-Rev-3.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MAX ARM / ULTRA ARM",
+      "name": "MAX ARM / ULTRA ARM",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Maximum Controls Max Arm / Ultra Arm Linear Gate Operators Manual (4009963)",
+          "sourceUrl": "https://enconelectronics.com/images/Max-Arm-Ultra-Arm_Manual-2022.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

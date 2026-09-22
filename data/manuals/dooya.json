@@ -13,7 +13,13 @@
       "name": "Dooya DM35 Series Tubular Motor",
       "category": "roller-shutter-motors",
       "region": "GLOBAL",
-      "aliases": ["DM35R", "DM35S", "DM350328", "DM35R 10/17", "DM35S 6/28"],
+      "aliases": [
+        "DM35R",
+        "DM35S",
+        "DM350328",
+        "DM35R 10/17",
+        "DM35S 6/28"
+      ],
       "documents": [
         {
           "kind": "USER_MANUAL",
@@ -23,6 +29,7 @@
           "publisher": "fccid.io",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "The manual as filed with the FCC under grantee code VYY, mirrored by fccid.io. That makes it the manufacturer's own document in a regulatory record, but the host is a third-party mirror of public filings, not Dooya - so origin stays third-party. Region is US because an FCC filing is a US regulatory document, not because the motor is US-only. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -45,7 +52,9 @@
           "publisher": "Rollac Shutters",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor copy, filed by Rollac under wiring diagrams and limit-switch adjustments. Covers the manual-override variant. The file name does not carry a model code, so it is attached to the DM35 series on the strength of the directory naming it Dooya Motors - that attribution is weaker than the others here and should be checked when the link is verified. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Distributor copy, filed by Rollac under wiring diagrams and limit-switch adjustments. Covers the manual-override variant. The file name does not carry a model code, so it is attached to the DM35 series on the strength of the directory naming it Dooya Motors - that attribution is weaker than the others here and should be checked when the link is verified. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -54,7 +63,12 @@
       "name": "Dooya DM45 Series Tubular Motor",
       "category": "roller-shutter-motors",
       "region": "GLOBAL",
-      "aliases": ["DM45R", "DM45S", "DM45R 50/12", "DM45S 50/12"],
+      "aliases": [
+        "DM45R",
+        "DM45S",
+        "DM45R 50/12",
+        "DM45S 50/12"
+      ],
       "documents": [
         {
           "kind": "USER_MANUAL",
@@ -64,7 +78,9 @@
           "publisher": "manuals.plus",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing covering the R and S variants together, for rolling blinds, canopies and lift systems. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing covering the R and S variants together, for rolling blinds, canopies and lift systems. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -73,7 +89,9 @@
       "name": "Dooya DM59 Series Tubular Motor",
       "category": "roller-shutter-motors",
       "region": "GLOBAL",
-      "aliases": ["DM59S"],
+      "aliases": [
+        "DM59S"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -83,7 +101,9 @@
           "publisher": "manuals.plus",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing of a combined manual covering the DM35S, DM45S and DM59S. Attached to the DM59 because that is the series with no manual of its own here; the DM35 and DM45 keep their model-specific documents rather than this one being duplicated onto all three. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing of a combined manual covering the DM35S, DM45S and DM59S. Attached to the DM59 because that is the series with no manual of its own here; the DM35 and DM45 keep their model-specific documents rather than this one being duplicated onto all three. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

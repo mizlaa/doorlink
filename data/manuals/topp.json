@@ -1,0 +1,49 @@
+{
+  "manufacturer": {
+    "name": "Topp",
+    "slug": "topp",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "ACK4",
+      "name": "ACK4",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Topp ACK4 Chain Actuator Instructions",
+          "sourceUrl": "https://www.lpwindowcontrols.co.uk/wp-content/uploads/2018/05/TOPP-chain-actuator-ACK4-instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ACK4S",
+      "name": "ACK4S",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Topp ACK4S Chain Actuator Instructions",
+          "sourceUrl": "https://www.window-openers.com/wp-content/uploads/2021/06/TOPP-chain-actuator-ACK4S-instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

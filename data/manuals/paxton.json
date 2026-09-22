@@ -1,0 +1,80 @@
+{
+  "manufacturer": {
+    "name": "Paxton",
+    "slug": "paxton",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "NET2",
+      "name": "NET2",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Paxton Net2 Access Control Unit Installation Application Note (AN1012)",
+          "sourceUrl": "https://www.paxton-access.com/wp-content/uploads/2019/03/AN1012.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Paxton Net2 Installer Guide (519-708-US)",
+          "sourceUrl": "https://www.paxton-access.com/wp-content/uploads/2019/04/519-708-US.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NET2 ENTRY",
+      "name": "NET2 ENTRY",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Paxton Net2 Entry Installer Guide",
+          "sourceUrl": "http://s3.abbas.cz/PRODUKT/Manual/Paxton/Net2_Entry.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NET2 PLUS",
+      "name": "NET2 PLUS",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Paxton Net2 Plus Control Unit Installation Instructions (Ins-30080)",
+          "sourceUrl": "https://www.paxton-access.com/wp-content/uploads/2019/03/ins-30080.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

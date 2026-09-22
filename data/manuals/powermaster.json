@@ -1,0 +1,109 @@
+{
+  "manufacturer": {
+    "name": "PowerMaster",
+    "slug": "powermaster",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "GH",
+      "name": "GH",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "PowerMaster GH Industrial Duty Commercial Door Operator Owner's Manual",
+          "sourceUrl": "https://www.cooksondoor.com/docs/default-source/o-m-manuals/gh-motors-2009.pdf?sfvrsn=4",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MG",
+      "name": "MG",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "PowerMaster MG Installation Manual (06-0922)",
+          "sourceUrl": "https://www.powermastergateopeners.com/manuals/MG/06-0922_MG_Install_Manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MODEL T",
+      "name": "MODEL T",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "PowerMaster Model T Trolley Door Operator Manual",
+          "sourceUrl": "https://powermasterny.com/wp-content/uploads/2019/02/2018_T_manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RH / RJ",
+      "name": "RH / RJ",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "PowerMaster RH-RJ Installation Manual (06-0922)",
+          "sourceUrl": "https://www.powermastergateopeners.com/manuals/RH/06-0922_RH-RJ_Install_Man.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "T (Drawbar)",
+      "name": "T (Drawbar)",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "PowerMaster T Drawbar Operator Installation Manual",
+          "sourceUrl": "https://laornamental.com/pdf-files/Powermaster-Overhead/Powermaster-T-Drawbar-Operator-Installation-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

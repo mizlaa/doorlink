@@ -21,12 +21,13 @@
         {
           "kind": "USER_MANUAL",
           "title": "Series 6300 Vehicular Swing Gate Operator Owner's Manual",
-          "documentCode": "1601-065-H",
-          "revision": "2-04",
           "sourceUrl": "https://www.doorking.com/wp-content/uploads/2013/09/1601-065-H-2-04.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "1601-065-H",
+          "revision": "2-04",
           "evidence": "Manufacturer's own domain. Document code 1601-065-H and revision 2-04 read from the filename. The search result titled this simply Owner's Manual; the 6300 attribution comes from the separate Gates'n'Fences copy naming the series, so it is a cross-reference rather than a direct reading of this file. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -44,6 +45,7 @@
           "publisher": "Gates N Fences",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Distributor copy, plain HTTP as surfaced. Search reports the current 6300 manual is for circuit board 4502-010 revision K or higher, covering operators built from July 2011 - which means older 6300s need an older manual, and this copy's edition is unknown. Recorded with that caveat rather than assumed current. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -62,6 +64,28 @@
               "label": "Manufacturer product page for the 6300 - a page, not a document"
             }
           ]
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "DoorKing 6300 Owner's Manual (6300-065-E-7-15)",
+          "sourceUrl": "https://www.doorking.com/wp-content/uploads/2015/10/6300-065-E-7-15.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DoorKing 6300 Vehicular Swing Gate Operator Manual (Rev 6-20)",
+          "sourceUrl": "https://www.doorking.com/wp-content/uploads/2020/06/6300_Rev_6-20.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     },
@@ -77,15 +101,17 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "Series 6500 Installation / Owner's Manual",
-          "documentCode": "6500-065",
-          "revision": "W",
-          "version": "3-14",
           "sourceUrl": "https://www.doorking.com/wp-content/uploads/2014/03/6500-065-W-3-14.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "DoorKing",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On doorking.com, the manufacturer's own domain. The file name decodes as model 6500, document family 065, revision W, dated March 2014 - so both revision and date are readable without opening it. Not fetched - egress blocked."
+          "language": "en",
+          "version": "3-14",
+          "documentCode": "6500-065",
+          "revision": "W",
+          "evidence": "On doorking.com, the manufacturer's own domain. The file name decodes as model 6500, document family 065, revision W, dated March 2014 - so both revision and date are readable without opening it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -101,15 +127,17 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "Series 6050 Installation / Owner's Manual",
-          "documentCode": "6050-065",
-          "revision": "X",
-          "version": "10-23",
           "sourceUrl": "https://www.doorking.com/wp-content/uploads/2018/08/6050-065-X-10-23.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "DoorKing",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On doorking.com. Revision X dated October 2023, in a 2018/08 upload folder - the folder is when the path was first used, the file name is the edition, and they disagree. The file name is the one to trust. Not fetched - egress blocked."
+          "language": "en",
+          "version": "10-23",
+          "documentCode": "6050-065",
+          "revision": "X",
+          "evidence": "On doorking.com. Revision X dated October 2023, in a 2018/08 upload folder - the folder is when the path was first used, the file name is the edition, and they disagree. The file name is the one to trust. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -127,15 +155,108 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "Owner's Manual Supplemental Instructions for Series 1600, 6000 and 9000",
-          "documentCode": "2340-065",
-          "revision": "K",
-          "version": "7-08",
           "sourceUrl": "https://www.doorking.com/wp-content/uploads/2013/09/2340-065-K-7-08.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "DoorKing",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On doorking.com. Note this is supplemental instructions, not a full manual - it accompanies the per-series manuals rather than replacing them, and the three series share it, which is why 6000 and 9000 are aliases here rather than models holding a copy. Not fetched - egress blocked."
+          "language": "en",
+          "version": "7-08",
+          "documentCode": "2340-065",
+          "revision": "K",
+          "evidence": "On doorking.com. Note this is supplemental instructions, not a full manual - it accompanies the per-series manuals rather than replacing them, and the three series share it, which is why 6000 and 9000 are aliases here rather than models holding a copy. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "1803 / 1808 / 1810",
+      "name": "1803 / 1808 / 1810",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DoorKing 1803, 1808, 1810 Telephone Entry Systems Manual",
+          "sourceUrl": "http://www.doorkinggateopeners.com/pdf/1803-1808-1810-Manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "1819",
+      "name": "1819",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DoorKing 1819 Information Phone Manual (1819-065-B)",
+          "sourceUrl": "https://www.doorking.com/wp-content/uploads/2013/09/1819-065-B-4-07.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "1835 (80 Series)",
+      "name": "1835 (80 Series)",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DoorKing 1835 80 Series Entry System Manual (1835-065-Q)",
+          "sourceUrl": "https://www.doorking.com/wp-content/uploads/2013/09/1835-065-Q-3-24_80_Series.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DoorKing 1835 80 Series Manual",
+          "sourceUrl": "https://entryandexit.com/manuals/doorking/1835-080/1835_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "1837 (80 Series)",
+      "name": "1837 (80 Series)",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DoorKing 1837 80 Series Telephone Entry Manual",
+          "sourceUrl": "https://gatehousesupplies.com/product_images/manuals/1837-080manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

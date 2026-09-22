@@ -13,6 +13,7 @@
       "name": "Gilgen SLM Sliding Door Operator",
       "category": "automatic-pedestrian-doors",
       "region": "GLOBAL",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -22,6 +23,7 @@
           "publisher": "ManualsLib",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing, 24 pages per the result. A 2006 SLM installation manual also circulates as \"Gildor SLM\" (see alternate sources); the two are recorded together because the aggregator files both under Gilgen SLM, but the name difference is unresolved and neither was fetched - egress blocked.",
           "altSources": [
             {
@@ -35,6 +37,17 @@
               "label": "Scribd copy of the same 2006 document"
             }
           ]
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Gilgen SLM Installation Manual (2006)",
+          "sourceUrl": "https://absupply.net/pdf/Gildor%20SLM%20Installation%20Manual%202006.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     },
@@ -43,6 +56,7 @@
       "name": "Gilgen SLX Sliding Door Operator",
       "category": "automatic-pedestrian-doors",
       "region": "GLOBAL",
+      "aliases": [],
       "documents": [
         {
           "kind": "USER_MANUAL",
@@ -52,7 +66,9 @@
           "publisher": "ManualsLib",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

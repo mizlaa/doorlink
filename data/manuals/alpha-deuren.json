@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "Alpha Deuren",
+    "slug": "alpha-deuren",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "Sectional Overhead Doors",
+      "name": "Sectional Overhead Doors",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Alpha Deuren Sectional Overhead Doors Installation and Maintenance Manual (EN)",
+          "sourceUrl": "https://www.alpha-deuren.nl/app/uploads/2020/03/SectionaloverheaddoorsGBAlpha20220602.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

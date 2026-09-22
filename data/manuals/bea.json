@@ -1,0 +1,49 @@
+{
+  "manufacturer": {
+    "name": "BEA",
+    "slug": "bea",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "LZR-I30",
+      "name": "LZR-I30",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BEA LZR-I30 Installation Manual",
+          "sourceUrl": "https://www.devancocanada.com/files/manuals/BEA-LZR-I30:Installation-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LZR-SIGMA",
+      "name": "LZR-SIGMA",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BEA LZR-Sigma Original Instructions (75.5929.01)",
+          "sourceUrl": "https://us.beasensors.com/files/uploads/2021/07/75.5929.01.EN-LZR-SIGMA-20210630.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

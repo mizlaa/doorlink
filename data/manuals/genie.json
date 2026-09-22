@@ -27,7 +27,9 @@
           "publisher": "Bluemate",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Third-party copy. One manual covers four series, so the record names all four rather than implying it is specific to one. No manufacturer-hosted PDF URL was surfaced; the Genie support portal is recorded at manufacturer level instead. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Third-party copy. One manual covers four series, so the record names all four rather than implying it is specific to one. No manufacturer-hosted PDF URL was surfaced; the Genie support portal is recorded at manufacturer level instead. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -50,6 +52,7 @@
           "publisher": "The Genie Company",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "On geniecompany.com, the manufacturer's own domain. This is the model's support page, not a PDF - no geniecompany.com document URL surfaced. Recorded because the page is the manufacturer's own entry point for this model and a technician can get to the manual from it; typed USER_MANUAL as the closest honest fit, with this note saying plainly it is a page. ChainMax 750 is an alias because the search conflated the two names; whether they are the same opener was not established. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -88,6 +91,7 @@
           "publisher": "manuals.plus",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing. Kept separate from the SilentMax 750: different model, different manual. A retailer-hosted PDF for this opener also surfaced on an Amazon media host, recorded as an alternate - those URLs are transient and should not be relied on. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -96,6 +100,26 @@
               "label": "Retailer media-host copy; opaque asset URL, expect it to rot"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "2128",
+      "name": "2128",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Genie Model 2128 Operation and Maintenance Manual",
+          "sourceUrl": "https://www.kauffmanmetals.com/wp-content/uploads/2025/04/Genie-Model-2128-Operation-Maintenance-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

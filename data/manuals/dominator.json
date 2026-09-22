@@ -13,7 +13,10 @@
       "name": "Dominator Smart & Secure Sectional Door Opener",
       "category": "garage-door-openers",
       "region": "NZ",
-      "aliases": ["Smart and Secure", "Smart & Secure"],
+      "aliases": [
+        "Smart and Secure",
+        "Smart & Secure"
+      ],
       "documents": [
         {
           "kind": "QUICK_START",
@@ -23,7 +26,9 @@
           "publisher": "Dominator",
           "region": "NZ",
           "rights": "LINK_ONLY",
-          "evidence": "On dominator.co.nz, the manufacturer's own domain. Typed QUICK_START on the document's own title - it is the quick operation guide, not the full manual, and the full one is a recorded gap rather than an assumption. The file name is a bare asset ID carrying no model information, so the title comes entirely from the search result's rendering of the document. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On dominator.co.nz, the manufacturer's own domain. Typed QUICK_START on the document's own title - it is the quick operation guide, not the full manual, and the full one is a recorded gap rather than an assumption. The file name is a bare asset ID carrying no model information, so the title comes entirely from the search result's rendering of the document. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -32,6 +37,7 @@
       "name": "Dominator Select Sectional Door Opener",
       "category": "garage-door-openers",
       "region": "NZ",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -41,7 +47,9 @@
           "publisher": "manuals.plus",
           "region": "NZ",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. No dominator.co.nz asset URL was tied to the Select, so it stays third-party while the Smart & Secure guide is manufacturer-hosted. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. No dominator.co.nz asset URL was tied to the Select, so it stays third-party while the Smart & Secure guide is manufacturer-hosted. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -50,7 +58,9 @@
       "name": "Dominator Excel Rolling Door Opener",
       "category": "garage-door-openers",
       "region": "NZ",
-      "aliases": ["Excel"],
+      "aliases": [
+        "Excel"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -60,7 +70,9 @@
           "publisher": "Dominator Rodney",
           "region": "NZ",
           "rights": "LINK_ONLY",
-          "evidence": "Dealer copy. Recorded as third-party because dominatorrodney.co.nz is a regional dealer domain, not the manufacturer's. Note it sits in a Brochures folder while its own opening line reads \"These instructions are intended for professional garage door...\" - the folder is the dealer's filing, the content is installer instructions, so it is typed on the content. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Dealer copy. Recorded as third-party because dominatorrodney.co.nz is a regional dealer domain, not the manufacturer's. Note it sits in a Brochures folder while its own opening line reads \"These instructions are intended for professional garage door...\" - the folder is the dealer's filing, the content is installer instructions, so it is typed on the content. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

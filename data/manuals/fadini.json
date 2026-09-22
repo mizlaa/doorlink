@@ -13,7 +13,10 @@
       "name": "Fadini Bayt 980 Oil-Hydraulic Traffic Barrier",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["BAYT980", "Bayt 980 INOX"],
+      "aliases": [
+        "BAYT980",
+        "Bayt 980 INOX"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,6 +26,7 @@
           "publisher": "Electric Gates UK (trade)",
           "region": "UK",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Reseller copy, and a direct PDF rather than a listing page. The title names both the stainless and painted versions, so both are covered by one document. The URL path dates the upload to 2015, which is when the reseller posted it, not necessarily the document's own revision - no revision is recorded because none was visible. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -49,7 +53,9 @@
       "name": "Fadini Elpro 980 Control Unit",
       "category": "remotes-accessories",
       "region": "EU",
-      "aliases": ["Elpro980"],
+      "aliases": [
+        "Elpro980"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -59,7 +65,49 @@
           "publisher": "EasyGates",
           "region": "UK",
           "rights": "LINK_ONLY",
-          "evidence": "Reseller copy. The file name's istr_ prefix and _gb suffix match Fadini's own document naming, which is why the GB edition is recorded, but the file sits on a reseller domain. Filed under accessories because the Elpro 980 is the control unit that pairs with the Bayt 980 barrier, not a drive in its own right. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Reseller copy. The file name's istr_ prefix and _gb suffix match Fadini's own document naming, which is why the GB edition is recorded, but the file sits on a reseller domain. Filed under accessories because the Elpro 980 is the control unit that pairs with the Bayt 980 barrier, not a drive in its own right. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NYOTA 115",
+      "name": "NYOTA 115",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Fadini Nyota 115 Electro-mechanical Sliding Gate Operator Instruction Manual",
+          "sourceUrl": "https://motepro.com.au/Manuals/Fadini/NYOTA115.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NYOTA 115 EVO",
+      "name": "NYOTA 115 EVO",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Fadini Nyota 115 Evo Electromechanical Operator for Sliding Gates Instructions Manual",
+          "sourceUrl": "https://www.fadini.hu/assets/files/Nyota115evo_EN.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

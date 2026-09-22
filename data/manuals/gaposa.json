@@ -1,0 +1,49 @@
+{
+  "manufacturer": {
+    "name": "Gaposa",
+    "slug": "gaposa",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "XQ / MX / QR",
+      "name": "XQ / MX / QR",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Gaposa Tubular Motors with Mechanical Limit Switch Quick Reference (EN)",
+          "sourceUrl": "https://www.gaposa.it/media/1376/xq-mx-qr-en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "XQ P",
+      "name": "XQ P",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Gaposa XQ P Tubular Motors with Mechanical Limit Switch and Manual Override Quick Reference (EN)",
+          "sourceUrl": "https://www.gaposa.it/media/1433/xq-p-qr-en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

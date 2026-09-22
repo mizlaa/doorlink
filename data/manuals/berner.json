@@ -13,17 +13,23 @@
       "name": "Berner GA203 / GA403 Garage Door Operator",
       "category": "garage-door-openers",
       "region": "EU",
-      "aliases": ["GA403", "GA204", "GA404", "GA203/403"],
+      "aliases": [
+        "GA403",
+        "GA204",
+        "GA404",
+        "GA203/403"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "GA203 / GA403 Garage Door Operator Installation, Operating and Maintenance Instructions (EN)",
-          "documentCode": "2904660",
           "sourceUrl": "https://www.berner-torantriebe.de/wp-content/uploads/2904660-EBA-GA203_403-englisch.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Berner Torantriebe",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "2904660",
           "evidence": "On berner-torantriebe.de, the manufacturer's own domain. Document number 2904660 and the EBA prefix (Einbau- und Betriebsanleitung) are from the file name, as is the English edition. Search describes the manual as covering GA203, GA204, GA403 and GA404, so the 204 and 404 are aliases here - note the file name itself only says 203_403, so that wider coverage comes from the description rather than the file. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -40,18 +46,21 @@
       "name": "Berner GA103 Garage Door Operator",
       "category": "garage-door-openers",
       "region": "UK",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "GA103 Garage Door Operator Instructions for Fitting, Operating and Maintenance (GBR), Rev. 1.1",
-          "documentCode": "2905537",
-          "revision": "Rev. 1.1",
           "sourceUrl": "https://www.berner-torantriebe.de/wp-content/uploads/2905537-EBA-GA103_GBR-Rev.-1.1.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Berner Torantriebe",
           "region": "UK",
           "rights": "LINK_ONLY",
-          "evidence": "On berner-torantriebe.de. Document number 2905537 and revision 1.1 from the file name; the GBR segment is the market edition, which is why the region is UK rather than EU. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "2905537",
+          "revision": "Rev. 1.1",
+          "evidence": "On berner-torantriebe.de. Document number 2905537 and revision 1.1 from the file name; the GBR segment is the market edition, which is why the region is UK rather than EU. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -60,19 +69,21 @@
       "name": "Berner GA501 Garage Door Operator",
       "category": "garage-door-openers",
       "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Anleitung für Montage, Betrieb und Wartung - Garagentorantrieb GA501 v2, Rev. 1.3 (DEU)",
-          "language": "de",
-          "revision": "Rev. 1.3",
-          "version": "v2",
           "sourceUrl": "https://www.berner-torantriebe.de/media/eba_ga501_v2__rev._1.3__deu.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Berner Torantriebe",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On berner-torantriebe.de, in its media directory rather than the uploads tree - the same manufacturer serving documents from two places, which is why both are registered as targets. German edition only; the language is set to de and the title keeps the German original. Version v2 and revision 1.3 are separate segments of the file name and are recorded as separate fields. Not fetched - egress blocked."
+          "language": "de",
+          "version": "v2",
+          "revision": "Rev. 1.3",
+          "evidence": "On berner-torantriebe.de, in its media directory rather than the uploads tree - the same manufacturer serving documents from two places, which is why both are registered as targets. German edition only; the language is set to de and the title keeps the German original. Version v2 and revision 1.3 are separate segments of the file name and are recorded as separate fields. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -81,6 +92,7 @@
       "name": "Berner Box",
       "category": "remotes-accessories",
       "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -90,7 +102,9 @@
           "publisher": "Berner",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On berner-box.de, a separate Berner product domain. Recorded as manufacturer on the strength of the branding in the domain and the file being in its own downloads directory; the relationship between berner-box.de and berner-torantriebe.de was not confirmed, and that is worth checking on verification. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On berner-box.de, a separate Berner product domain. Recorded as manufacturer on the strength of the branding in the domain and the file being in its own downloads directory; the relationship between berner-box.de and berner-torantriebe.de was not confirmed, and that is worth checking on verification. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

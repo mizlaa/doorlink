@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "Comelit",
+    "slug": "comelit",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "2738W",
+      "name": "2738W",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Comelit Door-entry Phone art. 2738W Technical Manual",
+          "sourceUrl": "https://image.schrack.com/bedienungsanleitungen/a_sp2738----_en.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

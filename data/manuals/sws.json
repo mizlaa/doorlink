@@ -13,7 +13,9 @@
       "name": "SWS SeceuroGlide Manual Roller Garage Door",
       "category": "roller-shutter-motors",
       "region": "UK",
-      "aliases": ["SeceuroGlide"],
+      "aliases": [
+        "SeceuroGlide"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,6 +25,7 @@
           "publisher": "ManualsLib",
           "region": "UK",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing. \"Manual\" here is the product variant - the hand-operated door, as against the electric one recorded separately - not the document type. The awkward title is kept because renaming it would lose that distinction. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -44,6 +47,7 @@
       "name": "SWS SeceuroGlide Electric Roller Garage Door",
       "category": "roller-shutter-motors",
       "region": "UK",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -53,7 +57,9 @@
           "publisher": "ManualsLib",
           "region": "UK",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing, described as the electric roller garage door. The listing itself is titled only \"SeceuroGlide\"; the electric qualifier comes from the search result's description, which is why the model code says Electric while the title does not. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing, described as the electric roller garage door. The listing itself is titled only \"SeceuroGlide\"; the electric qualifier comes from the search result's description, which is why the model code says Electric while the title does not. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -62,6 +68,7 @@
       "name": "SWS SeceuroGlide Classic Roller Garage Door",
       "category": "roller-shutter-motors",
       "region": "UK",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -71,7 +78,9 @@
           "publisher": "ManualsLib",
           "region": "UK",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -80,6 +89,7 @@
       "name": "SWS SeceuroGlide LT Roller Garage Door",
       "category": "roller-shutter-motors",
       "region": "UK",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -89,6 +99,7 @@
           "publisher": "ManualsLib",
           "region": "UK",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -97,6 +108,37 @@
               "label": "device.report copy of the LT installation guide"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "SECEUROGLIDE",
+      "name": "SECEUROGLIDE",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "SeceuroGlide Manual Installation Instructions (TGDC 79601)",
+          "sourceUrl": "https://www.thegaragedoorcentre.co.uk/userfiles/downloads/seceuroglide_manual_installation_instructions_tgdc_79601.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "SeceuroGlide Operating and Maintenance Instructions",
+          "sourceUrl": "http://www.onlinegaragedoors.com/wp-content/uploads/2013/10/seceuroglide-operating-and-maintenance-instructions5.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
         }
       ]
     }

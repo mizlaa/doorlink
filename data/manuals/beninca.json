@@ -20,12 +20,13 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "IT24N Underground Swing Gate Operator Installation Manual",
-          "documentCode": "0.07.A.0064",
           "sourceUrl": "https://www.centsys.co.za/upload/0_07_A_0064%20Beninca%20Installation%20Manual-22072013-BM-web.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "Centurion Systems",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "0.07.A.0064",
           "evidence": "Hosted by Centurion Systems, a different manufacturer, which distributes Benincà in that market. Third-party for that reason. Document code and 22/07/2013 date read from the filename. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -54,7 +55,9 @@
           "publisher": "Manuals+",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -75,7 +78,9 @@
           "publisher": "Manuals+",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": []
         },
         {
           "kind": "PARTS_LIST",
@@ -85,7 +90,9 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing, 12 pages, covering the BOB range. Typed PARTS_LIST because the document's own title pairs operating instructions with a spare parts catalogue and the parts half is the part this library does not otherwise carry for Beninca - a technician looking for a spare needs it findable as one. Attached to the BOB 50M as the BOB model already here; it is a range document, not specific to it. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing, 12 pages, covering the BOB range. Typed PARTS_LIST because the document's own title pairs operating instructions with a spare parts catalogue and the parts half is the part this library does not otherwise carry for Beninca - a technician looking for a spare needs it findable as one. Attached to the BOB 50M as the BOB model already here; it is a range document, not specific to it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -94,6 +101,7 @@
       "name": "BULL Sliding Gate Operator",
       "category": "gate-motors",
       "region": "GLOBAL",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -103,7 +111,9 @@
           "publisher": "Manuals+",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing addressed by content hash rather than model, which is a weak identifier. Recorded as such. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing addressed by content hash rather than model, which is a weak identifier. Recorded as such. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -125,6 +135,7 @@
           "publisher": "device.report",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing. The BOB5024E is listed separately by the same aggregator and is kept as an alias rather than a model: the E suffix is undocumented here, and splitting on a suffix nobody has explained would create two records for what may be one product. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -156,7 +167,9 @@
           "publisher": "Intelligent Security",
           "region": "UK",
           "rights": "LINK_ONLY",
-          "evidence": "Reseller index page listing Bill 30 and Bill 50 among other Beninca guides, not a document page for either - no per-model URL surfaced. Recorded at index level so the BILL line is at least searchable, with the vagueness stated rather than hidden behind a model-specific-looking link. \"Prestige\" was searched for in the same query and returned nothing; no record is made for it. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Reseller index page listing Bill 30 and Bill 50 among other Beninca guides, not a document page for either - no per-model URL surfaced. Recorded at index level so the BILL line is at least searchable, with the vagueness stated rather than hidden behind a model-specific-looking link. \"Prestige\" was searched for in the same query and returned nothing; no record is made for it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

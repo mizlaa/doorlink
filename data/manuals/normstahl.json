@@ -1,0 +1,29 @@
+{
+  "manufacturer": {
+    "name": "Normstahl",
+    "slug": "normstahl",
+    "note": "Added from the client PDF link list. Links are unverified."
+  },
+  "models": [
+    {
+      "modelCode": "MAGIC 1000",
+      "name": "MAGIC 1000",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Normstahl Magic 1000 Garage Door Operator Manual",
+          "sourceUrl": "https://cms.haas-fertigbau.de/fileadmin/Kundendienst_HAB/Einstellanleitungen/Garagentor/Normstahl_Magic_1000.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}
