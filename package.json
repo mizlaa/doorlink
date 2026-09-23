@@ -2,7 +2,7 @@
   "name": "doorlink",
   "version": "0.1.0",
   "private": true,
-  "description": "DoorLink \u2014 everything for your door, in one place.",
+  "description": "DoorLink — everything for your door, in one place.",
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && next build",
