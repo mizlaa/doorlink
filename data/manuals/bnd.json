@@ -179,6 +179,27 @@
       ]
     },
     {
+      "modelCode": "DIAMOND PD (POWER DRIVE)",
+      "name": "B&D DIAMOND PD (POWER DRIVE)",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "B&D Diamond PD Power Drive Controll-A-Door Instructions",
+          "sourceUrl": "https://waverleygaragedoors.com.au/instruction-manuals/B&D%20CAD.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "waverleygaragedoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"B&D Diamond PD Power Drive Controll-A-Door Instructions\" (host: waverleygaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "Garage Doors and Openers",
       "name": "B&D Garage Doors and Openers",
       "category": "garage-door-openers",
@@ -195,6 +216,18 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"B&D Australia Owner Manuals Index\" (host: www.bnd.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "B&D Product Installation Manuals (Trade Resources) Index",
+          "sourceUrl": "https://www.bnd.com.au/trade-resources/installation-manuals/",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "bnd.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"B&D Product Installation Manuals (Trade Resources) Index\" (host: www.bnd.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -237,6 +270,69 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"B&D Roll-A-Shutter Installation Instructions (165010_01)\" (host: admin.bnd.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SDO-6v3 / SDO-7v3",
+      "name": "B&D SDO-6v3 / SDO-7v3",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "B&D Smart & Secure SDO-6v3 / SDO-7v3 Sectional Door Opener Installation Manual (161059_05)",
+          "sourceUrl": "https://admin.bnd.com.au/media/ntklvc51/161059_05-sdo-6v3-7v3-online-installation-manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "admin.bnd.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"B&D Smart & Secure SDO-6v3 / SDO-7v3 Sectional Door Opener Installation Manual (161059_05)\" (host: admin.bnd.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SMART PRO",
+      "name": "B&D SMART PRO",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "B&D Smart Pro Sectional Door Opener Installation Instructions",
+          "sourceUrl": "https://admin.bnd.com.au/media/wj4mjmps/bd-smart-pro-opener-installation-guide-manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "admin.bnd.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"B&D Smart Pro Sectional Door Opener Installation Instructions\" (host: admin.bnd.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SMART PRO / SMART & SECURE",
+      "name": "B&D SMART PRO / SMART & SECURE",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "B&D Smart Pro and Smart & Secure Sectional Door Opener Installation Manual (161083_01)",
+          "sourceUrl": "https://admin.bnd.com.au/media/dhjjoknd/161083_01-smartpro_smart_secure-online-installation-manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "admin.bnd.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"B&D Smart Pro and Smart & Secure Sectional Door Opener Installation Manual (161083_01)\" (host: admin.bnd.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

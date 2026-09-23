@@ -91,6 +91,30 @@
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Dominator New Zealand Owner's Manuals Index\" (host: www.dominator.co.nz). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Dominator Garage Door Opener Manuals Index (ManualsLib)",
+          "sourceUrl": "https://www.manualslib.com/brand/dominator/garage-door-opener.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "NZ",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dominator Garage Door Opener Manuals Index (ManualsLib)\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Dominator Manuals Index (Kinetic Access NZ)",
+          "sourceUrl": "https://www.kineticaccess.co.nz/resources/owners-manuals/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "kineticaccess.co.nz",
+          "region": "NZ",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dominator Manuals Index (Kinetic Access NZ)\" (host: www.kineticaccess.co.nz). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -156,6 +180,27 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "On dominator.co.nz, the manufacturer's own domain. Typed QUICK_START on the document's own title - it is the quick operation guide, not the full manual, and the full one is a recorded gap rather than an assumption. The file name is a bare asset ID carrying no model information, so the title comes entirely from the search result's rendering of the document. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TEMPO / SYNCRO",
+      "name": "Dominator TEMPO / SYNCRO",
+      "category": "garage-door-openers",
+      "region": "NZ",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Dominator Tempo and Syncro Instruction Manual",
+          "sourceUrl": "https://hereforgear.co/wp-content/uploads/2021/02/Automatic-Technology-Dominator-Tempo-Garage-Door-Opener-User-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "hereforgear.co",
+          "region": "NZ",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dominator Tempo and Syncro Instruction Manual\" (host: hereforgear.co). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

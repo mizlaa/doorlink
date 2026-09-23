@@ -252,6 +252,39 @@
       ]
     },
     {
+      "modelCode": "SD04",
+      "name": "Centurion Systems SD04",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Centurion Systems SD04 Garage Door Operator Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1483917/Centurion-Sd04.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Centurion Systems SD04 Garage Door Operator Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Centurion Systems SD04 Garage Door Operator Installation Manual (CENTSYS)",
+          "sourceUrl": "https://www.centsys.co.za/pdf/SDO4/CENTURION%20SYSTEMS%20SD04%20Installation%20Manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "centsys.co.za",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Centurion Systems SD04 Garage Door Operator Installation Manual (CENTSYS)\" (host: www.centsys.co.za). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "VECTOR",
       "name": "Centurion Systems VECTOR",
       "category": "gate-motors",

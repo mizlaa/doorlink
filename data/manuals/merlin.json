@@ -38,6 +38,39 @@
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Merlin Product Support Centre Documents and Downloads Index\" (host: www.gomerlin.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Merlin Product Support Centre Index",
+          "sourceUrl": "https://www.gomerlin.com.au/support-page/",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "gomerlin.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Merlin Product Support Centre Index\" (host: www.gomerlin.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MR650EVO (SILENTDRIVE)",
+      "name": "Merlin MR650EVO (SILENTDRIVE)",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Merlin SilentDrive MR650EVO Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Merlin-Silentdrive-Mr650evo-3795835.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Merlin SilentDrive MR650EVO Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -62,6 +95,69 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Reseller copy. The SilentDrive Essential product name comes from the search result's rendering of the document; Dominator NSW lists the same manual as 114A5183B-MR655MYQ.pdf, so 114A5183B is Chamberlain's number for it and is kept as an alias. An MR555MYQ manual surfaced during earlier Danmar research and was deliberately not attributed there - it belongs to this Merlin MR family, but no MR555 model is created here because that document was not re-confirmed in this search. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MR850EVO / MR650EVO",
+      "name": "Merlin MR850EVO / MR650EVO",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Merlin MR850EVO / MR650EVO Rolling Garage Door Opener Installation Manual",
+          "sourceUrl": "https://www.egaragesystems.com.au/pdf/manuals/merlin/rolling_door_opener/MR850EVO_installation_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "egaragesystems.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Merlin MR850EVO / MR650EVO Rolling Garage Door Opener Installation Manual\" (host: www.egaragesystems.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MR855EVO (SILENT DRIVE PRO)",
+      "name": "Merlin MR855EVO (SILENT DRIVE PRO)",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Merlin MR855EVO Silent Drive Pro Roller Door Opener Instruction Manual",
+          "sourceUrl": "https://device.report/manual/11867287",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "device.report",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Merlin MR855EVO Silent Drive Pro Roller Door Opener Instruction Manual\" (host: device.report). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MR855MYQ",
+      "name": "Merlin MR855MYQ",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Merlin MR855MYQ Roller Door Opener Manual",
+          "sourceUrl": "https://merlingaragedooropener.com.au/assets/files/shp/mr855myq-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "merlingaragedooropener.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Merlin MR855MYQ Roller Door Opener Manual\" (host: merlingaragedooropener.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
