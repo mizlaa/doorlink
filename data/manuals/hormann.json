@@ -785,6 +785,42 @@
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Hormann SupraMatic 3 Instructions for Fitting, Operating and Maintenance (TR10A108-E)\" (host: asset-center.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hörmann SupraMatic III Instructions (The Garage Door Centre copy)",
+          "sourceUrl": "https://www.thegaragedoorcentre.co.uk/userfiles/downloads/hormann_supramatic_series_3_tgdc_55225.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "thegaragedoorcentre.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hörmann SupraMatic III Instructions (The Garage Door Centre copy)\" (host: www.thegaragedoorcentre.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Hörmann SupraMatic III Instructions for Fitting, Operating and Maintenance",
+          "sourceUrl": "https://manuals.plus/m/e7acdaf2a56ee4017ef762a43d3e462bbd0896a64a563507b10036b3ae658eeb",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hörmann SupraMatic III Instructions for Fitting, Operating and Maintenance\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Hörmann SupraMatic Series 3 Garage Door Operator Manual",
+          "sourceUrl": "https://www.scribd.com/document/884939206/Hormann-Supramatic-Series-3",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "scribd.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hörmann SupraMatic Series 3 Garage Door Operator Manual\" (host: www.scribd.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -838,6 +874,27 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Hormann Supramatic A (A55) Garage Door Operator Manual\" (host: mgdor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SUPRAMATIC E",
+      "name": "Hörmann SUPRAMATIC E",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Hörmann SupraMatic E Installation, Operating and Maintenance Instructions",
+          "sourceUrl": "https://manualzz.com/doc/31552059/hormann-supramatic-e-installation-instructions",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualzz.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hörmann SupraMatic E Installation, Operating and Maintenance Instructions\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

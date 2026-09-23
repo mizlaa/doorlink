@@ -46,6 +46,27 @@
           "altSources": []
         }
       ]
+    },
+    {
+      "modelCode": "MOTSDC",
+      "name": "Gates Plus MOTSDC",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Gates Plus MOTSDC Swing Motor Installation Manual (N21430)",
+          "sourceUrl": "https://www.gatesplus.com.au/pdf/MOTSDC_INSTALLATION_MANUAL.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "gatesplus.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Gates Plus MOTSDC Swing Motor Installation Manual (N21430)\" (host: www.gatesplus.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
     }
   ]
 }

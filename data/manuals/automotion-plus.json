@@ -1,0 +1,53 @@
+{
+  "manufacturer": {
+    "name": "Automotion Plus",
+    "slug": "automotion-plus",
+    "country": "AU",
+    "website": "https://www.automotionplus.com.au/",
+    "note": "Australian supplier of gate and door automation kits (APC range), trading since 2004."
+  },
+  "models": [
+    {
+      "modelCode": "APC-SG802-AC / SG1602-AC / SG3002-AC",
+      "name": "Automotion Plus APC-SG802-AC / SG1602-AC / SG3002-AC",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Automotion Plus APC Sliding Gate Opener Kit Installation Manual",
+          "sourceUrl": "https://www.automotionplus.com.au/Installation-Manuals/02-%20Sliding%20Gate%20Manuals/03-%20APC-SG802-AC%20&%20SG1602-AC%20&%20SG3002-AC.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "automotionplus.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Automotion Plus APC Sliding Gate Opener Kit Installation Manual\" (host: www.automotionplus.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Motors",
+      "name": "Automotion Plus Gate Motors",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Automotion Plus Installation Manuals Index",
+          "sourceUrl": "https://www.automotionplus.com.au/installation-manuals",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "automotionplus.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Automotion Plus Installation Manuals Index\" (host: www.automotionplus.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

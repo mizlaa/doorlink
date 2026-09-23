@@ -59,6 +59,42 @@
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Chamberlain B970 Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Chamberlain B970 Belt Drive Owner's Manual (Home Depot copy)",
+          "sourceUrl": "https://images.thdstatic.com/catalog/pdfImages/ac/ac571cf2-266e-416c-8a85-2b591f3a431c.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "images.thdstatic.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain B970 Belt Drive Owner's Manual (Home Depot copy)\" (host: images.thdstatic.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Chamberlain B970 Belt Drive Smart Garage Door Opener Owner's Manual",
+          "sourceUrl": "https://manuals.plus/m/917dc799e81999e231e85e3ab9e350f51460c3aee9eb6a8056a1e6e0aa331c30",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain B970 Belt Drive Smart Garage Door Opener Owner's Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Chamberlain B970 User Manual (English, 72 pages)",
+          "sourceUrl": "https://www.manua.ls/chamberlain/b970/manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manua.ls",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain B970 User Manual (English, 72 pages)\" (host: www.manua.ls). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },

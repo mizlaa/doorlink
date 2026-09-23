@@ -1,0 +1,53 @@
+{
+  "manufacturer": {
+    "name": "Garage Ace",
+    "slug": "garage-ace",
+    "country": "NZ",
+    "website": "https://www.garageace.co.nz/",
+    "note": "New Zealand garage door opener brand (S-series openers). Website established from the host of its own manual PDFs."
+  },
+  "models": [
+    {
+      "modelCode": "S3 / S4",
+      "name": "Garage Ace S3 / S4",
+      "category": "garage-door-openers",
+      "region": "NZ",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Garage Ace S3 / S4 Garage Door Opener Owner's Manual",
+          "sourceUrl": "https://garageace.co.nz/wp-content/uploads/2020/07/S3-S4-Manual-v2.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "garageace.co.nz",
+          "region": "NZ",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Garage Ace S3 / S4 Garage Door Opener Owner's Manual\" (host: garageace.co.nz). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "S6",
+      "name": "Garage Ace S6",
+      "category": "garage-door-openers",
+      "region": "NZ",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Garage Ace S6 Sectional / Tilt Garage Door Opener User Manual",
+          "sourceUrl": "https://www.garageace.co.nz/wp-content/uploads/2017/11/s6-manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "garageace.co.nz",
+          "region": "NZ",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Garage Ace S6 Sectional / Tilt Garage Door Opener User Manual\" (host: www.garageace.co.nz). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

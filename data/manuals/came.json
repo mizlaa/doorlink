@@ -257,6 +257,84 @@
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"BX-243 Automation Systems for Sliding Gates Installation Manual (FA00669-EN)\" (host: www.came.no). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME BX-243 Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/939114/Came-Bx-243.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME BX-243 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME BX-243 Installation Manual (Manualzz)",
+          "sourceUrl": "https://manualzz.com/doc/9139610/came-bx-243-installation-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualzz.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME BX-243 Installation Manual (Manualzz)\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME BX-243 Sliding Gate Automation Installation Manual (FA00669-EN)",
+          "sourceUrl": "https://ismartgate.com/manuals/CAME_BX243_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ismartgate.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME BX-243 Sliding Gate Automation Installation Manual (FA00669-EN)\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BX-246",
+      "name": "CAME BX-246",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME BX-246 Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1106021/Came-Bx-246.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME BX-246 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BX-324",
+      "name": "CAME BX-324",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME BX-324 Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1048729/Came-Bx-324.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME BX-324 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -382,6 +460,48 @@
           "language": "en",
           "documentCode": "FA00127-EN",
           "evidence": "Aggregator listing for the BX-78 entry of the shared BX-74/BX-78 manual. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BX-P",
+      "name": "CAME BX-P",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME BX-P Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1736302/Came-Bx-P.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME BX-P Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BXV",
+      "name": "CAME BXV",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME BXV Sliding Gate Installation Manual (EN)",
+          "sourceUrl": "https://www.scribd.com/document/691625338/CAME-BXV-MANUAL-EN",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "scribd.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME BXV Sliding Gate Installation Manual (EN)\" (host: www.scribd.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

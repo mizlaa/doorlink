@@ -9,6 +9,27 @@
   },
   "models": [
     {
+      "modelCode": "4024 EXCEL",
+      "name": "Dominator 4024 EXCEL",
+      "category": "garage-door-openers",
+      "region": "NZ",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Dominator 4024 Excel Rolling Door Opener Instruction Manual",
+          "sourceUrl": "https://manuals.plus/dominator/4024-excel-rolling-door-opener-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "NZ",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dominator 4024 Excel Rolling Door Opener Instruction Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "ATA / Dominator",
       "name": "Dominator ATA / Dominator",
       "category": "garage-door-openers",
@@ -25,6 +46,27 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"ATA / Dominator Owner's Manuals Index\" (host: www.dominatornsw.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DSO-1",
+      "name": "Dominator DSO-1",
+      "category": "garage-door-openers",
+      "region": "NZ",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Dominator Select DSO-1 Garage Door Opener Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Dominator-Select-Dso-1-12038466.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "NZ",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dominator Select DSO-1 Garage Door Opener Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -119,6 +161,27 @@
       ]
     },
     {
+      "modelCode": "GDO-7v2",
+      "name": "Dominator GDO-7v2",
+      "category": "garage-door-openers",
+      "region": "NZ",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Dominator Garage Door Opener GDO-7v2 User Manual v1.11",
+          "sourceUrl": "https://www.scribd.com/document/328469440/Dominator-Garage-Door-Opener-GDO-7v2-User-Manual-v1-11",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "scribd.com",
+          "region": "NZ",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dominator Garage Door Opener GDO-7v2 User Manual v1.11\" (host: www.scribd.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "Industrial Door Openers",
       "name": "Dominator Industrial Door Openers",
       "category": "industrial-high-speed-doors",
@@ -135,6 +198,27 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Dominator NSW Industrial Door Opener Manuals Index\" (host: www.dominatornsw.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Rolling Door Opener",
+      "name": "Dominator Rolling Door Opener",
+      "category": "garage-door-openers",
+      "region": "NZ",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Dominator Rolling Door Opener Instructions",
+          "sourceUrl": "https://www.dominator.co.nz/asset/5157.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "dominator.co.nz",
+          "region": "NZ",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dominator Rolling Door Opener Instructions\" (host: www.dominator.co.nz). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

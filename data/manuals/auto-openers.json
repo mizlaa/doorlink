@@ -1,0 +1,32 @@
+{
+  "manufacturer": {
+    "name": "Auto Openers",
+    "slug": "auto-openers",
+    "country": "AU",
+    "website": "https://autoopeners.com.au/",
+    "note": "Australian family-owned manufacturer of garage door automation. Website established from the host of its own manual PDFs."
+  },
+  "models": [
+    {
+      "modelCode": "AO6v3",
+      "name": "Auto Openers AO6v3",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Auto Openers AO6v3 Roller Door Opener Manual",
+          "sourceUrl": "http://autoopeners.com.au/wp-content/uploads/2018/05/AO6v3-Roller-Opener-Manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "autoopeners.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Auto Openers AO6v3 Roller Door Opener Manual\" (host: autoopeners.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

@@ -9,6 +9,27 @@
   },
   "models": [
     {
+      "modelCode": "AXIOM iS SERIES",
+      "name": "Elsema AXIOM iS SERIES",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Elsema Axiom Sliding Gate Motor Kits Setup and Technical Information",
+          "sourceUrl": "https://elsema.com/wp-content/uploads/is-manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "elsema.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Elsema Axiom Sliding Gate Motor Kits Setup and Technical Information\" (host: elsema.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "AXIOM iS600 / iS900",
       "name": "Elsema AXIOM iS600 / iS900",
       "category": "gate-motors",
@@ -132,6 +153,69 @@
       ]
     },
     {
+      "modelCode": "iS600 / iS900",
+      "name": "Elsema iS600 / iS900",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Elsema iS600 / iS900 Axiom Series Sliding Gate Opener User Manual",
+          "sourceUrl": "https://elsema.com/wp-content/uploads/is600installation.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "elsema.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Elsema iS600 / iS900 Axiom Series Sliding Gate Opener User Manual\" (host: elsema.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "iS900B",
+      "name": "Elsema iS900B",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Elsema iS900B Sliding Gate Opener Manual",
+          "sourceUrl": "https://d347awuzx0kdse.cloudfront.net/netsecurity/product-download/is900b_1.pdf?v=2c124543682ff300744eb72cbc40b5bcb086ed22",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "d347awuzx0kdse.cloudfront.net",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Elsema iS900B Sliding Gate Opener Manual\" (host: d347awuzx0kdse.cloudfront.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "iS900Solar24",
+      "name": "Elsema iS900Solar24",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Elsema Axiom Sliding Gate Kit iS900Solar24 User Manual",
+          "sourceUrl": "https://elsema.com/wp-content/uploads/is900solar24installation.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "elsema.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Elsema Axiom Sliding Gate Kit iS900Solar24 User Manual\" (host: elsema.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "KEY-301",
       "name": "KEY-301 27.145MHz Transmitter",
       "category": "remotes-accessories",
@@ -205,7 +289,7 @@
     {
       "modelCode": "MC BOARD",
       "name": "Elsema MC BOARD",
-      "category": "remotes-accessories",
+      "category": "gate-motors",
       "region": "AU",
       "aliases": [],
       "documents": [

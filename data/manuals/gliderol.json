@@ -71,6 +71,18 @@
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Gliderol Glidermatic GRD Roller Door Automatic Operator Installation Instructions\" (host: www.thegaragedoorcentre.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Gliderol Glidermatic GRD Installation Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/3775995/Gliderol-Glidermatic-Grd.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Gliderol Glidermatic GRD Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },

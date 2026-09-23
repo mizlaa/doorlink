@@ -191,6 +191,54 @@
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Marantec Comfort 260, 270, 280 Operator Systems for Garage Doors Operating Instructions (100316)\" (host: www.marantec.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Marantec Comfort 260, 270, 280 Garage Door Operator Systems Operating Instructions",
+          "sourceUrl": "https://manuals.plus/m/74ad4c1922c2bb8bbd78eebd7157f96bf9fe5b681bf3874cdf7192ce949f48e2",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Marantec Comfort 260, 270, 280 Garage Door Operator Systems Operating Instructions\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Marantec Comfort 260, 270, 280 Operating Instructions",
+          "sourceUrl": "https://www.scribd.com/document/736909209/Marantec-Comfort-260-270-280-Operating-Instructions",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "scribd.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Marantec Comfort 260, 270, 280 Operating Instructions\" (host: www.scribd.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Marantec Operating Instructions 100316 EN (04.2022)",
+          "sourceUrl": "https://www.marantec.com/files/eba_download.php?file=100316.pdf&vrsn=H",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "marantec.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Marantec Operating Instructions 100316 EN (04.2022)\" (host: www.marantec.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Marantec Operating Instructions 100316 EN (06.2023)",
+          "sourceUrl": "https://www.marantec.com/files/eba_sap/I/100316.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "marantec.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Marantec Operating Instructions 100316 EN (06.2023)\" (host: www.marantec.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },

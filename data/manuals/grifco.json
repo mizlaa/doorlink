@@ -1,0 +1,190 @@
+{
+  "manufacturer": {
+    "name": "Grifco",
+    "slug": "grifco",
+    "country": "AU",
+    "note": "Australian manufacturer of residential and commercial garage door operators (eDrive, Maestro, SDO and LR-Drive ranges)."
+  },
+  "models": [
+    {
+      "modelCode": "eDrive",
+      "name": "Grifco eDrive",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Grifco eDrive Commercial Door Opener Installation and Users Manual",
+          "sourceUrl": "https://affordabledoorsandgates.com/pdf/grifco/edrive_installation_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "affordabledoorsandgates.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Grifco eDrive Commercial Door Opener Installation and Users Manual\" (host: affordabledoorsandgates.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "eDrive +2.0",
+      "name": "Grifco eDrive +2.0",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Grifco eDrive +2.0 Garage Door Opener Installation and User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1530011/Grifco-Edrive-Plus2-0.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Grifco eDrive +2.0 Garage Door Opener Installation and User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Garage Door Openers",
+      "name": "Grifco Garage Door Openers",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Grifco Manuals Index (ManualsLib)",
+          "sourceUrl": "https://www.manualslib.com/brand/grifco/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Grifco Manuals Index (ManualsLib)\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GLD-SDO",
+      "name": "Grifco GLD-SDO",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Grifco GLD-SDO Sectional Door Operator Instruction Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1299687/Grifco-Gld-Sdo.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Grifco GLD-SDO Sectional Door Operator Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GSD-SDO",
+      "name": "Grifco GSD-SDO",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Grifco GSD-SDO Commercial Sectional Door Operator Instruction Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1342291/Grifco-Gsd-Sdo.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Grifco GSD-SDO Commercial Sectional Door Operator Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LR-Drive",
+      "name": "Grifco LR-Drive",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Grifco LR-Drive Light Commercial Roller Door Operator Instruction Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/4104180/Grifco-Lr-Drive.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Grifco LR-Drive Light Commercial Roller Door Operator Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "M123ED2",
+      "name": "Grifco M123ED2",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Grifco eDrive 2.0 M123ED2 Garage Door Opener Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1507777/Grifco-Edrive-2-0-M123ed2.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Grifco eDrive 2.0 M123ED2 Garage Door Opener Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Maestro",
+      "name": "Grifco Maestro",
+      "category": "industrial-high-speed-doors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Grifco Maestro Industrial Door Operator Installation Manual",
+          "sourceUrl": "https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/maestro.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "steel-lineautomation.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Grifco Maestro Industrial Door Operator Installation Manual\" (host: www.steel-lineautomation.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Grifco Maestro Users Manual - Standard Build (Commercial)",
+          "sourceUrl": "https://www.waverleygaragedoors.com.au/instruction-manuals/Griffco%20Meastro%20Motor%20Manual%20-%20Commercial.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "waverleygaragedoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Grifco Maestro Users Manual - Standard Build (Commercial)\" (host: www.waverleygaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

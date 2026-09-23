@@ -163,6 +163,51 @@
       ]
     },
     {
+      "modelCode": "MS105MYQ",
+      "name": "Merlin MS105MYQ",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Chamberlain Merlin MS105MYQ Installation and Operating Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2346508/Chamberlain-Merlin-Ms105myq.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain Merlin MS105MYQ Installation and Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Merlin Commander Elite MS105MYQ Installation and Operating Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2349556/Merlin-Commander-Elite-Ms105myq.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Merlin Commander Elite MS105MYQ Installation and Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Merlin MS105MYQ Installation and Operating Instructions (Owners Copy)",
+          "sourceUrl": "https://motepro.com.au/Manuals/Merlin/Sectional/MS105MYQ.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "motepro.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Merlin MS105MYQ Installation and Operating Instructions (Owners Copy)\" (host: motepro.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "MT100EVO",
       "name": "Tiltmaster MT100EVO Sectional and Tilt Garage Door Opener",
       "category": "garage-door-openers",

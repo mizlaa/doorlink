@@ -183,9 +183,14 @@ function main() {
       const doc = own.model.documents[own.index]
       const kind = kindFor(row.title)
       const origin = originFor(host, entry.data.manufacturer.website)
-      if (doc.kind !== kind || doc.origin !== origin) {
+      // Region too: a manufacturer's country is often filled in after its
+      // first records were written, and on an aggregator host that
+      // country is the only evidence of region there is.
+      const region = regionFor(host, entry.data.manufacturer.country)
+      if (doc.kind !== kind || doc.origin !== origin || doc.region !== region) {
         doc.kind = kind as never
         doc.origin = origin as never
+        doc.region = region as never
         touched.add(own.slug)
         refreshed++
       }
@@ -309,6 +314,7 @@ function main() {
   // manufacturer mostly makes, and neither is known while rows are
   // still arriving.
   let recategorised = 0
+  let regionFilled = 0
   for (const [slug, entry] of bySlug) {
     const dominant = dominantCategory(entry.data.models)
     for (const model of entry.data.models) {
@@ -327,6 +333,25 @@ function main() {
         model.category = settled
         touched.add(slug)
         recategorised++
+      }
+      // A model created before its manufacturer's country was known took
+      // UNKNOWN from its first document. Only that gap is filled — a
+      // region someone set is left alone — using the commonest known
+      // region among its documents, ties broken alphabetically so a
+      // re-run cannot change its mind.
+      if (ownedOutright && model.region === 'UNKNOWN') {
+        const counts = new Map<string, number>()
+        for (const d of model.documents) {
+          if (d.region !== 'UNKNOWN') counts.set(d.region, (counts.get(d.region) ?? 0) + 1)
+        }
+        const best = [...counts.entries()].sort(
+          (a, b) => b[1] - a[1] || a[0].localeCompare(b[0]),
+        )[0]
+        if (best) {
+          model.region = best[0] as SeedModel['region']
+          touched.add(slug)
+          regionFilled++
+        }
       }
     }
   }
@@ -348,6 +373,9 @@ function main() {
   }
   if (recategorised > 0) {
     console.log(`Recategorised ${recategorised} model(s).`)
+  }
+  if (regionFilled > 0) {
+    console.log(`Filled region on ${regionFilled} model(s) that had none.`)
   }
   if (refreshed > 0) {
     console.log(`Refreshed derived fields on ${refreshed} previously ingested document(s).`)

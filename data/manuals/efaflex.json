@@ -9,6 +9,48 @@
   },
   "models": [
     {
+      "modelCode": "EFA-SRT-EL",
+      "name": "EFAFLEX EFA-SRT-EL",
+      "category": "industrial-high-speed-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "EFAFLEX EFA-SRT-EL High-Speed Roll-Up Door Operating Manual (234-SRT-EL-05-en)",
+          "sourceUrl": "https://www.scribd.com/document/675416848/Manual-operare-234-SRT-EL-05-en",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "scribd.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"EFAFLEX EFA-SRT-EL High-Speed Roll-Up Door Operating Manual (234-SRT-EL-05-en)\" (host: www.scribd.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "EFA-SST-L",
+      "name": "EFAFLEX EFA-SST-L",
+      "category": "industrial-high-speed-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "EFAFLEX EFA-SST-L Round/Oval Premium High-Speed Door Operating Manual (260)",
+          "sourceUrl": "https://www.scribd.com/document/675416861/Manual-operare-260-EFA-SST-L-rund-oval-Premium-uk-09-1",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "scribd.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"EFAFLEX EFA-SST-L Round/Oval Premium High-Speed Door Operating Manual (260)\" (host: www.scribd.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "High-Speed Doors",
       "name": "EFAFLEX High-Speed Doors",
       "category": "industrial-high-speed-doors",

@@ -12,7 +12,7 @@
       "modelCode": "ESV-24MS EasySlider",
       "name": "Automatic Technology (ATA) ESV-24MS EasySlider",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "AU",
       "aliases": [],
       "documents": [
         {
@@ -21,7 +21,7 @@
           "sourceUrl": "https://ismartgate.com/manuals/Automatic_Technology_ATA_ESV_24MS_manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "ismartgate.com",
-          "region": "UNKNOWN",
+          "region": "AU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"ATA EasySlider ESV-24MS Sliding Gate Opener Manual\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -33,7 +33,7 @@
       "modelCode": "Garage Door Openers",
       "name": "Automatic Technology (ATA) Garage Door Openers",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "AU",
       "aliases": [],
       "documents": [
         {
@@ -42,7 +42,7 @@
           "sourceUrl": "https://www.automatictechnology.com/au/resources/installation-manuals",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "automatictechnology.com",
-          "region": "UNKNOWN",
+          "region": "AU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"ATA Australia Installation Manuals Index\" (host: www.automatictechnology.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -84,7 +84,7 @@
       "modelCode": "GDO-2 SECURALIFT",
       "name": "Automatic Technology (ATA) GDO-2 SECURALIFT",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "AU",
       "aliases": [],
       "documents": [
         {
@@ -93,7 +93,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/849984/Automatic-Technology-Gdo-2-Securalift.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "AU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"ATA GDO-2 SecuraLift Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -392,6 +392,48 @@
       ]
     },
     {
+      "modelCode": "GDO-9",
+      "name": "Automatic Technology GDO-9",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Automatic Technology GDO-9 Installation Manual (Internet Archive)",
+          "sourceUrl": "https://archive.org/details/manualzilla-id-7393018",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "archive.org",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Automatic Technology GDO-9 Installation Manual (Internet Archive)\" (host: archive.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GDO-9 Dynamo Gen 2",
+      "name": "Automatic Technology GDO-9 Dynamo Gen 2",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Automatic Technology GDO-9 Dynamo Gen 2 Owner's Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1058806/Automatic-Technology-Gdo-9-Dynamo-Gen-2.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Automatic Technology GDO-9 Dynamo Gen 2 Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "GDO-9v1 SECURALIFT",
       "name": "Automatic Technology GDO-9v1 SECURALIFT",
       "category": "garage-door-openers",
@@ -413,6 +455,39 @@
       ]
     },
     {
+      "modelCode": "GDO-9v2 Enduro Gen 2",
+      "name": "Automatic Technology GDO-9v2 Enduro Gen 2",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Automatic Technology GDO-9v2 Enduro Gen 2 Installation Manual (Internet Archive)",
+          "sourceUrl": "https://archive.org/details/manualzilla-id-7394110",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "archive.org",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Automatic Technology GDO-9v2 Enduro Gen 2 Installation Manual (Internet Archive)\" (host: archive.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "GDO-9v2 Enduro Installation Instructions (Owners Copy)",
+          "sourceUrl": "https://ismartgate.com/manuals/Automatic_Technology_GDO-9v2_Gen2_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ismartgate.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"GDO-9v2 Enduro Installation Instructions (Owners Copy)\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "GDO-9v2 SECURALIFT",
       "name": "Automatic Technology GDO-9v2 SECURALIFT",
       "category": "garage-door-openers",
@@ -429,6 +504,18 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"ATA GDO-9v2 SecuraLift Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "GDO-9v2 SecuraLift Installation Instructions (Owners Copy)",
+          "sourceUrl": "https://irp-cdn.multiscreensite.com/86dd1279/files/uploaded/ATAGDO9v3TrioCodeSecuraliftMotor.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "irp-cdn.multiscreensite.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"GDO-9v2 SecuraLift Installation Instructions (Owners Copy)\" (host: irp-cdn.multiscreensite.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

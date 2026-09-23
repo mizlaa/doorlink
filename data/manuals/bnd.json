@@ -133,6 +133,18 @@
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"B&D Controll-A-Door P Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "B&D Controll-A-Door P Instruction Manual (N1854)",
+          "sourceUrl": "https://waverleygaragedoors.com.au/instruction-manuals/B&D%20CAD-P.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "waverleygaragedoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"B&D Controll-A-Door P Instruction Manual (N1854)\" (host: waverleygaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -275,6 +287,27 @@
       ]
     },
     {
+      "modelCode": "SDO-6",
+      "name": "B&D SDO-6",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "B&D Smart & Secure SDO-6 Sectional Door Opener Installation Instructions",
+          "sourceUrl": "https://wholesalegaragedoors.com.au/wp-content/uploads/2022/07/BnD-Doors-Australia-Secure-SDO-6-Installation-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "wholesalegaragedoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"B&D Smart & Secure SDO-6 Sectional Door Opener Installation Instructions\" (host: wholesalegaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "SDO-6v3 / SDO-7v3",
       "name": "B&D SDO-6v3 / SDO-7v3",
       "category": "garage-door-openers",
@@ -312,6 +345,18 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"B&D Smart Pro Sectional Door Opener Installation Instructions\" (host: admin.bnd.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "B&D Smart Pro Sectional Door Opener Installation Instructions",
+          "sourceUrl": "https://www.manualslib.com/manual/2185899/BAndd-Smart-Pro.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"B&D Smart Pro Sectional Door Opener Installation Instructions\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

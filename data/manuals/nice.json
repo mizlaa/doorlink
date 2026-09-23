@@ -30,6 +30,48 @@
       ]
     },
     {
+      "modelCode": "DRIVE 500",
+      "name": "Nice DRIVE 500",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "E.T. Systems Drive 500 User Instructions",
+          "sourceUrl": "https://www.manualslib.com/manual/1458682/E-T-Systems-Drive-500.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"E.T. Systems Drive 500 User Instructions\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DRIVE 500 / DRIVE 600",
+      "name": "Nice DRIVE 500 / DRIVE 600",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "ET Drive 500 / 600 500kg Slide Gate Operators Installer Instructions (2016.001.002)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/drive_500.600_installer_2016.001.002.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "niceforyou.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ET Drive 500 / 600 500kg Slide Gate Operators Installer Instructions (2016.001.002)\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "Electromechanical Road Barrier",
       "name": "Nice Electromechanical Road Barrier",
       "category": "gate-motors",
@@ -213,6 +255,48 @@
       ]
     },
     {
+      "modelCode": "ET-500 12V",
+      "name": "Nice ET-500 12V",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "E.T. Systems ET-500 12V User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/835407/E-T-Systems-Et-500-12v.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"E.T. Systems ET-500 12V User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ET-500 PLUS",
+      "name": "Nice ET-500 PLUS",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "ET-500-PLUS Installers' Manual (2007)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/et500plus_install_manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "niceforyou.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ET-500-PLUS Installers' Manual (2007)\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "Gate and Barrier Automation",
       "name": "Nice Gate and Barrier Automation",
       "category": "gate-motors",
@@ -314,6 +398,27 @@
           "language": "en",
           "documentCode": "idv0420a00en",
           "evidence": "On niceforyou.com. The model code here is the document code, because neither the file name nor the search result named the product - only that it is for sliding gates. Recorded that way rather than guessed into an existing Robus or Run record, since attaching it to the wrong drive is worse than an unlovely model code. Whoever verifies this link should retitle the record from the document's cover. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "IDV0458A00EN",
+      "name": "Nice IDV0458A00EN",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Nice Instructions and Warnings for Installation and Use, For Sliding Gates (IDV0458A00EN)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/idv0458a00en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "niceforyou.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Instructions and Warnings for Installation and Use, For Sliding Gates (IDV0458A00EN)\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -719,6 +824,27 @@
       ]
     },
     {
+      "modelCode": "RB400 / RB250HS",
+      "name": "Nice RB400 / RB250HS",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Nice RB400 / RB250HS For Sliding Gates Instruction Manual",
+          "sourceUrl": "https://www.savvasrolex.com/wp-content/uploads/2019/02/Robus-Instruction-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "savvasrolex.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice RB400 / RB250HS For Sliding Gates Instruction Manual\" (host: www.savvasrolex.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "RB500HS",
       "name": "Nice Robus RB500HS / RB600 / RB1000 Sliding Gate Operator",
       "category": "gate-motors",
@@ -852,6 +978,69 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Nice Robus and RobusKit Manual\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ROBUS 400",
+      "name": "Nice ROBUS 400",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Nice Robus 400 Instruction Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2670668/Nice-Robus-400.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Robus 400 Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ROBUS 400 / RB600",
+      "name": "Nice ROBUS 400 / RB600",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Nice Robus 400 / RB600 Installation Manual",
+          "sourceUrl": "https://www.scribd.com/document/386257645/Manual-Instalare-Nice-Robus-400-RB600",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "scribd.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Robus 400 / RB600 Installation Manual\" (host: www.scribd.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ROBUS RB400",
+      "name": "Nice ROBUS RB400",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Nice Robus RB400 Instructions and Warnings for Installation and Use (212 pages)",
+          "sourceUrl": "https://www.manualslib.com/manual/1104971/Nice-Robus-Rb400.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Robus RB400 Instructions and Warnings for Installation and Use (212 pages)\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

@@ -185,6 +185,75 @@
               "label": "Global Access (AU) copy"
             }
           ]
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "FAAC 740 230V Sliding Gate Operator Owner's Manual",
+          "sourceUrl": "https://manualzz.com/doc/87512472/faac-740-230v-sliding-gate-operator-owner-s-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualzz.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 740 230V Sliding Gate Operator Owner's Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 740 Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1281646/Faac-740.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 740 Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "740 / 741",
+      "name": "FAAC 740 / 741",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 740 - 741 Sliding Gate Operator Documentation (ArchiExpo)",
+          "sourceUrl": "https://pdf.archiexpo.com/pdf/faac/740-741-sliding-gate-operator/59812-208679.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "pdf.archiexpo.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 740 - 741 Sliding Gate Operator Documentation (ArchiExpo)\" (host: pdf.archiexpo.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 740 / 741 Gate Motor Manual (Global Access)",
+          "sourceUrl": "https://www.global-access.com.au/wp-content/uploads/2025/04/FAAC-740-741-Gate-Motor-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "global-access.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 740 / 741 Gate Motor Manual (Global Access)\" (host: www.global-access.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 740 / 741 Sliding Gate Motor Manual",
+          "sourceUrl": "https://www.scribd.com/document/574783176/FAAC-740-741-Gate-Motor-Manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "scribd.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 740 / 741 Sliding Gate Motor Manual\" (host: www.scribd.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -573,6 +642,27 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"FAAC E721 Control Board Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Motors",
+      "name": "FAAC Gate Motors",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC Manuals Index (FAAC Gate Openers)",
+          "sourceUrl": "https://www.faacgateopeners.com/FAAC-MANUALS_c_92.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "faacgateopeners.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC Manuals Index (FAAC Gate Openers)\" (host: www.faacgateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

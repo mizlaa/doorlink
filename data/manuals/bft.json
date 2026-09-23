@@ -182,6 +182,114 @@
       ]
     },
     {
+      "modelCode": "DEIMOS BT A400",
+      "name": "BFT DEIMOS BT A400",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Deimos BT A 400 Installation and User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1758735/Bft-Deimos-Bt-A-400.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Deimos BT A 400 Installation and User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Deimos BT A 400 Installation and User Manual (1283695)",
+          "sourceUrl": "https://www.manualslib.com/manual/1283695/Bft-Deimos-Bt-A-400.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Deimos BT A 400 Installation and User Manual (1283695)\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BFT Deimos BT A400 Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2948600/Bft-Deimos-Bt-A400.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Deimos BT A400 Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DEIMOS BT A400 / A600",
+      "name": "BFT DEIMOS BT A400 / A600",
+      "category": "gate-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BFT Deimos BT A400 / A600 Manual (EasyGates)",
+          "sourceUrl": "https://manuals.easygates.co.uk/bft-deimos-bt-a400-a600-manual/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.easygates.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Deimos BT A400 / A600 Manual (EasyGates)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DEIMOS ULTRA BT A400",
+      "name": "BFT DEIMOS ULTRA BT A400",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Deimos Ultra BT A 400 Installation and User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1158432/Bft-Deimos-Ultra-Bt-A-400.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Deimos Ultra BT A 400 Installation and User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DEIMOS ULTRA BT A400 / A600",
+      "name": "BFT DEIMOS ULTRA BT A400 / A600",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Deimos Ultra BT A400 / A600 Sliding Gate Actuator Installation Manual",
+          "sourceUrl": "https://manuals.plus/m/942cc48146d1e5c0750548235e4a54c4ba49034b1dece47fdf9951ba020f34d2",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Deimos Ultra BT A400 / A600 Sliding Gate Actuator Installation Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "ECOSOL PHOBOS",
       "name": "ECOSOL PHOBOS Solar Swing Gate Kit",
       "category": "gate-motors",

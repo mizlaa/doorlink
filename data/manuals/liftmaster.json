@@ -72,6 +72,87 @@
       ]
     },
     {
+      "modelCode": "87504-267",
+      "name": "LiftMaster 87504-267",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "LiftMaster 87504 / 87504-267 Residential Door Opener Manual",
+          "sourceUrl": "https://www.gdcorp.com/liftmaster-87504-87504-267-residential-door-opener-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "gdcorp.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"LiftMaster 87504 / 87504-267 Residential Door Opener Manual\" (host: www.gdcorp.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "LiftMaster 87504-267 Owner's Manual",
+          "sourceUrl": "https://customoverheaddoors.net/wp-content/uploads/2021/11/87504-267.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "customoverheaddoors.net",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"LiftMaster 87504-267 Owner's Manual\" (host: customoverheaddoors.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "LiftMaster 87504-267 Secure View Smart Garage Opener User Manual",
+          "sourceUrl": "https://device.report/manual/5427129",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "device.report",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"LiftMaster 87504-267 Secure View Smart Garage Opener User Manual\" (host: device.report). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "LiftMaster 87504-267 User Manual (English, 180 pages)",
+          "sourceUrl": "https://www.manua.ls/liftmaster/87504-267/manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manua.ls",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"LiftMaster 87504-267 User Manual (English, 180 pages)\" (host: www.manua.ls). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "LiftMaster 87504-267, 84505R, 87802, 84602 Owner's Manual",
+          "sourceUrl": "https://support.chamberlaingroup.com/s/article/LiftMaster-87504-267-84505R-87802-84602-Owner-s-Manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "support.chamberlaingroup.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"LiftMaster 87504-267, 84505R, 87802, 84602 Owner's Manual\" (host: support.chamberlaingroup.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "LiftMaster Wi-Fi Garage Door Opener Models 84501, 84602, 87504, 87504-267 and 87802 User's Guide",
+          "sourceUrl": "https://support.chamberlaingroup.com/s/article/User-s-Guide-for-LiftMaster-Wi-Fi-Garage-Door-Opener-Models-84501-84602-87504-87504-267-and-87802",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "support.chamberlaingroup.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"LiftMaster Wi-Fi Garage Door Opener Models 84501, 84602, 87504, 87504-267 and 87802 User's Guide\" (host: support.chamberlaingroup.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "CSL24U",
       "name": "CSL24U Commercial Slide Gate Operator",
       "category": "gate-motors",
