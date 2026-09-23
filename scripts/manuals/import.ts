@@ -228,21 +228,113 @@ async function main() {
   // Scoped to IMPORTED so the demo fixtures in prisma/seed.ts and
   // anything a user submitted are untouched; this only withdraws what
   // this script put there.
-  const seededUrls = new Set<string>()
+  //
+  // Keyed on where the document sits, not just its URL. A document moved
+  // from one model to another — which is what merging two spellings of
+  // one manufacturer does — keeps its URL, so a URL-only check saw
+  // nothing to withdraw and left a ghost copy under the old model.
+  const seededDocs = new Set<string>()
+  const seededModels = new Set<string>()
+  // Collected from the manufacturer entries themselves, not inferred from
+  // their models. A manufacturer can be seeded with no models at all —
+  // Danmar and Krispol are, deliberately, as recorded gaps — and deriving
+  // this set from model keys made them look absent, so every run created
+  // them and then withdrew them again.
+  const seededMfrs = new Set<string>()
   for (const file of files) {
     const raw = JSON.parse(readFileSync(join(DATA_DIR, file), 'utf8'))
     const parsed = manufacturerFileSchema.safeParse(raw)
     if (!parsed.success) continue
+    const mfrSlug = parsed.data.manufacturer.slug
+    seededMfrs.add(mfrSlug)
     for (const model of parsed.data.models) {
-      for (const doc of model.documents) seededUrls.add(doc.sourceUrl)
+      seededModels.add(`${mfrSlug}::${model.modelCode}`)
+      for (const doc of model.documents) {
+        seededDocs.add(`${mfrSlug}::${model.modelCode}::${doc.sourceUrl}`)
+      }
     }
   }
-  const orphans = await prisma.document.findMany({
-    where: { dataSource: DataSource.IMPORTED, sourceUrl: { notIn: [...seededUrls] } },
-    select: { id: true, title: true, sourceUrl: true },
+
+  const importedDocs = await prisma.document.findMany({
+    where: { dataSource: DataSource.IMPORTED },
+    select: {
+      id: true,
+      title: true,
+      sourceUrl: true,
+      model: { select: { modelCode: true, manufacturer: { select: { slug: true } } } },
+    },
+  })
+  const orphans = importedDocs.filter((d) => {
+    if (!d.model || !d.sourceUrl) return false
+    const key = `${d.model.manufacturer.slug}::${d.model.modelCode}::${d.sourceUrl}`
+    return !seededDocs.has(key)
   })
   if (orphans.length > 0) {
     await prisma.document.deleteMany({ where: { id: { in: orphans.map((o) => o.id) } } })
+  }
+
+  // Models, more cautiously than documents. A model is where user data
+  // attaches — listings, jobs, leads, favourites, saved configurations,
+  // compatibility links — so one the seeds have dropped is withdrawn only
+  // when nothing of anyone's points at it. One that is still referenced
+  // stays, and is named, because deleting it would take someone's
+  // listing or job history with it, and that is not this script's call.
+  const importedModels = await prisma.model.findMany({
+    where: { dataSource: DataSource.IMPORTED },
+    select: {
+      id: true,
+      modelCode: true,
+      manufacturer: { select: { slug: true, name: true } },
+      _count: {
+        select: {
+          documents: true,
+          listings: true,
+          compatibleFrom: true,
+          compatibleTo: true,
+          favorites: true,
+          jobs: true,
+          leads: true,
+          configurations: true,
+          assets: true,
+        },
+      },
+    },
+  })
+  const withdrawnModels: string[] = []
+  const retainedModels: string[] = []
+  for (const m of importedModels) {
+    if (seededModels.has(`${m.manufacturer.slug}::${m.modelCode}`)) continue
+    const c = m._count
+    const referenced =
+      c.listings + c.compatibleFrom + c.compatibleTo + c.favorites + c.jobs + c.leads +
+      c.configurations + c.assets
+    const label = `${m.manufacturer.name} ${m.modelCode}`
+    // A model still holding documents from another source (a submission,
+    // say) is also kept: those documents are not this script's to take.
+    if (referenced > 0 || c.documents > 0) {
+      retainedModels.push(label)
+      continue
+    }
+    await prisma.modelAlias.deleteMany({ where: { modelId: m.id } })
+    await prisma.model.delete({ where: { id: m.id } })
+    withdrawnModels.push(label)
+  }
+
+  // A manufacturer left with nothing — no models, no documents — and no
+  // longer in any seed file is the residue of a merge. Same caution: only
+  // imported ones, and only when genuinely empty.
+  const emptyMfrs = await prisma.manufacturer.findMany({
+    where: {
+      dataSource: DataSource.IMPORTED,
+      slug: { notIn: [...seededMfrs] },
+      models: { none: {} },
+      documents: { none: {} },
+      productLines: { none: {} },
+    },
+    select: { id: true, name: true },
+  })
+  if (emptyMfrs.length > 0) {
+    await prisma.manufacturer.deleteMany({ where: { id: { in: emptyMfrs.map((m) => m.id) } } })
   }
 
   console.log(
@@ -253,7 +345,18 @@ async function main() {
 
   if (orphans.length > 0) {
     console.log(`\nWithdrew ${orphans.length} document(s) no longer in any seed file:`)
-    for (const o of orphans) console.log(`  ${o.title}`)
+    for (const o of orphans.slice(0, 20)) console.log(`  ${o.title}`)
+    if (orphans.length > 20) console.log(`  … and ${orphans.length - 20} more`)
+  }
+  if (withdrawnModels.length > 0) {
+    console.log(`\nWithdrew ${withdrawnModels.length} model(s) no longer in any seed file.`)
+  }
+  if (emptyMfrs.length > 0) {
+    console.log(`Withdrew ${emptyMfrs.length} empty manufacturer(s): ${emptyMfrs.map((m) => m.name).join(', ')}`)
+  }
+  if (retainedModels.length > 0) {
+    console.log(`\nKept ${retainedModels.length} model(s) the seeds dropped, because user data or other documents still reference them:`)
+    for (const r of retainedModels) console.log(`  ${r}`)
   }
 
   if (gaps.length > 0) {

@@ -106,18 +106,18 @@ Automatic Systems | BL41 / BL4x | Automatic Systems BL4x Technical Manual (NAM-B
 Automatic Systems | BL52 | Automatic Systems BL52 Operating Manual | https://www.manualslib.com/manual/1825133/Ier-Automatic-Systems-Bl52.html
 Automatic Systems | BL52 / BL53 | Automatic Systems BL52 / BL53 Electrical Rising Barrier Manual | https://elics.ru/files/instruction/automatic-systems/bl-52.pdf
 Automatic Systems | BL229 | Automatic Systems BL229 Technical Manual | https://devancocanada.com/files/manuals/BL229:Technical-manual.pdf
-Automatic Technology (ATA) | ESV-24MS EasySlider | ATA EasySlider ESV-24MS Sliding Gate Opener Manual | https://ismartgate.com/manuals/Automatic_Technology_ATA_ESV_24MS_manual.pdf
-Automatic Technology (ATA) | Garage Door Openers | ATA Australia Installation Manuals Index | https://www.automatictechnology.com/au/resources/installation-manuals
-Automatic Technology (ATA) | GDO-2 SECURALIFT | ATA GDO-2 SecuraLift Installation Instructions Manual | https://www.manualslib.com/manual/849984/Automatic-Technology-Gdo-2-Securalift.html
-Automatic Technology (ATA) | GDO-2 V6 | ATA GDO-2 SecuraLift V6 Garage Door Opener Manual | https://waverleygaragedoors.com.au/instruction-manuals/ATA_gdo-2v6.pdf
-Automatic Technology (ATA) | GDO-2 V7 | ATA GDO-2 SecuraLift V7 Garage Door Opener Manual | https://www.purplepatchdoors.com.au/wp-content/uploads/2022/02/ATA-GDO2-V7-Manual.pdf
-Automatic Technology (ATA) | GDO-4 v4 | GDO-4 v4 EasyRoller Installation Instructions | https://www.manualslib.com/manual/945897/Automatic-Technology-Australia-Gdo-4-V4-Easyroller.html
-Automatic Technology (ATA) | GDO-5 | ATA GDO-5 Roll Up Garage Door Opener Owners Copy Instruction Manual | https://www.aggdoors.com.au/wp-content/uploads/2015/09/ATA-GDO5-AS-Instruction-Manual.pdf
-Automatic Technology (ATA) | GDO-5-AS | GDO-5 AS Instruction Manual | https://motepro.com.au/Manuals/ATA/GDO-5.pdf
-Automatic Technology (ATA) | GDO-6 | GDO-6 EasyRoller Rolling Door Opener Installation Manual (NZ edition) | https://media.umbraco.io/ata-automation/nybf5rbf/nz160422_04_gdo-6_online-installation_manual.pdf
-Automatic Technology (ATA) | GDO-6 | GDO-6v4 EasyRoller Rolling Door Opener Installation Manual (AU) | https://media.umbraco.io/ata-automation/xovk2qbc/160422_02_gdo-6v4_online-installation_manual_1.pdf
-Automatic Technology (ATA) | GDO-8 v1 | GDO-8 v1 EasyRoller II Installation Instructions | https://www.manualslib.com/manual/965901/Automatic-Technology-Australia-Gdo-8-V1-Easyroller-Ii.html
-Automatic Technology (ATA) | GDO-10V3L2 TORO | ATA GDO-10V3L2 Toro Roll Up Garage Door Opener Manual (160033_01) | https://www.aggdoors.com.au/wp-content/uploads/2015/09/ATA-160033_01_GDO-10V3L2-TC128-Manual_lores.pdf
+Automatic Technology | ESV-24MS EasySlider | ATA EasySlider ESV-24MS Sliding Gate Opener Manual | https://ismartgate.com/manuals/Automatic_Technology_ATA_ESV_24MS_manual.pdf
+Automatic Technology | Garage Door Openers | ATA Australia Installation Manuals Index | https://www.automatictechnology.com/au/resources/installation-manuals
+Automatic Technology | GDO-2 SECURALIFT | ATA GDO-2 SecuraLift Installation Instructions Manual | https://www.manualslib.com/manual/849984/Automatic-Technology-Gdo-2-Securalift.html
+Automatic Technology | GDO-2 V6 | ATA GDO-2 SecuraLift V6 Garage Door Opener Manual | https://waverleygaragedoors.com.au/instruction-manuals/ATA_gdo-2v6.pdf
+Automatic Technology | GDO-2 V7 | ATA GDO-2 SecuraLift V7 Garage Door Opener Manual | https://www.purplepatchdoors.com.au/wp-content/uploads/2022/02/ATA-GDO2-V7-Manual.pdf
+Automatic Technology | GDO-4 v4 | GDO-4 v4 EasyRoller Installation Instructions | https://www.manualslib.com/manual/945897/Automatic-Technology-Australia-Gdo-4-V4-Easyroller.html
+Automatic Technology | GDO-5 | ATA GDO-5 Roll Up Garage Door Opener Owners Copy Instruction Manual | https://www.aggdoors.com.au/wp-content/uploads/2015/09/ATA-GDO5-AS-Instruction-Manual.pdf
+Automatic Technology | GDO-5-AS | GDO-5 AS Instruction Manual | https://motepro.com.au/Manuals/ATA/GDO-5.pdf
+Automatic Technology | GDO-6 | GDO-6 EasyRoller Rolling Door Opener Installation Manual (NZ edition) | https://media.umbraco.io/ata-automation/nybf5rbf/nz160422_04_gdo-6_online-installation_manual.pdf
+Automatic Technology | GDO-6 | GDO-6v4 EasyRoller Rolling Door Opener Installation Manual (AU) | https://media.umbraco.io/ata-automation/xovk2qbc/160422_02_gdo-6v4_online-installation_manual_1.pdf
+Automatic Technology | GDO-8 v1 | GDO-8 v1 EasyRoller II Installation Instructions | https://www.manualslib.com/manual/965901/Automatic-Technology-Australia-Gdo-8-V1-Easyroller-Ii.html
+Automatic Technology | GDO-10V3L2 TORO | ATA GDO-10V3L2 Toro Roll Up Garage Door Opener Manual (160033_01) | https://www.aggdoors.com.au/wp-content/uploads/2015/09/ATA-160033_01_GDO-10V3L2-TC128-Manual_lores.pdf
 Avanti | Garage Door Openers | Avanti Garage Door Opener Installation Manuals Index | https://garagedooropenerremotes.com.au/manuals-and-downloads/avanti-manuals
 Avanti | Garage Door Openers | Avanti Instruction Manual | https://www.waverleygaragedoors.com.au/instruction-manuals/Avanti.pdf
 Avanti | Garage Door Openers | Avanti Manuals for Garage Door Openers Index (AGG Doors) | https://industrialrollerdoorrepair.com.au/manual/manuals-by-brand-name/avanti/
