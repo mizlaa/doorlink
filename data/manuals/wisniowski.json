@@ -9,39 +9,23 @@
   },
   "models": [
     {
-      "modelCode": "Sectional garage door",
-      "name": "Wiśniowski Sectional Garage Door",
+      "modelCode": "AWSO2018",
+      "name": "Wiśniowski AWSO2018",
       "category": "garage-door-openers",
       "region": "EU",
+      "aliases": [],
       "documents": [
         {
-          "kind": "USER_MANUAL",
-          "title": "Instrukcja obsługi i konserwacji - brama garażowa segmentowa (Operating and Maintenance Manual, sectional garage door)",
-          "language": "pl",
-          "sourceUrl": "https://sklep.wisniowski.pl/img/products_certificates/garage-door/Instrukcja-obs%C5%82ugi-i-konserwacji-brama-garazowa-segmentowa.pdf",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "Wiśniowski",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "evidence": "On sklep.wisniowski.pl, the manufacturer's own online shop, in its product-certificates directory. Polish edition - the language is set to pl rather than left at the default, because the file name is Polish and no English edition surfaced. The title keeps the Polish original with a translation after it rather than replacing it. Not fetched - egress blocked."
-        }
-      ]
-    },
-    {
-      "modelCode": "UNIPRO",
-      "name": "Wiśniowski UNIPRO Sectional Garage Door",
-      "category": "garage-door-openers",
-      "region": "EU",
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Wiśniowski UNIPRO Operating and Maintenance Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2358464/Wisniowski-Unipro.html",
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Wisniowski AWso2018 Garage Door Opener Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Wisniowski-Awso2018-10579993.html",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualsLib",
+          "publisher": "manualslib.com",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Whether this is the English edition of the shop-hosted Polish manual above or a UNIPRO-specific document could not be established, so the two are kept separate rather than merged on an assumption. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Wisniowski AWso2018 Garage Door Opener Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -62,7 +46,135 @@
           "publisher": "Wiśniowski",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On obchod.wisniowski.eu, a second Wiśniowski shop domain alongside sklep.wisniowski.pl. English edition per the file name, unlike the Polish-only sectional door manual in this file. Filed under accessories because GATE is the controller, not a door. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On obchod.wisniowski.eu, a second Wiśniowski shop domain alongside sklep.wisniowski.pl. English edition per the file name, unlike the Polish-only sectional door manual in this file. Filed under accessories because GATE is the controller, not a door. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "INTRO 1000",
+      "name": "Wiśniowski INTRO 1000",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Wisniowski Intro 1000 Garage Door Opener Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Wisniowski-Intro-1000-10277732.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Wisniowski Intro 1000 Garage Door Opener Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "INTRO 600",
+      "name": "Wiśniowski INTRO 600",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Wisniowski Intro 600 Assembly and Operating Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1518405/Wisniowski-Intro-600.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Wisniowski Intro 600 Assembly and Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MAKROPRO 100",
+      "name": "Wiśniowski MAKROPRO 100",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Wisniowski MakroPro 100 Operating and Installation Instructions",
+          "sourceUrl": "https://www.manualslib.com/manual/899251/Wisniowski-Makropro-100.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Wisniowski MakroPro 100 Operating and Installation Instructions\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MIDO 600",
+      "name": "Wiśniowski MIDO 600",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Wisniowski Mido 600 Assembly and Operating Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1030638/Wisniowski-Mido-600.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Wisniowski Mido 600 Assembly and Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Sectional garage door",
+      "name": "Wiśniowski Sectional Garage Door",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Instrukcja obsługi i konserwacji - brama garażowa segmentowa (Operating and Maintenance Manual, sectional garage door)",
+          "sourceUrl": "https://sklep.wisniowski.pl/img/products_certificates/garage-door/Instrukcja-obs%C5%82ugi-i-konserwacji-brama-garazowa-segmentowa.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "Wiśniowski",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "pl",
+          "evidence": "On sklep.wisniowski.pl, the manufacturer's own online shop, in its product-certificates directory. Polish edition - the language is set to pl rather than left at the default, because the file name is Polish and no English edition surfaced. The title keeps the Polish original with a translation after it rather than replacing it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "UNIPRO",
+      "name": "Wiśniowski UNIPRO Sectional Garage Door",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Wiśniowski UNIPRO Operating and Maintenance Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2358464/Wisniowski-Unipro.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualsLib",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing. Whether this is the English edition of the shop-hosted Polish manual above or a UNIPRO-specific document could not be established, so the two are kept separate rather than merged on an assumption. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

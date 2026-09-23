@@ -1,0 +1,198 @@
+{
+  "manufacturer": {
+    "name": "Allmatic",
+    "slug": "allmatic",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "BIOS1 24V",
+      "name": "Allmatic BIOS1 24V",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Allmatic BIOS1 24V Control Unit for Sliding Gates Manual",
+          "sourceUrl": "https://www.allmatic.com/wp-content/uploads/2024/09/EN_MANUAL_BIOS1-24V.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "allmatic.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Allmatic BIOS1 24V Control Unit for Sliding Gates Manual\" (host: www.allmatic.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Automation",
+      "name": "Allmatic Gate Automation",
+      "category": "gate-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Allmatic Manuals Index (EasyGates)",
+          "sourceUrl": "https://manuals.easygates.co.uk/category/manuals/allmatic/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.easygates.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Allmatic Manuals Index (EasyGates)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "HYPER 400",
+      "name": "Allmatic HYPER 400",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Allmatic Hyper 400 Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2180928/Allmatic-Hyper-400.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Allmatic Hyper 400 Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "KALOS 50",
+      "name": "Allmatic KALOS 50",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Allmatic Kalos 50 Instruction Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1012830/Allmatic-Kalos-50.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Allmatic Kalos 50 Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MOVEO",
+      "name": "Allmatic MOVEO",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Allmatic Moveo Residential Sliding Gates Instruction Manual",
+          "sourceUrl": "https://manuals.plus/allmatic/moveo-residential-sliding-gates-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Allmatic Moveo Residential Sliding Gates Instruction Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MOVEO SERIES",
+      "name": "Allmatic MOVEO SERIES",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Allmatic Moveo Series Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1897566/Allmatic-Moveo-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Allmatic Moveo Series Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "PLUS",
+      "name": "Allmatic PLUS",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Allmatic Plus Instruction Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1657035/Allmatic-Plus.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Allmatic Plus Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TRAKTOR /I SERIES",
+      "name": "Allmatic TRAKTOR /I SERIES",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Allmatic Traktor /I Series Installation and Use Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/3275197/Allmatic-Traktor-I-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Allmatic Traktor /I Series Installation and Use Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TRAKTOR T/I / M/I",
+      "name": "Allmatic TRAKTOR T/I / M/I",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Allmatic Traktor Manual (6-1624970M rev.2)",
+          "sourceUrl": "https://www.allmatic.com/wp-content/uploads/2024/09/EN_MANUAL_TRAKTOR.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "allmatic.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Allmatic Traktor Manual (6-1624970M rev.2)\" (host: www.allmatic.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

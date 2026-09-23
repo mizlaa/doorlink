@@ -1,0 +1,135 @@
+{
+  "manufacturer": {
+    "name": "Ghost Controls",
+    "slug": "ghost-controls",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "DEP2",
+      "name": "Ghost Controls DEP2",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Ghost Controls DEP2 Gate Opener Installation and Owners Manual",
+          "sourceUrl": "https://images.thdstatic.com/catalog/pdfImages/05/05e44275-efe1-4481-9da6-fe6ea4f9f285.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "images.thdstatic.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ghost Controls DEP2 Gate Opener Installation and Owners Manual\" (host: images.thdstatic.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DTP1",
+      "name": "Ghost Controls DTP1",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Ghost Controls DTP1 Installation and Owner's Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1982789/Ghost-Controls-Dtp1.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ghost Controls DTP1 Installation and Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Openers",
+      "name": "Ghost Controls Gate Openers",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Ghost Controls Manuals and Guides Index",
+          "sourceUrl": "https://ghostcontrols.com/pages/updated-manuals",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ghostcontrols.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ghost Controls Manuals and Guides Index\" (host: ghostcontrols.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "HDP2",
+      "name": "Ghost Controls HDP2",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Ghost Controls HDP2 Manual",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0255/2332/2989/files/HDP2_Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cdn.shopify.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ghost Controls HDP2 Manual\" (host: cdn.shopify.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TDS2",
+      "name": "Ghost Controls TDS2",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Ghost Controls TDS2 Gate Opener Installation and Owners Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/Ghost_Controls_TDS2_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ismartgate.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ghost Controls TDS2 Gate Opener Installation and Owners Manual\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TSS1",
+      "name": "Ghost Controls TSS1",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Ghost Controls TSS1 Gate Opener Installation and Owners Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/Ghost_Controls_TSS1_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ismartgate.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ghost Controls TSS1 Gate Opener Installation and Owners Manual\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

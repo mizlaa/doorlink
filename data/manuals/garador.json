@@ -7,5 +7,123 @@
     "supportUrl": "https://www.garador.co.uk/installer-support/fitting-instructions/",
     "note": "British garage door manufacturer, with a separate New Zealand arm at garador.co.nz that publishes its own owner's manuals. Both documentation indexes are registered as harvest targets. Recorded with no document records: search named the indexes and described what they cover - Up & Over, Sectional with L, N and Z track options, GaraRoll and Side Hinged - but surfaced no individual PDF URL on either domain, and a described document is not a document."
   },
-  "models": []
+  "models": [
+    {
+      "modelCode": "Garage Doors and Openers",
+      "name": "Garador Garage Doors and Openers",
+      "category": "garage-door-openers",
+      "region": "NZ",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Garador New Zealand Owner Manuals Index",
+          "sourceUrl": "https://www.garador.co.nz/resources/owner-manuals",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "garador.co.nz",
+          "region": "NZ",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Garador New Zealand Owner Manuals Index\" (host: www.garador.co.nz). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GARAMATIC 9",
+      "name": "Garador GARAMATIC 9",
+      "category": "garage-door-openers",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Garador GaraMatic 9 Instructions for Fitting, Operating and Maintenance (TR10A148)",
+          "sourceUrl": "https://www.thegaragedoorcentre.co.uk/download/Garador%20GaraMatic%209.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "thegaragedoorcentre.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Garador GaraMatic 9 Instructions for Fitting, Operating and Maintenance (TR10A148)\" (host: www.thegaragedoorcentre.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GENIUS / PRECISION",
+      "name": "Garador GENIUS / PRECISION",
+      "category": "garage-door-openers",
+      "region": "NZ",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Garador Genius and Precision Sectional Door Opener Quick Operation Guide",
+          "sourceUrl": "https://www.garador.co.nz/asset/2747.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "garador.co.nz",
+          "region": "NZ",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Garador Genius and Precision Sectional Door Opener Quick Operation Guide\" (host: www.garador.co.nz). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SDO-2V2 PRECISION",
+      "name": "Garador SDO-2V2 PRECISION",
+      "category": "garage-door-openers",
+      "region": "NZ",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Garador SDO-2V2 Precision Instruction Manual (161045_00)",
+          "sourceUrl": "https://www.garador.co.nz/asset/87.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "garador.co.nz",
+          "region": "NZ",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Garador SDO-2V2 Precision Instruction Manual (161045_00)\" (host: www.garador.co.nz). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Sectional Door Opener",
+      "name": "Garador Sectional Door Opener",
+      "category": "garage-door-openers",
+      "region": "NZ",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Garador Sectional Door Opener Instruction Manual (160071_03)",
+          "sourceUrl": "https://www.garador.co.nz/asset/776.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "garador.co.nz",
+          "region": "NZ",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Garador Sectional Door Opener Instruction Manual (160071_03)\" (host: www.garador.co.nz). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Garador Sectional Door Opener Instruction Manual (160073_00)",
+          "sourceUrl": "https://www.garador.co.nz/asset/775.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "garador.co.nz",
+          "region": "NZ",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Garador Sectional Door Opener Instruction Manual (160073_00)\" (host: www.garador.co.nz). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
 }

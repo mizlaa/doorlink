@@ -7,5 +7,177 @@
     "supportUrl": "https://www.chamberlaindiy.com.au/documents-and-downloads/",
     "note": "Garage door opener manufacturer with an Australian site carrying its own documents-and-downloads area, and a global support portal at support.chamberlaingroup.com. Searched for this session; both portals were surfaced but no direct model-level PDF URL was, so no document records are claimed. The portals are recorded here so a technician has somewhere to go."
   },
-  "models": []
+  "models": [
+    {
+      "modelCode": "1000",
+      "name": "Chamberlain 1000",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Chamberlain 1000 Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1266071/Chamberlain-1000.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain 1000 Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "B970",
+      "name": "Chamberlain B970",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Chamberlain B970 Belt Drive Owner's Manual",
+          "sourceUrl": "https://images.orgill.com/weblarge/10022/Chamberlain_B970_Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "images.orgill.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain B970 Belt Drive Owner's Manual\" (host: images.orgill.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Chamberlain B970 Owner's Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2479343/Chamberlain-B970.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain B970 Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Garage Door Openers and Accessories",
+      "name": "Chamberlain Garage Door Openers and Accessories",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Chamberlain Australia User Manuals and Spec Sheets Index",
+          "sourceUrl": "https://www.chamberlaindiy.com.au/documents-and-downloads/",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "chamberlaindiy.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain Australia User Manuals and Spec Sheets Index\" (host: www.chamberlaindiy.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Garage Door Openers and Gate Operators",
+      "name": "Chamberlain Garage Door Openers and Gate Operators",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Chamberlain, myQ and LiftMaster Manuals and Parts Index",
+          "sourceUrl": "https://support.chamberlaingroup.com/s/manuals-parts",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "support.chamberlaingroup.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain, myQ and LiftMaster Manuals and Parts Index\" (host: support.chamberlaingroup.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LIFTMASTER 1000",
+      "name": "Chamberlain LIFTMASTER 1000",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Chamberlain LiftMaster 1000 User Manual",
+          "sourceUrl": "https://www.manua.ls/chamberlain/liftmaster-1000/manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manua.ls",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain LiftMaster 1000 User Manual\" (host: www.manua.ls). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Merlin Range",
+      "name": "Chamberlain Merlin Range",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Chamberlain Merlin Manuals Index (Wholesale Garage Doors)",
+          "sourceUrl": "https://wholesalegaragedoors.com.au/chamberlain-merlin-manuals/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "wholesalegaragedoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain Merlin Manuals Index (Wholesale Garage Doors)\" (host: wholesalegaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MOTORLIFT 1000",
+      "name": "Chamberlain MOTORLIFT 1000",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Chamberlain Model MotorLift 1000 Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1377870/Chamberlain-Model-Motorlift-1000.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain Model MotorLift 1000 Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Chamberlain MotorLift 1000 User Manual",
+          "sourceUrl": "https://www.manua.ls/chamberlain/motorlift-1000/manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manua.ls",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain MotorLift 1000 User Manual\" (host: www.manua.ls). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
 }

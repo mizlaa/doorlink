@@ -1,0 +1,96 @@
+{
+  "manufacturer": {
+    "name": "Richards-Wilcox",
+    "slug": "richards-wilcox",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "DC SERIES",
+      "name": "Richards-Wilcox DC SERIES",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Richards-Wilcox DC Direct Drive Commercial Door Operator Installation Manual",
+          "sourceUrl": "https://www.rwdoors.com/wp-content/uploads/2022/02/DCSeries_InstallationGuide_Dec2021.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "rwdoors.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Richards-Wilcox DC Direct Drive Commercial Door Operator Installation Manual\" (host: www.rwdoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Garage Door Openers",
+      "name": "Richards-Wilcox Garage Door Openers",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Richards-Wilcox Garage Door Opener Manuals Index",
+          "sourceUrl": "https://www.manualslib.com/brand/richards-wilcox/garage-door-opener.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Richards-Wilcox Garage Door Opener Manuals Index\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Richards-Wilcox Manuals and User Guides Index (Manuals+)",
+          "sourceUrl": "https://manuals.plus/category/richards-wilcox",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Richards-Wilcox Manuals and User Guides Index (Manuals+)\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Richards-Wilcox Manuals Index (ManualsLib)",
+          "sourceUrl": "https://www.manualslib.com/brand/richards-wilcox/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Richards-Wilcox Manuals Index (ManualsLib)\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SECURITY+ 2265RWC",
+      "name": "Richards-Wilcox SECURITY+ 2265RWC",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Richards-Wilcox Security+ 2265RWC Owner's Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1152210/Richards-Wilcox-SecurityPlus-2265rwc.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Richards-Wilcox Security+ 2265RWC Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

@@ -9,36 +9,60 @@
   },
   "models": [
     {
-      "modelCode": "MT60EVO",
-      "name": "PowerAce MT60EVO Sectional Garage Door Opener",
+      "modelCode": "Garage Door Openers",
+      "name": "Merlin Garage Door Openers",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Merlin Owner's Manuals Index",
+          "sourceUrl": "https://www.dominatornsw.com.au/resources/merlin-owner-s-manuals",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "dominatornsw.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Merlin Owner's Manuals Index\" (host: www.dominatornsw.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Merlin Product Support Centre Documents and Downloads Index",
+          "sourceUrl": "https://www.gomerlin.com.au/documents-and-downloads/",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "gomerlin.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Merlin Product Support Centre Documents and Downloads Index\" (host: www.gomerlin.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MR655MYQ",
+      "name": "Merlin MR655MYQ SilentDrive Essential Roller Door Opener",
       "category": "garage-door-openers",
       "region": "AU",
       "aliases": [
-        "MT60 EVO",
-        "MT-60EVO"
+        "MR655",
+        "SilentDrive Essential",
+        "114A5183B"
       ],
       "documents": [
         {
-          "kind": "USER_MANUAL",
-          "title": "PowerAce MT60EVO User Manual",
-          "sourceUrl": "https://edenrocgaragedoors.com.au/wp-content/uploads/2020/07/Merlin-MT60EVO-User-Manual.pdf",
+          "kind": "INSTALL_MANUAL",
+          "title": "Merlin MR655MYQ SilentDrive Essential Manual",
+          "sourceUrl": "https://motepro.com.au/Manuals/Merlin/MR655MYQ-manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "Edenroc Garage Doors",
+          "publisher": "Motepro",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Australian installer-hosted copy. Not fetched - egress blocked.",
-          "altSources": [
-            {
-              "url": "https://www.manualslib.com/manual/814106/Merlin-Powerace-Mt60evo.html",
-              "authority": "THIRD_PARTY_MIRROR",
-              "label": "ManualsLib listing"
-            },
-            {
-              "url": "https://www.dominatornsw.com.au/resources/merlin-owner-s-manuals",
-              "authority": "AUTHORISED_DISTRIBUTOR",
-              "label": "Dominator NSW manual index"
-            }
-          ]
+          "language": "en",
+          "evidence": "Reseller copy. The SilentDrive Essential product name comes from the search result's rendering of the document; Dominator NSW lists the same manual as 114A5183B-MR655MYQ.pdf, so 114A5183B is Chamberlain's number for it and is kept as an alias. An MR555MYQ manual surfaced during earlier Danmar research and was deliberately not attributed there - it belongs to this Merlin MR family, but no MR555 model is created here because that document was not re-confirmed in this search. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -60,7 +84,54 @@
           "publisher": "ManyManuals",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Merlin MT100EVO Tiltmaster Owners Copy Manual (114D4626G)",
+          "sourceUrl": "https://garagedooropenerremotes.com.au/wp-content/uploads/2017/08/MT100EVO-Tiltmaster-manual-114D4626G.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "garagedooropenerremotes.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Merlin MT100EVO Tiltmaster Owners Copy Manual (114D4626G)\" (host: garagedooropenerremotes.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Merlin MT100EVO Tiltmaster Sectional and Tilt Door Opener Installation Manual",
+          "sourceUrl": "https://wholesalegaragedoors.com.au/wp-content/uploads/2022/06/Merlin-MT100EVO-Tiltmaster-Sectional-and-Tilt-Door-Opener-Installation-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "wholesalegaragedoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Merlin MT100EVO Tiltmaster Sectional and Tilt Door Opener Installation Manual\" (host: wholesalegaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MT1100MYQ",
+      "name": "Merlin MT1100MYQ",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Merlin Commander myQ MT1100MYQ User Manual",
+          "sourceUrl": "https://edenrocgaragedoors.com.au/wp-content/uploads/2020/07/Merlin-Commander-myQ-MT1100MYQ-User-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "edenrocgaragedoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Merlin Commander myQ MT1100MYQ User Manual\" (host: edenrocgaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -84,7 +155,9 @@
           "publisher": "ManyManuals",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. A file size of 2.91 MB was mentioned in the search summary but is not recorded here, because it was not confirmed by fetching the file. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. A file size of 2.91 MB was mentioned in the search summary but is not recorded here, because it was not confirmed by fetching the file. Not fetched - egress blocked.",
+          "altSources": []
         },
         {
           "kind": "INSTALL_MANUAL",
@@ -94,6 +167,7 @@
           "publisher": "Remote Openers",
           "region": "AU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Reseller copy, direct PDF, for the MT60P variant. Dominator NSW's index names the same document as MT60P-114A4217F.pdf; 114A4217F is Chamberlain's document numbering, kept as an alias rather than recorded as this file's documentCode because this file does not carry it. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -107,29 +181,65 @@
               "label": "ManualsLib listing"
             }
           ]
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Chamberlain Merlin MT60 Illustrated Instruction Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/863412/Chamberlain-Merlin-Mt60.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain Merlin MT60 Illustrated Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Merlin MT60 Installation Manual",
+          "sourceUrl": "https://www.remoteopeners.com.au/assets/PDF/merlin/MT60_installation_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "remoteopeners.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Merlin MT60 Installation Manual\" (host: www.remoteopeners.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
     {
-      "modelCode": "MR655MYQ",
-      "name": "Merlin MR655MYQ SilentDrive Essential Roller Door Opener",
+      "modelCode": "MT60EVO",
+      "name": "PowerAce MT60EVO Sectional Garage Door Opener",
       "category": "garage-door-openers",
       "region": "AU",
       "aliases": [
-        "MR655",
-        "SilentDrive Essential",
-        "114A5183B"
+        "MT60 EVO",
+        "MT-60EVO"
       ],
       "documents": [
         {
-          "kind": "INSTALL_MANUAL",
-          "title": "Merlin MR655MYQ SilentDrive Essential Manual",
-          "sourceUrl": "https://motepro.com.au/Manuals/Merlin/MR655MYQ-manual.pdf",
+          "kind": "USER_MANUAL",
+          "title": "PowerAce MT60EVO User Manual",
+          "sourceUrl": "https://edenrocgaragedoors.com.au/wp-content/uploads/2020/07/Merlin-MT60EVO-User-Manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "Motepro",
+          "publisher": "Edenroc Garage Doors",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Reseller copy. The SilentDrive Essential product name comes from the search result's rendering of the document; Dominator NSW lists the same manual as 114A5183B-MR655MYQ.pdf, so 114A5183B is Chamberlain's number for it and is kept as an alias. An MR555MYQ manual surfaced during earlier Danmar research and was deliberately not attributed there - it belongs to this Merlin MR family, but no MR555 model is created here because that document was not re-confirmed in this search. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Australian installer-hosted copy. Not fetched - egress blocked.",
+          "altSources": [
+            {
+              "url": "https://www.manualslib.com/manual/814106/Merlin-Powerace-Mt60evo.html",
+              "authority": "THIRD_PARTY_MIRROR",
+              "label": "ManualsLib listing"
+            },
+            {
+              "url": "https://www.dominatornsw.com.au/resources/merlin-owner-s-manuals",
+              "authority": "AUTHORISED_DISTRIBUTOR",
+              "label": "Dominator NSW manual index"
+            }
+          ]
         }
       ]
     }

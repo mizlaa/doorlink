@@ -1,0 +1,30 @@
+{
+  "manufacturer": {
+    "name": "Arm-R-Lite",
+    "slug": "arm-r-lite",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "Overhead Doors",
+      "name": "Arm-R-Lite Overhead Doors",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Arm-R-Lite Library Index (specs and support materials)",
+          "sourceUrl": "https://armrlite.com/library/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "armrlite.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Arm-R-Lite Library Index (specs and support materials)\" (host: armrlite.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

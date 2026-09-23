@@ -1,0 +1,177 @@
+{
+  "manufacturer": {
+    "name": "PowerMaster",
+    "slug": "powermaster",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "ASW",
+      "name": "PowerMaster ASW",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "PowerMaster ASW Actuator Swing Gate Operator Installation and Owner's Manual (2019)",
+          "sourceUrl": "https://powermasterny.com/wp-content/uploads/2019/08/2019_ASW_Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "powermasterny.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"PowerMaster ASW Actuator Swing Gate Operator Installation and Owner's Manual (2019)\" (host: powermasterny.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GH",
+      "name": "PowerMaster GH",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "PowerMaster GH Industrial Duty Commercial Door Operator Owner's Manual",
+          "sourceUrl": "https://www.cooksondoor.com/docs/default-source/o-m-manuals/gh-motors-2009.pdf?sfvrsn=4",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cooksondoor.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"PowerMaster GH Industrial Duty Commercial Door Operator Owner's Manual\" (host: www.cooksondoor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GT",
+      "name": "PowerMaster GT",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "PowerMaster GT Installation and Owner's Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/850151/Powermaster-Gt.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"PowerMaster GT Installation and Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "H",
+      "name": "PowerMaster H",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "PowerMaster H Installation and Owner's Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/850150/Powermaster-H.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"PowerMaster H Installation and Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MG",
+      "name": "PowerMaster MG",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "PowerMaster MG Installation Manual (06-0922)",
+          "sourceUrl": "https://www.powermastergateopeners.com/manuals/MG/06-0922_MG_Install_Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "powermastergateopeners.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"PowerMaster MG Installation Manual (06-0922)\" (host: www.powermastergateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MODEL T",
+      "name": "PowerMaster MODEL T",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "PowerMaster Model T Trolley Door Operator Manual",
+          "sourceUrl": "https://powermasterny.com/wp-content/uploads/2019/02/2018_T_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "powermasterny.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"PowerMaster Model T Trolley Door Operator Manual\" (host: powermasterny.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RH / RJ",
+      "name": "PowerMaster RH / RJ",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "PowerMaster RH-RJ Installation Manual (06-0922)",
+          "sourceUrl": "https://www.powermastergateopeners.com/manuals/RH/06-0922_RH-RJ_Install_Man.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "powermastergateopeners.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"PowerMaster RH-RJ Installation Manual (06-0922)\" (host: www.powermastergateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "T (Drawbar)",
+      "name": "PowerMaster T (Drawbar)",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "PowerMaster T Drawbar Operator Installation Manual",
+          "sourceUrl": "https://laornamental.com/pdf-files/Powermaster-Overhead/Powermaster-T-Drawbar-Operator-Installation-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "laornamental.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"PowerMaster T Drawbar Operator Installation Manual\" (host: laornamental.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

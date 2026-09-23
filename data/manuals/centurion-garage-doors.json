@@ -1,0 +1,114 @@
+{
+  "manufacturer": {
+    "name": "Centurion Garage Doors",
+    "slug": "centurion-garage-doors",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "Garage Door Opener",
+      "name": "Centurion Garage Doors Garage Door Opener",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Centurion Garage Door Opener Installation Instructions",
+          "sourceUrl": "https://www.cgdoors.com.au/wp-content/uploads/2022/02/Centurion-Garage-Door-Opener-Installation-Instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cgdoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Centurion Garage Door Opener Installation Instructions\" (host: www.cgdoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Garage Doors",
+      "name": "Centurion Garage Doors Garage Doors",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Centurion Garage Doors User Guides Index",
+          "sourceUrl": "https://www.cgdoors.com.au/resources/user-guides/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cgdoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Centurion Garage Doors User Guides Index\" (host: www.cgdoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RDO10C",
+      "name": "Centurion Garage Doors RDO10C",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Centurion Roller Door Opener RDO10C User Manual",
+          "sourceUrl": "https://www.cgdoors.com.au/wp-content/uploads/2022/02/Centurion-Roller-Door-Opener-RDO10C-User-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cgdoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Centurion Roller Door Opener RDO10C User Manual\" (host: www.cgdoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SD04",
+      "name": "Centurion Garage Doors SD04",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Centurion SD04 Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1483917/Centurion-Sd04.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Centurion SD04 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SDO10",
+      "name": "Centurion Garage Doors SDO10",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Centurion SDO10 Instruction Manual",
+          "sourceUrl": "https://www.waverleygaragedoors.com.au/instruction-manuals/Centurion%20sdo10%20.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "waverleygaragedoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Centurion SDO10 Instruction Manual\" (host: www.waverleygaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

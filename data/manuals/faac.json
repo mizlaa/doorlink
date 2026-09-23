@@ -9,6 +9,156 @@
   },
   "models": [
     {
+      "modelCode": "390",
+      "name": "FAAC 390",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "FAAC 390 Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1181301/Faac-390.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 390 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 390 Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1623408/Faac-390.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 390 Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "FAAC 390 Swing Gate System Installation Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/FAAC_390_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ismartgate.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 390 Swing Gate System Installation Manual\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "390 24V",
+      "name": "FAAC 390 24V",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 390 24V Articulated Arm Swing Gate Operator Manual",
+          "sourceUrl": "http://www.faacgateopeners.com/FAAC-Manuals/FAAC-390-Low-Voltage-Swing-Gate-Operators.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "faacgateopeners.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 390 24V Articulated Arm Swing Gate Operator Manual\" (host: www.faacgateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "391",
+      "name": "FAAC 391",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 391 Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2191161/Faac-391.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 391 Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "402",
+      "name": "FAAC 402",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 402 Hydraulic Swing Gate Operator Manual",
+          "sourceUrl": "https://www.affordableopeners.com/manuals/Manufacturer/faac/402_operators.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "affordableopeners.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 402 Hydraulic Swing Gate Operator Manual\" (host: www.affordableopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "402 (230V)",
+      "name": "FAAC 402 (230V)",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 402 230V Swing Gate Operator Manual (732143 Rev A EN)",
+          "sourceUrl": "https://faac.blob.core.windows.net/web/1/gate-automation/faac-swing-gates/402-230v-swing-gate-operator/402-732143-reva-en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "faac.blob.core.windows.net",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 402 230V Swing Gate Operator Manual (732143 Rev A EN)\" (host: faac.blob.core.windows.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "402 / 455 D",
+      "name": "FAAC 402 / 455 D",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "FAAC 402 Operator and 455 D Control Panel Installation Manual",
+          "sourceUrl": "http://www.faacgateopeners.com/FAAC-Manuals/FAAC-402-swing-gate-operator.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "faacgateopeners.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 402 Operator and 455 D Control Panel Installation Manual\" (host: www.faacgateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "740",
       "name": "740 230V Sliding Gate Operator",
       "category": "gate-motors",
@@ -20,13 +170,13 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "740 / 741 Sliding Gate Operator Manual (Rev. D)",
-          "documentCode": "732484",
-          "revision": "D",
-          "language": "en",
           "sourceUrl": "https://faac.blob.core.windows.net/web/1/gate-automation/faac-sliding-gates/740-230v-sliding-gate-operator/740-741-732484-revd-en.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "732484",
+          "revision": "D",
           "evidence": "FAAC's own CDN. Document code 732484 and revision D read from the filename. One manual covers both 740 and 741. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -35,6 +185,69 @@
               "label": "Global Access (AU) copy"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "740 C",
+      "name": "FAAC 740 C",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "740 C / 741 C Installation Manual (532887 Rev A)",
+          "sourceUrl": "https://www.faac.help/en/documents/740-c-741-c",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "faac.help",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"740 C / 741 C Installation Manual (532887 Rev A)\" (host: www.faac.help). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "740 E",
+      "name": "FAAC 740 E",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "740 E / 741 E Installation Manual (532504 Rev A)",
+          "sourceUrl": "https://www.faac.help/en/documents/740-e-741-e",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "faac.help",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"740 E / 741 E Installation Manual (532504 Rev A)\" (host: www.faac.help). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "740/741 (UK)",
+      "name": "FAAC 740/741 (UK)",
+      "category": "gate-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "740 / 741 Installation Manual",
+          "sourceUrl": "https://www.faac.co.uk/productfiles/50_Manual_rad5FB75.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "faac.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"740 / 741 Installation Manual\" (host: www.faac.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -55,7 +268,420 @@
           "publisher": "ManualsLib",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing for the 741 entry of the shared 740/741 documentation. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing for the 741 entry of the shared 740/741 documentation. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "746",
+      "name": "FAAC 746",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 746 Gate Opener Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1583264/Faac-746.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 746 Gate Opener Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "FAAC 746 Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/925221/Faac-746.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 746 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "746 / 844 with CP81",
+      "name": "FAAC 746 / 844 with CP81",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "FAAC 746 and 844 Sliding Gate Automation with CP81 Controller Installation Manual",
+          "sourceUrl": "https://www.gatesplus.com.au/pdf/SlidingCP81.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "gatesplus.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 746 and 844 Sliding Gate Automation with CP81 Controller Installation Manual\" (host: www.gatesplus.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "746 E R Z16 / Z20",
+      "name": "FAAC 746 E R Z16 / Z20",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "FAAC 746 E R Sliding Gate Operator Instructions (780D 732099 Rev D EN)",
+          "sourceUrl": "https://faac.blob.core.windows.net/web/1/gate-automation/faac-sliding-gates/746-er-230v-sliding-gate-operator/746-e-r-780d-732099-revd-en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "faac.blob.core.windows.net",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 746 E R Sliding Gate Operator Instructions (780D 732099 Rev D EN)\" (host: faac.blob.core.windows.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "844",
+      "name": "FAAC 844",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 844 Chain and Rack and Pinion Gate Operators Manual",
+          "sourceUrl": "http://www.faacgateopeners.com/FAAC-Manuals/FAAC-844-Chain-and-Rack-and-Pinion-Gate-Operators.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "faacgateopeners.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 844 Chain and Rack and Pinion Gate Operators Manual\" (host: www.faacgateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 844 Manuals",
+          "sourceUrl": "https://www.manualslib.com/manual/836533/Faac-844.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 844 Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "B680H",
+      "name": "FAAC B680H",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "FAAC B680H Installation Manual (732719 Rev G)",
+          "sourceUrl": "https://www.faac.help/en/documents/b680h",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "faac.help",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC B680H Installation Manual (732719 Rev G)\" (host: www.faac.help). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC B680H Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2500145/Faac-B680h.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC B680H Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "FAAC B680H Operating Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/3406257/Faac-B680h.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC B680H Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "FAAC B680H Translation of the Original Instructions (732719 Rev E EN)",
+          "sourceUrl": "https://www.faac.se/data/pdf/manual_b680h_732719_reve_en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "faac.se",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC B680H Translation of the Original Instructions (732719 Rev E EN)\" (host: www.faac.se). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "E024",
+      "name": "FAAC E024",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC E024 Control Board Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1538475/Faac-E024.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC E024 Control Board Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "E024 U",
+      "name": "FAAC E024 U",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC E024 U Control Board Manual",
+          "sourceUrl": "https://seaccesstech.com/wp-content/uploads/faac/E024UboardManual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "seaccesstech.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC E024 U Control Board Manual\" (host: seaccesstech.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "E024S",
+      "name": "FAAC E024S",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC E024S Control Board Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1478966/Faac-E024s.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC E024S Control Board Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC E024S Control Board Manual (Rev D GB)",
+          "sourceUrl": "https://faac.blob.core.windows.net/web/1/accessories-and-control-boards/control-boards/for-swing-gates/e024s-control-board/e024s-revd-gb.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "faac.blob.core.windows.net",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC E024S Control Board Manual (Rev D GB)\" (host: faac.blob.core.windows.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "E145",
+      "name": "FAAC E145",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC E145 Control Board Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1332291/Faac-E145.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC E145 Control Board Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "E145S",
+      "name": "FAAC E145S",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "QUICK_START",
+          "title": "FAAC E145S Quick Start Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1982611/Faac-E145s.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC E145S Quick Start Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "E721",
+      "name": "FAAC E721",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC E721 Control Board Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Faac-E721-9087572.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC E721 Control Board Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "J275 2K HA",
+      "name": "FAAC J275 2K HA",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC J275 2K HA Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1762145/Faac-J275-2k-Ha.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC J275 2K HA Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "J275 H600 SA",
+      "name": "FAAC J275 H600 SA",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "FAAC J275 H600 SA Semi Automatic Traffic and Perimeter Security Bollard Installation Guide",
+          "sourceUrl": "https://device.report/manual/16611482",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "device.report",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC J275 H600 SA Semi Automatic Traffic and Perimeter Security Bollard Installation Guide\" (host: device.report). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "J275 HA 2K20",
+      "name": "FAAC J275 HA 2K20",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC J275 HA 2K20 Security Bollard Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Faac-J275-Ha-2k20-12623115.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC J275 HA 2K20 Security Bollard Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "J275/600 HA / J275/800 HA",
+      "name": "FAAC J275/600 HA / J275/800 HA",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC J275 Bollards Manual",
+          "sourceUrl": "https://fastgateopeners.com/store/media/pdf/j275-bollards-manual.PDF",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "fastgateopeners.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC J275 Bollards Manual\" (host: fastgateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "FAAC J275 HA Automatic Bollard Instructions (732649 Rev D EN)",
+          "sourceUrl": "https://faac.blob.core.windows.net/web/1/root/j275-ha-732649-revd-en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "faac.blob.core.windows.net",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC J275 HA Automatic Bollard Instructions (732649 Rev D EN)\" (host: faac.blob.core.windows.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC J275/600 HA, J275/800 HA Manual (732649 Rev C EN)",
+          "sourceUrl": "https://faac.blob.core.windows.net/web/1/bollards/j275-bollard-series/j275-600-800ha-732649-revc-en1.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "faac.blob.core.windows.net",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC J275/600 HA, J275/800 HA Manual (732649 Rev C EN)\" (host: faac.blob.core.windows.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -72,12 +698,13 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "FAAC S418 Electromechanical Swing Gate Operator Manual",
-          "documentCode": "104301.5",
           "sourceUrl": "https://www.faac.help/en/documents/s418",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "FAAC",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "104301.5",
           "evidence": "On faac.help, FAAC's own documentation site. This URL is the model's document page, not the PDF itself. Document code 104301.5 is read from the file name of the Encon Electronics copy recorded below, which is the manufacturer's numbering rather than the distributor's. Region is US because the distributor copies print FAAC International Inc.'s US address on their covers. Not fetched - egress blocked.",
           "altSources": [
             {

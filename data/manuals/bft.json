@@ -9,30 +9,532 @@
   },
   "models": [
     {
-      "modelCode": "PHOBOS N BT",
-      "name": "PHOBOS N BT 24V Swing Gate Operator",
+      "modelCode": "ARES",
+      "name": "ARES Sliding Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "ARES Installation and User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1333152/Bft-Ares.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualsLib",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ARES HQSC D",
+      "name": "BFT ARES HQSC D",
+      "category": "gate-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Ares Installation and User's Manual",
+          "sourceUrl": "https://manuals.easygates.co.uk/PDF/bft/AresHQSCDEnglish06-11.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.easygates.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Ares Installation and User's Manual\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CELLULA 50",
+      "name": "BFT CELLULA 50",
+      "category": "remotes-accessories",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Cellula 50 Photocell Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1327892/Bft-Cellula-50.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Cellula 50 Photocell Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DEIMOS",
+      "name": "DEIMOS Rack Sliding Gate Actuator",
       "category": "gate-motors",
       "region": "GLOBAL",
       "aliases": [
-        "PHOBOS BT",
-        "PHOBOS N"
+        "DEIMOS BT",
+        "Deimos Ultra"
       ],
       "documents": [
         {
-          "kind": "QUICK_START",
-          "title": "PHOBOS N BT 24V Swing Operator Quick Reference Guide",
-          "sourceUrl": "https://www.bft-automation.com/fileadmin/user_upload/commercial_download/PHOBOS_N_BT_-_24V_-_SWING_OPERATOR_-_MANUAL_-_QUICK_REFERENCE_-_2.pdf",
-          "origin": "MANUFACTURER_ORIGINAL",
+          "kind": "INSTALL_MANUAL",
+          "title": "DEIMOS Installation and User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1137015/Bft-Deimos.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualsLib",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Manufacturer's own domain, commercial download area. Not fetched - egress blocked.",
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Deimos Installation and User's Manual (Istruzioni d'uso e di installazione)",
+          "sourceUrl": "https://trade.electricgatesuk.net/wp-content/uploads/1970/01/BFT-DEIMOS.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "Electric Gates UK (trade)",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Reseller copy, direct PDF, bilingual Italian and English per its own cover. The 1970/01 path segment is an epoch-zero upload date - the reseller's CMS had no real date, so nothing about the document's edition can be read from the URL, and none is recorded. Not fetched - egress blocked.",
           "altSources": [
             {
-              "url": "https://bftgateopeners.com/store/media/pdfs/bft-phobos-bt-n-bt-nl-quick-guide.pdf",
-              "authority": "AUTHORISED_DISTRIBUTOR",
-              "label": "BFT Gate Openers store copy"
+              "url": "https://www.manualslib.com/manual/1137015/Bft-Deimos.html",
+              "authority": "THIRD_PARTY_MIRROR",
+              "label": "ManualsLib listing for the Deimos"
+            },
+            {
+              "url": "https://www.manualslib.com/manual/1147299/Bft-Deimos-Bt.html",
+              "authority": "THIRD_PARTY_MIRROR",
+              "label": "ManualsLib listing for the Deimos BT variant"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "DEIMOS AC A 600",
+      "name": "BFT DEIMOS AC A 600",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Deimos AC A 600 Installation and User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1978233/Bft-Deimos-Ac-A-600.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Deimos AC A 600 Installation and User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DEIMOS BT",
+      "name": "BFT DEIMOS BT",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Deimos BT Installation and User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1147299/Bft-Deimos-Bt.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Deimos BT Installation and User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DEIMOS BT A 600",
+      "name": "BFT DEIMOS BT A 600",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Deimos BT A 600 Installation and User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1516658/Bft-Deimos-Bt-A-600.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Deimos BT A 600 Installation and User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ECOSOL PHOBOS",
+      "name": "ECOSOL PHOBOS Solar Swing Gate Kit",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "ECOSOL PHOBOS Installation Manual",
+          "sourceUrl": "https://bftgateopeners.com/store/media/pdfs/bft-ecosol-phobos-installation-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "BFT Gate Openers",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Distributor store copy. Region recorded as US from the distributor's market; not confirmed from the document. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ERIS A30",
+      "name": "BFT ERIS A30",
+      "category": "remotes-accessories",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "SAFETY_DOCUMENT",
+          "title": "BFT Eris A30 Photocell Safety Edge Installation Manual",
+          "sourceUrl": "https://manuals.plus/m/bd3d1c3d4cba499e34b9cace1c40e7668044feecffacd4c3cec9a277e73612a6",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Eris A30 Photocell Safety Edge Installation Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "FAF2",
+      "name": "BFT FAF2",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT FAF2 Installation and User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1724446/Bft-Faf2.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT FAF2 Installation and User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "FL130",
+      "name": "BFT FL130",
+      "category": "remotes-accessories",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "BFT FL130 Photocell Gate Sensor Instruction Manual",
+          "sourceUrl": "https://manuals.plus/asin/B01M8LOJGP",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT FL130 Photocell Gate Sensor Instruction Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate and Barrier Automation",
+      "name": "BFT Gate and Barrier Automation",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BFT Automation UK Instruction Manuals Index",
+          "sourceUrl": "https://www.bftautomationuk.com/resources/instruction-manuals.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "bftautomationuk.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Automation UK Instruction Manuals Index\" (host: www.bftautomationuk.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Automation",
+      "name": "BFT Gate Automation",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BFT Literature Download Area Index",
+          "sourceUrl": "https://www.bft-automation.com/en_MF/our-voice/literature-download-area/",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "bft-automation.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Literature Download Area Index\" (host: www.bft-automation.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Openers",
+      "name": "BFT Gate Openers",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BFT Gate Openers Manuals Index",
+          "sourceUrl": "https://bftgateopeners.com/store/manuals",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "bftgateopeners.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Gate Openers Manuals Index\" (host: bftgateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GIOTTO 30-60 BT",
+      "name": "BFT GIOTTO 30-60 BT",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BFT Giotto 30-60 24V Boom Barrier Manual",
+          "sourceUrl": "https://www.bft-automation.com/fileadmin/user_upload/commercial_download/GIOTTO_30.60_-_24V_-_BOOM_BARRIER_-_MANUAL.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "bft-automation.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Giotto 30-60 24V Boom Barrier Manual\" (host: www.bft-automation.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GIOTTO BT A 30-60 U",
+      "name": "BFT GIOTTO BT A 30-60 U",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Giotto BT A 30-60 U and Michelangelo BT A Installation and User Manual",
+          "sourceUrl": "https://manualzz.com/doc/en/61026857/bft-giotto-bt-a-30-60-u-installation-and-user-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualzz.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Giotto BT A 30-60 U and Michelangelo BT A Installation and User Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GIOTTO BT A U",
+      "name": "BFT GIOTTO BT A U",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "BFT Giotto BT A U Instruction Manual",
+          "sourceUrl": "https://www.bftautomationuk.com/files/42/All-instruction-manuals/43/Giotto-BT-A-U---Instruction-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "bftautomationuk.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Giotto BT A U Instruction Manual\" (host: www.bftautomationuk.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GIOTTO BT A ULTRA 36",
+      "name": "BFT GIOTTO BT A ULTRA 36",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Giotto Ultra 36 Automatic Barrier Installation Manual (D814017)",
+          "sourceUrl": "https://bftgateopeners.com/store/media/pdfs/BFT-Giotto-Ultra-36-Automatic-Barrier-Opener_Installation-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "bftgateopeners.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Giotto Ultra 36 Automatic Barrier Installation Manual (D814017)\" (host: bftgateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ICARO",
+      "name": "BFT ICARO",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Icaro Installation and User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1062751/Bft-Icaro.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Icaro Installation and User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "JOINT",
+      "name": "BFT JOINT",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Joint Installation and User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1119580/Bft-Joint.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Joint Installation and User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LIBRA",
+      "name": "BFT LIBRA",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Libra Control Board Installation and User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1270638/Bft-Libra.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Libra Control Board Installation and User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MICHELANGELO 24V",
+      "name": "BFT MICHELANGELO 24V",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Michelangelo 24V Boom Barrier Installation and User's Manual",
+          "sourceUrl": "https://www.bft-automation.com/fileadmin/user_upload/commercial_download/MICHELANGELO_-_24V_-_BOOM_BARRIER_-_MANUAL_02.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "bft-automation.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Michelangelo 24V Boom Barrier Installation and User's Manual\" (host: www.bft-automation.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MICHELANGELO BT A",
+      "name": "BFT MICHELANGELO BT A",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "BFT Michelangelo BT A Automatic Barrier Instruction Manual",
+          "sourceUrl": "https://manualzz.com/doc/52022065/bft-michelangelo-bt-a-automatic-barrier-instruction-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualzz.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Michelangelo BT A Automatic Barrier Instruction Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "PHOBOS",
+      "name": "BFT PHOBOS",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Phobos Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1310893/Bft-Phobos.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Phobos Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -53,87 +555,326 @@
           "publisher": "ManualsLib",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
     {
-      "modelCode": "DEIMOS",
-      "name": "DEIMOS Rack Sliding Gate Actuator",
+      "modelCode": "PHOBOS N BT",
+      "name": "PHOBOS N BT 24V Swing Gate Operator",
       "category": "gate-motors",
       "region": "GLOBAL",
+      "aliases": [
+        "PHOBOS BT",
+        "PHOBOS N"
+      ],
       "documents": [
         {
-          "kind": "INSTALL_MANUAL",
-          "title": "DEIMOS Installation and User Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1137015/Bft-Deimos.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualsLib",
+          "kind": "QUICK_START",
+          "title": "PHOBOS N BT 24V Swing Operator Quick Reference Guide",
+          "sourceUrl": "https://www.bft-automation.com/fileadmin/user_upload/commercial_download/PHOBOS_N_BT_-_24V_-_SWING_OPERATOR_-_MANUAL_-_QUICK_REFERENCE_-_2.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Manufacturer's own domain, commercial download area. Not fetched - egress blocked.",
+          "altSources": [
+            {
+              "url": "https://bftgateopeners.com/store/media/pdfs/bft-phobos-bt-n-bt-nl-quick-guide.pdf",
+              "authority": "AUTHORISED_DISTRIBUTOR",
+              "label": "BFT Gate Openers store copy"
+            }
+          ]
         },
         {
           "kind": "INSTALL_MANUAL",
-          "title": "BFT Deimos Installation and User's Manual (Istruzioni d'uso e di installazione)",
-          "sourceUrl": "https://trade.electricgatesuk.net/wp-content/uploads/1970/01/BFT-DEIMOS.pdf",
+          "title": "BFT Phobos N BT Installation Manual",
+          "sourceUrl": "https://archive.org/details/manualzilla-id-7317938",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "Electric Gates UK (trade)",
+          "publisher": "archive.org",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Phobos N BT Installation Manual\" (host: archive.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "PHOBOS N L BT / THALIA",
+      "name": "BFT PHOBOS N L BT / THALIA",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Phobos N L BT Thalia Control Board Installation Manual",
+          "sourceUrl": "https://bftgateopeners.com/store/media/pdfs/bft-phobos-n-l-bt-thalia-control-board-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "bftgateopeners.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Phobos N L BT Thalia Control Board Installation Manual\" (host: bftgateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "PILLAR B 275/600.6C L",
+      "name": "BFT PILLAR B 275/600.6C L",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "BFT Pillar B Automatic Bollard Instruction Manual",
+          "sourceUrl": "https://www.bftautomationuk.com/files/42/All-instruction-manuals/41/Pillar-B---Instruction-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "bftautomationuk.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Pillar B Automatic Bollard Instruction Manual\" (host: www.bftautomationuk.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RIGEL 5",
+      "name": "BFT RIGEL 5",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BFT Rigel 5 Control Panel Manual",
+          "sourceUrl": "https://bftgateopeners.com/store/media/pdfs/bft-rigel-5-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "bftgateopeners.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Rigel 5 Control Panel Manual\" (host: bftgateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "STOPPY",
+      "name": "BFT STOPPY",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Stoppy Installation and User's Manual",
+          "sourceUrl": "https://trade.electricgatesuk.net/wp-content/uploads/2015/11/BFT-Stoppy.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "trade.electricgatesuk.net",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Stoppy Installation and User's Manual\" (host: trade.electricgatesuk.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "STOPPY B",
+      "name": "BFT STOPPY B",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "BFT Stoppy B Bollard Instruction Manual",
+          "sourceUrl": "https://manualzz.com/doc/52022075/bft-stoppy-b-bollard-instruction-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualzz.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Stoppy B Bollard Instruction Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "STOPPY B 115-500",
+      "name": "BFT STOPPY B 115-500",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BFT Stoppy B 115-500 Automatic Retractable Bollard Manual",
+          "sourceUrl": "https://manuals.plus/bft/stoppy-b-115-500-automatic-retractable-bollard-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Stoppy B 115-500 Automatic Retractable Bollard Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "STOPPY MBB",
+      "name": "BFT STOPPY MBB",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "BFT Stoppy MBB Bollard Instruction Manual",
+          "sourceUrl": "https://manualzz.com/doc/52022076/bft-stoppy-mbb-bollard-instruction-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualzz.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Stoppy MBB Bollard Instruction Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "STOPPY MBB 219-500.C / 219-700.C",
+      "name": "BFT STOPPY MBB 219-500.C / 219-700.C",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT Stoppy MBB Automatic Electromechanical Bollard Installation Manual",
+          "sourceUrl": "https://bftgateopeners.com/store/media/pdfs/BFT-STOPPY-MBB_Automatic-Electromechanical-Bollard_Installation-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "bftgateopeners.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Stoppy MBB Automatic Electromechanical Bollard Installation Manual\" (host: bftgateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "STOPPY with PERSEO N",
+      "name": "BFT STOPPY with PERSEO N",
+      "category": "gate-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BFT Stoppy with Perseo N Manual (EasyGates)",
+          "sourceUrl": "https://manuals.easygates.co.uk/bft-stoppy-perseo-n/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.easygates.co.uk",
           "region": "UK",
           "rights": "LINK_ONLY",
-          "evidence": "Reseller copy, direct PDF, bilingual Italian and English per its own cover. The 1970/01 path segment is an epoch-zero upload date - the reseller's CMS had no real date, so nothing about the document's edition can be read from the URL, and none is recorded. Not fetched - egress blocked.",
-          "altSources": [
-            {
-              "url": "https://www.manualslib.com/manual/1137015/Bft-Deimos.html",
-              "authority": "THIRD_PARTY_MIRROR",
-              "label": "ManualsLib listing for the Deimos"
-            },
-            {
-              "url": "https://www.manualslib.com/manual/1147299/Bft-Deimos-Bt.html",
-              "authority": "THIRD_PARTY_MIRROR",
-              "label": "ManualsLib listing for the Deimos BT variant"
-            }
-          ]
-        }
-      ],
-      "aliases": [
-        "DEIMOS BT",
-        "Deimos Ultra"
-      ]
-    },
-    {
-      "modelCode": "ARES",
-      "name": "ARES Sliding Gate Operator",
-      "category": "gate-motors",
-      "region": "GLOBAL",
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "ARES Installation and User Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1333152/Bft-Ares.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualsLib",
-          "region": "GLOBAL",
-          "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Stoppy with Perseo N Manual (EasyGates)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
     {
-      "modelCode": "ECOSOL PHOBOS",
-      "name": "ECOSOL PHOBOS Solar Swing Gate Kit",
+      "modelCode": "THALIA",
+      "name": "BFT THALIA",
       "category": "gate-motors",
-      "region": "GLOBAL",
+      "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
-          "title": "ECOSOL PHOBOS Installation Manual",
-          "sourceUrl": "https://bftgateopeners.com/store/media/pdfs/bft-ecosol-phobos-installation-manual.pdf",
+          "title": "BFT Thalia Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2001333/Bft-Thalia.html",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "BFT Gate Openers",
-          "region": "US",
+          "publisher": "manualslib.com",
+          "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor store copy. Region recorded as US from the distributor's market; not confirmed from the document. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Thalia Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "THALIA L",
+      "name": "BFT THALIA L",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BFT Thalia L Addendum",
+          "sourceUrl": "https://www.manualslib.com/manual/2764922/Bft-Thalia-L.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Thalia L Addendum\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BFT Thalia L Control Panel Manual (EasyGates)",
+          "sourceUrl": "https://manuals.easygates.co.uk/bft-thalia-l/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.easygates.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Thalia L Control Panel Manual (EasyGates)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "BFT Thalia L Instruction Manual (D814123)",
+          "sourceUrl": "https://www.bftautomationuk.com/files/42/All-instruction-manuals/71/Thalia-L---Instruction-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "bftautomationuk.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Thalia L Instruction Manual (D814123)\" (host: www.bftautomationuk.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "THALIA LIGHT",
+      "name": "BFT THALIA LIGHT",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "BFT Thalia Light Control Board User Manual",
+          "sourceUrl": "https://manuals.plus/asin/B01M4K8AZ3",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Thalia Light Control Board User Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

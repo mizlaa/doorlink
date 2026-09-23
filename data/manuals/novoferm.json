@@ -9,62 +9,23 @@
   },
   "models": [
     {
-      "modelCode": "R-500",
-      "name": "Novoferm R-500 / R-700 Operator",
+      "modelCode": "Garage Doors",
+      "name": "Novoferm Garage Doors",
       "category": "garage-door-openers",
       "region": "EU",
-      "aliases": [
-        "R-700",
-        "R500",
-        "R700",
-        "WN 931002-67-6-50"
-      ],
+      "aliases": [],
       "documents": [
         {
-          "kind": "INSTALL_MANUAL",
-          "title": "Novoferm R-500 / R-700 Manual",
-          "documentCode": "WN 931002-67-6-50",
-          "version": "06-2020",
-          "sourceUrl": "https://www.novoferm.pl/fileadmin/user_upload/manual.pdf",
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Novoferm Installation and Assembly Instructions Index",
+          "sourceUrl": "https://www.novoferm.com/downloads/installation-assembly-instructions",
           "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "Novoferm",
+          "publisher": "novoferm.com",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On novoferm.pl, Novoferm's Polish arm. The document code WN 931002-67-6-50 and the date 06-2020 come from the document's own header as rendered in the search result, not from the file name - the file is called just manual.pdf, which is a generic name and a reason to re-check that this URL still serves this document when the link is verified. Not fetched - egress blocked."
-        }
-      ]
-    },
-    {
-      "modelCode": "Novoport III",
-      "name": "Novoferm Novoport III Operator",
-      "category": "garage-door-openers",
-      "region": "EU",
-      "aliases": [
-        "NovoPort III",
-        "Novoport 3"
-      ],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Novoferm Novoport III Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1669550/Novoferm-Novoport-Iii.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualsLib",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. No novoferm.com URL for the Novoport III surfaced, so it stays third-party while the R-500 is manufacturer-hosted. Not fetched - egress blocked.",
-          "altSources": [
-            {
-              "url": "https://manualzz.com/doc/en/4488763/novoferm-novoport-iii-manual",
-              "authority": "THIRD_PARTY_MIRROR",
-              "label": "Manualzz copy of the NovoPort III manual"
-            },
-            {
-              "url": "https://manualzz.com/doc/en/4488761/navodila-za-monta%C5%BEo-in-programiranje-pogona-novoport---",
-              "authority": "THIRD_PARTY_MIRROR",
-              "label": "Manualzz copy of a Slovenian-language NovoPort assembly and programming manual"
-            }
-          ]
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Novoferm Installation and Assembly Instructions Index\" (host: www.novoferm.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -85,49 +46,9 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Tormatic is the brand on this operator's documentation; it is filed under Novoferm here because the aggregator does, not because the corporate relationship was confirmed. Not fetched - egress blocked."
-        }
-      ]
-    },
-    {
-      "modelCode": "Novoport IV",
-      "name": "Novoferm NovoPort IV Operator",
-      "category": "garage-door-openers",
-      "region": "EU",
-      "aliases": [
-        "NovoPort 4"
-      ],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Novoferm NovoPort IV Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1780013/Novoferm-Novoport-Iv.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "Aggregator",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. The document names Novoferm tormatic GmbH and tormatic.de as the manufacturer, which is how the Tormatic branding on these operators connects to Novoferm. No novoferm.com or tormatic.de document URL surfaced. Not fetched - egress blocked."
-        }
-      ]
-    },
-    {
-      "modelCode": "Novoport Speed",
-      "name": "Novoferm NovoPort Speed Operator",
-      "category": "garage-door-openers",
-      "region": "EU",
-      "aliases": [
-        "NovoPort Speed"
-      ],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Novoferm NovoPort Speed Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/3432352/Novoferm-Novoport-Speed.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "Aggregator",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Kept separate from the NovoPort III and IV: the Speed is a distinct variant with its own manual, not an edition of theirs. No novoferm.com or tormatic.de document URL surfaced. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Tormatic is the brand on this operator's documentation; it is filed under Novoferm here because the aggregator does, not because the corporate relationship was confirmed. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -148,7 +69,152 @@
           "publisher": "Aggregator",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing, 31 pages per a second aggregator. A GTA 403 was searched for in the same query and returned nothing; the 403 that exists is the Novomatic, and no GTA record is made. No novoferm.com or tormatic.de document URL surfaced. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing, 31 pages per a second aggregator. A GTA 403 was searched for in the same query and returned nothing; the 403 that exists is the Novomatic, and no GTA record is made. No novoferm.com or tormatic.de document URL surfaced. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NOVOMATIC 443",
+      "name": "Novoferm NOVOMATIC 443",
+      "category": "garage-door-openers",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Novoferm Novomatic 443 Original Assembly and Operating Instructions (N-443)",
+          "sourceUrl": "https://www.novoferm.co.uk/fileadmin/novoferm_uk/Bilder/Brochures/Novomatic-443.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "novoferm.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Novoferm Novomatic 443 Original Assembly and Operating Instructions (N-443)\" (host: www.novoferm.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Novoport III",
+      "name": "Novoferm Novoport III Operator",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [
+        "NovoPort III",
+        "Novoport 3",
+        "NOVOPORT III"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Novoferm Novoport III Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1669550/Novoferm-Novoport-Iii.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualsLib",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing. No novoferm.com URL for the Novoport III surfaced, so it stays third-party while the R-500 is manufacturer-hosted. Not fetched - egress blocked.",
+          "altSources": [
+            {
+              "url": "https://manualzz.com/doc/en/4488763/novoferm-novoport-iii-manual",
+              "authority": "THIRD_PARTY_MIRROR",
+              "label": "Manualzz copy of the NovoPort III manual"
+            },
+            {
+              "url": "https://manualzz.com/doc/en/4488761/navodila-za-monta%C5%BEo-in-programiranje-pogona-novoport---",
+              "authority": "THIRD_PARTY_MIRROR",
+              "label": "Manualzz copy of a Slovenian-language NovoPort assembly and programming manual"
+            }
+          ]
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Novoferm NovoPort III Garage Door Opener Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Novoferm-Novoport-Iii-10647128.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Novoferm NovoPort III Garage Door Opener Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Novoport IV",
+      "name": "Novoferm NovoPort IV Operator",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [
+        "NovoPort 4"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Novoferm NovoPort IV Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1780013/Novoferm-Novoport-Iv.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "Aggregator",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing. The document names Novoferm tormatic GmbH and tormatic.de as the manufacturer, which is how the Tormatic branding on these operators connects to Novoferm. No novoferm.com or tormatic.de document URL surfaced. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Novoport Speed",
+      "name": "Novoferm NovoPort Speed Operator",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [
+        "NovoPort Speed"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Novoferm NovoPort Speed Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/3432352/Novoferm-Novoport-Speed.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "Aggregator",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing. Kept separate from the NovoPort III and IV: the Speed is a distinct variant with its own manual, not an edition of theirs. No novoferm.com or tormatic.de document URL surfaced. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "R-500",
+      "name": "Novoferm R-500 / R-700 Operator",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [
+        "R-700",
+        "R500",
+        "R700",
+        "WN 931002-67-6-50"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Novoferm R-500 / R-700 Manual",
+          "sourceUrl": "https://www.novoferm.pl/fileadmin/user_upload/manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "Novoferm",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "06-2020",
+          "documentCode": "WN 931002-67-6-50",
+          "evidence": "On novoferm.pl, Novoferm's Polish arm. The document code WN 931002-67-6-50 and the date 06-2020 come from the document's own header as rendered in the search result, not from the file name - the file is called just manual.pdf, which is a generic name and a reason to re-check that this URL still serves this document when the link is verified. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

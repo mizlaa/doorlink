@@ -1,0 +1,135 @@
+{
+  "manufacturer": {
+    "name": "Steel-Craft",
+    "slug": "steel-craft",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "1255SCR",
+      "name": "Steel-Craft 1255SCR",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Steel-Craft 1255SCR Garage Door Opener Owner's Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1151991/Steel-Craft-1255scr.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Steel-Craft 1255SCR Garage Door Opener Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Doors and Openers",
+      "name": "Steel-Craft Doors and Openers",
+      "category": "garage-door-openers",
+      "region": "CA",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Steel-Craft Manuals, Specs and Brochures Index",
+          "sourceUrl": "https://steel-craft.ca/resources/manuals-specs-brochures/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "steel-craft.ca",
+          "region": "CA",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Steel-Craft Manuals, Specs and Brochures Index\" (host: steel-craft.ca). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Garage Door Openers",
+      "name": "Steel-Craft Garage Door Openers",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Steel-Craft Garage Door Opener Manuals Index",
+          "sourceUrl": "https://www.manualslib.com/brand/steel-craft/garage-door-opener.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Steel-Craft Garage Door Opener Manuals Index\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Residential Double Wide",
+      "name": "Steel-Craft Residential Double Wide",
+      "category": "garage-door-openers",
+      "region": "CA",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Steel-Craft Residential Double Wide Garage Door Installation Instructions",
+          "sourceUrl": "https://steel-craft.ca/manuals/InstallationDoubleWide.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "steel-craft.ca",
+          "region": "CA",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Steel-Craft Residential Double Wide Garage Door Installation Instructions\" (host: steel-craft.ca). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Residential Single Wide",
+      "name": "Steel-Craft Residential Single Wide",
+      "category": "garage-door-openers",
+      "region": "CA",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Steel-Craft Residential Single Wide Garage Door Installation Instructions",
+          "sourceUrl": "https://steel-craft.ca/manuals/InstallationSingleWide.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "steel-craft.ca",
+          "region": "CA",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Steel-Craft Residential Single Wide Garage Door Installation Instructions\" (host: steel-craft.ca). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "THERMODOR",
+      "name": "Steel-Craft THERMODOR",
+      "category": "garage-door-openers",
+      "region": "CA",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Steel-Craft Thermodor Installation Instructions and Maintenance Manual",
+          "sourceUrl": "https://steel-craft.ca/manuals/InstallationThermodor.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "steel-craft.ca",
+          "region": "CA",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Steel-Craft Thermodor Installation Instructions and Maintenance Manual\" (host: steel-craft.ca). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

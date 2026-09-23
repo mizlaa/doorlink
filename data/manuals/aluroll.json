@@ -9,11 +9,77 @@
   },
   "models": [
     {
+      "modelCode": "CLASSIC / COMPACT",
+      "name": "Aluroll CLASSIC / COMPACT",
+      "category": "roller-shutter-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Aluroll Classic and Compact Shutter Installation Manual",
+          "sourceUrl": "https://www.ukrollershutters.com/wp-content/uploads/2021/12/Classic_-Compact-Shutter-Installation-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ukrollershutters.com",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Aluroll Classic and Compact Shutter Installation Manual\" (host: www.ukrollershutters.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CLASSIC / COMPACT / ELITE",
+      "name": "Aluroll CLASSIC / COMPACT / ELITE",
+      "category": "garage-door-openers",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Aluroll Roller Garage Door Installation Manual",
+          "sourceUrl": "https://arridgegaragedoors.co.uk/uploads/pdfs/New+Roller+Garage+Door+Installation+Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "arridgegaragedoors.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Aluroll Roller Garage Door Installation Manual\" (host: arridgegaragedoors.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Roller Garage Doors and Shutters",
+      "name": "Aluroll Roller Garage Doors and Shutters",
+      "category": "roller-shutter-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Aluroll Installer Zone Downloads Index",
+          "sourceUrl": "https://www.aluroll.co.uk/installer-zone/downloads/",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "aluroll.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Aluroll Installer Zone Downloads Index\" (host: www.aluroll.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "Secureroll Classic",
       "name": "Aluroll Secureroll Classic and Compact Roller Garage Door",
       "category": "roller-shutter-motors",
       "region": "UK",
-      "aliases": ["Secureroll", "Secureroll Compact"],
+      "aliases": [
+        "Secureroll",
+        "Secureroll Compact"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,7 +89,9 @@
           "publisher": "Chamberlain Doors",
           "region": "UK",
           "rights": "LINK_ONLY",
-          "evidence": "Installer-hosted copy. The document's own heading reads \"Classic & Compact Roller Garage Door Installation Manual - Manufactured by:\", which is what ties it to Aluroll. Note the host is Chamberlain Doors, a UK door installer, and has nothing to do with Chamberlain the opener manufacturer already in this library - a collision worth flagging before someone merges them. The 2025/01 path segment is the installer's upload month, not the document's edition. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Installer-hosted copy. The document's own heading reads \"Classic & Compact Roller Garage Door Installation Manual - Manufactured by:\", which is what ties it to Aluroll. Note the host is Chamberlain Doors, a UK door installer, and has nothing to do with Chamberlain the opener manufacturer already in this library - a collision worth flagging before someone merges them. The 2025/01 path segment is the installer's upload month, not the document's edition. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

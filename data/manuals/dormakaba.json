@@ -9,24 +9,130 @@
   },
   "models": [
     {
-      "modelCode": "ES 200 EASY",
-      "name": "ES 200 EASY Sliding Door Operator",
+      "modelCode": "Automatic Sliding Doors",
+      "name": "dormakaba Automatic Sliding Doors",
       "category": "automatic-pedestrian-doors",
       "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "dormakaba Automatic Sliding Door Operating and Maintenance Manual",
+          "sourceUrl": "https://manuals.plus/m/7784d72302e67059191c32dbbdb4715c0baa054c2062c6e424e6d5358b6caeb7",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"dormakaba Automatic Sliding Door Operating and Maintenance Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ED 100 / ED 250",
+      "name": "dormakaba ED 100 / ED 250",
+      "category": "automatic-pedestrian-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "dormakaba ED 100 / ED 250 User Manual (059809-45532/17130)",
+          "sourceUrl": "https://my.dormakaba.com/medias/059809-230421-ED-100-ED-250-user-man-en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "my.dormakaba.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED 100 / ED 250 User Manual (059809-45532/17130)\" (host: my.dormakaba.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ED100",
+      "name": "dormakaba ED100 / ED250 Swing Door Operator",
+      "category": "garage-door-openers",
+      "region": "EU",
       "aliases": [
-        "ES200 EASY",
-        "ES200EASY"
+        "ED250",
+        "ED100/ED250",
+        "ED100 SA",
+        "ED250 SA"
       ],
       "documents": [
         {
-          "kind": "SPEC_SHEET",
-          "title": "ES 200 EASY Sliding Door Operator Technical Product Brochure (EN)",
-          "language": "en",
-          "sourceUrl": "https://my.dormakaba.com/medias/dormakaba-sliding-door-operator-ES200EASY-technical-brochure-en.pdf",
-          "origin": "MANUFACTURER_ORIGINAL",
+          "kind": "INSTALL_MANUAL",
+          "title": "dormakaba ED100 / ED250 Installation Guide",
+          "sourceUrl": "https://www.manualslib.com/products/Dormakaba-Ed100-8830099.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Manufacturer's own media domain. The surfaced URL carried a long base64 context query string, which is a session or CMS parameter rather than part of the document's address; the bare path is recorded and the harvester will confirm whether it resolves. Recorded as a spec sheet, not an installation manual, because the title says brochure. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator product page rather than a single document - search reports 24 ED100 manuals behind it across installation, service, mounting, owner's and maintenance types. Recorded at that level because no individual document URL surfaced, and picking one arbitrarily would misrepresent which document this record points at. Not fetched - egress blocked.",
+          "altSources": [
+            {
+              "url": "https://www.scribd.com/document/906734171/9",
+              "authority": "THIRD_PARTY_MIRROR",
+              "label": "Document-sharing copy covering ED100/ED250 SA parameter values and firmware updates via handheld terminal"
+            }
+          ]
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "dormakaba ED100 Service Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1446137/Dormakaba-Ed100.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED100 Service Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ED100 / ED250",
+      "name": "dormakaba ED100 / ED250",
+      "category": "automatic-pedestrian-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "dormakaba ED100/ED250 Automatic Swing Door Operators Owner's Manual (DL4614-030)",
+          "sourceUrl": "https://www.concordpacific.com/wp-content/uploads/2024/03/ed100-owner-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "concordpacific.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED100/ED250 Automatic Swing Door Operators Owner's Manual (DL4614-030)\" (host: www.concordpacific.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ED50 / ED100 / ED250",
+      "name": "dormakaba ED50 / ED100 / ED250",
+      "category": "automatic-pedestrian-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "dormakaba ED50/ED100/ED250 Swing Door Operators Setup Manual",
+          "sourceUrl": "https://www.terrauniversal.com/media/asset-library/d/o/dormakaba_ed100_250_setup_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "terrauniversal.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED50/ED100/ED250 Swing Door Operators Setup Manual\" (host: www.terrauniversal.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -42,13 +148,15 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "Dorma ES 200 Sliding Door Operator Guide (NZ, 2016)",
-          "documentCode": "120000000582",
           "sourceUrl": "https://www.scribd.com/document/701060338/120000000582-ES200-NZ-2016-6-LR",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "Scribd",
           "region": "NZ",
           "rights": "LINK_ONLY",
-          "evidence": "Document-sharing site, not a manufacturer source, and Scribd commonly gates downloads. Recorded because the document code and the NZ regional edition are identifiable from the title. The harvester will likely mark this RESTRICTED. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "120000000582",
+          "evidence": "Document-sharing site, not a manufacturer source, and Scribd commonly gates downloads. Recorded because the document code and the NZ regional edition are identifiable from the title. The harvester will likely mark this RESTRICTED. Not fetched - egress blocked.",
+          "altSources": []
         },
         {
           "kind": "USER_MANUAL",
@@ -58,6 +166,7 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing of the user-facing document, kept alongside the installation material already on this model because they serve different readers. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -75,33 +184,25 @@
       ]
     },
     {
-      "modelCode": "ED100",
-      "name": "dormakaba ED100 / ED250 Swing Door Operator",
+      "modelCode": "ES 200 EASY",
+      "name": "ES 200 EASY Sliding Door Operator",
       "category": "automatic-pedestrian-doors",
       "region": "EU",
       "aliases": [
-        "ED250",
-        "ED100/ED250",
-        "ED100 SA",
-        "ED250 SA"
+        "ES200 EASY",
+        "ES200EASY"
       ],
       "documents": [
         {
-          "kind": "INSTALL_MANUAL",
-          "title": "dormakaba ED100 / ED250 Installation Guide",
-          "sourceUrl": "https://www.manualslib.com/products/Dormakaba-Ed100-8830099.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualsLib",
+          "kind": "SPEC_SHEET",
+          "title": "ES 200 EASY Sliding Door Operator Technical Product Brochure (EN)",
+          "sourceUrl": "https://my.dormakaba.com/medias/dormakaba-sliding-door-operator-ES200EASY-technical-brochure-en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator product page rather than a single document - search reports 24 ED100 manuals behind it across installation, service, mounting, owner's and maintenance types. Recorded at that level because no individual document URL surfaced, and picking one arbitrarily would misrepresent which document this record points at. Not fetched - egress blocked.",
-          "altSources": [
-            {
-              "url": "https://www.scribd.com/document/906734171/9",
-              "authority": "THIRD_PARTY_MIRROR",
-              "label": "Document-sharing copy covering ED100/ED250 SA parameter values and firmware updates via handheld terminal"
-            }
-          ]
+          "language": "en",
+          "evidence": "Manufacturer's own media domain. The surfaced URL carried a long base64 context query string, which is a session or CMS parameter rather than part of the document's address; the bare path is recorded and the harvester will confirm whether it resolves. Recorded as a spec sheet, not an installation manual, because the title says brochure. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

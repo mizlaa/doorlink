@@ -9,11 +9,67 @@
   },
   "models": [
     {
+      "modelCode": "2060 evo+",
+      "name": "SOMMER 2060 evo+ / 2080 Garage Door Opener (US)",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [
+        "2080",
+        "evo+",
+        "evo plus",
+        "46900V024"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "2060 evo+ / 2080 Garage Door Opener Manual, Rev C (US-EN)",
+          "sourceUrl": "https://www.sommer.eu/SOMMER/Downloads/Montageanleitung/Garagentorantriebe/USA/evo/usa_evo-plus_46900V024_122022_0-DRE_Rev-C_US-EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "SOMMER",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "12-2022",
+          "documentCode": "46900V024",
+          "revision": "Rev-C",
+          "evidence": "On sommer.eu, in the current (non-archive) branch of the instructions tree, under a USA folder - which is why the region is US even though the host is the German site. Document code 46900V024, date 122022 and Rev-C are all segments of the file name. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DUO VISION 500 / 650 / 800",
+      "name": "SOMMER DUO VISION 500 / 650 / 800",
+      "category": "garage-door-openers",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer Duo Vision 500, 650, 800 Manual",
+          "sourceUrl": "https://arridgegaragedoors.co.uk/uploads/pdfs/Sommer%20Duo%20500%20650%20800.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "arridgegaragedoors.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer Duo Vision 500, 650, 800 Manual\" (host: arridgegaragedoors.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "duo vision 650",
       "name": "SOMMER duo vision 650 Garage Door Drive",
       "category": "garage-door-openers",
       "region": "EU",
-      "aliases": ["duo vision 500", "duo vision 800", "duo rapido 650", "duo vision", "3010V000"],
+      "aliases": [
+        "duo vision 500",
+        "duo vision 800",
+        "duo rapido 650",
+        "duo vision",
+        "3010V000"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,6 +79,7 @@
           "publisher": "SOMMER",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "On sommer.eu, the manufacturer's own domain, English edition. Note the Archiv path segment: SOMMER files this under archived instructions, so it covers a superseded range and a current replacement may exist elsewhere in the tree. Recorded anyway, because installed duo vision drives still need it. One document covers all four drives, so they share this record as aliases. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -45,24 +102,287 @@
       ]
     },
     {
-      "modelCode": "2060 evo+",
-      "name": "SOMMER 2060 evo+ / 2080 Garage Door Opener (US)",
+      "modelCode": "Garage Door Openers",
+      "name": "SOMMER Garage Door Openers",
       "category": "garage-door-openers",
-      "region": "US",
-      "aliases": ["2080", "evo+", "evo plus", "46900V024"],
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer Garage Door Opener Manuals and Programming Instructions Index",
+          "sourceUrl": "https://shopactiondirect.com/sommer-product-manuals/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "shopactiondirect.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer Garage Door Opener Manuals and Programming Instructions Index\" (host: shopactiondirect.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer Manuals and Brochures Index",
+          "sourceUrl": "https://canada-sommer.com/Manuals-Brochures_ep_43.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "canada-sommer.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer Manuals and Brochures Index\" (host: canada-sommer.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MARATHON SPRINT DUO",
+      "name": "SOMMER MARATHON SPRINT DUO",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer Marathon Sprint Duo Garage Door Opener Manual",
+          "sourceUrl": "https://archive.org/details/sommer-marathon-sprint-duo-garage-door-opener",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "archive.org",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer Marathon Sprint Duo Garage Door Opener Manual\" (host: archive.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "S 9050 / S 9060 / S 9080 / S 9110 BASE S3",
+      "name": "SOMMER S 9050 / S 9060 / S 9080 / S 9110 BASE S3",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
-          "title": "2060 evo+ / 2080 Garage Door Opener Manual, Rev C (US-EN)",
-          "documentCode": "46900V024",
-          "revision": "Rev-C",
-          "version": "12-2022",
-          "sourceUrl": "https://www.sommer.eu/SOMMER/Downloads/Montageanleitung/Garagentorantriebe/USA/evo/usa_evo-plus_46900V024_122022_0-DRE_Rev-C_US-EN.pdf",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "SOMMER",
-          "region": "US",
+          "title": "Sommer Base S3 Series Garage Door Operator Installation and Operating Manual",
+          "sourceUrl": "https://manuals.plus/m/d095e342a20c0e60f2edc6824cce99ad17e9d2be144d9b0e11922ad1dc3a6cdd",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On sommer.eu, in the current (non-archive) branch of the instructions tree, under a USA folder - which is why the region is US even though the host is the German site. Document code 46900V024, date 122022 and Rev-C are all segments of the file name. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer Base S3 Series Garage Door Operator Installation and Operating Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "S 9060 BASE",
+      "name": "SOMMER S 9060 BASE",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Sommer S 9060 Base Garage Door Opener Instruction Manual",
+          "sourceUrl": "https://manuals.plus/sommer/s-9060-base-garage-door-opener-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer S 9060 Base Garage Door Opener Instruction Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "S 9060 BASE+",
+      "name": "SOMMER S 9060 BASE+",
+      "category": "garage-door-openers",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer S 9060 Base+ Garage Door Operator Manual (46900V000)",
+          "sourceUrl": "https://arridgegaragedoors.co.uk/uploads/pdfs/Sommer%20Base+.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "arridgegaragedoors.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer S 9060 Base+ Garage Door Operator Manual (46900V000)\" (host: arridgegaragedoors.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "S 9060 LASER",
+      "name": "SOMMER S 9060 LASER",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Sommer S 9060 Laser Garage Door Operator Instruction Manual",
+          "sourceUrl": "https://device.report/manual/10578198",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "device.report",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer S 9060 Laser Garage Door Operator Instruction Manual\" (host: device.report). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "S 9060 PRO+",
+      "name": "SOMMER S 9060 PRO+",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Sommer S 9060 Pro+ Garage Door Opener Owner's Manual",
+          "sourceUrl": "https://manuals.plus/sommer/s-9060-pro-garage-door-opener-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer S 9060 Pro+ Garage Door Opener Owner's Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TWIST 200 E",
+      "name": "SOMMER TWIST 200 E",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer Twist 200 E Swing Gate Operator Manual (46685V001 EN)",
+          "sourceUrl": "https://www.sommer.eu/SOMMER/Downloads/Montageanleitung/Drehtorantriebe/twist%20200%20E/twist-200-E_46685V001_EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "sommer.eu",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer Twist 200 E Swing Gate Operator Manual (46685V001 EN)\" (host: www.sommer.eu). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TWIST 200 EL",
+      "name": "SOMMER TWIST 200 EL",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer Twist 200 EL Swing Gate Operator Manual (46736V001 EN)",
+          "sourceUrl": "https://www.sommer.eu/SOMMER/Downloads/Montageanleitung/Drehtorantriebe/twist%20200%20EL/twist-200-EL_46736V001_EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "sommer.eu",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer Twist 200 EL Swing Gate Operator Manual (46736V001 EN)\" (host: www.sommer.eu). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TWIST 350 RAPIDO",
+      "name": "SOMMER TWIST 350 RAPIDO",
+      "category": "industrial-high-speed-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer Twist 350 Rapido Swing Gate Operator Manual (46800V001 EN)",
+          "sourceUrl": "https://www.sommer.eu/SOMMER/Downloads/Montageanleitung/Drehtorantriebe/twist%20350%20-%20350%20rapido/twist-350-rapido_46800V001_EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "sommer.eu",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer Twist 350 Rapido Swing Gate Operator Manual (46800V001 EN)\" (host: www.sommer.eu). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TWIST M S3 / M+ S3 / ML S3 / ML+ S3",
+      "name": "SOMMER TWIST M S3 / M+ S3 / ML S3 / ML+ S3",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Sommer Twist M S3 Series Swing Gate Operator Installation and Operating Manual",
+          "sourceUrl": "https://manuals.plus/m/2c5937b9b7d1e25cb1f3e4841e972d3cb2ab7fddbe79f18a555836fa98989b49",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer Twist M S3 Series Swing Gate Operator Installation and Operating Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TWIST UG / UG+",
+      "name": "SOMMER TWIST UG / UG+",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer Twist UG / UG+ Swing Gate Operator Manual (S10451-00001 EN)",
+          "sourceUrl": "https://www.sommer.eu/SOMMER/Downloads/Montageanleitung/Drehtorantriebe/twist%20UG/twist-UG_S10451-00001_EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "sommer.eu",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer Twist UG / UG+ Swing Gate Operator Manual (S10451-00001 EN)\" (host: www.sommer.eu). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TWIST XL",
+      "name": "SOMMER TWIST XL",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer Twist XL Swing Gate Operator Manual (46676V001 EN)",
+          "sourceUrl": "https://www.sommer.eu/SOMMER/Downloads/Montageanleitung/Drehtorantriebe/twist%20XL/twist-XL_46676V001_EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "sommer.eu",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer Twist XL Swing Gate Operator Manual (46676V001 EN)\" (host: www.sommer.eu). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

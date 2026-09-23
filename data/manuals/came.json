@@ -9,6 +9,258 @@
   },
   "models": [
     {
+      "modelCode": "801XA-0030",
+      "name": "CAME 801XA-0030",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "QUICK_START",
+          "title": "CAME 801XA-0030 Quick Start Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/3415872/Came-801xa-0030.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME 801XA-0030 Quick Start Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "A3000",
+      "name": "CAME A3000",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "A 3000 Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1205480/Came-A-3000.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"A 3000 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ATI A3000",
+      "name": "CAME ATI A3000",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "ATI A3000 Series Swing Gate Operator Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1081261/Came-Ati-A3000.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ATI A3000 Series Swing Gate Operator Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "AX3024 / AX5024",
+      "name": "CAME AX3024 / AX5024",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME AXO Series AX3024 / AX5024 Installation Manual",
+          "sourceUrl": "https://www.intelligentsecurity.org/resources/gates/CAME-AX3024-Manual_Watermark.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "intelligentsecurity.org",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME AXO Series AX3024 / AX5024 Installation Manual\" (host: www.intelligentsecurity.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "AXO AX302304 / AX402306 / AX412306 / AX71230",
+      "name": "CAME AXO AX302304 / AX402306 / AX412306 / AX71230",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME AXO Series 240V Installation Manual",
+          "sourceUrl": "https://trade.electricgatesuk.net/wp-content/uploads/2015/02/came-AXO-240v.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "trade.electricgatesuk.net",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME AXO Series 240V Installation Manual\" (host: trade.electricgatesuk.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BARRIERE GARD (G3000 / G3750 / G4000)",
+      "name": "CAME BARRIERE GARD (G3000 / G3750 / G4000)",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "QUICK_START",
+          "title": "CAME Barriere Gard Quick Start Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2314407/Came-Barriere-Gard.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME Barriere Gard Quick Start Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BK SERIES",
+      "name": "CAME BK SERIES",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME BK Series Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/3389038/Came-Bk-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME BK Series Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME BK Series Installation, Operation and Maintenance Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1631762/Came-Bk-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME BK Series Installation, Operation and Maintenance Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BKS08AGS / BKS12AGS / BKS18AGS",
+      "name": "CAME BKS08AGS / BKS12AGS / BKS18AGS",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "CAME BK Series Sliding Gate Operator Manual (801MS-0150)",
+          "sourceUrl": "https://www.came-danmark.dk/media/blfa_files/801MS-0150.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "came-danmark.dk",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME BK Series Sliding Gate Operator Manual (801MS-0150)\" (host: www.came-danmark.dk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BX Series",
+      "name": "CAME BX Series Sliding Gate Operator",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [
+        "BX-74 Kit",
+        "BX-78 Kit"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME BX Series Gate Opener Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1507141/Came-Bx-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualsLib",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing for the series as a whole, kept alongside the model-specific BX-74 and BX-78 records rather than merged into them: whether it is the same document under a broader title or a separate series manual could not be established. The Kit variants are aliases here because a search result lists them together with the bare model numbers. Not fetched - egress blocked.",
+          "altSources": [
+            {
+              "url": "https://www.manualsdir.com/manuals/332457/came-bx-78-kit-bx-74-kit-bx74-bx78.html",
+              "authority": "THIRD_PARTY_MIRROR",
+              "label": "ManualsDir listing, 24 pages, covering BX-78 Kit, BX-74 Kit, BX74 and BX78"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelCode": "BX-10",
+      "name": "CAME BX-10",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME BX-10 Sliding Gate Operator Installation Manual (FA01137-EN)",
+          "sourceUrl": "http://docs.came.com/pdf/FA01137-EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "docs.came.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME BX-10 Sliding Gate Operator Installation Manual (FA01137-EN)\" (host: docs.came.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BX-243",
+      "name": "CAME BX-243",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BX-243 Automation Systems for Sliding Gates Installation Manual (FA00669-EN)",
+          "sourceUrl": "https://www.came.no/wp-content/uploads/2020/05/BX-243.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "came.no",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BX-243 Automation Systems for Sliding Gates Installation Manual (FA00669-EN)\" (host: www.came.no). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "BX-74",
       "name": "BX-74 Sliding Gate Operator",
       "category": "gate-motors",
@@ -21,12 +273,13 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "BX-74 / BX-78 Sliding Gate Operator Installation Manual",
-          "documentCode": "FA00127-EN",
           "sourceUrl": "https://motepro.com.au/Manuals/CAME/Slide/BX-74_BX-78.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "Motepro",
           "region": "AU",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "FA00127-EN",
           "evidence": "Australian trade supplier mirror, chosen as canonical over the UK mirrors because Doorlink serves Australia. Document code FA00127-EN read from a search result title. One manual covers both BX-74 and BX-78, so the same document is recorded against each model rather than split. Not fetched - egress blocked. Document code FA00127-EN comes from the manual's own cover, as rendered in a search result for the Arden Gate Automation copy recorded below; the same document circulates on several UK resellers.",
           "altSources": [
             {
@@ -60,6 +313,51 @@
               "label": "Manualzz copy"
             }
           ]
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME BX-74 Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1438888/Came-Bx-74.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME BX-74 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BX-74 / BX-78",
+      "name": "CAME BX-74 / BX-78",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME BX Series Installation Manual BX-74 / BX-78",
+          "sourceUrl": "https://trade.electricgatesuk.net/wp-content/uploads/2015/02/CAME-BX-74-78.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "trade.electricgatesuk.net",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME BX Series Installation Manual BX-74 / BX-78\" (host: trade.electricgatesuk.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME BX-74 / BX-78 Automation for Sliding Gates Installation Manual (FA00127-EN)",
+          "sourceUrl": "https://www.ardengateautomation.co.uk/downloads/1435242990CAME_BX-74_BX-78_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ardengateautomation.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME BX-74 / BX-78 Automation for Sliding Gates Installation Manual (FA00127-EN)\" (host: www.ardengateautomation.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -76,42 +374,369 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "BX-74 / BX-78 Sliding Gate Operator Installation Manual",
-          "documentCode": "FA00127-EN",
           "sourceUrl": "https://www.manualslib.com/manual/1195425/Came-Bx-78.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "ManualsLib",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing for the BX-78 entry of the shared BX-74/BX-78 manual. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "FA00127-EN",
+          "evidence": "Aggregator listing for the BX-78 entry of the shared BX-74/BX-78 manual. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
     {
-      "modelCode": "BX Series",
-      "name": "CAME BX Series Sliding Gate Operator",
+      "modelCode": "FERNI",
+      "name": "CAME FERNI",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": [
-        "BX-74 Kit",
-        "BX-78 Kit"
-      ],
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
-          "title": "CAME BX Series Gate Opener Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1507141/Came-Bx-Series.html",
+          "title": "CAME Ferni Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1074900/Came-Ferni.html",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualsLib",
+          "publisher": "manualslib.com",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing for the series as a whole, kept alongside the model-specific BX-74 and BX-78 records rather than merged into them: whether it is the same document under a broader title or a separate series manual could not be established. The Kit variants are aliases here because a search result lists them together with the bare model numbers. Not fetched - egress blocked.",
-          "altSources": [
-            {
-              "url": "https://www.manualsdir.com/manuals/332457/came-bx-78-kit-bx-74-kit-bx74-bx78.html",
-              "authority": "THIRD_PARTY_MIRROR",
-              "label": "ManualsDir listing, 24 pages, covering BX-78 Kit, BX-74 Kit, BX74 and BX78"
-            }
-          ]
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME Ferni Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "FERNI F1024",
+      "name": "CAME FERNI F1024",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME Ferni F1024 Automation for Swing Gates Installation Manual (119DU32EN)",
+          "sourceUrl": "https://www.vartai.eu/uploads/userfiles/pdf/Kiemo%20vartai/Atveriami%20vartai/Ferni/FERNI-F1024-EN.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "vartai.eu",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME Ferni F1024 Automation for Swing Gates Installation Manual (119DU32EN)\" (host: www.vartai.eu). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "FERNI FE4024 SERIES",
+      "name": "CAME FERNI FE4024 SERIES",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME Ferni FE4024 Series Automation for Swing Gates Installation Manual",
+          "sourceUrl": "https://trade.electricgatesuk.net/wp-content/uploads/2016/01/CAME-FERNI.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "trade.electricgatesuk.net",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME Ferni FE4024 Series Automation for Swing Gates Installation Manual\" (host: trade.electricgatesuk.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "FERNI SERIES",
+      "name": "CAME FERNI SERIES",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME Ferni Series Gate Opener Installation Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1567431/Came-Ferni-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME Ferni Series Gate Opener Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME Ferni Series Standard Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2126748/Came-Ferni-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME Ferni Series Standard Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "G4000",
+      "name": "CAME G4000",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME G4000 Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1372125/Came-G4000.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME G4000 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "CAME G4000 Manual (EasyGates)",
+          "sourceUrl": "https://manuals.easygates.co.uk/came-g4000/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.easygates.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME G4000 Manual (EasyGates)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "G4000 / G4001 / G4000N",
+      "name": "CAME G4000 / G4001 / G4000N",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME Gard G4000 Series Street Barrier Installation Manual (FA01117M04)",
+          "sourceUrl": "https://static.came.com/doc/FA01117M04.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "static.came.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME Gard G4000 Series Street Barrier Installation Manual (FA01117M04)\" (host: static.came.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME Gard Series G4000 Installation Manual (FA01117-EN-ZL38)",
+          "sourceUrl": "https://www.vartai.eu/uploads/userfiles/pdf/Kelio%20uztvarai/G4000/FA01117-EN-ZL38.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "vartai.eu",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME Gard Series G4000 Installation Manual (FA01117-EN-ZL38)\" (host: www.vartai.eu). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Automation",
+      "name": "CAME Gate Automation",
+      "category": "gate-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "CAME Manuals Index (EasyGates)",
+          "sourceUrl": "https://manuals.easygates.co.uk/category/manuals/came/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.easygates.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME Manuals Index (EasyGates)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RODEO",
+      "name": "CAME RODEO",
+      "category": "automatic-pedestrian-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "CAME Rodeo Automatic Sliding Door Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1829418/Came-Rodeo.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME Rodeo Automatic Sliding Door Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "VER SERIES",
+      "name": "CAME VER SERIES",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "CAME VER Series Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2059249/Came-Ver-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME VER Series Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Z SERIES",
+      "name": "CAME Z SERIES",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "CAME Z Series Control Panel Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1566975/Came-Z-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME Z Series Control Panel Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ZA3N",
+      "name": "CAME ZA3N",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME ZA3N Control Panel for 230V Operators Installation Manual",
+          "sourceUrl": "https://www.vartai.eu/uploads/userfiles/pdf/Aksesuarai/Valdymo%20plokstes/ZA3-EN.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "vartai.eu",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME ZA3N Control Panel for 230V Operators Installation Manual\" (host: www.vartai.eu). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME ZA3N Control Panel Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1223111/Came-Za3n.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME ZA3N Control Panel Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ZL19N",
+      "name": "CAME ZL19N",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME ZL19N Control Panel Installation Manual",
+          "sourceUrl": "https://www.came-danmark.dk/media/blfa_files/ZL19N.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "came-danmark.dk",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME ZL19N Control Panel Installation Manual\" (host: www.came-danmark.dk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ZL92",
+      "name": "CAME ZL92",
+      "category": "gate-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME ZL92 Control Panel for 24V Gearmotors Installation Manual (319V21EN)",
+          "sourceUrl": "https://manuals.easygates.co.uk/PDF/misc/came-zl92-manual-en.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.easygates.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME ZL92 Control Panel for 24V Gearmotors Installation Manual (319V21EN)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ZLJ24",
+      "name": "CAME ZLJ24",
+      "category": "gate-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME ZLJ24 Control Panel for 24V Operators Installation Manual",
+          "sourceUrl": "https://manuals.easygates.co.uk/PDF/misc/ZLJ24.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.easygates.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME ZLJ24 Control Panel for 24V Operators Installation Manual\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "CAME ZLJ24 Control Panel Installation Manual (FA00038-EN)",
+          "sourceUrl": "https://www.came-danmark.dk/media/blfa_files/ZLJ24.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "came-danmark.dk",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME ZLJ24 Control Panel Installation Manual (FA00038-EN)\" (host: www.came-danmark.dk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

@@ -1,0 +1,72 @@
+{
+  "manufacturer": {
+    "name": "Moore-O-Matic",
+    "slug": "moore-o-matic",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "Garage Door Openers",
+      "name": "Moore-O-Matic Garage Door Openers",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Moore-O-Matic Garage Door Opener Manuals Index",
+          "sourceUrl": "https://www.manualslib.com/brand/moore-o-matic/garage-door-opener.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Moore-O-Matic Garage Door Opener Manuals Index\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "X125 / X133 / X150",
+      "name": "Moore-O-Matic X125 / X133 / X150",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Moore-O-Matic X125, X133, X150 Garage Door Opener Manual",
+          "sourceUrl": "https://garagedoorguy89.weebly.com/uploads/4/5/4/9/45496029/moore-o-matic_x125_x133_x150.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "garagedoorguy89.weebly.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Moore-O-Matic X125, X133, X150 Garage Door Opener Manual\" (host: garagedoorguy89.weebly.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Z133",
+      "name": "Moore-O-Matic Z133",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Moore-O-Matic Z133 Garage Door Opener Manual",
+          "sourceUrl": "https://garagedoorguy89.weebly.com/uploads/4/5/4/9/45496029/moore-o-matic_z133.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "garagedoorguy89.weebly.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Moore-O-Matic Z133 Garage Door Opener Manual\" (host: garagedoorguy89.weebly.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

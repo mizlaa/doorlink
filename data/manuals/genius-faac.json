@@ -1,0 +1,93 @@
+{
+  "manufacturer": {
+    "name": "Genius (FAAC)",
+    "slug": "genius-faac",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "BLIZZARD 400 C ENC / 800 C ENC",
+      "name": "Genius (FAAC) BLIZZARD 400 C ENC / 800 C ENC",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Genius Blizzard 400C ENC, 800C ENC Manual",
+          "sourceUrl": "https://motepro.com.au/Manuals/Genius/Blizzard-400-800.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "motepro.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Genius Blizzard 400C ENC, 800C ENC Manual\" (host: motepro.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BLIZZARD 500 C / 900 C",
+      "name": "Genius (FAAC) BLIZZARD 500 C / 900 C",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Genius Blizzard 500C, 900C Instruction Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/Genius_Blizzard_500C_900C_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ismartgate.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Genius Blizzard 500C, 900C Instruction Manual\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BRAIN 16",
+      "name": "Genius (FAAC) BRAIN 16",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "QUICK_START",
+          "title": "Genius Brain 16 Quick Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2578501/Genius-Brain-16.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Genius Brain 16 Quick Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Automation",
+      "name": "Genius (FAAC) Gate Automation",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Genius Automatic Gates User Manuals Index",
+          "sourceUrl": "https://www.intelligentsecurity.org/customers/user-guides/automatic-gates/genius/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "intelligentsecurity.org",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Genius Automatic Gates User Manuals Index\" (host: www.intelligentsecurity.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

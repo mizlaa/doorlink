@@ -1,0 +1,51 @@
+{
+  "manufacturer": {
+    "name": "Bticino",
+    "slug": "bticino",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "2 Wire Video Door Entry",
+      "name": "Bticino 2 Wire Video Door Entry",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Bticino 2 Wire Video Door Entry and Home Video Surveillance System Design and Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/841188/Bticino-2-Wire-Video-Door-Entry-And-Home-Video-Surveillance-System.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Bticino 2 Wire Video Door Entry and Home Video Surveillance System Design and Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Audio and Video Door Entry",
+      "name": "Bticino Audio and Video Door Entry",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Bticino Audio and Video Door Entry System Catalogue",
+          "sourceUrl": "https://www.bticino.com/sites/default/files/2024-01/Audio%20e%20video%20door%20entry%20system%20catalogue.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "bticino.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Bticino Audio and Video Door Entry System Catalogue\" (host: www.bticino.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

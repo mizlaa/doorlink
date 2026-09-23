@@ -1,0 +1,114 @@
+{
+  "manufacturer": {
+    "name": "Boon Edam",
+    "slug": "boon-edam",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "CRYSTAL TOURNIKET",
+      "name": "Boon Edam CRYSTAL TOURNIKET",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "SAFETY_DOCUMENT",
+          "title": "Boon Edam Crystal Tourniket Safety and Operating Instructions",
+          "sourceUrl": "https://www.specifiedby.com/boon-edam-ltd/crystal-tourniket-the-all-glass-revolving-door/Boon-Edam_Crystal-Tourniket_Instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "specifiedby.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Boon Edam Crystal Tourniket Safety and Operating Instructions\" (host: www.specifiedby.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DUOTOUR DT (Gen 2)",
+      "name": "Boon Edam DUOTOUR DT (Gen 2)",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Boon Edam Duotour Gen 2 Operating Manual",
+          "sourceUrl": "https://d3eu1jnerk19h.cloudfront.net/documents/products/Boon-Edam-Duotour-Gen-2-Operating-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "d3eu1jnerk19h.cloudfront.net",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Boon Edam Duotour Gen 2 Operating Manual\" (host: d3eu1jnerk19h.cloudfront.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Revolving Doors",
+      "name": "Boon Edam Revolving Doors",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Boon Edam Knowledge Base (manuals and checklists)",
+          "sourceUrl": "https://www.boonedam.com/knowledge-base",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "boonedam.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Boon Edam Knowledge Base (manuals and checklists)\" (host: www.boonedam.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "THT-100",
+      "name": "Boon Edam THT-100",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Boon Edam THT-100 Operation, Installation and Maintenance Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1344470/Boon-Edam-Tht-100.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Boon Edam THT-100 Operation, Installation and Maintenance Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TOURNEX",
+      "name": "Boon Edam TOURNEX",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Boon Edam Tournex Installation Manual",
+          "sourceUrl": "https://d3eu1jnerk19h.cloudfront.net/documents/products/Boon-Edam-Tournex-Installation-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "d3eu1jnerk19h.cloudfront.net",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Boon Edam Tournex Installation Manual\" (host: d3eu1jnerk19h.cloudfront.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "manufacturer": {
+    "name": "Silvelox",
+    "slug": "silvelox",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "Garage Doors",
+      "name": "Silvelox Garage Doors",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Silvelox Group Documentation Index",
+          "sourceUrl": "https://www.silvelox.it/en/documentation/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "silvelox.it",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Silvelox Group Documentation Index\" (host: www.silvelox.it). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "OVERLAP 2.0",
+      "name": "Silvelox OVERLAP 2.0",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Silvelox Overlap 2.0 Installation Manual",
+          "sourceUrl": "https://manualzz.com/doc/5284446/silvelox-overlap-2.0-sectional-garage-door-installation-m...",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualzz.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Silvelox Overlap 2.0 Installation Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Silvelox Overlap 2.0 Sectional Garage Door Installation Manual",
+          "sourceUrl": "https://www.thegaragedoorcentre.co.uk/userfiles/downloads/installation_manual_overlap_2_0___1__32113.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "thegaragedoorcentre.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Silvelox Overlap 2.0 Sectional Garage Door Installation Manual\" (host: www.thegaragedoorcentre.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

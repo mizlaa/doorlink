@@ -1,0 +1,51 @@
+{
+  "manufacturer": {
+    "name": "Skylink",
+    "slug": "skylink",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "ATOMS / ATR SERIES",
+      "name": "Skylink ATOMS / ATR SERIES",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Skylink Atoms Series Garage Door Opener Owner's Manual (2020)",
+          "sourceUrl": "https://www.skylinkhome.com/wp-content/uploads/2016/03/ATR-Series-Manual-2020.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "skylinkhome.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Skylink Atoms Series Garage Door Opener Owner's Manual (2020)\" (host: www.skylinkhome.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Garage Door Openers",
+      "name": "Skylink Garage Door Openers",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Skylink Garage Door Opener Manuals Index",
+          "sourceUrl": "https://skylink.manymanuals.com/garage-door-opener",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "skylink.manymanuals.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Skylink Garage Door Opener Manuals Index\" (host: skylink.manymanuals.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

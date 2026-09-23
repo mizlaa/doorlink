@@ -9,6 +9,54 @@
   },
   "models": [
     {
+      "modelCode": "Dexxo Compact io",
+      "name": "Somfy Dexxo Compact io",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Dexxo Compact io Smart Guide (5165247A)",
+          "sourceUrl": "https://service.somfy.com/downloads/rs_v5/5165247adexxo_compact_io_smart_guide.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "service.somfy.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dexxo Compact io Smart Guide (5165247A)\" (host: service.somfy.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Dexxo Pro",
+      "name": "Dexxo Pro Garage Door Operator",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Dexxo Pro Installation Manual (EN)",
+          "sourceUrl": "https://service.somfy.com/downloads/gc_v5/5048550f-dexxopro-en-web-.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "5048550F",
+          "evidence": "Manufacturer's own service domain. Document code 5048550F read from the filename. Recorded separately from the io variant because they carry different document codes. Not fetched - egress blocked.",
+          "altSources": [
+            {
+              "url": "https://www.thegaragedoorcentre.co.uk/download/Somfy%20Dexxo%20Pro%20.pdf",
+              "authority": "THIRD_PARTY_MIRROR",
+              "label": "The Garage Door Centre (UK) mirror"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "modelCode": "Dexxo Pro io",
       "name": "Dexxo Pro io Garage Door Operator",
       "category": "garage-door-openers",
@@ -21,12 +69,12 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "Dexxo Pro io Installation Manual (EN)",
-          "documentCode": "5048554E",
-          "language": "en",
           "sourceUrl": "https://service.somfy.com/downloads/fi_v5/5048554edexxo_pro_io_en.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "5048554E",
           "evidence": "Manufacturer's own service domain. Document code 5048554E read from the filename. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -40,39 +88,67 @@
               "label": "Somfy info download sheet, document 5117832C"
             }
           ]
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Dexxo Pro io Installation Manual (5117832C)",
+          "sourceUrl": "https://www.somfy.info/download_sheet/5117832/5117832C_DEXXO%20PRO%20IO.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "somfy.info",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dexxo Pro io Installation Manual (5117832C)\" (host: www.somfy.info). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
     {
-      "modelCode": "Dexxo Pro",
-      "name": "Dexxo Pro Garage Door Operator",
-      "category": "garage-door-openers",
+      "modelCode": "Dexxo Smart 800 io",
+      "name": "Somfy Dexxo Smart 800 io",
+      "category": "roller-shutter-motors",
       "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
-          "title": "Dexxo Pro Installation Manual (EN)",
-          "documentCode": "5048550F",
-          "language": "en",
-          "sourceUrl": "https://service.somfy.com/downloads/gc_v5/5048550f-dexxopro-en-web-.pdf",
+          "title": "Dexxo Smart 800 io / 1000 io Installation Manual (5143221A, multi-language)",
+          "sourceUrl": "https://www.somfy.info/download_sheet/5143221/5143221A_DEXXO%20SMART%20io%20INSTALL.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "somfy.info",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Manufacturer's own service domain. Document code 5048550F read from the filename. Recorded separately from the io variant because they carry different document codes. Not fetched - egress blocked.",
-          "altSources": [
-            {
-              "url": "https://www.thegaragedoorcentre.co.uk/download/Somfy%20Dexxo%20Pro%20.pdf",
-              "authority": "THIRD_PARTY_MIRROR",
-              "label": "The Garage Door Centre (UK) mirror"
-            }
-          ]
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dexxo Smart 800 io / 1000 io Installation Manual (5143221A, multi-language)\" (host: www.somfy.info). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Dexxo Smart io",
+      "name": "Somfy Dexxo Smart io",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Dexxo Smart 800 io / 1000 io Installation Manual (5143221A)",
+          "sourceUrl": "https://service.somfy.com/downloads/fr_v5/5143221adexxo_smart_io_installation.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "service.somfy.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dexxo Smart 800 io / 1000 io Installation Manual (5143221A)\" (host: service.somfy.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
     {
       "modelCode": "Elixo Smart io",
       "name": "Elixo Smart io Sliding Gate Operator",
-      "category": "gate-motors",
+      "category": "garage-door-openers",
       "region": "EU",
       "aliases": [
         "Elixo Smart"
@@ -86,7 +162,63 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. No manufacturer-hosted URL for this model was surfaced. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. No manufacturer-hosted URL for this model was surfaced. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Elixo Smart io Installation Manual - Illustrations (5139502A)",
+          "sourceUrl": "https://service.somfy.com/downloads/bc_v5/5139502aelixo_smart_io_illustr.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "service.somfy.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Elixo Smart io Installation Manual - Illustrations (5139502A)\" (host: service.somfy.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "HiPro",
+      "name": "Somfy HiPro Installation",
+      "category": "roller-shutter-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Somfy HiPro Installation Guide",
+          "sourceUrl": "https://service.somfy.com/downloads/il_v5/hiproinstall.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "Somfy",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "On service.somfy.com, Somfy's own service download host, in an il_v5 (installation instructions, version 5) directory. The search result gave only the URL and no product detail, so the title is built from the file name and nothing about the motor range is asserted. That directory is registered as a harvest target - a manufacturer host serving flat PDFs is the shape that scales. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Interior Blinds and Curtains",
+      "name": "Somfy Interior Blinds and Curtains",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Somfy Interior Blinds and Curtains Motors and Automated Systems Guide",
+          "sourceUrl": "https://service.somfy.com/downloads/sg_v5/guideto_interior_blinds_and_curtains.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "service.somfy.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Somfy Interior Blinds and Curtains Motors and Automated Systems Guide\" (host: service.somfy.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -109,6 +241,7 @@
           "publisher": "ManualsLib",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing for the CMO variant. Search reports 17 LT50 manuals on that site alone, across manual, installation, quick start and settings types - so this record covers a fraction of the LT50 documentation, and the aggregator brand index is registered as a target for the rest. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -126,49 +259,42 @@
           "publisher": "ManualsLib",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing of the settings manual for the wired motors - limit setting is a separate document from installation for this range, so it is recorded separately. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing of the settings manual for the wired motors - limit setting is a separate document from installation for this range, so it is recorded separately. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
     {
-      "modelCode": "Sonesse 50 RS485",
-      "name": "Somfy Sonesse 50 RS485 / LT50 RS485 Tubular Motor",
+      "modelCode": "Motors and Controls",
+      "name": "Somfy Motors and Controls",
       "category": "roller-shutter-motors",
-      "region": "GLOBAL",
-      "aliases": [
-        "LT50 RS485",
-        "Sonesse 50",
-        "5106220A"
-      ],
+      "region": "EU",
+      "aliases": [],
       "documents": [
         {
-          "kind": "INSTALL_MANUAL",
-          "title": "Sonesse 50 RS485 / LT50 RS485 Installation Guide (EN), Ref. 5106220A",
-          "documentCode": "5106220A",
-          "sourceUrl": "https://mysunglow.com/wp-content/uploads/resources/product_info/instructions/programming/somfy/sonesse_50_rs485_inst.pdf",
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Somfy Documentation Index",
+          "sourceUrl": "https://www.somfysystems.com/en-us/support/documentation",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "Sunglow",
-          "region": "GLOBAL",
+          "publisher": "somfysystems.com",
+          "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor copy. The reference number 5106220A and the English edition are from the document's own cover as rendered in the search result, not from the file name - Somfy numbers its guides with a Ref., and that is its numbering, not the distributor's. Not fetched - egress blocked."
-        }
-      ]
-    },
-    {
-      "modelCode": "HiPro",
-      "name": "Somfy HiPro Installation",
-      "category": "roller-shutter-motors",
-      "region": "GLOBAL",
-      "documents": [
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Somfy Documentation Index\" (host: www.somfysystems.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
         {
-          "kind": "INSTALL_MANUAL",
-          "title": "Somfy HiPro Installation Guide",
-          "sourceUrl": "https://service.somfy.com/downloads/il_v5/hiproinstall.pdf",
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Somfy UK Product Documents and Downloads Index",
+          "sourceUrl": "https://www.somfy.co.uk/support/downloads",
           "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "Somfy",
-          "region": "GLOBAL",
+          "publisher": "somfy.co.uk",
+          "region": "UK",
           "rights": "LINK_ONLY",
-          "evidence": "On service.somfy.com, Somfy's own service download host, in an il_v5 (installation instructions, version 5) directory. The search result gave only the URL and no product detail, so the title is built from the file name and nothing about the motor range is asserted. That directory is registered as a harvest target - a manufacturer host serving flat PDFs is the shape that scales. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Somfy UK Product Documents and Downloads Index\" (host: www.somfy.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -189,7 +315,173 @@
           "publisher": "ManualsDir",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing, 4 pages. Somfy South Africa's download page is described as carrying Oximo RTS technical data sheets and installation guides; no URL for those surfaced, so that page is registered as a portal instead. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing, 4 pages. Somfy South Africa's download page is described as carrying Oximo RTS technical data sheets and installation guides; no URL for those surfaced, so that page is registered as a portal instead. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "OXIMO SERIES",
+      "name": "Somfy OXIMO SERIES",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Somfy Oximo Series Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1714162/Somfy-Oximo-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Somfy Oximo Series Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Roller Shutter Motors",
+      "name": "Somfy Roller Shutter Motors",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Somfy Roller Shutter Motors and Automated Systems Guide",
+          "sourceUrl": "https://service.somfy.com/downloads/za_v5/recbh.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "service.somfy.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Somfy Roller Shutter Motors and Automated Systems Guide\" (host: service.somfy.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Somfy Roller Shutter Motors and Automated Systems Guide (2023)",
+          "sourceUrl": "https://service.somfy.com/downloads/gc_v5/recguide_b2b_ksa_2023.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "service.somfy.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Somfy Roller Shutter Motors and Automated Systems Guide (2023)\" (host: service.somfy.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RS100 io",
+      "name": "Somfy RS100 io",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Somfy RS100 io Funk Rohrmotor User Guide",
+          "sourceUrl": "https://manuals.plus/somfy/rs100-io-funk-rohrmotor-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Somfy RS100 io Funk Rohrmotor User Guide\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RS100 SOLAR io",
+      "name": "Somfy RS100 SOLAR io",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Somfy RS100 Solar io Installation and Usage Guide",
+          "sourceUrl": "https://manuals.plus/m/a6be7cd2f3c6af678cbcdb540a456a689f3935d1e4fe80801e1e656004514c9e",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Somfy RS100 Solar io Installation and Usage Guide\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SONESSE 30 / 40",
+      "name": "Somfy SONESSE 30 / 40",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Somfy Sonesse Internal Roller Blind Motorisation Specification (v1 2018)",
+          "sourceUrl": "https://service.somfy.com/downloads/bui_v4/somfy-sonesse-blind-motor-specification-v1-2018.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "service.somfy.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Somfy Sonesse Internal Roller Blind Motorisation Specification (v1 2018)\" (host: service.somfy.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SONESSE 30 Wirefree",
+      "name": "Somfy SONESSE 30 Wirefree",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "PROGRAMMING_GUIDE",
+          "title": "Somfy Australia Programming Guide (Sonesse 30 Wirefree)",
+          "sourceUrl": "https://hartmannforbes.com/sites/default/files/20077-AU-Somfy-programming-guide.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "hartmannforbes.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Somfy Australia Programming Guide (Sonesse 30 Wirefree)\" (host: hartmannforbes.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Sonesse 50 RS485",
+      "name": "Somfy Sonesse 50 RS485 / LT50 RS485 Tubular Motor",
+      "category": "roller-shutter-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "LT50 RS485",
+        "Sonesse 50",
+        "5106220A"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Sonesse 50 RS485 / LT50 RS485 Installation Guide (EN), Ref. 5106220A",
+          "sourceUrl": "https://mysunglow.com/wp-content/uploads/resources/product_info/instructions/programming/somfy/sonesse_50_rs485_inst.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "Sunglow",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "5106220A",
+          "evidence": "Distributor copy. The reference number 5106220A and the English edition are from the document's own cover as rendered in the search result, not from the file name - Somfy numbers its guides with a Ref., and that is its numbering, not the distributor's. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

@@ -9,11 +9,56 @@
   },
   "models": [
     {
+      "modelCode": "D-311 / D-313 FOOD",
+      "name": "Dynaco D-311 / D-313 FOOD",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Dynaco Commercial D-311 / D-313 FOOD Inside Door Manual (EN)",
+          "sourceUrl": "https://www.dynacodoor.com/global/asset-downloads/english/d-313_en/Dynaco%20Commercial%20D-311%20-%20D-313%20FOOD_EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "dynacodoor.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dynaco Commercial D-311 / D-313 FOOD Inside Door Manual (EN)\" (host: www.dynacodoor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DYNALOGIC II",
+      "name": "Dynaco DYNALOGIC II",
+      "category": "garage-door-openers",
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Dynaco Dynalogic II Controller Manual",
+          "sourceUrl": "https://www.stabaload.co.za/PDF/Dynaco/DYNALOGIC%20II%20Controller%20Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "stabaload.co.za",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dynaco Dynalogic II Controller Manual\" (host: www.stabaload.co.za). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "M2 Power",
       "name": "Dynaco Power M2 High Performance Door",
       "category": "industrial-high-speed-doors",
       "region": "US",
-      "aliases": ["Dynaco M2", "M2"],
+      "aliases": [
+        "Dynaco M2",
+        "M2"
+      ],
       "documents": [
         {
           "kind": "SPEC_SHEET",
@@ -23,7 +68,30 @@
           "publisher": "RS Doors",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor-hosted brochure, and typed as a spec sheet because that is what it is - the file name says Brochure, and the search summary notes it merely refers the reader to a user manual it does not contain. The M2's actual installation and user manuals were not surfaced and are a recorded gap. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Distributor-hosted brochure, and typed as a spec sheet because that is what it is - the file name says Brochure, and the search summary notes it merely refers the reader to a user manual it does not contain. The M2's actual installation and user manuals were not surfaced and are a recorded gap. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SLIMLINE SERIES",
+      "name": "Dynaco SLIMLINE SERIES",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Dynaco Technical Manual Slimline Series (Techno, Food, Pharma) Rev B",
+          "sourceUrl": "https://static1.squarespace.com/static/555bcd65e4b09c119716ad9a/t/5be5f58f8985834bf4fb9952/1541797266068/Slimline+Series+RevB.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "static1.squarespace.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dynaco Technical Manual Slimline Series (Techno, Food, Pharma) Rev B\" (host: static1.squarespace.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

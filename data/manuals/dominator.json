@@ -9,39 +9,44 @@
   },
   "models": [
     {
-      "modelCode": "Smart & Secure Sectional",
-      "name": "Dominator Smart & Secure Sectional Door Opener",
+      "modelCode": "ATA / Dominator",
+      "name": "Dominator ATA / Dominator",
       "category": "garage-door-openers",
-      "region": "NZ",
-      "aliases": ["Smart and Secure", "Smart & Secure"],
+      "region": "AU",
+      "aliases": [],
       "documents": [
         {
-          "kind": "QUICK_START",
-          "title": "Smart & Secure Sectional Door Opener Quick Operation Guide",
-          "sourceUrl": "https://www.dominator.co.nz/asset/3133.pdf",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "Dominator",
-          "region": "NZ",
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "ATA / Dominator Owner's Manuals Index",
+          "sourceUrl": "https://www.dominatornsw.com.au/resources/ata-dominator-owner-s-manuals",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "dominatornsw.com.au",
+          "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "On dominator.co.nz, the manufacturer's own domain. Typed QUICK_START on the document's own title - it is the quick operation guide, not the full manual, and the full one is a recorded gap rather than an assumption. The file name is a bare asset ID carrying no model information, so the title comes entirely from the search result's rendering of the document. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ATA / Dominator Owner's Manuals Index\" (host: www.dominatornsw.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
     {
-      "modelCode": "Select Sectional",
-      "name": "Dominator Select Sectional Door Opener",
+      "modelCode": "EASYROLLER",
+      "name": "Dominator EASYROLLER",
       "category": "garage-door-openers",
       "region": "NZ",
+      "aliases": [],
       "documents": [
         {
-          "kind": "INSTALL_MANUAL",
-          "title": "Dominator Select Sectional Door Opener Instruction Manual",
-          "sourceUrl": "https://manuals.plus/dominator/select-sectional-door-opener-manual",
+          "kind": "USER_MANUAL",
+          "title": "Automatic Technology Dominator EasyRoller Instruction Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1618014/Automatic-Technology-Dominator-Easyroller.html",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
+          "publisher": "manualslib.com",
           "region": "NZ",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. No dominator.co.nz asset URL was tied to the Select, so it stays third-party while the Smart & Secure guide is manufacturer-hosted. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Automatic Technology Dominator EasyRoller Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -50,7 +55,9 @@
       "name": "Dominator Excel Rolling Door Opener",
       "category": "garage-door-openers",
       "region": "NZ",
-      "aliases": ["Excel"],
+      "aliases": [
+        "Excel"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -60,7 +67,96 @@
           "publisher": "Dominator Rodney",
           "region": "NZ",
           "rights": "LINK_ONLY",
-          "evidence": "Dealer copy. Recorded as third-party because dominatorrodney.co.nz is a regional dealer domain, not the manufacturer's. Note it sits in a Brochures folder while its own opening line reads \"These instructions are intended for professional garage door...\" - the folder is the dealer's filing, the content is installer instructions, so it is typed on the content. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Dealer copy. Recorded as third-party because dominatorrodney.co.nz is a regional dealer domain, not the manufacturer's. Note it sits in a Brochures folder while its own opening line reads \"These instructions are intended for professional garage door...\" - the folder is the dealer's filing, the content is installer instructions, so it is typed on the content. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Garage Door Openers",
+      "name": "Dominator Garage Door Openers",
+      "category": "garage-door-openers",
+      "region": "NZ",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Dominator New Zealand Owner's Manuals Index",
+          "sourceUrl": "https://www.dominator.co.nz/resources/owners-manuals",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "dominator.co.nz",
+          "region": "NZ",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dominator New Zealand Owner's Manuals Index\" (host: www.dominator.co.nz). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Industrial Door Openers",
+      "name": "Dominator Industrial Door Openers",
+      "category": "industrial-high-speed-doors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Dominator NSW Industrial Door Opener Manuals Index",
+          "sourceUrl": "https://www.dominatornsw.com.au/resources/industrial-door-opener-manuals",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "dominatornsw.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dominator NSW Industrial Door Opener Manuals Index\" (host: www.dominatornsw.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Select Sectional",
+      "name": "Dominator Select Sectional Door Opener",
+      "category": "garage-door-openers",
+      "region": "NZ",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Dominator Select Sectional Door Opener Instruction Manual",
+          "sourceUrl": "https://manuals.plus/dominator/select-sectional-door-opener-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "NZ",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing. No dominator.co.nz asset URL was tied to the Select, so it stays third-party while the Smart & Secure guide is manufacturer-hosted. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Smart & Secure Sectional",
+      "name": "Dominator Smart & Secure Sectional Door Opener",
+      "category": "garage-door-openers",
+      "region": "NZ",
+      "aliases": [
+        "Smart and Secure",
+        "Smart & Secure"
+      ],
+      "documents": [
+        {
+          "kind": "QUICK_START",
+          "title": "Smart & Secure Sectional Door Opener Quick Operation Guide",
+          "sourceUrl": "https://www.dominator.co.nz/asset/3133.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "Dominator",
+          "region": "NZ",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "On dominator.co.nz, the manufacturer's own domain. Typed QUICK_START on the document's own title - it is the quick operation guide, not the full manual, and the full one is a recorded gap rather than an assumption. The file name is a bare asset ID carrying no model information, so the title comes entirely from the search result's rendering of the document. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

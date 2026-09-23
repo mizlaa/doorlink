@@ -1,0 +1,42 @@
+{
+  "manufacturer": {
+    "name": "Hansa (Nice)",
+    "slug": "hansa-nice",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "Gate Motors",
+      "name": "Hansa (Nice) Gate Motors",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Hansa Gate Motor Manuals Index",
+          "sourceUrl": "https://gmsouthafrica.co.za/hansa-gate-motor-manuals/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "gmsouthafrica.co.za",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hansa Gate Motor Manuals Index\" (host: gmsouthafrica.co.za). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice South Africa Hansa Instruction Manuals Download Index",
+          "sourceUrl": "https://www.niceforyou.com/za/support/download?v=7&b=441",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "niceforyou.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice South Africa Hansa Instruction Manuals Download Index\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "manufacturer": {
+    "name": "Elite Access Systems",
+    "slug": "elite-access-systems",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "SL-3000 SERIES",
+      "name": "Elite Access Systems SL-3000 SERIES",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Elite Access Systems SL-3000 Series Installation Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/978189/Elite-Access-Systems-Sl-3000-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Elite Access Systems SL-3000 Series Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SL-3000-UL SERIES",
+      "name": "Elite Access Systems SL-3000-UL SERIES",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Elite Access Systems SL-3000-UL Series Instruction Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2064415/Elite-Access-Systems-Sl-3000-Ul-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Elite Access Systems SL-3000-UL Series Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SL3000UL",
+      "name": "Elite Access Systems SL3000UL",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Elite Series Commercial High-Traffic AC Slide Gate Operator SL3000UL Manual (0139375)",
+          "sourceUrl": "https://jansensupply.com/docs/0139375.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "jansensupply.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Elite Series Commercial High-Traffic AC Slide Gate Operator SL3000UL Manual (0139375)\" (host: jansensupply.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Elite SL3000UL Owner's Manual",
+          "sourceUrl": "https://www.hooverfence.com/mas_assets/media/hooverfence/pdfs/owners-manual-SL3000UL.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "hooverfence.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Elite SL3000UL Owner's Manual\" (host: www.hooverfence.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SL3000UL DC3",
+      "name": "Elite Access Systems SL3000UL DC3",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Elite SL-3000-UL Series Gate Opener Instruction Manual",
+          "sourceUrl": "https://files.d-tools.com/Visualizations/Approved/Elite%20Gates/Documents/Elite%20Gates_SL3000ULDC3_Manual1.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "files.d-tools.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Elite SL-3000-UL Series Gate Opener Instruction Manual\" (host: files.d-tools.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

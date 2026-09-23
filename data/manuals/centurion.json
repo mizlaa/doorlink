@@ -9,77 +9,6 @@
   },
   "models": [
     {
-      "modelCode": "D5-Evo",
-      "name": "D5-Evo Light-Industrial Sliding Gate Operator",
-      "category": "gate-motors",
-      "region": "AU",
-      "aliases": [
-        "D5 Evo",
-        "D5EVO"
-      ],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "D5-Evo and D5-Evo Low-Voltage Installation Manual",
-          "documentCode": "1010.D.01.0001",
-          "sourceUrl": "https://www.centsys.com.au/pdf/D5-Evo/1010.D.01.0001%20D5-Evo%20and%20D5Evo%20Low-Voltage%20Manual.pdf",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "evidence": "Australian Centurion domain. Document code read from the filename. Not fetched - egress blocked."
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "D5-Evo Installation Manual (South African edition)",
-          "documentCode": "0_07_A_0059",
-          "sourceUrl": "https://www.centsys.co.za/upload/0_07_A_0059%20D5-Evo%20Installation%20Manual-18092013-BMCT-web.pdf",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "region": "GLOBAL",
-          "rights": "LINK_ONLY",
-          "evidence": "Manufacturer's South African domain. Kept as a separate record from the Australian edition rather than treated as the same document, because regional editions differ. Region recorded as GLOBAL since the schema has no ZA value. Not fetched - egress blocked."
-        }
-      ]
-    },
-    {
-      "modelCode": "D5-Evo SMART",
-      "name": "D5-Evo SMART Automatic Sliding Gate Operator",
-      "category": "gate-motors",
-      "region": "AU",
-      "aliases": [
-        "D5E Smart",
-        "D5 Evo Smart"
-      ],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "D5-Evo SMART Installation Manual (Australian edition)",
-          "documentCode": "1410.D.01.0003",
-          "sourceUrl": "https://www.centsys.com.au/wp-content/uploads/2025/01/1410.D.01.0003_D5E-Smart-Installation-Manual-CENTSYS_19122024_AP_Web_App.pdf",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "evidence": "Australian Centurion domain. Document code and the 19/12/2024 date are read from the filename. Not fetched - egress blocked."
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "D5-Evo SMART Installation Manual (global edition)",
-          "documentCode": "1410.D.01.0001_1",
-          "sourceUrl": "https://www.centsys.com/app/pdf/d5evosmart/1410.D.01.0001_1%20D5E%20Smart%20installation%20manual_28032024_AP_Web.pdf",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "region": "GLOBAL",
-          "rights": "LINK_ONLY",
-          "evidence": "Manufacturer's global domain. A different document code and date from the Australian edition, so recorded separately. Not fetched - egress blocked.",
-          "altSources": [
-            {
-              "url": "https://www.manualslib.com/manual/882595/Centurion-D5-Evo.html",
-              "authority": "THIRD_PARTY_MIRROR",
-              "label": "ManualsLib listing"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "modelCode": "D10",
       "name": "Centurion D10 / D10 Turbo Industrial Sliding Gate Operator",
       "category": "gate-motors",
@@ -92,13 +21,14 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "D10 and D10 Turbo Industrial Sliding Gate Operator Installation Manual (AU edition)",
-          "documentCode": "1211.D.01.0004",
-          "version": "29062018",
           "sourceUrl": "https://www.centsys.com.au/pdf/D10_Turbo/1211.D.01.0004%20D10%20D10Turbo%20installation%20manual%20CENTSYS_29062018BM.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Centurion Systems",
           "region": "AU",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "29062018",
+          "documentCode": "1211.D.01.0004",
           "evidence": "On centsys.com.au, Centurion's Australian site. Document code 1211.D.01.0004 and the date 29062018 are both in the file name, in Centurion's usual ddmmyyyy form. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -126,31 +56,133 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "D10 SMART / D20 SMART Sliding Gate Operators Installation Manual (AU edition)",
-          "documentCode": "1271.D.01.0009",
-          "version": "19122024",
           "sourceUrl": "https://www.centsys.com.au/wp-content/uploads/2025/01/1271.D.01.0009-D10S-D20-Installation-Manual-CENTSYS_19122024_AP_Web_App.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Centurion Systems",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "On centsys.com.au. Document code 1271.D.01.0009 dated 19122024. This is the Australian edition; the South African one below carries a different code and a different date for what is nominally the same manual, which is exactly the case the region field exists for - the two are stored as separate documents, not one with two links. Not fetched - egress blocked."
+          "language": "en",
+          "version": "19122024",
+          "documentCode": "1271.D.01.0009",
+          "evidence": "On centsys.com.au. Document code 1271.D.01.0009 dated 19122024. This is the Australian edition; the South African one below carries a different code and a different date for what is nominally the same manual, which is exactly the case the region field exists for - the two are stored as separate documents, not one with two links. Not fetched - egress blocked.",
+          "altSources": []
         },
         {
           "kind": "INSTALL_MANUAL",
           "title": "D10 SMART / D10 Turbo SMART / D20 SMART Sliding Gate Operators Installation Manual (ZA edition)",
-          "documentCode": "1271.D.01.0001_1",
-          "version": "12072022",
           "sourceUrl": "https://www.centsys.co.za/pdf/prod/SMART/1271.D.01.0001_1%20D10D10TD20S%20Installation%20Manual_12072022_MT_Web_App.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Centurion Systems",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "12072022",
+          "documentCode": "1271.D.01.0001_1",
           "evidence": "On centsys.co.za, Centurion's South African site. Document code 1271.D.01.0001_1 dated 12072022 - an earlier code and date than the Australian edition above. Region is GLOBAL rather than a South Africa value, which the schema does not have; the publisher and the domain carry that detail instead. Not fetched - egress blocked.",
           "altSources": [
             {
               "url": "https://manuals.plus/m/e5933fbfe20dc1aa5a1a5388bf5553f8759f8780cae3c5a97b60af32aeeacb32",
               "authority": "THIRD_PARTY_MIRROR",
               "label": "manuals.plus copy of the SMART sliding gate operators manual"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelCode": "D3 / D5",
+      "name": "Centurion Systems D3 / D5",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Centurion D3, D5 Sliding Gate Motors Installation Manual",
+          "sourceUrl": "https://www.centsys.co.za/upload/0_07_A_0115_%20D3D5%20installation%20manual%2022072013-BM-for%20web.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "centsys.co.za",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Centurion D3, D5 Sliding Gate Motors Installation Manual\" (host: www.centsys.co.za). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "D5-Evo",
+      "name": "D5-Evo Light-Industrial Sliding Gate Operator",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [
+        "D5 Evo",
+        "D5EVO"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "D5-Evo and D5-Evo Low-Voltage Installation Manual",
+          "sourceUrl": "https://www.centsys.com.au/pdf/D5-Evo/1010.D.01.0001%20D5-Evo%20and%20D5Evo%20Low-Voltage%20Manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "1010.D.01.0001",
+          "evidence": "Australian Centurion domain. Document code read from the filename. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "D5-Evo Installation Manual (South African edition)",
+          "sourceUrl": "https://www.centsys.co.za/upload/0_07_A_0059%20D5-Evo%20Installation%20Manual-18092013-BMCT-web.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "0_07_A_0059",
+          "evidence": "Manufacturer's South African domain. Kept as a separate record from the Australian edition rather than treated as the same document, because regional editions differ. Region recorded as GLOBAL since the schema has no ZA value. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "D5-Evo SMART",
+      "name": "D5-Evo SMART Automatic Sliding Gate Operator",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [
+        "D5E Smart",
+        "D5 Evo Smart"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "D5-Evo SMART Installation Manual (Australian edition)",
+          "sourceUrl": "https://www.centsys.com.au/wp-content/uploads/2025/01/1410.D.01.0003_D5E-Smart-Installation-Manual-CENTSYS_19122024_AP_Web_App.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "1410.D.01.0003",
+          "evidence": "Australian Centurion domain. Document code and the 19/12/2024 date are read from the filename. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "D5-Evo SMART Installation Manual (global edition)",
+          "sourceUrl": "https://www.centsys.com/app/pdf/d5evosmart/1410.D.01.0001_1%20D5E%20Smart%20installation%20manual_28032024_AP_Web.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "1410.D.01.0001_1",
+          "evidence": "Manufacturer's global domain. A different document code and date from the Australian edition, so recorded separately. Not fetched - egress blocked.",
+          "altSources": [
+            {
+              "url": "https://www.manualslib.com/manual/882595/Centurion-D5-Evo.html",
+              "authority": "THIRD_PARTY_MIRROR",
+              "label": "ManualsLib listing"
             }
           ]
         }
@@ -169,13 +201,14 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "Vector2 Linear Swing Gate Operators Installation Manual",
-          "documentCode": "0_07_A_0012",
-          "version": "16052014",
           "sourceUrl": "https://www.centsys.co.za/upload/0_07_A_0012%20VECTOR%202%20Installation%20Manual-16052014-NG-web.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Centurion Systems",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "16052014",
+          "documentCode": "0_07_A_0012",
           "evidence": "On centsys.co.za. Document code 0_07_A_0012 dated 16052014 - note this is an older numbering scheme than the 1271.D.01.xxxx form on the newer manuals, so Centurion has changed how it numbers documents and both forms are live on its sites. Not fetched - egress blocked.",
           "altSources": [
             {

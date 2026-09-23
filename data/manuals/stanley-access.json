@@ -9,23 +9,124 @@
   },
   "models": [
     {
+      "modelCode": "DURA-GLIDE 2000AG",
+      "name": "Stanley Access Technologies DURA-GLIDE 2000AG",
+      "category": "automatic-pedestrian-doors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Stanley Dura-Glide 2000AG All-Glass Sliding Door Installation Instructions",
+          "sourceUrl": "https://www.addisonautomatics.com/wp-content/uploads/manuals/stanley/2000%20all%20glass%20instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "addisonautomatics.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Stanley Dura-Glide 2000AG All-Glass Sliding Door Installation Instructions\" (host: www.addisonautomatics.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DURA-GLIDE SERIES",
+      "name": "Stanley Access Technologies DURA-GLIDE SERIES",
+      "category": "automatic-pedestrian-doors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Stanley Dura-Glide Series Operation and Maintenance Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2406459/Stanley-Dura-Glide-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Stanley Dura-Glide Series Operation and Maintenance Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Stanley Dura-Glide Series Owner's Operation and Maintenance Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1944942/Stanley-Dura-Glide-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Stanley Dura-Glide Series Owner's Operation and Maintenance Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "MC521",
       "name": "Stanley MC521 Slide Door Controller",
       "category": "remotes-accessories",
       "region": "US",
-      "aliases": ["MC-521", "MC521 Plus"],
+      "aliases": [
+        "MC-521",
+        "MC521 Plus"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Stanley MC521 Slide Door Installation and Operations Manual, Rev D",
-          "revision": "Rev D",
-          "version": "3-11-07",
           "sourceUrl": "https://d3eu1jnerk19h.cloudfront.net/documents/MC521-Slide-Door-Installation-and-Operations-Manual-Rev-D-3-11-07.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "Door Controls USA",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor CDN copy - the same cloudfront host that serves their Besam documents, which is why it is recorded as Door Controls USA rather than as an anonymous CDN. Revision D and the date 3-11-07 are both in the file name; the date is recorded verbatim as a version because its day/month order is not stated. Filed under accessories because the MC521 is the controller, not the operator. Not fetched - egress blocked."
+          "language": "en",
+          "version": "3-11-07",
+          "revision": "Rev D",
+          "evidence": "Distributor CDN copy - the same cloudfront host that serves their Besam documents, which is why it is recorded as Door Controls USA rather than as an anonymous CDN. Revision D and the date 3-11-07 are both in the file name; the date is recorded verbatim as a version because its day/month order is not stated. Filed under accessories because the MC521 is the controller, not the operator. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MODEL J",
+      "name": "Stanley Access Technologies MODEL J",
+      "category": "automatic-pedestrian-doors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Stanley Model J Control Manual",
+          "sourceUrl": "https://absupply.net/pdf/Stanley%20Model%20J%20Control%20Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "absupply.net",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Stanley Model J Control Manual\" (host: absupply.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Slide Door Systems",
+      "name": "Stanley Access Technologies Slide Door Systems",
+      "category": "automatic-pedestrian-doors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Stanley Automatic Slide Door Systems Owner's Operation and Maintenance Manual",
+          "sourceUrl": "https://s3.amazonaws.com/s3-absupply-net/pdf/Stanley_Slide-Door-Systems_Owners-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "s3.amazonaws.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Stanley Automatic Slide Door Systems Owner's Operation and Maintenance Manual\" (host: s3.amazonaws.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

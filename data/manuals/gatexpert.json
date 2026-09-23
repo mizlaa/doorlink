@@ -1,0 +1,30 @@
+{
+  "manufacturer": {
+    "name": "GateXpert",
+    "slug": "gatexpert",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "PY300DCL",
+      "name": "GateXpert PY300DCL",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "GateXpert PY300DCL Sliding Gate Opener User Manual",
+          "sourceUrl": "https://www.gatexpert-store.com/Content/upload/pdf/202237304/r202208221118067939613.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "gatexpert-store.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"GateXpert PY300DCL Sliding Gate Opener User Manual\" (host: www.gatexpert-store.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "manufacturer": {
+    "name": "Comelit",
+    "slug": "comelit",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "2738W",
+      "name": "Comelit 2738W",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Comelit Door-entry Phone art. 2738W Technical Manual",
+          "sourceUrl": "https://image.schrack.com/bedienungsanleitungen/a_sp2738----_en.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "image.schrack.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Comelit Door-entry Phone art. 2738W Technical Manual\" (host: image.schrack.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Door Entry System Range",
+      "name": "Comelit Door Entry System Range",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Comelit Door Entry System User Guide",
+          "sourceUrl": "https://manuals.plus/comelit/door-entry-system-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Comelit Door Entry System User Guide\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Door Entry Systems",
+      "name": "Comelit Door Entry Systems",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Comelit Installation Instructions Index",
+          "sourceUrl": "https://doorentrydirect.com/comelit-installation-instructions",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "doorentrydirect.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Comelit Installation Instructions Index\" (host: doorentrydirect.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

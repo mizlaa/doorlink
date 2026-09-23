@@ -9,11 +9,171 @@
   },
   "models": [
     {
+      "modelCode": "Doors, Shutters and Gates",
+      "name": "SWS UK Doors, Shutters and Gates",
+      "category": "gate-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "SWS UK Fitting Instructions Index",
+          "sourceUrl": "https://www.sws.co.uk/fitting-instructions/",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "sws.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"SWS UK Fitting Instructions Index\" (host: www.sws.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Roller Garage Door",
+      "name": "SWS UK Roller Garage Door",
+      "category": "garage-door-openers",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "SWS Roller Garage Door Instruction Manual",
+          "sourceUrl": "https://manuals.plus/sws/roller-garage-door-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"SWS Roller Garage Door Instruction Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SECEUROGLIDE",
+      "name": "SWS UK SECEUROGLIDE",
+      "category": "garage-door-openers",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "SeceuroGlide Manual Installation Instructions (TGDC 79601)",
+          "sourceUrl": "https://www.thegaragedoorcentre.co.uk/userfiles/downloads/seceuroglide_manual_installation_instructions_tgdc_79601.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "thegaragedoorcentre.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"SeceuroGlide Manual Installation Instructions (TGDC 79601)\" (host: www.thegaragedoorcentre.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "SeceuroGlide Operating and Maintenance Instructions",
+          "sourceUrl": "http://www.onlinegaragedoors.com/wp-content/uploads/2013/10/seceuroglide-operating-and-maintenance-instructions5.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "onlinegaragedoors.com",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"SeceuroGlide Operating and Maintenance Instructions\" (host: www.onlinegaragedoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SeceuroGlide Classic",
+      "name": "SWS SeceuroGlide Classic Roller Garage Door",
+      "category": "roller-shutter-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "SWS SeceuroGlide Classic Installation Instructions",
+          "sourceUrl": "https://www.manualslib.com/manual/1304672/Sws-Seceuroglide-Classic.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualsLib",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SeceuroGlide Electric",
+      "name": "SWS SeceuroGlide Electric Roller Garage Door",
+      "category": "roller-shutter-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "SWS SeceuroGlide Installation Instructions (Electric Roller Garage Door)",
+          "sourceUrl": "https://www.manualslib.com/manual/1304940/Sws-Seceuroglide.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualsLib",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing, described as the electric roller garage door. The listing itself is titled only \"SeceuroGlide\"; the electric qualifier comes from the search result's description, which is why the model code says Electric while the title does not. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SeceuroGlide LT",
+      "name": "SWS SeceuroGlide LT Roller Garage Door",
+      "category": "roller-shutter-motors",
+      "region": "UK",
+      "aliases": [
+        "SECEUROGLIDE LT"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "SWS SeceuroGlide LT Roller Garage Door Installation Guide",
+          "sourceUrl": "https://www.manualslib.com/manual/1304943/Sws-Seceuroglide-Lt.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualsLib",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": [
+            {
+              "url": "https://device.report/manual/8905216",
+              "authority": "THIRD_PARTY_MIRROR",
+              "label": "device.report copy of the LT installation guide"
+            }
+          ]
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "SWS SeceuroGlide LT Roller Garage Door Installation Guide",
+          "sourceUrl": "https://manuals.plus/sws/seceuroglide-lt-roller-garage-door-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"SWS SeceuroGlide LT Roller Garage Door Installation Guide\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "SeceuroGlide Manual",
       "name": "SWS SeceuroGlide Manual Roller Garage Door",
       "category": "roller-shutter-motors",
       "region": "UK",
-      "aliases": ["SeceuroGlide"],
+      "aliases": [
+        "SeceuroGlide"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,6 +183,7 @@
           "publisher": "ManualsLib",
           "region": "UK",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing. \"Manual\" here is the product variant - the hand-operated door, as against the electric one recorded separately - not the document type. The awkward title is kept because renaming it would lose that distinction. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -34,67 +195,6 @@
               "url": "https://www.sws.co.uk/news/download/installation-guide-for-the-seceuroglide-manual/",
               "authority": "MANUFACTURER_OFFICIAL",
               "label": "Manufacturer download page for this installation guide"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "modelCode": "SeceuroGlide Electric",
-      "name": "SWS SeceuroGlide Electric Roller Garage Door",
-      "category": "roller-shutter-motors",
-      "region": "UK",
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "SWS SeceuroGlide Installation Instructions (Electric Roller Garage Door)",
-          "sourceUrl": "https://www.manualslib.com/manual/1304940/Sws-Seceuroglide.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualsLib",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing, described as the electric roller garage door. The listing itself is titled only \"SeceuroGlide\"; the electric qualifier comes from the search result's description, which is why the model code says Electric while the title does not. Not fetched - egress blocked."
-        }
-      ]
-    },
-    {
-      "modelCode": "SeceuroGlide Classic",
-      "name": "SWS SeceuroGlide Classic Roller Garage Door",
-      "category": "roller-shutter-motors",
-      "region": "UK",
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "SWS SeceuroGlide Classic Installation Instructions",
-          "sourceUrl": "https://www.manualslib.com/manual/1304672/Sws-Seceuroglide-Classic.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualsLib",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked."
-        }
-      ]
-    },
-    {
-      "modelCode": "SeceuroGlide LT",
-      "name": "SWS SeceuroGlide LT Roller Garage Door",
-      "category": "roller-shutter-motors",
-      "region": "UK",
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "SWS SeceuroGlide LT Roller Garage Door Installation Guide",
-          "sourceUrl": "https://www.manualslib.com/manual/1304943/Sws-Seceuroglide-Lt.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualsLib",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked.",
-          "altSources": [
-            {
-              "url": "https://device.report/manual/8905216",
-              "authority": "THIRD_PARTY_MIRROR",
-              "label": "device.report copy of the LT installation guide"
             }
           ]
         }

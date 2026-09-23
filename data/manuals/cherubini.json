@@ -9,22 +9,107 @@
   },
   "models": [
     {
-      "modelCode": "Roller",
-      "name": "Cherubini Roller Tubular Motor",
-      "category": "roller-shutter-motors",
+      "modelCode": "BLUE GARDA",
+      "name": "Cherubini BLUE GARDA",
+      "category": "garage-door-openers",
       "region": "EU",
-      "aliases": ["A4516", "6R51"],
+      "aliases": [],
       "documents": [
         {
-          "kind": "INSTALL_MANUAL",
-          "title": "Cherubini Roller Installation Instructions (EN)",
-          "documentCode": "A4516 6R51",
-          "sourceUrl": "https://www.cherubini-group.com/files/uploads/istruzioni/ist_standard/2023/Roller_A4516_6R51_EN.pdf",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "Cherubini",
+          "kind": "USER_MANUAL",
+          "title": "Cherubini Blue Garda Instructions",
+          "sourceUrl": "https://www.tenditalia.net/files/download/CHERUBINI-Blue-Garda.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "tenditalia.net",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On cherubini-group.com, the manufacturer's own domain, in its standard-instructions tree. Document codes A4516 and 6R51 and the EN language are read from the file name; the 2023 folder is the edition year the manufacturer filed it under. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Cherubini Blue Garda Instructions\" (host: www.tenditalia.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BLUE GARDA SERIES",
+      "name": "Cherubini BLUE GARDA SERIES",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Cherubini Blue Garda Series Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1969089/Cherubini-Blue-Garda-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Cherubini Blue Garda Series Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BLUE ROLL SERIES",
+      "name": "Cherubini BLUE ROLL SERIES",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Cherubini Blue Roll Series Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Cherubini-Blue-Roll-Series-11304259.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Cherubini Blue Roll Series Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BLUE WAVE RX",
+      "name": "Cherubini BLUE WAVE RX",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Cherubini Blue Wave RX Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Cherubini-Blue-Wave-Rx-10834864.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Cherubini Blue Wave RX Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GARDA RX",
+      "name": "Cherubini GARDA RX",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Cherubini Garda RX Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2097721/Cherubini-Garda-Rx.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Cherubini Garda RX Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -33,7 +118,9 @@
       "name": "Cherubini ORA ZRX Dual Radio Tubular Motor",
       "category": "roller-shutter-motors",
       "region": "EU",
-      "aliases": ["ORA-ZRX"],
+      "aliases": [
+        "ORA-ZRX"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -43,7 +130,9 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Search describes the ORA ZRX as a dual-radio motor with electronic limit switch for awnings and pergolas. An \"ORA Plug Mini\" was searched for explicitly and returned nothing, so no record is made for it. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Search describes the ORA ZRX as a dual-radio motor with electronic limit switch for awnings and pergolas. An \"ORA Plug Mini\" was searched for explicitly and returned nothing, so no record is made for it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -52,7 +141,10 @@
       "name": "Cherubini Plug & Play Tubular Motor",
       "category": "roller-shutter-motors",
       "region": "EU",
-      "aliases": ["Plug and Play", "Plug&Play"],
+      "aliases": [
+        "Plug and Play",
+        "Plug&Play"
+      ],
       "documents": [
         {
           "kind": "QUICK_START",
@@ -62,6 +154,7 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing of the short-form instructions, for tubular motors with electronic limit switches for roller blinds and screens. Typed as QUICK_START because the document itself is titled Short, so the full instructions are a known gap. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -78,7 +171,9 @@
       "name": "Cherubini Plug & Play Ocean Easy Tubular Motor",
       "category": "roller-shutter-motors",
       "region": "EU",
-      "aliases": ["Ocean Easy"],
+      "aliases": [
+        "Ocean Easy"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -88,7 +183,88 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Search describes the Ocean Easy as a tubular motor with an easy connector and manual override device. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Search describes the Ocean Easy as a tubular motor with an easy connector and manual override device. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Roller",
+      "name": "Cherubini Roller Tubular Motor",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [
+        "A4516",
+        "6R51"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Cherubini Roller Installation Instructions (EN)",
+          "sourceUrl": "https://www.cherubini-group.com/files/uploads/istruzioni/ist_standard/2023/Roller_A4516_6R51_EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "Cherubini",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "A4516 6R51",
+          "evidence": "On cherubini-group.com, the manufacturer's own domain, in its standard-instructions tree. Document codes A4516 and 6R51 and the EN language are read from the file name; the 2023 folder is the edition year the manufacturer filed it under. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TRONIC RX",
+      "name": "Cherubini TRONIC RX",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Cherubini Tronic RX Instructions (A4518_6425 Rev 14-06-2020)",
+          "sourceUrl": "https://www.cherubini-group.com/Content/uploads/new/TronicRX_A4518_6425_Rev_14_06_2020_Ing.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "cherubini-group.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Cherubini Tronic RX Instructions (A4518_6425 Rev 14-06-2020)\" (host: www.cherubini-group.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Cherubini Tronic RX Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1733463/Cherubini-Tronic-Rx.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Cherubini Tronic RX Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "WAVE RX",
+      "name": "Cherubini WAVE RX",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Cherubini Wave RX Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2045694/Cherubini-Wave-Rx.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Cherubini Wave RX Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

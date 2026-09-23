@@ -9,11 +9,59 @@
   },
   "models": [
     {
+      "modelCode": "Garage Door Openers",
+      "name": "Overhead Door Garage Door Openers",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Overhead Door Owner Manuals Index",
+          "sourceUrl": "https://www.overheaddoor.com/resources/owner-manuals",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "overheaddoor.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Overhead Door Owner Manuals Index\" (host: www.overheaddoor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LEGACY",
+      "name": "Overhead Door LEGACY",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Overhead Door Legacy Owner's Manual",
+          "sourceUrl": "https://www.overheaddoorvt.com/wp-content/uploads/Documents/legacy-owners-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "overheaddoorvt.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Overhead Door Legacy Owner's Manual\" (host: www.overheaddoorvt.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "Legacy 650",
       "name": "Overhead Door Legacy 650 Garage Door Opener (Model 1029)",
       "category": "garage-door-openers",
       "region": "US",
-      "aliases": ["Legacy650", "Model 1029", "Legacy 850", "Model 2029", "Legacy Series"],
+      "aliases": [
+        "Legacy650",
+        "Model 1029",
+        "Legacy 850",
+        "Model 2029",
+        "Legacy Series"
+      ],
       "documents": [
         {
           "kind": "USER_MANUAL",
@@ -23,6 +71,7 @@
           "publisher": "Overhead Door",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "On overheaddoor-production-assets.azureedge.net, Overhead Door's own CDN - a manufacturer host despite the azureedge.net address, same reasoning as Rytec's S3 bucket. The model numbers 1029 and 2029 come from the search result's rendering of the document's own cover. The sfvrsn query parameter is the CMS cache-buster and may change; if the link later breaks, the owner-manuals index is the route back in. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -41,6 +90,132 @@
               "label": "Overhead Door of Concord manual index"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "LEGACY 800 (2026)",
+      "name": "Overhead Door LEGACY 800 (2026)",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Overhead Door Legacy 800 2026 Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1670027/Overhead-Door-Legacy-800-2026.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Overhead Door Legacy 800 2026 Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LEGACY 850",
+      "name": "Overhead Door LEGACY 850",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Overhead Door Legacy 850 Manual",
+          "sourceUrl": "https://www.manualslib.com/guide/2935481/overhead-door-legacy-850-manual.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Overhead Door Legacy 850 Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LEGACY 920",
+      "name": "Overhead Door LEGACY 920",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Overhead Door Legacy 920 Owner's Manual (English)",
+          "sourceUrl": "https://overheaddoor-production-assets.azureedge.net/assets/docs/default-source/owner's-manuals/legacy-920-owners-manual-english.pdf?sfvrsn=347fa23c_4",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "overheaddoor-production-assets.azureedge.net",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Overhead Door Legacy 920 Owner's Manual (English)\" (host: overheaddoor-production-assets.azureedge.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RHX / RS (Sectional, Hoist)",
+      "name": "Overhead Door RHX / RS (Sectional, Hoist)",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Overhead Door RHX RS Sectional Hoist Owner's Manual",
+          "sourceUrl": "https://overheaddoorcolumbia.com/pdf/OM-RHX-RS-SECT-Hoist.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "overheaddoorcolumbia.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Overhead Door RHX RS Sectional Hoist Owner's Manual\" (host: overheaddoorcolumbia.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RHX NEMA",
+      "name": "Overhead Door RHX NEMA",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Overhead Door RHX NEMA Commercial Operator Manual",
+          "sourceUrl": "https://overheaddoor-production-assets.azureedge.net/assets/docs/default-source/owner's-manuals/operator-rhx-nema-manual.pdf?sfvrsn=f0e67fb7_2",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "overheaddoor-production-assets.azureedge.net",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Overhead Door RHX NEMA Commercial Operator Manual\" (host: overheaddoor-production-assets.azureedge.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RSX (Drawbar)",
+      "name": "Overhead Door RSX (Drawbar)",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Overhead Door RSX Commercial Operator Drawbar Installation Manual",
+          "sourceUrl": "https://www.overheaddoor.com/Documents/operator-rsx-drawbar-install.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "overheaddoor.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Overhead Door RSX Commercial Operator Drawbar Installation Manual\" (host: www.overheaddoor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

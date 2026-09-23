@@ -2,7 +2,7 @@
   "name": "doorlink",
   "version": "0.1.0",
   "private": true,
-  "description": "DoorLink — everything for your door, in one place.",
+  "description": "DoorLink \u2014 everything for your door, in one place.",
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && next build",
@@ -16,6 +16,7 @@
     "db:studio": "prisma studio",
     "test": "vitest run",
     "manuals:import": "tsx scripts/manuals/import.ts",
+    "manuals:ingest": "tsx scripts/manuals/ingest-list.ts",
     "manuals:verify": "tsx scripts/manuals/verify.ts",
     "manuals:report": "tsx scripts/manuals/report.ts",
     "manuals:harvest": "tsx scripts/manuals/harvest.ts"

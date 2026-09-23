@@ -9,6 +9,72 @@
   },
   "models": [
     {
+      "modelCode": "CARTECK SECTIONAL",
+      "name": "Teckentrup CARTECK SECTIONAL",
+      "category": "garage-door-openers",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Teckentrup CarTeck Sectional Garage Door Fitting Instructions",
+          "sourceUrl": "https://www.teckentrup.co.uk/assets/content/images/Teckentrup-CarTeck-Sectional-Garage-Door-Fitting-Instructions.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "teckentrup.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Teckentrup CarTeck Sectional Garage Door Fitting Instructions\" (host: www.teckentrup.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Doors",
+      "name": "Teckentrup Doors",
+      "category": "industrial-high-speed-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Teckentrup Downloadcenter Index",
+          "sourceUrl": "https://www.teckentrup.biz/en/downloadcenter",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "teckentrup.biz",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Teckentrup Downloadcenter Index\" (host: www.teckentrup.biz). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Folding Door",
+      "name": "Teckentrup Industrial Folding Door with Drive",
+      "category": "industrial-high-speed-doors",
+      "region": "UK",
+      "aliases": [
+        "Folding Doors"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Industrial Folding Doors with Drive Installation Instructions",
+          "sourceUrl": "https://www.teckentrup.co.uk/assets/content/images/Folding-Door-With-Drive-Installation-Instructions.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "Teckentrup",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "06I2019",
+          "evidence": "On teckentrup.co.uk. Cover dated 06I2019, recorded verbatim. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "Industrial Sectional",
       "name": "Teckentrup Industrial Sectional Door",
       "category": "industrial-high-speed-doors",
@@ -31,51 +97,30 @@
           "publisher": "Teckentrup",
           "region": "UK",
           "rights": "LINK_ONLY",
-          "evidence": "On teckentrup.co.uk, the manufacturer's UK domain. The sectional model codes listed as aliases come from the UK downloads page, which names SW 40, SW 80, SLW 40, SLW 80, SL 40, SL 80 and SLX 40 as having installation instructions - they are aliases so a search lands, not a claim that this one document covers all seven. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On teckentrup.co.uk, the manufacturer's UK domain. The sectional model codes listed as aliases come from the UK downloads page, which names SW 40, SW 80, SLW 40, SLW 80, SL 40, SL 80 and SLX 40 as having installation instructions - they are aliases so a search lands, not a claim that this one document covers all seven. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
     {
-      "modelCode": "SW Sectional",
-      "name": "Teckentrup SW Industrial Sectional Door",
-      "category": "industrial-high-speed-doors",
+      "modelCode": "Roller Shutters",
+      "name": "Teckentrup Roller Shutters",
+      "category": "roller-shutter-motors",
       "region": "UK",
-      "aliases": [
-        "SW"
-      ],
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
-          "title": "SW Industrial Sectional Door Installation Instructions",
-          "sourceUrl": "https://www.teckentrup.co.uk/assets/content/images/Installation-Instruction-SW-Sectional-Doors.pdf",
+          "title": "Teckentrup Roller Shutters Installation, Operating and Maintenance Instructions",
+          "sourceUrl": "https://www.teckentrup.co.uk/assets/content/images/installation-instructions_rollers-shutters.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "Teckentrup",
+          "publisher": "teckentrup.co.uk",
           "region": "UK",
           "rights": "LINK_ONLY",
-          "evidence": "On teckentrup.co.uk. The cover reads 10I2017, Teckentrup's month-and-year form, recorded verbatim as the version rather than reformatted into a date. Not fetched - egress blocked.",
-          "version": "10I2017"
-        }
-      ]
-    },
-    {
-      "modelCode": "Folding Door",
-      "name": "Teckentrup Industrial Folding Door with Drive",
-      "category": "industrial-high-speed-doors",
-      "region": "UK",
-      "aliases": [
-        "Folding Doors"
-      ],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Industrial Folding Doors with Drive Installation Instructions",
-          "sourceUrl": "https://www.teckentrup.co.uk/assets/content/images/Folding-Door-With-Drive-Installation-Instructions.pdf",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "Teckentrup",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "evidence": "On teckentrup.co.uk. Cover dated 06I2019, recorded verbatim. Not fetched - egress blocked.",
-          "version": "06I2019"
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Teckentrup Roller Shutters Installation, Operating and Maintenance Instructions\" (host: www.teckentrup.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -96,8 +141,34 @@
           "publisher": "Teckentrup",
           "region": "UK",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "March 2022",
           "evidence": "On teckentrup.co.uk. Dated March 2022 in the file name. This is the domestic garage door, not the industrial sectional recorded above - different products despite similar names. Not fetched - egress blocked.",
-          "version": "March 2022"
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SW Sectional",
+      "name": "Teckentrup SW Industrial Sectional Door",
+      "category": "industrial-high-speed-doors",
+      "region": "UK",
+      "aliases": [
+        "SW"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "SW Industrial Sectional Door Installation Instructions",
+          "sourceUrl": "https://www.teckentrup.co.uk/assets/content/images/Installation-Instruction-SW-Sectional-Doors.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "Teckentrup",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "10I2017",
+          "evidence": "On teckentrup.co.uk. The cover reads 10I2017, Teckentrup's month-and-year form, recorded verbatim as the version rather than reformatted into a date. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

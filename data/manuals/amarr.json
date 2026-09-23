@@ -13,7 +13,11 @@
       "name": "Amarr 2002 / 2012 / 2022 Commercial Aluminium Sectional Doors",
       "category": "garage-door-openers",
       "region": "US",
-      "aliases": ["2002", "2012", "2022"],
+      "aliases": [
+        "2002",
+        "2012",
+        "2022"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,7 +27,84 @@
           "publisher": "Amarr",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On sites.myamarr.biz, Amarr's own asset host. The model numbers come from the document's own heading as rendered in the search result; the file name is generic (Commercial_Door_Installation_Instructions.pdf), which is a reason to re-check that this URL still serves this document on verification rather than assuming the path is model-specific. One document covers all three. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On sites.myamarr.biz, Amarr's own asset host. The model numbers come from the document's own heading as rendered in the search result; the file name is generic (Commercial_Door_Installation_Instructions.pdf), which is a reason to re-check that this URL still serves this document on verification rather than assuming the path is model-specific. One document covers all three. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Garage and Commercial Doors",
+      "name": "Amarr Garage and Commercial Doors",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Amarr Garage Door and Commercial Door Installation Instructions Index",
+          "sourceUrl": "https://www.amarr.com/us/en/support/garage-door-and-commercial-door-installation-instructions",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "amarr.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Amarr Garage Door and Commercial Door Installation Instructions Index\" (host: www.amarr.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Residential Aluminum Garage Doors",
+      "name": "Amarr Residential Aluminum Garage Doors",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Amarr Residential Aluminum Garage Door Installation Instructions",
+          "sourceUrl": "https://www.amarr.com/content/dam/amarr/com/us/en/documents/residential/instructions/aluminium-garage-doors/aluminum-door-%E2%80%93-residential-installation-instructions/Residential%20Aluminum%20Garage%20Door%20Installation%20Instructions.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "amarr.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Amarr Residential Aluminum Garage Door Installation Instructions\" (host: www.amarr.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Residential Steel Garage Doors",
+      "name": "Amarr Residential Steel Garage Doors",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Amarr Residential Conventional Hardware Installation Instructions",
+          "sourceUrl": "https://sites.myamarr.biz/content/dam/amarr/com/us/en/documents/residential/instructions/steel-doors/conventional-hardware---residential-installation-instructions/Residential-Conventional-Hardware-Installation-Instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "sites.myamarr.biz",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Amarr Residential Conventional Hardware Installation Instructions\" (host: sites.myamarr.biz). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Amarr Residential Steel Garage Doors Supplemental Installation Instructions",
+          "sourceUrl": "https://www.doorson-line.com/assets/downloads/manuals_support/ResidentialDoors/Instructions_amarr_residential_steel_supp.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "doorson-line.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Amarr Residential Steel Garage Doors Supplemental Installation Instructions\" (host: www.doorson-line.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

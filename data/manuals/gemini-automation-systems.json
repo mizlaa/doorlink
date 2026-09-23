@@ -1,0 +1,105 @@
+{
+  "manufacturer": {
+    "name": "Gemini Automation Systems",
+    "slug": "gemini-automation-systems",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "12V DC",
+      "name": "Gemini Automation Systems 12V DC",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Gemini 12V DC Gate Motor Manual",
+          "sourceUrl": "https://gmsouthafrica.co.za/wp-content/uploads/2020/06/Gemini12vDC-1.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "gmsouthafrica.co.za",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Gemini 12V DC Gate Motor Manual\" (host: gmsouthafrica.co.za). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "24V DC SLIDER",
+      "name": "Gemini Automation Systems 24V DC SLIDER",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Gemini 24V DC Slider Gate Motor Manual",
+          "sourceUrl": "https://geminigates.co.za/wp-content/uploads/manuals/Gemini-24V-DC-Slider_Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "geminigates.co.za",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Gemini 24V DC Slider Gate Motor Manual\" (host: geminigates.co.za). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "AC SWING",
+      "name": "Gemini Automation Systems AC SWING",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Gemini AC Swing Gate Motor Manual",
+          "sourceUrl": "https://www.geminigates.co.za/wp-content/uploads/manuals/AC-Swing-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "geminigates.co.za",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Gemini AC Swing Gate Motor Manual\" (host: www.geminigates.co.za). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Motors",
+      "name": "Gemini Automation Systems Gate Motors",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Gemini Gate Motor Installation and User Manuals Index",
+          "sourceUrl": "https://progatemotorrepairs.co.za/technical-info/gemini-installation-and-user-manuals/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "progatemotorrepairs.co.za",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Gemini Gate Motor Installation and User Manuals Index\" (host: progatemotorrepairs.co.za). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Gemini Gate Motor Manuals and Spec Sheets Index",
+          "sourceUrl": "https://geminigates.co.za/manuals/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "geminigates.co.za",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Gemini Gate Motor Manuals and Spec Sheets Index\" (host: geminigates.co.za). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

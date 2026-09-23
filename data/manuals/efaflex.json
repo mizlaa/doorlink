@@ -7,5 +7,27 @@
     "supportUrl": "https://www.efaflex.com/download-area/",
     "note": "German high-speed door manufacturer. Its download area carries product brochures, instructions and installation conditions. No model-level PDF URL was surfaced, so none is claimed."
   },
-  "models": []
+  "models": [
+    {
+      "modelCode": "High-Speed Doors",
+      "name": "EFAFLEX High-Speed Doors",
+      "category": "industrial-high-speed-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "EFAFLEX Download Area Index (instructions and manuals)",
+          "sourceUrl": "https://www.efaflex.com/download-area/",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "efaflex.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"EFAFLEX Download Area Index (instructions and manuals)\" (host: www.efaflex.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
 }

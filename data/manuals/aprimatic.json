@@ -9,11 +9,80 @@
   },
   "models": [
     {
+      "modelCode": "G-MATIC AP350",
+      "name": "Aprimatic G-MATIC AP350",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Aprimatic G-Matic AP350 Use and Maintenance Instructions",
+          "sourceUrl": "https://www.manualslib.com/manual/2067529/Aprimatic-G-Matic-Ap350.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Aprimatic G-Matic AP350 Use and Maintenance Instructions\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ONDA 500",
+      "name": "Aprimatic ONDA 500",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Aprimatic Onda 500 Installation Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1161253/Aprimatic-Onda-500.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Aprimatic Onda 500 Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "R251FM",
+      "name": "Aprimatic R251FM 24V Swing Gate Operator",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [
+        "R251",
+        "R251 FM"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Aprimatic R251FM Installation, Use and Maintenance Instructions",
+          "sourceUrl": "https://www.manualslib.com/manual/2135936/Aprimatic-R251fm.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualsLib",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing. Recorded under the full R251FM designation with R251 as an alias, because the document names the FM variant and the bare R251 was not separately confirmed. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "ZT4",
       "name": "Aprimatic ZT4 Swing Gate Operator",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["ZT4 C", "ZT SF"],
+      "aliases": [
+        "ZT4 C",
+        "ZT SF"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,6 +92,7 @@
           "publisher": "Intelligent Security",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Reseller copy, and the file name says it is watermarked - so it is a marked-up redistribution, not a clean manufacturer PDF. Recorded as the source because it is a direct PDF; the aggregator listings below carry the same document. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -50,21 +120,23 @@
       ]
     },
     {
-      "modelCode": "R251FM",
-      "name": "Aprimatic R251FM 24V Swing Gate Operator",
-      "category": "gate-motors",
+      "modelCode": "ZT4 C",
+      "name": "Aprimatic ZT4 C",
+      "category": "garage-door-openers",
       "region": "EU",
-      "aliases": ["R251", "R251 FM"],
+      "aliases": [],
       "documents": [
         {
-          "kind": "INSTALL_MANUAL",
-          "title": "Aprimatic R251FM Installation, Use and Maintenance Instructions",
-          "sourceUrl": "https://www.manualslib.com/manual/2135936/Aprimatic-R251fm.html",
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Aprimatic ZT4 C Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1889795/Aprimatic-Zt4-C.html",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualsLib",
+          "publisher": "manualslib.com",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Recorded under the full R251FM designation with R251 as an alias, because the document names the FM variant and the bare R251 was not separately confirmed. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Aprimatic ZT4 C Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

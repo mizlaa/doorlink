@@ -1,0 +1,177 @@
+{
+  "manufacturer": {
+    "name": "Manaras-Opera",
+    "slug": "manaras-opera",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "Door Operators",
+      "name": "Manaras-Opera Door Operators",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Manaras-Opera Technical Documents Index",
+          "sourceUrl": "https://www.manaras.com/technical-documents.shtml",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manaras.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Manaras-Opera Technical Documents Index\" (host: www.manaras.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ECB OPERA",
+      "name": "Manaras-Opera ECB OPERA",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Manaras ECB Opera Operator Manual",
+          "sourceUrl": "https://shaverinc.com/wp-content/uploads/2021/03/Manaras-ECB-Opera-Manual-Email-F1.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "shaverinc.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Manaras ECB Opera Operator Manual\" (host: shaverinc.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "OPERA (book1119)",
+      "name": "Manaras-Opera OPERA (book1119)",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Manaras Opera Installation and Instruction Manual (book1119)",
+          "sourceUrl": "https://www.manaras.com/book1119.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manaras.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Manaras Opera Installation and Instruction Manual (book1119)\" (host: www.manaras.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "OPERA-GH",
+      "name": "Manaras-Opera OPERA-GH",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Manaras Opera-GH Installation and Instruction Manual (book046)",
+          "sourceUrl": "https://www.manaras.com/book046.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manaras.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Manaras Opera-GH Installation and Instruction Manual (book046)\" (host: www.manaras.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "OPERA-GH (OGH)",
+      "name": "Manaras-Opera OPERA-GH (OGH)",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Manaras-Opera Opera-GH (OGH) Commercial Door Operator Installation Manual",
+          "sourceUrl": "https://manuals.plus/m/73c181b13445dd77951d0792bd306923726999b34bad0fbe021e48b7e477001b",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Manaras-Opera Opera-GH (OGH) Commercial Door Operator Installation Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "OPERA-H",
+      "name": "Manaras-Opera OPERA-H",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Manaras Opera-H Installation and Instruction Manual (book002)",
+          "sourceUrl": "https://www.manaras.com/book002.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manaras.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Manaras Opera-H Installation and Instruction Manual (book002)\" (host: www.manaras.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "OPERA-MH",
+      "name": "Manaras-Opera OPERA-MH",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Manaras Opera-MH Installation and Instruction Manual (book1200)",
+          "sourceUrl": "https://www.manaras.com/book1200.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manaras.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Manaras Opera-MH Installation and Instruction Manual (book1200)\" (host: www.manaras.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "OPH",
+      "name": "Manaras-Opera OPH",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Manaras OPH Industrial Door Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Manaras-Oph-8952858.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Manaras OPH Industrial Door Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

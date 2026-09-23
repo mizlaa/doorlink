@@ -1,0 +1,30 @@
+{
+  "manufacturer": {
+    "name": "Alpine Overhead Doors",
+    "slug": "alpine-overhead-doors",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "Roll Up Doors",
+      "name": "Alpine Overhead Doors Roll Up Doors",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Alpine Overhead Doors Product Literature Index",
+          "sourceUrl": "https://www.alpinedoors.com/product-literature/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "alpinedoors.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Alpine Overhead Doors Product Literature Index\" (host: www.alpinedoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

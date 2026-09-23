@@ -1,0 +1,108 @@
+{
+  "manufacturer": {
+    "name": "Dorma",
+    "slug": "dorma",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "ED 100 / ED 250",
+      "name": "Dorma ED 100 / ED 250",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Dorma ED 100 and ED 250 Mounting Instructions (DL3463-010)",
+          "sourceUrl": "https://www.addisonautomatics.com/wp-content/uploads/manuals/dorma/DL3463-010%20ED100%20&%20ED250%20Mounting%20Instructions%2002-21-12.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "addisonautomatics.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dorma ED 100 and ED 250 Mounting Instructions (DL3463-010)\" (host: www.addisonautomatics.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Dorma ED 100, ED 250 Operating Instructions",
+          "sourceUrl": "https://www.addisonautomatics.com/wp-content/uploads/manuals/dorma/ED100%20&%20ED250.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "addisonautomatics.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dorma ED 100, ED 250 Operating Instructions\" (host: www.addisonautomatics.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ED100",
+      "name": "Dorma ED100",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Dorma ED100 Low Energy / Full Energy Swing Door Operator Service Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1252875/Dorma-Ed100.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dorma ED100 Low Energy / Full Energy Swing Door Operator Service Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ES 200",
+      "name": "Dorma ES 200",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Dorma ES 200 Automatic Sliding Door Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Dorma-Es-200-8662053.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dorma ES 200 Automatic Sliding Door Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Dorma ES 200 Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1294636/Dorma-Es-200.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dorma ES 200 Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Dorma ES 200 Sliding Door Operator Manual",
+          "sourceUrl": "http://doormanuals.co.uk/wp-content/uploads/2018/06/Dorma-ES-200.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "doormanuals.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Dorma ES 200 Sliding Door Operator Manual\" (host: doormanuals.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

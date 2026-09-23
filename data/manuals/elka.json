@@ -1,0 +1,114 @@
+{
+  "manufacturer": {
+    "name": "ELKA",
+    "slug": "elka",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "EST 4004K",
+      "name": "ELKA EST 4004K",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "ELKA EST 4004K Installation and Operating Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1033482/Elka-Est-4004k.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ELKA EST 4004K Installation and Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Openers and Barriers",
+      "name": "ELKA Gate Openers and Barriers",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "ELKA-Torantriebe Downloads Index",
+          "sourceUrl": "https://www.elka.eu/en/downloads",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "elka.eu",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ELKA-Torantriebe Downloads Index\" (host: www.elka.eu). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "M315",
+      "name": "ELKA M315",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "ELKA M315 Manual",
+          "sourceUrl": "https://www.intelligentsecurity.org/resources/access-control/ELKA-M315-Manual_Watermark.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "intelligentsecurity.org",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ELKA M315 Manual\" (host: www.intelligentsecurity.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NOVA",
+      "name": "ELKA NOVA",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "ELKA Nova Slide Gate Opener Operation, Installation and Service Instructions",
+          "sourceUrl": "https://www.torautomation24.de/documents/elka/EN_ELKA-NOVA-Schiebetorantrieb-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "torautomation24.de",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ELKA Nova Slide Gate Opener Operation, Installation and Service Instructions\" (host: www.torautomation24.de). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "T 3000",
+      "name": "ELKA T 3000",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "ELKA T 3000 Installation and Operating Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2263730/Elka-T-3000.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ELKA T 3000 Installation and Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

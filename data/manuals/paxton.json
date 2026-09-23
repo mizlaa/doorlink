@@ -1,0 +1,117 @@
+{
+  "manufacturer": {
+    "name": "Paxton",
+    "slug": "paxton",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "Access Control",
+      "name": "Paxton Access Control",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Paxton Instructions Index",
+          "sourceUrl": "https://www.paxton-access.com/install-paxton/resources/instructions/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "paxton-access.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Paxton Instructions Index\" (host: www.paxton-access.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NET2",
+      "name": "Paxton NET2",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Paxton Net2 Access Control Unit Installation Application Note (AN1012)",
+          "sourceUrl": "https://www.paxton-access.com/wp-content/uploads/2019/03/AN1012.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "paxton-access.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Paxton Net2 Access Control Unit Installation Application Note (AN1012)\" (host: www.paxton-access.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Paxton Net2 Installer Guide (519-708-US)",
+          "sourceUrl": "https://www.paxton-access.com/wp-content/uploads/2019/04/519-708-US.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "paxton-access.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Paxton Net2 Installer Guide (519-708-US)\" (host: www.paxton-access.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NET2 ENTRY",
+      "name": "Paxton NET2 ENTRY",
+      "category": "remotes-accessories",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Paxton Net2 Entry Installer Guide",
+          "sourceUrl": "http://s3.abbas.cz/PRODUKT/Manual/Paxton/Net2_Entry.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "s3.abbas.cz",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Paxton Net2 Entry Installer Guide\" (host: s3.abbas.cz). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NET2 PLUS",
+      "name": "Paxton NET2 PLUS",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Paxton Net2 Plus Control Unit Installation Instructions (Ins-30080)",
+          "sourceUrl": "https://www.paxton-access.com/wp-content/uploads/2019/03/ins-30080.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "paxton-access.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Paxton Net2 Plus Control Unit Installation Instructions (Ins-30080)\" (host: www.paxton-access.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Paxton Net2 Plus Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1585982/Paxton-Net2-Plus.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Paxton Net2 Plus Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

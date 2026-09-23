@@ -3,7 +3,7 @@ import { join } from 'node:path'
 import { PrismaClient, DataSource } from '@prisma/client'
 import { manufacturerFileSchema } from './schema'
 import { aliasSpellings, normaliseModel } from '../../src/lib/manuals/normalise'
-import { documentSlug, slugify } from '../../src/lib/manuals/slug'
+import { documentSlug, modelSlug } from '../../src/lib/manuals/slug'
 import { reportFailure } from './db-guard'
 
 // Imports data/manuals/*.json into the catalogue.
@@ -108,13 +108,22 @@ async function main() {
 
       const model = await prisma.model.upsert({
         where: { manufacturerId_modelCode: { manufacturerId: mfr.id, modelCode: seed.modelCode } },
-        update: { name: seed.name, categoryId: category.id },
+        // The slug is rewritten on update, not just on insert. It is a
+        // pure function of the natural key, so restating it is a no-op
+        // for a row already in the current format and a repair for one
+        // written before the format changed — which is what stops a
+        // format change from needing the table emptied first.
+        update: {
+          name: seed.name,
+          categoryId: category.id,
+          slug: modelSlug(manufacturer.slug, seed.modelCode),
+        },
         create: {
           manufacturerId: mfr.id,
           categoryId: category.id,
           name: seed.name,
           modelCode: seed.modelCode,
-          slug: slugify(`${manufacturer.slug}-${seed.modelCode}`),
+          slug: modelSlug(manufacturer.slug, seed.modelCode),
           dataSource: DataSource.IMPORTED,
         },
       })

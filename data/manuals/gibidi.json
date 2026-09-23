@@ -9,11 +9,206 @@
   },
   "models": [
     {
+      "modelCode": "BL240",
+      "name": "GiBiDi BL240",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "GiBiDi BL240 Instructions for Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1136960/Gibidi-Bl240.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"GiBiDi BL240 Instructions for Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "F12E",
+      "name": "GiBiDi F12E",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [
+        "F12"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "GiBiDi F12E Instructions for Installation",
+          "sourceUrl": "https://www.manualslib.com/manual/1209942/Gibidi-F12e.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualsLib",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing, 33 pages. Recorded under F12E because that is the designation on the document; the bare F12 is kept only as an alias, since whether it is the same product was not established. Not fetched - egress blocked.",
+          "altSources": [
+            {
+              "url": "https://www.manualslib.com/manual/1773681/Gibidi-F12e.html",
+              "authority": "THIRD_PARTY_MIRROR",
+              "label": "Second ManualsLib listing of the same manual"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelCode": "F4",
+      "name": "GiBiDi F4",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "GiBiDi F4 Instructions for Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2096660/Gibidi-F4.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"GiBiDi F4 Instructions for Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "F4 PLUS",
+      "name": "GiBiDi F4 PLUS",
+      "category": "gate-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "GiBiDi F4 Plus Control Panel Manual (EasyGates)",
+          "sourceUrl": "https://manuals.easygates.co.uk/gibidi-f4-plus-control-panel-manual/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.easygates.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"GiBiDi F4 Plus Control Panel Manual (EasyGates)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "GiBiDi F4 Plus Instructions for Installations",
+          "sourceUrl": "https://www.manualslib.com/manual/1356655/Gibidi-F4-Plus.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"GiBiDi F4 Plus Instructions for Installations\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "F4 PLUS (AS05850)",
+      "name": "GiBiDi F4 PLUS (AS05850)",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "GiBiDi F4 Plus Control Unit Drawings (AIC8786 Rev2)",
+          "sourceUrl": "https://doc.gibidi.com/ISTRUZIONI-INSTRUCTIONS/CENTRALINE-CONTROL%20UNITS-PLATINES-CUADROS%20MANIOBRA/VECCHIE%20CENTRALI%20-%20OLD%20CONTROL%20UNITS/F4%20PLUS/AS05850%20-%20F4%20PLUS/AIC8786_F4_DISEGNI_Rev2.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "doc.gibidi.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"GiBiDi F4 Plus Control Unit Drawings (AIC8786 Rev2)\" (host: doc.gibidi.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "F4 PLUS (AS05950)",
+      "name": "GiBiDi F4 PLUS (AS05950)",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "GiBiDi F4 Plus Electronic Control Unit Instructions for Installation (AIC6556 Rev1)",
+          "sourceUrl": "https://doc.gibidi.com/GIBIDI-UK-LTD/1.%20PRODUCT%20MANUALS/7.%20CONTROL%20UNITS/F4/OLDER%20VERSIONS/AS05950_F4_PLUS/AIC6556_F4PLUS_Rev1.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "doc.gibidi.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"GiBiDi F4 Plus Electronic Control Unit Instructions for Installation (AIC6556 Rev1)\" (host: doc.gibidi.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "FLOOR 830",
+      "name": "GiBiDi FLOOR 830",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "GiBiDi Floor 830 Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1384825/Gibidi-Floor-830.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"GiBiDi Floor 830 Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Motors",
+      "name": "GiBiDi Gate Motors",
+      "category": "gate-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "GiBiDi PDF Manuals Index",
+          "sourceUrl": "https://gibidiautomation.co.uk/gibidi-pdf-manuals",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "gibidiautomation.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"GiBiDi PDF Manuals Index\" (host: gibidiautomation.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "PASS 600",
       "name": "GiBiDi PASS 600 Sliding Gate Operator",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["PASS600", "PASS 800", "PASS 1200", "PASS 1800", "PASS 2500", "PASS 800 24VDC"],
+      "aliases": [
+        "PASS600",
+        "PASS 800",
+        "PASS 1200",
+        "PASS 1800",
+        "PASS 2500",
+        "PASS 800 24VDC"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,6 +218,7 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing, 14 pages. Search reports this manual also covers the PASS 800, 1200, 1800, 2500 and PASS 800 24VDC, so those are recorded as aliases on this model - one document, found under any of its names - rather than as separate models each holding a copy of the same PDF. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -44,7 +240,9 @@
       "name": "GiBiDi PASS 600 REGO",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["PASS600 REGO"],
+      "aliases": [
+        "PASS600 REGO"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -54,33 +252,30 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing, filed by the aggregator under garage door openers rather than gate operators. Kept as its own model because REGO is listed as a distinct product with its own manual, not as a variant sharing the PASS 600 document. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing, filed by the aggregator under garage door openers rather than gate operators. Kept as its own model because REGO is listed as a distinct product with its own manual, not as a variant sharing the PASS 600 document. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
     {
-      "modelCode": "F12E",
-      "name": "GiBiDi F12E",
+      "modelCode": "SL 544",
+      "name": "GiBiDi SL 544",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["F12"],
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
-          "title": "GiBiDi F12E Instructions for Installation",
-          "sourceUrl": "https://www.manualslib.com/manual/1209942/Gibidi-F12e.html",
+          "title": "GiBiDi SL 544 Instructions for Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2095798/Gibidi-Sl-544.html",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualsLib",
+          "publisher": "manualslib.com",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing, 33 pages. Recorded under F12E because that is the designation on the document; the bare F12 is kept only as an alias, since whether it is the same product was not established. Not fetched - egress blocked.",
-          "altSources": [
-            {
-              "url": "https://www.manualslib.com/manual/1773681/Gibidi-F12e.html",
-              "authority": "THIRD_PARTY_MIRROR",
-              "label": "Second ManualsLib listing of the same manual"
-            }
-          ]
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"GiBiDi SL 544 Instructions for Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

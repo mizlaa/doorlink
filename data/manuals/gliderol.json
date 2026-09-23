@@ -9,20 +9,44 @@
   },
   "models": [
     {
-      "modelCode": "GTS2000",
-      "name": "Tilt and Sectional Overhead Door Operator",
+      "modelCode": "GLIDERMATIC GRD",
+      "name": "Gliderol GLIDERMATIC GRD",
       "category": "garage-door-openers",
       "region": "AU",
+      "aliases": [],
       "documents": [
         {
-          "kind": "USER_MANUAL",
-          "title": "GTS2000 Owner's Manual",
-          "version": "V1",
-          "sourceUrl": "https://www.gliderol.com.au/wp-content/uploads/2025/02/GTS2000-Owners-Manual-V1-Board.pdf",
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Glidermatic GRD Roller Door Automatic Operator Manual (PF4-AUCBGID-10)",
+          "sourceUrl": "https://www.gliderol.com.au/wp-content/uploads/2025/03/PF4-AUCBGID-10-Manual.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "gliderol.com.au",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Surfaced by web search on the manufacturer's own domain. Version V1 is taken from the filename, not inferred. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Glidermatic GRD Roller Door Automatic Operator Manual (PF4-AUCBGID-10)\" (host: www.gliderol.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GLIDERMATIC GRD+",
+      "name": "Gliderol GLIDERMATIC GRD+",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Gliderol Glidermatic GRD+ Installation Instructions and Owner's Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/956371/Gliderol-Glidermatic-GrdPlus.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Gliderol Glidermatic GRD+ Installation Instructions and Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -31,6 +55,7 @@
       "name": "Glidermatic GRD Roller Door Automatic Operator",
       "category": "garage-door-openers",
       "region": "AU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -40,6 +65,7 @@
           "publisher": "Wholesale Garage Doors",
           "region": "AU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Reseller-hosted copy. Gliderol's own support page lists this manual but the search result did not expose a direct PDF URL on gliderol.com.au, so the official link is recorded at manufacturer level instead of guessed. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -76,6 +102,7 @@
       "name": "Glidermatic GTS+",
       "category": "garage-door-openers",
       "region": "AU",
+      "aliases": [],
       "documents": [
         {
           "kind": "USER_MANUAL",
@@ -85,7 +112,9 @@
           "publisher": "ManualsLib",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Only an aggregator listing was surfaced for this model. No manufacturer-hosted URL was found, so none is recorded. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Only an aggregator listing was surfaced for this model. No manufacturer-hosted URL was found, so none is recorded. Not fetched - egress blocked.",
+          "altSources": []
         },
         {
           "kind": "INSTALL_MANUAL",
@@ -95,6 +124,7 @@
           "publisher": "Gliderol",
           "region": "AU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "On gliderol.com.au, the manufacturer's own domain. This closes a gap recorded in the first research pass, which noted Gliderol's support page but no direct PDF on its domain, so a reseller copy was used instead. Worth flagging: the file is named GTS2000 while the document is titled Glidermatic GTS+, so the GTS2000 and the GTS+ are either the same operator under two names or the file name is stale - both are already models in this file, and which is right should be settled on verification. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -108,6 +138,69 @@
               "label": "ManualsLib listing of the owner's manual alone"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "GTS2000",
+      "name": "Tilt and Sectional Overhead Door Operator",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "GTS2000 Owner's Manual",
+          "sourceUrl": "https://www.gliderol.com.au/wp-content/uploads/2025/02/GTS2000-Owners-Manual-V1-Board.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "V1",
+          "evidence": "Surfaced by web search on the manufacturer's own domain. Version V1 is taken from the filename, not inferred. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Residential Series A",
+      "name": "Gliderol Residential Series A",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Gliderol Residential Series A Roller Door Install Manual",
+          "sourceUrl": "https://www.gliderol.com.au/wp-content/uploads/2025/02/Residential-Series-A-Roller-Door-Install-Manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "gliderol.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Gliderol Residential Series A Roller Door Install Manual\" (host: www.gliderol.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Roller Doors",
+      "name": "Gliderol Roller Doors",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Gliderol User Manuals and Install Guides Index",
+          "sourceUrl": "https://gliderol.com.au/support/user-manuals-guides/",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "gliderol.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Gliderol User Manuals and Install Guides Index\" (host: gliderol.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

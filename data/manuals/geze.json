@@ -9,23 +9,66 @@
   },
   "models": [
     {
+      "modelCode": "POWERTURN",
+      "name": "GEZE POWERTURN",
+      "category": "automatic-pedestrian-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "GEZE Powerturn Installation and Service Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2454122/Geze-Powerturn.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"GEZE Powerturn Installation and Service Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SLIMDRIVE SC",
+      "name": "GEZE SLIMDRIVE SC",
+      "category": "automatic-pedestrian-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "GEZE Slimdrive SC Operation and Maintenance Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2214107/Geze-Slimdrive-Sc.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"GEZE Slimdrive SC Operation and Maintenance Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "Slimdrive SL",
       "name": "Slimdrive SL Automatic Sliding Door Operator",
       "category": "automatic-pedestrian-doors",
       "region": "EU",
       "aliases": [
-        "SlimdriveSL"
+        "SlimdriveSL",
+        "SLIMDRIVE SL"
       ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Slimdrive SL Product Family Installation and Service Instructions (EN)",
-          "documentCode": "200277-00",
-          "language": "en",
           "sourceUrl": "https://www.geze.com/en/download/file/GEZE_Installation-instructions_EN_mw1793670.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "200277-00",
           "evidence": "Manufacturer's own download area. Document code 200277-00 comes from the search result title. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -34,6 +77,18 @@
               "label": "ManualsLib listing"
             }
           ]
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "GEZE Slimdrive SL Installation and Service Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1762745/Geze-Slimdrive-Sl.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"GEZE Slimdrive SL Installation and Service Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -42,16 +97,18 @@
       "name": "Slimdrive SLT Telescopic Sliding Door Operator",
       "category": "automatic-pedestrian-doors",
       "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Slimdrive SLT Product Family Installation and Service Instructions (EN)",
-          "language": "en",
           "sourceUrl": "https://www.geze.com/en/download/file/GEZE_Installation-instructions_EN_mw1790574.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Manufacturer's own download area. A different document from the SL family manual, so recorded separately. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Manufacturer's own download area. A different document from the SL family manual, so recorded separately. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

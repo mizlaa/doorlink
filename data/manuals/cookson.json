@@ -1,0 +1,198 @@
+{
+  "manufacturer": {
+    "name": "Cookson",
+    "slug": "cookson",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "FD-2A",
+      "name": "Cookson FD-2A",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Cookson FD-2A Automatic Resetting Fire Door Hoist Operator Owner's Manual",
+          "sourceUrl": "https://www.cooksondoor.com/docs/default-source/o-m-manuals/fd-2a-owners-manual.pdf?sfvrsn=7581366d_2",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cooksondoor.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Cookson FD-2A Automatic Resetting Fire Door Hoist Operator Owner's Manual\" (host: www.cooksondoor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Fire Doors",
+      "name": "Cookson Fire Doors",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Cookson Service Fire Doors Installation and Maintenance Manual",
+          "sourceUrl": "https://www.cooksondoor.com/docs/default-source/o-m-manuals/fire-door-installation-and-maintenance-manuals.pdf?sfvrsn=4",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cooksondoor.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Cookson Service Fire Doors Installation and Maintenance Manual\" (host: www.cooksondoor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Fire Shutter (Tube Motor)",
+      "name": "Cookson Fire Shutter (Tube Motor)",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Cookson Fire Shutter Tube Motor Electric Clutch Installation Instructions",
+          "sourceUrl": "https://www.cooksondoor.com/docs/default-source/1v-manuals/cookson/im_fire_counter_door_tube_clutch_k.pdf?sfvrsn=e7d4416d_16",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cooksondoor.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Cookson Fire Shutter Tube Motor Electric Clutch Installation Instructions\" (host: www.cooksondoor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "FS-150 SERIES",
+      "name": "Cookson FS-150 SERIES",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Cookson FS-150 Series Installation Instructions and Operation Manual",
+          "sourceUrl": "https://www.cooksondoor.com/docs/default-source/o-m-manuals/auto-test-fdo-a--b-fs-150-series.pdf?sfvrsn=4",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cooksondoor.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Cookson FS-150 Series Installation Instructions and Operation Manual\" (host: www.cooksondoor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "FS-EP SERIES (FS-30/50/70)",
+      "name": "Cookson FS-EP SERIES (FS-30/50/70)",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Cookson FS-EP Series Installation Instructions and Operation Manual",
+          "sourceUrl": "https://www.cooksondoor.com/docs/default-source/1v-manuals/installation-instructions/fs-30-50-70_K.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cooksondoor.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Cookson FS-EP Series Installation Instructions and Operation Manual\" (host: www.cooksondoor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MGHL / MGRL SERIES",
+      "name": "Cookson MGHL / MGRL SERIES",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Cookson MGHL/MGRL Series Installation Instructions and Operation Manual",
+          "sourceUrl": "https://www.cooksondoor.com/docs/default-source/1v-manuals/installation-instructions/mghl-mghrl_K.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cooksondoor.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Cookson MGHL/MGRL Series Installation Instructions and Operation Manual\" (host: www.cooksondoor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Operators",
+      "name": "Cookson Operators",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Cookson Security Doors, Gates and Garages Operator Manuals Index",
+          "sourceUrl": "https://www.cooksondoor.com/architectural-resource-homepage/operator-manuals",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cooksondoor.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Cookson Security Doors, Gates and Garages Operator Manuals Index\" (host: www.cooksondoor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Rolling Doors",
+      "name": "Cookson Rolling Doors",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Cookson Operation and Maintenance Manuals Index",
+          "sourceUrl": "https://www.cooksondoor.com/retrofit-remarket/OandM-manuals",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cooksondoor.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Cookson Operation and Maintenance Manuals Index\" (host: www.cooksondoor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Service Doors",
+      "name": "Cookson Service Doors",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Cookson Service Door Installation and Maintenance Manual (3-3950-01)",
+          "sourceUrl": "https://www.cooksondoor.com/docs/default-source/o-m-manuals/service-door-installation-and-maintenance-manuals.pdf?sfvrsn=6",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cooksondoor.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Cookson Service Door Installation and Maintenance Manual (3-3950-01)\" (host: www.cooksondoor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

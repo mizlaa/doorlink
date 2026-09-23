@@ -9,21 +9,69 @@
   },
   "models": [
     {
+      "modelCode": "222 DS / DX / DE",
+      "name": "Nice | HySecurity 222 DS / DX / DE",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Hy-Security 222 Slide Gate Operator Handbook (SS28)",
+          "sourceUrl": "https://www.fixagate.com/assets/hysecurity-222-dc-relay-slide-gate-operator-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "fixagate.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hy-Security 222 Slide Gate Operator Handbook (SS28)\" (host: www.fixagate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Operators",
+      "name": "Nice | HySecurity Gate Operators",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "HySecurity Operator Manuals Index",
+          "sourceUrl": "https://support.hysecurity.com/hc/en-us/sections/12134481509527-Manuals-Operator",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "support.hysecurity.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"HySecurity Operator Manuals Index\" (host: support.hysecurity.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "SlideDriver",
       "name": "HySecurity SlideDriver Slide Gate Operator (all models)",
       "category": "gate-motors",
       "region": "US",
-      "aliases": ["Slide Driver", "MX3629-01", "MX3630-01"],
+      "aliases": [
+        "Slide Driver",
+        "MX3629-01",
+        "MX3630-01",
+        "SLIDEDRIVER"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "SlideDriver Installation Instructions (all models)",
-          "documentCode": "MX3629-01",
           "sourceUrl": "https://support.hysecurity.com/hc/en-us/articles/360043212554-SlideDriver-Installation-Instructions-all-models",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Nice | HySecurity",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "MX3629-01",
           "evidence": "On support.hysecurity.com, the manufacturer's own support centre. The article names the file InstallInstructions_SlideDriver_MX3629-01.pdf at 10 MB; the document code is recorded from that, the file size is not, because a size stated in a listing is not a size confirmed by fetching. This URL is the article page, not the PDF itself. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -36,12 +84,13 @@
         {
           "kind": "PROGRAMMING_GUIDE",
           "title": "SlideDriver Programming and Operations Manual with Smart Touch Controller (all models)",
-          "documentCode": "MX3630-01",
           "sourceUrl": "https://www.affordableopeners.com/manuals/Manufacturer/hysecurity/Programming_OperationsManual_SlideDriver_MX3630-01.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "Affordable Openers",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "MX3630-01",
           "evidence": "Distributor copy, chosen as the source because it is a direct PDF carrying the manufacturer's own document code MX3630-01 in its name. The manufacturer's article page and its partner-portal copy are recorded as alternates. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -64,7 +113,9 @@
           "publisher": "Nice | HySecurity",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Manufacturer support-centre article. Typed SPEC_SHEET because that is what it is. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Manufacturer support-centre article. Typed SPEC_SHEET because that is what it is. Not fetched - egress blocked.",
+          "altSources": []
         },
         {
           "kind": "PARTS_LIST",
@@ -74,7 +125,54 @@
           "publisher": "Nice | HySecurity",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Manufacturer support-centre article. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Manufacturer support-centre article. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "HySecurity SlideDriver Hydraulic Slide Gate Operators Manual (D0119 Rev. F)",
+          "sourceUrl": "https://laornamental.com/pdf-files/Hysecurity/HySecurity-SlideDriver-Gate-Operator-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "laornamental.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"HySecurity SlideDriver Hydraulic Slide Gate Operators Manual (D0119 Rev. F)\" (host: laornamental.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "PROGRAMMING_GUIDE",
+          "title": "HySecurity SlideDriver Programming and Operations Manual with Smart Touch Controller (MX3630-01)",
+          "sourceUrl": "https://partners.hysecurity.com/getmedia/9CA07E30-DBE2-4043-B7CA-BA4137FEC9B2/Programming_OperationsManual_SlideDriver_MX3630-01.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "partners.hysecurity.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"HySecurity SlideDriver Programming and Operations Manual with Smart Touch Controller (MX3630-01)\" (host: partners.hysecurity.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SLIDEDRIVER II 200V",
+      "name": "Nice | HySecurity SLIDEDRIVER II 200V",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "HySecurity SlideDriver II 200V Slide Gate Operator User Guide",
+          "sourceUrl": "https://manuals.plus/hysecurity/slidedriver-ii-200v-slide-gate-operator-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"HySecurity SlideDriver II 200V Slide Gate Operator User Guide\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -83,7 +181,10 @@
       "name": "HySecurity SlideDriver II Digital Slide Gate Operator",
       "category": "gate-motors",
       "region": "US",
-      "aliases": ["SlideDriver II", "SlideDriver 2"],
+      "aliases": [
+        "SlideDriver II",
+        "SlideDriver 2"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -93,7 +194,9 @@
           "publisher": "Nice | HySecurity",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Manufacturer support-centre article. Kept as a separate model from the SlideDriver: the first-generation manuals say \"all models\" of that line, and a II Digital with its own manual is a different machine. Search also names a SlideDriver II User Guide and Quick Start Guide, neither of which gave a URL - a recorded gap. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Manufacturer support-centre article. Kept as a separate model from the SlideDriver: the first-generation manuals say \"all models\" of that line, and a II Digital with its own manual is a different machine. Search also names a SlideDriver II User Guide and Quick Start Guide, neither of which gave a URL - a recorded gap. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

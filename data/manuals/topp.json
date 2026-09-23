@@ -1,0 +1,93 @@
+{
+  "manufacturer": {
+    "name": "Topp",
+    "slug": "topp",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "ACK4",
+      "name": "Topp ACK4",
+      "category": "garage-door-openers",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Topp ACK4 Chain Actuator Instructions",
+          "sourceUrl": "https://www.lpwindowcontrols.co.uk/wp-content/uploads/2018/05/TOPP-chain-actuator-ACK4-instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "lpwindowcontrols.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Topp ACK4 Chain Actuator Instructions\" (host: www.lpwindowcontrols.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ACK4S",
+      "name": "Topp ACK4S",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Topp ACK4S Chain Actuator Instructions",
+          "sourceUrl": "https://www.window-openers.com/wp-content/uploads/2021/06/TOPP-chain-actuator-ACK4S-instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "window-openers.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Topp ACK4S Chain Actuator Instructions\" (host: www.window-openers.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "C15 SERIES",
+      "name": "Topp C15 SERIES",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Topp C15 Series Chain Actuator Installation and Use Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1704837/Topp-C15-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Topp C15 Series Chain Actuator Installation and Use Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "V1",
+      "name": "Topp V1",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Topp V1 Sliding Linear Door Automation Installation and Use Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1186130/Topp-V1.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Topp V1 Sliding Linear Door Automation Installation and Use Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

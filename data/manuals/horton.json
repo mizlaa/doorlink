@@ -7,5 +7,105 @@
     "supportUrl": "https://www.hortondoors.com/resources/pdf-library/",
     "note": "US automatic door manufacturer. Recorded with no documents: its PDF library is registered as a harvest target, but no individual document URL surfaced. A second Horton index exists on a distributor and is explicitly marked registered-members-only; it is deliberately not registered as a target and must not be crawled."
   },
-  "models": []
+  "models": [
+    {
+      "modelCode": "Automatic Doors",
+      "name": "Horton Automatics Automatic Doors",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Horton Automatics PDF Library Index",
+          "sourceUrl": "https://www.hortondoors.com/resources/pdf-library/",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "hortondoors.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Horton Automatics PDF Library Index\" (host: www.hortondoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "C2150",
+      "name": "Horton Automatics C2150",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Horton C2150 Control Manual (H202)",
+          "sourceUrl": "https://absupply.net/pdf/c2150_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "absupply.net",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Horton C2150 Control Manual (H202)\" (host: absupply.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Horton C2150 Control Manual (H210)",
+          "sourceUrl": "https://www.addisonautomatics.com/wp-content/uploads/manuals/horton/2150%20version%2010%20quality.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "addisonautomatics.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Horton C2150 Control Manual (H210)\" (host: www.addisonautomatics.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TROUBLESHOOTING_GUIDE",
+          "title": "Horton C2150 Setup and Troubleshooting Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1310906/Horton-C2150.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Horton C2150 Setup and Troubleshooting Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Horton C2150 Setup Instructions",
+          "sourceUrl": "https://www.manualslib.com/manual/1344727/Horton-C2150.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Horton C2150 Setup Instructions\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "C2150L",
+      "name": "Horton Automatics C2150L",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Horton C2150L Control Manual (H201)",
+          "sourceUrl": "https://absupply.net/pdf/Horton_C2150L_Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "absupply.net",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Horton C2150L Control Manual (H201)\" (host: absupply.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
 }

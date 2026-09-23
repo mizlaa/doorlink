@@ -1,0 +1,150 @@
+{
+  "manufacturer": {
+    "name": "Nice Apollo",
+    "slug": "nice-apollo",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "1500",
+      "name": "Nice Apollo 1500",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Apollo 1500 Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/802998/Apollo-1500.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Apollo 1500 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Apollo Model 1500 / 1600 Vehicular Swing Gate Opener Installation Reference Manual (D0873)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/installrefmanual_1500_d0873.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "niceforyou.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Apollo Model 1500 / 1600 Vehicular Swing Gate Opener Installation Reference Manual (D0873)\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Nice Apollo 1500 User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/974591/Nice-Apollo-1500.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Apollo 1500 User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "1500 / 1600",
+      "name": "Nice Apollo 1500 / 1600",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Apollo Model 1500 / 1600 Swing Gate Operator Manual",
+          "sourceUrl": "https://apollogateopeners.com/store/pdf/1500-1600manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "apollogateopeners.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Apollo Model 1500 / 1600 Swing Gate Operator Manual\" (host: apollogateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ERA ONE",
+      "name": "Nice Apollo ERA ONE",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Nice Apollo Era One Installation Manual",
+          "sourceUrl": "https://apollogateopeners.com/store/pdf/Nice-Apollo-Era-One-Installation-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "apollogateopeners.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Apollo Era One Installation Manual\" (host: apollogateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Operators",
+      "name": "Nice Apollo Gate Operators",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Apollo Gate Openers Manuals and Specifications Index",
+          "sourceUrl": "https://apollogateopeners.com/store/resources/manuals-and-specifications.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "apollogateopeners.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Apollo Gate Openers Manuals and Specifications Index\" (host: apollogateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice Apollo Manuals Index",
+          "sourceUrl": "http://www.allgateoperatormanuals.com/nice-apollo-manuals.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "allgateoperatormanuals.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Apollo Manuals Index\" (host: www.allgateoperatormanuals.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SIGNO",
+      "name": "Nice Apollo SIGNO",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Nice Apollo Signo Barrier Gate Installation Manual (ISTSG Rev 00.01)",
+          "sourceUrl": "https://apollogateopeners.com/store/pdf/nice-apollo-signo-barrier-gate-installation-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "apollogateopeners.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Apollo Signo Barrier Gate Installation Manual (ISTSG Rev 00.01)\" (host: apollogateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

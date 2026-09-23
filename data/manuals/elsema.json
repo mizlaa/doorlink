@@ -9,19 +9,56 @@
   },
   "models": [
     {
-      "modelCode": "PCR-43302",
-      "name": "PCR Series Receiver",
-      "category": "remotes-accessories",
+      "modelCode": "AXIOM iS600 / iS900",
+      "name": "Elsema AXIOM iS600 / iS900",
+      "category": "gate-motors",
       "region": "AU",
+      "aliases": [],
       "documents": [
         {
           "kind": "TECHNICAL_DOCUMENT",
-          "title": "PCR Series Receiver Documentation",
-          "sourceUrl": "https://www.elsema.com/wp-content/uploads/2019/05/pcr43302240r.pdf",
-          "origin": "MANUFACTURER_ORIGINAL",
+          "title": "Elsema Axiom iS600/iS900 Sliding Gate Motor Kit Setup and Technical Information",
+          "sourceUrl": "https://manuals.plus/m/50daf3ea1bc4783594231c3c4c1fd504ff2ead8ab7df44849bde6b39b1efe347",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Manufacturer's own domain. The model code is taken from the filename (pcr43302240r); the exact product designation was not confirmed because the file was not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Elsema Axiom iS600/iS900 Sliding Gate Motor Kit Setup and Technical Information\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ECLIPSE MCS",
+      "name": "Elsema ECLIPSE MCS",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Elsema Eclipse MCS Motor Controller Single Gate Manual",
+          "sourceUrl": "https://www.elsema.com/wp-content/uploads/mcs-manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "elsema.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Elsema Eclipse MCS Motor Controller Single Gate Manual\" (host: www.elsema.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Elsema Eclipse MCS Setup and Technical Information",
+          "sourceUrl": "https://www.manualslib.com/manual/1806639/Elsema-Eclipse-Mcs.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Elsema Eclipse MCS Setup and Technical Information\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -43,7 +80,9 @@
           "publisher": "Waverley Garage Doors",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Australian installer-hosted copy. No manufacturer-hosted URL for this model was surfaced. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Australian installer-hosted copy. No manufacturer-hosted URL for this model was surfaced. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -65,7 +104,30 @@
           "publisher": "ManualsLib",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing only. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing only. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Motors and Receivers",
+      "name": "Elsema Gate Motors and Receivers",
+      "category": "remotes-accessories",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Elsema Receiver and Gate Installation Manuals Index",
+          "sourceUrl": "https://garagedooropenerremotes.com.au/manuals-and-downloads/elsema-manuals",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "garagedooropenerremotes.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Elsema Receiver and Gate Installation Manuals Index\" (host: garagedooropenerremotes.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -87,7 +149,9 @@
           "publisher": "LSC Security Supplies",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor-hosted coding sheet covering both the FMT and KEY series. Attached to KEY-301 because that is the series it names; it is not specific to this one model. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Distributor-hosted coding sheet covering both the FMT and KEY series. Attached to KEY-301 because that is the series it names; it is not specific to this one model. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -111,7 +175,71 @@
           "publisher": "Elsema",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "On elsema.com, the manufacturer's own domain. Typed SERVICE_BULLETIN because that is what it is - a supersession notice, not an installation manual. It states that the FMT-204, FMT-304, FMT-404 and KEY-304 are replaced by the Penta PCK43304 or FOB43304. Recorded because a discontinued-part notice is exactly what a technician holding a dead remote needs, and it is the kind of document a catalogue of manuals usually loses. The superseded part numbers are aliases so a search for any of them lands here. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On elsema.com, the manufacturer's own domain. Typed SERVICE_BULLETIN because that is what it is - a supersession notice, not an installation manual. It states that the FMT-204, FMT-304, FMT-404 and KEY-304 are replaced by the Penta PCK43304 or FOB43304. Recorded because a discontinued-part notice is exactly what a technician holding a dead remote needs, and it is the kind of document a catalogue of manuals usually loses. The superseded part numbers are aliases so a search for any of them lands here. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MC",
+      "name": "Elsema MC",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Elsema MC Controller for Double and Single Gates Manual",
+          "sourceUrl": "https://www.elsema.com/wp-content/uploads/mc-manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "elsema.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Elsema MC Controller for Double and Single Gates Manual\" (host: www.elsema.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MC BOARD",
+      "name": "Elsema MC BOARD",
+      "category": "remotes-accessories",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Elsema MC Board User Manual",
+          "sourceUrl": "https://isurplus.com.au/manuals/Elsema%20MC%20Board%20User%20Manuall.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "isurplus.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Elsema MC Board User Manual\" (host: isurplus.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "PCR-43302",
+      "name": "PCR Series Receiver",
+      "category": "remotes-accessories",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "PCR Series Receiver Documentation",
+          "sourceUrl": "https://www.elsema.com/wp-content/uploads/2019/05/pcr43302240r.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Manufacturer's own domain. The model code is taken from the filename (pcr43302240r); the exact product designation was not confirmed because the file was not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

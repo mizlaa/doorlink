@@ -1,0 +1,135 @@
+{
+  "manufacturer": {
+    "name": "Videx",
+    "slug": "videx",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "Door Entry Systems",
+      "name": "Videx Door Entry Systems",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Videx Installation Instructions Index",
+          "sourceUrl": "https://doorentrydirect.com/videx-installation-instructions/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "doorentrydirect.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Videx Installation Instructions Index\" (host: doorentrydirect.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Door Intercom System",
+      "name": "Videx Door Intercom System",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Videx Door Intercom System Technical Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/897753/Videx-Door-Intercom-System.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Videx Door Intercom System Technical Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GSM Door Intercom",
+      "name": "Videx GSM Door Intercom",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Videx GSM Door Intercom System Technical Manual (Edition 2.0.7)",
+          "sourceUrl": "https://doorentrydirect.com/acrobat/videx/Instructions/GSM/GSMManual2_0.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "doorentrydirect.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Videx GSM Door Intercom System Technical Manual (Edition 2.0.7)\" (host: doorentrydirect.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "VR4K-1",
+      "name": "Videx VR4K-1",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Videx VR4K-1 Vandal Resistant One Button Door Entry Kit Technical Manual",
+          "sourceUrl": "https://faac.blob.core.windows.net/web/1/accessories-and-control-boards/accessories/videx-intercom-systems/vandal-resistant-audio-intercom/vr4k1-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "faac.blob.core.windows.net",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Videx VR4K-1 Vandal Resistant One Button Door Entry Kit Technical Manual\" (host: faac.blob.core.windows.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "VR4K-2",
+      "name": "Videx VR4K-2",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Videx VR4K-2 Vandal Resistant Two Button Door Entry Kit Technical Manual",
+          "sourceUrl": "https://www.videxuk.com/wp-content/uploads/2016/12/VR4K2Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "videxuk.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Videx VR4K-2 Vandal Resistant Two Button Door Entry Kit Technical Manual\" (host: www.videxuk.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "VRDK1",
+      "name": "Videx VRDK1",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Videx VRDK1 Vandal Resistant One Button Door Entry Kit Technical Manual",
+          "sourceUrl": "https://doorentrydirect.com/acrobat/videx/Instructions/VR/Videx-VRDK1-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "doorentrydirect.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Videx VRDK1 Vandal Resistant One Button Door Entry Kit Technical Manual\" (host: doorentrydirect.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

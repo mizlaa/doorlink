@@ -1,0 +1,30 @@
+{
+  "manufacturer": {
+    "name": "BMG",
+    "slug": "bmg",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "LW550",
+      "name": "BMG LW550",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "BMG LW550 Sliding Gate Operator User's Manual (AC)",
+          "sourceUrl": "https://bmgi.com.au/images/LW550-wiring/ac-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "bmgi.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BMG LW550 Sliding Gate Operator User's Manual (AC)\" (host: bmgi.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

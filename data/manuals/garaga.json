@@ -1,0 +1,138 @@
+{
+  "manufacturer": {
+    "name": "Garaga",
+    "slug": "garaga",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "CARGO 500",
+      "name": "Garaga CARGO 500",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Garaga CarGo 500 Owner's Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1259003/Garaga-Cargo-500.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Garaga CarGo 500 Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Garage Door Openers",
+      "name": "Garaga Garage Door Openers",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Garaga Garage Door Opener Manuals Index",
+          "sourceUrl": "https://all-guidesbox.com/brand/garaga/garage-door-opener.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "all-guidesbox.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Garaga Garage Door Opener Manuals Index\" (host: all-guidesbox.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Residential Doors",
+      "name": "Garaga Residential Doors",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Garaga / North Central Door Owner's Manual - Installation and Maintenance Instructions",
+          "sourceUrl": "https://cmsgaraga.garaga.com/NorthCentralDoor/installation-instructions/ncd-instructions-residential-installation.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cmsgaraga.garaga.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Garaga / North Central Door Owner's Manual - Installation and Maintenance Instructions\" (host: cmsgaraga.garaga.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Residential Garage Doors",
+      "name": "Garaga Residential Garage Doors",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Garaga Garage Door Installation Manual (95847)",
+          "sourceUrl": "https://cmsgaraga.garaga.com/Drupal/InstallationManual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cmsgaraga.garaga.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Garaga Garage Door Installation Manual (95847)\" (host: cmsgaraga.garaga.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Garaga Guide d'installation (95846)",
+          "sourceUrl": "https://cmsgaraga.garaga.com/Drupal/Guide_installation.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cmsgaraga.garaga.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Garaga Guide d'installation (95846)\" (host: cmsgaraga.garaga.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Garaga Installation Guide",
+          "sourceUrl": "https://cmsgaraga.garaga.com/DrupalMicrosite/InstallationGuide.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cmsgaraga.garaga.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Garaga Installation Guide\" (host: cmsgaraga.garaga.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SECURITY+ 3265GCM 1HP",
+      "name": "Garaga SECURITY+ 3265GCM 1HP",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Garaga Security+ 3265GCM 1HP Owner's Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/920282/Garaga-SecurityPlus-3265gcm-1hp.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Garaga Security+ 3265GCM 1HP Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

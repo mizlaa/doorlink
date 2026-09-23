@@ -40,3 +40,28 @@ export function documentSlug(readable: string, sourceUrl: string): string {
   const stem = slugify(readable).slice(0, READABLE_LENGTH).replace(/-$/, '')
   return `${stem}-${digest}`
 }
+
+/**
+ * A model's slug: manufacturer and model code, then a digest of the
+ * pair.
+ *
+ * `slugify` throws away every character that is not a letter or digit,
+ * which is fine for reading and fatal for uniqueness the moment a
+ * manufacturer distinguishes two products by punctuation alone. Gliderol
+ * sells the Glidermatic GRD and the Glidermatic GRD+; both slugify to
+ * `gliderol-glidermatic-grd`, and the second one to be imported hit the
+ * unique index. Suffixes like `+`, `/S`, `-24V` and `.2` are how this
+ * industry names variants, so this was never going to stay theoretical.
+ *
+ * The digest is taken from the same (manufacturer, modelCode) pair the
+ * importer already treats as the model's natural key, so the slug is
+ * stable across runs for as long as that pair is.
+ */
+export function modelSlug(manufacturerSlug: string, modelCode: string): string {
+  const key = `${manufacturerSlug}::${modelCode}`
+  const digest = createHash('sha256').update(key).digest('hex').slice(0, 8)
+  const stem = slugify(`${manufacturerSlug}-${modelCode}`)
+    .slice(0, READABLE_LENGTH)
+    .replace(/-$/, '')
+  return `${stem}-${digest}`
+}

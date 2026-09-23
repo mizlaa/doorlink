@@ -1,0 +1,72 @@
+{
+  "manufacturer": {
+    "name": "ROMA",
+    "slug": "roma",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "Rolladen",
+      "name": "ROMA Rolladen",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ROMA Rolladen Wartungsanleitung (Maintenance Instructions)",
+          "sourceUrl": "https://www.tor-und-fenstertechnik.de/images/pdf/ROMA_Rolladen_Wartung.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "tor-und-fenstertechnik.de",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ROMA Rolladen Wartungsanleitung (Maintenance Instructions)\" (host: www.tor-und-fenstertechnik.de). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Roller Shutters",
+      "name": "ROMA Roller Shutters",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ROMA Operating and Maintenance Manual for Roller Shutters (5000990 BPA)",
+          "sourceUrl": "https://www.roma.de/media/file/iv2ti6VPKE/020dc943/5000990_BPA_Rollladen_A5_ML_EN_02-2026.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "roma.de",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ROMA Operating and Maintenance Manual for Roller Shutters (5000990 BPA)\" (host: www.roma.de). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Roller Shutters and Garage Doors",
+      "name": "ROMA Roller Shutters and Garage Doors",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "ROMA Downloads / Multimedia Index",
+          "sourceUrl": "https://www.roma.eu/en/downloads/multimedia",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "roma.eu",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ROMA Downloads / Multimedia Index\" (host: www.roma.eu). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

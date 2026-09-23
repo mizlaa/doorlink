@@ -9,11 +9,35 @@
   },
   "models": [
     {
+      "modelCode": "BOL04",
+      "name": "Boss (Garage Door Operators) BOL04",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Boss BOL04 Setup Instructions",
+          "sourceUrl": "https://www.waverleygaragedoors.com.au/instruction-manuals/boss%20bol04%20setup%20instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "waverleygaragedoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Boss BOL04 Setup Instructions\" (host: www.waverleygaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "BOL4",
       "name": "Boss BOL4 Sectional Door Operator",
       "category": "garage-door-openers",
       "region": "AU",
-      "aliases": ["BOL-4", "BOL 4"],
+      "aliases": [
+        "BOL-4",
+        "BOL 4"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,7 +47,9 @@
           "publisher": "Motepro",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Reseller copy, and a direct PDF. The model code and the sectional application both come from the URL path (Manuals/Boss/Sectional/BOL4.pdf), which is the reseller's filing, not the document's own title - so the attribution is the reseller's. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Reseller copy, and a direct PDF. The model code and the sectional application both come from the URL path (Manuals/Boss/Sectional/BOL4.pdf), which is the reseller's filing, not the document's own title - so the attribution is the reseller's. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -32,6 +58,7 @@
       "name": "Boss Remote Handset",
       "category": "remotes-accessories",
       "region": "AU",
+      "aliases": [],
       "documents": [
         {
           "kind": "PROGRAMMING_GUIDE",
@@ -41,7 +68,84 @@
           "publisher": "East Coast Garage Doors",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Reseller copy. The document covers coding a handset and names no specific handset model, so the record carries no model code beyond the generic one - inventing a part number to make it look precise would be worse than the vagueness. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Reseller copy. The document covers coding a handset and names no specific handset model, so the record carries no model code beyond the generic one - inventing a part number to make it look precise would be worse than the vagueness. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Garage Door Openers",
+      "name": "Boss (Garage Door Operators) Garage Door Openers",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Boss Garage Door Manuals Index (eGarage Systems)",
+          "sourceUrl": "https://www.egaragesystems.com.au/manuals/boss-manuals",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "egaragesystems.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Boss Garage Door Manuals Index (eGarage Systems)\" (host: www.egaragesystems.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Boss Garage Opener Manuals Index (AGG Doors)",
+          "sourceUrl": "https://www.aggdoors.com.au/product-support/manuals/garage-door-opener-manuals/boss-garage-opener-manuals/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "aggdoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Boss Garage Opener Manuals Index (AGG Doors)\" (host: www.aggdoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RD4",
+      "name": "Boss (Garage Door Operators) RD4",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Boss RD4 Roller Door Operator Installation Instructions and Owners Manual",
+          "sourceUrl": "https://www.waverleygaragedoors.com.au/instruction-manuals/Boss%20RD4_Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "waverleygaragedoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Boss RD4 Roller Door Operator Installation Instructions and Owners Manual\" (host: www.waverleygaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Roller Door Operator",
+      "name": "Boss (Garage Door Operators) Roller Door Operator",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Boss Roller Door Operator Installation Instructions and Owners Manual",
+          "sourceUrl": "https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/roller_door_operator.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "steel-lineautomation.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Boss Roller Door Operator Installation Instructions and Owners Manual\" (host: www.steel-lineautomation.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

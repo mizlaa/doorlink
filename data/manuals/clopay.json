@@ -7,5 +7,165 @@
     "supportUrl": null,
     "note": "US garage door manufacturer. Recorded with no documents. The only Clopay result was a document-sharing copy of an installation manual with no model, edition or code identifiable from the listing - not enough to record a document against a model, and a manufacturer record with an unattributable PDF hung off it would be worse than an honest blank. Clopay needs a search of its own."
   },
-  "models": []
+  "models": [
+    {
+      "modelCode": "525 / 525V",
+      "name": "Clopay 525 / 525V",
+      "category": "industrial-high-speed-doors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Clopay Models 525 and 525V Commercial and Industrial Sectional Doors Installation and Maintenance Manual",
+          "sourceUrl": "https://www.americanoutbackbuildings.com/Assets/Manuals/Clopay%20Models%20525%20and%20525V%20Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "americanoutbackbuildings.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Clopay Models 525 and 525V Commercial and Industrial Sectional Doors Installation and Maintenance Manual\" (host: www.americanoutbackbuildings.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "AVANTE",
+      "name": "Clopay AVANTE",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Clopay Avante Care and Maintenance Manual (CMB-4150087_EN)",
+          "sourceUrl": "https://literature.clopay.com/pdf_files/CMB-4150087_EN.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "literature.clopay.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Clopay Avante Care and Maintenance Manual (CMB-4150087_EN)\" (host: literature.clopay.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Clopay Avante Residential Garage Door Installation Manual",
+          "sourceUrl": "https://www.gdcorp.com/clopay-avante-installation-residential-garage-door-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "gdcorp.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Clopay Avante Residential Garage Door Installation Manual\" (host: www.gdcorp.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "COACHMAN",
+      "name": "Clopay COACHMAN",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Clopay Coachman Care and Maintenance Manual",
+          "sourceUrl": "https://www.clopaydoor.com/residential/support/coachman-care-and-maintenance-manual",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "clopaydoor.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Clopay Coachman Care and Maintenance Manual\" (host: www.clopaydoor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "COACHMAN COLLECTION",
+      "name": "Clopay COACHMAN COLLECTION",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Clopay Coachman Collection Supplemental Installation Instructions (SUP-0137320_EN)",
+          "sourceUrl": "https://adcodoors.com/content/uploads/2015/05/SUP-0137320_EN.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "adcodoors.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Clopay Coachman Collection Supplemental Installation Instructions (SUP-0137320_EN)\" (host: adcodoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Residential Garage Doors",
+      "name": "Clopay Residential Garage Doors",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Clopay Residential Garage Door Download Library Index",
+          "sourceUrl": "https://clopay.cornellcookson.com/residential-download-library",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "clopay.cornellcookson.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Clopay Residential Garage Door Download Library Index\" (host: clopay.cornellcookson.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Residential Sectional Insulated Steel Doors",
+      "name": "Clopay Residential Sectional Insulated Steel Doors",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Clopay Residential Sectional Insulated Steel Doors Installation Instructions",
+          "sourceUrl": "https://inspectapedia.com/interiors/Garage-Door-Installation-Manual-Clopay.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "inspectapedia.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Clopay Residential Sectional Insulated Steel Doors Installation Instructions\" (host: inspectapedia.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Wood Garage Doors",
+      "name": "Clopay Wood Garage Doors",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Clopay Wood Garage Door Installation Instructions",
+          "sourceUrl": "https://www.doorvana.com/wp-content/uploads/2020/06/Clopay-Wood-Garage-Door-Installation-Instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "doorvana.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Clopay Wood Garage Door Installation Instructions\" (host: www.doorvana.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
 }

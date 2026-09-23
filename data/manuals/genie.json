@@ -9,25 +9,23 @@
   },
   "models": [
     {
-      "modelCode": "Series IS",
-      "name": "Series IS / ISL / IC / H Garage Door Openers",
+      "modelCode": "2128",
+      "name": "Genie 2128",
       "category": "garage-door-openers",
       "region": "US",
-      "aliases": [
-        "IS",
-        "ISL",
-        "IC"
-      ],
+      "aliases": [],
       "documents": [
         {
           "kind": "USER_MANUAL",
-          "title": "Series IS, ISL, IC, H Owner's Manual",
-          "sourceUrl": "https://bluemate.com/garage-door-openers/pdf/genie-manual.pdf",
+          "title": "Genie Model 2128 Operation and Maintenance Manual",
+          "sourceUrl": "https://www.kauffmanmetals.com/wp-content/uploads/2025/04/Genie-Model-2128-Operation-Maintenance-Manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "Bluemate",
+          "publisher": "kauffmanmetals.com",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Third-party copy. One manual covers four series, so the record names all four rather than implying it is specific to one. No manufacturer-hosted PDF URL was surfaced; the Genie support portal is recorded at manufacturer level instead. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Genie Model 2128 Operation and Maintenance Manual\" (host: www.kauffmanmetals.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -50,6 +48,7 @@
           "publisher": "The Genie Company",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "On geniecompany.com, the manufacturer's own domain. This is the model's support page, not a PDF - no geniecompany.com document URL surfaced. Recorded because the page is the manufacturer's own entry point for this model and a technician can get to the manual from it; typed USER_MANUAL as the closest honest fit, with this note saying plainly it is a page. ChainMax 750 is an alias because the search conflated the two names; whether they are the same opener was not established. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -72,6 +71,73 @@
       ]
     },
     {
+      "modelCode": "Belt / Chain Drive",
+      "name": "Genie Belt / Chain Drive",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Genie Belt and Chain Drive Garage Door Opener Manual",
+          "sourceUrl": "https://www.geniecompany.com/files/en/manual/belt-chain-drive-garage-door-opener",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "geniecompany.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Genie Belt and Chain Drive Garage Door Opener Manual\" (host: www.geniecompany.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Garage Door Openers",
+      "name": "Genie Garage Door Openers",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Genie Owners Manuals Index",
+          "sourceUrl": "https://support.geniecompany.com/app/answers/detail/a_id/1308/~/owners-manuals",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "support.geniecompany.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Genie Owners Manuals Index\" (host: support.geniecompany.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Series IS",
+      "name": "Series IS / ISL / IC / H Garage Door Openers",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [
+        "IS",
+        "ISL",
+        "IC"
+      ],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Series IS, ISL, IC, H Owner's Manual",
+          "sourceUrl": "https://bluemate.com/garage-door-openers/pdf/genie-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "Bluemate",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Third-party copy. One manual covers four series, so the record names all four rather than implying it is specific to one. No manufacturer-hosted PDF URL was surfaced; the Genie support portal is recorded at manufacturer level instead. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "SilentMax 1000",
       "name": "Genie SilentMax 1000 Chain / Belt Garage Door Opener",
       "category": "garage-door-openers",
@@ -88,6 +154,7 @@
           "publisher": "manuals.plus",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing. Kept separate from the SilentMax 750: different model, different manual. A retailer-hosted PDF for this opener also surfaced on an Amazon media host, recorded as an alternate - those URLs are transient and should not be relied on. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -96,6 +163,27 @@
               "label": "Retailer media-host copy; opaque asset URL, expect it to rot"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "Wall Mount",
+      "name": "Genie Wall Mount",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Genie Wall Mount Garage Door Opener Manual",
+          "sourceUrl": "https://www.geniecompany.com/files/en/manual/wall-mount-garage-door-opener",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "geniecompany.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Genie Wall Mount Garage Door Opener Manual\" (host: www.geniecompany.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

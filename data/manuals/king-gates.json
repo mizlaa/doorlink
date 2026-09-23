@@ -1,0 +1,138 @@
+{
+  "manufacturer": {
+    "name": "King Gates",
+    "slug": "king-gates",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "BOOK",
+      "name": "King Gates BOOK",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "King Gates Book Instruction Manual",
+          "sourceUrl": "https://king-gates.com/wp-content/uploads/2020/03/KINGgates_Book_manual_EN.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "king-gates.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"King Gates Book Instruction Manual\" (host: king-gates.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Automation",
+      "name": "King Gates Gate Automation",
+      "category": "gate-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "KINGgates Manuals Index (EasyGates)",
+          "sourceUrl": "https://manuals.easygates.co.uk/category/manuals/kinggates/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.easygates.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"KINGgates Manuals Index (EasyGates)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "INTRO",
+      "name": "King Gates INTRO",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "King Gates Intro Motorgear for Swing Gates Instruction Manual",
+          "sourceUrl": "https://king-gates.com/wp-content/uploads/2020/03/Intro-EN.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "king-gates.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"King Gates Intro Motorgear for Swing Gates Instruction Manual\" (host: king-gates.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "JET",
+      "name": "King Gates JET",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "King Gates Jet Automation for Swing Gates up to 3m / 600kg Manual",
+          "sourceUrl": "https://www.idomus.lt/files/kinggates_jet_en.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "idomus.lt",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"King Gates Jet Automation for Swing Gates up to 3m / 600kg Manual\" (host: www.idomus.lt). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "King Gates Jet Motorigear for Swing Gates Instruction Manual (EN)",
+          "sourceUrl": "http://manuals.easygates.co.uk/PDF/kinggates/Jet_lq_EN.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.easygates.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"King Gates Jet Motorigear for Swing Gates Instruction Manual (EN)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "King Gates Jet Swing Gate Instruction Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1291759/King-Gates-Jet.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"King Gates Jet Swing Gate Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "STYLO",
+      "name": "King Gates STYLO",
+      "category": "remotes-accessories",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "PROGRAMMING_GUIDE",
+          "title": "King Gates Stylo Remote Coding Instructions",
+          "sourceUrl": "https://www.retroremotes.com.au/wp-content/uploads/2019/01/KING-GATES-STYLO-17-01-2019.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "retroremotes.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"King Gates Stylo Remote Coding Instructions\" (host: www.retroremotes.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

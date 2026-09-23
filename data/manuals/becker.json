@@ -22,11 +22,11 @@
         {
           "kind": "INSTALL_MANUAL",
           "title": "R12-17…R30-17 (E03a) Assembly and Operating Instructions",
-          "language": "en",
           "sourceUrl": "https://beckeraustralia.com.au/product-centre/download/16",
           "origin": "MANUFACTURER_ORIGINAL",
           "region": "AU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Becker's Australian download centre. The URL addresses a download by numeric id rather than filename, so it may be a redirect to the PDF; the harvester will record where it lands. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -35,6 +35,90 @@
               "label": "ManualsLib listing"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "P5 16R+ / P5 20R+ / P9 16R+",
+      "name": "Becker P5 16R+ / P5 20R+ / P9 16R+",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Becker Tubular Drives for Roller Shutters Operating Instructions",
+          "sourceUrl": "https://manualzz.com/doc/en/4451462/operating-instructions---becker",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualzz.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Becker Tubular Drives for Roller Shutters Operating Instructions\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "R12/17HK",
+      "name": "Becker R12/17HK",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Becker R12/17HK Operating Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2166163/Becker-R12-17hk.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Becker R12/17HK Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "R20/17C PSF+",
+      "name": "Becker R20/17C PSF+",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Becker R20/17C PSF+ Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Becker-R20-17c-PsfPlus-10855078.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Becker R20/17C PSF+ Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "R40-17",
+      "name": "Becker R40-17",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Becker R40-17 Assembly and Operating Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2014749/Becker-R40-17.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Becker R40-17 Assembly and Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -56,28 +140,9 @@
           "publisher": "ManualsLib",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked."
-        }
-      ]
-    },
-    {
-      "modelCode": "R8-17R",
-      "name": "R8/17R Tubular Drive for Roller Shutters",
-      "category": "roller-shutter-motors",
-      "region": "GLOBAL",
-      "aliases": [
-        "R8/17R"
-      ],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "R8/17R Operating Instructions",
-          "sourceUrl": "https://www.manualslib.com/manual/2055041/Becker-R8-17r.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualsLib",
-          "region": "GLOBAL",
-          "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Recorded separately from the R8-17 because the model designations differ by suffix and the manuals are listed separately. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -100,6 +165,7 @@
           "publisher": "Becker-Antriebe",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "On produktcenter.becker-antriebe.com, the manufacturer's own product centre. Typed SPEC_SHEET, not a manual: this is the product page, which carries specifications and some setting guidance but is not the assembly and operating instructions. The actual instructions surfaced only on aggregators, recorded below. Filing a product page as an install manual would be the substitution this library refuses. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -134,6 +200,7 @@
           "publisher": "Becker-Antriebe",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "On produktcenter.becker-antriebe.com, the manufacturer's own product centre. Typed SPEC_SHEET, not a manual: this is the product page, which carries specifications and some setting guidance but is not the assembly and operating instructions. The actual instructions surfaced only on aggregators, recorded below. Filing a product page as an install manual would be the substitution this library refuses. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -147,6 +214,29 @@
               "label": "ManualsLib operating instructions for the R8/17PS variant"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "R8-17R",
+      "name": "R8/17R Tubular Drive for Roller Shutters",
+      "category": "roller-shutter-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "R8/17R"
+      ],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "R8/17R Operating Instructions",
+          "sourceUrl": "https://www.manualslib.com/manual/2055041/Becker-R8-17r.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualsLib",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing. Recorded separately from the R8-17 because the model designations differ by suffix and the manuals are listed separately. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

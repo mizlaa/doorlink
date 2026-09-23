@@ -9,11 +9,35 @@
   },
   "models": [
     {
+      "modelCode": "CROSS18 / CROSS19",
+      "name": "Ditec Entrematic CROSS18 / CROSS19",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Ditec CROSS18-19 Sliding Gates Automation Original Instructions",
+          "sourceUrl": "https://www.pfccontrols.com/files/CROSS18-19_EN.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "pfccontrols.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ditec CROSS18-19 Sliding Gates Automation Original Instructions\" (host: www.pfccontrols.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "DAS200",
       "name": "Ditec DAS200 Sliding Door Operator",
       "category": "automatic-pedestrian-doors",
       "region": "GLOBAL",
-      "aliases": ["DAS 200", "KS200"],
+      "aliases": [
+        "DAS 200",
+        "KS200"
+      ],
       "documents": [
         {
           "kind": "TECHNICAL_DOCUMENT",
@@ -23,18 +47,22 @@
           "publisher": "Ditec Entrematic",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "On ditecautomations.com under the DAS200 product's own downloads path. The /ru/ segment is the site region the asset was indexed under; the file itself is the EN edition per its name. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On ditecautomations.com under the DAS200 product's own downloads path. The /ru/ segment is the site region the asset was indexed under; the file itself is the EN edition per its name. Not fetched - egress blocked.",
+          "altSources": []
         },
         {
           "kind": "USER_MANUAL",
           "title": "Ditec DAS200 / KS200 Sliding Doors User Manual",
-          "documentCode": "IP2325EN",
           "sourceUrl": "https://www.ditecautomations.com/Entrematic/ditecentrematicCOM/QR/Multilanguages/DAS200/IP2325EN_DAS200UM.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Ditec Entrematic",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "On ditecautomations.com, in the QR-code asset tree - the copy a label on the door links to. Document code IP2325EN read from the file name. Covers the DAS200 and KS200 together, so KS200 is recorded as an alias rather than as a separate model with a copied manual. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "IP2325EN",
+          "evidence": "On ditecautomations.com, in the QR-code asset tree - the copy a label on the door links to. Document code IP2325EN read from the file name. Covers the DAS200 and KS200 together, so KS200 is recorded as an alias rather than as a separate model with a copied manual. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -43,55 +71,107 @@
       "name": "Ditec DAS200T Redundant Sliding Door Automation",
       "category": "automatic-pedestrian-doors",
       "region": "GLOBAL",
-      "aliases": ["DAS200TRF", "DAS200TRG"],
+      "aliases": [
+        "DAS200TRF",
+        "DAS200TRG"
+      ],
       "documents": [
         {
           "kind": "TECHNICAL_DOCUMENT",
           "title": "Ditec DAS200T / DAS200TRF / DAS200TRG Sliding Doors Automation Technical Manual",
-          "documentCode": "IP2348EN",
           "sourceUrl": "https://www.ditecautomations.com/global/ru/content-fragments/products/automatic-pedestrian-doors/sliding-doors/ditec-das200-redundant/assets/downloads/technical-manual/DAS200T_IP2348EN.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Ditec Entrematic",
           "region": "GLOBAL",
           "rights": "LINK_ONLY",
-          "evidence": "On ditecautomations.com under the DAS200-redundant product path. Document code IP2348EN from the file name. The RF and RG variants share this manual and are recorded as aliases. Not fetched - egress blocked."
+          "language": "en",
+          "documentCode": "IP2348EN",
+          "evidence": "On ditecautomations.com under the DAS200-redundant product path. Document code IP2348EN from the file name. The RF and RG variants share this manual and are recorded as aliases. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
     {
-      "modelCode": "VALOR",
-      "name": "Ditec VALOR Sliding Door Automation",
-      "category": "automatic-pedestrian-doors",
-      "region": "GLOBAL",
+      "modelCode": "E1T",
+      "name": "Ditec Entrematic E1T",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "TECHNICAL_DOCUMENT",
-          "title": "Ditec VALOR Sliding Doors Automation Technical Manual (Original Instructions)",
-          "documentCode": "IP1950 EN",
-          "sourceUrl": "https://www.assaabloy.com/apac-blueprint/en/images/product-assets/sea-markets/entrance-automation/automatic-pedestrian-door/sliding-doors/ditec-valor/assets/downloads/technical-manual/EN%20-%20Ditec%20Valor%20technical%20manual.pdf",
+          "title": "Ditec E1T Control Panel Technical Manual",
+          "sourceUrl": "https://www.ditecautomations.com/global/en/content-fragments/products/gate-automation-garage-and-industrial-doors-automation/sliding-gates/ditec-cross-30/assets/downloads/control-panel-technical-manual/EN%20-%20Ditec%20E1T%20technical%20manual.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "ASSA ABLOY Entrance Systems",
-          "region": "ASIA",
+          "publisher": "ditecautomations.com",
+          "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On assaabloy.com, the parent group's own domain, under an APAC blueprint path whose market segment reads sea-markets. Titled \"Original instructions\", document code IP1950 EN. Region is recorded as ASIA - the nearest value the schema has to the path's South-East Asia scope - and is inferred from that path, not from reading the document. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ditec E1T Control Panel Technical Manual\" (host: www.ditecautomations.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
     {
-      "modelCode": "REX",
-      "name": "Ditec REX Motorised Sliding Doors",
-      "category": "automatic-pedestrian-doors",
-      "region": "GLOBAL",
+      "modelCode": "EL16",
+      "name": "Ditec Entrematic EL16",
+      "category": "gate-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Ditec EL16 Manual",
+          "sourceUrl": "http://doormanuals.co.uk/wp-content/uploads/2018/06/Ditec-EL16.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "doormanuals.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ditec EL16 Manual\" (host: doormanuals.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "FACIL",
+      "name": "Ditec Entrematic FACIL",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Entrematic Ditec Facil Technical Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2115824/Entrematic-Ditec-Facil.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Entrematic Ditec Facil Technical Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "FACIL3H",
+      "name": "Ditec Entrematic FACIL3H",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "USER_MANUAL",
-          "title": "Ditec Rex Motorised Sliding Doors User Manual",
-          "sourceUrl": "https://www.ditecautomations.com/global/en/images/downloads/automatic-pedestrian-doors/sliding-doors/ditec-rex/assets/downloads/user-manual/EN%20-%20Ditec%20Rex%20user%20manual.pdf",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "Ditec Entrematic",
-          "region": "GLOBAL",
+          "title": "Ditec Entrematic FACIL3H Original Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1102349/Ditec-Entrematic-Facil3h.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On ditecautomations.com under the Rex product's own user-manual path. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ditec Entrematic FACIL3H Original Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -100,6 +180,7 @@
       "name": "Ditec HA7 Swing Door Operator",
       "category": "automatic-pedestrian-doors",
       "region": "US",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -109,7 +190,32 @@
           "publisher": "ASSA ABLOY Entrance Systems",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Served from recorddoors.com, a sibling ASSA ABLOY Entrance Systems brand domain, under a Ditec product-asset path. Recorded as manufacturer-group rather than third-party for that reason; the cross-brand hosting is noted here so a reviewer can disagree. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Served from recorddoors.com, a sibling ASSA ABLOY Entrance Systems brand domain, under a Ditec product-asset path. Recorded as manufacturer-group rather than third-party for that reason; the cross-brand hosting is noted here so a reviewer can disagree. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "HA8-LP",
+      "name": "Ditec HA8-LP Low Energy Swing Operator",
+      "category": "automatic-pedestrian-doors",
+      "region": "US",
+      "aliases": [
+        "HA8 LP"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Ditec HA8-LP Low Energy Swing Operator Installation and Instruction Manual",
+          "sourceUrl": "https://store.jlmwholesale.com/Documents/ENTHA8LPTECH.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "JLM Wholesale",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Distributor copy. No ASSA ABLOY-hosted URL for the HA8-LP was surfaced, so this is recorded as third-party rather than promoted to match its HA8-SP sibling. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -118,17 +224,21 @@
       "name": "Ditec HA8-SP / FA8-SP Swing Door Operator",
       "category": "automatic-pedestrian-doors",
       "region": "US",
-      "aliases": ["FA8-SP", "HA8 SP"],
+      "aliases": [
+        "FA8-SP",
+        "HA8 SP"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Ditec HA8-SP / FA8-SP Swing Operator Installation and Instruction Manual V.6.0",
-          "version": "V.6.0",
           "sourceUrl": "https://www.recorddoors.com/master-blueprint/en/market-product-assets/products/swing-doors/ditec-ha8-sp/downloads/installation-manual/HA8-SP_v_6_0_Install_Manual.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "ASSA ABLOY Entrance Systems",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "V.6.0",
           "evidence": "Served from recorddoors.com under a Ditec product-asset path; see the HA7 note on cross-brand hosting. Version V.6.0 from the file name. The result text names ditecentrematic.ca and ditecentrematic.us as the document's own stated sites, which is why the region is recorded as US. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -141,21 +251,141 @@
       ]
     },
     {
-      "modelCode": "HA8-LP",
-      "name": "Ditec HA8-LP Low Energy Swing Operator",
+      "modelCode": "ION4 / ION6",
+      "name": "Ditec Entrematic ION4 / ION6",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Ditec ION4-ION6 Sliding Gates Instructions (IP2288EN)",
+          "sourceUrl": "https://motepro.com.au/Manuals/Ditec/Sliding/ION4-6_IP2288EN.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "motepro.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ditec ION4-ION6 Sliding Gates Instructions (IP2288EN)\" (host: motepro.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LCU40H",
+      "name": "Ditec Entrematic LCU40H",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Entrematic LCU40H Control Panel Technical Manual",
+          "sourceUrl": "https://www.assaabloy.com/apac-blueprint/en/images/product-assets/sea-markets/entrance-automation/gate-automation-garage-and-industrial-door/industrial-door-automation/ditec-dor/assets/downloads/control-panel-technical-manual/EN%20-%20Entrematic%20LCU40H%20control%20panel%20technical%20manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "assaabloy.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Entrematic LCU40H Control Panel Technical Manual\" (host: www.assaabloy.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "OBBI",
+      "name": "Ditec Entrematic OBBI",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Entrematic Ditec OBBI Swing Gate Automation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2153567/Entrematic-Ditec-Obbi.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Entrematic Ditec OBBI Swing Gate Automation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "REX",
+      "name": "Ditec REX Motorised Sliding Doors",
       "category": "automatic-pedestrian-doors",
-      "region": "US",
-      "aliases": ["HA8 LP"],
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Ditec Rex Motorised Sliding Doors User Manual",
+          "sourceUrl": "https://www.ditecautomations.com/global/en/images/downloads/automatic-pedestrian-doors/sliding-doors/ditec-rex/assets/downloads/user-manual/EN%20-%20Ditec%20Rex%20user%20manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "Ditec Entrematic",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "On ditecautomations.com under the Rex product's own user-manual path. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "VALLOK",
+      "name": "Ditec Entrematic VALLOK",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
-          "title": "Ditec HA8-LP Low Energy Swing Operator Installation and Instruction Manual",
-          "sourceUrl": "https://store.jlmwholesale.com/Documents/ENTHA8LPTECH.pdf",
+          "title": "Entrematic Ditec Vallok Door Opening System Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1594807/Entrematic-Ditec-Vallok.html",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "JLM Wholesale",
-          "region": "US",
+          "publisher": "manualslib.com",
+          "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor copy. No ASSA ABLOY-hosted URL for the HA8-LP was surfaced, so this is recorded as third-party rather than promoted to match its HA8-SP sibling. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Entrematic Ditec Vallok Door Opening System Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "VALOR",
+      "name": "Ditec VALOR Sliding Door Automation",
+      "category": "garage-door-openers",
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Ditec VALOR Sliding Doors Automation Technical Manual (Original Instructions)",
+          "sourceUrl": "https://www.assaabloy.com/apac-blueprint/en/images/product-assets/sea-markets/entrance-automation/automatic-pedestrian-door/sliding-doors/ditec-valor/assets/downloads/technical-manual/EN%20-%20Ditec%20Valor%20technical%20manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "ASSA ABLOY Entrance Systems",
+          "region": "ASIA",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "IP1950 EN",
+          "evidence": "On assaabloy.com, the parent group's own domain, under an APAC blueprint path whose market segment reads sea-markets. Titled \"Original instructions\", document code IP1950 EN. Region is recorded as ASIA - the nearest value the schema has to the path's South-East Asia scope - and is inferred from that path, not from reading the document. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Ditec Valor Technical Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1266034/Ditec-Valor.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ditec Valor Technical Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

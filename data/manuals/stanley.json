@@ -1,0 +1,30 @@
+{
+  "manufacturer": {
+    "name": "Stanley",
+    "slug": "stanley",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "Garage Door Openers",
+      "name": "Stanley Garage Door Openers",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Stanley Garage Door Opener Manuals Index",
+          "sourceUrl": "https://www.gdcorp.com/stanley-garage-door-opener-manuals",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "gdcorp.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Stanley Garage Door Opener Manuals Index\" (host: www.gdcorp.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

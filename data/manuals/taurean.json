@@ -13,17 +13,21 @@
       "name": "Taurean Classic Range Sectional Door",
       "category": "garage-door-openers",
       "region": "AU",
-      "aliases": ["Classic Range", "Classic Sectional"],
+      "aliases": [
+        "Classic Range",
+        "Classic Sectional"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Taurean Classic Range Sectional Door Installation Instructions V5",
-          "version": "V5",
           "sourceUrl": "https://www.taureands.com.au/wp-content/uploads/2016/12/Classic-Range-Installation-Instructions-V5.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Taurean Door Systems",
           "region": "AU",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "V5",
           "evidence": "On taureands.com.au, the manufacturer's own domain. Version V5 from the file name. The 2016/12 path segment is WordPress's upload month, which is when the file was posted, not necessarily the edition date - so no date is recorded. The Stramit copy below prints a note telling the reader to ring Taurean for the current version, which is a standing reason to re-check this one. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -37,6 +41,93 @@
               "label": "eGarage Systems copy of the sectional door brochure - literature, not the installation instructions"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "Series A Roller Door",
+      "name": "Taurean Door Systems Series A Roller Door",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Taurean Series A Roller Door Installation Instructions",
+          "sourceUrl": "https://www.stramit.com.au/assets/Taurean-Brochures/44a28e3e23/Taurean-Roller-Door-A-Series-Installation-Instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "stramit.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Taurean Series A Roller Door Installation Instructions\" (host: www.stramit.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Taurean Series A Roller Door Installation Instructions (2015-10-12)",
+          "sourceUrl": "https://www.taureands.com.au/wp-content/uploads/2016/10/RD-A-Installation-Instructions-2015-10-12.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "taureands.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Taurean Series A Roller Door Installation Instructions (2015-10-12)\" (host: www.taureands.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Series AA Roller Door",
+      "name": "Taurean Door Systems Series AA Roller Door",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Taurean Series AA Roller Door Installation Instructions",
+          "sourceUrl": "https://www.stramit.com.au/assets/Taurean-Brochures/1a6d04d8a1/Taurean-Roller-Door-AA-Series-Installation-Instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "stramit.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Taurean Series AA Roller Door Installation Instructions\" (host: www.stramit.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Series B Roller Door",
+      "name": "Taurean Door Systems Series B Roller Door",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Taurean Series B Roller Door Installation Instructions",
+          "sourceUrl": "https://www.stramit.com.au/assets/Taurean-Brochures/ef99ca2738/Taurean-Roller-Door-B-Series-Installation-Instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "stramit.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Taurean Series B Roller Door Installation Instructions\" (host: www.stramit.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Taurean Series B Roller Door Installation Instructions (2016-05-05)",
+          "sourceUrl": "https://www.taureands.com.au/wp-content/uploads/2016/10/RD-B-Installation-Instructions-2016-05-05.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "taureands.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Taurean Series B Roller Door Installation Instructions (2016-05-05)\" (host: www.taureands.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

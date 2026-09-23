@@ -1,0 +1,30 @@
+{
+  "manufacturer": {
+    "name": "DigiDoor",
+    "slug": "digidoor",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "DIGIDOOR II",
+      "name": "DigiDoor DIGIDOOR II",
+      "category": "garage-door-openers",
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DigiDoor II Garage Door Operator Manual",
+          "sourceUrl": "https://automationafrica.co.za/wp-content/uploads/2020/01/digidoorii.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "automationafrica.co.za",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DigiDoor II Garage Door Operator Manual\" (host: automationafrica.co.za). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

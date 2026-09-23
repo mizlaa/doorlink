@@ -9,38 +9,86 @@
   },
   "models": [
     {
-      "modelCode": "Type 9",
-      "name": "Type 9 Tubular Motor",
+      "modelCode": "ROLMOTION M",
+      "name": "elero ROLMOTION M",
       "category": "roller-shutter-motors",
       "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
-          "title": "Installation Instructions for Tubular Motors Type 9",
-          "language": "en",
-          "sourceUrl": "https://www.elero.com/en/downloads-service/downloads?tx_avelero_downloads%5Bdownload%5D=2292&tx_avelero_downloads%5Baction%5D=download",
-          "origin": "MANUFACTURER_ORIGINAL",
+          "title": "elero RolMotion M Operating and Assembly Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1740695/Elero-Rolmotion-M.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Manufacturer's own download endpoint. The surfaced URL included a cHash token, which is a TYPO3 cache signature that may expire; it has been dropped here and the harvester will record whether the bare parameters still resolve. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"elero RolMotion M Operating and Assembly Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
     {
-      "modelCode": "Type 11",
-      "name": "Type 11 Tubular Motor with Plug Connection",
+      "modelCode": "ROLMOTION M-868",
+      "name": "elero ROLMOTION M-868",
       "category": "roller-shutter-motors",
       "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
-          "title": "Installation Instructions for Tubular Motors Type 11 with Plug Connection",
-          "language": "en",
-          "sourceUrl": "https://www.elero.com/en/downloads-service/downloads/?tx_avelero_downloads%5Bdownload%5D=1271&tx_avelero_downloads%5Baction%5D=download",
-          "origin": "MANUFACTURER_ORIGINAL",
+          "title": "elero RolMotion M-868 Operating and Assembly Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1721458/Elero-Rolmotion-M-868.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Manufacturer's own download endpoint, cHash token dropped as above. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"elero RolMotion M-868 Operating and Assembly Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ROLMOTION/D+ M SERIES",
+      "name": "elero ROLMOTION/D+ M SERIES",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "elero RolMotion/D+ M Series Operating and Assembly Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1945784/Elero-Rolmotion-DPlus-M-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"elero RolMotion/D+ M Series Operating and Assembly Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ROLMOTION/D+ M-868",
+      "name": "elero ROLMOTION/D+ M-868",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "elero RolMotion/D+ M-868 Operating and Assembly Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2074288/Elero-Rolmotion-DPlus-M-868.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"elero RolMotion/D+ M-868 Operating and Assembly Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -49,7 +97,10 @@
       "name": "RolTop/D+ 868/915 Radio Roller Shutter Drive",
       "category": "roller-shutter-motors",
       "region": "EU",
-      "aliases": ["RolTop D+", "RolTopD"],
+      "aliases": [
+        "RolTop D+",
+        "RolTopD"
+      ],
       "documents": [
         {
           "kind": "USER_MANUAL",
@@ -59,7 +110,49 @@
           "publisher": "device.report",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Type 11",
+      "name": "Type 11 Tubular Motor with Plug Connection",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Installation Instructions for Tubular Motors Type 11 with Plug Connection",
+          "sourceUrl": "https://www.elero.com/en/downloads-service/downloads/?tx_avelero_downloads%5Bdownload%5D=1271&tx_avelero_downloads%5Baction%5D=download",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Manufacturer's own download endpoint, cHash token dropped as above. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Type 9",
+      "name": "Type 9 Tubular Motor",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Installation Instructions for Tubular Motors Type 9",
+          "sourceUrl": "https://www.elero.com/en/downloads-service/downloads?tx_avelero_downloads%5Bdownload%5D=2292&tx_avelero_downloads%5Baction%5D=download",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Manufacturer's own download endpoint. The surfaced URL included a cHash token, which is a TYPO3 cache signature that may expire; it has been dropped here and the harvester will record whether the bare parameters still resolve. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

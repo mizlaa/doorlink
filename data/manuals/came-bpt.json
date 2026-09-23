@@ -1,0 +1,51 @@
+{
+  "manufacturer": {
+    "name": "CAME BPT",
+    "slug": "came-bpt",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "Door Entry Systems",
+      "name": "CAME BPT Door Entry Systems",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BPT Installation Instructions Index",
+          "sourceUrl": "https://doorentrydirect.com/bpt-installation-instructions",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "doorentrydirect.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BPT Installation Instructions Index\" (host: doorentrydirect.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Indoor Receiver",
+      "name": "CAME BPT Indoor Receiver",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "CAME BPT Indoor Receiver Door Entry System User Manual",
+          "sourceUrl": "https://device.report/manual/9465739",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "device.report",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"CAME BPT Indoor Receiver Door Entry System User Manual\" (host: device.report). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

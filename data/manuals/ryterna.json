@@ -9,11 +9,55 @@
   },
   "models": [
     {
+      "modelCode": "Doors",
+      "name": "Ryterna Doors",
+      "category": "garage-door-openers",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Ryterna Installation Manuals Index",
+          "sourceUrl": "https://www.ryternagaragedoors.co.uk/partnership/installation-manuals/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ryternagaragedoors.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ryterna Installation Manuals Index\" (host: www.ryternagaragedoors.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "R30",
+      "name": "Ryterna R30",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Ryterna R30 Sectional Door Installation Manual",
+          "sourceUrl": "https://www.ryterna.com/wp-content/uploads/R30.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "ryterna.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ryterna R30 Sectional Door Installation Manual\" (host: www.ryterna.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "Side-hinged",
       "name": "Ryterna Side-Hinged Garage Door",
       "category": "garage-door-openers",
       "region": "EU",
-      "aliases": ["Side hinged"],
+      "aliases": [
+        "Side hinged"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,7 +67,30 @@
           "publisher": "Ryterna",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On ryterna.com, the manufacturer's own domain. The model code is the door type rather than a product code, because the document covers the side-hinged range and none was visible. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On ryterna.com, the manufacturer's own domain. The model code is the door type rather than a product code, because the document covers the side-hinged range and none was visible. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TL LHR-RM",
+      "name": "Ryterna TL LHR-RM",
+      "category": "garage-door-openers",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Ryterna TL LHR-RM Sectional Garage Door Installation Instructions",
+          "sourceUrl": "https://ryternagaragedoors.co.uk/wp-content/uploads/2017/07/TL_LHR_RM_installation.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ryternagaragedoors.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ryterna TL LHR-RM Sectional Garage Door Installation Instructions\" (host: ryternagaragedoors.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

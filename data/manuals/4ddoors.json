@@ -1,0 +1,177 @@
+{
+  "manufacturer": {
+    "name": "4Ddoors",
+    "slug": "4ddoors",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "203 / 403",
+      "name": "4Ddoors 203 / 403",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "4Ddoors 203-403 Garage Door Operator Homeowners Manual",
+          "sourceUrl": "https://www.quickliftdoors.com.au/user_uploads/documents/4Ddoors-203-403-Homeowners-v1.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "quickliftdoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"4Ddoors 203-403 Garage Door Operator Homeowners Manual\" (host: www.quickliftdoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "4DR1",
+      "name": "4Ddoors 4DR1",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "4Ddoors 4DR1 v1 User Manual",
+          "sourceUrl": "https://www.4ddoors.com.au/assets/uploads/documents/4Ddoors-4DR1-v1-User-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "4ddoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"4Ddoors 4DR1 v1 User Manual\" (host: www.4ddoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "4DR2",
+      "name": "4Ddoors 4DR2",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "4Ddoors 4DR2 Installation Instruction and User Guide",
+          "sourceUrl": "https://www.4ddoors.com.au/assets/uploads/documents/4Ddoors-4DR2.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "4ddoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"4Ddoors 4DR2 Installation Instruction and User Guide\" (host: www.4ddoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "4DS1",
+      "name": "4Ddoors 4DS1",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "4Ddoors 4DS1 v1 User Manual",
+          "sourceUrl": "https://www.4ddoors.com.au/assets/uploads/documents/4Ddoors-4DS1-v1-User-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "4ddoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"4Ddoors 4DS1 v1 User Manual\" (host: www.4ddoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "4DS2",
+      "name": "4Ddoors 4DS2",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "4Ddoors 4DS2 Sectional and Tilting Door Operator Installation Instructions and User Guide",
+          "sourceUrl": "https://4ddoors.com.au/assets/uploads/documents/4Ddoors_4DS2_v1.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "4ddoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"4Ddoors 4DS2 Sectional and Tilting Door Operator Installation Instructions and User Guide\" (host: 4ddoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GA403 / 403 TG",
+      "name": "4Ddoors GA403 / 403 TG",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "4Ddoors GA403 / 403 TG Instructions for Fitting, Operating and Maintenance",
+          "sourceUrl": "https://www.egaragesystems.com.au/pdf/4d-doors/manuals/gate-garage-motor-manuals/4Ddoors-GA403-403-TG_2021-08-26-010344.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "egaragesystems.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"4Ddoors GA403 / 403 TG Instructions for Fitting, Operating and Maintenance\" (host: www.egaragesystems.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Garage Doors",
+      "name": "4Ddoors Garage Doors",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "4Ddoors Garage Door Manuals Index",
+          "sourceUrl": "https://www.4ddoors.com.au/resources/garage-door-manuals",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "4ddoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"4Ddoors Garage Door Manuals Index\" (host: www.4ddoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate and Garage Motors",
+      "name": "4Ddoors Gate and Garage Motors",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "4Ddoors Gate and Garage Motor Manuals Index",
+          "sourceUrl": "https://www.4ddoors.com.au/resources/gate-and-garage-motor-manuals",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "4ddoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"4Ddoors Gate and Garage Motor Manuals Index\" (host: www.4ddoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

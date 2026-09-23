@@ -9,41 +9,65 @@
   },
   "models": [
     {
-      "modelCode": "CSW24U",
-      "name": "CSW24U Commercial DC Vehicular Swing Gate Operator",
-      "category": "gate-motors",
+      "modelCode": "114A5229",
+      "name": "LiftMaster 114A5229",
+      "category": "garage-door-openers",
       "region": "US",
-      "aliases": [
-        "CSW24UL",
-        "CSW 24U"
-      ],
+      "aliases": [],
       "documents": [
         {
-          "kind": "INSTALL_MANUAL",
-          "title": "CSW24U Commercial DC Vehicular Swing Gate Operator Installation Manual",
-          "documentCode": "0139380",
-          "sourceUrl": "https://partner.liftmaster.com/medias/CSW24UL-0139380.pdf",
-          "origin": "MANUFACTURER_ORIGINAL",
+          "kind": "USER_MANUAL",
+          "title": "Wi-Fi Garage Door Opener Owner's Manual (114A5229EN)",
+          "sourceUrl": "https://static1.squarespace.com/static/61084be6010cdc16a11b5142/t/6191a8758aa3f027feacc8ff/1636935809109/114A5229EN.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "static1.squarespace.com",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Manufacturer's own partner portal. The surfaced URL carried a long base64 context parameter, which is a CMS token rather than part of the document address; the bare path is recorded and the harvester will confirm whether it resolves. Document code 0139380 read from the filename. Not fetched - egress blocked.",
-          "altSources": [
-            {
-              "url": "https://www.afence.com/mm5/graphics/pdf/LiftMaster/CSW24Umanual.pdf",
-              "authority": "THIRD_PARTY_MIRROR",
-              "label": "A-Fence mirror"
-            }
-          ]
-        },
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Wi-Fi Garage Door Opener Owner's Manual (114A5229EN)\" (host: static1.squarespace.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "1250 / 1260",
+      "name": "LiftMaster 1250 / 1260",
+      "category": "garage-door-openers",
+      "region": "US",
+      "aliases": [],
+      "documents": [
         {
-          "kind": "INSTALL_MANUAL",
-          "title": "LiftMaster CSW24U Swing Gate Operator Installation Manual",
-          "sourceUrl": "https://support.chamberlaingroup.com/s/article/GATE-LiftMaster-CSW24U-Swing-Gate-Operator-Installation-Manual-1484145708731",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "Chamberlain Group",
+          "kind": "USER_MANUAL",
+          "title": "LiftMaster 1250 and 1260 Garage Door Opener Owner's Manual",
+          "sourceUrl": "https://garagedoorguy89.weebly.com/uploads/4/5/4/9/45496029/liftmaster_1260and_1250.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "garagedoorguy89.weebly.com",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On support.chamberlaingroup.com. Article page, not the PDF. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"LiftMaster 1250 and 1260 Garage Door Opener Owner's Manual\" (host: garagedoorguy89.weebly.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "3280 / 3280-267",
+      "name": "LiftMaster 3280 / 3280-267",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "LiftMaster Model 3280, 3280-267 Owner's Manual",
+          "sourceUrl": "https://support.chamberlaingroup.com/s/article/LiftMaster-Model-3280-3280-267-Owner-s-Manual-1484145556183",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "support.chamberlaingroup.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"LiftMaster Model 3280, 3280-267 Owner's Manual\" (host: support.chamberlaingroup.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -64,6 +88,7 @@
           "origin": "MANUFACTURER_ORIGINAL",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Chamberlain group support portal, which is LiftMaster's own publisher. This is a support article rather than a direct PDF. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -76,108 +101,88 @@
       ]
     },
     {
-      "modelCode": "LA400",
-      "name": "LA400 Residential Swing Gate Operator",
+      "modelCode": "CSL24UL",
+      "name": "LiftMaster CSL24UL",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Chamberlain / LiftMaster CSL24UL Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1452870/Chamberlain-Csl24ul.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain / LiftMaster CSL24UL Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "LiftMaster CSL24UL Commercial DC Vehicular Slide Gate Operator Installation Manual",
+          "sourceUrl": "https://jansensupply.com/docs/CSL24UL_INSTALL.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "jansensupply.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"LiftMaster CSL24UL Commercial DC Vehicular Slide Gate Operator Installation Manual\" (host: jansensupply.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CSW24U",
+      "name": "CSW24U Commercial DC Vehicular Swing Gate Operator",
       "category": "gate-motors",
       "region": "US",
       "aliases": [
-        "LA 400"
+        "CSW24UL",
+        "CSW 24U"
       ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
-          "title": "LA400 Installation / Operation Manual",
-          "sourceUrl": "https://support.chamberlaingroup.com/s/article/GATE-LiftMaster-LA400-Installation-Operation-Manual-1484145525245",
+          "title": "CSW24U Commercial DC Vehicular Swing Gate Operator Installation Manual",
+          "sourceUrl": "https://partner.liftmaster.com/medias/CSW24UL-0139380.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Chamberlain group support portal. Support article rather than a direct PDF. Not fetched - egress blocked."
-        }
-      ]
-    },
-    {
-      "modelCode": "SL585UL",
-      "name": "SL585UL Elite Series Industrial AC Slide Gate Operator",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [
-        "SL585",
-        "SL 585UL"
-      ],
-      "documents": [
+          "language": "en",
+          "documentCode": "0139380",
+          "evidence": "Manufacturer's own partner portal. The surfaced URL carried a long base64 context parameter, which is a CMS token rather than part of the document address; the bare path is recorded and the harvester will confirm whether it resolves. Document code 0139380 read from the filename. Not fetched - egress blocked.",
+          "altSources": [
+            {
+              "url": "https://www.afence.com/mm5/graphics/pdf/LiftMaster/CSW24Umanual.pdf",
+              "authority": "THIRD_PARTY_MIRROR",
+              "label": "A-Fence mirror"
+            }
+          ]
+        },
         {
           "kind": "INSTALL_MANUAL",
-          "title": "SL585UL Elite Series Industrial AC Slide Gate Operator Installation Manual",
-          "sourceUrl": "https://www.doordoctor.com/wp-content/uploads/2018/12/585-installation-manual.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "Door Doctor",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "evidence": "Third-party copy. No manufacturer-hosted URL for this model was surfaced. Not fetched - egress blocked."
-        }
-      ]
-    },
-    {
-      "modelCode": "SL3000",
-      "name": "SL3000 Slide Gate Operator",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [
-        "SL 3000"
-      ],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "SL3000 Gate Operator Manual",
-          "sourceUrl": "https://www.aegates.com/wp-content/uploads/2021/07/liftmaster-gate-operator-sl3000-gate-manual.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "Automated Entry Gates",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "evidence": "Third-party copy. Not fetched - egress blocked."
-        }
-      ]
-    },
-    {
-      "modelCode": "RSL12UL",
-      "name": "RSL12UL Residential DC Vehicular Slide Gate Operator",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [
-        "RSL12",
-        "RSL 12UL"
-      ],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "RSL12UL Residential DC Vehicular Slide Gate Operator Installation Manual",
-          "sourceUrl": "https://igate.multisalesinc.com/WOEB/Docs/RSL12UL_Manual.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "Multi Sales",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "evidence": "Distributor copy. Not fetched - egress blocked."
-        }
-      ]
-    },
-    {
-      "modelCode": "LA400UL",
-      "name": "LiftMaster LA400UL Swing Gate Operator",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [
-        "LA400 UL"
-      ],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "LiftMaster LA400UL Swing Gate Operator Installation Manual",
-          "sourceUrl": "https://support.chamberlaingroup.com/s/article/LA400UL-Installation-Manual",
+          "title": "LiftMaster CSW24U Swing Gate Operator Installation Manual",
+          "sourceUrl": "https://support.chamberlaingroup.com/s/article/GATE-LiftMaster-CSW24U-Swing-Gate-Operator-Installation-Manual-1484145708731",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Chamberlain Group",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On support.chamberlaingroup.com, as its own article separate from the non-UL LA400 listing. Recorded as a distinct model for that reason; whether the UL suffix marks a certification variant of the same operator or a different build was not established, so neither is claimed. Article page, not the PDF. Not fetched - egress blocked.",
+          "language": "en",
+          "evidence": "On support.chamberlaingroup.com. Article page, not the PDF. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Chamberlain / LiftMaster CSW24U Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1018414/Chamberlain-Csw24u.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain / LiftMaster CSW24U Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -199,6 +204,7 @@
           "publisher": "Chamberlain Group",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "On support.chamberlaingroup.com, as its own article separate from the non-UL CSW24 listing. Recorded as a distinct model for that reason; whether the UL suffix marks a certification variant of the same operator or a different build was not established, so neither is claimed. Article page, not the PDF. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -212,6 +218,368 @@
               "label": "Second distributor copy of the installation manual"
             }
           ]
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Chamberlain / LiftMaster CSW24UL Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2675988/Chamberlain-Csw24ul.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain / LiftMaster CSW24UL Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Equipment",
+      "name": "LiftMaster Gate Equipment",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "LiftMaster Gate Equipment Manuals Index",
+          "sourceUrl": "https://www.aegates.com/liftmaster-gate-manuals/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "aegates.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"LiftMaster Gate Equipment Manuals Index\" (host: www.aegates.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LA400",
+      "name": "LA400 Residential Swing Gate Operator",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [
+        "LA 400"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "LA400 Installation / Operation Manual",
+          "sourceUrl": "https://support.chamberlaingroup.com/s/article/GATE-LiftMaster-LA400-Installation-Operation-Manual-1484145525245",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Chamberlain group support portal. Support article rather than a direct PDF. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LA400UL",
+      "name": "LiftMaster LA400UL Swing Gate Operator",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [
+        "LA400 UL"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "LiftMaster LA400UL Swing Gate Operator Installation Manual",
+          "sourceUrl": "https://support.chamberlaingroup.com/s/article/LA400UL-Installation-Manual",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "Chamberlain Group",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "On support.chamberlaingroup.com, as its own article separate from the non-UL LA400 listing. Recorded as a distinct model for that reason; whether the UL suffix marks a certification variant of the same operator or a different build was not established, so neither is claimed. Article page, not the PDF. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LA412",
+      "name": "LiftMaster LA412",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Chamberlain LA412 Instruction Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/977983/Chamberlain-La412.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain LA412 Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Chamberlain LiftMaster LA412 Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/793224/Chamberlain-Liftmaster-La412.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain LiftMaster LA412 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Chamberlain LiftMaster LA412 Owner's Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/414083/Chamberlain-Liftmaster-La412.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain LiftMaster LA412 Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LA412 / LA412-S",
+      "name": "LiftMaster LA412 / LA412-S",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "LiftMaster LA412 and LA412-S 12V DC Solar Residential Swing Gate Operator Owner's Manual",
+          "sourceUrl": "http://gatesnfences.com/files/LiftMaster_LA412_Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "gatesnfences.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"LiftMaster LA412 and LA412-S 12V DC Solar Residential Swing Gate Operator Owner's Manual\" (host: gatesnfences.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LA500 / LA500-S",
+      "name": "LiftMaster LA500 / LA500-S",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "LiftMaster LA500 and LA500-S Vehicular Swing Gate Operator Instruction Manual",
+          "sourceUrl": "https://support.chamberlaingroup.com/s/article/GATE-LiftMaster-LA500-and-LA500-S-Vehicular-Swing-Gate-Operator-Instruction-Manual-1484145624538",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "support.chamberlaingroup.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"LiftMaster LA500 and LA500-S Vehicular Swing Gate Operator Instruction Manual\" (host: support.chamberlaingroup.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LA500PKGUL",
+      "name": "LiftMaster LA500PKGUL",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Chamberlain LA500PKGUL Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/3796366/Chamberlain-La500pkgul.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain LA500PKGUL Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LOGIC 5.0",
+      "name": "LiftMaster LOGIC 5.0",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "LiftMaster Logic 5.0 Commercial Door Operator Installation Manual",
+          "sourceUrl": "https://igate.multisalesinc.com/WOEB/Docs/Logic_5_0_Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "igate.multisalesinc.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"LiftMaster Logic 5.0 Commercial Door Operator Installation Manual\" (host: igate.multisalesinc.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LOGIC 5.0 (H)",
+      "name": "LiftMaster LOGIC 5.0 (H)",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "LiftMaster Logic 5.0 Commercial Door Operator Installation Manual (H)",
+          "sourceUrl": "https://shop.bobsdist.com/documents/H_Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "shop.bobsdist.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"LiftMaster Logic 5.0 Commercial Door Operator Installation Manual (H)\" (host: shop.bobsdist.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LOGIC 5.0 (Industrial Duty)",
+      "name": "LiftMaster LOGIC 5.0 (Industrial Duty)",
+      "category": "industrial-high-speed-doors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "LiftMaster Logic 5.0 Industrial Duty Commercial Door Operator Installation Manual",
+          "sourceUrl": "https://support.chamberlaingroup.com/s/article/LiftMaster-Logic-5-0-Industrial-Duty-Commercial-Door-Operator-Installation-Manual-1484145701310",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "support.chamberlaingroup.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"LiftMaster Logic 5.0 Industrial Duty Commercial Door Operator Installation Manual\" (host: support.chamberlaingroup.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LOGIC 5.0 (J)",
+      "name": "LiftMaster LOGIC 5.0 (J)",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "LiftMaster Logic 5.0 Commercial Door Operator Installation Manual (J)",
+          "sourceUrl": "https://creative-door.files.svdcdn.com/production/documents/Liftmaster-J-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "creative-door.files.svdcdn.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"LiftMaster Logic 5.0 Commercial Door Operator Installation Manual (J)\" (host: creative-door.files.svdcdn.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RSL12UL",
+      "name": "RSL12UL Residential DC Vehicular Slide Gate Operator",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [
+        "RSL12",
+        "RSL 12UL"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "RSL12UL Residential DC Vehicular Slide Gate Operator Installation Manual",
+          "sourceUrl": "https://igate.multisalesinc.com/WOEB/Docs/RSL12UL_Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "Multi Sales",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Distributor copy. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SL3000",
+      "name": "SL3000 Slide Gate Operator",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [
+        "SL 3000"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "SL3000 Gate Operator Manual",
+          "sourceUrl": "https://www.aegates.com/wp-content/uploads/2021/07/liftmaster-gate-operator-sl3000-gate-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "Automated Entry Gates",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Third-party copy. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SL585UL",
+      "name": "SL585UL Elite Series Industrial AC Slide Gate Operator",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [
+        "SL585",
+        "SL 585UL"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "SL585UL Elite Series Industrial AC Slide Gate Operator Installation Manual",
+          "sourceUrl": "https://www.doordoctor.com/wp-content/uploads/2018/12/585-installation-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "Door Doctor",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Third-party copy. No manufacturer-hosted URL for this model was surfaced. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "T / APT / H / J / HJ / GH / GT",
+      "name": "LiftMaster T / APT / H / J / HJ / GH / GT",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "LiftMaster Logic 5.0 User Guide",
+          "sourceUrl": "https://www.movingupgaragedoors.com/amfile/file/download/file/125/product/1926/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "movingupgaragedoors.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"LiftMaster Logic 5.0 User Guide\" (host: www.movingupgaragedoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

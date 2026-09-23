@@ -9,6 +9,48 @@
   },
   "models": [
     {
+      "modelCode": "AC RF",
+      "name": "AC RF Tubular Motor",
+      "category": "roller-shutter-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "PROGRAMMING_GUIDE",
+          "title": "AC RF Motor Programming Instructions",
+          "sourceUrl": "https://www.avoutlet.com/images/product/additional/r/rollease-ac-motor-programming.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "AV Outlet",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "US reseller copy. Region recorded from the reseller's market, not confirmed from the document. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "AUTOMATE",
+      "name": "Rollease Acmeda AUTOMATE",
+      "category": "roller-shutter-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Rollease Acmeda Automate Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/3280514/Rollease-Acmeda-Automate.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Rollease Acmeda Automate Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "Automate ARC FT",
       "name": "Automate ARC Tubular FT Motor 433MHz Bi-Directional",
       "category": "roller-shutter-motors",
@@ -26,47 +68,9 @@
           "publisher": "C&C Curtains and Blinds",
           "region": "AU",
           "rights": "LINK_ONLY",
-          "evidence": "Australian reseller copy. Not fetched - egress blocked."
-        }
-      ]
-    },
-    {
-      "modelCode": "Automate Li-Ion Q10 DC",
-      "name": "Automate Li-Ion Q10 DC ARC Tubular Motor",
-      "category": "roller-shutter-motors",
-      "region": "AU",
-      "aliases": [
-        "Q10 DC",
-        "Li-Ion Q10"
-      ],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Automate Li-Ion Q10 DC ARC Tubular Motor User Manual",
-          "sourceUrl": "https://manuals.plus/rollease-acmeda/automate-li-ion-q10-dc-arc-tubular-motor-manual-pdf",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "Manuals+",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked."
-        }
-      ]
-    },
-    {
-      "modelCode": "AC RF",
-      "name": "AC RF Tubular Motor",
-      "category": "roller-shutter-motors",
-      "region": "GLOBAL",
-      "documents": [
-        {
-          "kind": "PROGRAMMING_GUIDE",
-          "title": "AC RF Motor Programming Instructions",
-          "sourceUrl": "https://www.avoutlet.com/images/product/additional/r/rollease-ac-motor-programming.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "AV Outlet",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "evidence": "US reseller copy. Region recorded from the reseller's market, not confirmed from the document. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Australian reseller copy. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -89,7 +93,33 @@
           "publisher": "Rollease Acmeda",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On rolleaseacmeda.com, the manufacturer's own domain, in its open docs tree - not the sign-in-gated member area. Part code MTDCBRF and version v1.2 are in the file name; the 433 MHz bi-directional description is from the document's own title line. The sfvrsn query parameter is the CMS cache-buster and may change. Region is US from the /us/ path segment, not from the motor's market. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On rolleaseacmeda.com, the manufacturer's own domain, in its open docs tree - not the sign-in-gated member area. Part code MTDCBRF and version v1.2 are in the file name; the 433 MHz bi-directional description is from the document's own title line. The sfvrsn query parameter is the CMS cache-buster and may change. Region is US from the /us/ path segment, not from the motor's market. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Automate Li-Ion Q10 DC",
+      "name": "Automate Li-Ion Q10 DC ARC Tubular Motor",
+      "category": "roller-shutter-motors",
+      "region": "AU",
+      "aliases": [
+        "Q10 DC",
+        "Li-Ion Q10"
+      ],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Automate Li-Ion Q10 DC ARC Tubular Motor User Manual",
+          "sourceUrl": "https://manuals.plus/rollease-acmeda/automate-li-ion-q10-dc-arc-tubular-motor-manual-pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "Manuals+",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -111,7 +141,72 @@
           "publisher": "Rollease Acmeda",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On rolleaseacmeda.com's open docs tree. Part code MTDCBSW25-1-1 and version v1.0 from the file name. Kept separate from the ARC motor: a wand-controlled switch motor and a 433 MHz radio motor are commissioned differently. Region is US from the /us/ path segment, not from the motor's market. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "On rolleaseacmeda.com's open docs tree. Part code MTDCBSW25-1-1 and version v1.0 from the file name. Kept separate from the ARC motor: a wand-controlled switch motor and a 433 MHz radio motor are commissioned differently. Region is US from the /us/ path segment, not from the motor's market. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "AUTOMATE WIREFREE S45",
+      "name": "Rollease Acmeda AUTOMATE WIREFREE S45",
+      "category": "roller-shutter-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Rollease Acmeda Automate Wirefree Medium Motor System Reference Guide",
+          "sourceUrl": "https://www.rolleaseacmeda.com/docs/default-source/au/motorised-rollers/automate-wirefree-motorised-s45/srg-wirefree-medium-motor.pdf?sfvrsn=52bee33c_30",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "rolleaseacmeda.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Rollease Acmeda Automate Wirefree Medium Motor System Reference Guide\" (host: www.rolleaseacmeda.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Blinds and Motors",
+      "name": "Rollease Acmeda Blinds and Motors",
+      "category": "roller-shutter-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Rollease Acmeda Document Library Index",
+          "sourceUrl": "https://www.rolleaseacmeda.com/us/document-library",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "rolleaseacmeda.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Rollease Acmeda Document Library Index\" (host: www.rolleaseacmeda.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Medium Roller Blinds",
+      "name": "Rollease Acmeda Medium Roller Blinds",
+      "category": "roller-shutter-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Rollease Acmeda Medium Roller Blind Assembly Manual v1.6",
+          "sourceUrl": "https://www.rolleaseacmeda.com/docs/default-source/au/rollers/medium-roller-blinds_am.pdf?sfvrsn=8199f03c_14",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "rolleaseacmeda.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Rollease Acmeda Medium Roller Blind Assembly Manual v1.6\" (host: www.rolleaseacmeda.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

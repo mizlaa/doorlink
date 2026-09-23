@@ -1,0 +1,30 @@
+{
+  "manufacturer": {
+    "name": "PYM",
+    "slug": "pym",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "A2203-JX",
+      "name": "PYM A2203-JX",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "PYM A2203-JX 1300kg Automatic Sliding Gate Opener User's Manual",
+          "sourceUrl": "https://ffcr.com.au/wp-content/uploads/2023/03/MANUAL-PYM-A2203-JX-1300kgs-Siding-Gate-Opener.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ffcr.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"PYM A2203-JX 1300kg Automatic Sliding Gate Opener User's Manual\" (host: ffcr.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

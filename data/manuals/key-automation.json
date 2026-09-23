@@ -9,22 +9,305 @@
   },
   "models": [
     {
+      "modelCode": "14A",
+      "name": "Key Automation 14A",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Key Automation 14A Instructions and Warnings for Installation and Use",
+          "sourceUrl": "https://www.manualslib.com/manual/3461410/Key-Automation-14a.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualsLib",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing. The listing gives no product family or gate type, so none is asserted here beyond the model code. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "900CT-101",
+      "name": "Key Automation 900CT-101",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Key Automation 900CT-101 Instruction Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1202310/Key-Automation-900ct-101.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Key Automation 900CT-101 Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "900CT-1A",
+      "name": "Key Automation 900CT-1A",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Key Automation 900CT-1A Instruction Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Key-Automation-900ct-1a-10753151.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Key Automation 900CT-1A Instruction Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "900CT-1AR",
+      "name": "Key Automation 900CT-1AR",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Key Automation 900CT-1AR Instruction Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1718399/Key-Automation-900ct-1ar.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Key Automation 900CT-1AR Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "900CT-1AS",
+      "name": "Key Automation 900CT-1AS",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Key Automation 900CT-1AS Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Key-Automation-900ct-1as-10753152.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Key Automation 900CT-1AS Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "900CT-2-24S",
+      "name": "Key Automation 900CT-2-24S",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Key Automation 900CT-2-24S Control Unit Instruction Manual",
+          "sourceUrl": "https://manualzz.com/doc/en/62076612/keyautomation-900ct-2-24s-bedienungsanleitung",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualzz.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Key Automation 900CT-2-24S Control Unit Instruction Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "900CT-201",
+      "name": "Key Automation 900CT-201",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Key Automation 900CT-201 Gate Opener Instruction Manual",
+          "sourceUrl": "https://manualzz.com/doc/en/html/5801023/key-automation-900ct-201-gate-opener-instruction-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualzz.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Key Automation 900CT-201 Gate Opener Instruction Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "900CT-24M",
+      "name": "Key Automation 900CT-24M",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Key Automation 900CT-24M Instruction Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1740713/Key-Automation-900ct-24m.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Key Automation 900CT-24M Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gates and Doors",
+      "name": "Key Automation Gates and Doors",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Key Automation Area Manuali (Manuals Area)",
+          "sourceUrl": "https://keyautomation.com/en/manual?c_ctg=gate&a_type=barriere&i_type=bar&item=900astl8",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "keyautomation.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Key Automation Area Manuali (Manuals Area)\" (host: keyautomation.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Key Automation User Manuals Index",
+          "sourceUrl": "https://www.keyautomation.com.au/manual/",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "keyautomation.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Key Automation User Manuals Index\" (host: www.keyautomation.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RAY",
+      "name": "Key Automation RAY",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Key Automation RAY Residential Gate Operator and Controller User Manual (v.12.5.17)",
+          "sourceUrl": "https://device.report/m/8ee51d34886afd4f8c371507f7e4eda987e96701a3e595e4dd7477c358b56d4d.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "device.report",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Key Automation RAY Residential Gate Operator and Controller User Manual (v.12.5.17)\" (host: device.report). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RAY25",
+      "name": "Key Automation RAY25 24V Swing Gate Gear Motor",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [
+        "RAY 25",
+        "900RAY2224",
+        "RAY Series"
+      ],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Key Automation RAY Series Instructions and Warnings for Installation and Use",
+          "sourceUrl": "https://www.manualslib.com/manual/1732761/Key-Automation-Ray-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualsLib",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing for the RAY series - the gear motor for hinged gates. No 580RAY PDF on keyautomation.com surfaced, so this stays third-party rather than being guessed into the MANUALS directory alongside its SUN siblings. Part code 900RAY2224 comes from the manufacturer's own RAY25 24V product page, recorded below. Not fetched - egress blocked.",
+          "altSources": [
+            {
+              "url": "https://www.keyautomation.com/en/products/gate/battenti/swing/ray25/24v/900ray2224",
+              "authority": "MANUFACTURER_OFFICIAL",
+              "label": "Manufacturer product page for the RAY25 24V (900RAY2224) - product page, not a document"
+            },
+            {
+              "url": "https://www.manualslib.com/manual/1263174/Key-Ray.html",
+              "authority": "THIRD_PARTY_MIRROR",
+              "label": "ManualsLib user-manual listing filed under brand \"Key\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelCode": "SUN",
+      "name": "Key Automation SUN",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Key Automation Sun Instructions and Warnings for Installation and Use",
+          "sourceUrl": "https://www.manualslib.com/manual/1801788/Key-Automation-Sun.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Key Automation Sun Instructions and Warnings for Installation and Use\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "SUN2",
       "name": "Key Automation SUN2 Sliding Gate Gear Motor",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["SUN 2", "580SUN2"],
+      "aliases": [
+        "SUN 2",
+        "580SUN2"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "SUN2 Instructions and Warnings for Installation and Use",
-          "documentCode": "580SUN2",
-          "version": "REV04",
           "sourceUrl": "https://www.keyautomation.com/media/products/images/MANUALS/580SUN2%20REV04.PDF",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Key Automation",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
+          "version": "REV04",
+          "documentCode": "580SUN2",
           "evidence": "On keyautomation.com, the manufacturer's own domain, in its MANUALS directory. Document code 580SUN2 and revision REV04 read from the file name. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -46,68 +329,24 @@
       "name": "Key Automation SUN3 Sliding Gate Gear Motor",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["SUN 3", "580SUN3"],
+      "aliases": [
+        "SUN 3",
+        "580SUN3"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "SUN3 Instructions and Warnings for Installation and Use",
-          "documentCode": "580SUN3",
-          "version": "REV02",
           "sourceUrl": "https://www.keyautomation.com/media/products/images/MANUALS/580SUN3%20REV02.PDF",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "Key Automation",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "On keyautomation.com in its MANUALS directory. Document code 580SUN3 and revision REV02 from the file name. The result title shows the document is bilingual (Instructions and warnings / Istruzioni). Not fetched - egress blocked."
-        }
-      ]
-    },
-    {
-      "modelCode": "RAY25",
-      "name": "Key Automation RAY25 24V Swing Gate Gear Motor",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": ["RAY 25", "900RAY2224", "RAY Series"],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Key Automation RAY Series Instructions and Warnings for Installation and Use",
-          "sourceUrl": "https://www.manualslib.com/manual/1732761/Key-Automation-Ray-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualsLib",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing for the RAY series - the gear motor for hinged gates. No 580RAY PDF on keyautomation.com surfaced, so this stays third-party rather than being guessed into the MANUALS directory alongside its SUN siblings. Part code 900RAY2224 comes from the manufacturer's own RAY25 24V product page, recorded below. Not fetched - egress blocked.",
-          "altSources": [
-            {
-              "url": "https://www.keyautomation.com/en/products/gate/battenti/swing/ray25/24v/900ray2224",
-              "authority": "MANUFACTURER_OFFICIAL",
-              "label": "Manufacturer product page for the RAY25 24V (900RAY2224) - product page, not a document"
-            },
-            {
-              "url": "https://www.manualslib.com/manual/1263174/Key-Ray.html",
-              "authority": "THIRD_PARTY_MIRROR",
-              "label": "ManualsLib user-manual listing filed under brand \"Key\""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "modelCode": "14A",
-      "name": "Key Automation 14A",
-      "category": "gate-motors",
-      "region": "EU",
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Key Automation 14A Instructions and Warnings for Installation and Use",
-          "sourceUrl": "https://www.manualslib.com/manual/3461410/Key-Automation-14a.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualsLib",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. The listing gives no product family or gate type, so none is asserted here beyond the model code. Not fetched - egress blocked."
+          "language": "en",
+          "version": "REV02",
+          "documentCode": "580SUN3",
+          "evidence": "On keyautomation.com in its MANUALS directory. Document code 580SUN3 and revision REV02 from the file name. The result title shows the document is bilingual (Instructions and warnings / Istruzioni). Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

@@ -1,0 +1,135 @@
+{
+  "manufacturer": {
+    "name": "Hotron",
+    "slug": "hotron",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "Door Sensors",
+      "name": "Hotron Door Sensors",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Hotron Manuals and Installation Guides Index",
+          "sourceUrl": "https://hotron.com/downloads/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "hotron.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hotron Manuals and Installation Guides Index\" (host: hotron.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "HR-ROBUS",
+      "name": "Hotron HR-ROBUS",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hotron HR-Robus Industrial Automatic Door Activation Sensor User Manual",
+          "sourceUrl": "https://manuals.plus/hotron/hr-robus-industrial-automatic-door-activation-sensor-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hotron HR-Robus Industrial Automatic Door Activation Sensor User Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "HR100-CT",
+      "name": "Hotron HR100-CT",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hotron HR100-CT User Manual",
+          "sourceUrl": "https://hotron.com/wp-content/uploads/2020/09/hr100-ct_en1.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "hotron.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hotron HR100-CT User Manual\" (host: hotron.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SSS-4",
+      "name": "Hotron SSS-4",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "SAFETY_DOCUMENT",
+          "title": "Hotron SSS-4 Safety Sensor for Swing Doors Installation Instructions",
+          "sourceUrl": "https://www.hotron.com/sites/default/files/products/downloads/sss-4_installation_instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "hotron.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hotron SSS-4 Safety Sensor for Swing Doors Installation Instructions\" (host: www.hotron.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SSS-5",
+      "name": "Hotron SSS-5",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "SAFETY_DOCUMENT",
+          "title": "Hotron SSS-5 Safety Sensor for Automatic Swing Doors Installation Guide",
+          "sourceUrl": "https://manuals.plus/hotron/sss-5-safety-sensor-for-automatic-swing-doors-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hotron SSS-5 Safety Sensor for Automatic Swing Doors Installation Guide\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SSS-5S1",
+      "name": "Hotron SSS-5S1",
+      "category": "remotes-accessories",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "SAFETY_DOCUMENT",
+          "title": "Hotron SSS-5S1 Safety Sensor for Automatic Swing Doors User Manual",
+          "sourceUrl": "https://manuals.plus/hotron/sss-5s1-safety-sensor-for-automatic-swing-doors-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hotron SSS-5S1 Safety Sensor for Automatic Swing Doors User Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

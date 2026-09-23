@@ -1,0 +1,114 @@
+{
+  "manufacturer": {
+    "name": "Marantec America",
+    "slug": "marantec-america",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "Garage Door Openers",
+      "name": "Marantec America Garage Door Openers",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Marantec Opener Manuals Index",
+          "sourceUrl": "https://support.garagedoorzone.com/marantec-openers.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "support.garagedoorzone.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Marantec Opener Manuals Index\" (host: support.garagedoorzone.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SYNERGY 260 / 270 / 280",
+      "name": "Marantec America SYNERGY 260 / 270 / 280",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Marantec Synergy 200 Series Owner's Manual",
+          "sourceUrl": "https://www.garagedoorzone.com/assets/images/PDF%20Files/Synergy-200-Series_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "garagedoorzone.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Marantec Synergy 200 Series Owner's Manual\" (host: www.garagedoorzone.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SYNERGY 270",
+      "name": "Marantec America SYNERGY 270",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Marantec Synergy 270 Opener Manual",
+          "sourceUrl": "https://support.garagedoorzone.com/synergy-270-marantec-opener-manual.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "support.garagedoorzone.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Marantec Synergy 270 Opener Manual\" (host: support.garagedoorzone.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SYNERGY 360 / 370",
+      "name": "Marantec America SYNERGY 360 / 370",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Marantec Synergy 300 Series Owner's Manual (2021.12)",
+          "sourceUrl": "https://marantecamerica.com/wp-content/uploads/2024/12/Marantec_Synergy-300-Series_Owners-Manual_2021.12.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "marantecamerica.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Marantec Synergy 300 Series Owner's Manual (2021.12)\" (host: marantecamerica.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SYNERGY 370 / 380",
+      "name": "Marantec America SYNERGY 370 / 380",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Marantec Synergy 370 and 380 Owner's Manual",
+          "sourceUrl": "https://support.garagedoorzone.com/uploads/1/2/1/0/12109531/synergy370380manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "support.garagedoorzone.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Marantec Synergy 370 and 380 Owner's Manual\" (host: support.garagedoorzone.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

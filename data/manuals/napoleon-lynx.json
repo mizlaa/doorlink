@@ -1,0 +1,189 @@
+{
+  "manufacturer": {
+    "name": "Napoleon / Lynx",
+    "slug": "napoleon-lynx",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "CDJ / CDJH / CDJB / CDJBH",
+      "name": "Napoleon / Lynx CDJ / CDJH / CDJB / CDJBH",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Napoleon Lynx Commercial Jack Shaft Operator Owner's Manual",
+          "sourceUrl": "https://www.lynx-nsw.com/uploads/1/0/8/5/108596519/cdj_manual_100ta01t-02.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "lynx-nsw.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Napoleon Lynx Commercial Jack Shaft Operator Owner's Manual\" (host: www.lynx-nsw.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Garage Door Openers",
+      "name": "Napoleon / Lynx Garage Door Openers",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Napoleon / Lynx Garage Door Opener Parts Manuals Index",
+          "sourceUrl": "https://shopactiondirect.com/napoleon-lynx-product-manuals/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "shopactiondirect.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Napoleon / Lynx Garage Door Opener Parts Manuals Index\" (host: shopactiondirect.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Napoleon Lynx Product Manuals Index",
+          "sourceUrl": "https://www.stardoorparts.com/Napoleon-Lynx-Product-Manuals-s/422.htm",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "stardoorparts.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Napoleon Lynx Product Manuals Index\" (host: www.stardoorparts.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LDJ / LDJH / LDJB / LDJBH",
+      "name": "Napoleon / Lynx LDJ / LDJH / LDJB / LDJBH",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Napoleon Lynx Medium Duty Jack Shaft Operator Owner's Manual",
+          "sourceUrl": "https://www.lynx-nsw.com/uploads/1/0/8/5/108596519/ldj_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "lynx-nsw.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Napoleon Lynx Medium Duty Jack Shaft Operator Owner's Manual\" (host: www.lynx-nsw.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LDT",
+      "name": "Napoleon / Lynx LDT",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Lynx Napoleon LDT Owner's Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1917914/Lynx-Napoleon-Lynx-Ldt.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Lynx Napoleon LDT Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LDT / LDTB",
+      "name": "Napoleon / Lynx LDT / LDTB",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Napoleon Lynx Medium Duty Door Operator Owner's Manual",
+          "sourceUrl": "https://www.lynx-nsw.com/uploads/1/0/8/5/108596519/ldt_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "lynx-nsw.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Napoleon Lynx Medium Duty Door Operator Owner's Manual\" (host: www.lynx-nsw.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MCJ / MCJH / MCJB / MCJBH",
+      "name": "Napoleon / Lynx MCJ / MCJH / MCJB / MCJBH",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Napoleon Lynx Medium Duty Jack Shaft Operator Owner's Manual",
+          "sourceUrl": "https://www.lynx-nsw.com/uploads/1/0/8/5/108596519/mcj_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "lynx-nsw.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Napoleon Lynx Medium Duty Jack Shaft Operator Owner's Manual\" (host: www.lynx-nsw.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MRAT LX100",
+      "name": "Napoleon / Lynx MRAT LX100",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Napoleon Lynx MRAT Commercial Trolley Operator Owner's Manual",
+          "sourceUrl": "http://www.lynx-nsw.com/uploads/1/0/8/5/108596519/mrat_lx100.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "lynx-nsw.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Napoleon Lynx MRAT Commercial Trolley Operator Owner's Manual\" (host: www.lynx-nsw.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Residential",
+      "name": "Napoleon / Lynx Residential",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Napoleon Lynx Residential Garage Door Operator Owner's Manual (Rev C)",
+          "sourceUrl": "https://www.lynx-nsw.com/uploads/1/0/8/5/108596519/residential_manual_rev_c.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "lynx-nsw.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Napoleon Lynx Residential Garage Door Operator Owner's Manual (Rev C)\" (host: www.lynx-nsw.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

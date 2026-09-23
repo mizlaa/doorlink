@@ -9,11 +9,164 @@
   },
   "models": [
     {
+      "modelCode": "202 E",
+      "name": "DEA System 202 E",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "DEA 202 E Instructions and Warnings",
+          "sourceUrl": "https://www.manualslib.com/manual/2213060/Dea-202-E.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DEA 202 E Instructions and Warnings\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Openers",
+      "name": "DEA System Gate Openers",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DEA Gate Opener Manuals Index",
+          "sourceUrl": "https://www.manualslib.com/brand/dea/gate-opener.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DEA Gate Opener Manuals Index\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GULLIVER",
+      "name": "DEA Gulliver Sliding Gate Operator",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "DEA Gulliver User Manual",
+          "sourceUrl": "https://manualmachine.com/dea/gulliver/2591288-user-manual/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualMachine",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing. Recorded as its own model rather than folded into the LIVI records: the LIVI line is for swing gates and Gulliver for sliding, and search returned no document covering both. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DEA Gulliver Manual",
+          "sourceUrl": "https://www.intelligentsecurity.org/resources/gates/DEA-GULLIVER-Manual_Watermark.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "intelligentsecurity.org",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DEA Gulliver Manual\" (host: www.intelligentsecurity.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DEA Gulliver Manual (EasyGates)",
+          "sourceUrl": "https://manuals.easygates.co.uk/dea-gulliver-manual/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.easygates.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DEA Gulliver Manual (EasyGates)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "DEA Gulliver Sliding Gate Operator Operating Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1578304/Dea-Gulliver.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DEA Gulliver Sliding Gate Operator Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LIVI",
+      "name": "DEA LIVI Series Operator",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "DEA LIVI Series Operating Instructions and Warnings",
+          "sourceUrl": "https://www.manualslib.com/manual/2263512/Dea-Livi-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualsLib",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing with an installation and assembly section. Not fetched - egress blocked.",
+          "altSources": [
+            {
+              "url": "https://www.knowledgebase.egates.co.uk/manuals/dea-livi-manual/",
+              "authority": "THIRD_PARTY_MIRROR",
+              "label": "eGates knowledge base copy"
+            }
+          ]
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DEA Livi Manual",
+          "sourceUrl": "https://www.intelligentsecurity.org/resources/gates/DEA-LIVI-Manual_Watermark.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "intelligentsecurity.org",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DEA Livi Manual\" (host: www.intelligentsecurity.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DEA Livi Manual (Arden Gate Automation)",
+          "sourceUrl": "https://www.ardengateautomation.co.uk/downloads/1435146858DEA_LIVI_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ardengateautomation.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DEA Livi Manual (Arden Gate Automation)\" (host: www.ardengateautomation.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "LIVI 502",
       "name": "DEA LIVI 502 Swing Gate Operator",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["LIVI502", "LIVI 500 Series"],
+      "aliases": [
+        "LIVI502",
+        "LIVI 500 Series"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,6 +176,7 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing for the 500 series, which search describes as covering electro-mechanical operators for swing gates including the 502. Recorded against the 502 because that is the model the series manual names; the series name is kept as an alias so a search for either finds it. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -49,7 +203,9 @@
       "name": "DEA LIVI/N Series Operator",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["LIVI N"],
+      "aliases": [
+        "LIVI N"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -59,50 +215,51 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing, 108 pages per the result. Kept separate from the 500 series because the aggregator files it as a distinct series, not because the difference was confirmed. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Aggregator listing, 108 pages per the result. Kept separate from the 500 series because the aggregator files it as a distinct series, not because the difference was confirmed. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
     {
-      "modelCode": "LIVI",
-      "name": "DEA LIVI Series Operator",
+      "modelCode": "LOOK",
+      "name": "DEA System LOOK",
       "category": "gate-motors",
       "region": "EU",
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "DEA LIVI Series Operating Instructions and Warnings",
-          "sourceUrl": "https://www.manualslib.com/manual/2263512/Dea-Livi-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualsLib",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing with an installation and assembly section. Not fetched - egress blocked.",
-          "altSources": [
-            {
-              "url": "https://www.knowledgebase.egates.co.uk/manuals/dea-livi-manual/",
-              "authority": "THIRD_PARTY_MIRROR",
-              "label": "eGates knowledge base copy"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "modelCode": "GULLIVER",
-      "name": "DEA Gulliver Sliding Gate Operator",
-      "category": "gate-motors",
-      "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "USER_MANUAL",
-          "title": "DEA Gulliver User Manual",
-          "sourceUrl": "https://manualmachine.com/dea/gulliver/2591288-user-manual/",
+          "title": "DEA Look Gate Opener Operating Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1578276/Dea-Look.html",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualMachine",
+          "publisher": "manualslib.com",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Recorded as its own model rather than folded into the LIVI records: the LIVI line is for swing gates and Gulliver for sliding, and search returned no document covering both. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DEA Look Gate Opener Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "OLI/N SERIES",
+      "name": "DEA System OLI/N SERIES",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "DEA Oli/N Series Operating Instructions and Warnings",
+          "sourceUrl": "https://www.manualslib.com/manual/1753155/Dea-Oli-N-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DEA Oli/N Series Operating Instructions and Warnings\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

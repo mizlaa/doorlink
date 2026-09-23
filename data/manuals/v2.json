@@ -9,11 +9,45 @@
   },
   "models": [
     {
+      "modelCode": "ALFARISS",
+      "name": "V2 ALFARISS Sliding Gate Actuator",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "V2 ALFARISS Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1851728/V2-Alfariss.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualsLib",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": [
+            {
+              "url": "https://www.remootio.com/pages/v2-alfariss-instruction-manual",
+              "authority": "THIRD_PARTY_MIRROR",
+              "label": "Remootio instruction-manual page"
+            },
+            {
+              "url": "https://manualzz.com/doc/en/20396296/v2-elettronica-v2-alfariss-sliding-gate-opener-owner-s-manual",
+              "authority": "THIRD_PARTY_MIRROR",
+              "label": "Manualzz copy of the owner's manual"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "modelCode": "AYROS",
       "name": "V2 AYROS Series Sliding Gate Actuator",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["Ayros Series"],
+      "aliases": [
+        "Ayros Series"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,6 +57,7 @@
           "publisher": "ManualsLib",
           "region": "EU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Aggregator listing of the installer manual. Search describes the Ayros as a 230V/120V irreversible rack actuator for sliding gates to 1200 kg; that description is not recorded as a specification because it was read from a search summary, not from the document. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -40,32 +75,149 @@
       ]
     },
     {
-      "modelCode": "ALFARISS",
-      "name": "V2 ALFARISS Sliding Gate Actuator",
+      "modelCode": "CALYPSO400",
+      "name": "V2 Elettronica CALYPSO400",
       "category": "gate-motors",
       "region": "EU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
-          "title": "V2 ALFARISS Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1851728/V2-Alfariss.html",
+          "title": "V2 Calypso400 Operating and Installation Instructions",
+          "sourceUrl": "https://www.manualslib.com/manual/1101347/V2-Calypso400.html",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualsLib",
+          "publisher": "manualslib.com",
           "region": "EU",
           "rights": "LINK_ONLY",
-          "evidence": "Aggregator listing. Not fetched - egress blocked.",
-          "altSources": [
-            {
-              "url": "https://www.remootio.com/pages/v2-alfariss-instruction-manual",
-              "authority": "THIRD_PARTY_MIRROR",
-              "label": "Remootio instruction-manual page"
-            },
-            {
-              "url": "https://manualzz.com/doc/en/20396296/v2-elettronica-v2-alfariss-sliding-gate-opener-owner-s-manual",
-              "authority": "THIRD_PARTY_MIRROR",
-              "label": "Manualzz copy of the owner's manual"
-            }
-          ]
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"V2 Calypso400 Operating and Installation Instructions\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CITY1",
+      "name": "V2 Elettronica CITY1",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "V2 City1 Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1759429/V2-City1.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"V2 City1 Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CITY2+",
+      "name": "V2 Elettronica CITY2+",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "V2 City2+ Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1726707/V2-City2Plus.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"V2 City2+ Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CITY7",
+      "name": "V2 Elettronica CITY7",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "V2 City7 Control Unit Manual (IL n. 252)",
+          "sourceUrl": "https://ismartgate.com/manuals/V2_City7_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ismartgate.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"V2 City7 Control Unit Manual (IL n. 252)\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Automation",
+      "name": "V2 Elettronica Gate Automation",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "V2 Home Manuals Index",
+          "sourceUrl": "https://v2home.com/en/manuals/",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "v2home.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"V2 Home Manuals Index\" (host: v2home.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GOLD400A / GOLD600A",
+      "name": "V2 Elettronica GOLD400A / GOLD600A",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "V2 Gold400A / Gold600A Manual (IL n. 269-1)",
+          "sourceUrl": "https://ismartgate.com/manuals/V2_Elettronica_Gold400a_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ismartgate.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"V2 Gold400A / Gold600A Manual (IL n. 269-1)\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GOLD400A SERIES",
+      "name": "V2 Elettronica GOLD400A SERIES",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "V2 Gold400A Series Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1774445/V2-Gold400a-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"V2 Gold400A Series Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

@@ -1,0 +1,177 @@
+{
+  "manufacturer": {
+    "name": "ASI Doors",
+    "slug": "asi-doors",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "DURA-ROLL 109",
+      "name": "ASI Doors DURA-ROLL 109",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASI Doors Dura-Roll 109 Owner's Manual (17B071)",
+          "sourceUrl": "https://www.asidoors.com/wp-content/uploads/2020/05/Owners-Manual-Model-109.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "asidoors.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ASI Doors Dura-Roll 109 Owner's Manual (17B071)\" (host: www.asidoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ISO-ROLL 215",
+      "name": "ASI Doors ISO-ROLL 215",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASI Doors ISO-Roll 215 Owner's Manual (17A336)",
+          "sourceUrl": "https://www.asidoors.com/wp-content/uploads/2024/09/ASI-215_ISO-Roll_Owners_Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "asidoors.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ASI Doors ISO-Roll 215 Owner's Manual (17A336)\" (host: www.asidoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "IXP 2600",
+      "name": "ASI Doors IXP 2600",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASI Doors Model IXP 2600 Single Impactable Sliding Cooler/Freezer Door Owner's Manual",
+          "sourceUrl": "https://www.asidoors.com/wp-content/uploads/2020/05/Owners-Manual-Model-2600.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "asidoors.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ASI Doors Model IXP 2600 Single Impactable Sliding Cooler/Freezer Door Owner's Manual\" (host: www.asidoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MODEL 1240 / 1250",
+      "name": "ASI Doors MODEL 1240 / 1250",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASI Doors Model 1240 Manual / 1250 Power Single Sliding Door Owner's Manual",
+          "sourceUrl": "https://www.asidoors.com/wp-content/uploads/2020/05/Owners-Manual-Model-1240-1250.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "asidoors.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ASI Doors Model 1240 Manual / 1250 Power Single Sliding Door Owner's Manual\" (host: www.asidoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MODEL 160 / 170",
+      "name": "ASI Doors MODEL 160 / 170",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASI Doors Model 170 Manual / 160 Power Bi-Part Sliding Fiberglass Door Owner's Manual",
+          "sourceUrl": "https://www.asidoors.com/wp-content/uploads/2020/05/Owners-Manual-Model-160-170.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "asidoors.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ASI Doors Model 170 Manual / 160 Power Bi-Part Sliding Fiberglass Door Owner's Manual\" (host: www.asidoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MODEL 209",
+      "name": "ASI Doors MODEL 209",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASI Doors Model 209 Owner's Manual",
+          "sourceUrl": "https://www.asidoors.com/wp-content/uploads/2020/05/Owners-Manual-Model-209.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "asidoors.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ASI Doors Model 209 Owner's Manual\" (host: www.asidoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MODEL 2100",
+      "name": "ASI Doors MODEL 2100",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASI Doors Model 2100 Owner's Manual",
+          "sourceUrl": "https://www.asidoors.com/wp-content/uploads/2020/05/Owners-Manual-Model-2100.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "asidoors.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ASI Doors Model 2100 Owner's Manual\" (host: www.asidoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "MODEL 415",
+      "name": "ASI Doors MODEL 415",
+      "category": "industrial-high-speed-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASI Doors Model 415 High-Speed Fabric Roll-Up Door Owner's Manual (17A251)",
+          "sourceUrl": "https://www.asidoors.com/wp-content/uploads/2020/05/Owners-Manual-Model-415.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "asidoors.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ASI Doors Model 415 High-Speed Fabric Roll-Up Door Owner's Manual (17A251)\" (host: www.asidoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

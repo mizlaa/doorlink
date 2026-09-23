@@ -9,45 +9,11 @@
   },
   "models": [
     {
-      "modelCode": "CAD4",
-      "name": "Controll-A-Door 4",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Controll-A-Door 4 Owner's Manual",
-          "sourceUrl": "https://www.bnd.com.au/media/2034/cad4-owners-manual.pdf",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "evidence": "Surfaced by web search on the manufacturer's own domain (bnd.com.au). Not fetched — egress blocked."
-        }
-      ]
-    },
-    {
-      "modelCode": "RDO-1v4",
-      "name": "Roll-A-Pro Rolling Door Opener",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Roll-A-Pro RDO-1v4 Instruction Manual",
-          "documentCode": "161061_04",
-          "sourceUrl": "https://admin.bnd.com.au/media/agsotypa/161061_04_rdo-1v4-roll-a-pro_-online-instruction_manual.pdf",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "evidence": "Surfaced by web search on a bnd.com.au subdomain. The document code in the filename (161061_04) is taken from the URL, not inferred. Not fetched — egress blocked."
-        }
-      ]
-    },
-    {
       "modelCode": "CAD-R",
       "name": "Controll-A-Door R Automatic Rolling Garage Door Opener",
       "category": "garage-door-openers",
       "region": "AU",
+      "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -57,6 +23,7 @@
           "publisher": "Wholesale Garage Doors",
           "region": "AU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Hosted by an Australian reseller, not by B&D. Recorded as third-party for that reason. Not fetched — egress blocked.",
           "altSources": [
             {
@@ -74,6 +41,7 @@
           "publisher": "Motepro",
           "region": "AU",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Reseller copy, direct PDF. No bnd.com.au URL for the Controll-A-Door R surfaced, so this stays third-party while the RDO-1v4 is manufacturer-hosted. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -82,6 +50,194 @@
               "label": "ManualsLib listing"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "CAD4",
+      "name": "Controll-A-Door 4",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Controll-A-Door 4 Owner's Manual",
+          "sourceUrl": "https://www.bnd.com.au/media/2034/cad4-owners-manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Surfaced by web search on the manufacturer's own domain (bnd.com.au). Not fetched — egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CONTROLL-A-DOOR",
+      "name": "B&D CONTROLL-A-DOOR",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "B&D Controll-A-Door Owner's Handbook Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1012698/BAndd-Controll-A-Door.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"B&D Controll-A-Door Owner's Handbook Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CONTROLL-A-DOOR 5",
+      "name": "B&D CONTROLL-A-DOOR 5",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "B&D Controll-A-Door 5 Instruction Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2089491/BAndd-Controll-A-Door-5.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"B&D Controll-A-Door 5 Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CONTROLL-A-DOOR P",
+      "name": "B&D CONTROLL-A-DOOR P",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "B&D Controll-A-Door P Instruction Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/793627/BAndd-Controll-A-Door-P.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"B&D Controll-A-Door P Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CONTROLL-A-DOOR RDO-1V4",
+      "name": "B&D CONTROLL-A-DOOR RDO-1V4",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "B&D Controll-A-Door RDO-1V4 Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/BAndd-Controll-A-Door-Rdo-1v4-9006000.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"B&D Controll-A-Door RDO-1V4 Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CONTROLL-A-DOOR S",
+      "name": "B&D CONTROLL-A-DOOR S",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "B&D Controll-A-Door S Homeowner's Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2749641/BAndd-Controll-A-Door-S.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"B&D Controll-A-Door S Homeowner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Garage Doors and Openers",
+      "name": "B&D Garage Doors and Openers",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "B&D Australia Owner Manuals Index",
+          "sourceUrl": "https://www.bnd.com.au/support/resources-for-owners/owner-manuals/",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "bnd.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"B&D Australia Owner Manuals Index\" (host: www.bnd.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RDO-1v4",
+      "name": "Roll-A-Pro Rolling Door Opener",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Roll-A-Pro RDO-1v4 Instruction Manual",
+          "sourceUrl": "https://admin.bnd.com.au/media/agsotypa/161061_04_rdo-1v4-roll-a-pro_-online-instruction_manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "161061_04",
+          "evidence": "Surfaced by web search on a bnd.com.au subdomain. The document code in the filename (161061_04) is taken from the URL, not inferred. Not fetched — egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Roll-A-Shutter 8/50 and 6,8,10,12/100 Series",
+      "name": "B&D Roll-A-Shutter 8/50 and 6,8,10,12/100 Series",
+      "category": "roller-shutter-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "B&D Roll-A-Shutter Installation Instructions (165010_01)",
+          "sourceUrl": "https://admin.bnd.com.au/media/4tvpflya/165010_01_roll-a-shutter_6-8-1012-100.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "admin.bnd.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"B&D Roll-A-Shutter Installation Instructions (165010_01)\" (host: admin.bnd.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

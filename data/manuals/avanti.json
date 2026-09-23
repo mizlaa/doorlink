@@ -1,0 +1,75 @@
+{
+  "manufacturer": {
+    "name": "Avanti",
+    "slug": "avanti",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "Garage Door Openers",
+      "name": "Avanti Garage Door Openers",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Avanti Garage Door Opener Installation Manuals Index",
+          "sourceUrl": "https://garagedooropenerremotes.com.au/manuals-and-downloads/avanti-manuals",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "garagedooropenerremotes.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Avanti Garage Door Opener Installation Manuals Index\" (host: garagedooropenerremotes.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Avanti Instruction Manual",
+          "sourceUrl": "https://www.waverleygaragedoors.com.au/instruction-manuals/Avanti.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "waverleygaragedoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Avanti Instruction Manual\" (host: www.waverleygaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Avanti Manuals for Garage Door Openers Index (AGG Doors)",
+          "sourceUrl": "https://industrialrollerdoorrepair.com.au/manual/manuals-by-brand-name/avanti/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "industrialrollerdoorrepair.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Avanti Manuals for Garage Door Openers Index (AGG Doors)\" (host: industrialrollerdoorrepair.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SDO-4",
+      "name": "Avanti SDO-4",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Avanti SDO-4 Instruction Manual (Euro, 2 buttons)",
+          "sourceUrl": "https://motepro.com.au/Manuals/Avanti/SDO4_EURO.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "motepro.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Avanti SDO-4 Instruction Manual (Euro, 2 buttons)\" (host: motepro.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

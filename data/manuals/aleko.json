@@ -1,0 +1,156 @@
+{
+  "manufacturer": {
+    "name": "ALEKO",
+    "slug": "aleko",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "AC1400",
+      "name": "ALEKO AC1400",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ALEKO AC1400 User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1235439/Aleko-Ac1400.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ALEKO AC1400 User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "AC5700",
+      "name": "ALEKO AC5700",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "ALEKO AC5700 Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/Aleko_AC5700_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ismartgate.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ALEKO AC5700 Manual\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "AS 1300",
+      "name": "ALEKO AS 1300",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "ALEKO AS 1300 Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Aleko-As-1300-3810528.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ALEKO AS 1300 Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "AS 450",
+      "name": "ALEKO AS 450",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ALEKO AS 450 Gate Opener User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/934177/Aleko-As-450.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ALEKO AS 450 Gate Opener User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "AS 450 / AS 900",
+      "name": "ALEKO AS 450 / AS 900",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ALEKO Swing Gate Opener User's Manual AS450/900",
+          "sourceUrl": "https://images.thdstatic.com/catalog/pdfImages/9e/9ee90eee-f25f-4ef4-94d6-905d564d3771.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "images.thdstatic.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ALEKO Swing Gate Opener User's Manual AS450/900\" (host: images.thdstatic.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "AS1200NOR",
+      "name": "ALEKO AS1200NOR",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ALEKO Swing Gate Opener User's Manual AS1200NOR",
+          "sourceUrl": "https://images.thdstatic.com/catalog/pdfImages/c5/c532d5d5-7bbc-4473-ac60-d9c6c3f00c66.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "images.thdstatic.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ALEKO Swing Gate Opener User's Manual AS1200NOR\" (host: images.thdstatic.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Openers",
+      "name": "ALEKO Gate Openers",
+      "category": "gate-motors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "ALEKO Automatic Gate User Manuals Index",
+          "sourceUrl": "https://alekoproducts.freshdesk.com/support/solutions/articles/61000269346-automatic-gate-user-manuals",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "alekoproducts.freshdesk.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ALEKO Automatic Gate User Manuals Index\" (host: alekoproducts.freshdesk.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

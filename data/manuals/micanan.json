@@ -1,0 +1,126 @@
+{
+  "manufacturer": {
+    "name": "Micanan",
+    "slug": "micanan",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "PRO-H",
+      "name": "Micanan PRO-H",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Micanan Pro-H Instruction Manual",
+          "sourceUrl": "https://micanan.manymanuals.com/garage-door-opener/pro-h/instruction-manual-33155",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "micanan.manymanuals.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Micanan Pro-H Instruction Manual\" (host: micanan.manymanuals.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "PRO-LH",
+      "name": "Micanan PRO-LH",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Micanan Pro-LH Garage Door Opener Installation Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1544261/Micanan-Pro-Lh.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Micanan Pro-LH Garage Door Opener Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Micanan Pro-LH Installation Manual",
+          "sourceUrl": "https://www.devancocanada.com/files/manuals/PRO-LH:Installation-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "devancocanada.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Micanan Pro-LH Installation Manual\" (host: www.devancocanada.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "PRO-LHA",
+      "name": "Micanan PRO-LHA",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Micanan Pro-LHA Installation and Instruction Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/Micanan_Pro-LHA_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ismartgate.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Micanan Pro-LHA Installation and Instruction Manual\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "PRO-LJ",
+      "name": "Micanan PRO-LJ",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Micanan Pro-LJ Installation Manual",
+          "sourceUrl": "http://www.devancocanada.com/files/manuals/PRO-LJ:Installation-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "devancocanada.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Micanan Pro-LJ Installation Manual\" (host: www.devancocanada.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "PRO-LT",
+      "name": "Micanan PRO-LT",
+      "category": "garage-door-openers",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Micanan Pro-LT Trolley Operator Installation and Instruction Manual",
+          "sourceUrl": "https://doordoctor.com/wp-content/uploads/2014/01/Trolley-Pro-LT-Installation-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "doordoctor.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Micanan Pro-LT Trolley Operator Installation and Instruction Manual\" (host: doordoctor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

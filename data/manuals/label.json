@@ -1,0 +1,159 @@
+{
+  "manufacturer": {
+    "name": "Label",
+    "slug": "label",
+    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+  },
+  "models": [
+    {
+      "modelCode": "NEPTIS",
+      "name": "Label NEPTIS",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Label Neptis User Manual 2017",
+          "sourceUrl": "https://labeluk.com/wp-content/uploads/2021/10/neptis-user-manual-2017.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "labeluk.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Label Neptis User Manual 2017\" (host: labeluk.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NEPTIS 16005",
+      "name": "Label NEPTIS 16005",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Label Neptis 16005 User Manual",
+          "sourceUrl": "https://www.labeluk.com/wp-content/uploads/2017/08/neptis-16005-user-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "labeluk.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Label Neptis 16005 User Manual\" (host: www.labeluk.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NEPTIS PLUS",
+      "name": "Label NEPTIS PLUS",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Label Neptis Plus Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2532013/Label-Neptis-Plus.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Label Neptis Plus Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Label Neptis Plus Installation Manual (CD0450EN Rel 1.0)",
+          "sourceUrl": "https://labeluk.com/wp-content/uploads/2022/05/neptis-plus-installazione-en-rel.1.0-cd0450en-18052021-web.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "labeluk.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Label Neptis Plus Installation Manual (CD0450EN Rel 1.0)\" (host: labeluk.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Label Neptis Plus User Manual (CD0450EN Rel 1.0)",
+          "sourceUrl": "https://labeluk.com/wp-content/uploads/2022/05/manuale-uso-neptis-plus-en-rel.1.0-cd0450en-04-2021-18052021-high.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "labeluk.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Label Neptis Plus User Manual (CD0450EN Rel 1.0)\" (host: labeluk.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NEPTIS SLT-B / LET-B / SMT-B",
+      "name": "Label NEPTIS SLT-B / LET-B / SMT-B",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Label Neptis Operator for Automatic Swing Doors Installation Manual",
+          "sourceUrl": "https://labeluk.com/wp-content/uploads/2019/04/neptis2_installationmanual-1.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "labeluk.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Label Neptis Operator for Automatic Swing Doors Installation Manual\" (host: labeluk.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NEPTIS/LE",
+      "name": "Label NEPTIS/LE",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Label Neptis/LE Swing Door Operator Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1828617/Label-Neptis-Le.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Label Neptis/LE Swing Door Operator Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NEXT 120S",
+      "name": "Label NEXT 120S",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Label Next 120S Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2164159/Label-Next-120s.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Label Next 120S Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    }
+  ]
+}

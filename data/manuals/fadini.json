@@ -9,11 +9,35 @@
   },
   "models": [
     {
+      "modelCode": "115 EVO Integrated Elpro",
+      "name": "Meccanica Fadini 115 EVO Integrated Elpro",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Fadini 115 EVO Integrated Elpro Instruction Manual",
+          "sourceUrl": "https://device.report/manual/6401079",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "device.report",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Fadini 115 EVO Integrated Elpro Instruction Manual\" (host: device.report). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "BAYT 980",
       "name": "Fadini Bayt 980 Oil-Hydraulic Traffic Barrier",
       "category": "gate-motors",
       "region": "EU",
-      "aliases": ["BAYT980", "Bayt 980 INOX"],
+      "aliases": [
+        "BAYT980",
+        "Bayt 980 INOX"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -23,6 +47,7 @@
           "publisher": "Electric Gates UK (trade)",
           "region": "UK",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Reseller copy, and a direct PDF rather than a listing page. The title names both the stainless and painted versions, so both are covered by one document. The URL path dates the upload to 2015, which is when the reseller posted it, not necessarily the document's own revision - no revision is recorded because none was visible. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -49,7 +74,9 @@
       "name": "Fadini Elpro 980 Control Unit",
       "category": "remotes-accessories",
       "region": "EU",
-      "aliases": ["Elpro980"],
+      "aliases": [
+        "Elpro980"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -59,7 +86,84 @@
           "publisher": "EasyGates",
           "region": "UK",
           "rights": "LINK_ONLY",
-          "evidence": "Reseller copy. The file name's istr_ prefix and _gb suffix match Fadini's own document naming, which is why the GB edition is recorded, but the file sits on a reseller domain. Filed under accessories because the Elpro 980 is the control unit that pairs with the Bayt 980 barrier, not a drive in its own right. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Reseller copy. The file name's istr_ prefix and _gb suffix match Fadini's own document naming, which is why the GB edition is recorded, but the file sits on a reseller domain. Filed under accessories because the Elpro 980 is the control unit that pairs with the Bayt 980 barrier, not a drive in its own right. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NYOTA 115",
+      "name": "Meccanica Fadini NYOTA 115",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Fadini Nyota 115 Electro-mechanical Sliding Gate Operator Instruction Manual",
+          "sourceUrl": "https://motepro.com.au/Manuals/Fadini/NYOTA115.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "motepro.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Fadini Nyota 115 Electro-mechanical Sliding Gate Operator Instruction Manual\" (host: motepro.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Fadini Nyota 115 Instruction Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/856976/Fadini-Nyota-115.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Fadini Nyota 115 Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NYOTA 115 EVO",
+      "name": "Meccanica Fadini NYOTA 115 EVO",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Fadini Nyota 115 Evo Electromechanical Operator for Sliding Gates Instructions Manual",
+          "sourceUrl": "https://www.fadini.hu/assets/files/Nyota115evo_EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "fadini.hu",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Fadini Nyota 115 Evo Electromechanical Operator for Sliding Gates Instructions Manual\" (host: www.fadini.hu). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NYOTA 115 EVO 3-PHASE",
+      "name": "Meccanica Fadini NYOTA 115 EVO 3-PHASE",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Meccanica Fadini Nyota 115 Evo 3-Phase 0,5 HP Gate Opener Instruction Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1578006/Meccanica-Fadini-Nyota-115-Evo-3-Phase-0-5-Hp.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Meccanica Fadini Nyota 115 Evo 3-Phase 0,5 HP Gate Opener Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }
