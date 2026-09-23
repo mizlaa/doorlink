@@ -38,9 +38,30 @@
       ]
     },
     {
+      "modelCode": "DUO VISION 500",
+      "name": "SOMMER DUO VISION 500",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer Duo Vision 500 Manual",
+          "sourceUrl": "https://archive.org/details/manualzilla-id-6777395",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "archive.org",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer Duo Vision 500 Manual\" (host: archive.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "DUO VISION 500 / 650 / 800",
       "name": "SOMMER DUO VISION 500 / 650 / 800",
-      "category": "garage-door-openers",
+      "category": "industrial-high-speed-doors",
       "region": "UK",
       "aliases": [],
       "documents": [
@@ -54,6 +75,30 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Sommer Duo Vision 500, 650, 800 Manual\" (host: arridgegaragedoors.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Sommer Duo Vision 500, 650, 800 and Duo Rapido 650 Installation Manual (FR)",
+          "sourceUrl": "https://www.segedip.com/catalogue/sommer/pdf/NOTICE%20DE%20POSE%20SOMMER%20DUO%20VISION%20500%20650%20800.compressed.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "segedip.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer Duo Vision 500, 650, 800 and Duo Rapido 650 Installation Manual (FR)\" (host: www.segedip.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Sommer Duo Vision 500, 650, 800 Installation and Operating Manual (DE)",
+          "sourceUrl": "https://feldmann-garagentore.de/application/files/7714/3575/5344/feldmann-motor-duo-vision-500-650-800-montage-betriebs-anleitung.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "feldmann-garagentore.de",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer Duo Vision 500, 650, 800 Installation and Operating Manual (DE)\" (host: feldmann-garagentore.de). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -98,6 +143,30 @@
               "label": "ismartgate instruction-manual page"
             }
           ]
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer Duo Vision 650 Garage Door Opener Manuals",
+          "sourceUrl": "https://all-guidesbox.com/model/sommer/duo-vision-650.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "all-guidesbox.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer Duo Vision 650 Garage Door Opener Manuals\" (host: all-guidesbox.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Sommer Duo Vision 650 Manual",
+          "sourceUrl": "https://www.libble.eu/sommer-duo-vision-650/online-manual-844984/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "libble.eu",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Sommer Duo Vision 650 Manual\" (host: www.libble.eu). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },

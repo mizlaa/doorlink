@@ -9,6 +9,48 @@
   },
   "models": [
     {
+      "modelCode": "A10",
+      "name": "Centurion Systems A10",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Centurion A10 Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1009376/Centurion-A10.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Centurion A10 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "A10 SERIES",
+      "name": "Centurion Systems A10 SERIES",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "PROGRAMMING_GUIDE",
+          "title": "Centurion A10 Series Programming Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1682037/Centurion-A10-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Centurion A10 Series Programming Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "D10",
       "name": "Centurion D10 / D10 Turbo Industrial Sliding Gate Operator",
       "category": "gate-motors",
@@ -189,6 +231,69 @@
       ]
     },
     {
+      "modelCode": "Gate Motors",
+      "name": "Centurion Systems Gate Motors",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Centurion Systems Australia Product Documentation Index",
+          "sourceUrl": "https://www.centsys.com.au/product-documentation_old/",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "centsys.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Centurion Systems Australia Product Documentation Index\" (host: www.centsys.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "VECTOR",
+      "name": "Centurion Systems VECTOR",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Centurion Vector User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/849161/Centurion-Vector.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Centurion Vector User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "VECTOR 2",
+      "name": "Centurion Systems VECTOR 2",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Centurion Vector 2 Installation Manual (1050.D.01.0009)",
+          "sourceUrl": "http://www.6thsensesecurity.co.za/resource_docs/13_Centurion_Vector_installation_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "6thsensesecurity.co.za",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Centurion Vector 2 Installation Manual (1050.D.01.0009)\" (host: www.6thsensesecurity.co.za). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "VECTOR2",
       "name": "Centurion Vector2 Linear Swing Gate Operator",
       "category": "gate-motors",
@@ -217,6 +322,39 @@
               "label": "ManualsLib listing"
             }
           ]
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Centurion Vector2 Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/884887/Centurion-Vector2.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Centurion Vector2 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "VECTOR2 / VANTAGE / VERT-X",
+      "name": "Centurion Systems VECTOR2 / VANTAGE / VERT-X",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Centurion V-Series Linear Swing Gate Motors User Guide (0_07_A_0263)",
+          "sourceUrl": "https://www.centsys.co.za/upload/0_07_A_0263%20V-Series%20User%20Guide-19022015-NG-web(1).pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "centsys.co.za",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Centurion V-Series Linear Swing Gate Motors User Guide (0_07_A_0263)\" (host: www.centsys.co.za). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

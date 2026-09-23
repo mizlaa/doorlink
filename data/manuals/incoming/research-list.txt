@@ -309,6 +309,8 @@ Centurion Garage Doors | Garage Doors | Centurion Garage Doors User Guides Index
 Centurion Garage Doors | RDO10C | Centurion Roller Door Opener RDO10C User Manual | https://www.cgdoors.com.au/wp-content/uploads/2022/02/Centurion-Roller-Door-Opener-RDO10C-User-Manual.pdf
 Centurion Garage Doors | SD04 | Centurion SD04 Installation Manual | https://www.manualslib.com/manual/1483917/Centurion-Sd04.html
 Centurion Garage Doors | SDO10 | Centurion SDO10 Instruction Manual | https://www.waverleygaragedoors.com.au/instruction-manuals/Centurion%20sdo10%20.pdf
+Centurion Systems | A10 | Centurion A10 Installation Manual | https://www.manualslib.com/manual/1009376/Centurion-A10.html
+Centurion Systems | A10 SERIES | Centurion A10 Series Programming Manual | https://www.manualslib.com/manual/1682037/Centurion-A10-Series.html
 Centurion Systems | D3 / D5 | Centurion D3, D5 Sliding Gate Motors Installation Manual | https://www.centsys.co.za/upload/0_07_A_0115_%20D3D5%20installation%20manual%2022072013-BM-for%20web.pdf
 Centurion Systems | D5-Evo | D5-Evo and D5-Evo Low-Voltage Installation Manual | https://www.centsys.com.au/pdf/D5-Evo/1010.D.01.0001%20D5-Evo%20and%20D5Evo%20Low-Voltage%20Manual.pdf
 Centurion Systems | D5-Evo | D5-Evo Installation Manual (South African edition) | https://www.centsys.co.za/upload/0_07_A_0059%20D5-Evo%20Installation%20Manual-18092013-BMCT-web.pdf
@@ -317,7 +319,12 @@ Centurion Systems | D5-Evo SMART | D5-Evo SMART Installation Manual (global edit
 Centurion Systems | D10 | D10 and D10 Turbo Industrial Sliding Gate Operator Installation Manual (AU edition) | https://www.centsys.com.au/pdf/D10_Turbo/1211.D.01.0004%20D10%20D10Turbo%20installation%20manual%20CENTSYS_29062018BM.pdf
 Centurion Systems | D10 SMART | D10 SMART / D10 Turbo SMART / D20 SMART Sliding Gate Operators Installation Manual (ZA edition) | https://www.centsys.co.za/pdf/prod/SMART/1271.D.01.0001_1%20D10D10TD20S%20Installation%20Manual_12072022_MT_Web_App.pdf
 Centurion Systems | D10 SMART | D10 SMART / D20 SMART Sliding Gate Operators Installation Manual (AU edition) | https://www.centsys.com.au/wp-content/uploads/2025/01/1271.D.01.0009-D10S-D20-Installation-Manual-CENTSYS_19122024_AP_Web_App.pdf
+Centurion Systems | Gate Motors | Centurion Systems Australia Product Documentation Index | https://www.centsys.com.au/product-documentation_old/
+Centurion Systems | VECTOR | Centurion Vector User Manual | https://www.manualslib.com/manual/849161/Centurion-Vector.html
+Centurion Systems | VECTOR2 | Centurion Vector2 Installation Manual | https://www.manualslib.com/manual/884887/Centurion-Vector2.html
 Centurion Systems | VECTOR2 | Vector2 Linear Swing Gate Operators Installation Manual | https://www.centsys.co.za/upload/0_07_A_0012%20VECTOR%202%20Installation%20Manual-16052014-NG-web.pdf
+Centurion Systems | VECTOR2 / VANTAGE / VERT-X | Centurion V-Series Linear Swing Gate Motors User Guide (0_07_A_0263) | https://www.centsys.co.za/upload/0_07_A_0263%20V-Series%20User%20Guide-19022015-NG-web(1).pdf
+Centurion Systems | VECTOR 2 | Centurion Vector 2 Installation Manual (1050.D.01.0009) | http://www.6thsensesecurity.co.za/resource_docs/13_Centurion_Vector_installation_manual.pdf
 Chamberlain | 1000 | Chamberlain 1000 Manual | https://www.manualslib.com/manual/1266071/Chamberlain-1000.html
 Chamberlain | B970 | Chamberlain B970 Belt Drive Owner's Manual | https://images.orgill.com/weblarge/10022/Chamberlain_B970_Manual.pdf
 Chamberlain | B970 | Chamberlain B970 Owner's Manual | https://www.manualslib.com/manual/2479343/Chamberlain-B970.html
@@ -418,9 +425,13 @@ DoorHan | SECTIONAL-750PRO | DoorHan Sectional-750PRO Installation and Operating
 DoorHan | SECTIONAL-800PRO-CE | DoorHan Sectional-800PRO-CE Installation and Operation Manual | https://ismartgate.com/manuals/DoorHan_800PRO_manual.pdf
 DoorHan | SECTIONAL-1000 | DoorHan Sectional-1000 Installation and Operating Manual | https://www.manualslib.com/manual/1104356/Doorhan-Sectional-1000.html
 DoorHan | SECTIONAL-1200 | DoorHan Sectional-1200 Manuals | https://www.manualslib.com/products/Doorhan-Sectional-1200-4043124.html
+DoorHan | SHAFT-30 | DoorHan Shaft-30 Garage Door Opener Installation Manual | https://guidesimo.com/document/1097690/doorhan-shaft-30-installation-manual-8.html
 DoorHan | SHAFT-30 | DoorHan Shaft-30 Installation Manual | https://www.manualslib.com/manual/1182850/Doorhan-Shaft-30.html
 DoorHan | SLIDING-300 | Operator Sliding-300 / 800 Installation and Operating Manual (2012) | https://ismartgate.com/manuals/DoorHan_300-800_manual.pdf
+DoorHan | SLIDING-1300 | DoorHan Sliding-1300 Installation and Operating Manual | https://www.manualslib.com/manual/953744/Doorhan-Sliding-1300.html
+DoorHan | SLIDING-1300 | DoorHan Sliding-1300 Installation and Operation Manual | https://www.manualslib.com/manual/1267875/Doorhan-Sliding-1300.html
 DoorHan | SLIDING-1300 | Installation and Operating Manual for SLIDING-1300 / 2100 | https://vihepo.dk/wp-content/uploads/2018/09/SLIDING-1300-2100.pdf
+DoorHan | SLIDING-1300 / 2100 | DoorHan Drive Sliding-1300/2100 Installation and Operation Manual | https://motepro.com.au/Manuals/DoorHan/Gate/SLIDING_1300-2100.pdf
 DoorKing | 1600 | Owner's Manual Supplemental Instructions for Series 1600, 6000 and 9000 | https://www.doorking.com/wp-content/uploads/2013/09/2340-065-K-7-08.pdf
 DoorKing | 1803 / 1808 / 1810 | DoorKing 1803, 1808, 1810 Telephone Entry Systems Manual | http://www.doorkinggateopeners.com/pdf/1803-1808-1810-Manual.pdf
 DoorKing | 1819 | DoorKing 1819 Information Phone Manual (1819-065-B) | https://www.doorking.com/wp-content/uploads/2013/09/1819-065-B-4-07.pdf
@@ -635,8 +646,12 @@ Gilgen Door Systems | FD 20 | Gilgen FD20 Installation Manual | https://quantek.
 Gilgen Door Systems | SLM | Gilgen SLM Installation Manual (2006) | https://absupply.net/pdf/Gildor%20SLM%20Installation%20Manual%202006.pdf
 Gilgen Door Systems | SLM | Gilgen SLM Manual | https://www.manualslib.com/manual/2184474/Gilgen-Slm.html
 Gilgen Door Systems | SLX | Gilgen SLX Operator's Manual | https://www.manualslib.com/manual/3020961/Gilgen-Slx.html
+Gliderol | GLIDERMATIC | Gliderol Glidermatic User Manual | https://www.manualslib.com/manual/1955944/Gliderol-Glidermatic.html
 Gliderol | GLIDERMATIC GRD | Glidermatic GRD Roller Door Automatic Operator Manual (PF4-AUCBGID-10) | https://www.gliderol.com.au/wp-content/uploads/2025/03/PF4-AUCBGID-10-Manual.pdf
+Gliderol | GLIDERMATIC GRD | Gliderol Glidermatic GRD Installation Instructions and Owner's Manual | https://www.manualslib.com/manual/817825/Gliderol-Glidermatic-Grd.html
+Gliderol | GLIDERMATIC GRD | Gliderol Glidermatic GRD Roller Door Automatic Operator Installation Instructions | https://www.thegaragedoorcentre.co.uk/userfiles/downloads/gliderol_installation_roller_door_electric_tgdc_51820.pdf
 Gliderol | GLIDERMATIC GRD+ | Gliderol Glidermatic GRD+ Installation Instructions and Owner's Manual | https://www.manualslib.com/manual/956371/Gliderol-Glidermatic-GrdPlus.html
+Gliderol | GLIDERMATIC GTS+ | Gliderol Glidermatic GTS+ Installation Instructions and Owner's Manual | https://www.manualslib.com/manual/2212666/Gliderol-Glidermatic-GtsPlus.html
 Gliderol | GRD | Glidermatic GRD Installation Instructions and Owner's Manual | https://wholesalegaragedoors.com.au/wp-content/uploads/2022/07/Gliderol-Garage-Doors-Glidermatic-GRD-Roller-Door-Opener-Installation-Manual.pdf
 Gliderol | GTS2000 | GTS2000 Owner's Manual | https://www.gliderol.com.au/wp-content/uploads/2025/02/GTS2000-Owners-Manual-V1-Board.pdf
 Gliderol | GTS+ | Glidermatic GTS+ Installation Instructions and Owner's Manual | https://www.gliderol.com.au/wp-content/uploads/2025/02/GTS2000-Owners-Manual-amp-Install-Instructions.pdf
@@ -824,10 +839,15 @@ Manusa | Automatic Doors | Manusa Downloads Index | https://www.manusa.com/en/de
 Manusa | DDS-S | Manusa DDS-S Installation Manual | https://www.manualslib.com/manual/1452462/Manusa-Dds-S.html
 Manusa | VISIO+ | Manusa Visio+ Operator Instruction Manual D01380EN-v5 | https://autodoorspecialists.com/wp-content/uploads/2024/12/Visio-User-Manual.pdf
 Manusa | VISIO+ 100 | Manusa Visio+ 100 Automatic Door Operator Installation and Operating Manual | https://www.manualslib.com/guide/4240583/manusa-visio-100-automatic-door-operator-installation-and-operating-manual.html
+Marantec | COMFORT | Marantec Comfort Manual (EasyGates) | https://manuals.easygates.co.uk/marantec-comfort-manual/
+Marantec | COMFORT 200 SERIES | Marantec Comfort 200 Series Operating Instructions | https://www.onlinegaragedoorspares.com/wp-content/uploads/marantec-200-series-manual.pdf
+Marantec | COMFORT 220 | Marantec Comfort 220 Operating Instructions | https://archive.org/details/manualzilla-id-7325430
 Marantec | Comfort 220.2 | Comfort 220.2, 250.2, 252.2, 250.2 speed - Operator System for Garage Doors | https://www.thegaragedoorcentre.co.uk/userfiles/downloads/Marantec%20Comfort.pdf
 Marantec | Comfort 250 | Comfort 250 Manuals | https://marantec.manymanuals.com/garage-door-opener/comfort-250
+Marantec | COMFORT 250 | Marantec Comfort 250 Operating Instructions | https://archive.org/details/manualzilla-id-7343531
 Marantec | Comfort 260 | Comfort 260 / 270 / 280 Operating Instructions (EN) | https://www.marantec.com/files/eba_sap/A/100316.pdf
 Marantec | COMFORT 260 | Marantec Comfort 260 Owner's Manual | https://marantec.manymanuals.com/garage-door-opener/comfort-260/owners-manual-26186
+Marantec | COMFORT 260 / 270 / 280 | Marantec Comfort 260, 270, 280 Operator Systems for Garage Doors Operating Instructions (100316) | https://www.marantec.com/files/eba_download.php?file=100316.pdf&vrsn=D
 Marantec | Comfort 270 | Comfort 260 / 270 / 280 Operating Instructions (EN) | https://www.marantec.com/files/eba_download.php?file=100316.pdf&vrsn=E
 Marantec | Comfort 360 | Operator Systems for Garage Doors Comfort 360, 370, 380 (#101258, version D) | https://www.marantec.com/files/eba_download.php?file=101258.pdf&vrsn=D
 Marantec | COMFORT 360 / 370 / 380 | Marantec Comfort 360, 370, 380 Operator Systems for Garage Doors Manual | https://ismartgate.com/manuals/Marantec_Comfort_360_manual.pdf
@@ -1017,8 +1037,11 @@ Normstahl | MAGIC 1000 | Normstahl Magic 1000 User Manual | https://www.manualsl
 North Central Door | Residential Doors | North Central Door Installation Instructions Index | https://www.northcentraldoor.com/support/installation-instructions/
 Novoferm | Garage Doors | Novoferm Installation and Assembly Instructions Index | https://www.novoferm.com/downloads/installation-assembly-instructions
 Novoferm | Novogate | Novoferm Tormatic Novogate Manual | https://www.manualslib.com/manual/2108896/Novoferm-Tormatic-Novogate.html
+Novoferm | NOVOMATIC | Novoferm Programming Novomatic Operators Guide (Cardale) | https://cardale.com/wp-content/uploads/Programming-Novomatic-Operators-Cardale.pdf
 Novoferm | Novomatic 403 | Novoferm Novomatic 403 Installation, Operating and Maintenance Instructions | https://manualzz.com/doc/en/4593471/novoferm-novomatic-403-installation--operating-and-mainte
 Novoferm | NOVOMATIC 443 | Novoferm Novomatic 443 Original Assembly and Operating Instructions (N-443) | https://www.novoferm.co.uk/fileadmin/novoferm_uk/Bilder/Brochures/Novomatic-443.pdf
+Novoferm | NOVOMATIC 553 | Novoferm Novomatic 553 Installation and Operating Instructions Manual | https://www.manualslib.com/manual/1223351/Novoferm-Novomatic-553.html
+Novoferm | NOVOMATIC 553 | Novoferm Novomatic 553 Installation, Operating and Maintenance Instructions | https://ismartgate.com/manuals/Novoferm_Novomatic_553_manual.pdf
 Novoferm | NOVOPORT III | Novoferm NovoPort III Garage Door Opener Manuals | https://www.manualslib.com/products/Novoferm-Novoport-Iii-10647128.html
 Novoferm | Novoport III | Novoferm Novoport III Manual | https://www.manualslib.com/manual/1669550/Novoferm-Novoport-Iii.html
 Novoferm | Novoport IV | Novoferm NovoPort IV Manual | https://www.manualslib.com/manual/1780013/Novoferm-Novoport-Iv.html
@@ -1090,7 +1113,9 @@ Ramset | DC100 | Ramset DC100 / DC1000 / DC5500 Automatic Gate Systems Manual | 
 Ramset | Gate Operators | Ramset Instruction Manuals Index | https://ramsetstore.com/store/resources/instruction-manuals.html
 Ramset | RAM 100 | Ramset RAM 100 / 1000 / 5500 Instruction Manual | https://ramsetstore.com/store/pdfs/ramset-ram-100-manual.pdf
 Ramset | RAM 100 | Ramset RAM 100 Instruction Manual | https://www.manualslib.com/manual/832948/Ramset-Ram-100.html
+Ramset | RAM 100 / 1000 / 5500 | Ramset RAM 100, 1000, 5500 Gate Opener Manual | http://www.gatesnfences.com/files/RamSet_Gate_Openers_PDF_File/RamSet_Gate_Opener_Manual_100_1000_5500_Manual.pdf
 Ramset | RAM 300 | Ramset RAM 300 Manual | http://ramsetgateopeners.com/manuals/ram300-manual.pdf
+Ramset | RAM 1000 | Ramset RAM 1000 Slide Gate Operator Manual | https://device.report/manuals/ramset-ram-1000-slide-gate-operator-manual
 Ramset | RAM 2000 | Ramset RAM 2000 Instruction Manual - For Class II, III, IV Vehicular Gate Operators | https://ramsetstore.com/store/pdfs/ramset-ram-2000-manual.pdf
 Ramset | RAM-30 UL | Ramset RAM-30 UL Instruction Manual - For Class I Vehicular Gate Operators | https://ramsetstore.com/store/pdfs/ramset-ram-30-manual.pdf
 Ramset | RAM-30 UL | Ramset RAM-30 UL Instruction Manual for Class I Vehicular Gate Operators | https://ismartgate.com/manuals/Ramset_RAM-30UL_manual.pdf
@@ -1226,8 +1251,13 @@ Somfy | SONESSE 30 / 40 | Somfy Sonesse Internal Roller Blind Motorisation Speci
 Somfy | SONESSE 30 Wirefree | Somfy Australia Programming Guide (Sonesse 30 Wirefree) | https://hartmannforbes.com/sites/default/files/20077-AU-Somfy-programming-guide.pdf
 Somfy | Sonesse 50 RS485 | Sonesse 50 RS485 / LT50 RS485 Installation Guide (EN), Ref. 5106220A | https://mysunglow.com/wp-content/uploads/resources/product_info/instructions/programming/somfy/sonesse_50_rs485_inst.pdf
 SOMMER | 2060 evo+ | 2060 evo+ / 2080 Garage Door Opener Manual, Rev C (US-EN) | https://www.sommer.eu/SOMMER/Downloads/Montageanleitung/Garagentorantriebe/USA/evo/usa_evo-plus_46900V024_122022_0-DRE_Rev-C_US-EN.pdf
+SOMMER | DUO VISION 500 | Sommer Duo Vision 500 Manual | https://archive.org/details/manualzilla-id-6777395
+SOMMER | DUO VISION 500 / 650 / 800 | Sommer Duo Vision 500, 650, 800 and Duo Rapido 650 Installation Manual (FR) | https://www.segedip.com/catalogue/sommer/pdf/NOTICE%20DE%20POSE%20SOMMER%20DUO%20VISION%20500%20650%20800.compressed.pdf
+SOMMER | DUO VISION 500 / 650 / 800 | Sommer Duo Vision 500, 650, 800 Installation and Operating Manual (DE) | https://feldmann-garagentore.de/application/files/7714/3575/5344/feldmann-motor-duo-vision-500-650-800-montage-betriebs-anleitung.pdf
 SOMMER | DUO VISION 500 / 650 / 800 | Sommer Duo Vision 500, 650, 800 Manual | https://arridgegaragedoors.co.uk/uploads/pdfs/Sommer%20Duo%20500%20650%20800.pdf
 SOMMER | duo vision 650 | duo vision 500, 650, 800 and duo rapido 650 Assembly Instructions (EN) | https://www.sommer.eu/SOMMER/Downloads/Montageanleitung/Archiv/Garagentorantriebe/duo%20vision%20-%20duo%20rapido/duo-vision-rapido-EN.pdf
+SOMMER | DUO VISION 650 | Sommer Duo Vision 650 Garage Door Opener Manuals | https://all-guidesbox.com/model/sommer/duo-vision-650.html
+SOMMER | DUO VISION 650 | Sommer Duo Vision 650 Manual | https://www.libble.eu/sommer-duo-vision-650/online-manual-844984/
 SOMMER | Garage Door Openers | Sommer Garage Door Opener Manuals and Programming Instructions Index | https://shopactiondirect.com/sommer-product-manuals/
 SOMMER | Garage Door Openers | Sommer Manuals and Brochures Index | https://canada-sommer.com/Manuals-Brochures_ep_43.html
 SOMMER | MARATHON SPRINT DUO | Sommer Marathon Sprint Duo Garage Door Opener Manual | https://archive.org/details/sommer-marathon-sprint-duo-garage-door-opener
@@ -1256,12 +1286,20 @@ Steel-Craft | Residential Double Wide | Steel-Craft Residential Double Wide Gara
 Steel-Craft | Residential Single Wide | Steel-Craft Residential Single Wide Garage Door Installation Instructions | https://steel-craft.ca/manuals/InstallationSingleWide.pdf
 Steel-Craft | THERMODOR | Steel-Craft Thermodor Installation Instructions and Maintenance Manual | https://steel-craft.ca/manuals/InstallationThermodor.pdf
 Steel-Line | Garage Door Openers | Steel-Line Automation Garage Door Opener Pro Control System Instructions and User Guide | https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/garage_door_opener_pro_control_system_instructions_and_user_guide.pdf
+Steel-Line | Garage Door Openers | Steel-Line Automation Technical Support Index | https://www.steel-lineautomation.com.au/technical-support.html
 Steel-Line | OL4 | Steel-Line Model OL4 Residential Garage Door Opener Manual (L4110B-4) | https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/steel-line_ol4_manual_l4110b-4_170906_v1.pdf
 Steel-Line | OL6.5 | Steel-Line OL6.5 Sectional Garage Door Opener Installation Instructions and Owner's Manual | https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/ol6.5_sectional_garage_door_opener_-_users_manual.pdf
 Steel-Line | RD800 | Steel-Line RD800 Roller Door Opener Installation and Operating Instructions | https://motepro.com.au/Manuals/SteelLine/Rolling/RD800.pdf
+Steel-Line | RD1000 STD / RD1000 PRO | Steel-Line RD1000 Std and Pro Opener Installation Instructions and User Guide | https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/rd1000_std_rd1000_pro_installation_instructions_and_user_guide.pdf
+Steel-Line | RD1200 | Steel-Line RD1200 Door Opener User Manual | https://manuals.plus/steel-line/rd1200-door-opener-manual
+Steel-Line | RD1200 | Steel-Line RD1200 Roller Door Opener Installation and Operating Instructions (V2.05/20) | https://motepro.com.au/Manuals/SteelLine/Rolling/RD1200.pdf
+Steel-Line | RD1200 | Steel-Line RD1200 Roller Door Opener Installation Manual (V1.12/19) | https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/installation_manual_rd1200-v1-1219.pdf
 Steel-Line | Roller Door | Steel-Line Roller Door Homeowner's Manual | https://www.steel-line.com.au/downloads/technical-support/roller_door_owners_manual.pdf
 Steel-Line | SD800 | SD800 Sectional Garage Door Opener Installation and Operating Instructions | https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/installation_manual_sd800-v8-0820.pdf
 Steel-Line | SD800 | SD800 Sectional Garage Door Opener Installation and Operating Instructions (V6 05/19) | https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/installation_manual_sd800-v6-0519.pdf
+Steel-Line | SD1000 PRO | Steel-Line SD1000 Pro Opener Control System Instructions and User Guide | https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/sd1000_pro_installation_instructions_and_user_guide.pdf
+Steel-Line | SD1000 STD | Steel-Line SD1000 Std Installation Instructions and User Guide | https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/sd1000_std_installation_instructions_and_user_guide.pdf
+Steel-Line | SD1200 | Steel-Line SD1200 Sectional Garage Door Opener Installation Manual (V1 07/19) | https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/installation_manual_sd1200-v1__0719_.pdf
 Steel-Line | Sectional Door | Steel-Line Sectional Garage Door Homeowner's Manual | https://www.steel-line.com.au/downloads/technical-support/sectional_garage_door_owners_manual.pdf
 Superlift | Garage Door Openers | Superlift Help and Manuals Index | https://www.superliftgdo.com.au/help-manuals/
 Superlift | Garage Door Openers | Superlift Manuals Download Files Index | https://www.superliftgdo.com.au/help-manuals/download-files/
@@ -1297,8 +1335,14 @@ Taurean Door Systems | Series A Roller Door | Taurean Series A Roller Door Insta
 Taurean Door Systems | Series AA Roller Door | Taurean Series AA Roller Door Installation Instructions | https://www.stramit.com.au/assets/Taurean-Brochures/1a6d04d8a1/Taurean-Roller-Door-AA-Series-Installation-Instructions.pdf
 Taurean Door Systems | Series B Roller Door | Taurean Series B Roller Door Installation Instructions | https://www.stramit.com.au/assets/Taurean-Brochures/ef99ca2738/Taurean-Roller-Door-B-Series-Installation-Instructions.pdf
 Taurean Door Systems | Series B Roller Door | Taurean Series B Roller Door Installation Instructions (2016-05-05) | https://www.taureands.com.au/wp-content/uploads/2016/10/RD-B-Installation-Instructions-2016-05-05.pdf
+Teckentrup | CARTECK | Teckentrup CarTeck Installation, Operating and Maintenance Instructions | https://www.manualslib.com/manual/2241438/Teckentrup-Carteck.html
+Teckentrup | CARTECK 12.1 | Teckentrup CarTeck 12.1 Installation and Operating Instructions Manual | https://www.manualslib.com/manual/2122950/Teckentrup-Carteck-12-1.html
+Teckentrup | CARTECK 20.1 | Teckentrup CarTeck 20.1 Installation and Operating Instructions Manual | https://www.manualslib.com/manual/2413496/Teckentrup-Carteck-20-1.html
+Teckentrup | CARTECK 40.1 | Teckentrup CarTeck 40.1 Installation and Operating Instructions Manual | https://www.manualslib.com/manual/1132472/Teckentrup-Carteck-40-1.html
+Teckentrup | CARTECK DRIVE 500 PRO / 600 PRO | Teckentrup CarTeck Drive Pro 500/600 Fitting Instructions | https://www.teckentrup.co.uk/assets/content/images/CarTeck-Drive-Pro-500-600-Fitting-Instructions.pdf
 Teckentrup | CARTECK SECTIONAL | Teckentrup CarTeck Sectional Garage Door Fitting Instructions | https://www.teckentrup.co.uk/assets/content/images/Teckentrup-CarTeck-Sectional-Garage-Door-Fitting-Instructions.pdf
 Teckentrup | Doors | Teckentrup Downloadcenter Index | https://www.teckentrup.biz/en/downloadcenter
+Teckentrup | Doors and Operators | Teckentrup Downloads Index | https://www.teckentrup.co.uk/downloads
 Teckentrup | Folding Door | Industrial Folding Doors with Drive Installation Instructions | https://www.teckentrup.co.uk/assets/content/images/Folding-Door-With-Drive-Installation-Instructions.pdf
 Teckentrup | Industrial Sectional | Industrial Sectional Doors Installation, Operating and Maintenance Instructions | https://www.teckentrup.co.uk/assets/content/images/installation-instructions_ind-sect-doors.pdf
 Teckentrup | Roller Shutters | Teckentrup Roller Shutters Installation, Operating and Maintenance Instructions | https://www.teckentrup.co.uk/assets/content/images/installation-instructions_rollers-shutters.pdf
@@ -1394,10 +1438,13 @@ Wayne Dalton | IDRIVE 3982 | Wayne-Dalton iDrive 3982 User Manual | https://arch
 Wayne Dalton | IDRIVE PRO 3790 | Wayne-Dalton iDrive Pro 3790 User Manual | https://archive.org/details/manualsbase-id-161739
 Wayne Dalton | MODEL 926 | Wayne-Dalton Model 926 Medium Duty Rolling Steel Service Door Manual | https://www.etodoors.com/uploads/Image/Waynedalton/926Series.pdf
 Wiśniowski | AWSO2018 | Wisniowski AWso2018 Garage Door Opener Manuals | https://www.manualslib.com/products/Wisniowski-Awso2018-10579993.html
+Wiśniowski | Garage Door Openers | Wiśniowski Garage Door Opener Manuals Index | https://www.manualslib.com/brand/wisniowski/garage-door-opener.html
+Wiśniowski | Garage Doors and Operators | Wiśniowski Product Manuals Index (STER-TRONIC) | https://ster-tronic.pl/en/wisniowski-product-manuals/
 Wiśniowski | GATE | WIŚNIOWSKI GATE Two-Channel Gate Controller Installation and Configuration Guide | https://obchod.wisniowski.eu/img/products_files/WISNIOWSKI_GATE-installation_and_configuration_guide.pdf
 Wiśniowski | INTRO 600 | Wisniowski Intro 600 Assembly and Operating Instructions Manual | https://www.manualslib.com/manual/1518405/Wisniowski-Intro-600.html
 Wiśniowski | INTRO 1000 | Wisniowski Intro 1000 Garage Door Opener Manuals | https://www.manualslib.com/products/Wisniowski-Intro-1000-10277732.html
 Wiśniowski | MAKROPRO 100 | Wisniowski MakroPro 100 Operating and Installation Instructions | https://www.manualslib.com/manual/899251/Wisniowski-Makropro-100.html
+Wiśniowski | METRO 800 io / METRO 1000 io | Somfy Wiśniowski Metro 800 io Installation Manual | https://www.manualslib.com/manual/2883442/Somfy-Wisniowski-Metro-800-Io.html
 Wiśniowski | MIDO 600 | Wisniowski Mido 600 Assembly and Operating Instructions Manual | https://www.manualslib.com/manual/1030638/Wisniowski-Mido-600.html
 Wiśniowski | Sectional garage door | Instrukcja obsługi i konserwacji - brama garażowa segmentowa (Operating and Maintenance Manual, sectional garage door) | https://sklep.wisniowski.pl/img/products_certificates/garage-door/Instrukcja-obs%C5%82ugi-i-konserwacji-brama-garazowa-segmentowa.pdf
 Wiśniowski | UNIPRO | Wiśniowski UNIPRO Operating and Maintenance Manual | https://www.manualslib.com/manual/2358464/Wisniowski-Unipro.html

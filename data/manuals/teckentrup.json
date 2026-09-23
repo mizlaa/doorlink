@@ -9,6 +9,111 @@
   },
   "models": [
     {
+      "modelCode": "CARTECK",
+      "name": "Teckentrup CARTECK",
+      "category": "industrial-high-speed-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Teckentrup CarTeck Installation, Operating and Maintenance Instructions",
+          "sourceUrl": "https://www.manualslib.com/manual/2241438/Teckentrup-Carteck.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Teckentrup CarTeck Installation, Operating and Maintenance Instructions\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CARTECK 12.1",
+      "name": "Teckentrup CARTECK 12.1",
+      "category": "industrial-high-speed-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Teckentrup CarTeck 12.1 Installation and Operating Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2122950/Teckentrup-Carteck-12-1.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Teckentrup CarTeck 12.1 Installation and Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CARTECK 20.1",
+      "name": "Teckentrup CARTECK 20.1",
+      "category": "industrial-high-speed-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Teckentrup CarTeck 20.1 Installation and Operating Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2413496/Teckentrup-Carteck-20-1.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Teckentrup CarTeck 20.1 Installation and Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CARTECK 40.1",
+      "name": "Teckentrup CARTECK 40.1",
+      "category": "industrial-high-speed-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Teckentrup CarTeck 40.1 Installation and Operating Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1132472/Teckentrup-Carteck-40-1.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Teckentrup CarTeck 40.1 Installation and Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "CARTECK DRIVE 500 PRO / 600 PRO",
+      "name": "Teckentrup CARTECK DRIVE 500 PRO / 600 PRO",
+      "category": "industrial-high-speed-doors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Teckentrup CarTeck Drive Pro 500/600 Fitting Instructions",
+          "sourceUrl": "https://www.teckentrup.co.uk/assets/content/images/CarTeck-Drive-Pro-500-600-Fitting-Instructions.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "teckentrup.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Teckentrup CarTeck Drive Pro 500/600 Fitting Instructions\" (host: www.teckentrup.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "CARTECK SECTIONAL",
       "name": "Teckentrup CARTECK SECTIONAL",
       "category": "garage-door-openers",
@@ -46,6 +151,27 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Teckentrup Downloadcenter Index\" (host: www.teckentrup.biz). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Doors and Operators",
+      "name": "Teckentrup Doors and Operators",
+      "category": "industrial-high-speed-doors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Teckentrup Downloads Index",
+          "sourceUrl": "https://www.teckentrup.co.uk/downloads",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "teckentrup.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Teckentrup Downloads Index\" (host: www.teckentrup.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

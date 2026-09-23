@@ -26,6 +26,18 @@
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Steel-Line Automation Garage Door Opener Pro Control System Instructions and User Guide\" (host: www.steel-lineautomation.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Steel-Line Automation Technical Support Index",
+          "sourceUrl": "https://www.steel-lineautomation.com.au/technical-support.html",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "steel-lineautomation.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Steel-Line Automation Technical Support Index\" (host: www.steel-lineautomation.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -72,6 +84,72 @@
       ]
     },
     {
+      "modelCode": "RD1000 STD / RD1000 PRO",
+      "name": "Steel-Line RD1000 STD / RD1000 PRO",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Steel-Line RD1000 Std and Pro Opener Installation Instructions and User Guide",
+          "sourceUrl": "https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/rd1000_std_rd1000_pro_installation_instructions_and_user_guide.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "steel-lineautomation.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Steel-Line RD1000 Std and Pro Opener Installation Instructions and User Guide\" (host: www.steel-lineautomation.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RD1200",
+      "name": "Steel-Line RD1200",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Steel-Line RD1200 Door Opener User Manual",
+          "sourceUrl": "https://manuals.plus/steel-line/rd1200-door-opener-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Steel-Line RD1200 Door Opener User Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Steel-Line RD1200 Roller Door Opener Installation and Operating Instructions (V2.05/20)",
+          "sourceUrl": "https://motepro.com.au/Manuals/SteelLine/Rolling/RD1200.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "motepro.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Steel-Line RD1200 Roller Door Opener Installation and Operating Instructions (V2.05/20)\" (host: motepro.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Steel-Line RD1200 Roller Door Opener Installation Manual (V1.12/19)",
+          "sourceUrl": "https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/installation_manual_rd1200-v1-1219.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "steel-lineautomation.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Steel-Line RD1200 Roller Door Opener Installation Manual (V1.12/19)\" (host: www.steel-lineautomation.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "RD800",
       "name": "Steel-Line RD800",
       "category": "garage-door-openers",
@@ -109,6 +187,69 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Steel-Line Roller Door Homeowner's Manual\" (host: www.steel-line.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SD1000 PRO",
+      "name": "Steel-Line SD1000 PRO",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Steel-Line SD1000 Pro Opener Control System Instructions and User Guide",
+          "sourceUrl": "https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/sd1000_pro_installation_instructions_and_user_guide.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "steel-lineautomation.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Steel-Line SD1000 Pro Opener Control System Instructions and User Guide\" (host: www.steel-lineautomation.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SD1000 STD",
+      "name": "Steel-Line SD1000 STD",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Steel-Line SD1000 Std Installation Instructions and User Guide",
+          "sourceUrl": "https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/sd1000_std_installation_instructions_and_user_guide.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "steel-lineautomation.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Steel-Line SD1000 Std Installation Instructions and User Guide\" (host: www.steel-lineautomation.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SD1200",
+      "name": "Steel-Line SD1200",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Steel-Line SD1200 Sectional Garage Door Opener Installation Manual (V1 07/19)",
+          "sourceUrl": "https://www.steel-lineautomation.com.au/uploads/7/2/0/3/7203835/installation_manual_sd1200-v1__0719_.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "steel-lineautomation.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Steel-Line SD1200 Sectional Garage Door Opener Installation Manual (V1 07/19)\" (host: www.steel-lineautomation.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

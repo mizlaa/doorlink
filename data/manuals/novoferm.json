@@ -53,6 +53,27 @@
       ]
     },
     {
+      "modelCode": "NOVOMATIC",
+      "name": "Novoferm NOVOMATIC",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "PROGRAMMING_GUIDE",
+          "title": "Novoferm Programming Novomatic Operators Guide (Cardale)",
+          "sourceUrl": "https://cardale.com/wp-content/uploads/Programming-Novomatic-Operators-Cardale.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cardale.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Novoferm Programming Novomatic Operators Guide (Cardale)\" (host: cardale.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "Novomatic 403",
       "name": "Novoferm Novomatic 403 Operator",
       "category": "garage-door-openers",
@@ -92,6 +113,39 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Novoferm Novomatic 443 Original Assembly and Operating Instructions (N-443)\" (host: www.novoferm.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NOVOMATIC 553",
+      "name": "Novoferm NOVOMATIC 553",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Novoferm Novomatic 553 Installation and Operating Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1223351/Novoferm-Novomatic-553.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Novoferm Novomatic 553 Installation and Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Novoferm Novomatic 553 Installation, Operating and Maintenance Instructions",
+          "sourceUrl": "https://ismartgate.com/manuals/Novoferm_Novomatic_553_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ismartgate.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Novoferm Novomatic 553 Installation, Operating and Maintenance Instructions\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

@@ -30,6 +30,48 @@
       ]
     },
     {
+      "modelCode": "Garage Door Openers",
+      "name": "Wiśniowski Garage Door Openers",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Wiśniowski Garage Door Opener Manuals Index",
+          "sourceUrl": "https://www.manualslib.com/brand/wisniowski/garage-door-opener.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Wiśniowski Garage Door Opener Manuals Index\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Garage Doors and Operators",
+      "name": "Wiśniowski Garage Doors and Operators",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Wiśniowski Product Manuals Index (STER-TRONIC)",
+          "sourceUrl": "https://ster-tronic.pl/en/wisniowski-product-manuals/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ster-tronic.pl",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Wiśniowski Product Manuals Index (STER-TRONIC)\" (host: ster-tronic.pl). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "GATE",
       "name": "Wiśniowski GATE Two-Channel Gate Controller",
       "category": "remotes-accessories",
@@ -111,6 +153,27 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Wisniowski MakroPro 100 Operating and Installation Instructions\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "METRO 800 io / METRO 1000 io",
+      "name": "Wiśniowski METRO 800 io / METRO 1000 io",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Somfy Wiśniowski Metro 800 io Installation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2883442/Somfy-Wisniowski-Metro-800-Io.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Somfy Wiśniowski Metro 800 io Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

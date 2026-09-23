@@ -9,6 +9,69 @@
   },
   "models": [
     {
+      "modelCode": "COMFORT",
+      "name": "Marantec COMFORT",
+      "category": "garage-door-openers",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Marantec Comfort Manual (EasyGates)",
+          "sourceUrl": "https://manuals.easygates.co.uk/marantec-comfort-manual/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.easygates.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Marantec Comfort Manual (EasyGates)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "COMFORT 200 SERIES",
+      "name": "Marantec COMFORT 200 SERIES",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Marantec Comfort 200 Series Operating Instructions",
+          "sourceUrl": "https://www.onlinegaragedoorspares.com/wp-content/uploads/marantec-200-series-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "onlinegaragedoorspares.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Marantec Comfort 200 Series Operating Instructions\" (host: www.onlinegaragedoorspares.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "COMFORT 220",
+      "name": "Marantec COMFORT 220",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Marantec Comfort 220 Operating Instructions",
+          "sourceUrl": "https://archive.org/details/manualzilla-id-7325430",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "archive.org",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Marantec Comfort 220 Operating Instructions\" (host: archive.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "Comfort 220.2",
       "name": "Marantec Comfort 220.2 / 250.2 / 252.2 / 250.2 speed Garage Door Operator",
       "category": "garage-door-openers",
@@ -50,6 +113,18 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Aggregator index for this model. The 100316 document does not cover the 250, so it was not attributed here. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Marantec Comfort 250 Operating Instructions",
+          "sourceUrl": "https://archive.org/details/manualzilla-id-7343531",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "archive.org",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Marantec Comfort 250 Operating Instructions\" (host: archive.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -94,6 +169,27 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Marantec Comfort 260 Owner's Manual\" (host: marantec.manymanuals.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "COMFORT 260 / 270 / 280",
+      "name": "Marantec COMFORT 260 / 270 / 280",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Marantec Comfort 260, 270, 280 Operator Systems for Garage Doors Operating Instructions (100316)",
+          "sourceUrl": "https://www.marantec.com/files/eba_download.php?file=100316.pdf&vrsn=D",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "marantec.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Marantec Comfort 260, 270, 280 Operator Systems for Garage Doors Operating Instructions (100316)\" (host: www.marantec.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

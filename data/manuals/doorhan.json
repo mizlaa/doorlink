@@ -144,6 +144,18 @@
               "label": "Guidesimo copy"
             }
           ]
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "DoorHan Shaft-30 Garage Door Opener Installation Manual",
+          "sourceUrl": "https://guidesimo.com/document/1097690/doorhan-shaft-30-installation-manual-8.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "guidesimo.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DoorHan Shaft-30 Garage Door Opener Installation Manual\" (host: guidesimo.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -179,6 +191,51 @@
               "label": "Second ManualsLib listing, titled installation and operating manual; edition difference unknown"
             }
           ]
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "DoorHan Sliding-1300 Installation and Operating Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/953744/Doorhan-Sliding-1300.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DoorHan Sliding-1300 Installation and Operating Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "DoorHan Sliding-1300 Installation and Operation Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1267875/Doorhan-Sliding-1300.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DoorHan Sliding-1300 Installation and Operation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SLIDING-1300 / 2100",
+      "name": "DoorHan SLIDING-1300 / 2100",
+      "category": "garage-door-openers",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "DoorHan Drive Sliding-1300/2100 Installation and Operation Manual",
+          "sourceUrl": "https://motepro.com.au/Manuals/DoorHan/Gate/SLIDING_1300-2100.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "motepro.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DoorHan Drive Sliding-1300/2100 Installation and Operation Manual\" (host: motepro.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
