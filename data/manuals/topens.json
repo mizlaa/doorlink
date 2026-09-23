@@ -2,7 +2,9 @@
   "manufacturer": {
     "name": "TOPENS",
     "slug": "topens",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "CN",
+    "website": "https://www.topens.com/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
@@ -100,7 +102,7 @@
           "kind": "TECHNICAL_DOCUMENT",
           "title": "TOPENS Gate Opener and Accessory User Manual Index",
           "sourceUrl": "https://topens.com/pages/user-manual",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "topens.com",
           "region": "UNKNOWN",
           "rights": "LINK_ONLY",

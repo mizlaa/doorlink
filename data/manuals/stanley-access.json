@@ -9,6 +9,69 @@
   },
   "models": [
     {
+      "modelCode": "DURA-GLIDE 2000",
+      "name": "Stanley Access Technologies DURA-GLIDE 2000",
+      "category": "automatic-pedestrian-doors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Stanley Dura-Glide 2000 Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Stanley-Dura-Glide-2000-10632767.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Stanley Dura-Glide 2000 Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DURA-GLIDE 2000 / 3000",
+      "name": "Stanley Access Technologies DURA-GLIDE 2000 / 3000",
+      "category": "automatic-pedestrian-doors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Stanley Dura-Glide 2000 / 3000 Installation Instructions",
+          "sourceUrl": "https://s3.amazonaws.com/s3-absupply-net/pdf/stanley_dura_glide_2000-3000_installation_instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "s3.amazonaws.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Stanley Dura-Glide 2000 / 3000 Installation Instructions\" (host: s3.amazonaws.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DURA-GLIDE 2000 / 3000 / 5200 / 5300",
+      "name": "Stanley Access Technologies DURA-GLIDE 2000 / 3000 / 5200 / 5300",
+      "category": "automatic-pedestrian-doors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "QUICK_START",
+          "title": "Alarm Contacts for Dura-Glide 2000, 3000, 5200 and 5300 Door Systems Quick Reference Guide (2008)",
+          "sourceUrl": "https://s3.amazonaws.com/s3-absupply-net/pdf/stanley-access_technologies_quick_reference_guide_2008.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "s3.amazonaws.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Alarm Contacts for Dura-Glide 2000, 3000, 5200 and 5300 Door Systems Quick Reference Guide (2008)\" (host: s3.amazonaws.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "DURA-GLIDE 2000AG",
       "name": "Stanley Access Technologies DURA-GLIDE 2000AG",
       "category": "automatic-pedestrian-doors",
@@ -25,6 +88,18 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Stanley Dura-Glide 2000AG All-Glass Sliding Door Installation Instructions\" (host: www.addisonautomatics.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "QUICK_START",
+          "title": "Stanley Dura-Glide 2000AG Series Installation Instructions, Quick Reference Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1662646/Stanley-Dura-Glide-2000ag-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Stanley Dura-Glide 2000AG Series Installation Instructions, Quick Reference Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

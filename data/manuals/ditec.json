@@ -63,6 +63,87 @@
           "documentCode": "IP2325EN",
           "evidence": "On ditecautomations.com, in the QR-code asset tree - the copy a label on the door links to. Document code IP2325EN read from the file name. Covers the DAS200 and KS200 together, so KS200 is recorded as an alias rather than as a separate model with a copied manual. Not fetched - egress blocked.",
           "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Ditec DAS200 / DAS200HD / DAS200RF / DAS200RG Sliding Doors Automation Technical Manual (ASSA ABLOY APAC)",
+          "sourceUrl": "https://www.assaabloy.com/apac-blueprint/en/images/product-assets/sea-markets/entrance-automation/automatic-pedestrian-door/sliding-doors/ditec-das200/assets/downloads/technical-manual/EN%20-%20Ditec%20DAS200%20technical%20manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "assaabloy.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ditec DAS200 / DAS200HD / DAS200RF / DAS200RG Sliding Doors Automation Technical Manual (ASSA ABLOY APAC)\" (host: www.assaabloy.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Ditec DAS200 / DAS200HD / DAS200RF / DAS200RG Sliding Doors Automation Technical Manual (Ditec Pro BE)",
+          "sourceUrl": "https://www.ditecpro.be/data/document/354/1606140730-DAS200-Techinsche-handleiding.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ditecpro.be",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ditec DAS200 / DAS200HD / DAS200RF / DAS200RG Sliding Doors Automation Technical Manual (Ditec Pro BE)\" (host: www.ditecpro.be). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Ditec DAS200 / KS200 Sliding Doors User Manual (IP2325EN, 2019-09-11)",
+          "sourceUrl": "https://www.assaabloy.com/apac-blueprint/en/images/product-assets/sea-markets/entrance-automation/automatic-pedestrian-door/sliding-doors/ditec-das200/assets/downloads/user-manual/EN%20-%20Ditec%20DAS200%20user%20manual.PDF",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "assaabloy.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ditec DAS200 / KS200 Sliding Doors User Manual (IP2325EN, 2019-09-11)\" (host: www.assaabloy.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Ditec DAS200 Assembly Handbook",
+          "sourceUrl": "https://www.manualslib.com/manual/2222947/Ditec-Das200.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ditec DAS200 Assembly Handbook\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Ditec DAS200 Technical Manual (EN)",
+          "sourceUrl": "https://www.ditecautomations.com/global/en/content-fragments/products/automatic-pedestrian-doors/sliding-doors/ditec-das200/assets/downloads/technical-manual/EN%20-%20Ditec%20DAS200%20technical%20manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "ditecautomations.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ditec DAS200 Technical Manual (EN)\" (host: www.ditecautomations.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "DAS200HD",
+      "name": "Ditec Entrematic DAS200HD",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Entrematic Ditec DAS200HD Technical Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1640612/Entrematic-Ditec-Das200hd.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Entrematic Ditec DAS200HD Technical Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -87,6 +168,18 @@
           "language": "en",
           "documentCode": "IP2348EN",
           "evidence": "On ditecautomations.com under the DAS200-redundant product path. Document code IP2348EN from the file name. The RF and RG variants share this manual and are recorded as aliases. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Ditec DAS200T / DAS200TRF / DAS200TRG Sliding Doors Automation Technical Manual",
+          "sourceUrl": "https://www.ditecautomations.com/global/tr/content-fragments/products/automatic-pedestrian-doors/sliding-doors/ditec-das200/assets/downloads/technical-manual/EN%20-%20Ditec%20DAS200T%20technical%20manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "ditecautomations.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Ditec DAS200T / DAS200TRF / DAS200TRG Sliding Doors Automation Technical Manual\" (host: www.ditecautomations.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

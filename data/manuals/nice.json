@@ -168,6 +168,48 @@
       ]
     },
     {
+      "modelCode": "ERA MAT T",
+      "name": "Nice ERA MAT T",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice Era Mat T Series Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Nice-Era-Mat-T-Series-10922993.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Era Mat T Series Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ERA MAT VS",
+      "name": "Nice ERA MAT VS",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Nice Era Mat VS Instructions and Warnings for Installation and Use",
+          "sourceUrl": "https://www.manualslib.com/manual/1745059/Nice-Era-Mat-Vs.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Era Mat VS Instructions and Warnings for Installation and Use\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "ERA ONE",
       "name": "Nice ERA ONE",
       "category": "remotes-accessories",
@@ -313,6 +355,27 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Nice Instruction Manuals Download Index\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate and Door Automation",
+      "name": "Nice Gate and Door Automation",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice Australia Instruction Manuals Download Index",
+          "sourceUrl": "https://www.niceforyou.com/au/download?v=7",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "niceforyou.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Australia Instruction Manuals Download Index\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

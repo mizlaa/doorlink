@@ -2,23 +2,25 @@
   "manufacturer": {
     "name": "Eagle Access Control",
     "slug": "eagle-access-control",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "US",
+    "website": "https://www.eagleoperators.com/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "1000 / 2000 SERIES",
       "name": "Eagle Access Control 1000 / 2000 SERIES",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
           "kind": "TECHNICAL_DOCUMENT",
           "title": "Eagle 1000 / 2000 Series Slide Gate Operator Manual",
           "sourceUrl": "https://eagleoperators.com/wp-content/uploads/2021/07/Eagle_1000_2000_Manual-1_compressed.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "eagleoperators.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Eagle 1000 / 2000 Series Slide Gate Operator Manual\" (host: eagleoperators.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -30,7 +32,7 @@
       "modelCode": "1000 SERIES",
       "name": "Eagle Access Control 1000 SERIES",
       "category": "remotes-accessories",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -39,7 +41,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/908878/Eagle-Access-Control-Systems-1000-Series.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Eagle Access Control Systems 1000 Series Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -51,7 +53,7 @@
       "modelCode": "EAGLE I",
       "name": "Eagle Access Control EAGLE I",
       "category": "remotes-accessories",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -60,7 +62,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1078200/Eagle-Access-Control-Systems-Eagle-I.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Eagle Access Control Systems Eagle I Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -70,9 +72,9 @@
           "kind": "INSTALL_MANUAL",
           "title": "Eagle I Slide Gate Operator Installation and Owners Manual (Rev A)",
           "sourceUrl": "https://eagleoperators.com/wp-content/uploads/2022/02/Eagle-1-Slide-Rev-A.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "eagleoperators.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Eagle I Slide Gate Operator Installation and Owners Manual (Rev A)\" (host: eagleoperators.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -84,16 +86,16 @@
       "modelCode": "EAGLE-100 SERIES",
       "name": "Eagle Access Control EAGLE-100 SERIES",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Eagle-100 Series Swing Gate Operators Installation and Owners Manual",
           "sourceUrl": "https://eagleoperators.com/wp-content/uploads/2022/02/Eagle-100-Installation-manual.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "eagleoperators.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Eagle-100 Series Swing Gate Operators Installation and Owners Manual\" (host: eagleoperators.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -105,7 +107,7 @@
       "modelCode": "EAGLE-E7",
       "name": "Eagle Access Control EAGLE-E7",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -114,7 +116,7 @@
           "sourceUrl": "https://ismartgate.com/manuals/Eagle_E7_manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "ismartgate.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Eagle-E7 Swing Gate Operator Manual\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -126,16 +128,16 @@
       "modelCode": "EAGLE-II",
       "name": "Eagle Access Control EAGLE-II",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Eagle-II Installation Manual",
           "sourceUrl": "https://eagleoperators.com/wp-content/uploads/2022/02/Eagle-II-English-Installation-Manual.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "eagleoperators.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Eagle-II Installation Manual\" (host: eagleoperators.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

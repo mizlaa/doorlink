@@ -2,14 +2,16 @@
   "manufacturer": {
     "name": "RIB",
     "slug": "rib",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "IT",
+    "website": "https://www.ribind.com/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "ECOPESI",
       "name": "RIB ECOPESI",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -18,7 +20,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/2613811/Ribind-Ecopesi.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"RIB Ecopesi Operating and Installation Instructions\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -30,16 +32,16 @@
       "modelCode": "Gate Automation",
       "name": "RIB Gate Automation",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
           "kind": "TECHNICAL_DOCUMENT",
           "title": "RIB Srl Download Documents Index",
           "sourceUrl": "https://www.ribind.com/en/download/",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "ribind.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"RIB Srl Download Documents Index\" (host: www.ribind.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -51,7 +53,7 @@
       "modelCode": "K800",
       "name": "RIB K800",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -60,7 +62,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1912161/Rib-K800.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"RIB K800 Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -72,7 +74,7 @@
       "modelCode": "KING / KING L",
       "name": "RIB KING / KING L",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -81,7 +83,7 @@
           "sourceUrl": "https://manualzz.com/doc/8232891/rib-king-manual",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualzz.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"RIB King and King L Gate Opener User Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

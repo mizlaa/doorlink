@@ -2,14 +2,15 @@
   "manufacturer": {
     "name": "Telcoma",
     "slug": "telcoma",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "IT",
+    "note": "Added by ingest-list from research findings. Country filled in afterwards. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "ACE",
       "name": "Telcoma ACE",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -18,7 +19,7 @@
           "sourceUrl": "https://manualzz.com/doc/en/59007679/telcoma-ace-instruction-handbook-manual",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualzz.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Telcoma Ace Gearmotor Instruction Handbook Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -30,7 +31,7 @@
       "modelCode": "CLASSIC",
       "name": "Telcoma CLASSIC",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -39,7 +40,7 @@
           "sourceUrl": "https://all-guidesbox.com/model/telcoma/classic.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "all-guidesbox.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Telcoma Classic Manual\" (host: all-guidesbox.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -51,7 +52,7 @@
       "modelCode": "Gate Automation",
       "name": "Telcoma Gate Automation",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -60,7 +61,7 @@
           "sourceUrl": "https://www.manualslib.com/brand/telcoma-automations/",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Telcoma Automations Manuals Index\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -93,7 +94,7 @@
       "modelCode": "T10 FM400",
       "name": "Telcoma T10 FM400",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -102,7 +103,7 @@
           "sourceUrl": "https://www.manualslib.com/products/Telcoma-Automations-T10-Fm400-11568683.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Telcoma Automations T10 FM400 Control Unit Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

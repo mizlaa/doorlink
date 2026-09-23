@@ -2,14 +2,15 @@
   "manufacturer": {
     "name": "Craftsman",
     "slug": "craftsman",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "US",
+    "note": "Added by ingest-list from research findings. Country filled in afterwards. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "139.18458D",
       "name": "Craftsman 139.18458D",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -18,7 +19,7 @@
           "sourceUrl": "https://ismartgate.com/manuals/Craftsman_13918458D_manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "ismartgate.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Craftsman 139.18458D Garage Door Opener Manual\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -30,7 +31,7 @@
       "modelCode": "139.18987",
       "name": "Craftsman 139.18987",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -39,7 +40,7 @@
           "sourceUrl": "https://craftsman.manymanuals.com/garage-door-opener/139-18987/owners-manual-42720",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "craftsman.manymanuals.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Craftsman 139.18987 Owner's Manual\" (host: craftsman.manymanuals.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -51,7 +52,7 @@
       "modelCode": "139.3043",
       "name": "Craftsman 139.3043",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -60,7 +61,7 @@
           "sourceUrl": "https://archive.org/details/manualsonline-id-9c7b39a0-e6a5-41a9-81d0-c4c4c657376b",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "archive.org",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Craftsman Garage Door Opener 139.3043 User Guide (Internet Archive)\" (host: archive.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -72,7 +73,7 @@
       "modelCode": "139.53985DM",
       "name": "Craftsman 139.53985DM",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -81,7 +82,7 @@
           "sourceUrl": "https://manuals.plus/wp-content/sideloads/cragtsman-craftsman-garage-door-opener-owner-s-manual-optimized.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manuals.plus",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Craftsman Garage Door Opener Owner's Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -93,7 +94,7 @@
       "modelCode": "139.5399",
       "name": "Craftsman 139.5399",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -102,7 +103,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/32293/Craftsman-139-5399.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Craftsman 139.5399 3/4 HP Garage Door Opener Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -114,7 +115,7 @@
       "modelCode": "139.53990",
       "name": "Craftsman 139.53990",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -123,7 +124,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/497273/Craftsman-139-53990.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Craftsman 139.53990 Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -135,7 +136,7 @@
           "sourceUrl": "https://manuals.plus/m/db2c1ab8c3d928395d601cde739ff014ca9f69ef6098c25cfda0016a9e3410c1",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manuals.plus",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Craftsman 3/4 HP Garage Door Opener Model 139.53990 Owner's Manual and Installation Guide\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -147,7 +148,7 @@
       "modelCode": "139.53990D",
       "name": "Craftsman 139.53990D",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -156,7 +157,7 @@
           "sourceUrl": "https://www.searspartsdirect.com/manual/3s6ldjw5df-000247/craftsman-13953990d-garage-door-opener-parts",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "searspartsdirect.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Craftsman 13953990D Garage Door Opener Parts Manual\" (host: www.searspartsdirect.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -168,7 +169,7 @@
       "modelCode": "Garage Door Opener (1/2 HP 315MHz)",
       "name": "Craftsman Garage Door Opener (1/2 HP 315MHz)",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -177,7 +178,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/486543/Craftsman-Garage-Door-Opener.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Craftsman Garage Door Opener Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -189,7 +190,7 @@
       "modelCode": "Garage Door Openers",
       "name": "Craftsman Garage Door Openers",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -198,7 +199,7 @@
           "sourceUrl": "https://craftsman.manymanuals.com/garage-door-opener",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "craftsman.manymanuals.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Craftsman Garage Door Opener Manuals Index (ManyManuals)\" (host: craftsman.manymanuals.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

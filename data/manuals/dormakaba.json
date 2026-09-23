@@ -91,13 +91,25 @@
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED100 Service Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "dormakaba ED100 Installation Instructions Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1328365/Dormakaba-Ed100.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED100 Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
     {
       "modelCode": "ED100 / ED250",
       "name": "dormakaba ED100 / ED250",
-      "category": "automatic-pedestrian-doors",
+      "category": "remotes-accessories",
       "region": "EU",
       "aliases": [],
       "documents": [
@@ -111,6 +123,75 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED100/ED250 Automatic Swing Door Operators Owner's Manual (DL4614-030)\" (host: www.concordpacific.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "dormakaba ED100 / ED250 Automatic Swing Door Operators Surface Applied Installation Instructions (DL4615-006)",
+          "sourceUrl": "https://my.dormakaba.com/medias/DL4615-006-R012820-ED100-250-SA-Installation-Instructions.pdf?context=bWFzdGVyfGltYWdlc3wxODkxNzc2N3xhcHBsaWNhdGlvbi9wZGZ8aW1hZ2VzL2g3My9oYjMvODk0MzU0OTQ0ODIyMi5wZGZ8NTE1MzdmMDFhMTBiZThiZTQwNmQyZDNkOGI4YTBmNjgyOTMwNzM4MjQxNTkxMTJlZmZmMGNhYzBhOWFlZDNkOQ",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "my.dormakaba.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED100 / ED250 Automatic Swing Door Operators Surface Applied Installation Instructions (DL4615-006)\" (host: my.dormakaba.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "dormakaba ED100 / ED250 Installation Guide",
+          "sourceUrl": "https://www.scribd.com/document/906734171/9",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "scribd.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED100 / ED250 Installation Guide\" (host: www.scribd.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "WIRING_DIAGRAM",
+          "title": "dormakaba ED100 / ED250 Sensor Installation and Wiring (DL4614-130 R062022)",
+          "sourceUrl": "https://my.dormakaba.com/medias/DL4614-130-ED100-ED250-SEN-INSWRG.pdf?context=bWFzdGVyfHJvb3R8MTM4MDg2MXxhcHBsaWNhdGlvbi9wZGZ8aGIwL2g5My84OTg4NTcxMTQwMTI2LnBkZnxhMDE3YTY0YzJiMWY3MDcyNGJiNjdiN2VlMjk0ZDc3ODU1MTU4NGMwZmY2ZWU2MDE3Nzk0Nzk2MmE5N2RlNzE3",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "my.dormakaba.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED100 / ED250 Sensor Installation and Wiring (DL4614-130 R062022)\" (host: my.dormakaba.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "WIRING_DIAGRAM",
+          "title": "dormakaba ED100 / ED250 Sensors Installation and Wiring Instructions (DL4614-130, 06-2022)",
+          "sourceUrl": "https://www.terrauniversal.com/media/asset-library/d/o/dormakaba_ed100_250_installation_wiring_instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "terrauniversal.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED100 / ED250 Sensors Installation and Wiring Instructions (DL4614-130, 06-2022)\" (host: www.terrauniversal.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ED250",
+      "name": "dormakaba ED250",
+      "category": "automatic-pedestrian-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "dormakaba ED250 Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Dormakaba-Ed250-8830100.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED250 Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -132,6 +213,18 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED50/ED100/ED250 Swing Door Operators Setup Manual\" (host: www.terrauniversal.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "dormakaba ED50 / ED100 / ED250 Swing Door Operators Installation Instructions",
+          "sourceUrl": "https://www.terrauniversal.com/media/asset-library/d/o/dormakaba_ed100_250_installation_instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "terrauniversal.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED50 / ED100 / ED250 Swing Door Operators Installation Instructions\" (host: www.terrauniversal.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

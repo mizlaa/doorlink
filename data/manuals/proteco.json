@@ -2,14 +2,16 @@
   "manufacturer": {
     "name": "Proteco",
     "slug": "proteco",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "IT",
+    "website": "https://www.proteco.net/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "ACE",
       "name": "Proteco ACE",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -18,7 +20,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1298324/Proteco-Ace.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Proteco Ace Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -30,7 +32,7 @@
       "modelCode": "ADVANTAGE",
       "name": "Proteco ADVANTAGE",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -39,7 +41,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1147101/Proteco-Advantage.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Proteco Advantage Installation and Use Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -51,7 +53,7 @@
       "modelCode": "ASTER NEW",
       "name": "Proteco ASTER NEW",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -60,7 +62,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/2515276/Proteco-Aster-New.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Proteco Aster New Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -72,7 +74,7 @@
       "modelCode": "BARRY",
       "name": "Proteco BARRY",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -81,7 +83,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1263928/Proteco-Barry.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Proteco Barry Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -93,7 +95,7 @@
       "modelCode": "MATRIX",
       "name": "Proteco MATRIX",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -102,7 +104,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/2080780/Proteco-Matrix.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Proteco Matrix Installation and User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -114,7 +116,7 @@
       "modelCode": "MEKO",
       "name": "Proteco MEKO",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -123,7 +125,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1137218/Proteco-Meko.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Proteco Meko Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -135,7 +137,7 @@
       "modelCode": "MOVER",
       "name": "Proteco MOVER",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -144,7 +146,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1684465/Proteco-Mover.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Proteco Mover Installation and Use Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -156,7 +158,7 @@
       "modelCode": "MYGATE MYASTER",
       "name": "Proteco MYGATE MYASTER",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -165,7 +167,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/2291953/Proteco-Mygate-Myaster.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Proteco MyGate Myaster Installation and Use Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -177,7 +179,7 @@
       "modelCode": "Q60A",
       "name": "Proteco Q60A",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -186,7 +188,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/2716760/Proteco-Q60a.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Proteco Q60A Control Unit Quick Start Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -198,7 +200,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/3601426/Proteco-Q60a.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Proteco Q60A Installation and User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -210,16 +212,16 @@
       "modelCode": "Q60A/R",
       "name": "Proteco Q60A/R",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
           "kind": "TECHNICAL_DOCUMENT",
           "title": "Proteco Q60A/R Control Unit Manual",
           "sourceUrl": "http://www.proteco.net/sites/default/files/products-attached-manual/q60ar_06_prof_gb.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "proteco.net",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Proteco Q60A/R Control Unit Manual\" (host: www.proteco.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -231,7 +233,7 @@
       "modelCode": "Q60S",
       "name": "Proteco Q60S",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -240,7 +242,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1908507/Proteco-Q60s.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Proteco Q60S Control Unit Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -252,7 +254,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/3601432/Proteco-Q60s.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Proteco Q60S Installation and User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -264,7 +266,7 @@
       "modelCode": "SIMPLY",
       "name": "Proteco SIMPLY",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -273,7 +275,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/956955/Proteco-Simply.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Proteco Simply Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

@@ -2,14 +2,16 @@
   "manufacturer": {
     "name": "Erreka",
     "slug": "erreka",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "ES",
+    "website": "https://www.erreka.com/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "CAT",
       "name": "Erreka CAT",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -18,7 +20,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1685601/Erreka-Cat.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Erreka CAT Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -30,7 +32,7 @@
       "modelCode": "DINGO",
       "name": "Erreka DINGO",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -39,7 +41,7 @@
           "sourceUrl": "https://manuals.plus/asin/B0711RPS28",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manuals.plus",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Erreka Dingo Instruction Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -51,16 +53,16 @@
       "modelCode": "EPE-B",
       "name": "Erreka EPE-B",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
           "kind": "TECHNICAL_DOCUMENT",
           "title": "Manual de instrucciones cuadro EPEB / EPEB-PAL",
           "sourceUrl": "https://access.erreka.com/wp-content/uploads/2020/11/Manual_instrucciones_cuadro_EPEB-EPEB-PAL.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "access.erreka.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Manual de instrucciones cuadro EPEB / EPEB-PAL\" (host: access.erreka.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -72,7 +74,7 @@
       "modelCode": "FENIX",
       "name": "Erreka FENIX",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -81,7 +83,7 @@
           "sourceUrl": "https://www.manualslib.com/products/Erreka-Fenix-10821989.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Erreka Fenix Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -135,7 +137,7 @@
           "sourceUrl": "https://manualmachine.com/erreka/linceswinggateopener/2591622-user-manual/",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualmachine.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Erreka Lince Swing Gate Opener User Manual\" (host: manualmachine.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -147,7 +149,7 @@
       "modelCode": "LINCE LIS424",
       "name": "Erreka LINCE LIS424",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -156,7 +158,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1756834/Erreka-Lince-Lis424.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Erreka Lince LIS424 Sliding Gate Actuator Installer Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -168,7 +170,7 @@
       "modelCode": "MAGIC",
       "name": "Erreka MAGIC",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -177,7 +179,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/3146160/Erreka-Magic.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Erreka MAGIC Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -189,7 +191,7 @@
       "modelCode": "NAOS",
       "name": "Erreka NAOS",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -198,7 +200,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1696378/Erreka-Naos.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Erreka Naos Quick Installation and Programming Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -210,7 +212,7 @@
       "modelCode": "RINO",
       "name": "Erreka RINO",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -219,7 +221,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1945792/Erreka-Rino.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Erreka Rino Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -231,7 +233,7 @@
       "modelCode": "RIS1000EC",
       "name": "Erreka RIS1000EC",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -240,7 +242,7 @@
           "sourceUrl": "https://www.manualslib.com/products/Erreka-Ris1000ec-11247613.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Erreka RIS1000EC Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -252,7 +254,7 @@
       "modelCode": "VIVO-D203",
       "name": "Erreka VIVO-D203",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -261,7 +263,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1782694/Erreka-Vivo-D203.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Erreka Vivo-D203 Quick Installation and Programming Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -273,7 +275,7 @@
       "modelCode": "VIVO-I103",
       "name": "Erreka VIVO-I103",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -282,7 +284,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1786773/Erreka-Vivo-I103.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Erreka Vivo-I103 Quick Installation and Programming Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -294,7 +296,7 @@
       "modelCode": "VIVO-M203",
       "name": "Erreka VIVO-M203",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -303,7 +305,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1247083/Erreka-Vivo-M203.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Erreka Vivo-M203 Quick Installation and Programming Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

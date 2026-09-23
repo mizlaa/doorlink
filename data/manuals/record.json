@@ -109,6 +109,66 @@
           "language": "en",
           "evidence": "Retrofit guide dated 25-03-2019 per the search result title. Covers fitting an STA20 in place of a Besam SL500, so it is filed under the STA20 rather than under Besam. Not fetched - egress blocked.",
           "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Record Sliding Door System 20 Installation and Commissioning Manual",
+          "sourceUrl": "https://manuals.plus/m/ae3bf925739526420cf529d21ff6771f43047088bd716476a60844331149bc44",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Record Sliding Door System 20 Installation and Commissioning Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Record STA 20 Sliding Door User Manual",
+          "sourceUrl": "https://www.recorddoors.com/master-blueprint/en/downloads/english/sliding-doors/standard-sliding-doors/record-sta-20-sliding-door/user-manual/Record%20STA%2020%20Sliding%20Door%20User%20Manual.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "recorddoors.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Record STA 20 Sliding Door User Manual\" (host: www.recorddoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Record System 20 User Manual",
+          "sourceUrl": "https://www.scribd.com/document/489397816/record-sta20",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "scribd.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Record System 20 User Manual\" (host: www.scribd.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Record System 20 User Manual (BAL_SYS20_EN_2V7)",
+          "sourceUrl": "https://www.recorddoors.com/master-blueprint/en/downloads/english/sliding-doors/standard-sliding-doors/record-sta-20-sliding-door/user-manual/BAL_SYS20_EN_2V7_REC_102-020110469.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "recorddoors.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Record System 20 User Manual (BAL_SYS20_EN_2V7)\" (host: www.recorddoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Record System 20 User Manual (Swift Aluminium Systems)",
+          "sourceUrl": "http://www.swiftaluminiumsystems.co.uk/uploads/7/2/5/9/72590099/record_sta20.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "swiftaluminiumsystems.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Record System 20 User Manual (Swift Aluminium Systems)\" (host: www.swiftaluminiumsystems.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },

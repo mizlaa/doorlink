@@ -2,23 +2,25 @@
   "manufacturer": {
     "name": "Richmond",
     "slug": "richmond",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "AU",
+    "website": "https://www.richmondau.com/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "GTR156",
       "name": "Richmond GTR156",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "AU",
       "aliases": [],
       "documents": [
         {
           "kind": "USER_MANUAL",
           "title": "Richmond GTR156 Sliding Gate Opener User Manual (Revision 20a)",
           "sourceUrl": "https://www.richmondau.com/wp-content/uploads/2019/04/GTR156-instruction-manual.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "richmondau.com",
-          "region": "UNKNOWN",
+          "region": "AU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Richmond GTR156 Sliding Gate Opener User Manual (Revision 20a)\" (host: www.richmondau.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

@@ -9,9 +9,108 @@
   },
   "models": [
     {
+      "modelCode": "4000",
+      "name": "Horton Automatics 4000",
+      "category": "automatic-pedestrian-doors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Horton 4000 Swing Door Operator Manual",
+          "sourceUrl": "https://doormanuals.co.uk/wp-content/uploads/2024/07/Horton-4000-Swing-1.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "doormanuals.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Horton 4000 Swing Door Operator Manual\" (host: doormanuals.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Horton 4000 with C4160-1 Controls Manual",
+          "sourceUrl": "https://www.addisonautomatics.com/wp-content/uploads/manuals/horton/Horton%204000%20w_%20C4160-1%20(compressed).pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "addisonautomatics.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Horton 4000 with C4160-1 Controls Manual\" (host: www.addisonautomatics.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "4100",
+      "name": "Horton Automatics 4100",
+      "category": "automatic-pedestrian-doors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Horton Series 4100 Installation (A&B Supply)",
+          "sourceUrl": "https://absupply.net/pdf/horton-rc4100-installation.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "absupply.net",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Horton Series 4100 Installation (A&B Supply)\" (host: absupply.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Horton Series 4100 Swing Door Operator Installation",
+          "sourceUrl": "https://s3.amazonaws.com/s3-absupply-net/pdf/horton-rc4100-installation.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "s3.amazonaws.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Horton Series 4100 Swing Door Operator Installation\" (host: s3.amazonaws.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Horton Swing Door Operator with C-4160-2 Controls Installation",
+          "sourceUrl": "https://www.addisonautomatics.com/wp-content/uploads/manuals/Horton/Horton%204100%20w_%20C4160%20install%204160.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "addisonautomatics.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Horton Swing Door Operator with C-4160-2 Controls Installation\" (host: www.addisonautomatics.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "4500 / 4800",
+      "name": "Horton Automatics 4500 / 4800",
+      "category": "automatic-pedestrian-doors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Horton Series 4500 and 4800 Overhead Concealed Operator Installation (2-2004)",
+          "sourceUrl": "https://d3eu1jnerk19h.cloudfront.net/documents/4500-4800-OHC-Installation-2-2004.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "d3eu1jnerk19h.cloudfront.net",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Horton Series 4500 and 4800 Overhead Concealed Operator Installation (2-2004)\" (host: d3eu1jnerk19h.cloudfront.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "Automatic Doors",
       "name": "Horton Automatics Automatic Doors",
-      "category": "garage-door-openers",
+      "category": "automatic-pedestrian-doors",
       "region": "US",
       "aliases": [],
       "documents": [
@@ -32,7 +131,7 @@
     {
       "modelCode": "C2150",
       "name": "Horton Automatics C2150",
-      "category": "garage-door-openers",
+      "category": "automatic-pedestrian-doors",
       "region": "US",
       "aliases": [],
       "documents": [
@@ -89,7 +188,7 @@
     {
       "modelCode": "C2150L",
       "name": "Horton Automatics C2150L",
-      "category": "garage-door-openers",
+      "category": "automatic-pedestrian-doors",
       "region": "US",
       "aliases": [],
       "documents": [

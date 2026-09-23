@@ -175,7 +175,7 @@ export function regionFor(host: string, manufacturerCountry: string | undefined)
     const byCountry: Record<string, string> = {
       AU: 'AU', NZ: 'NZ', GB: 'UK', US: 'US', CA: 'CA',
       DE: 'EU', IT: 'EU', FR: 'EU', ES: 'EU', NL: 'EU', PL: 'EU', BE: 'EU',
-      AT: 'EU', CH: 'EU', PT: 'EU', DK: 'EU', SE: 'EU', CZ: 'EU', SI: 'EU',
+      AT: 'EU', CH: 'EU', PT: 'EU', DK: 'EU', SE: 'EU', CZ: 'EU', SI: 'EU', IE: 'EU',
     }
     return byCountry[manufacturerCountry] ?? 'UNKNOWN'
   }
@@ -194,6 +194,23 @@ export function regionFor(host: string, manufacturerCountry: string | undefined)
  * anything that is not clearly the manufacturer's own host is third
  * party.
  */
+/**
+ * A host's registrable name and the suffix after it: "hormann" and
+ * "co.uk" for www.hormann.co.uk, "manymanuals" and "com" for
+ * marantec.manymanuals.com. Only the two-level country forms that
+ * actually appear in the catalogue are recognised (co.uk, com.au and
+ * their kin); anything else takes the last label as the suffix.
+ */
+function registrable(host: string): { label: string; suffix: string } {
+  const parts = host.split('.')
+  const last = parts[parts.length - 1]
+  const second = parts[parts.length - 2]
+  if (last.length === 2 && ['co', 'com', 'net', 'org', 'ac', 'gov'].includes(second)) {
+    return { label: parts[parts.length - 3] ?? '', suffix: `${second}.${last}` }
+  }
+  return { label: second ?? '', suffix: last }
+}
+
 export function originFor(host: string, website: string | null | undefined): string {
   if (!website) return 'THIRD_PARTY_GUIDE'
   let siteHost: string
@@ -204,10 +221,25 @@ export function originFor(host: string, website: string | null | undefined): str
   }
   const docHost = host.replace(/^www\./, '')
   if (docHost === siteHost) return 'MANUFACTURER_ORIGINAL'
-  // Subdomain of the manufacturer's site, or the manufacturer's site
-  // under a different country domain sharing the same brand label.
-  const brand = siteHost.split('.')[0]
+  // A subdomain of the manufacturer's own site.
   if (docHost.endsWith(`.${siteHost}`)) return 'MANUFACTURER_ORIGINAL'
-  if (brand.length >= 4 && docHost.split('.')[0] === brand) return 'MANUFACTURER_ORIGINAL'
+  // The same brand under another country's domain — hormann.co.uk for
+  // hormann.com. Compared on the registrable name, not the first label:
+  // an aggregator that files each brand under its own subdomain
+  // (marantec.manymanuals.com) and a dealer that does the same
+  // (manusa.parkan.ua) both lead with the brand, and matching there
+  // badged their copies as the manufacturer's own. The other domain
+  // must also be a country domain or share the site's suffix, since a
+  // brand name under a generic TLD like .help is as easily anyone's.
+  const site = registrable(siteHost)
+  const doc = registrable(docHost)
+  const countryDomain = /^([a-z]{2}|(co|com|net|org|ac|gov)\.[a-z]{2})$/.test(doc.suffix)
+  if (
+    site.label.length >= 4 &&
+    doc.label === site.label &&
+    (countryDomain || doc.suffix === site.suffix)
+  ) {
+    return 'MANUFACTURER_ORIGINAL'
+  }
   return 'THIRD_PARTY_GUIDE'
 }

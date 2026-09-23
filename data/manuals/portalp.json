@@ -2,14 +2,16 @@
   "manufacturer": {
     "name": "Portalp",
     "slug": "portalp",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "FR",
+    "website": "https://www.portalp.com/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "Automatic Doors",
       "name": "Portalp Automatic Doors",
       "category": "automatic-pedestrian-doors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -18,7 +20,7 @@
           "sourceUrl": "https://manuals.plus/category/portalp",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manuals.plus",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Portalp Manuals and User Guides Index (Manuals+)\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -30,7 +32,7 @@
           "sourceUrl": "https://www.manualslib.com/brand/portalp/",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Portalp Manuals Index (ManualsLib)\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -40,9 +42,9 @@
           "kind": "TECHNICAL_DOCUMENT",
           "title": "Portalp Tools and Resources Index",
           "sourceUrl": "https://www.portalp.com/en/tools-and-resources/",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "portalp.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Portalp Tools and Resources Index\" (host: www.portalp.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -54,7 +56,7 @@
       "modelCode": "ISO 3",
       "name": "Portalp ISO 3",
       "category": "automatic-pedestrian-doors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -63,7 +65,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1540188/Portalp-Iso-3.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Portalp ISO 3 Swing Door Operator Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -75,7 +77,7 @@
       "modelCode": "SW10",
       "name": "Portalp SW10",
       "category": "automatic-pedestrian-doors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -84,7 +86,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/2938489/Portalp-Sw10.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Portalp SW10 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

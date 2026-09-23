@@ -446,6 +446,63 @@
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Hormann ProMatic 4 Instructions for Fitting, Operating and Maintenance (TR10A378-C)\" (host: asset-center.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Hörmann ProMatic 4 Garage Door Operator Manual (Manualzz)",
+          "sourceUrl": "https://manualzz.com/doc/68448917/h%C3%B6rmann-promatic-4-instructions",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualzz.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hörmann ProMatic 4 Garage Door Operator Manual (Manualzz)\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hörmann ProMatic 4 Instructions (Manualzz)",
+          "sourceUrl": "https://manualzz.com/manual/en/Hormann/ProMatic+4/User+manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualzz.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hörmann ProMatic 4 Instructions (Manualzz)\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hörmann ProMatic 4 User Manual (Garage Door Hub)",
+          "sourceUrl": "https://garagedoorhub.co.uk/documents/hormann-promatic-4-user-manuel/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "garagedoorhub.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hörmann ProMatic 4 User Manual (Garage Door Hub)\" (host: garagedoorhub.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "PROMATIC 4 AKKU",
+      "name": "Hörmann PROMATIC 4 AKKU",
+      "category": "garage-door-openers",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hörmann ProMatic 4 Akku-Solar Instructions (4510812 B1 EN)",
+          "sourceUrl": "https://www.hormann.co.uk/media-centre/download/209666en/4510812_B1_ProMatic_4_Akku_EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "hormann.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hörmann ProMatic 4 Akku-Solar Instructions (4510812 B1 EN)\" (host: www.hormann.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },

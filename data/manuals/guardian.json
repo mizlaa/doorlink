@@ -2,14 +2,16 @@
   "manufacturer": {
     "name": "Guardian",
     "slug": "guardian",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "US",
+    "website": "https://adhguardianusa.com/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "2211-D",
       "name": "Guardian 2211-D",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -18,7 +20,7 @@
           "sourceUrl": "https://www.manualslib.com/products/Guardian-2211-D-8917470.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Guardian 2211-D Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -30,7 +32,7 @@
       "modelCode": "415",
       "name": "Guardian 415",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -39,7 +41,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1308458/Guardian-415.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Guardian 415 Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -51,7 +53,7 @@
       "modelCode": "628 PRO SERIES",
       "name": "Guardian 628 PRO SERIES",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -60,7 +62,7 @@
           "sourceUrl": "https://manuals.plus/m/72c0b4c18d95f47969c443ea939a29b130dda54cb35b1115b418c1f13c605e71",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manuals.plus",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Guardian Model 628 Pro Series 3/4HP Garage Door Opener Owner's Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -72,16 +74,16 @@
       "modelCode": "628FCA",
       "name": "Guardian 628FCA",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
           "kind": "USER_MANUAL",
           "title": "Guardian 628FCA Garage Door Opener Owner's Manual",
           "sourceUrl": "https://adhguardianusa.com/wp-content/uploads/2024/08/628FCA_manual_181029.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "adhguardianusa.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Guardian 628FCA Garage Door Opener Owner's Manual\" (host: adhguardianusa.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -93,7 +95,7 @@
       "modelCode": "928",
       "name": "Guardian 928",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -102,7 +104,7 @@
           "sourceUrl": "https://manuals.plus/m/430a1144fac93c3caf1c9e52ca5fbcb71af0c917eb7f1def0437142596905356",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manuals.plus",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Guardian Model 928 Garage Door Opener Installation and Operation Quick Reference\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -114,7 +116,7 @@
       "modelCode": "CORE SERIES",
       "name": "Guardian CORE SERIES",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -123,7 +125,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1510975/Guardian-Core-Series.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Guardian Core Series Garage Door Opener Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -135,7 +137,7 @@
       "modelCode": "Garage Door Openers",
       "name": "Guardian Garage Door Openers",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -144,7 +146,7 @@
           "sourceUrl": "https://www.gdcorp.com/guardian-garage-door-opener-manuals",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "gdcorp.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Guardian Garage Door Opener Manuals Index\" (host: www.gdcorp.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -156,16 +158,16 @@
       "modelCode": "Garage Door Operators",
       "name": "Guardian Garage Door Operators",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
           "kind": "TECHNICAL_DOCUMENT",
           "title": "ADH Guardian USA Service Manuals Index",
           "sourceUrl": "https://adhguardianusa.com/service/manuals/",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "adhguardianusa.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"ADH Guardian USA Service Manuals Index\" (host: adhguardianusa.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

@@ -2,14 +2,15 @@
   "manufacturer": {
     "name": "Maximum Controls",
     "slug": "maximum-controls",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "US",
+    "note": "Added by ingest-list from research findings. Country filled in afterwards. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "ARMS 1300-2300",
       "name": "Maximum Controls ARMS 1300-2300",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -18,7 +19,7 @@
           "sourceUrl": "https://max.us.com/wp-content/uploads/2021/04/maximum-controls-arms-1300-2300-installation-v1.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "max.us.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Maximum Controls Arms 1300-2300 Installation and Owners Manual\" (host: max.us.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -30,7 +31,7 @@
       "modelCode": "MAX 1500",
       "name": "Maximum Controls MAX 1500",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -39,7 +40,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1213515/Maximum-Controls-Max-1500.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Maximum Controls MAX 1500 Installation and Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -51,7 +52,7 @@
       "modelCode": "MAX 1500 / 2200 / F18 PRO",
       "name": "Maximum Controls MAX 1500 / 2200 / F18 PRO",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -60,7 +61,7 @@
           "sourceUrl": "https://max.us.com/wp-content/uploads/2019/01/MAX-1500-2200-F18-PRO-Matrix-III-Installation-V7a-1.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "max.us.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Maximum Controls MAX 1500-2200 F18 PRO Matrix III Installation Guide (V7a)\" (host: max.us.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -72,7 +73,7 @@
       "modelCode": "MAX 1500 / MAX 2200",
       "name": "Maximum Controls MAX 1500 / MAX 2200",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -81,7 +82,7 @@
           "sourceUrl": "https://max.us.com/wp-content/uploads/2016/03/Max-1500.2200-UL-325-2016-V7.3.16.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "max.us.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Maximum Controls MAX 1500 / 2200 UL 325 Manual\" (host: max.us.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -93,7 +94,7 @@
       "modelCode": "MAX 1700FS",
       "name": "Maximum Controls MAX 1700FS",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -102,7 +103,7 @@
           "sourceUrl": "https://max.us.com/wp-content/uploads/2017/04/Maximum-Controls-MAX-1700FS-Quick-Install-Rev-3.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "max.us.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Maximum Controls MAX 1700FS Fail Safe Slide Gate Operator Quick Install Guide\" (host: max.us.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -114,7 +115,7 @@
       "modelCode": "MAX ARM / ULTRA ARM",
       "name": "Maximum Controls MAX ARM / ULTRA ARM",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -123,7 +124,7 @@
           "sourceUrl": "https://enconelectronics.com/images/Max-Arm-Ultra-Arm_Manual-2022.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "enconelectronics.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Maximum Controls Max Arm / Ultra Arm Linear Gate Operators Manual (4009963)\" (host: enconelectronics.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

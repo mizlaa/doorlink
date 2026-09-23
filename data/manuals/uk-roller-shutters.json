@@ -2,23 +2,25 @@
   "manufacturer": {
     "name": "UK Roller Shutters",
     "slug": "uk-roller-shutters",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "GB",
+    "website": "https://www.ukrollershutters.com/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "Roller Shutters",
       "name": "UK Roller Shutters Roller Shutters",
       "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
+      "region": "UK",
       "aliases": [],
       "documents": [
         {
           "kind": "USER_MANUAL",
           "title": "Roller Shutter Operating and Maintenance Manual",
           "sourceUrl": "https://www.ukrollershutters.com/wp-content/uploads/2021/12/Maintenance-Operation-Manual.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "ukrollershutters.com",
-          "region": "UNKNOWN",
+          "region": "UK",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Roller Shutter Operating and Maintenance Manual\" (host: www.ukrollershutters.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

@@ -2,14 +2,15 @@
   "manufacturer": {
     "name": "US Automatic",
     "slug": "us-automatic",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "US",
+    "note": "Added by ingest-list from research findings. Country filled in afterwards. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "PATRIOT",
       "name": "US Automatic PATRIOT",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -18,7 +19,7 @@
           "sourceUrl": "https://usautomaticgateopeners.com/store/pdfs/Patriot_Eng_Spn_Combined.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "usautomaticgateopeners.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"US Automatic Patriot Installation / Owners Manual\" (host: usautomaticgateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

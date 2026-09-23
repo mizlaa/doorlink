@@ -2,7 +2,9 @@
   "manufacturer": {
     "name": "Superlift",
     "slug": "superlift",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "AU",
+    "website": "https://www.superliftgdo.com.au/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
@@ -16,7 +18,7 @@
           "kind": "TECHNICAL_DOCUMENT",
           "title": "Superlift Help and Manuals Index",
           "sourceUrl": "https://www.superliftgdo.com.au/help-manuals/",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "superliftgdo.com.au",
           "region": "AU",
           "rights": "LINK_ONLY",
@@ -28,7 +30,7 @@
           "kind": "TECHNICAL_DOCUMENT",
           "title": "Superlift Manuals Download Files Index",
           "sourceUrl": "https://www.superliftgdo.com.au/help-manuals/download-files/",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "superliftgdo.com.au",
           "region": "AU",
           "rights": "LINK_ONLY",
@@ -61,7 +63,7 @@
           "kind": "USER_MANUAL",
           "title": "Superlift RDO-4 Roller Door Opener Instruction Manual",
           "sourceUrl": "https://www.superliftgdo.com.au/wp-content/uploads/2022/05/Superlift-RDO-4-Instruction-Manual.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "superliftgdo.com.au",
           "region": "AU",
           "rights": "LINK_ONLY",
@@ -75,7 +77,7 @@
           "sourceUrl": "https://manuals.plus/super-lift/rdo-4-roller-door-opener-manual",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manuals.plus",
-          "region": "UNKNOWN",
+          "region": "AU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Superlift RDO-4 Roller Door Opener User Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -115,7 +117,7 @@
           "kind": "USER_MANUAL",
           "title": "Superlift SDO-3 Instruction Manual",
           "sourceUrl": "https://www.superliftgdo.com.au/wp-content/uploads/2022/05/Superlift-SDO-3-Instruction-Manual.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "superliftgdo.com.au",
           "region": "AU",
           "rights": "LINK_ONLY",
@@ -150,7 +152,7 @@
       "modelCode": "SDO-5 DC FS 1000",
       "name": "Superlift SDO-5 DC FS 1000",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "AU",
       "aliases": [],
       "documents": [
         {
@@ -159,7 +161,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/2018951/Superlift-Sdo-5-Dc-Fs-1000.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "AU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Superlift SDO-5 DC FS 1000 Sectional and Tilt Door Opener Installation Instructions and User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

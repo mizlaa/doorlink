@@ -2,14 +2,15 @@
   "manufacturer": {
     "name": "Teleco Automation",
     "slug": "teleco-automation",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "IT",
+    "note": "Added by ingest-list from research findings. Country filled in afterwards. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "Radio Receiver 230Vac",
       "name": "Teleco Automation Radio Receiver 230Vac",
       "category": "remotes-accessories",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -18,7 +19,7 @@
           "sourceUrl": "https://manuals.plus/m/009e8cbc80550433af40eb333bc0babc5df683b3f1d76041036a28a143d48367",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manuals.plus",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Teleco Automation Radio Receiver 230Vac Motor Control Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -30,7 +31,7 @@
       "modelCode": "TVHET868A07",
       "name": "Teleco Automation TVHET868A07",
       "category": "remotes-accessories",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -39,7 +40,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/3198824/Teleco-Automation-Tvhet868a07.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Teleco Automation TVHET868A07 Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -51,7 +52,7 @@
       "modelCode": "TVLSTRD868SI24G",
       "name": "Teleco Automation TVLSTRD868SI24G",
       "category": "remotes-accessories",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -60,7 +61,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/2920816/Teleco-Automation-Tvlstrd868si24g.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Teleco Automation TVLSTRD868SI24G Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -72,7 +73,7 @@
       "modelCode": "TVPRP868N09",
       "name": "Teleco Automation TVPRP868N09",
       "category": "remotes-accessories",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -81,7 +82,7 @@
           "sourceUrl": "https://www.manualslib.com/products/Teleco-Automation-Tvprp868n09-11159574.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Teleco Automation TVPRP868N09 Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -93,7 +94,7 @@
       "modelCode": "TVRRL868GS02",
       "name": "Teleco Automation TVRRL868GS02",
       "category": "remotes-accessories",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -102,7 +103,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/2747915/Teleco-Automation-Tvrrl868gs02.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Teleco Automation TVRRL868GS02 Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -114,7 +115,7 @@
       "modelCode": "TVVTL868A01",
       "name": "Teleco Automation TVVTL868A01",
       "category": "remotes-accessories",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -123,7 +124,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/2884560/Teleco-Automation-Tvvtl868a01.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Teleco Automation TVVTL868A01 Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

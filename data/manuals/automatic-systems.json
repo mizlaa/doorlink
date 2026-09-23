@@ -2,14 +2,16 @@
   "manufacturer": {
     "name": "Automatic Systems",
     "slug": "automatic-systems",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "BE",
+    "website": "https://www.automatic-systems.com/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "BL229",
       "name": "Automatic Systems BL229",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -18,7 +20,7 @@
           "sourceUrl": "https://devancocanada.com/files/manuals/BL229:Technical-manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "devancocanada.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Automatic Systems BL229 Technical Manual\" (host: devancocanada.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -30,16 +32,16 @@
       "modelCode": "BL41 / BL4x",
       "name": "Automatic Systems BL41 / BL4x",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
           "kind": "TECHNICAL_DOCUMENT",
           "title": "Automatic Systems BL4x Technical Manual (NAM-BL4x-MT-EN-C)",
           "sourceUrl": "https://www.automatic-systems.com/wp-content/uploads/sites/6/2018/02/bl41-tm-en-3.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "automatic-systems.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Automatic Systems BL4x Technical Manual (NAM-BL4x-MT-EN-C)\" (host: www.automatic-systems.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -51,7 +53,7 @@
       "modelCode": "BL52",
       "name": "Automatic Systems BL52",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -60,7 +62,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1825133/Ier-Automatic-Systems-Bl52.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Automatic Systems BL52 Operating Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

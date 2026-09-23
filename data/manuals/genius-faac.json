@@ -2,7 +2,8 @@
   "manufacturer": {
     "name": "Genius (FAAC)",
     "slug": "genius-faac",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "IT",
+    "note": "Added by ingest-list from research findings. Country filled in afterwards. Support URL not yet established."
   },
   "models": [
     {
@@ -30,7 +31,7 @@
       "modelCode": "BLIZZARD 500 C / 900 C",
       "name": "Genius (FAAC) BLIZZARD 500 C / 900 C",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -39,7 +40,7 @@
           "sourceUrl": "https://ismartgate.com/manuals/Genius_Blizzard_500C_900C_manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "ismartgate.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Genius Blizzard 500C, 900C Instruction Manual\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -51,7 +52,7 @@
       "modelCode": "BRAIN 16",
       "name": "Genius (FAAC) BRAIN 16",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -60,7 +61,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/2578501/Genius-Brain-16.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Genius Brain 16 Quick Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -72,7 +73,7 @@
       "modelCode": "Gate Automation",
       "name": "Genius (FAAC) Gate Automation",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -81,7 +82,7 @@
           "sourceUrl": "https://www.intelligentsecurity.org/customers/user-guides/automatic-gates/genius/",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "intelligentsecurity.org",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Genius Automatic Gates User Manuals Index\" (host: www.intelligentsecurity.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

@@ -225,6 +225,51 @@
       ]
     },
     {
+      "modelCode": "pro+",
+      "name": "SOMMER pro+",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "SOMMER pro+ Garage Door Opener 2060 / 2080 Installation and Operating Instructions (US-EN, Rev C)",
+          "sourceUrl": "https://www.sommer.eu/SOMMER/Downloads/Montageanleitung/Garagentorantriebe/USA/pro/usa_pro-plus_S11903-00024_112022_0-DRE_Rev-C_US-EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "sommer.eu",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"SOMMER pro+ Garage Door Opener 2060 / 2080 Installation and Operating Instructions (US-EN, Rev C)\" (host: www.sommer.eu). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "SOMMER pro+ Garage Door Opener Product Page and Downloads",
+          "sourceUrl": "https://www.sommer.eu/en-us/products/garage-door-operators/sommer-pro-plus",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "sommer.eu",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"SOMMER pro+ Garage Door Opener Product Page and Downloads\" (host: www.sommer.eu). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "SOMMER Pro+ Intelligent Garage Door Operator with Separate Control Unit Installation Guide",
+          "sourceUrl": "https://device.report/manual/2614799",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "device.report",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"SOMMER Pro+ Intelligent Garage Door Operator with Separate Control Unit Installation Guide\" (host: device.report). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "S 9050 / S 9060 / S 9080 / S 9110 BASE S3",
       "name": "SOMMER S 9050 / S 9060 / S 9080 / S 9110 BASE S3",
       "category": "garage-door-openers",

@@ -119,6 +119,102 @@
       ]
     },
     {
+      "modelCode": "iMOTION 2202 / 2301 / 2302 / 2401",
+      "name": "TORMAX iMOTION 2202 / 2301 / 2302 / 2401",
+      "category": "automatic-pedestrian-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "TORMAX Instructions for Use iMotion 2202 / 2301 / 2302 / 2401 (T-1366 e)",
+          "sourceUrl": "https://www.tormax.com/file_download/mama/tormax/PDF/t1366_e_instructions_for_use_2202_2301_2302_2401_frw.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "tormax.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"TORMAX Instructions for Use iMotion 2202 / 2301 / 2302 / 2401 (T-1366 e)\" (host: www.tormax.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "iMOTION 2202 / 2301 / 2401",
+      "name": "TORMAX iMOTION 2202 / 2301 / 2401",
+      "category": "automatic-pedestrian-doors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "TORMAX iMotion 2202 / 2301 / 2401 Operating Instructions (T-1321 e)",
+          "sourceUrl": "https://www.buildingdesignindex.co.uk/Docs/65776_1328286837351/preview/iMotion-2202-2301-2401-operating-instructions.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "buildingdesignindex.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"TORMAX iMotion 2202 / 2301 / 2401 Operating Instructions (T-1321 e)\" (host: www.buildingdesignindex.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "iMOTION 2301",
+      "name": "TORMAX iMOTION 2301",
+      "category": "automatic-pedestrian-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "TORMAX Automatic iMotion 2301 Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Tormax-Automatic-Imotion-2301-11454215.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"TORMAX Automatic iMotion 2301 Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "TORMAX iMotion 2301 Sliding Door Drive Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Tormax-Imotion-2301-10564423.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"TORMAX iMotion 2301 Sliding Door Drive Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "iMOTION 2301 / 2401",
+      "name": "TORMAX iMOTION 2301 / 2401",
+      "category": "automatic-pedestrian-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "TORMAX iMotion 2301 / 2401 Sliding Door Drive Operating Instructions",
+          "sourceUrl": "https://d3eu1jnerk19h.cloudfront.net/documents/products/2301-2401-Operating-Instructions-FE-10.08.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "d3eu1jnerk19h.cloudfront.net",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"TORMAX iMotion 2301 / 2401 Sliding Door Drive Operating Instructions\" (host: d3eu1jnerk19h.cloudfront.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "SMART DRIVE 1101",
       "name": "TORMAX SMART DRIVE 1101",
       "category": "automatic-pedestrian-doors",
@@ -166,6 +262,27 @@
               "label": "Addison Automatics copy of the same series manual"
             }
           ]
+        }
+      ]
+    },
+    {
+      "modelCode": "TX9200 / TX9500",
+      "name": "TORMAX TX9200 / TX9500",
+      "category": "automatic-pedestrian-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "TORMAX TX9200 / TX9500 Slider iMotion Installation and Service Manual",
+          "sourceUrl": "https://www.addisonautomatics.com/wp-content/uploads/manuals/tormax/SLIDER%20I%20MOTION.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "addisonautomatics.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"TORMAX TX9200 / TX9500 Slider iMotion Installation and Service Manual\" (host: www.addisonautomatics.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },

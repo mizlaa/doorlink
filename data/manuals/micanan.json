@@ -2,14 +2,15 @@
   "manufacturer": {
     "name": "Micanan",
     "slug": "micanan",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "CA",
+    "note": "Added by ingest-list from research findings. Country filled in afterwards. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "PRO-H",
       "name": "Micanan PRO-H",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "CA",
       "aliases": [],
       "documents": [
         {
@@ -18,7 +19,7 @@
           "sourceUrl": "https://micanan.manymanuals.com/garage-door-opener/pro-h/instruction-manual-33155",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "micanan.manymanuals.com",
-          "region": "UNKNOWN",
+          "region": "CA",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Micanan Pro-H Instruction Manual\" (host: micanan.manymanuals.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -30,7 +31,7 @@
       "modelCode": "PRO-LH",
       "name": "Micanan PRO-LH",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "CA",
       "aliases": [],
       "documents": [
         {
@@ -39,7 +40,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1544261/Micanan-Pro-Lh.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "CA",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Micanan Pro-LH Garage Door Opener Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -51,7 +52,7 @@
           "sourceUrl": "https://www.devancocanada.com/files/manuals/PRO-LH:Installation-manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "devancocanada.com",
-          "region": "UNKNOWN",
+          "region": "CA",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Micanan Pro-LH Installation Manual\" (host: www.devancocanada.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -63,7 +64,7 @@
       "modelCode": "PRO-LHA",
       "name": "Micanan PRO-LHA",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "CA",
       "aliases": [],
       "documents": [
         {
@@ -72,7 +73,7 @@
           "sourceUrl": "https://ismartgate.com/manuals/Micanan_Pro-LHA_manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "ismartgate.com",
-          "region": "UNKNOWN",
+          "region": "CA",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Micanan Pro-LHA Installation and Instruction Manual\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -84,7 +85,7 @@
       "modelCode": "PRO-LJ",
       "name": "Micanan PRO-LJ",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "CA",
       "aliases": [],
       "documents": [
         {
@@ -93,7 +94,7 @@
           "sourceUrl": "http://www.devancocanada.com/files/manuals/PRO-LJ:Installation-manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "devancocanada.com",
-          "region": "UNKNOWN",
+          "region": "CA",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Micanan Pro-LJ Installation Manual\" (host: www.devancocanada.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -105,7 +106,7 @@
       "modelCode": "PRO-LT",
       "name": "Micanan PRO-LT",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "CA",
       "aliases": [],
       "documents": [
         {
@@ -114,7 +115,7 @@
           "sourceUrl": "https://doordoctor.com/wp-content/uploads/2014/01/Trolley-Pro-LT-Installation-Manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "doordoctor.com",
-          "region": "UNKNOWN",
+          "region": "CA",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Micanan Pro-LT Trolley Operator Installation and Instruction Manual\" (host: doordoctor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

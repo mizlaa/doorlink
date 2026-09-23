@@ -2,7 +2,9 @@
   "manufacturer": {
     "name": "Aiphone",
     "slug": "aiphone",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "JP",
+    "website": "https://www.aiphone.com/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
@@ -16,7 +18,7 @@
           "kind": "QUICK_START",
           "title": "Aiphone GT Quick Start Installation Guide 2.0 (Australia)",
           "sourceUrl": "https://www.aiphone.com.au/wp-content/uploads/2020/09/GT_Quick_Start_Installation_Guide-2.0.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "aiphone.com.au",
           "region": "AU",
           "rights": "LINK_ONLY",
@@ -28,7 +30,7 @@
           "kind": "QUICK_START",
           "title": "Aiphone GT Series Quick Start Installation Guide",
           "sourceUrl": "https://www.aiphone.com/wp-content/uploads/GT-Series-GT-Quick-Start-Installation-Guide.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "aiphone.com",
           "region": "UNKNOWN",
           "rights": "LINK_ONLY",
@@ -52,7 +54,7 @@
           "kind": "TECHNICAL_DOCUMENT",
           "title": "Aiphone GT Series QuikStart Guide (UK)",
           "sourceUrl": "https://www.aiphone.co.uk/wp-content/uploads/2015/04/GT-Series-QuikStart-Guide.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "aiphone.co.uk",
           "region": "UK",
           "rights": "LINK_ONLY",

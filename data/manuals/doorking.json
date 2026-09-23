@@ -301,6 +301,111 @@
       ]
     },
     {
+      "modelCode": "9150",
+      "name": "DoorKing 9150",
+      "category": "gate-motors",
+      "region": "US",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "DoorKing 9150 1/2 HP Gate Operator User Manual",
+          "sourceUrl": "https://manuals.plus/asin/B00542VRFG",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DoorKing 9150 1/2 HP Gate Operator User Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DoorKing 9150 Gate Operator Manual (AE Gates copy)",
+          "sourceUrl": "https://www.aegates.com/wp-content/uploads/2021/07/doorking-gate-operator-9150-gate-manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "aegates.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DoorKing 9150 Gate Operator Manual (AE Gates copy)\" (host: www.aegates.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "DoorKing 9150 Installation / Owner's Manual (9150-065-M-5-18, board 4602-010 Rev AA+)",
+          "sourceUrl": "https://www.doorking.com/wp-content/uploads/2018/05/9150-065-M-5-18.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "doorking.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DoorKing 9150 Installation / Owner's Manual (9150-065-M-5-18, board 4602-010 Rev AA+)\" (host: www.doorking.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "DoorKing 9150 Installation / Owner's Manual (9150-065-U-7-12)",
+          "sourceUrl": "https://manualzz.com/doc/9899949/doorking-9150-sliding-gate-opener-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualzz.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DoorKing 9150 Installation / Owner's Manual (9150-065-U-7-12)\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "DoorKing 9150 Installation / Owner's Manual (9150-065-X-4-14, board 4602-010 Rev A+)",
+          "sourceUrl": "https://www.doorking.com/wp-content/uploads/2014/04/9150-065-X-4-14.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "doorking.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DoorKing 9150 Installation / Owner's Manual (9150-065-X-4-14, board 4602-010 Rev A+)\" (host: www.doorking.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DoorKing 9150 Manual (DoorKing Gate Openers copy)",
+          "sourceUrl": "https://www.doorkinggateopeners.com/pdf/9150-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "doorkinggateopeners.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DoorKing 9150 Manual (DoorKing Gate Openers copy)\" (host: www.doorkinggateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "QUICK_START",
+          "title": "DoorKing 9150 Quick Start (9150-066-J-10-16)",
+          "sourceUrl": "https://jmacfiles.s3.amazonaws.com/9150-066-J-10-16_Quickstart_11x17.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "jmacfiles.s3.amazonaws.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DoorKing 9150 Quick Start (9150-066-J-10-16)\" (host: jmacfiles.s3.amazonaws.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "DoorKing 9150 Series Installation and Owner's Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2009973/Doorking-9150-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "US",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DoorKing 9150 Series Installation and Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "Gate Operators and Entry Systems",
       "name": "DoorKing Gate Operators and Entry Systems",
       "category": "gate-motors",

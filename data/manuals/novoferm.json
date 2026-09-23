@@ -30,6 +30,27 @@
       ]
     },
     {
+      "modelCode": "N-563 S",
+      "name": "Novoferm N-563 S",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Novoferm N-563 S Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Novoferm-N-563-S-11737507.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Novoferm N-563 S Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "Novogate",
       "name": "Novoferm Tormatic Novogate",
       "category": "gate-motors",
@@ -146,6 +167,51 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Novoferm Novomatic 553 Installation, Operating and Maintenance Instructions\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "NOVOMATIC 563 S",
+      "name": "Novoferm NOVOMATIC 563 S",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Novoferm Novomatic 563 S Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1117622/Novoferm-Novomatic-563-S.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Novoferm Novomatic 563 S Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Novoferm Novomatic 563 S Manual (Manualzz)",
+          "sourceUrl": "https://manualzz.com/doc/en/4468314/novoferm-novomatic-563-s-manual",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualzz.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Novoferm Novomatic 563 S Manual (Manualzz)\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Novoferm Novomatic 563 S Manuals",
+          "sourceUrl": "https://www.manualslib.com/products/Novoferm-Novomatic-563-S-4189215.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Novoferm Novomatic 563 S Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

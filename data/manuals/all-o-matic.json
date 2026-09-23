@@ -2,23 +2,25 @@
   "manufacturer": {
     "name": "All-O-Matic",
     "slug": "all-o-matic",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "US",
+    "website": "https://www.allomatic.net/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "AC Slide Gate Operators",
       "name": "All-O-Matic AC Slide Gate Operators",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
           "kind": "TECHNICAL_DOCUMENT",
           "title": "All-O-Matic UL AC Slide Gate Operators Manual (09.2022)",
           "sourceUrl": "https://allomatic.net/wp-content/uploads/2022/10/AC-SLIDE-MANUAL-09.2022.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "allomatic.net",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"All-O-Matic UL AC Slide Gate Operators Manual (09.2022)\" (host: allomatic.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -30,16 +32,16 @@
       "modelCode": "DC Slide Gate Operators",
       "name": "All-O-Matic DC Slide Gate Operators",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
           "kind": "TECHNICAL_DOCUMENT",
           "title": "All-O-Matic UL DC Slide Gate Operators Manual (02.2019)",
           "sourceUrl": "https://allomatic.net/gate-operator-manuals/sliders/allomatic-dc-slide-gate-operators-manual.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "allomatic.net",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"All-O-Matic UL DC Slide Gate Operators Manual (02.2019)\" (host: allomatic.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -51,7 +53,7 @@
       "modelCode": "Gate Operators",
       "name": "All-O-Matic Gate Operators",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -60,7 +62,7 @@
           "sourceUrl": "https://www.aegates.com/all-o-matic-gate-operator-manuals/",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "aegates.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"All-O-Matic Gate Operator Manuals Index\" (host: www.aegates.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -72,7 +74,7 @@
       "modelCode": "SL-100 AC",
       "name": "All-O-Matic SL-100 AC",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -81,7 +83,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1599601/All-O-Matic-Sl-100-Ac.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"All-O-Matic SL-100 AC Gate Opener Operator's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -93,16 +95,16 @@
       "modelCode": "SL-100 AC / SL-150 AC",
       "name": "All-O-Matic SL-100 AC / SL-150 AC",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
           "kind": "TECHNICAL_DOCUMENT",
           "title": "All-O-Matic SL-100 AC / SL-150 AC Slider Manual",
           "sourceUrl": "https://allomatic.net/gate-operator-manuals/sliders/sliders-sl100-ac-sl150-ac-manual.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "allomatic.net",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"All-O-Matic SL-100 AC / SL-150 AC Slider Manual\" (host: allomatic.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -114,7 +116,7 @@
       "modelCode": "SL-100 DC",
       "name": "All-O-Matic SL-100 DC",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -123,7 +125,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/3865248/All-O-Matic-Sl-100-Dc.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"All-O-Matic SL-100 DC Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -135,7 +137,7 @@
       "modelCode": "SL-100AC",
       "name": "All-O-Matic SL-100AC",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -144,7 +146,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/3011182/All-O-Matic-Sl-100ac.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"All-O-Matic SL-100AC Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -156,16 +158,16 @@
       "modelCode": "SW-300DC / SW-325DC / SW-350DC",
       "name": "All-O-Matic SW-300DC / SW-325DC / SW-350DC",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "All-O-Matic SW-300DC, SW-325DC, SW-350DC Installation Manual",
           "sourceUrl": "https://allomatic.net/gate-operator-manuals/swingers/swinger-sw-300-325-350DC-manual.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "allomatic.net",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"All-O-Matic SW-300DC, SW-325DC, SW-350DC Installation Manual\" (host: allomatic.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -177,7 +179,7 @@
       "modelCode": "SW-350",
       "name": "All-O-Matic SW-350",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -186,7 +188,7 @@
           "sourceUrl": "https://ismartgate.com/manuals/All-O-Matic_SW-350_manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "ismartgate.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"All-O-Matic SW-350 AC Swing Gate Operator Manual (09.2022)\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -198,7 +200,7 @@
       "modelCode": "SW300AC / SW350AC",
       "name": "All-O-Matic SW300AC / SW350AC",
       "category": "gate-motors",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -207,7 +209,7 @@
           "sourceUrl": "https://www.aegates.com/wp-content/uploads/2021/07/all-o-matic-gate-operator-sw300ac-sw350ac-gate-manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "aegates.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"All-O-Matic SW300AC, SW350AC Gate Operator Manual\" (host: www.aegates.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

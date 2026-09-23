@@ -2,23 +2,25 @@
   "manufacturer": {
     "name": "Janus International",
     "slug": "janus-international",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "US",
+    "website": "https://www.janusintl.com/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "1000",
       "name": "Janus International 1000",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
           "title": "Janus 1000 Rolling Door Installation Guide",
           "sourceUrl": "https://www.janusintl.com/hubfs/Installation%20Guides/1000%20INSTALLATION%20GUIDE..pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "janusintl.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Janus 1000 Rolling Door Installation Guide\" (host: www.janusintl.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -30,7 +32,7 @@
       "modelCode": "1100 SERIES",
       "name": "Janus International 1100 SERIES",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -39,7 +41,7 @@
           "sourceUrl": "https://manuals.plus/m/74bab02578be369927cf387221c4b576bb75e55a4b397987c91720a32ae70065",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manuals.plus",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Janus 1100 Series Rolling Door Installation Guide\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -51,7 +53,7 @@
       "modelCode": "1950HD",
       "name": "Janus International 1950HD",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -60,7 +62,7 @@
           "sourceUrl": "https://manuals.plus/m/699075d55b09f7bcbdff7228070db7546e0c92afcf8bbc89b318418667e3404a",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manuals.plus",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Janus 1950HD Rolling Sheet Door Installation Guide\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -72,7 +74,7 @@
       "modelCode": "2000",
       "name": "Janus International 2000",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -81,7 +83,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1877401/Janus-2000.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Janus 2000 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -93,7 +95,7 @@
       "modelCode": "650",
       "name": "Janus International 650",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -102,7 +104,7 @@
           "sourceUrl": "https://cdn2.hubspot.net/hubfs/4335336/Installation%20Guides/650-Installation-Guide.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "cdn2.hubspot.net",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Janus 650 Self Storage Unit Doors Installation Guide\" (host: cdn2.hubspot.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -114,7 +116,7 @@
       "modelCode": "PANTHEON COMMERCIAL",
       "name": "Janus International PANTHEON COMMERCIAL",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -123,7 +125,7 @@
           "sourceUrl": "https://cdn2.hubspot.net/hubfs/4335336/janus_2019/pdf/Pantheon-Commercial-Installation-Guide.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "cdn2.hubspot.net",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Janus Pantheon Commercial Installation Guide\" (host: cdn2.hubspot.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -135,16 +137,16 @@
       "modelCode": "Rolling Doors",
       "name": "Janus International Rolling Doors",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
           "kind": "TECHNICAL_DOCUMENT",
           "title": "Janus International Resources Index (installation, warranties)",
           "sourceUrl": "https://www.janusintl.com/about/resources",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "janusintl.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Janus International Resources Index (installation, warranties)\" (host: www.janusintl.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

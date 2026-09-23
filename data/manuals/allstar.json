@@ -2,14 +2,15 @@
   "manufacturer": {
     "name": "Allstar",
     "slug": "allstar",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "US",
+    "note": "Added by ingest-list from research findings. Country filled in afterwards. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "3000",
       "name": "Allstar 3000",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -18,7 +19,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/445862/Allstar-3000.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Allstar 3000 Installation and Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -30,7 +31,7 @@
       "modelCode": "3000 / 3500 / 3500-P / J3500",
       "name": "Allstar 3000 / 3500 / 3500-P / J3500",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -39,7 +40,7 @@
           "sourceUrl": "https://www.gdcorp.com/allstar-3000-3500-3500-p-j3500-residential-door-opener-manual",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "gdcorp.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Allstar 3000, 3500, 3500-P, J3500 Residential Door Opener Manual\" (host: www.gdcorp.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -51,7 +52,7 @@
       "modelCode": "3500",
       "name": "Allstar 3500",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -60,7 +61,7 @@
           "sourceUrl": "https://www.manualslib.com/products/Allstar-3500-2762204.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Allstar 3500 Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -72,7 +73,7 @@
       "modelCode": "6000",
       "name": "Allstar 6000",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -81,7 +82,7 @@
           "sourceUrl": "https://archive.org/details/manualsonline-id-e55283d8-7520-4704-a278-818a4714e30e",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "archive.org",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Allstar Products Group Garage Door Opener 6000 User Guide\" (host: archive.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

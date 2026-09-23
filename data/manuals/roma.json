@@ -2,7 +2,9 @@
   "manufacturer": {
     "name": "ROMA",
     "slug": "roma",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "DE",
+    "website": "https://www.roma.de/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
@@ -37,7 +39,7 @@
           "kind": "USER_MANUAL",
           "title": "ROMA Operating and Maintenance Manual for Roller Shutters (5000990 BPA)",
           "sourceUrl": "https://www.roma.de/media/file/iv2ti6VPKE/020dc943/5000990_BPA_Rollladen_A5_ML_EN_02-2026.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "roma.de",
           "region": "EU",
           "rights": "LINK_ONLY",
@@ -58,7 +60,7 @@
           "kind": "TECHNICAL_DOCUMENT",
           "title": "ROMA Downloads / Multimedia Index",
           "sourceUrl": "https://www.roma.eu/en/downloads/multimedia",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "roma.eu",
           "region": "EU",
           "rights": "LINK_ONLY",

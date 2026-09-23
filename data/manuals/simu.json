@@ -2,23 +2,25 @@
   "manufacturer": {
     "name": "Simu",
     "slug": "simu",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "FR",
+    "website": "https://www.simu.com/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "DMI5",
       "name": "Simu DMI5",
       "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
           "kind": "USER_MANUAL",
           "title": "Simu DMI5 Wired Roller Shutter Motorization Instructions",
           "sourceUrl": "https://docs.simu.com/downloads/simu_v4/fipdmi5_en_a4_2p_2024.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "docs.simu.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Simu DMI5 Wired Roller Shutter Motorization Instructions\" (host: docs.simu.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -30,7 +32,7 @@
       "modelCode": "DMI5Hz",
       "name": "Simu DMI5Hz",
       "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -39,7 +41,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/1955927/Simu-Dmi5hz.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Simu DMI5Hz Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -51,7 +53,7 @@
       "modelCode": "DMI5Hz / DMI6Hz",
       "name": "Simu DMI5Hz / DMI6Hz",
       "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -60,7 +62,7 @@
           "sourceUrl": "https://rollac.com/wp-content/uploads/downloads/Downloads/Shutter%20Support/Wiring%20Diagrams%20and%20Limit%20Switch%20Adjustments/Simu/simu_dmi_hz_motor_instructions.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "rollac.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Simu DMI5Hz - DMI6Hz Motor Instructions\" (host: rollac.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -72,16 +74,16 @@
       "modelCode": "T3.5 / T5",
       "name": "Simu T3.5 / T5",
       "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
           "kind": "SPEC_SHEET",
           "title": "Simu Progressive End-Limit System Wired Motor T3.5 - T5 Technical Data Sheet",
           "sourceUrl": "https://docs.simu.com/downloads/simu_v4/technicaldata_sheet_t5_-_gb.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "docs.simu.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Simu Progressive End-Limit System Wired Motor T3.5 - T5 Technical Data Sheet\" (host: docs.simu.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -93,7 +95,7 @@
       "modelCode": "T5 DMI",
       "name": "Simu T5 DMI",
       "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -102,7 +104,7 @@
           "sourceUrl": "https://wpstaq-ap-southeast-2-media.s3.amazonaws.com/cwproducts/wp-content/uploads/media/2023/02/16-CWP020_SIMU_T5_DMI_Factsheet_Web.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "wpstaq-ap-southeast-2-media.s3.amazonaws.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Simu T5 DMI 240V Wired Tubular Motor with Manual Override Factsheet\" (host: wpstaq-ap-southeast-2-media.s3.amazonaws.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -114,7 +116,7 @@
       "modelCode": "T5 E Hz",
       "name": "Simu T5 E Hz",
       "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -123,7 +125,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/2077165/Simu-T5-E-Hz.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Simu T5 E Hz Tubular Operator Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -135,7 +137,7 @@
       "modelCode": "T5Hz.02+ / T6Hz.02+",
       "name": "Simu T5Hz.02+ / T6Hz.02+",
       "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -144,7 +146,7 @@
           "sourceUrl": "https://rollac.com/wp-content/uploads/downloads/Downloads/Shutter%20Support/Wiring%20Diagrams%20and%20Limit%20Switch%20Adjustments/Simu/simu_hz_motor_instructions.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "rollac.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Simu T5Hz.02+ / T6Hz.02+ Motor Instructions\" (host: rollac.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

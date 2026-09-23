@@ -2,14 +2,15 @@
   "manufacturer": {
     "name": "Multi-Code",
     "slug": "multi-code",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "US",
+    "note": "Added by ingest-list from research findings. Country filled in afterwards. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "3060 Transmitter",
       "name": "Multi-Code 3060 Transmitter",
       "category": "remotes-accessories",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -18,7 +19,7 @@
           "sourceUrl": "https://www.bbfco.com/wp-content/uploads/2019/05/MULTICODE-TRANS-3060.pdf",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "bbfco.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Multi-Code / Linear / Stanley Garage Door Opener Remote Manual (3060)\" (host: www.bbfco.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -30,7 +31,7 @@
       "modelCode": "Garage Door Openers",
       "name": "Multi-Code Garage Door Openers",
       "category": "garage-door-openers",
-      "region": "UNKNOWN",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
@@ -39,7 +40,7 @@
           "sourceUrl": "https://shopactiondirect.com/multi-code-product-manuals/",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "shopactiondirect.com",
-          "region": "UNKNOWN",
+          "region": "US",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Linear Multi-Code Garage Door Opener Parts Manuals Index\" (host: shopactiondirect.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

@@ -2,7 +2,9 @@
   "manufacturer": {
     "name": "Silvelox",
     "slug": "silvelox",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "IT",
+    "website": "https://www.silvelox.it/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
@@ -16,7 +18,7 @@
           "kind": "TECHNICAL_DOCUMENT",
           "title": "Silvelox Group Documentation Index",
           "sourceUrl": "https://www.silvelox.it/en/documentation/",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "silvelox.it",
           "region": "EU",
           "rights": "LINK_ONLY",

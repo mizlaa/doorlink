@@ -9,6 +9,27 @@
   },
   "models": [
     {
+      "modelCode": "POWERSWING",
+      "name": "Besam POWERSWING",
+      "category": "automatic-pedestrian-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Besam PowerSwing Installation Manual",
+          "sourceUrl": "https://d3eu1jnerk19h.cloudfront.net/documents/Besam-Powerswing-Installation-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "d3eu1jnerk19h.cloudfront.net",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Besam PowerSwing Installation Manual\" (host: d3eu1jnerk19h.cloudfront.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "SL500",
       "name": "Besam SL500 Sliding Door Operator",
       "category": "automatic-pedestrian-doors",
@@ -131,6 +152,99 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"ASSA ABLOY SL500 Telescopic Owner's Manual Rev 2.0\" (host: www.assaabloyentrance.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SW100",
+      "name": "Besam SW100",
+      "category": "automatic-pedestrian-doors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "ASSA ABLOY Besam SW100 Installation and Service Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/3063597/Assa-Abloy-Besam-Sw100.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ASSA ABLOY Besam SW100 Installation and Service Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASSA ABLOY Besam SW100 Owner's Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2455105/Assa-Abloy-Besam-Sw100.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ASSA ABLOY Besam SW100 Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASSA ABLOY SW100 Swing Door Operator User Manual (EN)",
+          "sourceUrl": "https://www.assaabloyentrance.com/master-blueprint/en/product-assets/automatic-doors/sw100/downloads/user-manuals/User%20manual%20-%20ASSA%20ABLOY%20-%20SW100%20-%20Swing%20Door%20Operator%20-%20en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "assaabloyentrance.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ASSA ABLOY SW100 Swing Door Operator User Manual (EN)\" (host: www.assaabloyentrance.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Besam Low Energy Swing Door Operator SW100 Installation and Service Manual (Internet Archive)",
+          "sourceUrl": "https://archive.org/details/manualzilla-id-6039055",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "archive.org",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Besam Low Energy Swing Door Operator SW100 Installation and Service Manual (Internet Archive)\" (host: archive.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Besam Low Energy Swing Door Operator SW100 Installation Manual",
+          "sourceUrl": "https://s3.amazonaws.com/s3-absupply-net/pdf/SW100%20Installation%20Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "s3.amazonaws.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Besam Low Energy Swing Door Operator SW100 Installation Manual\" (host: s3.amazonaws.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Besam SW 100 Installation and Service Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/3043821/Besam-Sw-100.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Besam SW 100 Installation and Service Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Besam SW100 Low Energy Swing Door Operator Manual",
+          "sourceUrl": "https://www.addisonautomatics.com/wp-content/uploads/manuals/besam/Swinger/Besam%20SW100%20Low%20energy%20swing.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "addisonautomatics.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Besam SW100 Low Energy Swing Door Operator Manual\" (host: www.addisonautomatics.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

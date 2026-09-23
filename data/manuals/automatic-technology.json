@@ -47,6 +47,30 @@
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"ATA Australia Installation Manuals Index\" (host: www.automatictechnology.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Automatic Technology Australia Installation Manuals Index (National Garage)",
+          "sourceUrl": "https://garagedooropenerremotes.com.au/manuals-and-downloads/automatic-technology-australia-manuals",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "garagedooropenerremotes.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Automatic Technology Australia Installation Manuals Index (National Garage)\" (host: garagedooropenerremotes.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Automatic Technology Australia Manuals Index (ManualsLib)",
+          "sourceUrl": "https://www.manualslib.com/brand/automatic-technology-australia/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Automatic Technology Australia Manuals Index (ManualsLib)\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -516,6 +540,48 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"GDO-9v2 SecuraLift Installation Instructions (Owners Copy)\" (host: irp-cdn.multiscreensite.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SGO-2v4 EasySlider",
+      "name": "Automatic Technology SGO-2v4 EasySlider",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Automatic Technology EasySlider SGO-2v4 Sliding Gate Opener Owners Copy",
+          "sourceUrl": "https://www.gatesplus.com.au/pdf/SGO-2v4-EasySlider-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "gatesplus.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Automatic Technology EasySlider SGO-2v4 Sliding Gate Opener Owners Copy\" (host: www.gatesplus.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SGO-4 / SGO-5",
+      "name": "Automatic Technology SGO-4 / SGO-5",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Automatic Technology Secure Swing Gate Opener SGO-4 / SGO-5 Manual (draft edition)",
+          "sourceUrl": "https://www.aggdoors.com.au/wp-content/uploads/2015/09/ATA-Draft-SGO4-5-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "aggdoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Automatic Technology Secure Swing Gate Opener SGO-4 / SGO-5 Manual (draft edition)\" (host: www.aggdoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

@@ -2,7 +2,9 @@
   "manufacturer": {
     "name": "Gaposa",
     "slug": "gaposa",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "IT",
+    "website": "https://www.gaposa.it/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
@@ -16,7 +18,7 @@
           "kind": "QUICK_START",
           "title": "Gaposa Tubular Motors with Mechanical Limit Switch Quick Reference (EN)",
           "sourceUrl": "https://www.gaposa.it/media/1376/xq-mx-qr-en.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "gaposa.it",
           "region": "EU",
           "rights": "LINK_ONLY",
@@ -30,7 +32,7 @@
       "modelCode": "XQ 50",
       "name": "Gaposa XQ 50",
       "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -39,7 +41,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/3003603/Gaposa-Xq-50.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Gaposa XQ 50 Tubular Motor with Manual Override Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -58,7 +60,7 @@
           "kind": "QUICK_START",
           "title": "Gaposa XQ P Tubular Motors with Mechanical Limit Switch and Manual Override Quick Reference (EN)",
           "sourceUrl": "https://www.gaposa.it/media/1433/xq-p-qr-en.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "gaposa.it",
           "region": "EU",
           "rights": "LINK_ONLY",
@@ -72,7 +74,7 @@
       "modelCode": "XQ40 / XS40 Series",
       "name": "Gaposa XQ40 / XS40 Series",
       "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -81,7 +83,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/3009165/Gaposa-Xq40.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Gaposa XQ40 Tubular Motor Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
@@ -93,7 +95,7 @@
       "modelCode": "XQ50 / XQ60",
       "name": "Gaposa XQ50 / XQ60",
       "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
@@ -102,7 +104,7 @@
           "sourceUrl": "https://www.manualslib.com/manual/3229369/Gaposa-Xq50.html",
           "origin": "THIRD_PARTY_GUIDE",
           "publisher": "manualslib.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Gaposa XQ50 Tubular Motor Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",

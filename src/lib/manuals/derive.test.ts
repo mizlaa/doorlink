@@ -145,6 +145,26 @@ describe('originFor', () => {
     )
   })
 
+  it('recognises the same brand under another country’s domain', () => {
+    expect(originFor('www.hormann.co.uk', 'https://www.hormann.com/')).toBe('MANUFACTURER_ORIGINAL')
+    expect(originFor('recorddoors.com.au', 'https://www.recorddoors.com/')).toBe(
+      'MANUFACTURER_ORIGINAL',
+    )
+    expect(originFor('docs.came.com', 'https://www.came.com/')).toBe('MANUFACTURER_ORIGINAL')
+  })
+
+  it('is not fooled by a host that merely leads with the brand', () => {
+    // Both were real records: an aggregator filing each brand under its
+    // own subdomain, and a dealer doing the same. Matching on the first
+    // label marked their copies as the manufacturer's own.
+    expect(originFor('marantec.manymanuals.com', 'https://www.marantec.com/')).toBe(
+      'THIRD_PARTY_GUIDE',
+    )
+    expect(originFor('manusa.parkan.ua', 'https://www.manusa.com/')).toBe('THIRD_PARTY_GUIDE')
+    // A brand name under a generic TLD is as easily anyone's.
+    expect(originFor('faac.help', 'https://www.faac.it/')).toBe('THIRD_PARTY_GUIDE')
+  })
+
   it('does not guess when the manufacturer has no website on file', () => {
     expect(originFor('www.manualslib.com', null)).toBe('THIRD_PARTY_GUIDE')
     expect(originFor('www.manualslib.com', undefined)).toBe('THIRD_PARTY_GUIDE')

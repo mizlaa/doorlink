@@ -2,7 +2,9 @@
   "manufacturer": {
     "name": "Alpha Deuren",
     "slug": "alpha-deuren",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "NL",
+    "website": "https://www.alpha-deuren.nl/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
@@ -16,7 +18,7 @@
           "kind": "INSTALL_MANUAL",
           "title": "Alpha Deuren Sectional Overhead Doors Installation and Maintenance Manual (EN)",
           "sourceUrl": "https://www.alpha-deuren.nl/app/uploads/2020/03/SectionaloverheaddoorsGBAlpha20220602.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "alpha-deuren.nl",
           "region": "EU",
           "rights": "LINK_ONLY",

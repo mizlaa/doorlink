@@ -2,23 +2,25 @@
   "manufacturer": {
     "name": "Alukon",
     "slug": "alukon",
-    "note": "Added by ingest-list from research findings. Country, website and support URL are unset because they were not established at the time — fill them in when this manufacturer is next looked at directly."
+    "country": "DE",
+    "website": "https://www.alukon.com/",
+    "note": "Added by ingest-list from research findings. Country and website filled in afterwards — the website from the host of the manufacturer's own documents. Support URL not yet established."
   },
   "models": [
     {
       "modelCode": "Roller Shutter Systems",
       "name": "Alukon Roller Shutter Systems",
       "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
+      "region": "EU",
       "aliases": [],
       "documents": [
         {
           "kind": "TECHNICAL_DOCUMENT",
           "title": "Alukon Technisches Handbuch (Technical Manual)",
           "sourceUrl": "https://www.alukon.com/fileadmin/user_upload/haendlerbereich/Verkaufsfoerderung/Technisches_Handbuch.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
+          "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "alukon.com",
-          "region": "UNKNOWN",
+          "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Alukon Technisches Handbuch (Technical Manual)\" (host: www.alukon.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
