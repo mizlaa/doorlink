@@ -35,18 +35,6 @@
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
-          "title": "Silvelox Overlap 2.0 Installation Manual",
-          "sourceUrl": "https://manualzz.com/doc/5284446/silvelox-overlap-2.0-sectional-garage-door-installation-m...",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualzz.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Silvelox Overlap 2.0 Installation Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
           "title": "Silvelox Overlap 2.0 Sectional Garage Door Installation Manual",
           "sourceUrl": "https://www.thegaragedoorcentre.co.uk/userfiles/downloads/installation_manual_overlap_2_0___1__32113.pdf",
           "origin": "THIRD_PARTY_GUIDE",

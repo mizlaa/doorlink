@@ -698,7 +698,9 @@ HySecurity | SLIDEDRIVER II 200V | HySecurity SlideDriver II 200V Slide Gate Ope
 HySecurity | SlideDriver II Digital | SlideDriver II Digital Installation Manual | https://support.hysecurity.com/hc/en-us/articles/12744444976151-SlideDriver-II-Digital-Installation-Manual
 Hörmann | Control 545 FU | Hormann Control 545 FU Instructions (4514547 B1) | https://hormann.co.uk/media-centre/download/220232sv/4514547_B1_Steuerung_545_FU_EN_komprimiert_.pdf
 Hörmann | ECOSTAR LIFTRONIC | Hormann EcoStar Liftronic Operators Instructions for Fitting, Operating and Maintenance (TR10L0015) | https://www.thegaragedoorcentre.co.uk/download/Hormann%20Ecostar%20Liftronic%20Operators.pdf
-Hörmann | ECOSTAR LIFTRONIC 500 | Hormann EcoStar Liftronic 500 Garage Door Opener Owner's Manual | https://manualzz.com/doc/6032843/h%C3%B6rmann-ecostar-liftronic-500-garage-door-opener-owner-s-...
+Hörmann | ECOSTAR LIFTRONIC 500 | Hörmann EcoStar Liftronic 500 Instructions for Fitting, Operating and Maintenance | https://www.manualslib.com/products/Ecostar-Liftronic-500-8742002.html
+Hörmann | ECOSTAR LIFTRONIC 500 | Hörmann EcoStar Liftronic 500 Manual (EasyGates) | https://manuals.easygates.co.uk/hormann-ecostar-liftronic-500-manual/
+Hörmann | ECOSTAR LIFTRONIC 500-2 | Hörmann EcoStar Liftronic 500-2 Garage Door Opener User Manual | https://manuals.plus/asin/B08HV29YTZ
 Hörmann | Entrance Gate Operators | Hörmann Entrance Gate Operators Documentation | https://www.thegaragedoorcentre.co.uk/download/Hormann%20gate%20operators.pdf
 Hörmann | FCT3b | Hörmann Covered Wireless Keypad Model FCT3b Owner's Manual and Instructions | https://www.hormann.us/residential/openers/hoermann-silentdrive-garage-door-openers/dfp/26028/2fe8c0d68a0419ba949fd63842546b444d4240e1f5a2ce260eacc3c7/download-file/
 Hörmann | Garage Door and Gate Operators | Hormann Garage Door and Entrance Gate Operators Catalogue (85945 EN-UK) | https://www.hoermann.com/fileadmin/_country/kataloge/pdf/85945-Garage_Door_and_Entrance_Gate_Operators_EN-UK.pdf
@@ -722,7 +724,11 @@ Hörmann | ProMatic Series 4 | Hörmann ProMatic Series 4 Garage Door Operator I
 Hörmann | Rolling Shutters and Grilles | Hormann Rolling Shutters and Rolling Grilles Documentation (84555) | https://www.hormann.co.uk/fileadmin/_country/kataloge/pdf/84555-Rolltore_und_Rollgitter-EN.pdf
 Hörmann | ROLLMATIC | Hormann RollMatic Operator Fitting Instructions | https://www.thegaragedoorcentre.co.uk/download/Hormann%20Rollmatic%20Operator%20Fitting%20Instructions.pdf
 Hörmann | ROLLMATIC | Hormann RollMatic Operators Instructions (TR10A073-B) | https://www.garagedoorsonline.co.uk/userfiles/download/Hormann%20Rollmatic%20Operators.pdf
-Hörmann | ROTAMATIC | Hormann RotaMatic Gate Operator Installation Instructions (07.10) | https://manualzz.com/doc/en/9971950/hormann-rotamatic-gate-operator-installation-instructions...
+Hörmann | ROTAMATIC | Hörmann RotaMatic Hinged Gate Operator Installation, Operating and Maintenance Instructions | http://vorot.net/fileadmin/pdf/Instrukcii-po-montazhu/RotaMatic.pdf
+Hörmann | ROTAMATIC | Hörmann RotaMatic Instructions for Fitting, Operating and Maintenance (TR10A077) | https://www.hormann.fr/fileadmin/_country/dok/TR10A077_Motorisation_pour_portail_d_entree_pivotant_RotaMatic_EN_FR.pdf
+Hörmann | ROTAMATIC | Hörmann RotaMatic Instructions for Fitting, Operating and Maintenance (TR10A270) | https://www.torshop-24.de/mediafiles/pdf/Hoermann-RotaMatic-Manual-EnglishdwZJbNRTCmxEM.pdf
+Hörmann | ROTAMATIC 2 | Hörmann RotaMatic 2 Instructions for Fitting, Operating and Maintenance (TR10A141) | https://www.vonmag.ro/datasheet/datasheet-RotaMatic-2-244.pdf
+Hörmann | ROTAMATIC 2 SK BiSecur | Hörmann RotaMatic 2 SK BiSecur Swing Gate Operator Kit Instruction Manual | https://manuals.plus/asin/B00TYDG19I
 Hörmann | Sectional Garage Doors | Hormann Sectional Garage Doors Instructions (EBD 84607) | https://www.hormann.co.uk/media-centre/download/311111en/02_EN_EBD_84607_Garage_Sektionaltor.pdf
 Hörmann | SilentDrive 8500 | SilentDrive 8500 Installation Instructions & Owner's Manual | https://ismartgate.com/manuals/Hrmann_SilentDrive_8500_manual.pdf
 Hörmann | SPU F42 | Industrial Sectional Door SPU F42 - Product Catalogue (EN) | https://cdn.hoermann-cloud.de/fileadmin/_country/kataloge/pdf/86786_Ind_Sec_Doors_SPU_F42_EN.pdf?v=1508834138
@@ -1215,7 +1221,6 @@ SEA | LEPUS | SEA Lepus Series Quick Start Manual | https://www.manualslib.com/m
 SEA | ORION | SEA Orion Box Chain Sliding Gate Operator Manual | https://laornamental.com/pdf-files/SEA/SEA-Orion-Box-Chain-Sliding-Gate-Operator-Manual.pdf
 SEAV | LRS 2102 | SEAV LRS 2102 Electronic Control Unit Manual | https://ismartgate.com/manuals/SEAV_LRS_2102_manual.pdf
 Silvelox | Garage Doors | Silvelox Group Documentation Index | https://www.silvelox.it/en/documentation/
-Silvelox | OVERLAP 2.0 | Silvelox Overlap 2.0 Installation Manual | https://manualzz.com/doc/5284446/silvelox-overlap-2.0-sectional-garage-door-installation-m...
 Silvelox | OVERLAP 2.0 | Silvelox Overlap 2.0 Sectional Garage Door Installation Manual | https://www.thegaragedoorcentre.co.uk/userfiles/downloads/installation_manual_overlap_2_0___1__32113.pdf
 Simu | DMI5 | Simu DMI5 Wired Roller Shutter Motorization Instructions | https://docs.simu.com/downloads/simu_v4/fipdmi5_en_a4_2p_2024.pdf
 Simu | DMI5Hz | Simu DMI5Hz Manual | https://www.manualslib.com/manual/1955927/Simu-Dmi5hz.html

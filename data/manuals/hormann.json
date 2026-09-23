@@ -58,15 +58,48 @@
       "aliases": [],
       "documents": [
         {
-          "kind": "USER_MANUAL",
-          "title": "Hormann EcoStar Liftronic 500 Garage Door Opener Owner's Manual",
-          "sourceUrl": "https://manualzz.com/doc/6032843/h%C3%B6rmann-ecostar-liftronic-500-garage-door-opener-owner-s-...",
+          "kind": "INSTALL_MANUAL",
+          "title": "Hörmann EcoStar Liftronic 500 Instructions for Fitting, Operating and Maintenance",
+          "sourceUrl": "https://www.manualslib.com/products/Ecostar-Liftronic-500-8742002.html",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualzz.com",
+          "publisher": "manualslib.com",
           "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Hormann EcoStar Liftronic 500 Garage Door Opener Owner's Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "evidence": "Recorded from a web search result naming this URL as \"Hörmann EcoStar Liftronic 500 Instructions for Fitting, Operating and Maintenance\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Hörmann EcoStar Liftronic 500 Manual (EasyGates)",
+          "sourceUrl": "https://manuals.easygates.co.uk/hormann-ecostar-liftronic-500-manual/",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.easygates.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hörmann EcoStar Liftronic 500 Manual (EasyGates)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ECOSTAR LIFTRONIC 500-2",
+      "name": "Hörmann ECOSTAR LIFTRONIC 500-2",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hörmann EcoStar Liftronic 500-2 Garage Door Opener User Manual",
+          "sourceUrl": "https://manuals.plus/asin/B08HV29YTZ",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hörmann EcoStar Liftronic 500-2 Garage Door Opener User Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -525,14 +558,80 @@
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
-          "title": "Hormann RotaMatic Gate Operator Installation Instructions (07.10)",
-          "sourceUrl": "https://manualzz.com/doc/en/9971950/hormann-rotamatic-gate-operator-installation-instructions...",
+          "title": "Hörmann RotaMatic Hinged Gate Operator Installation, Operating and Maintenance Instructions",
+          "sourceUrl": "http://vorot.net/fileadmin/pdf/Instrukcii-po-montazhu/RotaMatic.pdf",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualzz.com",
+          "publisher": "vorot.net",
           "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Hormann RotaMatic Gate Operator Installation Instructions (07.10)\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "evidence": "Recorded from a web search result naming this URL as \"Hörmann RotaMatic Hinged Gate Operator Installation, Operating and Maintenance Instructions\" (host: vorot.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Hörmann RotaMatic Instructions for Fitting, Operating and Maintenance (TR10A077)",
+          "sourceUrl": "https://www.hormann.fr/fileadmin/_country/dok/TR10A077_Motorisation_pour_portail_d_entree_pivotant_RotaMatic_EN_FR.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "hormann.fr",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hörmann RotaMatic Instructions for Fitting, Operating and Maintenance (TR10A077)\" (host: www.hormann.fr). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Hörmann RotaMatic Instructions for Fitting, Operating and Maintenance (TR10A270)",
+          "sourceUrl": "https://www.torshop-24.de/mediafiles/pdf/Hoermann-RotaMatic-Manual-EnglishdwZJbNRTCmxEM.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "torshop-24.de",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hörmann RotaMatic Instructions for Fitting, Operating and Maintenance (TR10A270)\" (host: www.torshop-24.de). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ROTAMATIC 2",
+      "name": "Hörmann ROTAMATIC 2",
+      "category": "garage-door-openers",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Hörmann RotaMatic 2 Instructions for Fitting, Operating and Maintenance (TR10A141)",
+          "sourceUrl": "https://www.vonmag.ro/datasheet/datasheet-RotaMatic-2-244.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "vonmag.ro",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hörmann RotaMatic 2 Instructions for Fitting, Operating and Maintenance (TR10A141)\" (host: www.vonmag.ro). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ROTAMATIC 2 SK BiSecur",
+      "name": "Hörmann ROTAMATIC 2 SK BiSecur",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Hörmann RotaMatic 2 SK BiSecur Swing Gate Operator Kit Instruction Manual",
+          "sourceUrl": "https://manuals.plus/asin/B00TYDG19I",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manuals.plus",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Hörmann RotaMatic 2 SK BiSecur Swing Gate Operator Kit Instruction Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

@@ -215,11 +215,46 @@ async function main() {
     }
   }
 
+  // Withdrawing a document the seed files no longer contain.
+  //
+  // Everything above is an upsert, which makes the seed files the source
+  // of truth for what exists but not for what has stopped existing: a
+  // record deleted from a seed file lived on in the database, invisible
+  // to the files and still served to anyone searching. That mattered the
+  // first time a link was removed for being broken — the audit pruned it
+  // from the seeds, the import reported success, and the dead link was
+  // still there to be clicked.
+  //
+  // Scoped to IMPORTED so the demo fixtures in prisma/seed.ts and
+  // anything a user submitted are untouched; this only withdraws what
+  // this script put there.
+  const seededUrls = new Set<string>()
+  for (const file of files) {
+    const raw = JSON.parse(readFileSync(join(DATA_DIR, file), 'utf8'))
+    const parsed = manufacturerFileSchema.safeParse(raw)
+    if (!parsed.success) continue
+    for (const model of parsed.data.models) {
+      for (const doc of model.documents) seededUrls.add(doc.sourceUrl)
+    }
+  }
+  const orphans = await prisma.document.findMany({
+    where: { dataSource: DataSource.IMPORTED, sourceUrl: { notIn: [...seededUrls] } },
+    select: { id: true, title: true, sourceUrl: true },
+  })
+  if (orphans.length > 0) {
+    await prisma.document.deleteMany({ where: { id: { in: orphans.map((o) => o.id) } } })
+  }
+
   console.log(
     `\nImported ${manufacturers} manufacturers, ${models} models, ${documents} documents, ` +
       `${aliases} aliases, ${altSources} alternate sources.`
   )
   console.log('Every document is UNVERIFIED. Run `npm run manuals:verify` where the network allows.')
+
+  if (orphans.length > 0) {
+    console.log(`\nWithdrew ${orphans.length} document(s) no longer in any seed file:`)
+    for (const o of orphans) console.log(`  ${o.title}`)
+  }
 
   if (gaps.length > 0) {
     console.log(`\n${gaps.length} model(s) recorded with no documentation:`)

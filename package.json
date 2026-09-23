@@ -17,6 +17,7 @@
     "test": "vitest run",
     "manuals:import": "tsx scripts/manuals/import.ts",
     "manuals:ingest": "tsx scripts/manuals/ingest-list.ts",
+    "manuals:audit": "tsx scripts/manuals/audit-links.ts",
     "manuals:verify": "tsx scripts/manuals/verify.ts",
     "manuals:report": "tsx scripts/manuals/report.ts",
     "manuals:harvest": "tsx scripts/manuals/harvest.ts"
