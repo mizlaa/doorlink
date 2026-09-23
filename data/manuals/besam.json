@@ -13,18 +13,24 @@
       "name": "Besam SL500 Sliding Door Operator",
       "category": "automatic-pedestrian-doors",
       "region": "US",
-      "aliases": ["SL 500", "SL500 CGL", "SL500 Resilience"],
+      "aliases": [
+        "SL 500",
+        "SL500 CGL",
+        "SL500 Resilience"
+      ],
       "documents": [
         {
           "kind": "USER_MANUAL",
           "title": "Besam SL500 Sliding Door Operator Owner's Manual, Rev US-2.0",
-          "revision": "Rev US-2.0",
           "sourceUrl": "https://www.assaabloyentrance.com/master-blueprint/en-us/product-assets/automatic-doors/sl500-cgl/user-manuals/ASSA%20ABLOY%20-%20SL500%20Owner's%20Manual%20Rev%20US-2.0.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "ASSA ABLOY Entrance Systems",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "On assaabloyentrance.com, under the sl500-cgl product's user-manuals path. Revision US-2.0 from the file name; the US prefix and the en-us path are why the region is US. Not fetched - egress blocked."
+          "language": "en",
+          "revision": "Rev US-2.0",
+          "evidence": "On assaabloyentrance.com, under the sl500-cgl product's user-manuals path. Revision US-2.0 from the file name; the US prefix and the en-us path are why the region is US. Not fetched - egress blocked.",
+          "altSources": []
         },
         {
           "kind": "INSTALL_MANUAL",
@@ -34,6 +40,7 @@
           "publisher": "Addison Automatics",
           "region": "US",
           "rights": "LINK_ONLY",
+          "language": "en",
           "evidence": "Distributor copy. No ASSA ABLOY-hosted installation manual for the SL500 surfaced - only the owner's manual above - so the installer-facing document stays third-party rather than being promoted to match it. Not fetched - egress blocked.",
           "altSources": [
             {
@@ -57,6 +64,30 @@
               "label": "Door Controls USA page for the SL500 Resilience variant"
             }
           ]
+        },
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASSA ABLOY Besam SL500 User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/2176690/Assa-Abloy-Besam-Sl500.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "manualslib.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ASSA ABLOY Besam SL500 User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Besam SL500 Installation and Service Manual Rev 4.0",
+          "sourceUrl": "https://d3eu1jnerk19h.cloudfront.net/documents/SL500-Install-Manual-Rev.-4.0-8-19-16.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "d3eu1jnerk19h.cloudfront.net",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Besam SL500 Installation and Service Manual Rev 4.0\" (host: d3eu1jnerk19h.cloudfront.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -65,7 +96,9 @@
       "name": "Besam SL500 T Sliding Door Operator",
       "category": "automatic-pedestrian-doors",
       "region": "US",
-      "aliases": ["SL500T"],
+      "aliases": [
+        "SL500T"
+      ],
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -75,7 +108,30 @@
           "publisher": "AB Supply",
           "region": "US",
           "rights": "LINK_ONLY",
-          "evidence": "Distributor copy. Kept as its own model rather than an SL500 alias because it has a manual of its own, which implies the T is a distinct build - though what the T denotes was not established. Not fetched - egress blocked."
+          "language": "en",
+          "evidence": "Distributor copy. Kept as its own model rather than an SL500 alias because it has a manual of its own, which implies the T is a distinct build - though what the T denotes was not established. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "SL500 Telescopic",
+      "name": "ASSA ABLOY Besam SL500 Telescopic",
+      "category": "automatic-pedestrian-doors",
+      "region": "UNKNOWN",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "ASSA ABLOY SL500 Telescopic Owner's Manual Rev 2.0",
+          "sourceUrl": "https://www.assaabloyentrance.com/master-blueprint/en-us/product-assets/automatic-doors/sl500-telescopic/downloads/user-manual/ASSA%20ABLOY%20SL500%20Telescopic%20Owner's%20Manual%20Rev%202.0.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "assaabloyentrance.com",
+          "region": "UNKNOWN",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"ASSA ABLOY SL500 Telescopic Owner's Manual Rev 2.0\" (host: www.assaabloyentrance.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     }

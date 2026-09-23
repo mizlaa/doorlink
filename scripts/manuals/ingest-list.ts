@@ -55,6 +55,30 @@ function evidenceFor(title: string, host: string): string {
   )
 }
 
+/**
+ * The first word of a manufacturer's name that actually identifies it.
+ *
+ * Used only to flag a possible duplicate, never to merge one. Three times
+ * now a research list has spelled a manufacturer differently from its
+ * hand-written seed — "Automatic Technology (ATA)" against "Automatic
+ * Technology", "ASSA ABLOY Besam" against "Besam", "Napoleon" against
+ * "Napoleon / Lynx" — and each time ingest quietly created a second
+ * manufacturer, splitting its manuals between two records. Merging on a
+ * shared word would be wrong as often as right: Centurion Systems and
+ * Centurion Garage Doors are two unrelated companies. So this flags and a
+ * person decides.
+ */
+function identifyingWord(name: string): string {
+  const words = name
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/\(.*?\)/g, ' ')
+    .split(/[^a-z0-9]+/)
+    .filter((w) => w.length >= 3 && !['the', 'assa', 'abloy'].includes(w))
+  return words[0] ?? ''
+}
+
 type Row = { manufacturer: string; model: string; title: string; url: string }
 
 function parseList(text: string, file: string): { rows: Row[]; bad: string[] } {
@@ -124,6 +148,7 @@ function main() {
   let refreshed = 0
   const touched = new Set<string>()
   const newManufacturers: string[] = []
+  const suspectSplits: string[] = []
 
   // Records this script wrote before, indexed so a re-run can correct
   // them. Kind, category, region and origin are all *derived* from the
@@ -199,6 +224,15 @@ function main() {
           },
           models: [],
         },
+      }
+      const word = identifyingWord(row.manufacturer)
+      const lookalikes = word
+        ? [...bySlug.values()]
+            .map((e) => e.data.manufacturer.name)
+            .filter((n) => identifyingWord(n) === word)
+        : []
+      if (lookalikes.length > 0) {
+        suspectSplits.push(`${row.manufacturer}  ~  ${lookalikes.join(', ')}`)
       }
       bySlug.set(slug, entry)
       byName.set(row.manufacturer.toLowerCase(), slug)
@@ -320,6 +354,16 @@ function main() {
   }
   if (newManufacturers.length > 0) {
     console.log(`New manufacturers (${newManufacturers.length}): ${newManufacturers.join(', ')}`)
+  }
+  if (suspectSplits.length > 0) {
+    console.error(
+      `\n${suspectSplits.length} new manufacturer(s) resemble one that already exists:`,
+    )
+    for (const s of suspectSplits) console.error(`  ${s}`)
+    console.error(
+      'If these are the same company, make the research list use the existing spelling, ' +
+        'delete the new seed file, and re-run. If they are different companies, ignore this.',
+    )
   }
   if (malformed.length > 0) {
     console.error(`\nSkipped ${malformed.length} malformed line(s): ${malformed.slice(0, 10).join(', ')}`)

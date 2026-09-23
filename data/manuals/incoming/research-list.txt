@@ -96,12 +96,6 @@ ASSA ABLOY Albany | RR200 | Operating Instructions, Albany High-Performance Door
 ASSA ABLOY Albany | RR300 | Albany RR300 Stainless Mechanical Install and Owner's Manual | https://www.cisco-eagle.com/uploads/AlbanyDoor-Interior/AlbanyRR300StainlessMechInstall-OwnersManual.pdf
 ASSA ABLOY Albany | RR300 FREEZE / RR300 CHILL | Albany RR300 Freeze and Chill Doors Mechanical Install and Owner's Manual | https://www.cisco-eagle.com/uploads/AlbanyDoor-Interior/AlbanyRR300Chill-FreezeMechInstallOwnersManual.pdf
 ASSA ABLOY Albany | RR3000 | ASSA ABLOY RR3000 Series High-Performance Door Product Leaflet | https://www.assaabloyentrance.com/master-blueprint/en/product-assets/high-speed-doors/rr3000-exterior-rigid/downloads/product-leaflets/Assa%20Abloy%20RR3000%20Series%20High-performance%20door%20-%20en.pdf
-ASSA ABLOY Besam | SL500 | ASSA ABLOY Besam SL500 User Manual | https://www.manualslib.com/manual/2176690/Assa-Abloy-Besam-Sl500.html
-ASSA ABLOY Besam | SL500 | Besam SL500 Installation and Service Manual Rev 4.0 | https://d3eu1jnerk19h.cloudfront.net/documents/SL500-Install-Manual-Rev.-4.0-8-19-16.pdf
-ASSA ABLOY Besam | SL500 | Besam SL500 Sliding Door Operator Installation and Service Manual | https://www.addisonautomatics.com/wp-content/uploads/manuals/besam/Slider/SL500.pdf
-ASSA ABLOY Besam | SL500 | Besam SL500 Sliding Door Operator Owner's Manual, Rev US-2.0 | https://www.assaabloyentrance.com/master-blueprint/en-us/product-assets/automatic-doors/sl500-cgl/user-manuals/ASSA%20ABLOY%20-%20SL500%20Owner's%20Manual%20Rev%20US-2.0.pdf
-ASSA ABLOY Besam | SL500 T | Besam SL500 T Sliding Door Operator Installation and Service Manual | https://absupply.net/pdf/Besam_SL500T_Installation_and_Service_Manual.pdf
-ASSA ABLOY Besam | SL500 Telescopic | ASSA ABLOY SL500 Telescopic Owner's Manual Rev 2.0 | https://www.assaabloyentrance.com/master-blueprint/en-us/product-assets/automatic-doors/sl500-telescopic/downloads/user-manual/ASSA%20ABLOY%20SL500%20Telescopic%20Owner's%20Manual%20Rev%202.0.pdf
 Automatic Systems | BL41 / BL4x | Automatic Systems BL4x Technical Manual (NAM-BL4x-MT-EN-C) | https://www.automatic-systems.com/wp-content/uploads/sites/6/2018/02/bl41-tm-en-3.pdf
 Automatic Systems | BL52 | Automatic Systems BL52 Operating Manual | https://www.manualslib.com/manual/1825133/Ier-Automatic-Systems-Bl52.html
 Automatic Systems | BL52 / BL53 | Automatic Systems BL52 / BL53 Electrical Rising Barrier Manual | https://elics.ru/files/instruction/automatic-systems/bl-52.pdf
@@ -188,6 +182,12 @@ Berner Torantriebe | GA103 | GA103 Garage Door Operator Instructions for Fitting
 Berner Torantriebe | GA203 | GA203 / GA403 Garage Door Operator Installation, Operating and Maintenance Instructions (EN) | https://www.berner-torantriebe.de/wp-content/uploads/2904660-EBA-GA203_403-englisch.pdf
 Berner Torantriebe | GA203 / GA204 / GA403 / GA404 | Berner Garage Door Operator Fitting, Operating and Maintenance Instructions | https://manuals.plus/m/74c567a2f69f928bd0b16995e8fc60ff09422c774c017b8e42aab9eca83e4250
 Berner Torantriebe | GA501 | Anleitung für Montage, Betrieb und Wartung - Garagentorantrieb GA501 v2, Rev. 1.3 (DEU) | https://www.berner-torantriebe.de/media/eba_ga501_v2__rev._1.3__deu.pdf
+Besam | SL500 | ASSA ABLOY Besam SL500 User Manual | https://www.manualslib.com/manual/2176690/Assa-Abloy-Besam-Sl500.html
+Besam | SL500 | Besam SL500 Installation and Service Manual Rev 4.0 | https://d3eu1jnerk19h.cloudfront.net/documents/SL500-Install-Manual-Rev.-4.0-8-19-16.pdf
+Besam | SL500 | Besam SL500 Sliding Door Operator Installation and Service Manual | https://www.addisonautomatics.com/wp-content/uploads/manuals/besam/Slider/SL500.pdf
+Besam | SL500 | Besam SL500 Sliding Door Operator Owner's Manual, Rev US-2.0 | https://www.assaabloyentrance.com/master-blueprint/en-us/product-assets/automatic-doors/sl500-cgl/user-manuals/ASSA%20ABLOY%20-%20SL500%20Owner's%20Manual%20Rev%20US-2.0.pdf
+Besam | SL500 T | Besam SL500 T Sliding Door Operator Installation and Service Manual | https://absupply.net/pdf/Besam_SL500T_Installation_and_Service_Manual.pdf
+Besam | SL500 Telescopic | ASSA ABLOY SL500 Telescopic Owner's Manual Rev 2.0 | https://www.assaabloyentrance.com/master-blueprint/en-us/product-assets/automatic-doors/sl500-telescopic/downloads/user-manual/ASSA%20ABLOY%20SL500%20Telescopic%20Owner's%20Manual%20Rev%202.0.pdf
 BFT | ARES | ARES Installation and User Manual | https://www.manualslib.com/manual/1333152/Bft-Ares.html
 BFT | ARES HQSC D | BFT Ares Installation and User's Manual | https://manuals.easygates.co.uk/PDF/bft/AresHQSCDEnglish06-11.pdf
 BFT | CELLULA 50 | BFT Cellula 50 Photocell Installation Manual | https://www.manualslib.com/manual/1327892/Bft-Cellula-50.html
@@ -967,7 +967,6 @@ NABCO Entrances | GT1175 | NABCO GT1175 Quick Setup Manual | https://www.manuals
 NABCO Entrances | GT1175 | NABCO GT1175 Slide Door Owner's Manual (C-00109) | http://www.nabcoentrances.com/wp-content/uploads/2017/06/C-00109-SlideOwnerManual-Rev-5-19-17.pdf
 NABCO Entrances | GT1175 All Glass | NABCO GT1175 All Glass Slide Door Installation Manual (C-00371) | https://www.nabcoentrances.com/wp-content/uploads/2020/08/C-00371-1175-AllGlass-Slide-Door-w_OPUS.pdf
 NABCO Entrances | GT1175 H105 | GT1175 (H105) Hurricane Installation Manual, Rev 1-16-19 | https://www.addisonautomatics.com/wp-content/uploads/manuals/nabco_gyrotech/1175%20Hurricane.pdf
-Napoleon | SDO800 | Napoleon SDO800 Installation Instructions and User Manual | https://www.manualslib.com/manual/927828/Napoleon-Sdo800.html
 Napoleon / Lynx | CDJ / CDJH / CDJB / CDJBH | Napoleon Lynx Commercial Jack Shaft Operator Owner's Manual | https://www.lynx-nsw.com/uploads/1/0/8/5/108596519/cdj_manual_100ta01t-02.pdf
 Napoleon / Lynx | Garage Door Openers | Napoleon / Lynx Garage Door Opener Parts Manuals Index | https://shopactiondirect.com/napoleon-lynx-product-manuals/
 Napoleon / Lynx | Garage Door Openers | Napoleon Lynx Product Manuals Index | https://www.stardoorparts.com/Napoleon-Lynx-Product-Manuals-s/422.htm
@@ -977,6 +976,7 @@ Napoleon / Lynx | LDT / LDTB | Napoleon Lynx Medium Duty Door Operator Owner's M
 Napoleon / Lynx | MCJ / MCJH / MCJB / MCJBH | Napoleon Lynx Medium Duty Jack Shaft Operator Owner's Manual | https://www.lynx-nsw.com/uploads/1/0/8/5/108596519/mcj_manual.pdf
 Napoleon / Lynx | MRAT LX100 | Napoleon Lynx MRAT Commercial Trolley Operator Owner's Manual | http://www.lynx-nsw.com/uploads/1/0/8/5/108596519/mrat_lx100.pdf
 Napoleon / Lynx | Residential | Napoleon Lynx Residential Garage Door Operator Owner's Manual (Rev C) | https://www.lynx-nsw.com/uploads/1/0/8/5/108596519/residential_manual_rev_c.pdf
+Napoleon / Lynx | SDO800 | Napoleon SDO800 Installation Instructions and User Manual | https://www.manualslib.com/manual/927828/Napoleon-Sdo800.html
 Nice | Barriers | Nice Barriers Download Index | https://www.niceforyou.com/en/download?t=479&l=16
 Nice | Electromechanical Road Barrier | Nice Road Barrier User, Installation and Safety Instructions (IDV0384A04EN) | https://www.niceforyou.com/sites/default/files/upload/manuals/idv0384a04en.pdf
 Nice | ERA FIT MHT | Nice Era Fit MHT Instruction Manual | https://www.manualslib.com/manual/1788551/Nice-Era-Fit-Mht.html
