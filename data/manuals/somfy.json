@@ -57,114 +57,6 @@
       ]
     },
     {
-      "modelCode": "DEXXO PRO 800",
-      "name": "Somfy DEXXO PRO 800",
-      "category": "roller-shutter-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Somfy Dexxo Pro 800 Installation Instruction",
-          "sourceUrl": "https://all-guidesbox.com/manual/2016844/somfy-dexxo-pro-800-installation-instruction-8.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "all-guidesbox.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Somfy Dexxo Pro 800 Installation Instruction\" (host: all-guidesbox.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Somfy Dexxo Pro 800 User Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2204232/Somfy-Dexxo-Pro-800.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Somfy Dexxo Pro 800 User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "DEXXO PRO 800 / 1000 RTS",
-      "name": "Somfy DEXXO PRO 800 / 1000 RTS",
-      "category": "roller-shutter-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Somfy Dexxo Pro 800 - 1000 RTS Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1385976/Somfy-Dexxo-Pro-800-1000-Rts.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Somfy Dexxo Pro 800 - 1000 RTS Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Somfy Dexxo Pro 800 - 1000 RTS Installation Manual (ArchiExpo)",
-          "sourceUrl": "https://pdf.archiexpo.com/pdf/somfy/dexxo-pro-800-1000-rts/3190-407029.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "pdf.archiexpo.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Somfy Dexxo Pro 800 - 1000 RTS Installation Manual (ArchiExpo)\" (host: pdf.archiexpo.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "DEXXO PRO 800 IO",
-      "name": "Somfy DEXXO PRO 800 IO",
-      "category": "roller-shutter-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Somfy Dexxo Pro 800 io Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1675640/Somfy-Dexxo-Pro-800-Io.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Somfy Dexxo Pro 800 io Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "DEXXO PRO 800 RTS",
-      "name": "Somfy DEXXO PRO 800 RTS",
-      "category": "roller-shutter-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Somfy Dexxo Pro 800 RTS Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1258486/Somfy-Dexxo-Pro-800-Rts.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Somfy Dexxo Pro 800 RTS Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "Dexxo Pro io",
       "name": "Dexxo Pro io Garage Door Operator",
       "category": "garage-door-openers",
@@ -374,39 +266,6 @@
       ]
     },
     {
-      "modelCode": "Motors and Controls",
-      "name": "Somfy Motors and Controls",
-      "category": "roller-shutter-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Somfy Documentation Index",
-          "sourceUrl": "https://www.somfysystems.com/en-us/support/documentation",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "somfysystems.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Somfy Documentation Index\" (host: www.somfysystems.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Somfy UK Product Documents and Downloads Index",
-          "sourceUrl": "https://www.somfy.co.uk/support/downloads",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "somfy.co.uk",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Somfy UK Product Documents and Downloads Index\" (host: www.somfy.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "Oximo",
       "name": "Somfy Oximo Tubular Motor",
       "category": "roller-shutter-motors",
@@ -425,27 +284,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Aggregator listing, 4 pages. Somfy South Africa's download page is described as carrying Oximo RTS technical data sheets and installation guides; no URL for those surfaced, so that page is registered as a portal instead. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "OXIMO SERIES",
-      "name": "Somfy OXIMO SERIES",
-      "category": "roller-shutter-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Somfy Oximo Series Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1714162/Somfy-Oximo-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Somfy Oximo Series Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -479,48 +317,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Somfy Roller Shutter Motors and Automated Systems Guide (2023)\" (host: service.somfy.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "RS100 io",
-      "name": "Somfy RS100 io",
-      "category": "roller-shutter-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Somfy RS100 io Funk Rohrmotor User Guide",
-          "sourceUrl": "https://manuals.plus/somfy/rs100-io-funk-rohrmotor-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Somfy RS100 io Funk Rohrmotor User Guide\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "RS100 SOLAR io",
-      "name": "Somfy RS100 SOLAR io",
-      "category": "roller-shutter-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Somfy RS100 Solar io Installation and Usage Guide",
-          "sourceUrl": "https://manuals.plus/m/a6be7cd2f3c6af678cbcdb540a456a689f3935d1e4fe80801e1e656004514c9e",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Somfy RS100 Solar io Installation and Usage Guide\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

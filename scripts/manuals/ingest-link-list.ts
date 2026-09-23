@@ -1,6 +1,7 @@
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { manufacturerFileSchema, type ManufacturerFile, type SeedDocument } from './schema'
+import { SAME_MANUFACTURER, isIndex, isPdf } from '../../src/lib/manuals/list-policy'
 
 // Turns a pipe-separated link list into data/manuals JSON.
 //
@@ -12,16 +13,6 @@ const DATA_DIR = join(process.cwd(), 'data', 'manuals')
 const SOURCE_NOTE =
   'Client link list (doorlink-manuals-combined.txt). Direct PDF URL. Not fetched.'
 
-const SAME_MANUFACTURER: Record<string, string> = {
-  'assa-abloy-besam': 'besam',
-  'automatic-technology-ata': 'automatic-technology',
-  'marantec-america': 'marantec',
-  'nice-apollo': 'nice',
-  'came-bpt': 'came',
-  'genius-faac': 'faac',
-  'hansa-nice': 'nice',
-}
-
 function fold(value: string): string {
   return value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
 }
@@ -32,15 +23,6 @@ function slugifyName(value: string): string {
     .replace(/&/g, ' and ')
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '')
-}
-
-function isPdf(url: string): boolean {
-  const path = url.split(/[?#]/)[0] ?? ''
-  return path.toLowerCase().endsWith('.pdf')
-}
-
-function isIndex(title: string): boolean {
-  return /\bindex\b/i.test(title)
 }
 
 function kindFor(title: string): SeedDocument['kind'] {

@@ -13,18 +13,6 @@
       "aliases": [],
       "documents": [
         {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Avanti Garage Door Opener Installation Manuals Index",
-          "sourceUrl": "https://garagedooropenerremotes.com.au/manuals-and-downloads/avanti-manuals",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "garagedooropenerremotes.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Avanti Garage Door Opener Installation Manuals Index\" (host: garagedooropenerremotes.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
           "kind": "USER_MANUAL",
           "title": "Avanti Instruction Manual",
           "sourceUrl": "https://www.waverleygaragedoors.com.au/instruction-manuals/Avanti.pdf",
@@ -34,18 +22,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Avanti Instruction Manual\" (host: www.waverleygaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Avanti Manuals for Garage Door Openers Index (AGG Doors)",
-          "sourceUrl": "https://industrialrollerdoorrepair.com.au/manual/manuals-by-brand-name/avanti/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "industrialrollerdoorrepair.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Avanti Manuals for Garage Door Openers Index (AGG Doors)\" (host: industrialrollerdoorrepair.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

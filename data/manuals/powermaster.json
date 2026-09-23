@@ -48,48 +48,6 @@
       ]
     },
     {
-      "modelCode": "GT",
-      "name": "PowerMaster GT",
-      "category": "gate-motors",
-      "region": "UNKNOWN",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "PowerMaster GT Installation and Owner's Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/850151/Powermaster-Gt.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"PowerMaster GT Installation and Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "H",
-      "name": "PowerMaster H",
-      "category": "gate-motors",
-      "region": "UNKNOWN",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "PowerMaster H Installation and Owner's Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/850150/Powermaster-H.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"PowerMaster H Installation and Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "MG",
       "name": "PowerMaster MG",
       "category": "gate-motors",

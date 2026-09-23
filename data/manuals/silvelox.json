@@ -8,27 +8,6 @@
   },
   "models": [
     {
-      "modelCode": "Garage Doors",
-      "name": "Silvelox Garage Doors",
-      "category": "garage-door-openers",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Silvelox Group Documentation Index",
-          "sourceUrl": "https://www.silvelox.it/en/documentation/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "silvelox.it",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Silvelox Group Documentation Index\" (host: www.silvelox.it). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "OVERLAP 2.0",
       "name": "Silvelox OVERLAP 2.0",
       "category": "garage-door-openers",

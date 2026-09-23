@@ -9,27 +9,6 @@
   },
   "models": [
     {
-      "modelCode": "Garage Doors and Openers",
-      "name": "Garador Garage Doors and Openers",
-      "category": "garage-door-openers",
-      "region": "NZ",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Garador New Zealand Owner Manuals Index",
-          "sourceUrl": "https://www.garador.co.nz/resources/owner-manuals",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "garador.co.nz",
-          "region": "NZ",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Garador New Zealand Owner Manuals Index\" (host: www.garador.co.nz). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "GARAMATIC 9",
       "name": "Garador GARAMATIC 9",
       "category": "garage-door-openers",

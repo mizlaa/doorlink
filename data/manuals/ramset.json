@@ -33,27 +33,6 @@
       ]
     },
     {
-      "modelCode": "Gate Operators",
-      "name": "Ramset Gate Operators",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Ramset Instruction Manuals Index",
-          "sourceUrl": "https://ramsetstore.com/store/resources/instruction-manuals.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ramsetstore.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Ramset Instruction Manuals Index\" (host: ramsetstore.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "RAM 100",
       "name": "Ramset RAM 100 / 1000 / 5500 Gate Operator",
       "category": "garage-door-openers",
@@ -88,18 +67,6 @@
               "label": "ManualsLib listing"
             }
           ]
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Ramset RAM 100 Instruction Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/832948/Ramset-Ram-100.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Ramset RAM 100 Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         }
       ]
     },
@@ -120,27 +87,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Ramset RAM 100, 1000, 5500 Gate Opener Manual\" (host: www.gatesnfences.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "RAM 1000",
-      "name": "Ramset RAM 1000",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Ramset RAM 1000 Slide Gate Operator Manual",
-          "sourceUrl": "https://device.report/manuals/ramset-ram-1000-slide-gate-operator-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "device.report",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Ramset RAM 1000 Slide Gate Operator Manual\" (host: device.report). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

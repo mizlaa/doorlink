@@ -99,27 +99,6 @@
       ]
     },
     {
-      "modelCode": "Gate Operators",
-      "name": "Viking Access Systems Gate Operators",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Viking Access Systems Downloads Index",
-          "sourceUrl": "https://www.vikingaccess.com/download-page",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "vikingaccess.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Viking Access Systems Downloads Index\" (host: www.vikingaccess.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "H-10 (2nd Gen)",
       "name": "Viking Access Systems H-10 (2nd Gen)",
       "category": "gate-motors",

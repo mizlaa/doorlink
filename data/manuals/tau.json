@@ -9,7 +9,7 @@
     {
       "modelCode": "128MA",
       "name": "Tau 128MA",
-      "category": "gate-motors",
+      "category": "garage-door-openers",
       "region": "EU",
       "aliases": [],
       "documents": [
@@ -28,147 +28,9 @@
       ]
     },
     {
-      "modelCode": "ARM200 SERIES",
-      "name": "Tau ARM200 SERIES",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Tau ARM200 Series Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2101852/Tau-Arm200-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Tau ARM200 Series Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Tau ARM200 Series Use and Maintenance Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1685628/Tau-Arm200-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Tau ARM200 Series Use and Maintenance Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "DOOR",
-      "name": "Tau DOOR",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Tau DOOR Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1180295/Tau-Door.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Tau DOOR Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "EASY",
-      "name": "Tau EASY",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Tau Easy Swing Gate Opener Owner's Manual",
-          "sourceUrl": "https://manualzz.com/doc/20396275/tau-easy-swing-gate-opener-owner-s-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualzz.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Tau Easy Swing Gate Opener Owner's Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Gate Automation",
-      "name": "Tau Gate Automation",
-      "category": "gate-motors",
-      "region": "UK",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Tau Manuals and Programming Guides Index (EasyGates)",
-          "sourceUrl": "https://manuals.easygates.co.uk/category/manuals/tau/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.easygates.co.uk",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Tau Manuals and Programming Guides Index (EasyGates)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "K100M",
-      "name": "Tau K100M",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Tau K100M Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2167998/Tau-K100m.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Tau K100M Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "K126MA",
-      "name": "Tau K126MA",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Tau K126MA Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2618900/Tau-K126ma.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Tau K126MA Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "K590M",
       "name": "Tau K590M",
-      "category": "gate-motors",
+      "category": "garage-door-openers",
       "region": "EU",
       "aliases": [],
       "documents": [
@@ -187,93 +49,9 @@
       ]
     },
     {
-      "modelCode": "MASTER",
-      "name": "Tau MASTER",
-      "category": "gate-motors",
-      "region": "UK",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Tau MASTER Manual",
-          "sourceUrl": "https://manuals.easygates.co.uk/tau-master/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.easygates.co.uk",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Tau MASTER Manual\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "SPEED 2",
-      "name": "Tau SPEED 2",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Tau Speed 2 User Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/856984/Tau-Speed-2.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Tau Speed 2 User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "T-ONE",
-      "name": "Tau T-ONE",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Tau T-ONE Use and Maintenance Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/861148/Tau-T-One.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Tau T-ONE Use and Maintenance Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "T-ONE SERIES",
-      "name": "Tau T-ONE SERIES",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Tau T-One Series Use and Maintenance Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2119496/Tau-T-One-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Tau T-One Series Use and Maintenance Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "T-ONE5B",
       "name": "Tau T-ONE5B",
-      "category": "gate-motors",
+      "category": "garage-door-openers",
       "region": "EU",
       "aliases": [],
       "documents": [

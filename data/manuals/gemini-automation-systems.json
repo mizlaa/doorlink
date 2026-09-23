@@ -67,39 +67,6 @@
           "altSources": []
         }
       ]
-    },
-    {
-      "modelCode": "Gate Motors",
-      "name": "Gemini Automation Systems Gate Motors",
-      "category": "gate-motors",
-      "region": "GLOBAL",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Gemini Gate Motor Installation and User Manuals Index",
-          "sourceUrl": "https://progatemotorrepairs.co.za/technical-info/gemini-installation-and-user-manuals/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "progatemotorrepairs.co.za",
-          "region": "GLOBAL",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Gemini Gate Motor Installation and User Manuals Index\" (host: progatemotorrepairs.co.za). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Gemini Gate Motor Manuals and Spec Sheets Index",
-          "sourceUrl": "https://geminigates.co.za/manuals/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "geminigates.co.za",
-          "region": "GLOBAL",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Gemini Gate Motor Manuals and Spec Sheets Index\" (host: geminigates.co.za). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
     }
   ]
 }

@@ -53,39 +53,6 @@
           "revision": "02",
           "evidence": "Distributor knowledge base. Revision 02 and the 30/03/2020 date come from the search result title. This is a range-level swing gate manual rather than BE20-specific; attached here because BE20 is the swing series it names. Not fetched - egress blocked.",
           "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Roger BE20 Brushless Swing Gate Operator Instruction Manual",
-          "sourceUrl": "https://www.accesskits.co.uk/index.php?dispatch=attachments.getfile&attachment_id=8420",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "accesskits.co.uk",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Roger BE20 Brushless Swing Gate Operator Instruction Manual\" (host: www.accesskits.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "BE20 SERIES",
-      "name": "Roger Technology BE20 SERIES",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Roger BE20 Series Use and Maintenance Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2226665/Roger-Be20-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Roger BE20 Series Use and Maintenance Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         }
       ]
     },
@@ -139,120 +106,12 @@
       ]
     },
     {
-      "modelCode": "BRUSHLESS BE20/200/HS",
-      "name": "Roger Technology BRUSHLESS BE20/200/HS",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Roger Technology Brushless BE20/200/HS User Manual",
-          "sourceUrl": "https://manualzz.com/doc/en/53365903/roger-technology-brushless-be20-200-hs-user-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualzz.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Roger Technology Brushless BE20/200/HS User Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Gate Automation",
-      "name": "Roger Technology Gate Automation",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Roger Technology Manuals Index",
-          "sourceUrl": "https://accesssystems.ie/index.php/information/documentation/115-roger-technology-manuals",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "accesssystems.ie",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Roger Technology Manuals Index\" (host: accesssystems.ie). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "H70/104AC",
-      "name": "Roger Technology H70/104AC",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Roger Technology H70/104AC Instruction and Warnings for the Installer",
-          "sourceUrl": "https://www.manualslib.com/manual/1906313/Roger-Technology-H70-104ac.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Roger Technology H70/104AC Instruction and Warnings for the Installer\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Roger Technology H70/104AC Instructions and Warnings",
-          "sourceUrl": "https://www.manualslib.com/manual/1631852/Roger-Technology-H70-104ac.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Roger Technology H70/104AC Instructions and Warnings\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "H70/105AC",
-      "name": "Roger Technology H70/105AC",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Roger Technology H70/105AC Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Roger-Technology-H70-105ac-10549374.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Roger Technology H70/105AC Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "H70/200AC",
       "name": "Roger Technology H70/200AC",
       "category": "gate-motors",
       "region": "EU",
       "aliases": [],
       "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Roger Technology H70/200AC Instruction and Warnings for the Installer",
-          "sourceUrl": "https://www.manualslib.com/manual/1868066/Roger-Technology-H70-200ac.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Roger Technology H70/200AC Instruction and Warnings for the Installer\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
         {
           "kind": "QUICK_START",
           "title": "Roger Technology H70/200AC Quick Start Rev01",
@@ -287,27 +146,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Aggregator listing of the user-facing document; no installer manual for the R30 surfaced, which is a recorded gap rather than a reason to file this as one. R23 was searched for in the same query and returned nothing of its own; it is kept as an alias only so a search lands somewhere in the R range. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "R30 SERIES",
-      "name": "Roger Technology R30 SERIES",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Roger Technology R30 Series Gate Opener Operation and User's Manual",
-          "sourceUrl": "https://all-guidesbox.com/manual/1316769/roger-technology-r30-series-operation-user-s-manual-8.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "all-guidesbox.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Roger Technology R30 Series Gate Opener Operation and User's Manual\" (host: all-guidesbox.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

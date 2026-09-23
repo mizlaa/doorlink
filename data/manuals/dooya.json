@@ -9,27 +9,6 @@
   },
   "models": [
     {
-      "modelCode": "DM25DS / DM35DS / DM45DS",
-      "name": "Dooya DM25DS / DM35DS / DM45DS",
-      "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Dooya DC Standard Tubular Motor Installation and Specification Guide",
-          "sourceUrl": "https://manuals.plus/m/6436756e7f0abe4e27bd14113c10535fdd775ef5fdbe4bfa044755853c22f60b",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Dooya DC Standard Tubular Motor Installation and Specification Guide\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "DM35",
       "name": "Dooya DM35 Series Tubular Motor",
       "category": "roller-shutter-motors",
@@ -80,48 +59,6 @@
       ]
     },
     {
-      "modelCode": "DM35LE-S / DM18LE-S",
-      "name": "Dooya DM35LE-S / DM18LE-S",
-      "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Dooya DM35LE-S DC Tubular Motor User Manual",
-          "sourceUrl": "https://fccid.io/VYY-DM18LE-S/User-Manual/User-Manual-2824810",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "fccid.io",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Dooya DM35LE-S DC Tubular Motor User Manual\" (host: fccid.io). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "DM35S 6/28",
-      "name": "Dooya DM35S 6/28",
-      "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Dooya DM35S 6/28 Tubular Motor Instruction Manual",
-          "sourceUrl": "https://manuals.plus/ae/1005004712973564",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Dooya DM35S 6/28 Tubular Motor Instruction Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "DM45",
       "name": "Dooya DM45 Series Tubular Motor",
       "category": "roller-shutter-motors",
@@ -143,27 +80,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Aggregator listing covering the R and S variants together, for rolling blinds, canopies and lift systems. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "DM45LEQ-S",
-      "name": "Dooya DM45LEQ-S",
-      "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Dooya DM45LEQ-S DC Electronic Tubular Motor User Manual",
-          "sourceUrl": "https://fccid.io/VYY-DM45LEQ-S/User-Manual/User-manual-2824798",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "fccid.io",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Dooya DM45LEQ-S DC Electronic Tubular Motor User Manual\" (host: fccid.io). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

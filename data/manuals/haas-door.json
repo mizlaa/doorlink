@@ -7,69 +7,6 @@
   },
   "models": [
     {
-      "modelCode": "600 / 700 / 800 / 2000 SERIES",
-      "name": "Haas Door 600 / 700 / 800 / 2000 SERIES",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Haas Door Commercial Steel Garage Doors Operation and Maintenance Manual",
-          "sourceUrl": "https://manualzz.com/doc/6342502/haas-cmt-600-oandm-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualzz.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Haas Door Commercial Steel Garage Doors Operation and Maintenance Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "610",
-      "name": "Haas Door 610",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Haas Door 610 Operation and Maintenance Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1416630/Haas-Door-610.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Haas Door 610 Operation and Maintenance Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "680",
-      "name": "Haas Door 680",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Haas Door 680 Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Haas-Door-680-9022557.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Haas Door 680 Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "Commercial Steel Doors",
       "name": "Haas Door Commercial Steel Doors",
       "category": "garage-door-openers",
@@ -86,27 +23,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Haas Door Installation and Maintenance Service Manual for Commercial Steel Doors\" (host: irp.cdn-website.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Garage Doors",
-      "name": "Haas Door Garage Doors",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Haas Garage Door Manuals Index",
-          "sourceUrl": "https://www.gdcorp.com/haas-garage-door-manuals",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "gdcorp.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Haas Garage Door Manuals Index\" (host: www.gdcorp.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

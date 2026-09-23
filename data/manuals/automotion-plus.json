@@ -27,27 +27,6 @@
           "altSources": []
         }
       ]
-    },
-    {
-      "modelCode": "Gate Motors",
-      "name": "Automotion Plus Gate Motors",
-      "category": "gate-motors",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Automotion Plus Installation Manuals Index",
-          "sourceUrl": "https://www.automotionplus.com.au/installation-manuals",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "automotionplus.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Automotion Plus Installation Manuals Index\" (host: www.automotionplus.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
     }
   ]
 }

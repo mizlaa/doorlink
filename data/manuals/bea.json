@@ -8,42 +8,9 @@
   },
   "models": [
     {
-      "modelCode": "LZR-FLATSCAN SW",
-      "name": "BEA LZR-FLATSCAN SW",
-      "category": "remotes-accessories",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "BEA LZR-Flatscan SW Quick Guide for Automatic Swing Doors",
-          "sourceUrl": "https://manuals.plus/m/09cbc5159f874ac185df3d0fab8f42c18cb59a91df68cfa768e0570aa9007591",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"BEA LZR-Flatscan SW Quick Guide for Automatic Swing Doors\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "SAFETY_DOCUMENT",
-          "title": "BEA LZR-Flatscan SW Safety Sensor Installation and Service Manual",
-          "sourceUrl": "https://manuals.plus/m/d2bad69b3d3380e4cf6bfde8735073667170a3db2e9d9fb4ba0dcc4c108af9d9",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"BEA LZR-Flatscan SW Safety Sensor Installation and Service Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "LZR-I30",
       "name": "BEA LZR-I30",
-      "category": "remotes-accessories",
+      "category": "garage-door-openers",
       "region": "EU",
       "aliases": [],
       "documents": [
@@ -62,42 +29,9 @@
       ]
     },
     {
-      "modelCode": "LZR-MICROSCAN T",
-      "name": "BEA LZR-MICROSCAN T",
-      "category": "remotes-accessories",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "BEA LZR-Microscan T Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2209823/Bea-Lzr-Microscan-T.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"BEA LZR-Microscan T Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "BEA LZR-Microscan T User Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1442741/Bea-Lzr-Microscan-T.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"BEA LZR-Microscan T User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "LZR-SIGMA",
       "name": "BEA LZR-SIGMA",
-      "category": "remotes-accessories",
+      "category": "garage-door-openers",
       "region": "EU",
       "aliases": [],
       "documents": [
@@ -111,39 +45,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"BEA LZR-Sigma Original Instructions (75.5929.01)\" (host: us.beasensors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "LZR-WIDESCAN",
-      "name": "BEA LZR-WIDESCAN",
-      "category": "remotes-accessories",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "BEA LZR Widescan Instruction Manual",
-          "sourceUrl": "https://manuals.plus/lzr/widescan-bea-sensors-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"BEA LZR Widescan Instruction Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "BEA LZR-Widescan Security Sensor User Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1537909/Bea-Lzr-Widescan.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"BEA LZR-Widescan Security Sensor User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

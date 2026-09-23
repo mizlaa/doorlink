@@ -29,27 +29,6 @@
       ]
     },
     {
-      "modelCode": "Gate Automation",
-      "name": "King Gates Gate Automation",
-      "category": "gate-motors",
-      "region": "UK",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "KINGgates Manuals Index (EasyGates)",
-          "sourceUrl": "https://manuals.easygates.co.uk/category/manuals/kinggates/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.easygates.co.uk",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"KINGgates Manuals Index (EasyGates)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "INTRO",
       "name": "King Gates INTRO",
       "category": "gate-motors",
@@ -99,18 +78,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"King Gates Jet Motorigear for Swing Gates Instruction Manual (EN)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "King Gates Jet Swing Gate Instruction Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1291759/King-Gates-Jet.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"King Gates Jet Swing Gate Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

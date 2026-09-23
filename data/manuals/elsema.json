@@ -30,27 +30,6 @@
       ]
     },
     {
-      "modelCode": "AXIOM iS600 / iS900",
-      "name": "Elsema AXIOM iS600 / iS900",
-      "category": "gate-motors",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Elsema Axiom iS600/iS900 Sliding Gate Motor Kit Setup and Technical Information",
-          "sourceUrl": "https://manuals.plus/m/50daf3ea1bc4783594231c3c4c1fd504ff2ead8ab7df44849bde6b39b1efe347",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Elsema Axiom iS600/iS900 Sliding Gate Motor Kit Setup and Technical Information\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "ECLIPSE MCS",
       "name": "Elsema ECLIPSE MCS",
       "category": "gate-motors",
@@ -67,18 +46,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Elsema Eclipse MCS Motor Controller Single Gate Manual\" (host: www.elsema.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Elsema Eclipse MCS Setup and Technical Information",
-          "sourceUrl": "https://www.manualslib.com/manual/1806639/Elsema-Eclipse-Mcs.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Elsema Eclipse MCS Setup and Technical Information\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -127,27 +94,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Aggregator listing only. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Gate Motors and Receivers",
-      "name": "Elsema Gate Motors and Receivers",
-      "category": "remotes-accessories",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Elsema Receiver and Gate Installation Manuals Index",
-          "sourceUrl": "https://garagedooropenerremotes.com.au/manuals-and-downloads/elsema-manuals",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "garagedooropenerremotes.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Elsema Receiver and Gate Installation Manuals Index\" (host: garagedooropenerremotes.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

@@ -30,27 +30,6 @@
       ]
     },
     {
-      "modelCode": "Gate Operators",
-      "name": "Nice | HySecurity Gate Operators",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "HySecurity Operator Manuals Index",
-          "sourceUrl": "https://support.hysecurity.com/hc/en-us/sections/12134481509527-Manuals-Operator",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "support.hysecurity.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"HySecurity Operator Manuals Index\" (host: support.hysecurity.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "SlideDriver",
       "name": "HySecurity SlideDriver Slide Gate Operator (all models)",
       "category": "gate-motors",
@@ -151,27 +130,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"HySecurity SlideDriver Programming and Operations Manual with Smart Touch Controller (MX3630-01)\" (host: partners.hysecurity.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "SLIDEDRIVER II 200V",
-      "name": "Nice | HySecurity SLIDEDRIVER II 200V",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "HySecurity SlideDriver II 200V Slide Gate Operator User Guide",
-          "sourceUrl": "https://manuals.plus/hysecurity/slidedriver-ii-200v-slide-gate-operator-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"HySecurity SlideDriver II 200V Slide Gate Operator User Guide\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

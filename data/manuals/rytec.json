@@ -9,27 +9,6 @@
   },
   "models": [
     {
-      "modelCode": "High Performance Doors",
-      "name": "Rytec High Performance Doors",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Rytec Document Resource Center (manuals and product sheets)",
-          "sourceUrl": "https://www.rytecdoors.com/resources/manuals-product-sheets",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "rytecdoors.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Rytec Document Resource Center (manuals and product sheets)\" (host: www.rytecdoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "Spiral HZ",
       "name": "Rytec Spiral HZ High-Performance Door",
       "category": "industrial-high-speed-doors",
@@ -150,48 +129,6 @@
           "language": "en",
           "version": "2016-09-22",
           "evidence": "On rytecdoors.com. The file name carries a date rather than a document number, so 2016-09-22 is recorded as the version - that is Rytec's own edition marker on the file, not a date this library inferred. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "SYSTEM 4",
-      "name": "Rytec SYSTEM 4",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Rytec System 4 Installation and Owner's Manual",
-          "sourceUrl": "https://www.manualslib.com/products/Rytec-System-4-11330796.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Rytec System 4 Installation and Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "SYSTEM 4 RY-WI",
-      "name": "Rytec SYSTEM 4 RY-WI",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Rytec System 4 Drive and Control RY-WI System Installation and Owner's Manual",
-          "sourceUrl": "https://manuals.plus/m/6a57e4d9c4e97e9dcaccc5a34b219ff3cae5c52ac703d798b4928fd1bc7317ee",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Rytec System 4 Drive and Control RY-WI System Installation and Owner's Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

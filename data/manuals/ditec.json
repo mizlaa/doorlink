@@ -101,18 +101,6 @@
           "altSources": []
         },
         {
-          "kind": "INSTALL_MANUAL",
-          "title": "Ditec DAS200 Assembly Handbook",
-          "sourceUrl": "https://www.manualslib.com/manual/2222947/Ditec-Das200.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Ditec DAS200 Assembly Handbook\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
           "kind": "TECHNICAL_DOCUMENT",
           "title": "Ditec DAS200 Technical Manual (EN)",
           "sourceUrl": "https://www.ditecautomations.com/global/en/content-fragments/products/automatic-pedestrian-doors/sliding-doors/ditec-das200/assets/downloads/technical-manual/EN%20-%20Ditec%20DAS200%20technical%20manual.pdf",
@@ -122,27 +110,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Ditec DAS200 Technical Manual (EN)\" (host: www.ditecautomations.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "DAS200HD",
-      "name": "Ditec Entrematic DAS200HD",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Entrematic Ditec DAS200HD Technical Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1640612/Entrematic-Ditec-Das200hd.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Entrematic Ditec DAS200HD Technical Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -222,48 +189,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Ditec EL16 Manual\" (host: doormanuals.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "FACIL",
-      "name": "Ditec Entrematic FACIL",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Entrematic Ditec Facil Technical Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2115824/Entrematic-Ditec-Facil.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Entrematic Ditec Facil Technical Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "FACIL3H",
-      "name": "Ditec Entrematic FACIL3H",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Ditec Entrematic FACIL3H Original Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1102349/Ditec-Entrematic-Facil3h.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Ditec Entrematic FACIL3H Original Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -386,27 +311,6 @@
       ]
     },
     {
-      "modelCode": "OBBI",
-      "name": "Ditec Entrematic OBBI",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Entrematic Ditec OBBI Swing Gate Automation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2153567/Entrematic-Ditec-Obbi.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Entrematic Ditec OBBI Swing Gate Automation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "REX",
       "name": "Ditec REX Motorised Sliding Doors",
       "category": "automatic-pedestrian-doors",
@@ -423,27 +327,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "On ditecautomations.com under the Rex product's own user-manual path. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "VALLOK",
-      "name": "Ditec Entrematic VALLOK",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Entrematic Ditec Vallok Door Opening System Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1594807/Entrematic-Ditec-Vallok.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Entrematic Ditec Vallok Door Opening System Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -466,18 +349,6 @@
           "language": "en",
           "documentCode": "IP1950 EN",
           "evidence": "On assaabloy.com, the parent group's own domain, under an APAC blueprint path whose market segment reads sea-markets. Titled \"Original instructions\", document code IP1950 EN. Region is recorded as ASIA - the nearest value the schema has to the path's South-East Asia scope - and is inferred from that path, not from reading the document. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Ditec Valor Technical Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1266034/Ditec-Valor.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Ditec Valor Technical Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

@@ -11,7 +11,7 @@
     {
       "modelCode": "3663-372",
       "name": "Wayne Dalton 3663-372",
-      "category": "garage-door-openers",
+      "category": "industrial-high-speed-doors",
       "region": "US",
       "aliases": [],
       "documents": [
@@ -25,27 +25,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Wayne-Dalton 3663-372 Installation Instructions and Owner's Manual\" (host: archive.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "8000 SERIES",
-      "name": "Wayne Dalton 8000 SERIES",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Wayne-Dalton 8000 Series Installation Instructions and Owner's Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/708067/Wayne-Dalton-8000-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Wayne-Dalton 8000 Series Installation Instructions and Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -107,30 +86,9 @@
       ]
     },
     {
-      "modelCode": "C-2400",
-      "name": "Wayne Dalton C-2400",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Wayne-Dalton C-2400 Commercial Sectional Steel Overhead Door Instruction Manual",
-          "sourceUrl": "https://manuals.plus/wayne-dalton/c-2400-commercial-sectional-steel-overhead-door-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Wayne-Dalton C-2400 Commercial Sectional Steel Overhead Door Instruction Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "Commercial Sheet Door",
       "name": "Wayne Dalton Commercial Sheet Door",
-      "category": "garage-door-openers",
+      "category": "industrial-high-speed-doors",
       "region": "US",
       "aliases": [],
       "documents": [
@@ -144,111 +102,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Wayne Dalton Commercial Sheet Door Installation Instructions (291341)\" (host: waynedalton-prod-assets-new.azureedge.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Garage and Commercial Doors",
-      "name": "Wayne Dalton Garage and Commercial Doors",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Wayne Dalton Installation Instructions Index",
-          "sourceUrl": "https://www.wayne-dalton.com/resources/architect-resources/installation-instructions",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "wayne-dalton.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Wayne Dalton Installation Instructions Index\" (host: www.wayne-dalton.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Garage Doors",
-      "name": "Wayne Dalton Garage Doors",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Wayne Dalton Garage Door Installation Documents Index",
-          "sourceUrl": "https://www.wayne-dalton.com/resources/support/installation",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "wayne-dalton.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Wayne Dalton Garage Door Installation Documents Index\" (host: www.wayne-dalton.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "IDRIVE 3651-372",
-      "name": "Wayne Dalton IDRIVE 3651-372",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Wayne-Dalton iDrive 3651-372 Installation Instructions and Owner's Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/861055/Wayne-Dalton-Idrive-3651-372.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Wayne-Dalton iDrive 3651-372 Installation Instructions and Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "IDRIVE 3982",
-      "name": "Wayne Dalton IDRIVE 3982",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Wayne-Dalton iDrive 3982 User Manual",
-          "sourceUrl": "https://archive.org/details/manualsbase-id-161746",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "archive.org",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Wayne-Dalton iDrive 3982 User Manual\" (host: archive.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "IDRIVE PRO 3790",
-      "name": "Wayne Dalton IDRIVE PRO 3790",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Wayne-Dalton iDrive Pro 3790 User Manual",
-          "sourceUrl": "https://archive.org/details/manualsbase-id-161739",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "archive.org",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Wayne-Dalton iDrive Pro 3790 User Manual\" (host: archive.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

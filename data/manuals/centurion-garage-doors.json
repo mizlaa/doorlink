@@ -29,60 +29,6 @@
       ]
     },
     {
-      "modelCode": "Garage Doors",
-      "name": "Centurion Garage Doors Garage Doors",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Centurion Garage Doors User Guides Index",
-          "sourceUrl": "https://www.cgdoors.com.au/resources/user-guides/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "cgdoors.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion Garage Doors User Guides Index\" (host: www.cgdoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Garage Doors and Openers",
-      "name": "Centurion Garage Doors Garage Doors and Openers",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Centurion Garage Doors Downloads Index",
-          "sourceUrl": "https://www.cgdoors.com.au/downloads/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "cgdoors.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion Garage Doors Downloads Index\" (host: www.cgdoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Centurion Garage Doors User Guides and Brochures Library",
-          "sourceUrl": "https://www.cgdoors.com.au/our-range/library/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "cgdoors.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion Garage Doors User Guides and Brochures Library\" (host: www.cgdoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "RDO10A",
       "name": "Centurion Garage Doors RDO10A",
       "category": "garage-door-openers",

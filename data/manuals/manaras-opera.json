@@ -8,30 +8,9 @@
   },
   "models": [
     {
-      "modelCode": "Door Operators",
-      "name": "Manaras-Opera Door Operators",
-      "category": "industrial-high-speed-doors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Manaras-Opera Technical Documents Index",
-          "sourceUrl": "https://www.manaras.com/technical-documents.shtml",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "manaras.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Manaras-Opera Technical Documents Index\" (host: www.manaras.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "ECB OPERA",
       "name": "Manaras-Opera ECB OPERA",
-      "category": "industrial-high-speed-doors",
+      "category": "garage-door-openers",
       "region": "US",
       "aliases": [],
       "documents": [
@@ -52,7 +31,7 @@
     {
       "modelCode": "OPERA (book1119)",
       "name": "Manaras-Opera OPERA (book1119)",
-      "category": "industrial-high-speed-doors",
+      "category": "garage-door-openers",
       "region": "US",
       "aliases": [],
       "documents": [
@@ -73,7 +52,7 @@
     {
       "modelCode": "OPERA-GH",
       "name": "Manaras-Opera OPERA-GH",
-      "category": "industrial-high-speed-doors",
+      "category": "garage-door-openers",
       "region": "US",
       "aliases": [],
       "documents": [
@@ -92,30 +71,9 @@
       ]
     },
     {
-      "modelCode": "OPERA-GH (OGH)",
-      "name": "Manaras-Opera OPERA-GH (OGH)",
-      "category": "industrial-high-speed-doors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Manaras-Opera Opera-GH (OGH) Commercial Door Operator Installation Manual",
-          "sourceUrl": "https://manuals.plus/m/73c181b13445dd77951d0792bd306923726999b34bad0fbe021e48b7e477001b",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Manaras-Opera Opera-GH (OGH) Commercial Door Operator Installation Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "OPERA-H",
       "name": "Manaras-Opera OPERA-H",
-      "category": "industrial-high-speed-doors",
+      "category": "garage-door-openers",
       "region": "US",
       "aliases": [],
       "documents": [
@@ -136,7 +94,7 @@
     {
       "modelCode": "OPERA-MH",
       "name": "Manaras-Opera OPERA-MH",
-      "category": "industrial-high-speed-doors",
+      "category": "garage-door-openers",
       "region": "US",
       "aliases": [],
       "documents": [
@@ -150,27 +108,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Manaras Opera-MH Installation and Instruction Manual (book1200)\" (host: www.manaras.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "OPH",
-      "name": "Manaras-Opera OPH",
-      "category": "industrial-high-speed-doors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Manaras OPH Industrial Door Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Manaras-Oph-8952858.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Manaras OPH Industrial Door Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

@@ -34,27 +34,6 @@
       ]
     },
     {
-      "modelCode": "Garage and Commercial Doors",
-      "name": "Amarr Garage and Commercial Doors",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Amarr Garage Door and Commercial Door Installation Instructions Index",
-          "sourceUrl": "https://www.amarr.com/us/en/support/garage-door-and-commercial-door-installation-instructions",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "amarr.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Amarr Garage Door and Commercial Door Installation Instructions Index\" (host: www.amarr.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "Residential Aluminum Garage Doors",
       "name": "Amarr Residential Aluminum Garage Doors",
       "category": "garage-door-openers",

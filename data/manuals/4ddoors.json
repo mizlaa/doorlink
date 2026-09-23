@@ -132,48 +132,6 @@
           "altSources": []
         }
       ]
-    },
-    {
-      "modelCode": "Garage Doors",
-      "name": "4Ddoors Garage Doors",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "4Ddoors Garage Door Manuals Index",
-          "sourceUrl": "https://www.4ddoors.com.au/resources/garage-door-manuals",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "4ddoors.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"4Ddoors Garage Door Manuals Index\" (host: www.4ddoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Gate and Garage Motors",
-      "name": "4Ddoors Gate and Garage Motors",
-      "category": "gate-motors",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "4Ddoors Gate and Garage Motor Manuals Index",
-          "sourceUrl": "https://www.4ddoors.com.au/resources/gate-and-garage-motor-manuals",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "4ddoors.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"4Ddoors Gate and Garage Motor Manuals Index\" (host: www.4ddoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
     }
   ]
 }

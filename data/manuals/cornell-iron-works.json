@@ -29,27 +29,6 @@
       ]
     },
     {
-      "modelCode": "Doors and Grilles",
-      "name": "Cornell Iron Works Doors and Grilles",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Cornell Installation and Maintenance Manuals Index",
-          "sourceUrl": "https://www.cornelliron.com/retrofit-remarket/installation-and-maintenance-manuals",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "cornelliron.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Cornell Installation and Maintenance Manuals Index\" (host: www.cornelliron.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "F SERIES",
       "name": "Cornell Iron Works F SERIES",
       "category": "garage-door-openers",
@@ -108,27 +87,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Cornell MGH/MGR Installation Instructions and Operation Manual\" (host: www.cornelliron.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Operators",
-      "name": "Cornell Iron Works Operators",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Cornell Operator Manuals Index",
-          "sourceUrl": "https://www.cornelliron.com/architectural-design-homepage/operator-manuals",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "cornelliron.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Cornell Operator Manuals Index\" (host: www.cornelliron.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

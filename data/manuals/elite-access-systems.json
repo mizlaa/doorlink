@@ -7,48 +7,6 @@
   },
   "models": [
     {
-      "modelCode": "SL-3000 SERIES",
-      "name": "Elite Access Systems SL-3000 SERIES",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Elite Access Systems SL-3000 Series Installation Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/978189/Elite-Access-Systems-Sl-3000-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Elite Access Systems SL-3000 Series Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "SL-3000-UL SERIES",
-      "name": "Elite Access Systems SL-3000-UL SERIES",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Elite Access Systems SL-3000-UL Series Instruction Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2064415/Elite-Access-Systems-Sl-3000-Ul-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Elite Access Systems SL-3000-UL Series Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "SL3000UL",
       "name": "Elite Access Systems SL3000UL",
       "category": "gate-motors",

@@ -9,27 +9,6 @@
   },
   "models": [
     {
-      "modelCode": "BE.CODE",
-      "name": "Benincà BE.CODE",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Beninca BE.CODE Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2159899/Beninca-Be-Code.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Beninca BE.CODE Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "BILL",
       "name": "Beninca BILL Series Underground Swing Gate Operator",
       "category": "gate-motors",
@@ -144,27 +123,6 @@
       ]
     },
     {
-      "modelCode": "BRAINY",
-      "name": "Benincà BRAINY",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Beninca Brainy Gate Automation Control Unit User Manual",
-          "sourceUrl": "https://manuals.plus/m/30f20ae3f0ed8c2f16a4aeba347f0d48f69d2a42bfccc253e433102a6d6eff4b",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Beninca Brainy Gate Automation Control Unit User Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "BULL",
       "name": "BULL Sliding Gate Operator",
       "category": "gate-motors",
@@ -181,27 +139,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Aggregator listing addressed by content hash rather than model, which is a weak identifier. Recorded as such. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "BULL 20T",
-      "name": "Benincà BULL 20T",
-      "category": "gate-motors",
-      "region": "UK",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Benincà Bull 20T Manual (EasyGates)",
-          "sourceUrl": "https://manuals.easygates.co.uk/beninca-bull-20t-manual/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.easygates.co.uk",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Benincà Bull 20T Manual (EasyGates)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -228,27 +165,6 @@
       ]
     },
     {
-      "modelCode": "BULL 5M / 8M / 80M",
-      "name": "Benincà BULL 5M / 8M / 80M",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Benincà Bull 5M/8M/80M Sliding Gate Opener User Guide",
-          "sourceUrl": "https://manualzz.com/doc/20397424/beninca-bull-5m-8m-80m-sliding-gate-opener-user-guide",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualzz.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Benincà Bull 5M/8M/80M Sliding Gate Opener User Guide\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "BULL424SW",
       "name": "Benincà BULL424SW",
       "category": "gate-motors",
@@ -265,69 +181,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Benincà Bull424SW Manual\" (host: automaticgates.info). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "CORE",
-      "name": "Benincà CORE",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Beninca Core User Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1320586/Beninca-Core.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Beninca Core User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "DU.IT9",
-      "name": "Benincà DU.IT9",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Beninca DU.IT9 User Handbook Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2173519/Beninca-Du-It9.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Beninca DU.IT9 User Handbook Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Gate Automation",
-      "name": "Benincà Gate Automation",
-      "category": "gate-motors",
-      "region": "UK",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Benincà Manuals Index (EasyGates)",
-          "sourceUrl": "https://manuals.easygates.co.uk/category/manuals/beninca/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.easygates.co.uk",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Benincà Manuals Index (EasyGates)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -359,27 +212,6 @@
               "label": "Same document, alternate path on the same host"
             }
           ]
-        }
-      ]
-    },
-    {
-      "modelCode": "TOM",
-      "name": "Benincà TOM",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Beninca Tom Installation, User and Maintenance Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/3578686/Beninca-Tom.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Beninca Tom Installation, User and Maintenance Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         }
       ]
     }

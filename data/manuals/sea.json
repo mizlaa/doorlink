@@ -119,39 +119,6 @@
           "version": "Rev. 07",
           "evidence": "On download.seateam.com, the manufacturer's own download host. The file parameter is base64 and decodes to ./manuali/Installation Manuals/Electronic/CONTROL BOARDS AND PROGRAMMERS/GATE 1 DG R2BF/GATE 1 DG R2BF Rev. 07 ENG.pdf - which is where the title, revision and language come from. An encoded parameter is a fragile link, so the containing index is registered as a portal too. Not fetched - egress blocked.",
           "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "SEA Gate 1 DG R2BF Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1869812/Sea-Gate-1-Dg-R2bf.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"SEA Gate 1 DG R2BF Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "GATE 2",
-      "name": "SEA (Seateam) GATE 2",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "SEA Gate 2 Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1657950/Sea-Gate-2.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"SEA Gate 2 Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         }
       ]
     },
@@ -163,18 +130,6 @@
       "aliases": [],
       "documents": [
         {
-          "kind": "USER_MANUAL",
-          "title": "SEA Gate 2 DG R1B Instruction Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/3415306/Sea-Gate-2-Dg-R1b.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"SEA Gate 2 DG R1B Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
           "kind": "TECHNICAL_DOCUMENT",
           "title": "SEA Gate 2 DG R1B Manual (Cod. 23023025)",
           "sourceUrl": "https://www.intelligentsecurity.org/resources/gates/SEA-Gate-2-DG-R1B-Manual_Watermark.pdf",
@@ -184,48 +139,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"SEA Gate 2 DG R1B Manual (Cod. 23023025)\" (host: www.intelligentsecurity.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Gate Automation",
-      "name": "SEA (Seateam) Gate Automation",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "SEA USA Gate Opener / Operator Manuals Index",
-          "sourceUrl": "https://www.aegates.com/sea-usa-gate-opener-manuals/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "aegates.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"SEA USA Gate Opener / Operator Manuals Index\" (host: www.aegates.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Gate Operators",
-      "name": "SEA (Seateam) Gate Operators",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "SEA Manuals Index (All Gate Operator Manuals)",
-          "sourceUrl": "http://www.allgateoperatormanuals.com/sea-manuals.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "allgateoperatormanuals.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"SEA Manuals Index (All Gate Operator Manuals)\" (host: www.allgateoperatormanuals.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

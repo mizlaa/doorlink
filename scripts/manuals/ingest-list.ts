@@ -1,7 +1,8 @@
-import { readFileSync, readdirSync, writeFileSync } from 'node:fs'
+import { readFileSync, readdirSync, unlinkSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { manufacturerFileSchema, type ManufacturerFile, type SeedModel } from './schema'
 import { slugify } from '../../src/lib/manuals/slug'
+import { SAME_MANUFACTURER, keepsRow } from '../../src/lib/manuals/list-policy'
 import {
   LAST_RESORT_CATEGORY,
   categoryForModel,
@@ -45,6 +46,9 @@ const NOT_SEED_FILES = new Set(['portals.json'])
  * later on.
  */
 const INGEST_EVIDENCE_PREFIX = 'Recorded from a web search result naming this URL as'
+// How a manufacturer this script created introduces itself, so a later
+// run can tell it from a hand-written one.
+const INGEST_MANUFACTURER_NOTE_PREFIX = 'Added by ingest-list'
 
 function evidenceFor(title: string, host: string): string {
   return (
@@ -150,6 +154,73 @@ function main() {
   const newManufacturers: string[] = []
   const suspectSplits: string[] = []
 
+  // The catalogue holds direct PDFs only (list-policy). A row that is
+  // not one stays in the research list as a record of what was found,
+  // but never becomes a seed record.
+  const kept = rows.filter((row) => keepsRow(row.url, row.title))
+  const offPolicy = rows.length - kept.length
+
+  // A sub-brand's seed file is folded into its parent's: its models join
+  // the parent's, matched case-insensitively, and the file goes. Rows
+  // naming the sub-brand are routed to the parent further down.
+  const folded: string[] = []
+  for (const [alias, target] of Object.entries(SAME_MANUFACTURER)) {
+    const from = bySlug.get(alias)
+    const into = bySlug.get(target)
+    if (!from || !into) continue
+    for (const model of from.data.models) {
+      const same = into.data.models.find(
+        (m) => m.modelCode.toLowerCase() === model.modelCode.toLowerCase(),
+      )
+      if (same) {
+        same.documents.push(...model.documents)
+        same.aliases = [...new Set([...same.aliases, ...model.aliases])]
+      } else {
+        into.data.models.push(model)
+      }
+    }
+    unlinkSync(join(DATA_DIR, from.file))
+    bySlug.delete(alias)
+    byName.set(from.data.manufacturer.name.toLowerCase(), target)
+    touched.add(target)
+    folded.push(`${from.data.manufacturer.name} → ${into.data.manufacturer.name}`)
+  }
+
+  // Records this script wrote before the policy existed are taken back
+  // out. Only its own: a hand-written record that is not a PDF was put
+  // there by a person, and the policy governs what the list adds, not
+  // what people curate. A model this script created that is left with
+  // nothing goes too, and so does a manufacturer it created that is left
+  // with no models; a hand-written model with no documents is kept,
+  // because there an empty model is a deliberately recorded gap.
+  let pruned = 0
+  const emptiedManufacturers: string[] = []
+  for (const [slug, entry] of bySlug) {
+    let changed = false
+    entry.data.models = entry.data.models.filter((model) => {
+      const before = model.documents.length
+      const ownedOutright =
+        before > 0 && model.documents.every((d) => d.evidence.startsWith(INGEST_EVIDENCE_PREFIX))
+      model.documents = model.documents.filter(
+        (d) => !d.evidence.startsWith(INGEST_EVIDENCE_PREFIX) || keepsRow(d.sourceUrl, d.title),
+      )
+      if (model.documents.length === before) return true
+      changed = true
+      pruned += before - model.documents.length
+      return !(ownedOutright && model.documents.length === 0)
+    })
+    if (changed) touched.add(slug)
+    if (
+      entry.data.models.length === 0 &&
+      entry.data.manufacturer.note?.startsWith(INGEST_MANUFACTURER_NOTE_PREFIX)
+    ) {
+      unlinkSync(join(DATA_DIR, entry.file))
+      bySlug.delete(slug)
+      touched.delete(slug)
+      emptiedManufacturers.push(entry.data.manufacturer.name)
+    }
+  }
+
   // Records this script wrote before, indexed so a re-run can correct
   // them. Kind, category, region and origin are all *derived* from the
   // title and URL rather than observed, so when a derivation rule
@@ -169,7 +240,7 @@ function main() {
     }
   }
 
-  for (const row of rows) {
+  for (const row of kept) {
     const own = ownRecords.get(row.url)
     if (own) {
       let host: string
@@ -213,7 +284,9 @@ function main() {
       continue
     }
 
-    const slug = byName.get(row.manufacturer.toLowerCase()) ?? slugify(row.manufacturer)
+    const generated = slugify(row.manufacturer)
+    const slug =
+      SAME_MANUFACTURER[generated] ?? byName.get(row.manufacturer.toLowerCase()) ?? generated
     let entry = bySlug.get(slug)
     if (!entry) {
       entry = {
@@ -366,6 +439,16 @@ function main() {
   }
 
   console.log(`Read ${rows.length} rows from ${listFiles.length} list(s).`)
+  if (offPolicy > 0) {
+    console.log(`Left out ${offPolicy} that are not direct PDFs, or are index pages.`)
+  }
+  if (folded.length > 0) console.log(`Folded ${folded.length} sub-brand(s): ${folded.join(', ')}`)
+  if (pruned > 0) console.log(`Removed ${pruned} earlier record(s) that are not direct PDFs.`)
+  if (emptiedManufacturers.length > 0) {
+    console.log(
+      `Removed ${emptiedManufacturers.length} manufacturer(s) left with no records: ${emptiedManufacturers.join(', ')}`,
+    )
+  }
   console.log(`Added ${added} documents across ${touched.size} manufacturer file(s).`)
   console.log(`Skipped ${skipped} already present.`)
   if (merged > 0) {

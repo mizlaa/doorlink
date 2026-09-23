@@ -16,42 +16,6 @@
       "aliases": [],
       "documents": [
         {
-          "kind": "INSTALL_MANUAL",
-          "title": "GEZE Powerturn Installation and Service Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2454122/Geze-Powerturn.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"GEZE Powerturn Installation and Service Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "GEZE Powerturn Downloads Index",
-          "sourceUrl": "https://powerturn.geze.com/en/services",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "powerturn.geze.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"GEZE Powerturn Downloads Index\" (host: powerturn.geze.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "GEZE Powerturn Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/3574921/Geze-Powerturn.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"GEZE Powerturn Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
           "kind": "USER_MANUAL",
           "title": "GEZE Powerturn User Manual (Operating Instructions EN)",
           "sourceUrl": "https://powerturn.geze.com/en/download/file/GEZE_Operating%2Binstructions_EN_mp661252.PDF",
@@ -66,66 +30,12 @@
       ]
     },
     {
-      "modelCode": "POWERTURN F",
-      "name": "GEZE POWERTURN F",
-      "category": "automatic-pedestrian-doors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "GEZE Powerturn F Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Geze-Powerturn-F-10556142.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"GEZE Powerturn F Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "POWERTURN F/R-IS",
-      "name": "GEZE POWERTURN F/R-IS",
-      "category": "automatic-pedestrian-doors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "GEZE Powerturn F/R-IS Installation Instructions and User Manual (Manualzz)",
-          "sourceUrl": "https://manualzz.com/manual/GEZE/Powerturn%2BF%252FR-IS/User%2Bmanual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualzz.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"GEZE Powerturn F/R-IS Installation Instructions and User Manual (Manualzz)\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "POWERTURN IS/TS",
       "name": "GEZE POWERTURN IS/TS",
       "category": "automatic-pedestrian-doors",
       "region": "EU",
       "aliases": [],
       "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "GEZE Powerturn IS/TS Installation Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1766478/Geze-Powerturn-Is-Ts.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"GEZE Powerturn IS/TS Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
         {
           "kind": "INSTALL_MANUAL",
           "title": "GEZE Powerturn IS/TS, F-IS/TS, F/R-IS/TS Installation Instructions (EN)",
@@ -136,27 +46,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"GEZE Powerturn IS/TS, F-IS/TS, F/R-IS/TS Installation Instructions (EN)\" (host: powerturn.geze.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "SLIMDRIVE SC",
-      "name": "GEZE SLIMDRIVE SC",
-      "category": "automatic-pedestrian-doors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "GEZE Slimdrive SC Operation and Maintenance Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2214107/Geze-Slimdrive-Sc.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"GEZE Slimdrive SC Operation and Maintenance Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -188,18 +77,6 @@
               "label": "ManualsLib listing"
             }
           ]
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "GEZE Slimdrive SL Installation and Service Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1762745/Geze-Slimdrive-Sl.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"GEZE Slimdrive SL Installation and Service Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         }
       ]
     },

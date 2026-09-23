@@ -86,27 +86,6 @@
       ]
     },
     {
-      "modelCode": "GA203 / GA204 / GA403 / GA404",
-      "name": "Berner Torantriebe GA203 / GA204 / GA403 / GA404",
-      "category": "garage-door-openers",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Berner Garage Door Operator Fitting, Operating and Maintenance Instructions",
-          "sourceUrl": "https://manuals.plus/m/74c567a2f69f928bd0b16995e8fc60ff09422c774c017b8e42aab9eca83e4250",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Berner Garage Door Operator Fitting, Operating and Maintenance Instructions\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "GA501",
       "name": "Berner GA501 Garage Door Operator",
       "category": "garage-door-openers",

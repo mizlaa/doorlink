@@ -8,27 +8,6 @@
   },
   "models": [
     {
-      "modelCode": "Gate Motors",
-      "name": "Gates Plus Gate Motors",
-      "category": "gate-motors",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Gates Plus Gate Openers Manual Library Index",
-          "sourceUrl": "https://www.gatesplus.com.au/motor.html",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "gatesplus.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Gates Plus Gate Openers Manual Library Index\" (host: www.gatesplus.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "MGS300 / MGS500 / MGS1000",
       "name": "Gates Plus MGS300 / MGS500 / MGS1000",
       "category": "gate-motors",

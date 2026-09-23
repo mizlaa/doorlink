@@ -26,27 +26,6 @@
           "altSources": []
         }
       ]
-    },
-    {
-      "modelCode": "Garage Door Openers",
-      "name": "Multi-Code Garage Door Openers",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Linear Multi-Code Garage Door Opener Parts Manuals Index",
-          "sourceUrl": "https://shopactiondirect.com/multi-code-product-manuals/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "shopactiondirect.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Linear Multi-Code Garage Door Opener Parts Manuals Index\" (host: shopactiondirect.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
     }
   ]
 }

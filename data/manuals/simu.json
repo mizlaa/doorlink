@@ -29,27 +29,6 @@
       ]
     },
     {
-      "modelCode": "DMI5Hz",
-      "name": "Simu DMI5Hz",
-      "category": "roller-shutter-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Simu DMI5Hz Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1955927/Simu-Dmi5hz.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Simu DMI5Hz Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "DMI5Hz / DMI6Hz",
       "name": "Simu DMI5Hz / DMI6Hz",
       "category": "roller-shutter-motors",
@@ -108,27 +87,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Simu T5 DMI 240V Wired Tubular Motor with Manual Override Factsheet\" (host: wpstaq-ap-southeast-2-media.s3.amazonaws.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "T5 E Hz",
-      "name": "Simu T5 E Hz",
-      "category": "roller-shutter-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Simu T5 E Hz Tubular Operator Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2077165/Simu-T5-E-Hz.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Simu T5 E Hz Tubular Operator Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

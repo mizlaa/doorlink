@@ -27,27 +27,6 @@
           "altSources": []
         }
       ]
-    },
-    {
-      "modelCode": "Garage Door Openers",
-      "name": "Skylink Garage Door Openers",
-      "category": "garage-door-openers",
-      "region": "CA",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Skylink Garage Door Opener Manuals Index",
-          "sourceUrl": "https://skylink.manymanuals.com/garage-door-opener",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "skylink.manymanuals.com",
-          "region": "CA",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Skylink Garage Door Opener Manuals Index\" (host: skylink.manymanuals.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
     }
   ]
 }

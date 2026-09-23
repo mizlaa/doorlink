@@ -30,27 +30,6 @@
       ]
     },
     {
-      "modelCode": "AUTOMATE",
-      "name": "Rollease Acmeda AUTOMATE",
-      "category": "roller-shutter-motors",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Rollease Acmeda Automate Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/3280514/Rollease-Acmeda-Automate.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Rollease Acmeda Automate Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "Automate ARC FT",
       "name": "Automate ARC Tubular FT Motor 433MHz Bi-Directional",
       "category": "roller-shutter-motors",
@@ -164,27 +143,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Rollease Acmeda Automate Wirefree Medium Motor System Reference Guide\" (host: www.rolleaseacmeda.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Blinds and Motors",
-      "name": "Rollease Acmeda Blinds and Motors",
-      "category": "roller-shutter-motors",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Rollease Acmeda Document Library Index",
-          "sourceUrl": "https://www.rolleaseacmeda.com/us/document-library",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "rolleaseacmeda.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Rollease Acmeda Document Library Index\" (host: www.rolleaseacmeda.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

@@ -134,48 +134,6 @@
       ]
     },
     {
-      "modelCode": "Operators",
-      "name": "Cookson Operators",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Cookson Security Doors, Gates and Garages Operator Manuals Index",
-          "sourceUrl": "https://www.cooksondoor.com/architectural-resource-homepage/operator-manuals",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "cooksondoor.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Cookson Security Doors, Gates and Garages Operator Manuals Index\" (host: www.cooksondoor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Rolling Doors",
-      "name": "Cookson Rolling Doors",
-      "category": "industrial-high-speed-doors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Cookson Operation and Maintenance Manuals Index",
-          "sourceUrl": "https://www.cooksondoor.com/retrofit-remarket/OandM-manuals",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "cooksondoor.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Cookson Operation and Maintenance Manuals Index\" (host: www.cooksondoor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "Service Doors",
       "name": "Cookson Service Doors",
       "category": "industrial-high-speed-doors",

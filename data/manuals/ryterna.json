@@ -9,27 +9,6 @@
   },
   "models": [
     {
-      "modelCode": "Doors",
-      "name": "Ryterna Doors",
-      "category": "garage-door-openers",
-      "region": "UK",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Ryterna Installation Manuals Index",
-          "sourceUrl": "https://www.ryternagaragedoors.co.uk/partnership/installation-manuals/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ryternagaragedoors.co.uk",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Ryterna Installation Manuals Index\" (host: www.ryternagaragedoors.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "R30",
       "name": "Ryterna R30",
       "category": "garage-door-openers",

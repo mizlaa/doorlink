@@ -11,7 +11,7 @@
     {
       "modelCode": "E-3WAY SWITCH",
       "name": "Ozroll E-3WAY SWITCH",
-      "category": "roller-shutter-motors",
+      "category": "garage-door-openers",
       "region": "AU",
       "aliases": [],
       "documents": [
@@ -73,7 +73,7 @@
     {
       "modelCode": "Manual Controls",
       "name": "Ozroll Manual Controls",
-      "category": "roller-shutter-motors",
+      "category": "garage-door-openers",
       "region": "AU",
       "aliases": [],
       "documents": [
@@ -158,39 +158,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "This model was carried as a gap - named in earlier search results alongside the L10 but with no documentation URL of its own. An aggregator brand index now lists ODS T10, T20 and T35 manuals, so the gap closes, but weakly: this URL is the brand index, not a document page for the T20, because no per-model URL surfaced. Whoever verifies it should replace this with the T20's own listing. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Roller Shutters",
-      "name": "Ozroll Roller Shutters",
-      "category": "roller-shutter-motors",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Ozroll Tech Product Information Index",
-          "sourceUrl": "https://ozrolltech.com.au/rollashield/product-information/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ozrolltech.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Ozroll Tech Product Information Index\" (host: ozrolltech.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Ozroll Tech Rollashield Installation Advice Index",
-          "sourceUrl": "https://ozrolltech.com.au/rollashield/installation-advice/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ozrolltech.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Ozroll Tech Rollashield Installation Advice Index\" (host: ozrolltech.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

@@ -108,27 +108,6 @@
       ]
     },
     {
-      "modelCode": "Automatic Doors",
-      "name": "Horton Automatics Automatic Doors",
-      "category": "automatic-pedestrian-doors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Horton Automatics PDF Library Index",
-          "sourceUrl": "https://www.hortondoors.com/resources/pdf-library/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "hortondoors.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Horton Automatics PDF Library Index\" (host: www.hortondoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "C2150",
       "name": "Horton Automatics C2150",
       "category": "automatic-pedestrian-doors",
@@ -157,30 +136,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Horton C2150 Control Manual (H210)\" (host: www.addisonautomatics.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TROUBLESHOOTING_GUIDE",
-          "title": "Horton C2150 Setup and Troubleshooting Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1310906/Horton-C2150.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Horton C2150 Setup and Troubleshooting Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Horton C2150 Setup Instructions",
-          "sourceUrl": "https://www.manualslib.com/manual/1344727/Horton-C2150.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Horton C2150 Setup Instructions\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

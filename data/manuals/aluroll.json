@@ -51,27 +51,6 @@
       ]
     },
     {
-      "modelCode": "Roller Garage Doors and Shutters",
-      "name": "Aluroll Roller Garage Doors and Shutters",
-      "category": "roller-shutter-motors",
-      "region": "UK",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Aluroll Installer Zone Downloads Index",
-          "sourceUrl": "https://www.aluroll.co.uk/installer-zone/downloads/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "aluroll.co.uk",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Aluroll Installer Zone Downloads Index\" (host: www.aluroll.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "Secureroll Classic",
       "name": "Aluroll Secureroll Classic and Compact Roller Garage Door",
       "category": "roller-shutter-motors",

@@ -9,48 +9,6 @@
   },
   "models": [
     {
-      "modelCode": "G-MATIC AP350",
-      "name": "Aprimatic G-MATIC AP350",
-      "category": "garage-door-openers",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Aprimatic G-Matic AP350 Use and Maintenance Instructions",
-          "sourceUrl": "https://www.manualslib.com/manual/2067529/Aprimatic-G-Matic-Ap350.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Aprimatic G-Matic AP350 Use and Maintenance Instructions\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "ONDA 500",
-      "name": "Aprimatic ONDA 500",
-      "category": "garage-door-openers",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Aprimatic Onda 500 Installation Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1161253/Aprimatic-Onda-500.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Aprimatic Onda 500 Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "R251FM",
       "name": "Aprimatic R251FM 24V Swing Gate Operator",
       "category": "gate-motors",
@@ -116,27 +74,6 @@
               "label": "Guidessimo listing for the ZT4 C"
             }
           ]
-        }
-      ]
-    },
-    {
-      "modelCode": "ZT4 C",
-      "name": "Aprimatic ZT4 C",
-      "category": "garage-door-openers",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Aprimatic ZT4 C Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1889795/Aprimatic-Zt4-C.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Aprimatic ZT4 C Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         }
       ]
     }

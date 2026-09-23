@@ -9,43 +9,43 @@
   },
   "models": [
     {
-      "modelCode": "Barriers",
-      "name": "Nice Barriers",
+      "modelCode": "1500",
+      "name": "Nice Apollo 1500",
       "category": "gate-motors",
-      "region": "EU",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Nice Barriers Download Index",
-          "sourceUrl": "https://www.niceforyou.com/en/download?t=479&l=16",
+          "kind": "INSTALL_MANUAL",
+          "title": "Apollo Model 1500 / 1600 Vehicular Swing Gate Opener Installation Reference Manual (D0873)",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/installrefmanual_1500_d0873.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
           "publisher": "niceforyou.com",
           "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Barriers Download Index\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "evidence": "Recorded from a web search result naming this URL as \"Apollo Model 1500 / 1600 Vehicular Swing Gate Opener Installation Reference Manual (D0873)\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
     },
     {
-      "modelCode": "DRIVE 500",
-      "name": "Nice DRIVE 500",
+      "modelCode": "1500 / 1600",
+      "name": "Nice Apollo 1500 / 1600",
       "category": "gate-motors",
-      "region": "EU",
+      "region": "US",
       "aliases": [],
       "documents": [
         {
-          "kind": "USER_MANUAL",
-          "title": "E.T. Systems Drive 500 User Instructions",
-          "sourceUrl": "https://www.manualslib.com/manual/1458682/E-T-Systems-Drive-500.html",
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Apollo Model 1500 / 1600 Swing Gate Operator Manual",
+          "sourceUrl": "https://apollogateopeners.com/store/pdf/1500-1600manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
+          "publisher": "apollogateopeners.com",
           "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"E.T. Systems Drive 500 User Instructions\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "evidence": "Recorded from a web search result naming this URL as \"Apollo Model 1500 / 1600 Swing Gate Operator Manual\" (host: apollogateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -93,226 +93,22 @@
       ]
     },
     {
-      "modelCode": "ERA FIT MHT",
-      "name": "Nice ERA FIT MHT",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Nice Era Fit MHT Instruction Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1788551/Nice-Era-Fit-Mht.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Era Fit MHT Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Nice Era Fit MHT Instructions and Warnings for Installation and Use",
-          "sourceUrl": "https://www.manualslib.com/manual/2189169/Nice-Era-Fit-Mht.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Era Fit MHT Instructions and Warnings for Installation and Use\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "ERA FIT SERIES",
-      "name": "Nice ERA FIT SERIES",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Nice Era Fit Series Instructions and Warnings for Installation and Use",
-          "sourceUrl": "https://www.manualslib.com/manual/1878811/Nice-Era-Fit-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Era Fit Series Instructions and Warnings for Installation and Use\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "ERA MAT A SERIES",
-      "name": "Nice ERA MAT A SERIES",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Nice Era Mat A Series Instructions and Warnings for Installation and Use",
-          "sourceUrl": "https://www.manualslib.com/manual/1654865/Nice-Era-Mat-A-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Era Mat A Series Instructions and Warnings for Installation and Use\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "ERA MAT T",
-      "name": "Nice ERA MAT T",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Nice Era Mat T Series Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Nice-Era-Mat-T-Series-10922993.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Era Mat T Series Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "ERA MAT VS",
-      "name": "Nice ERA MAT VS",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Nice Era Mat VS Instructions and Warnings for Installation and Use",
-          "sourceUrl": "https://www.manualslib.com/manual/1745059/Nice-Era-Mat-Vs.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Era Mat VS Instructions and Warnings for Installation and Use\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "ERA ONE",
       "name": "Nice ERA ONE",
-      "category": "remotes-accessories",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Nice Era One Fitting Instructions",
-          "sourceUrl": "https://www.manualslib.com/manual/1412470/Nice-Era-One.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Era One Fitting Instructions\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Nice Era One Remote Controls Manual (EasyGates)",
-          "sourceUrl": "https://manuals.easygates.co.uk/nice-era-one/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.easygates.co.uk",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Era One Remote Controls Manual (EasyGates)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Nice Era One Transmitter Installation Reference Manual",
-          "sourceUrl": "https://support.hysecurity.com/hc/en-us/articles/360043275294-Era-One-Transmitter-Installation-Reference-Manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "support.hysecurity.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Era One Transmitter Installation Reference Manual\" (host: support.hysecurity.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "ERA ONE ON1E / ON2E / ON4E / ON9E",
-      "name": "Nice ERA ONE ON1E / ON2E / ON4E / ON9E",
-      "category": "remotes-accessories",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Nice Era One Transmitters Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2975945/Nice-Era-One-On1e.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Era One Transmitters Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "ERA-P",
-      "name": "Nice ERA-P",
       "category": "gate-motors",
       "region": "EU",
       "aliases": [],
       "documents": [
         {
-          "kind": "USER_MANUAL",
-          "title": "Nice Era-P Original Instructions",
-          "sourceUrl": "https://www.manualslib.com/manual/1477821/Nice-Era-P.html",
+          "kind": "INSTALL_MANUAL",
+          "title": "Nice Apollo Era One Installation Manual",
+          "sourceUrl": "https://apollogateopeners.com/store/pdf/Nice-Apollo-Era-One-Installation-Manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
+          "publisher": "apollogateopeners.com",
           "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Era-P Original Instructions\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "ET-500 12V",
-      "name": "Nice ET-500 12V",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "E.T. Systems ET-500 12V User Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/835407/E-T-Systems-Et-500-12v.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"E.T. Systems ET-500 12V User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Apollo Era One Installation Manual\" (host: apollogateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -339,69 +135,6 @@
       ]
     },
     {
-      "modelCode": "Gate and Barrier Automation",
-      "name": "Nice Gate and Barrier Automation",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Nice Instruction Manuals Download Index",
-          "sourceUrl": "https://www.niceforyou.com/en/professional-area/download?st=1&v=7&t=479",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "niceforyou.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Instruction Manuals Download Index\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Gate and Door Automation",
-      "name": "Nice Gate and Door Automation",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Nice Australia Instruction Manuals Download Index",
-          "sourceUrl": "https://www.niceforyou.com/au/download?v=7",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "niceforyou.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Australia Instruction Manuals Download Index\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Gate Automation",
-      "name": "Nice Gate Automation",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Nice Documentation for Installers Download Index",
-          "sourceUrl": "https://www.niceforyou.com/en/professional-area/download",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "niceforyou.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Documentation for Installers Download Index\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "HO7124",
       "name": "Nice HO7124",
       "category": "gate-motors",
@@ -418,27 +151,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"HO7124 / HO7224 Swing Gate Opener Instructions and Warnings (IDV0657A00EN)\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "HYPPO HY7005 / HY7100",
-      "name": "Nice HYPPO HY7005 / HY7100",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Nice Hyppo HY 7005, HY 7100 Swing Gate Operator User Manual",
-          "sourceUrl": "https://manualzz.com/doc/en/9703390/nice-hyppo-swing-gate-operator-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualzz.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Hyppo HY 7005, HY 7100 Swing Gate Operator User Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -551,27 +263,6 @@
       ]
     },
     {
-      "modelCode": "M-BAR",
-      "name": "Nice M-BAR",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Nice M-Bar Instructions and Warnings for Installation and Use",
-          "sourceUrl": "https://www.manualslib.com/manual/3661125/Nice-M-Bar.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice M-Bar Instructions and Warnings for Installation and Use\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "M3BAR / M5BAR / M7BAR / L9BAR",
       "name": "Nice M3BAR / M5BAR / M7BAR / L9BAR",
       "category": "gate-motors",
@@ -593,27 +284,6 @@
       ]
     },
     {
-      "modelCode": "M7BAR",
-      "name": "Nice M7BAR",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Nice M7BAR Instructions for Installation and Use Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/3095355/Nice-M7bar.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice M7BAR Instructions for Installation and Use Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "MC824H",
       "name": "Nice MC824H",
       "category": "gate-motors",
@@ -630,27 +300,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Nice MC824H Control Unit Manual (IDV0606A00EN)\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "MINDY A01",
-      "name": "Nice MINDY A01",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Nice Mindy-A01 Control Unit Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Nice-Mindy-A01-6900652.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Mindy-A01 Control Unit Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -694,60 +343,6 @@
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Nice Mindy A60 Control Unit Instructions and Warnings (IST125R01.4858)\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Nice Mindy A60 Installation Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1081270/Nice-Mindy-A60.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Mindy A60 Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "MOON MC824H",
-      "name": "Nice MOON MC824H",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Nice Moon MC824H Gate Control Panel Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Nice-Moon-Mc824h-8850487.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Moon MC824H Gate Control Panel Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "MOONCLEVER MC824H",
-      "name": "Nice MOONCLEVER MC824H",
-      "category": "gate-motors",
-      "region": "UK",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Nice Moon / MoonClever MC824H Control Panel Manual",
-          "sourceUrl": "https://manuals.easygates.co.uk/nice-moonclever-mc824h/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.easygates.co.uk",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Moon / MoonClever MC824H Control Panel Manual\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         }
       ]
     },
@@ -768,27 +363,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Nice Neomat A Tubular Motor Installation and Use Instructions (89.056R01)\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "NEOMAT A SERIES",
-      "name": "Nice NEOMAT A SERIES",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Nice Neomat A Series Instructions and Warnings for the Fitter",
-          "sourceUrl": "https://www.manualslib.com/manual/1554184/Nice-Neomat-A-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Neomat A Series Instructions and Warnings for the Fitter\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -831,27 +405,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Nice Neomat T Tubular Motor Instructions and Warnings (89.053R02)\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "OXI/A",
-      "name": "Nice OXI/A",
-      "category": "remotes-accessories",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Nice OXI/A Receiver Installation Reference Manual",
-          "sourceUrl": "https://support.hysecurity.com/hc/en-us/articles/360043779313-OXI-A-Receiver-Installation-Reference-Manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "support.hysecurity.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice OXI/A Receiver Installation Reference Manual\" (host: support.hysecurity.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -936,27 +489,6 @@
       ]
     },
     {
-      "modelCode": "RB600",
-      "name": "Nice RB600",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Nice RB600 Instructions and Warnings for Installation and Use",
-          "sourceUrl": "https://www.manualslib.com/manual/1267891/Nice-Rb600.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice RB600 Instructions and Warnings for Installation and Use\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "RBS600HS",
       "name": "Robus RBS600HS Hi-Speed Sliding Gate Gearmotor",
       "category": "gate-motors",
@@ -981,27 +513,6 @@
       ]
     },
     {
-      "modelCode": "Receivers",
-      "name": "Nice Receivers",
-      "category": "remotes-accessories",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Nice Receivers Download Index",
-          "sourceUrl": "https://www.niceforyou.com/au/download?st=2&t=461",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "niceforyou.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Receivers Download Index\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "ROBO600",
       "name": "ROBO600 Sliding Gate Gearmotor",
       "category": "gate-motors",
@@ -1020,90 +531,6 @@
           "language": "en",
           "documentCode": "IDV0772A01EN",
           "evidence": "Manufacturer's own domain, and the search result title names ROBO600 explicitly. Document code read from the filename. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "ROBUS / ROBUSKIT",
-      "name": "Nice ROBUS / ROBUSKIT",
-      "category": "gate-motors",
-      "region": "UK",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Nice Robus and RobusKit Manual",
-          "sourceUrl": "https://manuals.easygates.co.uk/nice-robus-robuskit/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.easygates.co.uk",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Robus and RobusKit Manual\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "ROBUS 400",
-      "name": "Nice ROBUS 400",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Nice Robus 400 Instruction Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2670668/Nice-Robus-400.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Robus 400 Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "ROBUS 400 / RB600",
-      "name": "Nice ROBUS 400 / RB600",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Nice Robus 400 / RB600 Installation Manual",
-          "sourceUrl": "https://www.scribd.com/document/386257645/Manual-Instalare-Nice-Robus-400-RB600",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "scribd.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Robus 400 / RB600 Installation Manual\" (host: www.scribd.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "ROBUS RB400",
-      "name": "Nice ROBUS RB400",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Nice Robus RB400 Instructions and Warnings for Installation and Use (212 pages)",
-          "sourceUrl": "https://www.manualslib.com/manual/1104971/Nice-Robus-Rb400.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Robus RB400 Instructions and Warnings for Installation and Use (212 pages)\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -1142,27 +569,6 @@
       ]
     },
     {
-      "modelCode": "ROBUS RB600",
-      "name": "Nice ROBUS RB600",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Nice Robus RB600 Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Nice-Robus-Rb600-4164935.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Robus RB600 Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "RUN1500",
       "name": "Nice RUN1500 Sliding Gate Operator",
       "category": "gate-motors",
@@ -1195,48 +601,15 @@
       "aliases": [],
       "documents": [
         {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Nice Signo Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2906128/Nice-Signo.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Signo Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "SMXI",
-      "name": "Nice SMXI",
-      "category": "remotes-accessories",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
           "kind": "INSTALL_MANUAL",
-          "title": "Nice SMXI Receiver Installation Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1125115/Nice-Smxi.html",
+          "title": "Nice Apollo Signo Barrier Gate Installation Manual (ISTSG Rev 00.01)",
+          "sourceUrl": "https://apollogateopeners.com/store/pdf/nice-apollo-signo-barrier-gate-installation-manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
+          "publisher": "apollogateopeners.com",
           "region": "EU",
           "rights": "LINK_ONLY",
           "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice SMXI Receiver Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Nice SMXI Receiver Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Nice-Smxi-4203795.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice SMXI Receiver Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Apollo Signo Barrier Gate Installation Manual (ISTSG Rev 00.01)\" (host: apollogateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -1284,48 +657,6 @@
       ]
     },
     {
-      "modelCode": "SN6031",
-      "name": "Nice SN6031",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Nice SN6031 Instructions and Warnings for the Fitter",
-          "sourceUrl": "https://www.manualslib.com/manual/1388163/Nice-Sn6031.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice SN6031 Instructions and Warnings for the Fitter\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "SPIN / SPINBUS",
-      "name": "Nice SPIN / SPINBUS",
-      "category": "gate-motors",
-      "region": "UK",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Nice Spin and Spinbus Manual",
-          "sourceUrl": "https://manuals.easygates.co.uk/nice-spin-spinbus/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.easygates.co.uk",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Spin and Spinbus Manual\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "SPOP",
       "name": "Nice SPOP",
       "category": "gate-motors",
@@ -1363,30 +694,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Nice Sumo Garage Door Opener Manual (ISTSUR02.4865)\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Nice Sumo Instructions and Warnings for Installation and Use",
-          "sourceUrl": "https://www.manualslib.com/manual/1100608/Nice-Sumo.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Sumo Instructions and Warnings for Installation and Use\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Nice Sumo Instructions and Warnings for the Fitter",
-          "sourceUrl": "https://www.manualslib.com/manual/1093022/Nice-Sumo.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Sumo Instructions and Warnings for the Fitter\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -1429,27 +736,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Apollo / Nice Toona 5 and Toona 7 Installation Manual\" (host: www.apollogateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "TOONA TO4006",
-      "name": "Nice TOONA TO4006",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Nice Toona TO4006 Instructions for Installation and Use Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1320850/Nice-Toona-To4006.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Toona TO4006 Instructions for Installation and Use Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -1521,69 +807,6 @@
       ]
     },
     {
-      "modelCode": "WALKY",
-      "name": "Nice WALKY",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Nice Walky User Manual",
-          "sourceUrl": "https://manualmachine.com/nice/walky/2593469-user-manual/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualmachine.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Walky User Manual\" (host: manualmachine.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "WALKY / WALKYKIT",
-      "name": "Nice WALKY / WALKYKIT",
-      "category": "gate-motors",
-      "region": "UK",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Nice Walky and WalkyKit Articulated Gate Opener Manual",
-          "sourceUrl": "https://manuals.easygates.co.uk/nice-walky-manual/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.easygates.co.uk",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Walky and WalkyKit Articulated Gate Opener Manual\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "WIDE M",
-      "name": "Nice WIDE M",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Nice Wide M Installer's Instructions",
-          "sourceUrl": "https://www.manualslib.com/manual/1902661/Nice-Wide-M.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Wide M Installer's Instructions\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "WIDE S / WIDE M / WIDE L",
       "name": "Nice WIDE S / WIDE M / WIDE L",
       "category": "gate-motors",
@@ -1600,27 +823,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Nice Wide S, M, L Electromechanical Road Barrier Manual (IDV0698A00EN)\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "WIDES",
-      "name": "Nice WIDES",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "SAFETY_DOCUMENT",
-          "title": "Nice WideS User, Installation and Safety Instructions",
-          "sourceUrl": "https://www.manualslib.com/manual/1765786/Nice-Wides.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice WideS User, Installation and Safety Instructions\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -1679,27 +881,6 @@
               "label": "Nice document istwingor02.4865, instructions and warnings for installation and use - a separate Wingo document in the same directory"
             }
           ]
-        }
-      ]
-    },
-    {
-      "modelCode": "WINGO 4024",
-      "name": "Nice WINGO 4024",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Nice Wingo 4024 Instructions for Installation and Use Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1212430/Nice-Wingo-4024.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Nice Wingo 4024 Instructions for Installation and Use Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         }
       ]
     },

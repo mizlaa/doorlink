@@ -15,30 +15,6 @@
       "aliases": [],
       "documents": [
         {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Superlift Help and Manuals Index",
-          "sourceUrl": "https://www.superliftgdo.com.au/help-manuals/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "superliftgdo.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Superlift Help and Manuals Index\" (host: www.superliftgdo.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Superlift Manuals Download Files Index",
-          "sourceUrl": "https://www.superliftgdo.com.au/help-manuals/download-files/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "superliftgdo.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Superlift Manuals Download Files Index\" (host: www.superliftgdo.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
           "kind": "USER_MANUAL",
           "title": "Superlift Opener Instruction Manual (801-001-01 C)",
           "sourceUrl": "http://www.waverleygaragedoors.com.au/instruction-manuals/Superlift.pdf",
@@ -69,18 +45,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Superlift RDO-4 Roller Door Opener Instruction Manual\" (host: www.superliftgdo.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Superlift RDO-4 Roller Door Opener User Manual",
-          "sourceUrl": "https://manuals.plus/super-lift/rdo-4-roller-door-opener-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Superlift RDO-4 Roller Door Opener User Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -144,27 +108,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Superlift SDO-5 Instruction Manual\" (host: motepro.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "SDO-5 DC FS 1000",
-      "name": "Superlift SDO-5 DC FS 1000",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Superlift SDO-5 DC FS 1000 Sectional and Tilt Door Opener Installation Instructions and User Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2018951/Superlift-Sdo-5-Dc-Fs-1000.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Superlift SDO-5 DC FS 1000 Sectional and Tilt Door Opener Installation Instructions and User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

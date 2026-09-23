@@ -7,45 +7,12 @@
   },
   "models": [
     {
-      "modelCode": "PRO-H",
-      "name": "Micanan PRO-H",
-      "category": "garage-door-openers",
-      "region": "CA",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Micanan Pro-H Instruction Manual",
-          "sourceUrl": "https://micanan.manymanuals.com/garage-door-opener/pro-h/instruction-manual-33155",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "micanan.manymanuals.com",
-          "region": "CA",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Micanan Pro-H Instruction Manual\" (host: micanan.manymanuals.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "PRO-LH",
       "name": "Micanan PRO-LH",
       "category": "garage-door-openers",
       "region": "CA",
       "aliases": [],
       "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Micanan Pro-LH Garage Door Opener Installation Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1544261/Micanan-Pro-Lh.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "CA",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Micanan Pro-LH Garage Door Opener Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
         {
           "kind": "INSTALL_MANUAL",
           "title": "Micanan Pro-LH Installation Manual",

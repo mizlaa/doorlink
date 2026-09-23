@@ -30,27 +30,6 @@
       ]
     },
     {
-      "modelCode": "MHTM",
-      "name": "Magnetic Autocontrol MHTM",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Magnetic AutoControl MHTM Operating Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2612222/Magnetic-Autocontrol-Mhtm.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Magnetic AutoControl MHTM Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "MHTM MicroDrive",
       "name": "Magnetic MHTM MicroDrive Barrier",
       "category": "gate-motors",
@@ -90,18 +69,6 @@
               "label": "manuals.plus copy"
             }
           ]
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Magnetic AutoControl MHTM MicroDrive Operating Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1227460/Magnetic-Autocontrol-Mhtm-Microdrive.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Magnetic AutoControl MHTM MicroDrive Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         }
       ]
     },

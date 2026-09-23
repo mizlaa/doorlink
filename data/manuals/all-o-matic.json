@@ -50,48 +50,6 @@
       ]
     },
     {
-      "modelCode": "Gate Operators",
-      "name": "All-O-Matic Gate Operators",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "All-O-Matic Gate Operator Manuals Index",
-          "sourceUrl": "https://www.aegates.com/all-o-matic-gate-operator-manuals/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "aegates.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"All-O-Matic Gate Operator Manuals Index\" (host: www.aegates.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "SL-100 AC",
-      "name": "All-O-Matic SL-100 AC",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "All-O-Matic SL-100 AC Gate Opener Operator's Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1599601/All-O-Matic-Sl-100-Ac.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"All-O-Matic SL-100 AC Gate Opener Operator's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "SL-100 AC / SL-150 AC",
       "name": "All-O-Matic SL-100 AC / SL-150 AC",
       "category": "gate-motors",
@@ -108,48 +66,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"All-O-Matic SL-100 AC / SL-150 AC Slider Manual\" (host: allomatic.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "SL-100 DC",
-      "name": "All-O-Matic SL-100 DC",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "All-O-Matic SL-100 DC Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/3865248/All-O-Matic-Sl-100-Dc.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"All-O-Matic SL-100 DC Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "SL-100AC",
-      "name": "All-O-Matic SL-100AC",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "All-O-Matic SL-100AC Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/3011182/All-O-Matic-Sl-100ac.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"All-O-Matic SL-100AC Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

@@ -28,39 +28,6 @@
       ]
     },
     {
-      "modelCode": "Garage Door Openers",
-      "name": "Napoleon / Lynx Garage Door Openers",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Napoleon / Lynx Garage Door Opener Parts Manuals Index",
-          "sourceUrl": "https://shopactiondirect.com/napoleon-lynx-product-manuals/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "shopactiondirect.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Napoleon / Lynx Garage Door Opener Parts Manuals Index\" (host: shopactiondirect.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Napoleon Lynx Product Manuals Index",
-          "sourceUrl": "https://www.stardoorparts.com/Napoleon-Lynx-Product-Manuals-s/422.htm",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "stardoorparts.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Napoleon Lynx Product Manuals Index\" (host: www.stardoorparts.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "LDJ / LDJH / LDJB / LDJBH",
       "name": "Napoleon / Lynx LDJ / LDJH / LDJB / LDJBH",
       "category": "garage-door-openers",
@@ -77,27 +44,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Napoleon Lynx Medium Duty Jack Shaft Operator Owner's Manual\" (host: www.lynx-nsw.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "LDT",
-      "name": "Napoleon / Lynx LDT",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Lynx Napoleon LDT Owner's Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1917914/Lynx-Napoleon-Lynx-Ldt.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Lynx Napoleon LDT Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -182,27 +128,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Napoleon Lynx Residential Garage Door Operator Owner's Manual (Rev C)\" (host: www.lynx-nsw.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "SDO800",
-      "name": "Napoleon SDO800",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Napoleon SDO800 Installation Instructions and User Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/927828/Napoleon-Sdo800.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Napoleon SDO800 Installation Instructions and User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

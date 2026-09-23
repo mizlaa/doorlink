@@ -8,27 +8,6 @@
   },
   "models": [
     {
-      "modelCode": "All Doors",
-      "name": "C.H.I. Overhead Doors All Doors",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "C.H.I. Overhead Doors Document Finder Index",
-          "sourceUrl": "https://www.chiohd.com/document-finder",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "chiohd.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"C.H.I. Overhead Doors Document Finder Index\" (host: www.chiohd.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "Commercial Sectional Doors",
       "name": "C.H.I. Overhead Doors Commercial Sectional Doors",
       "category": "garage-door-openers",
@@ -45,48 +24,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"C.H.I. Commercial Sectional Doors Installation Instructions\" (host: www.bartondoor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Residential Doors",
-      "name": "C.H.I. Overhead Doors Residential Doors",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "C.H.I. Residential Users Guide and Garage Door Owner's Manual",
-          "sourceUrl": "https://www.gdcorp.com/chi-residential-users-guide-garage-door-owners-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "gdcorp.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"C.H.I. Residential Users Guide and Garage Door Owner's Manual\" (host: www.gdcorp.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Sectional Doors",
-      "name": "C.H.I. Overhead Doors Sectional Doors",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "C.H.I. Overhead Doors Resources Index (document finder, manuals)",
-          "sourceUrl": "https://www.chiohd.com/resources",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "chiohd.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"C.H.I. Overhead Doors Resources Index (document finder, manuals)\" (host: www.chiohd.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

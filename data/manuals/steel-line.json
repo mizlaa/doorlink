@@ -26,30 +26,6 @@
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Steel-Line Automation Garage Door Opener Pro Control System Instructions and User Guide\" (host: www.steel-lineautomation.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Steel-Line Automation Technical Support Index",
-          "sourceUrl": "https://www.steel-lineautomation.com.au/technical-support.html",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "steel-lineautomation.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Steel-Line Automation Technical Support Index\" (host: www.steel-lineautomation.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Steel-Line Manuals Index (Wholesale Garage Doors)",
-          "sourceUrl": "https://wholesalegaragedoors.com.au/steel-line-manuals/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "wholesalegaragedoors.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Steel-Line Manuals Index (Wholesale Garage Doors)\" (host: wholesalegaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         }
       ]
     },
@@ -123,18 +99,6 @@
       "region": "AU",
       "aliases": [],
       "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Steel-Line RD1200 Door Opener User Manual",
-          "sourceUrl": "https://manuals.plus/steel-line/rd1200-door-opener-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Steel-Line RD1200 Door Opener User Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
         {
           "kind": "INSTALL_MANUAL",
           "title": "Steel-Line RD1200 Roller Door Opener Installation and Operating Instructions (V2.05/20)",
@@ -314,18 +278,6 @@
               "label": "Reseller copy; its cover reads V7.09/19, so it is a third edition between the two manufacturer-hosted ones"
             }
           ]
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Steel-Line SD800 Installation and Operating Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1290300/Steel-Line-Sd800.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Steel-Line SD800 Installation and Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         }
       ]
     },

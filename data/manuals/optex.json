@@ -7,30 +7,9 @@
   },
   "models": [
     {
-      "modelCode": "OA-AXIS I",
-      "name": "Optex OA-AXIS I",
-      "category": "remotes-accessories",
-      "region": "UNKNOWN",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Optex OA-Axis I Security Sensor Operation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1516951/Optex-Oa-Axis-I.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Optex OA-Axis I Security Sensor Operation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "OA-AXIS II",
       "name": "Optex OA-AXIS II",
-      "category": "remotes-accessories",
+      "category": "garage-door-openers",
       "region": "UNKNOWN",
       "aliases": [],
       "documents": [
@@ -44,39 +23,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Optex OA-Axis II Manual (EN)\" (host: s3-eu-west-1.amazonaws.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "OA-AXIS T",
-      "name": "Optex OA-AXIS T",
-      "category": "remotes-accessories",
-      "region": "UK",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Optex OA-Axis T Original Instructions",
-          "sourceUrl": "https://www.manualslib.com/manual/1562360/Optex-Oa-Axis-T.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Optex OA-Axis T Original Instructions\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Optex OA-Axis T User Manual",
-          "sourceUrl": "https://www.manuals.co.uk/optex/oa-axis-t/manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.co.uk",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Optex OA-Axis T User Manual\" (host: www.manuals.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

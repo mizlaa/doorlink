@@ -9,48 +9,6 @@
   },
   "models": [
     {
-      "modelCode": "A10",
-      "name": "Centurion Systems A10",
-      "category": "gate-motors",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Centurion A10 Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1009376/Centurion-A10.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion A10 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "A10 SERIES",
-      "name": "Centurion Systems A10 SERIES",
-      "category": "gate-motors",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "PROGRAMMING_GUIDE",
-          "title": "Centurion A10 Series Programming Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1682037/Centurion-A10-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion A10 Series Programming Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "D10",
       "name": "Centurion D10 / D10 Turbo Industrial Sliding Gate Operator",
       "category": "gate-motors",
@@ -128,18 +86,6 @@
               "label": "manuals.plus copy of the SMART sliding gate operators manual"
             }
           ]
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "CENTSYS D10 SMART Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/3749367/Centsys-D10-Smart.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"CENTSYS D10 SMART Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         }
       ]
     },
@@ -150,66 +96,6 @@
       "region": "AU",
       "aliases": [],
       "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Centurion D2 Turbo Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/792796/Centurion-D2-Turbo.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion D2 Turbo Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Centurion D2 Turbo Installation Manual (Manualzz)",
-          "sourceUrl": "https://manualzz.com/doc/14350509/centurion-d2-turbo-installation-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualzz.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion D2 Turbo Installation Manual (Manualzz)\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Centurion D2 Turbo Pocket Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1229206/Centurion-D2-Turbo.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion D2 Turbo Pocket Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "QUICK_START",
-          "title": "Centurion D2 Turbo Quick Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/792955/Centurion-D2-Turbo.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion D2 Turbo Quick Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Centurion D2 Turbo User Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/793059/Centurion-D2-Turbo.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion D2 Turbo User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
         {
           "kind": "INSTALL_MANUAL",
           "title": "D2 Turbo and D2 Turbo Low-Voltage Installation Manual (0_07_D_0038)",
@@ -293,30 +179,6 @@
         },
         {
           "kind": "INSTALL_MANUAL",
-          "title": "CENTSYS D5-Evo Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1023760/Centsys-D5-Evo.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"CENTSYS D5-Evo Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Centurion D5-Evo Configuration Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/930617/Centurion-D5-Evo.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion D5-Evo Configuration Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
           "title": "D5-Evo Installation Manual (0.07.A.0059, 22072013)",
           "sourceUrl": "https://www.centsys.co.za/upload/product_link_files/0.07.A.0059-D5-Evo-Installation-Manual-22072013-for-web.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
@@ -392,30 +254,6 @@
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
-          "title": "CENTSYS D6 SMART Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/4029642/Centsys-D6-Smart.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"CENTSYS D6 SMART Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Centurion D6 SMART Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/3945187/Centurion-D6-Smart.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion D6 SMART Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
           "title": "D6 SMART Installation Manual (1401.D.01.0020, 26032025 revision)",
           "sourceUrl": "https://gateandfencehardware.com.au/wp-content/uploads/2025/08/1401.D.01.0020-D6-Smart-Installation-Manual-CENTSYS_26032025_AP_Web.pdf",
           "origin": "THIRD_PARTY_GUIDE",
@@ -453,57 +291,12 @@
       ]
     },
     {
-      "modelCode": "Gate Motors",
-      "name": "Centurion Systems Gate Motors",
-      "category": "gate-motors",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Centurion Systems Australia Product Documentation Index",
-          "sourceUrl": "https://www.centsys.com.au/product-documentation_old/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "centsys.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion Systems Australia Product Documentation Index\" (host: www.centsys.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "CENTSYS SMART Apps and Documentation Downloads Index",
-          "sourceUrl": "https://www.centsys.com.au/app/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "centsys.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"CENTSYS SMART Apps and Documentation Downloads Index\" (host: www.centsys.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "SD04",
       "name": "Centurion Systems SD04",
       "category": "garage-door-openers",
       "region": "AU",
       "aliases": [],
       "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Centurion Systems SD04 Garage Door Operator Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1483917/Centurion-Sd04.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion Systems SD04 Garage Door Operator Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
         {
           "kind": "INSTALL_MANUAL",
           "title": "Centurion Systems SD04 Garage Door Operator Installation Manual (CENTSYS)",
@@ -525,54 +318,6 @@
       "region": "AU",
       "aliases": [],
       "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Centurion Sector II Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/3083838/Centurion-Sector-Ii.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion Sector II Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Centurion Sector II Rectangular Boom Pole LED Installation Manual",
-          "sourceUrl": "https://manuals.plus/m/f308713d8aab0801b9340b67db47731d5c9eb26c91084304b5e772568958159a",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion Sector II Rectangular Boom Pole LED Installation Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Centurion Systems Sector II Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1462250/Centurion-Systems-Sector-Ii.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion Systems Sector II Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Centurion Systems Sector II Installation Manual (Manualzz)",
-          "sourceUrl": "https://manualzz.com/doc/68160567/centurion-systems-sector-ii-installation-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualzz.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion Systems Sector II Installation Manual (Manualzz)\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
         {
           "kind": "INSTALL_MANUAL",
           "title": "Sector II Rectangular Boom Breakaway Coupling Installation Manual (1246.D.01.0011)",
@@ -624,57 +369,12 @@
       ]
     },
     {
-      "modelCode": "V SERIES",
-      "name": "Centurion Systems V SERIES",
-      "category": "gate-motors",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "CENTSYS V Series Swing Gate Operators Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/3552767/Centsys-V-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"CENTSYS V Series Swing Gate Operators Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "VANTAGE",
       "name": "Centurion Systems VANTAGE",
       "category": "gate-motors",
       "region": "AU",
       "aliases": [],
       "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Centurion Vantage Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1031404/Centurion-Vantage.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion Vantage Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Centurion Vantage Installation Manual (Manualzz)",
-          "sourceUrl": "https://manualzz.com/doc/4210739/centurion-vantage-installation-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualzz.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion Vantage Installation Manual (Manualzz)\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
         {
           "kind": "INSTALL_MANUAL",
           "title": "VANTAGE Mechanical Installation Manual (DOC12381V100)",
@@ -690,78 +390,12 @@
       ]
     },
     {
-      "modelCode": "VANTAGE 400",
-      "name": "Centurion Systems VANTAGE 400",
-      "category": "gate-motors",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Centurion Systems Vantage 400 Mechanical Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1485647/Centurion-Systems-Vantage-400.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion Systems Vantage 400 Mechanical Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "VANTAGE 400 SMART",
-      "name": "Centurion Systems VANTAGE 400 SMART",
-      "category": "gate-motors",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Centurion Systems Vantage 400 SMART Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/3079279/Centurion-Systems-Vantage-400-Smart.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion Systems Vantage 400 SMART Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Centurion Vantage SMART 400 Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/3944682/Centurion-Vantage-Smart-400.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion Vantage SMART 400 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "VANTAGE SMART",
       "name": "Centurion Systems VANTAGE SMART",
       "category": "gate-motors",
       "region": "AU",
       "aliases": [],
       "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Centurion Vantage SMART Installation Manual",
-          "sourceUrl": "https://manuals.plus/m/8dfaaa84ef84f30a4fc590bbf1f4c03a5b8009f925cb98f3234cd4c0691a981a",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion Vantage SMART Installation Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
         {
           "kind": "INSTALL_MANUAL",
           "title": "Vantage SMART Swing Gate Operators Installation Manual (1408.D.01.0001)",
@@ -772,27 +406,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Vantage SMART Swing Gate Operators Installation Manual (1408.D.01.0001)\" (host: www.centsys.co.za). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "VECTOR",
-      "name": "Centurion Systems VECTOR",
-      "category": "gate-motors",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Centurion Vector User Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/849161/Centurion-Vector.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion Vector User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -847,18 +460,6 @@
               "label": "ManualsLib listing"
             }
           ]
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Centurion Vector2 Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/884887/Centurion-Vector2.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Centurion Vector2 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         }
       ]
     },

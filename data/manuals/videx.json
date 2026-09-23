@@ -6,48 +6,6 @@
   },
   "models": [
     {
-      "modelCode": "Door Entry Systems",
-      "name": "Videx Door Entry Systems",
-      "category": "remotes-accessories",
-      "region": "UNKNOWN",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Videx Installation Instructions Index",
-          "sourceUrl": "https://doorentrydirect.com/videx-installation-instructions/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "doorentrydirect.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Videx Installation Instructions Index\" (host: doorentrydirect.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Door Intercom System",
-      "name": "Videx Door Intercom System",
-      "category": "remotes-accessories",
-      "region": "UNKNOWN",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Videx Door Intercom System Technical Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/897753/Videx-Door-Intercom-System.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Videx Door Intercom System Technical Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "GSM Door Intercom",
       "name": "Videx GSM Door Intercom",
       "category": "remotes-accessories",

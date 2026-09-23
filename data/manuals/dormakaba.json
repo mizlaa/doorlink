@@ -9,27 +9,6 @@
   },
   "models": [
     {
-      "modelCode": "Automatic Sliding Doors",
-      "name": "dormakaba Automatic Sliding Doors",
-      "category": "automatic-pedestrian-doors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "dormakaba Automatic Sliding Door Operating and Maintenance Manual",
-          "sourceUrl": "https://manuals.plus/m/7784d72302e67059191c32dbbdb4715c0baa054c2062c6e424e6d5358b6caeb7",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"dormakaba Automatic Sliding Door Operating and Maintenance Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "ED 100 / ED 250",
       "name": "dormakaba ED 100 / ED 250",
       "category": "automatic-pedestrian-doors",
@@ -79,30 +58,6 @@
               "label": "Document-sharing copy covering ED100/ED250 SA parameter values and firmware updates via handheld terminal"
             }
           ]
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "dormakaba ED100 Service Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1446137/Dormakaba-Ed100.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED100 Service Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "dormakaba ED100 Installation Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1328365/Dormakaba-Ed100.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED100 Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         }
       ]
     },
@@ -138,18 +93,6 @@
           "altSources": []
         },
         {
-          "kind": "INSTALL_MANUAL",
-          "title": "dormakaba ED100 / ED250 Installation Guide",
-          "sourceUrl": "https://www.scribd.com/document/906734171/9",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "scribd.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED100 / ED250 Installation Guide\" (host: www.scribd.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
           "kind": "WIRING_DIAGRAM",
           "title": "dormakaba ED100 / ED250 Sensor Installation and Wiring (DL4614-130 R062022)",
           "sourceUrl": "https://my.dormakaba.com/medias/DL4614-130-ED100-ED250-SEN-INSWRG.pdf?context=bWFzdGVyfHJvb3R8MTM4MDg2MXxhcHBsaWNhdGlvbi9wZGZ8aGIwL2g5My84OTg4NTcxMTQwMTI2LnBkZnxhMDE3YTY0YzJiMWY3MDcyNGJiNjdiN2VlMjk0ZDc3ODU1MTU4NGMwZmY2ZWU2MDE3Nzk0Nzk2MmE5N2RlNzE3",
@@ -171,27 +114,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED100 / ED250 Sensors Installation and Wiring Instructions (DL4614-130, 06-2022)\" (host: www.terrauniversal.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "ED250",
-      "name": "dormakaba ED250",
-      "category": "automatic-pedestrian-doors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "dormakaba ED250 Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Dormakaba-Ed250-8830100.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"dormakaba ED250 Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

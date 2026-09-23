@@ -9,69 +9,6 @@
   },
   "models": [
     {
-      "modelCode": "Gate Equipment",
-      "name": "Linear / OSCO Gate Equipment",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Linear Gate Equipment Manuals Index",
-          "sourceUrl": "https://www.aegates.com/linear-gate-manuals/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "aegates.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Linear Gate Equipment Manuals Index\" (host: www.aegates.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Gate Operators",
-      "name": "Linear / OSCO Gate Operators",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Linear Nortek Operating Manuals and Specification Sheets Index",
-          "sourceUrl": "https://lineargateopeners.com/store/resources/resources-hub/manuals.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "lineargateopeners.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Linear Nortek Operating Manuals and Specification Sheets Index\" (host: lineargateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "HSLG",
-      "name": "Linear / OSCO HSLG",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "OSCO HSLG Sliding Commercial Gate Operator Manual",
-          "sourceUrl": "https://manualzz.com/doc/8291263/osco-hslg-gate-opener-sliding-commercial-operator-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualzz.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"OSCO HSLG Sliding Commercial Gate Operator Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "LDCO800",
       "name": "Linear LDCO800 Belt or Chain Drive DC Garage Door Operator",
       "category": "garage-door-openers",
@@ -174,27 +111,6 @@
       ]
     },
     {
-      "modelCode": "SWC / SWD / SWR",
-      "name": "Linear / OSCO SWC / SWD / SWR",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "OSCO SWC, SWD, SWR Swing Gate Openers Manual",
-          "sourceUrl": "https://manualzz.com/doc/9944370/osco-swc-swd-swr-swing-gate-openers-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualzz.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"OSCO SWC, SWD, SWR Swing Gate Openers Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "SWG",
       "name": "Linear / OSCO SWG",
       "category": "gate-motors",
@@ -211,18 +127,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Linear OSCO SWG Swing Gate Operator Installation Guide (P1227)\" (host: linear-solutions.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "OSCO SWG Swing Gate Operator User Manual",
-          "sourceUrl": "https://manualzz.com/doc/13345315/osco-swing-gate-operator-user-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualzz.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"OSCO SWG Swing Gate Operator User Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

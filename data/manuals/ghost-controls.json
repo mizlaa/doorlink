@@ -29,48 +29,6 @@
       ]
     },
     {
-      "modelCode": "DTP1",
-      "name": "Ghost Controls DTP1",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Ghost Controls DTP1 Installation and Owner's Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1982789/Ghost-Controls-Dtp1.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Ghost Controls DTP1 Installation and Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Gate Openers",
-      "name": "Ghost Controls Gate Openers",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Ghost Controls Manuals and Guides Index",
-          "sourceUrl": "https://ghostcontrols.com/pages/updated-manuals",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "ghostcontrols.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Ghost Controls Manuals and Guides Index\" (host: ghostcontrols.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "HDP2",
       "name": "Ghost Controls HDP2",
       "category": "gate-motors",

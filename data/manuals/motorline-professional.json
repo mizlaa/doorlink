@@ -8,51 +8,9 @@
   },
   "models": [
     {
-      "modelCode": "FIX",
-      "name": "Motorline Professional FIX",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Motorline Professional Fix User's and Installer's Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2838064/Motorline-Professional-Fix.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Motorline Professional Fix User's and Installer's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Gate Openers",
-      "name": "Motorline Professional Gate Openers",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Motorline Professional Gate Opener Manuals Index",
-          "sourceUrl": "https://www.manualslib.com/brand/motorline-professional/gate-opener.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Motorline Professional Gate Opener Manuals Index\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "MC111",
       "name": "Motorline Professional MC111",
-      "category": "gate-motors",
+      "category": "garage-door-openers",
       "region": "EU",
       "aliases": [],
       "documents": [
@@ -73,7 +31,7 @@
     {
       "modelCode": "MC52",
       "name": "Motorline Professional MC52",
-      "category": "gate-motors",
+      "category": "garage-door-openers",
       "region": "EU",
       "aliases": [],
       "documents": [
@@ -87,60 +45,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Motorline MC52 Control Board User / Installer Manual (V4.9.3)\" (host: motorline.pt). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Motorline Professional MC52 User and Installer's Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2563040/Motorline-Professional-Portugal-Mc52.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Motorline Professional MC52 User and Installer's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "OL1500-KIT",
-      "name": "Motorline Professional OL1500-KIT",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Motorline OL1500-KIT Sliding Gate Automation Kit User Manual",
-          "sourceUrl": "https://manuals.plus/motorline/ol1500-kit-sliding-gate-automation-kit-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Motorline OL1500-KIT Sliding Gate Automation Kit User Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "TELICA",
-      "name": "Motorline Professional TELICA",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Motorline Professional Telica Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1957902/Motorline-Professional-Telica.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Motorline Professional Telica Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

@@ -10,7 +10,7 @@
     {
       "modelCode": "275/K4 PAS 900A",
       "name": "Pilomat 275/K4 PAS 900A",
-      "category": "gate-motors",
+      "category": "garage-door-openers",
       "region": "EU",
       "aliases": [],
       "documents": [
@@ -24,27 +24,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Pilomat 275/K4 PAS 900A Instruction Manual (999.0112 Rev 09)\" (host: cdn.prod.website-files.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Automatic Bollards",
-      "name": "Pilomat Automatic Bollards",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Pilomat Automatic Bollards Product and Documentation Index",
-          "sourceUrl": "https://www.pilomat.com/en/products/automatic-bollards",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "pilomat.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Pilomat Automatic Bollards Product and Documentation Index\" (host: www.pilomat.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

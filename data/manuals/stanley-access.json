@@ -9,27 +9,6 @@
   },
   "models": [
     {
-      "modelCode": "DURA-GLIDE 2000",
-      "name": "Stanley Access Technologies DURA-GLIDE 2000",
-      "category": "automatic-pedestrian-doors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Stanley Dura-Glide 2000 Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Stanley-Dura-Glide-2000-10632767.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Stanley Dura-Glide 2000 Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "DURA-GLIDE 2000 / 3000",
       "name": "Stanley Access Technologies DURA-GLIDE 2000 / 3000",
       "category": "automatic-pedestrian-doors",
@@ -88,51 +67,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Stanley Dura-Glide 2000AG All-Glass Sliding Door Installation Instructions\" (host: www.addisonautomatics.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "QUICK_START",
-          "title": "Stanley Dura-Glide 2000AG Series Installation Instructions, Quick Reference Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1662646/Stanley-Dura-Glide-2000ag-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Stanley Dura-Glide 2000AG Series Installation Instructions, Quick Reference Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "DURA-GLIDE SERIES",
-      "name": "Stanley Access Technologies DURA-GLIDE SERIES",
-      "category": "automatic-pedestrian-doors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Stanley Dura-Glide Series Operation and Maintenance Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2406459/Stanley-Dura-Glide-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Stanley Dura-Glide Series Operation and Maintenance Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Stanley Dura-Glide Series Owner's Operation and Maintenance Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1944942/Stanley-Dura-Glide-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Stanley Dura-Glide Series Owner's Operation and Maintenance Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

@@ -10,7 +10,7 @@
     {
       "modelCode": "CRYSTAL TOURNIKET",
       "name": "Boon Edam CRYSTAL TOURNIKET",
-      "category": "automatic-pedestrian-doors",
+      "category": "garage-door-openers",
       "region": "EU",
       "aliases": [],
       "documents": [
@@ -31,7 +31,7 @@
     {
       "modelCode": "DUOTOUR DT (Gen 2)",
       "name": "Boon Edam DUOTOUR DT (Gen 2)",
-      "category": "automatic-pedestrian-doors",
+      "category": "garage-door-openers",
       "region": "EU",
       "aliases": [],
       "documents": [
@@ -50,51 +50,9 @@
       ]
     },
     {
-      "modelCode": "Revolving Doors",
-      "name": "Boon Edam Revolving Doors",
-      "category": "automatic-pedestrian-doors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Boon Edam Knowledge Base (manuals and checklists)",
-          "sourceUrl": "https://www.boonedam.com/knowledge-base",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "boonedam.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Boon Edam Knowledge Base (manuals and checklists)\" (host: www.boonedam.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "THT-100",
-      "name": "Boon Edam THT-100",
-      "category": "automatic-pedestrian-doors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Boon Edam THT-100 Operation, Installation and Maintenance Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1344470/Boon-Edam-Tht-100.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Boon Edam THT-100 Operation, Installation and Maintenance Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "TOURNEX",
       "name": "Boon Edam TOURNEX",
-      "category": "automatic-pedestrian-doors",
+      "category": "garage-door-openers",
       "region": "EU",
       "aliases": [],
       "documents": [

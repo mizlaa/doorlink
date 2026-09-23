@@ -9,39 +9,6 @@
   },
   "models": [
     {
-      "modelCode": "Automatic Doors",
-      "name": "record Automatic Doors",
-      "category": "automatic-pedestrian-doors",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Record Automatic Doors Australia Product Documentation",
-          "sourceUrl": "https://www.recorddoors.com.au/en/documents/Group/product-documentation",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "recorddoors.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Record Automatic Doors Australia Product Documentation\" (host: www.recorddoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Record Doors Downloads for Automatic Doors and Entrance Solutions",
-          "sourceUrl": "https://www.recorddoors.com/group/en/resources/downloads",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "recorddoors.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Record Doors Downloads for Automatic Doors and Entrance Solutions\" (host: www.recorddoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "STA 20",
       "name": "record STA 20 Sliding Door Operator",
       "category": "automatic-pedestrian-doors",
@@ -111,18 +78,6 @@
           "altSources": []
         },
         {
-          "kind": "INSTALL_MANUAL",
-          "title": "Record Sliding Door System 20 Installation and Commissioning Manual",
-          "sourceUrl": "https://manuals.plus/m/ae3bf925739526420cf529d21ff6771f43047088bd716476a60844331149bc44",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Record Sliding Door System 20 Installation and Commissioning Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
           "kind": "USER_MANUAL",
           "title": "Record STA 20 Sliding Door User Manual",
           "sourceUrl": "https://www.recorddoors.com/master-blueprint/en/downloads/english/sliding-doors/standard-sliding-doors/record-sta-20-sliding-door/user-manual/Record%20STA%2020%20Sliding%20Door%20User%20Manual.pdf",
@@ -132,18 +87,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Record STA 20 Sliding Door User Manual\" (host: www.recorddoors.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Record System 20 User Manual",
-          "sourceUrl": "https://www.scribd.com/document/489397816/record-sta20",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "scribd.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Record System 20 User Manual\" (host: www.scribd.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         },
         {

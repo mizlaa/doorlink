@@ -17,18 +17,6 @@
       "documents": [
         {
           "kind": "TECHNICAL_DOCUMENT",
-          "title": "Gilgen FD 20 Operator's Manual",
-          "sourceUrl": "https://www.manualslib.com/products/Gilgen-Fd-20-13517824.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Gilgen FD 20 Operator's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
           "title": "Gilgen FD 20 Swing Door Drive Mechanism Operator Manual (0548-991/02f 2018.02)",
           "sourceUrl": "https://files.ekmcdn.com/06a7ee/resources/other/fd20-operator-manual-2018.02.pdf",
           "origin": "THIRD_PARTY_GUIDE",

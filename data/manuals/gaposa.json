@@ -29,27 +29,6 @@
       ]
     },
     {
-      "modelCode": "XQ 50",
-      "name": "Gaposa XQ 50",
-      "category": "roller-shutter-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Gaposa XQ 50 Tubular Motor with Manual Override Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/3003603/Gaposa-Xq-50.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Gaposa XQ 50 Tubular Motor with Manual Override Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "XQ P",
       "name": "Gaposa XQ P",
       "category": "roller-shutter-motors",
@@ -66,48 +45,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Gaposa XQ P Tubular Motors with Mechanical Limit Switch and Manual Override Quick Reference (EN)\" (host: www.gaposa.it). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "XQ40 / XS40 Series",
-      "name": "Gaposa XQ40 / XS40 Series",
-      "category": "roller-shutter-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Gaposa XQ40 Tubular Motor Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/3009165/Gaposa-Xq40.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Gaposa XQ40 Tubular Motor Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "XQ50 / XQ60",
-      "name": "Gaposa XQ50 / XQ60",
-      "category": "roller-shutter-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Gaposa XQ50 Tubular Motor Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/3229369/Gaposa-Xq50.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Gaposa XQ50 Tubular Motor Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

@@ -74,66 +74,12 @@
       ]
     },
     {
-      "modelCode": "CONTROLL-A-DOOR",
-      "name": "B&D CONTROLL-A-DOOR",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "B&D Controll-A-Door Owner's Handbook Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1012698/BAndd-Controll-A-Door.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"B&D Controll-A-Door Owner's Handbook Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "CONTROLL-A-DOOR 5",
-      "name": "B&D CONTROLL-A-DOOR 5",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "B&D Controll-A-Door 5 Instruction Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2089491/BAndd-Controll-A-Door-5.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"B&D Controll-A-Door 5 Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "CONTROLL-A-DOOR P",
       "name": "B&D CONTROLL-A-DOOR P",
       "category": "garage-door-openers",
       "region": "AU",
       "aliases": [],
       "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "B&D Controll-A-Door P Instruction Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/793627/BAndd-Controll-A-Door-P.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"B&D Controll-A-Door P Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
         {
           "kind": "USER_MANUAL",
           "title": "B&D Controll-A-Door P Instruction Manual (N1854)",
@@ -144,48 +90,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"B&D Controll-A-Door P Instruction Manual (N1854)\" (host: waverleygaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "CONTROLL-A-DOOR RDO-1V4",
-      "name": "B&D CONTROLL-A-DOOR RDO-1V4",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "B&D Controll-A-Door RDO-1V4 Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/BAndd-Controll-A-Door-Rdo-1v4-9006000.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"B&D Controll-A-Door RDO-1V4 Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "CONTROLL-A-DOOR S",
-      "name": "B&D CONTROLL-A-DOOR S",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "B&D Controll-A-Door S Homeowner's Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2749641/BAndd-Controll-A-Door-S.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"B&D Controll-A-Door S Homeowner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -207,39 +111,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"B&D Diamond PD Power Drive Controll-A-Door Instructions\" (host: waverleygaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Garage Doors and Openers",
-      "name": "B&D Garage Doors and Openers",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "B&D Australia Owner Manuals Index",
-          "sourceUrl": "https://www.bnd.com.au/support/resources-for-owners/owner-manuals/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "bnd.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"B&D Australia Owner Manuals Index\" (host: www.bnd.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "B&D Product Installation Manuals (Trade Resources) Index",
-          "sourceUrl": "https://www.bnd.com.au/trade-resources/installation-manuals/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "bnd.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"B&D Product Installation Manuals (Trade Resources) Index\" (host: www.bnd.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -345,18 +216,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"B&D Smart Pro Sectional Door Opener Installation Instructions\" (host: admin.bnd.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "B&D Smart Pro Sectional Door Opener Installation Instructions",
-          "sourceUrl": "https://www.manualslib.com/manual/2185899/BAndd-Smart-Pro.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"B&D Smart Pro Sectional Door Opener Installation Instructions\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

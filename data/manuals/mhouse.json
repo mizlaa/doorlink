@@ -7,27 +7,6 @@
   },
   "models": [
     {
-      "modelCode": "Gate Automation",
-      "name": "Mhouse Gate Automation",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Mhouse Instruction Manuals Download Index",
-          "sourceUrl": "https://www.niceforyou.com/en/download?st=0&t=476&v=7&l=8&b=437",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "niceforyou.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Mhouse Instruction Manuals Download Index\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "MHOUSEKIT GD0",
       "name": "Mhouse MHOUSEKIT GD0",
       "category": "garage-door-openers",
@@ -44,27 +23,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"MhouseKit GD0 Sectional / Overhead Door Automation Instructions (ISTGD0-GBR01)\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "SL1",
-      "name": "Mhouse SL1",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Mhouse SL1 Installation Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1143383/Mhouse-Sl1.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Mhouse SL1 Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

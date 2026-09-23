@@ -28,27 +28,6 @@
       ]
     },
     {
-      "modelCode": "MAX 1500",
-      "name": "Maximum Controls MAX 1500",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Maximum Controls MAX 1500 Installation and Owner's Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1213515/Maximum-Controls-Max-1500.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Maximum Controls MAX 1500 Installation and Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "MAX 1500 / 2200 / F18 PRO",
       "name": "Maximum Controls MAX 1500 / 2200 / F18 PRO",
       "category": "gate-motors",

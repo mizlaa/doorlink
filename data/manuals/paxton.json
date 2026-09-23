@@ -8,27 +8,6 @@
   },
   "models": [
     {
-      "modelCode": "Access Control",
-      "name": "Paxton Access Control",
-      "category": "remotes-accessories",
-      "region": "UK",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Paxton Instructions Index",
-          "sourceUrl": "https://www.paxton-access.com/install-paxton/resources/instructions/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "paxton-access.com",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Paxton Instructions Index\" (host: www.paxton-access.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "NET2",
       "name": "Paxton NET2",
       "category": "remotes-accessories",
@@ -99,18 +78,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Paxton Net2 Plus Control Unit Installation Instructions (Ins-30080)\" (host: www.paxton-access.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Paxton Net2 Plus Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1585982/Paxton-Net2-Plus.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Paxton Net2 Plus Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

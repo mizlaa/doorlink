@@ -77,18 +77,6 @@
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Tormax 2201 Instructions for Use (T-1165 e)\" (host: www.specifiedby.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Tormax 2201 Instructions For Use Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2152746/Tormax-Automatic-Tormax-2201.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Tormax 2201 Instructions For Use Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         }
       ]
     },
@@ -161,39 +149,6 @@
       ]
     },
     {
-      "modelCode": "iMOTION 2301",
-      "name": "TORMAX iMOTION 2301",
-      "category": "automatic-pedestrian-doors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "TORMAX Automatic iMotion 2301 Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Tormax-Automatic-Imotion-2301-11454215.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"TORMAX Automatic iMotion 2301 Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "TORMAX iMotion 2301 Sliding Door Drive Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Tormax-Imotion-2301-10564423.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"TORMAX iMotion 2301 Sliding Door Drive Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "iMOTION 2301 / 2401",
       "name": "TORMAX iMOTION 2301 / 2401",
       "category": "automatic-pedestrian-doors",
@@ -210,27 +165,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"TORMAX iMotion 2301 / 2401 Sliding Door Drive Operating Instructions\" (host: d3eu1jnerk19h.cloudfront.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "SMART DRIVE 1101",
-      "name": "TORMAX SMART DRIVE 1101",
-      "category": "automatic-pedestrian-doors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Tormax Automatic Smart Drive 1101 Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1770088/Tormax-Automatic-Smart-Drive-1101.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Tormax Automatic Smart Drive 1101 Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

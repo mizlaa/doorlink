@@ -9,27 +9,6 @@
   },
   "models": [
     {
-      "modelCode": "Garage Door Openers",
-      "name": "Overhead Door Garage Door Openers",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Overhead Door Owner Manuals Index",
-          "sourceUrl": "https://www.overheaddoor.com/resources/owner-manuals",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "overheaddoor.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Overhead Door Owner Manuals Index\" (host: www.overheaddoor.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "LEGACY",
       "name": "Overhead Door LEGACY",
       "category": "garage-door-openers",
@@ -90,48 +69,6 @@
               "label": "Overhead Door of Concord manual index"
             }
           ]
-        }
-      ]
-    },
-    {
-      "modelCode": "LEGACY 800 (2026)",
-      "name": "Overhead Door LEGACY 800 (2026)",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Overhead Door Legacy 800 2026 Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1670027/Overhead-Door-Legacy-800-2026.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Overhead Door Legacy 800 2026 Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "LEGACY 850",
-      "name": "Overhead Door LEGACY 850",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Overhead Door Legacy 850 Manual",
-          "sourceUrl": "https://www.manualslib.com/guide/2935481/overhead-door-legacy-850-manual.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Overhead Door Legacy 850 Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         }
       ]
     },

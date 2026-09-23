@@ -91,30 +91,6 @@
           "altSources": []
         },
         {
-          "kind": "INSTALL_MANUAL",
-          "title": "NABCO GT1175 Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2192379/Nabco-Gt1175.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"NABCO GT1175 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "QUICK_START",
-          "title": "NABCO GT1175 Quick Setup Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1207344/Nabco-Gt1175.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"NABCO GT1175 Quick Setup Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
           "kind": "USER_MANUAL",
           "title": "NABCO GT1175 Slide Door Owner's Manual (C-00109)",
           "sourceUrl": "http://www.nabcoentrances.com/wp-content/uploads/2017/06/C-00109-SlideOwnerManual-Rev-5-19-17.pdf",

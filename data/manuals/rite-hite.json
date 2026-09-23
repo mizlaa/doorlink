@@ -48,60 +48,6 @@
           "altSources": []
         }
       ]
-    },
-    {
-      "modelCode": "FASTRAX FR LD",
-      "name": "Rite-Hite FASTRAX FR LD",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Rite-Hite FasTrax FR LD Owner's Manual",
-          "sourceUrl": "https://www.ritehite.com/en/am/resource-center/manuals/678592f4421c4299afc79a93c6690df1/fastrax-fr-ld-owners-manual",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "ritehite.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Rite-Hite FasTrax FR LD Owner's Manual\" (host: www.ritehite.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "FASTRAX XL",
-      "name": "Rite-Hite FASTRAX XL",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Rite-Hite FasTrax XL Installation / Service / Owner's Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2597328/Rite-Hite-Fastrax-Xl.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Rite-Hite FasTrax XL Installation / Service / Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Rite-Hite FasTrax XL Owner's Manual (39500157 / AMEN00316)",
-          "sourceUrl": "https://www.ritehite.com/en/am/resource-center/Manuals/01AABD96310647499BB8748FEDC78AA5/fastrax-xl-owners-manual",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "ritehite.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Rite-Hite FasTrax XL Owner's Manual (39500157 / AMEN00316)\" (host: www.ritehite.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
     }
   ]
 }

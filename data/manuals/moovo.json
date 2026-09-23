@@ -8,39 +8,6 @@
   },
   "models": [
     {
-      "modelCode": "XW",
-      "name": "Moovo XW",
-      "category": "gate-motors",
-      "region": "UK",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Moovo XW Manual (EasyGates)",
-          "sourceUrl": "https://manuals.easygates.co.uk/moovo-xw/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.easygates.co.uk",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Moovo XW Manual (EasyGates)\" (host: manuals.easygates.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Moovo XW User Manual",
-          "sourceUrl": "https://manualmachine.com/moovo/xw/2591744-user-manual/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualmachine.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Moovo XW User Manual\" (host: manualmachine.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "XW / XA",
       "name": "Moovo XW / XA",
       "category": "gate-motors",
@@ -78,18 +45,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Moovo XW Swing Gate Opener Installation and Use Instructions\" (host: www.portail-automatique-bordeaux.fr). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Moovo XW4/XW5 Swing Gate Openers Owner's Manual",
-          "sourceUrl": "https://manualzz.com/doc/en/4558749/moovo-xw-swing-gate-openers-owner-s-manual",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualzz.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Moovo XW4/XW5 Swing Gate Openers Owner's Manual\" (host: manualzz.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

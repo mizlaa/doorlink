@@ -9,48 +9,6 @@
   },
   "models": [
     {
-      "modelCode": "AG-FUTURE",
-      "name": "VDS Automation AG-FUTURE",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "VDS AG-Future Sliding Gate Motoreducer Technical Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2498314/Vds-Ag-Future.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"VDS AG-Future Sliding Gate Motoreducer Technical Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Gate Automation",
-      "name": "VDS Automation Gate Automation",
-      "category": "gate-motors",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "VDS Automation Assistance and Documentation Index",
-          "sourceUrl": "https://www.vdsautomation.com/en/assistance/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "vdsautomation.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"VDS Automation Assistance and Documentation Index\" (host: www.vdsautomation.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "Tapparella",
       "name": "VDS Tubular Motors for Roller Shutters",
       "category": "roller-shutter-motors",
@@ -67,27 +25,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "On vdsautomation.com, the manufacturer's own domain, in its istruzioni directory; English edition per the _ENG suffix. The model code here is the document's own name - tapparella, Italian for roller shutter - because the instructions cover the tubular motor range rather than one motor, and no individual model code was visible. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "UTILE",
-      "name": "VDS Automation UTILE",
-      "category": "garage-door-openers",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "VDS Utile Sectional and Counterweight Garage Door Operator Technical Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1709001/Vds-Utile.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"VDS Utile Sectional and Counterweight Garage Door Operator Technical Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

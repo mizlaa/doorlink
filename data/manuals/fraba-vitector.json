@@ -8,48 +8,6 @@
   },
   "models": [
     {
-      "modelCode": "OSE-C 2323",
-      "name": "FRABA Vitector OSE-C 2323",
-      "category": "remotes-accessories",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "FRABA Vitector OSE-C 2323 User Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1908812/Vitector-Fraba-Ose-C-2323.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"FRABA Vitector OSE-C 2323 User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "RAY-LG SERIES",
-      "name": "FRABA Vitector RAY-LG SERIES",
-      "category": "remotes-accessories",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "FRABA Vitector RAY-LG Series Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1689432/Fraba-Vitector-Ray-Lg-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"FRABA Vitector RAY-LG Series Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "Safety Edges and Sensors",
       "name": "FRABA Vitector Safety Edges and Sensors",
       "category": "remotes-accessories",

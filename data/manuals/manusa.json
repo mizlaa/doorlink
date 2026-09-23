@@ -29,48 +29,6 @@
       ]
     },
     {
-      "modelCode": "Automatic Doors",
-      "name": "Manusa Automatic Doors",
-      "category": "garage-door-openers",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Manusa Downloads Index",
-          "sourceUrl": "https://www.manusa.com/en/descargas",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "manusa.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Manusa Downloads Index\" (host: www.manusa.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "DDS-S",
-      "name": "Manusa DDS-S",
-      "category": "garage-door-openers",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Manusa DDS-S Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1452462/Manusa-Dds-S.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Manusa DDS-S Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "VISIO+",
       "name": "Manusa VISIO+",
       "category": "garage-door-openers",
@@ -87,27 +45,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Manusa Visio+ Operator Instruction Manual D01380EN-v5\" (host: autodoorspecialists.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "VISIO+ 100",
-      "name": "Manusa VISIO+ 100",
-      "category": "garage-door-openers",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Manusa Visio+ 100 Automatic Door Operator Installation and Operating Manual",
-          "sourceUrl": "https://www.manualslib.com/guide/4240583/manusa-visio-100-automatic-door-operator-installation-and-operating-manual.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Manusa Visio+ 100 Automatic Door Operator Installation and Operating Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

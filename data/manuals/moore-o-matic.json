@@ -7,27 +7,6 @@
   },
   "models": [
     {
-      "modelCode": "Garage Door Openers",
-      "name": "Moore-O-Matic Garage Door Openers",
-      "category": "garage-door-openers",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Moore-O-Matic Garage Door Opener Manuals Index",
-          "sourceUrl": "https://www.manualslib.com/brand/moore-o-matic/garage-door-opener.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Moore-O-Matic Garage Door Opener Manuals Index\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "X125 / X133 / X150",
       "name": "Moore-O-Matic X125 / X133 / X150",
       "category": "garage-door-openers",

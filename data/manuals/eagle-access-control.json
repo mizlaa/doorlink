@@ -29,45 +29,12 @@
       ]
     },
     {
-      "modelCode": "1000 SERIES",
-      "name": "Eagle Access Control 1000 SERIES",
-      "category": "remotes-accessories",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Eagle Access Control Systems 1000 Series Owner's Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/908878/Eagle-Access-Control-Systems-1000-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Eagle Access Control Systems 1000 Series Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "EAGLE I",
       "name": "Eagle Access Control EAGLE I",
-      "category": "remotes-accessories",
+      "category": "gate-motors",
       "region": "US",
       "aliases": [],
       "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Eagle Access Control Systems Eagle I Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1078200/Eagle-Access-Control-Systems-Eagle-I.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Eagle Access Control Systems Eagle I Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
         {
           "kind": "INSTALL_MANUAL",
           "title": "Eagle I Slide Gate Operator Installation and Owners Manual (Rev A)",

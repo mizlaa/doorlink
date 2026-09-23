@@ -58,18 +58,6 @@
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
-          "title": "2N IP Verso Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2553124/2n-Ip-Verso.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"2N IP Verso Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
           "title": "2N IP Verso Installation Manual v2.18",
           "sourceUrl": "https://wiki.2n.com/download/attachments/59770333/2N_IP_Verso_Installation_Manual_EN_2.18.pdf",
           "origin": "MANUFACTURER_ORIGINAL",
@@ -89,18 +77,6 @@
       "region": "EU",
       "aliases": [],
       "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "2N IP Verso 2.0 Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/4256614/2n-Ip-Verso-2-0.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"2N IP Verso 2.0 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
         {
           "kind": "INSTALL_MANUAL",
           "title": "2N IP Verso 2.0 Installation Manual v1.0",

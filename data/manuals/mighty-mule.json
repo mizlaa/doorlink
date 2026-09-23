@@ -17,18 +17,6 @@
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
-          "title": "Mighty Mule 350 Installation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/770594/Mighty-Mule-350.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Mighty Mule 350 Installation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
           "title": "Mighty Mule 350 Installation Manual (R350INST)",
           "sourceUrl": "https://ismartgate.com/manuals/Mighty_Mule_350_manual.pdf",
           "origin": "THIRD_PARTY_GUIDE",
@@ -110,27 +98,6 @@
       ]
     },
     {
-      "modelCode": "MM371W / MM372W",
-      "name": "Mighty Mule (GTO Access Systems) MM371W / MM372W",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Mighty Mule MM371W and MM372W Gate Opener Installation and Maintenance Guides",
-          "sourceUrl": "https://mightymule.com/pages/mm371w-mm372w-gate-opener-installation-and-maintenance-guides",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "mightymule.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Mighty Mule MM371W and MM372W Gate Opener Installation and Maintenance Guides\" (host: mightymule.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "MM500",
       "name": "Mighty Mule (GTO Access Systems) MM500",
       "category": "gate-motors",
@@ -191,18 +158,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "On mightymule.com over HTTPS. Its colophon reads \"Printed in China for GTO Access Systems, LLC\", which is where the publisher comes from. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Mighty Mule MM562 Automatic Gate Opener Installation Manual",
-          "sourceUrl": "https://manuals.plus/m/1fa107513b76e1ff5c0ab47d45c5824db2b49d2e57795d50e2e73b877f64fbe6",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manuals.plus",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Mighty Mule MM562 Automatic Gate Opener Installation Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

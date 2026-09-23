@@ -30,51 +30,6 @@
       ]
     },
     {
-      "modelCode": "Garage Door Openers",
-      "name": "Automatic Technology (ATA) Garage Door Openers",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "ATA Australia Installation Manuals Index",
-          "sourceUrl": "https://www.automatictechnology.com/au/resources/installation-manuals",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "automatictechnology.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"ATA Australia Installation Manuals Index\" (host: www.automatictechnology.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Automatic Technology Australia Installation Manuals Index (National Garage)",
-          "sourceUrl": "https://garagedooropenerremotes.com.au/manuals-and-downloads/automatic-technology-australia-manuals",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "garagedooropenerremotes.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Automatic Technology Australia Installation Manuals Index (National Garage)\" (host: garagedooropenerremotes.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Automatic Technology Australia Manuals Index (ManualsLib)",
-          "sourceUrl": "https://www.manualslib.com/brand/automatic-technology-australia/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Automatic Technology Australia Manuals Index (ManualsLib)\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "GDO-10V3L2 TORO",
       "name": "Automatic Technology (ATA) GDO-10V3L2 TORO",
       "category": "garage-door-openers",
@@ -103,27 +58,6 @@
       "aliases": [],
       "documents": [],
       "note": "Model searched for explicitly; no documentation URL was surfaced for this version. Recorded with no documents so the model is searchable and the gap is visible, rather than substituting another version's manual."
-    },
-    {
-      "modelCode": "GDO-2 SECURALIFT",
-      "name": "Automatic Technology (ATA) GDO-2 SECURALIFT",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "ATA GDO-2 SecuraLift Installation Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/849984/Automatic-Technology-Gdo-2-Securalift.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"ATA GDO-2 SecuraLift Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
     },
     {
       "modelCode": "GDO-2 V6",
@@ -308,27 +242,6 @@
       ]
     },
     {
-      "modelCode": "GDO-6 EASYROLLER",
-      "name": "Automatic Technology GDO-6 EASYROLLER",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "ATA GDO-6 EasyRoller Instruction Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1281861/Ata-Gdo-6-Easyroller.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"ATA GDO-6 EasyRoller Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "GDO-6v1 SLIM-DRIVE EASYROLLER",
       "name": "Automatic Technology GDO-6v1 SLIM-DRIVE EASYROLLER",
       "category": "garage-door-openers",
@@ -345,48 +258,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"ATA GDO-6 v1 Slim-Drive EasyRoller Manual\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "GDO-6v2 SLIM-DRIVE EASYROLLER",
-      "name": "Automatic Technology GDO-6v2 SLIM-DRIVE EASYROLLER",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "ATA GDO-6 v2 Slim-Drive EasyRoller Installation Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/932276/Automatic-Technology-Gdo-6-V2-Slim-Drive-Easyroller.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"ATA GDO-6 v2 Slim-Drive EasyRoller Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "GDO-6v4 EASYROLLER",
-      "name": "Automatic Technology GDO-6v4 EASYROLLER",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "ATA GDO-6v4 EasyRoller Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Automatic-Technology-Gdo-6v4-Easyroller-3775470.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"ATA GDO-6v4 EasyRoller Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -416,87 +287,12 @@
       ]
     },
     {
-      "modelCode": "GDO-9",
-      "name": "Automatic Technology GDO-9",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Automatic Technology GDO-9 Installation Manual (Internet Archive)",
-          "sourceUrl": "https://archive.org/details/manualzilla-id-7393018",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "archive.org",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Automatic Technology GDO-9 Installation Manual (Internet Archive)\" (host: archive.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "GDO-9 Dynamo Gen 2",
-      "name": "Automatic Technology GDO-9 Dynamo Gen 2",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Automatic Technology GDO-9 Dynamo Gen 2 Owner's Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1058806/Automatic-Technology-Gdo-9-Dynamo-Gen-2.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Automatic Technology GDO-9 Dynamo Gen 2 Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "GDO-9v1 SECURALIFT",
-      "name": "Automatic Technology GDO-9v1 SECURALIFT",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "ATA GDO-9v1 SecuraLift Installation Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/806933/Automatic-Technology-Gdo-9v1-Securalift.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"ATA GDO-9v1 SecuraLift Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "GDO-9v2 Enduro Gen 2",
       "name": "Automatic Technology GDO-9v2 Enduro Gen 2",
       "category": "garage-door-openers",
       "region": "AU",
       "aliases": [],
       "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Automatic Technology GDO-9v2 Enduro Gen 2 Installation Manual (Internet Archive)",
-          "sourceUrl": "https://archive.org/details/manualzilla-id-7394110",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "archive.org",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Automatic Technology GDO-9v2 Enduro Gen 2 Installation Manual (Internet Archive)\" (host: archive.org). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
         {
           "kind": "INSTALL_MANUAL",
           "title": "GDO-9v2 Enduro Installation Instructions (Owners Copy)",
@@ -518,18 +314,6 @@
       "region": "AU",
       "aliases": [],
       "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "ATA GDO-9v2 SecuraLift Installation Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/874969/Automatic-Technology-Gdo-9v2-Securalift.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"ATA GDO-9v2 SecuraLift Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
         {
           "kind": "INSTALL_MANUAL",
           "title": "GDO-9v2 SecuraLift Installation Instructions (Owners Copy)",

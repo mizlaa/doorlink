@@ -75,39 +75,6 @@
       ]
     },
     {
-      "modelCode": "Garage Door Openers",
-      "name": "Boss (Garage Door Operators) Garage Door Openers",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Boss Garage Door Manuals Index (eGarage Systems)",
-          "sourceUrl": "https://www.egaragesystems.com.au/manuals/boss-manuals",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "egaragesystems.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Boss Garage Door Manuals Index (eGarage Systems)\" (host: www.egaragesystems.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Boss Garage Opener Manuals Index (AGG Doors)",
-          "sourceUrl": "https://www.aggdoors.com.au/product-support/manuals/garage-door-opener-manuals/boss-garage-opener-manuals/",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "aggdoors.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Boss Garage Opener Manuals Index (AGG Doors)\" (host: www.aggdoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "RD4",
       "name": "Boss (Garage Door Operators) RD4",
       "category": "garage-door-openers",

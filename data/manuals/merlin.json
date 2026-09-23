@@ -9,75 +9,6 @@
   },
   "models": [
     {
-      "modelCode": "Garage Door Openers",
-      "name": "Merlin Garage Door Openers",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Merlin Owner's Manuals Index",
-          "sourceUrl": "https://www.dominatornsw.com.au/resources/merlin-owner-s-manuals",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "dominatornsw.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Merlin Owner's Manuals Index\" (host: www.dominatornsw.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Merlin Product Support Centre Documents and Downloads Index",
-          "sourceUrl": "https://www.gomerlin.com.au/documents-and-downloads/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "gomerlin.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Merlin Product Support Centre Documents and Downloads Index\" (host: www.gomerlin.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Merlin Product Support Centre Index",
-          "sourceUrl": "https://www.gomerlin.com.au/support-page/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "gomerlin.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Merlin Product Support Centre Index\" (host: www.gomerlin.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Merlin Installation Manuals Index (National Garage)",
-          "sourceUrl": "https://garagedooropenerremotes.com.au/manuals-and-downloads/merlin-downloads",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "garagedooropenerremotes.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Merlin Installation Manuals Index (National Garage)\" (host: garagedooropenerremotes.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Merlin New Zealand Product Support Centre (Documents and Downloads)",
-          "sourceUrl": "https://www.gomerlin.co.nz/documents-and-downloads",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "gomerlin.co.nz",
-          "region": "NZ",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Merlin New Zealand Product Support Centre (Documents and Downloads)\" (host: www.gomerlin.co.nz). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "MGLSK",
       "name": "Merlin MGLSK",
       "category": "gate-motors",
@@ -162,27 +93,6 @@
       ]
     },
     {
-      "modelCode": "MR650EVO (SILENTDRIVE)",
-      "name": "Merlin MR650EVO (SILENTDRIVE)",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Merlin SilentDrive MR650EVO Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Merlin-Silentdrive-Mr650evo-3795835.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Merlin SilentDrive MR650EVO Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "MR655MYQ",
       "name": "Merlin MR655MYQ SilentDrive Essential Roller Door Opener",
       "category": "garage-door-openers",
@@ -229,27 +139,6 @@
       ]
     },
     {
-      "modelCode": "MR855EVO (SILENT DRIVE PRO)",
-      "name": "Merlin MR855EVO (SILENT DRIVE PRO)",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Merlin MR855EVO Silent Drive Pro Roller Door Opener Instruction Manual",
-          "sourceUrl": "https://device.report/manual/11867287",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "device.report",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Merlin MR855EVO Silent Drive Pro Roller Door Opener Instruction Manual\" (host: device.report). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "MR855MYQ",
       "name": "Merlin MR855MYQ",
       "category": "garage-door-openers",
@@ -273,34 +162,10 @@
     {
       "modelCode": "MS105MYQ",
       "name": "Merlin MS105MYQ",
-      "category": "garage-door-openers",
+      "category": "gate-motors",
       "region": "AU",
       "aliases": [],
       "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Chamberlain Merlin MS105MYQ Installation and Operating Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2346508/Chamberlain-Merlin-Ms105myq.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain Merlin MS105MYQ Installation and Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Merlin Commander Elite MS105MYQ Installation and Operating Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2349556/Merlin-Commander-Elite-Ms105myq.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Merlin Commander Elite MS105MYQ Installation and Operating Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
         {
           "kind": "INSTALL_MANUAL",
           "title": "Merlin MS105MYQ Installation and Operating Instructions (Owners Copy)",
@@ -366,7 +231,7 @@
     {
       "modelCode": "MT1100MYQ",
       "name": "Merlin MT1100MYQ",
-      "category": "garage-door-openers",
+      "category": "gate-motors",
       "region": "AU",
       "aliases": [],
       "documents": [
@@ -430,18 +295,6 @@
               "label": "ManualsLib listing"
             }
           ]
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Chamberlain Merlin MT60 Illustrated Instruction Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/863412/Chamberlain-Merlin-Mt60.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Chamberlain Merlin MT60 Illustrated Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         },
         {
           "kind": "INSTALL_MANUAL",

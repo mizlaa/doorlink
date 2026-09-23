@@ -49,90 +49,6 @@
       ]
     },
     {
-      "modelCode": "LEVIGATO LG SERIES",
-      "name": "Alutech LEVIGATO LG SERIES",
-      "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Alutech Levigato LG Series Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Alutech-Levigato-Lg-Series-10235164.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Alutech Levigato LG Series Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "LEVIGATO LG-600F-868",
-      "name": "Alutech LEVIGATO LG-600F-868",
-      "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Alutech Levigato LG-600F-868 Manuals",
-          "sourceUrl": "https://all-guidesbox.com/model/alutech/levigato-lg-600f-868.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "all-guidesbox.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Alutech Levigato LG-600F-868 Manuals\" (host: all-guidesbox.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "LEVIGATO LG-800-868-GB",
-      "name": "Alutech LEVIGATO LG-800-868-GB",
-      "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Alutech Levigato LG-800-868-GB Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Alutech-Levigato-Lg-800-868-Gb-10714110.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Alutech Levigato LG-800-868-GB Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "LG-500",
-      "name": "Alutech LG-500",
-      "category": "garage-door-openers",
-      "region": "UNKNOWN",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Alutech LG-500 Garage Door Opener Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Alutech-Lg-500-10819521.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Alutech LG-500 Garage Door Opener Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "Roll Shutter",
       "name": "Alutech Roll Shutter",
       "category": "roller-shutter-motors",
@@ -212,27 +128,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Alutech Roller Shutter Assembly and Mounting Manual (2018)\" (host: alutech-group.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Roller Shutter Systems",
-      "name": "Alutech Roller Shutter Systems",
-      "category": "roller-shutter-motors",
-      "region": "UNKNOWN",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Alutech Instructions and Technical Catalogues Index",
-          "sourceUrl": "https://alutech-group.com/eu-en/dealer/documentation/roller-shutter-system/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "alutech-group.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Alutech Instructions and Technical Catalogues Index\" (host: alutech-group.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

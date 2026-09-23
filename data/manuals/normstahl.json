@@ -8,39 +8,6 @@
   },
   "models": [
     {
-      "modelCode": "Garage Doors and Operators",
-      "name": "Normstahl Garage Doors and Operators",
-      "category": "garage-door-openers",
-      "region": "EU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Normstahl Legacy Downloads Index",
-          "sourceUrl": "https://legacy.normstahl.com/service/downloads/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "legacy.normstahl.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Normstahl Legacy Downloads Index\" (host: legacy.normstahl.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Normstahl Manuals and Downloads Index",
-          "sourceUrl": "https://www.normstahl.com/global/en/support/manuals",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "normstahl.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Normstahl Manuals and Downloads Index\" (host: www.normstahl.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "MAGIC 1000",
       "name": "Normstahl MAGIC 1000",
       "category": "garage-door-openers",
@@ -57,30 +24,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Normstahl Magic 1000 Garage Door Operator Manual\" (host: cms.haas-fertigbau.de). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Normstahl Magic 1000 Operation and User's Manual",
-          "sourceUrl": "https://all-guidesbox.com/manual/1009798/normstahl-magic-1000-operation-user-s-manual-20.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "all-guidesbox.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Normstahl Magic 1000 Operation and User's Manual\" (host: all-guidesbox.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "USER_MANUAL",
-          "title": "Normstahl Magic 1000 User Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1136561/Normstahl-Magic-1000.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Normstahl Magic 1000 User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

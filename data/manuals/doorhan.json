@@ -9,90 +9,6 @@
   },
   "models": [
     {
-      "modelCode": "SECTIONAL-1000",
-      "name": "DoorHan SECTIONAL-1000",
-      "category": "garage-door-openers",
-      "region": "UNKNOWN",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "DoorHan Sectional-1000 Installation and Operating Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1104356/Doorhan-Sectional-1000.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"DoorHan Sectional-1000 Installation and Operating Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "SECTIONAL-1200",
-      "name": "DoorHan SECTIONAL-1200",
-      "category": "garage-door-openers",
-      "region": "UNKNOWN",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "DoorHan Sectional-1200 Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Doorhan-Sectional-1200-4043124.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"DoorHan Sectional-1200 Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "SECTIONAL-750",
-      "name": "DoorHan SECTIONAL-750",
-      "category": "garage-door-openers",
-      "region": "UNKNOWN",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "DoorHan Sectional-750 Manuals",
-          "sourceUrl": "https://www.manualslib.com/products/Doorhan-Sectional-750-4043123.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"DoorHan Sectional-750 Manuals\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "SECTIONAL-750PRO",
-      "name": "DoorHan SECTIONAL-750PRO",
-      "category": "garage-door-openers",
-      "region": "UNKNOWN",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "DoorHan Sectional-750PRO Installation and Operating Manual",
-          "sourceUrl": "https://www.manualslib.com/products/Doorhan-Sectional-750pro-10999708.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"DoorHan Sectional-750PRO Installation and Operating Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "SECTIONAL-800PRO-CE",
       "name": "DoorHan SECTIONAL-800PRO-CE",
       "category": "garage-door-openers",
@@ -144,18 +60,6 @@
               "label": "Guidesimo copy"
             }
           ]
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "DoorHan Shaft-30 Garage Door Opener Installation Manual",
-          "sourceUrl": "https://guidesimo.com/document/1097690/doorhan-shaft-30-installation-manual-8.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "guidesimo.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"DoorHan Shaft-30 Garage Door Opener Installation Manual\" (host: guidesimo.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         }
       ]
     },
@@ -191,30 +95,6 @@
               "label": "Second ManualsLib listing, titled installation and operating manual; edition difference unknown"
             }
           ]
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "DoorHan Sliding-1300 Installation and Operating Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/953744/Doorhan-Sliding-1300.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"DoorHan Sliding-1300 Installation and Operating Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "DoorHan Sliding-1300 Installation and Operation Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1267875/Doorhan-Sliding-1300.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "UNKNOWN",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"DoorHan Sliding-1300 Installation and Operation Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
         }
       ]
     },

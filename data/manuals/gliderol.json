@@ -9,27 +9,6 @@
   },
   "models": [
     {
-      "modelCode": "GLIDERMATIC",
-      "name": "Gliderol GLIDERMATIC",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Gliderol Glidermatic User Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1955944/Gliderol-Glidermatic.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Gliderol Glidermatic User Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "GLIDERMATIC GRD",
       "name": "Gliderol GLIDERMATIC GRD",
       "category": "garage-door-openers",
@@ -50,18 +29,6 @@
         },
         {
           "kind": "INSTALL_MANUAL",
-          "title": "Gliderol Glidermatic GRD Installation Instructions and Owner's Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/817825/Gliderol-Glidermatic-Grd.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Gliderol Glidermatic GRD Installation Instructions and Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
           "title": "Gliderol Glidermatic GRD Roller Door Automatic Operator Installation Instructions",
           "sourceUrl": "https://www.thegaragedoorcentre.co.uk/userfiles/downloads/gliderol_installation_roller_door_electric_tgdc_51820.pdf",
           "origin": "THIRD_PARTY_GUIDE",
@@ -70,60 +37,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Gliderol Glidermatic GRD Roller Door Automatic Operator Installation Instructions\" (host: www.thegaragedoorcentre.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        },
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Gliderol Glidermatic GRD Installation Instructions Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/3775995/Gliderol-Glidermatic-Grd.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Gliderol Glidermatic GRD Installation Instructions Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "GLIDERMATIC GRD+",
-      "name": "Gliderol GLIDERMATIC GRD+",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Gliderol Glidermatic GRD+ Installation Instructions and Owner's Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/956371/Gliderol-Glidermatic-GrdPlus.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Gliderol Glidermatic GRD+ Installation Instructions and Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "GLIDERMATIC GTS+",
-      "name": "Gliderol GLIDERMATIC GTS+",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "Gliderol Glidermatic GTS+ Installation Instructions and Owner's Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/2212666/Gliderol-Glidermatic-GtsPlus.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Gliderol Glidermatic GTS+ Installation Instructions and Owner's Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -257,27 +170,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Gliderol Residential Series A Roller Door Install Manual\" (host: www.gliderol.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Roller Doors",
-      "name": "Gliderol Roller Doors",
-      "category": "garage-door-openers",
-      "region": "AU",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Gliderol User Manuals and Install Guides Index",
-          "sourceUrl": "https://gliderol.com.au/support/user-manuals-guides/",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "gliderol.com.au",
-          "region": "AU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Gliderol User Manuals and Install Guides Index\" (host: gliderol.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

@@ -71,27 +71,6 @@
       ]
     },
     {
-      "modelCode": "E-SC 1600 SERIES",
-      "name": "Estate Swing E-SC 1600 SERIES",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "Estate Swing E-SC 1600 Series Gate Opener Instruction Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1528017/Estate-Swing-E-Sc-1600-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "manualslib.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Estate Swing E-SC 1600 Series Gate Opener Instruction Manual\" (host: www.manualslib.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
       "modelCode": "E-SU 2200 / E-SU 2202",
       "name": "Estate Swing E-SU 2200 / E-SU 2202",
       "category": "gate-motors",
@@ -150,27 +129,6 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Estate Swing ES-500 Instruction Manual\" (host: www.estateswing.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ]
-    },
-    {
-      "modelCode": "Gate Openers",
-      "name": "Estate Swing Gate Openers",
-      "category": "gate-motors",
-      "region": "US",
-      "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "Estate Swing Manuals Index",
-          "sourceUrl": "https://www.estateswing.com/Home/Manuals",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "publisher": "estateswing.com",
-          "region": "US",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"Estate Swing Manuals Index\" (host: www.estateswing.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
