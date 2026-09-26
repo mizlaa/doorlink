@@ -1,5 +1,5 @@
 import type { DoorLook } from '@/components/three/GarageDoorScene'
-import { colourHex, hardwareHex, type DoorSpec } from './options'
+import { colourHex, DEFAULT_SPEC, hardwareHex, type DoorSpec } from './options'
 
 /**
  * Turns a saved spec into the handful of numbers the 3D scene needs.
@@ -16,21 +16,39 @@ const FINISH_MATERIAL: Record<string, { roughness: number; metalness: number }> 
   woodgrain: { roughness: 0.74, metalness: 0.02 },
 }
 
+const WIDTH_SCALE_MIN = 0.85
+const WIDTH_SCALE_MAX = 1.45
+const HEIGHT_SCALE_MIN = 0.9
+const HEIGHT_SCALE_MAX = 1.25
+
+export function doorSizeScales(
+  widthMm: number,
+  heightMm: number
+): { widthScale: number; heightScale: number } {
+  const widthScale = widthMm / DEFAULT_SPEC.widthMm
+  const heightScale = heightMm / DEFAULT_SPEC.heightMm
+  return {
+    widthScale: Math.min(WIDTH_SCALE_MAX, Math.max(WIDTH_SCALE_MIN, widthScale)),
+    heightScale: Math.min(HEIGHT_SCALE_MAX, Math.max(HEIGHT_SCALE_MIN, heightScale)),
+  }
+}
+
 export function lookFromSpec(spec: DoorSpec): DoorLook {
   const material = FINISH_MATERIAL[spec.finish] ?? FINISH_MATERIAL.satin
+  const { widthScale, heightScale } = doorSizeScales(spec.widthMm, spec.heightMm)
+  const kind = spec.productType
 
-  // A roller door is one continuous curtain, so it is drawn as many thin
-  // slats rather than a few tall panels — the same geometry, counted
-  // differently, which is why it needs no separate renderer.
-  const panelCount =
-    spec.productType === 'roller' ? 12 : spec.productType === 'tilt' ? 1 : Number(spec.panelCount) || 4
+  const panelCount = kind === 'sectional' ? Number(spec.panelCount) || 4 : 1
 
   return {
+    kind,
+    widthScale,
+    heightScale,
     color: colourHex(spec.colour),
     hardwareColor: hardwareHex(spec.hardware),
     panelCount,
-    profile: spec.productType === 'roller' ? 'ribbed' : spec.panelProfile,
-    windows: spec.productType === 'roller' ? 'none' : spec.windows,
+    profile: kind === 'roller' ? 'ribbed' : spec.panelProfile,
+    windows: kind === 'roller' ? 'none' : spec.windows,
     roughness: material.roughness,
     metalness: material.metalness,
   }

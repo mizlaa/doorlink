@@ -12,27 +12,59 @@ import { Garden } from './Garden'
 import { Birds } from './Birds'
 import { GarageInterior } from './GarageInterior'
 
-const DOOR_WIDTH = 3.2
-const DOOR_HEIGHT = 2.6
+const BASE_DOOR_WIDTH = 3.2
+const BASE_DOOR_HEIGHT = 2.6
 const PANEL_GAP = 0.03
 const PANEL_DEPTH = 0.14
-/** Used for the parts of the scene that are sized once, not per-config. */
 const NOMINAL_PANEL_COUNT = 4
-// How far a panel travels once fully "open" — enough to clear the frame's
-// header, which is sized to match so the panels read as sliding up into
-// the ceiling rather than just vanishing.
-const LIFT_HEIGHT = DOOR_HEIGHT + 0.9
-const FLOOR_Y = -DOOR_HEIGHT / 2 - 0.42
-const SUN_POSITION: [number, number, number] = [8, 5, 6]
 const JAMB_WIDTH = 0.3
-const WALL_Z = PANEL_DEPTH / 2 + 0.03
-const WALL_TOP_Y = DOOR_HEIGHT / 2 + (LIFT_HEIGHT + 0.6)
-// The back of the garage. Deep enough that the headline and the wordmark
-// sit at visibly different distances from the camera, which is what
-// produces parallax between them as the view orbits.
-const BACK_WALL_Z = WALL_Z - 3.1
-// Matches the rail/motor mount so the opener hangs from a real ceiling.
-const CEILING_Y = DOOR_HEIGHT / 2 + 0.45
+const SUN_POSITION: [number, number, number] = [8, 5, 6]
+const ROLLER_SLAT_COUNT = 18
+
+export type DoorKind = 'sectional' | 'roller' | 'tilt'
+
+export interface DoorLook {
+  kind: DoorKind
+  /** Relative to the default 2400 mm opening width. */
+  widthScale: number
+  /** Relative to the default 2100 mm opening height. */
+  heightScale: number
+  color: string
+  hardwareColor: string
+  panelCount: number
+  profile: string
+  windows: string
+  roughness: number
+  metalness: number
+}
+
+export interface SceneDimensions {
+  doorWidth: number
+  doorHeight: number
+  liftHeight: number
+  floorY: number
+  ceilingY: number
+  wallTopY: number
+  wallZ: number
+  backWallZ: number
+}
+
+export function computeSceneDimensions(look: DoorLook): SceneDimensions {
+  const doorWidth = BASE_DOOR_WIDTH * look.widthScale
+  const doorHeight = BASE_DOOR_HEIGHT * look.heightScale
+  const liftHeight = doorHeight + 0.9
+  const wallZ = PANEL_DEPTH / 2 + 0.03
+  return {
+    doorWidth,
+    doorHeight,
+    liftHeight,
+    floorY: -doorHeight / 2 - 0.42,
+    ceilingY: doorHeight / 2 + 0.45,
+    wallTopY: doorHeight / 2 + (liftHeight + 0.6),
+    wallZ,
+    backWallZ: wallZ - 3.1,
+  }
+}
 
 function SunGlow() {
   const direction = new THREE.Vector3(...SUN_POSITION).normalize().multiplyScalar(40)
@@ -44,22 +76,12 @@ function SunGlow() {
   )
 }
 
-// Mounted just below the header's bottom edge so it's naturally occluded
-// by the closed door (same z-depth trick the header itself uses to hide
-// raised panels) and only comes into view through the opening once the
-// door lifts — a real garage always has one of these, and its absence
-// was the single biggest tell that the "open" shot was an empty box.
-function GarageDoorOpener() {
-  // Hung close under the ceiling, where a real opener actually mounts.
-  // It used to sit lower, where it cut across the line the door reveals.
-  const railY = CEILING_Y - 0.3
+function GarageDoorOpener({ dims }: { dims: SceneDimensions }) {
+  const railY = dims.ceilingY - 0.3
   const railLength = 2.2
-  const frontZ = WALL_Z - 0.15
-  const ceilingY = CEILING_Y
+  const frontZ = dims.wallZ - 0.15
   return (
     <group>
-      {/* The ceiling itself is part of GarageInterior now — the rail and
-          motor just hang from it. */}
       <mesh position={[0, railY, frontZ - railLength / 2]} castShadow>
         <boxGeometry args={[0.1, 0.1, railLength]} />
         <meshStandardMaterial color="#26282a" roughness={0.5} metalness={0.4} envMapIntensity={0.6} />
@@ -68,13 +90,63 @@ function GarageDoorOpener() {
         <boxGeometry args={[0.42, 0.24, 0.5]} />
         <meshStandardMaterial color="#dcdcda" roughness={0.6} metalness={0.1} />
       </mesh>
-      {[-0.7, 0].map((offset) => (
-        <mesh key={offset} position={[0, (railY + ceilingY) / 2, frontZ + offset]}>
-          <boxGeometry args={[0.05, ceilingY - railY, 0.05]} />
+      {[ -0.7, 0].map((offset) => (
+        <mesh key={offset} position={[0, (railY + dims.ceilingY) / 2, frontZ + offset]}>
+          <boxGeometry args={[0.05, dims.ceilingY - railY, 0.05]} />
           <meshStandardMaterial color="#5a5d60" roughness={0.6} metalness={0.3} />
         </mesh>
       ))}
     </group>
+  )
+}
+
+function RollerDrumAndGuides({ dims, isOpen }: { dims: SceneDimensions; isOpen: boolean }) {
+  const drumRef = useRef<THREE.Mesh>(null)
+  const progress = useRef(isOpen ? 1 : 0)
+
+  useFrame((_, delta) => {
+    progress.current = THREE.MathUtils.damp(progress.current, isOpen ? 1 : 0, 3, delta)
+    if (drumRef.current) {
+      drumRef.current.rotation.x = progress.current * Math.PI * 0.35
+    }
+  })
+
+  const guideX = dims.doorWidth / 2 + 0.08
+  const guideHeight = dims.doorHeight + 0.35
+
+  return (
+    <group>
+      <mesh position={[-guideX, 0, dims.wallZ - 0.06]} castShadow>
+        <boxGeometry args={[0.06, guideHeight, 0.12]} />
+        <meshStandardMaterial color="#8a8e93" roughness={0.45} metalness={0.55} envMapIntensity={0.8} />
+      </mesh>
+      <mesh position={[guideX, 0, dims.wallZ - 0.06]} castShadow>
+        <boxGeometry args={[0.06, guideHeight, 0.12]} />
+        <meshStandardMaterial color="#8a8e93" roughness={0.45} metalness={0.55} envMapIntensity={0.8} />
+      </mesh>
+      <mesh ref={drumRef} position={[0, dims.ceilingY + 0.08, dims.wallZ - 0.22]} rotation={[0, 0, Math.PI / 2]} castShadow>
+        <cylinderGeometry args={[0.22, 0.22, dims.doorWidth * 0.92, 24]} />
+        <meshStandardMaterial color="#3a3d40" roughness={0.35} metalness={0.65} envMapIntensity={0.9} />
+      </mesh>
+      <mesh position={[0, dims.ceilingY + 0.08, dims.wallZ - 0.35]}>
+        <boxGeometry args={[dims.doorWidth + 0.5, 0.28, 0.35]} />
+        <meshStandardMaterial color="#E4E2DC" roughness={0.94} envMapIntensity={0.35} />
+      </mesh>
+    </group>
+  )
+}
+
+function SectionalTracks({ dims }: { dims: SceneDimensions }) {
+  const trackX = dims.doorWidth / 2 + 0.04
+  return (
+    <>
+      {[-1, 1].map((side) => (
+        <mesh key={side} position={[side * trackX, 0, dims.wallZ - 0.04]} castShadow>
+          <boxGeometry args={[0.05, dims.doorHeight + dims.liftHeight * 0.35, 0.08]} />
+          <meshStandardMaterial color="#6a6e73" roughness={0.5} metalness={0.45} envMapIntensity={0.7} />
+        </mesh>
+      ))}
+    </>
   )
 }
 
@@ -93,67 +165,31 @@ function HardwareBracket({ x, color = '#b7bbc0' }: { x: number; color?: string }
   )
 }
 
-export interface DoorLook {
-  color: string
-  hardwareColor: string
-  panelCount: number
-  /** 'flush' | 'raised' | 'ribbed' */
-  profile: string
-  /** 'none' | 'top-row' | 'top-row-wide' */
-  windows: string
-  /** Roughness/metalness come from the chosen finish. */
-  roughness: number
-  metalness: number
-}
-
-function Panel({ index, isOpen, look }: { index: number; isOpen: boolean; look: DoorLook }) {
-  const ref = useRef<THREE.Group>(null)
-  const panelCount = look.panelCount
-  const panelHeight = (DOOR_HEIGHT - PANEL_GAP * (panelCount - 1)) / panelCount
-  const color = look.color
-  const restY = index * (panelHeight + PANEL_GAP) - DOOR_HEIGHT / 2 + panelHeight / 2
-  const progress = useRef(0)
-
-  // A real sectional door folds bottom-first on the way up and top-first
-  // on the way down; staggering each panel's damping start approximates
-  // that without simulating the actual curved track.
-  const order = isOpen ? index : panelCount - 1 - index
-
-  useFrame((_, delta) => {
-    if (!ref.current) return
-    const target = isOpen ? 1 : 0
-    const staggerDelay = order * 0.05
-    const laggedDelta = Math.max(delta - staggerDelay * 0.4, delta * 0.15)
-    progress.current = THREE.MathUtils.damp(progress.current, target, 3.2, laggedDelta)
-    ref.current.position.y = restY + progress.current * LIFT_HEIGHT
-  })
-
-  // Real sectional doors are stamped, not flat — a raised rectangular
-  // field inset from the stile/rail border is the classic "raised panel"
-  // profile, and it's built as actual geometry here so real shadow
-  // mapping defines its edges, rather than a painted-on line.
-  const embossWidth = DOOR_WIDTH - 0.34
+function PanelFace({
+  doorWidth,
+  panelHeight,
+  look,
+  showWindows,
+}: {
+  doorWidth: number
+  panelHeight: number
+  look: DoorLook
+  showWindows: boolean
+}) {
+  const embossWidth = doorWidth - 0.34
   const embossHeight = panelHeight - 0.14
 
   return (
-    <group ref={ref} position={[0, restY, 0]}>
-      <RoundedBox
-        args={[DOOR_WIDTH, panelHeight, PANEL_DEPTH]}
-        radius={0.016}
-        smoothness={4}
-        castShadow
-        receiveShadow
-      >
+    <>
+      <RoundedBox args={[doorWidth, panelHeight, PANEL_DEPTH]} radius={0.016} smoothness={4} castShadow receiveShadow>
         <meshStandardMaterial
-          color={color}
+          color={look.color}
           roughness={look.roughness}
           metalness={look.metalness}
           envMapIntensity={0.5}
         />
       </RoundedBox>
 
-      {/* A flush door has no stamping at all; ribbed gets a run of
-          shallow horizontal lines instead of one raised field. */}
       {look.profile === 'raised' && (
         <RoundedBox
           args={[embossWidth, embossHeight, 0.03]}
@@ -164,7 +200,7 @@ function Panel({ index, isOpen, look }: { index: number; isOpen: boolean; look: 
           receiveShadow
         >
           <meshStandardMaterial
-            color={color}
+            color={look.color}
             roughness={Math.max(0.05, look.roughness - 0.07)}
             metalness={look.metalness + 0.04}
             envMapIntensity={0.6}
@@ -175,9 +211,9 @@ function Panel({ index, isOpen, look }: { index: number; isOpen: boolean; look: 
       {look.profile === 'ribbed' &&
         [-0.3, -0.1, 0.1, 0.3].map((offset) => (
           <mesh key={offset} position={[0, offset * panelHeight, PANEL_DEPTH / 2 + 0.006]} castShadow>
-            <boxGeometry args={[DOOR_WIDTH - 0.12, panelHeight * 0.13, 0.012]} />
+            <boxGeometry args={[doorWidth - 0.12, panelHeight * 0.13, 0.012]} />
             <meshStandardMaterial
-              color={color}
+              color={look.color}
               roughness={look.roughness}
               metalness={look.metalness}
               envMapIntensity={0.5}
@@ -185,13 +221,12 @@ function Panel({ index, isOpen, look }: { index: number; isOpen: boolean; look: 
           </mesh>
         ))}
 
-      {/* Panel-to-panel seam highlight, the one real horizontal joint a stacked sectional door actually has */}
       <mesh position={[0, panelHeight / 2 - 0.01, PANEL_DEPTH / 2 + 0.002]}>
-        <boxGeometry args={[DOOR_WIDTH, 0.014, 0.008]} />
+        <boxGeometry args={[doorWidth, 0.014, 0.008]} />
         <meshStandardMaterial color="#000000" transparent opacity={0.28} />
       </mesh>
 
-      {index === panelCount - 1 && look.windows !== 'none' && (
+      {showWindows && look.windows !== 'none' && (
         <group position={[0, 0, PANEL_DEPTH / 2 + 0.014 + 0.016]}>
           {(look.windows === 'top-row-wide'
             ? [-1.25, -0.75, -0.25, 0.25, 0.75, 1.25]
@@ -199,7 +234,7 @@ function Panel({ index, isOpen, look }: { index: number; isOpen: boolean; look: 
           ).map((x) => (
             <mesh
               key={x}
-              position={[x * (DOOR_WIDTH / 2 - 0.52) * (look.windows === 'top-row-wide' ? 0.8 : 1), 0, 0]}
+              position={[x * (doorWidth / 2 - 0.52) * (look.windows === 'top-row-wide' ? 0.8 : 1), 0, 0]}
             >
               <planeGeometry args={[look.windows === 'top-row-wide' ? 0.3 : 0.4, embossHeight - 0.14]} />
               <meshPhysicalMaterial
@@ -217,12 +252,49 @@ function Panel({ index, isOpen, look }: { index: number; isOpen: boolean; look: 
         </group>
       )}
 
-      {/* Roller/hinge hardware sits on the flat stile outside the raised field, not on top of it */}
-      <HardwareBracket x={-DOOR_WIDTH / 2 + 0.1} color={look.hardwareColor} />
-      <HardwareBracket x={DOOR_WIDTH / 2 - 0.1} color={look.hardwareColor} />
+      <HardwareBracket x={-doorWidth / 2 + 0.1} color={look.hardwareColor} />
+      <HardwareBracket x={doorWidth / 2 - 0.1} color={look.hardwareColor} />
+    </>
+  )
+}
 
+function SectionalPanel({
+  index,
+  isOpen,
+  look,
+  dims,
+}: {
+  index: number
+  isOpen: boolean
+  look: DoorLook
+  dims: SceneDimensions
+}) {
+  const ref = useRef<THREE.Group>(null)
+  const panelCount = look.panelCount
+  const panelHeight = (dims.doorHeight - PANEL_GAP * (panelCount - 1)) / panelCount
+  const restY = index * (panelHeight + PANEL_GAP) - dims.doorHeight / 2 + panelHeight / 2
+  const progress = useRef(0)
+  const order = isOpen ? index : panelCount - 1 - index
+
+  useFrame((_, delta) => {
+    if (!ref.current) return
+    const target = isOpen ? 1 : 0
+    const staggerDelay = order * 0.05
+    const laggedDelta = Math.max(delta - staggerDelay * 0.4, delta * 0.15)
+    progress.current = THREE.MathUtils.damp(progress.current, target, 3.2, laggedDelta)
+    ref.current.position.y = restY + progress.current * dims.liftHeight
+  })
+
+  return (
+    <group ref={ref} position={[0, restY, 0]}>
+      <PanelFace
+        doorWidth={dims.doorWidth}
+        panelHeight={panelHeight}
+        look={look}
+        showWindows={index === panelCount - 1}
+      />
       {index === 1 && (
-        <mesh position={[DOOR_WIDTH / 2 - 0.74, 0, PANEL_DEPTH / 2 + 0.014 + 0.02]} castShadow>
+        <mesh position={[dims.doorWidth / 2 - 0.74, 0, PANEL_DEPTH / 2 + 0.014 + 0.02]} castShadow>
           <boxGeometry args={[0.16, 0.05, 0.035]} />
           <meshStandardMaterial color="#c9cdd1" roughness={0.22} metalness={0.82} envMapIntensity={1.3} />
         </mesh>
@@ -231,52 +303,119 @@ function Panel({ index, isOpen, look }: { index: number; isOpen: boolean; look: 
   )
 }
 
-function Facade() {
-  const height = DOOR_HEIGHT + LIFT_HEIGHT + 0.6
-  const y = FLOOR_Y + height / 2
-  const jambX = DOOR_WIDTH / 2 + JAMB_WIDTH / 2
+function SectionalDoor({ isOpen, look, dims }: { isOpen: boolean; look: DoorLook; dims: SceneDimensions }) {
+  return (
+    <>
+      <SectionalTracks dims={dims} />
+      {Array.from({ length: look.panelCount }, (_, i) => (
+        <SectionalPanel key={i} index={i} isOpen={isOpen} look={look} dims={dims} />
+      ))}
+    </>
+  )
+}
+
+function RollerDoor({ isOpen, look, dims }: { isOpen: boolean; look: DoorLook; dims: SceneDimensions }) {
+  const curtainRef = useRef<THREE.Group>(null)
+  const progress = useRef(0)
+  const slatHeight = (dims.doorHeight - PANEL_GAP * (ROLLER_SLAT_COUNT - 1)) / ROLLER_SLAT_COUNT
+
+  useFrame((_, delta) => {
+    if (!curtainRef.current) return
+    progress.current = THREE.MathUtils.damp(progress.current, isOpen ? 1 : 0, 2.8, delta)
+    curtainRef.current.position.y = progress.current * (dims.liftHeight + dims.doorHeight * 0.15)
+    curtainRef.current.scale.y = 1 - progress.current * 0.12
+  })
+
+  return (
+    <group ref={curtainRef}>
+      {Array.from({ length: ROLLER_SLAT_COUNT }, (_, i) => {
+        const y = i * (slatHeight + PANEL_GAP) - dims.doorHeight / 2 + slatHeight / 2
+        return (
+          <group key={i} position={[0, y, 0]}>
+            <RoundedBox args={[dims.doorWidth - 0.08, slatHeight, PANEL_DEPTH * 0.85]} radius={0.008} smoothness={3} castShadow receiveShadow>
+              <meshStandardMaterial
+                color={look.color}
+                roughness={look.roughness}
+                metalness={look.metalness}
+                envMapIntensity={0.5}
+              />
+            </RoundedBox>
+            <mesh position={[0, slatHeight / 2 - 0.008, PANEL_DEPTH / 2]}>
+              <boxGeometry args={[dims.doorWidth - 0.1, 0.012, 0.01]} />
+              <meshStandardMaterial color="#000000" transparent opacity={0.22} />
+            </mesh>
+          </group>
+        )
+      })}
+    </group>
+  )
+}
+
+function TiltDoor({ isOpen, look, dims }: { isOpen: boolean; look: DoorLook; dims: SceneDimensions }) {
+  const panelRef = useRef<THREE.Group>(null)
+  const progress = useRef(0)
+
+  useFrame((_, delta) => {
+    if (!panelRef.current) return
+    progress.current = THREE.MathUtils.damp(progress.current, isOpen ? 1 : 0, 2.6, delta)
+    const t = progress.current
+    // Closed: vertical in the opening. Open: flat under the header, slid
+    // back into the garage so the leaf clears the doorway instead of
+    // stopping angled across the middle.
+    panelRef.current.rotation.x = -t * (Math.PI / 2)
+    panelRef.current.position.y = t * (dims.doorHeight / 2)
+    panelRef.current.position.z = -t * (dims.doorHeight / 2)
+  })
+
+  return (
+    <group ref={panelRef}>
+      <PanelFace doorWidth={dims.doorWidth} panelHeight={dims.doorHeight} look={look} showWindows />
+    </group>
+  )
+}
+
+function DoorAssembly({ isOpen, look, dims }: { isOpen: boolean; look: DoorLook; dims: SceneDimensions }) {
+  return (
+    <group key={look.kind}>
+      {look.kind === 'sectional' && <SectionalDoor isOpen={isOpen} look={look} dims={dims} />}
+      {look.kind === 'roller' && <RollerDoor isOpen={isOpen} look={look} dims={dims} />}
+      {look.kind === 'tilt' && <TiltDoor isOpen={isOpen} look={look} dims={dims} />}
+    </group>
+  )
+}
+
+function Facade({ dims }: { dims: SceneDimensions }) {
+  const height = dims.doorHeight + dims.liftHeight + 0.6
+  const y = dims.floorY + height / 2
+  const jambX = dims.doorWidth / 2 + JAMB_WIDTH / 2
   const wallMaterial = <meshStandardMaterial color="#E4E2DC" roughness={0.94} envMapIntensity={0.35} />
 
   return (
     <group>
-      <mesh position={[-jambX, y, WALL_Z]} castShadow receiveShadow>
+      <mesh position={[-jambX, y, dims.wallZ]} castShadow receiveShadow>
         <boxGeometry args={[JAMB_WIDTH, height, 0.4]} />
         {wallMaterial}
       </mesh>
-      <mesh position={[jambX, y, WALL_Z]} castShadow receiveShadow>
+      <mesh position={[jambX, y, dims.wallZ]} castShadow receiveShadow>
         <boxGeometry args={[JAMB_WIDTH, height, 0.4]} />
         {wallMaterial}
       </mesh>
-      <mesh position={[0, WALL_TOP_Y - (LIFT_HEIGHT + 0.6) / 2, WALL_Z]} castShadow receiveShadow>
-        <boxGeometry args={[DOOR_WIDTH + JAMB_WIDTH * 2, LIFT_HEIGHT + 0.6, 0.4]} />
+      <mesh position={[0, dims.wallTopY - (dims.liftHeight + 0.6) / 2, dims.wallZ]} castShadow receiveShadow>
+        <boxGeometry args={[dims.doorWidth + JAMB_WIDTH * 2, dims.liftHeight + 0.6, 0.4]} />
         {wallMaterial}
       </mesh>
     </group>
   )
 }
 
-/**
- * The camera half of the reveal.
- *
- * While the door is shut the view drifts slowly around the facade. As it
- * opens, the allowed azimuth range closes in on straight-on — which
- * carries the camera there without wresting control away, because a
- * person mid-drag keeps dragging, just within a narrowing arc. Closing
- * the door relaxes the range and the drift resumes.
- *
- * Done this way rather than by animating the camera directly so that the
- * user's own input and the reveal never fight over the same value.
- */
-const CLOSED_RADIUS = 5.8
-// Pulls back rather than pushing in: the reveal is the point, but so is
-// the house it is set in, and filling the frame with the opening throws
-// the property away.
-const OPEN_RADIUS = 7.4
+const CLOSED_RADIUS_BASE = 5.8
+const OPEN_RADIUS_BASE = 7.4
 
-function CameraDirector({ isOpen }: { isOpen: boolean }) {
+function CameraDirector({ isOpen, widthScale }: { isOpen: boolean; widthScale: number }) {
   const controls = useRef<OrbitControlsImpl>(null)
   const closeness = useRef(0)
   const { camera } = useThree()
+  const widthNudge = (widthScale - 1) * 0.9
 
   useFrame((_, delta) => {
     const instance = controls.current
@@ -287,16 +426,15 @@ function CameraDirector({ isOpen }: { isOpen: boolean }) {
 
     const target = instance.target
     const offset = camera.position.clone().sub(target)
-    const desired = THREE.MathUtils.lerp(CLOSED_RADIUS, OPEN_RADIUS, t)
+    const closedRadius = CLOSED_RADIUS_BASE + widthNudge
+    const openRadius = OPEN_RADIUS_BASE + widthNudge
+    const desired = THREE.MathUtils.lerp(closedRadius, openRadius, t)
     offset.setLength(THREE.MathUtils.damp(offset.length(), desired, 2.4, delta))
     camera.position.copy(target).add(offset)
 
     const openArc = THREE.MathUtils.lerp(Math.PI / 2.3, 0.2, t)
     instance.minAzimuthAngle = -openArc
     instance.maxAzimuthAngle = openArc
-
-    // Level out a little too: looking slightly down into the garage reads
-    // better than looking up at the lintel.
     instance.minPolarAngle = THREE.MathUtils.lerp(Math.PI / 2 - 0.45, Math.PI / 2 - 0.26, t)
     instance.maxPolarAngle = THREE.MathUtils.lerp(Math.PI / 2 + 0.12, Math.PI / 2 + 0.02, t)
     instance.autoRotateSpeed = 0.6 * (1 - t)
@@ -318,6 +456,9 @@ function CameraDirector({ isOpen }: { isOpen: boolean }) {
 }
 
 export const DEFAULT_LOOK: DoorLook = {
+  kind: 'sectional',
+  widthScale: 1,
+  heightScale: 1,
   color: '#2C3033',
   hardwareColor: '#b7bbc0',
   panelCount: NOMINAL_PANEL_COUNT,
@@ -329,10 +470,7 @@ export const DEFAULT_LOOK: DoorLook = {
 
 export interface GarageDoorSceneProps {
   isOpen: boolean
-  /** How the door itself looks. Omitted, it renders the house default. */
   look?: DoorLook
-  /** The line the opening door reveals. Passed in so the scene stays a
-   *  scene and the copy stays with the page that owns it. */
   revealHeadline: string
   revealWordmark: string
 }
@@ -343,6 +481,8 @@ export function GarageDoorScene({
   revealHeadline,
   revealWordmark,
 }: GarageDoorSceneProps) {
+  const dims = computeSceneDimensions(look)
+
   return (
     <Canvas
       shadows="soft"
@@ -350,28 +490,13 @@ export function GarageDoorScene({
       gl={{ antialias: true }}
       camera={{ position: [3.4, 1.5, 4.6], fov: 32 }}
     >
-      <Sky
-        sunPosition={SUN_POSITION}
-        turbidity={4}
-        rayleigh={1.2}
-        mieCoefficient={0.02}
-        mieDirectionalG={0.9}
-      />
+      <Sky sunPosition={SUN_POSITION} turbidity={4} rayleigh={1.2} mieCoefficient={0.02} mieDirectionalG={0.9} />
       <SunGlow />
       <Birds />
       <fog attach="fog" args={['#cfd8e3', 9, 21]} />
 
-      {/* Baked once (frames=1), not per-frame — gives the dark steel and
-          hardware real sky-tinted reflections instead of flat diffuse
-          color, without any external HDR asset or per-frame render cost. */}
       <Environment resolution={128} frames={1}>
-        <Sky
-          sunPosition={SUN_POSITION}
-          turbidity={4}
-          rayleigh={1.2}
-          mieCoefficient={0.02}
-          mieDirectionalG={0.9}
-        />
+        <Sky sunPosition={SUN_POSITION} turbidity={4} rayleigh={1.2} mieCoefficient={0.02} mieDirectionalG={0.9} />
       </Environment>
 
       <ambientLight intensity={0.22} />
@@ -389,47 +514,40 @@ export function GarageDoorScene({
       />
       <directionalLight position={[-5, 3, -3]} intensity={0.28} color="#cbd9ff" />
 
-      <Facade />
+      <Facade dims={dims} />
       <House
-        jambOuterX={DOOR_WIDTH / 2 + JAMB_WIDTH}
-        wallTopY={WALL_TOP_Y}
-        wallZ={WALL_Z}
-        floorY={FLOOR_Y}
-        doorWidth={DOOR_WIDTH}
+        jambOuterX={dims.doorWidth / 2 + JAMB_WIDTH}
+        wallTopY={dims.wallTopY}
+        wallZ={dims.wallZ}
+        floorY={dims.floorY}
+        doorWidth={dims.doorWidth}
       />
-      <GarageDoorOpener />
+      {look.kind === 'sectional' && <GarageDoorOpener dims={dims} />}
+      {look.kind === 'roller' && <RollerDrumAndGuides dims={dims} isOpen={isOpen} />}
       <GarageInterior
         isOpen={isOpen}
-        backWallZ={BACK_WALL_Z}
-        frontZ={WALL_Z}
-        floorY={FLOOR_Y}
-        ceilingY={CEILING_Y}
-        doorWidth={DOOR_WIDTH}
+        backWallZ={dims.backWallZ}
+        frontZ={dims.wallZ}
+        floorY={dims.floorY}
+        ceilingY={dims.ceilingY}
+        doorWidth={dims.doorWidth}
         headline={revealHeadline}
         wordmark={revealWordmark}
       />
-      {Array.from({ length: look.panelCount }, (_, i) => (
-        <Panel key={i} index={i} isOpen={isOpen} look={look} />
-      ))}
+      <DoorAssembly isOpen={isOpen} look={look} dims={dims} />
 
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, FLOOR_Y, 0]} receiveShadow>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, dims.floorY, 0]} receiveShadow>
         <planeGeometry args={[16, 16]} />
         <meshStandardMaterial color="#d9d5cb" roughness={0.96} envMapIntensity={0.25} />
       </mesh>
-      <Garden doorWidth={DOOR_WIDTH} floorY={FLOOR_Y} wallZ={WALL_Z} />
+      <Garden doorWidth={dims.doorWidth} floorY={dims.floorY} wallZ={dims.wallZ} />
 
-      {/* Tone mapping deliberately lives here, last in the effect chain,
-          instead of on the renderer (gl.toneMapping) — the renderer's own
-          tone mapping runs before DepthOfField captures the scene, which
-          clamps bright pixels to 0-1 first and makes the sky/sun bloom
-          into a blown-out white smear once blurred. Applying it after
-          DoF keeps the blur working on proper HDR data. */}
       <EffectComposer>
         <DepthOfField focusDistance={5.7} focusRange={5.5} bokehScale={1.5} />
         <ToneMapping mode={ToneMappingMode.ACES_FILMIC} />
       </EffectComposer>
 
-      <CameraDirector isOpen={isOpen} />
+      <CameraDirector isOpen={isOpen} widthScale={look.widthScale} />
     </Canvas>
   )
 }

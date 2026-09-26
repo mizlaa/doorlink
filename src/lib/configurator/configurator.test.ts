@@ -8,7 +8,7 @@ import {
   SIZE_LIMITS,
   specAsBrief,
 } from './options'
-import { lookFromSpec } from './look'
+import { doorSizeScales, lookFromSpec } from './look'
 
 describe('parseSpec', () => {
   it('returns the default for junk rather than trusting it', () => {
@@ -87,8 +87,19 @@ describe('lookFromSpec', () => {
     }
   })
 
-  it('draws a roller door as many slats and a tilt door as one panel', () => {
-    expect(lookFromSpec({ ...DEFAULT_SPEC, productType: 'roller' }).panelCount).toBeGreaterThan(5)
-    expect(lookFromSpec({ ...DEFAULT_SPEC, productType: 'tilt' }).panelCount).toBe(1)
+  it('maps product type to a door kind for the renderer', () => {
+    expect(lookFromSpec(DEFAULT_SPEC).kind).toBe('sectional')
+    expect(lookFromSpec({ ...DEFAULT_SPEC, productType: 'roller' }).kind).toBe('roller')
+    expect(lookFromSpec({ ...DEFAULT_SPEC, productType: 'tilt' }).kind).toBe('tilt')
+  })
+
+  it('clamps opening size scales so the house stays in frame', () => {
+    expect(lookFromSpec({ ...DEFAULT_SPEC, widthMm: 2400, heightMm: 2100 })).toMatchObject({
+      widthScale: 1,
+      heightScale: 1,
+    })
+    expect(lookFromSpec({ ...DEFAULT_SPEC, widthMm: 6000 }).widthScale).toBe(1.45)
+    expect(lookFromSpec({ ...DEFAULT_SPEC, widthMm: 1800 }).widthScale).toBe(0.85)
+    expect(doorSizeScales(3000, 3000).heightScale).toBe(1.25)
   })
 })
