@@ -3,7 +3,7 @@
 import { useState, useTransition } from 'react'
 import { AnswerStatus, QuestionType } from '@prisma/client'
 import { cn } from '@/lib/utils'
-import { Textarea } from '@/components/ui/Field'
+import { Textarea, Select } from '@/components/ui/Field'
 import { saveAnswerAction } from '../actions'
 import type { WizardAnswer, WizardQuestion } from './types'
 
@@ -170,8 +170,8 @@ export function QuestionCard({
       )}
 
       {isSelect && (
-        <select
-          className="mt-3 h-11 w-full rounded border border-line bg-paper px-3 text-sm text-graphite"
+        <Select
+          className="mt-3"
           value={valueText}
           disabled={readOnly}
           onChange={(event) => {
@@ -185,7 +185,7 @@ export function QuestionCard({
               {option}
             </option>
           ))}
-        </select>
+        </Select>
       )}
 
       {isMulti && (

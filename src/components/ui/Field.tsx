@@ -25,7 +25,13 @@ export const Select = forwardRef<HTMLSelectElement, SelectHTMLAttributes<HTMLSel
   { className, ...props },
   ref
 ) {
-  return <select ref={ref} className={cn(FIELD_CLASSES, 'h-11', className)} {...props} />
+  return (
+    <select
+      ref={ref}
+      className={cn(FIELD_CLASSES, 'field-select h-11 appearance-none pr-12', className)}
+      {...props}
+    />
+  )
 })
 
 export interface FieldProps {
