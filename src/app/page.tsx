@@ -8,6 +8,7 @@ import { formatCommissionRate } from '@/lib/commission'
 import { currentCommissionBps } from '@/lib/commission-settings'
 import { GarageDoorHero } from '@/components/garage-door/GarageDoorHero'
 import { RevealCard } from '@/components/ui/RevealCard'
+import { cn } from '@/lib/utils'
 
 export const metadata: Metadata = {
   description:
@@ -68,6 +69,7 @@ export default async function HomePage() {
             index="04"
             title="Get the compliance pack"
             body="Prepare a professional safety and compliance document pack for your next client."
+            className="sm:!border-l-0 sm:pl-0"
           />
         </div>
       </section>
@@ -338,9 +340,24 @@ function HelpCard({ href, title, body }: { href: string; title: string; body: st
   )
 }
 
-function QuickEntry({ href, index, title, body }: { href: string; index: string; title: string; body: string }) {
+function QuickEntry({
+  href,
+  index,
+  title,
+  body,
+  className,
+}: {
+  href: string
+  index: string
+  title: string
+  body: string
+  className?: string
+}) {
   return (
-    <Link href={href} className="group flex gap-4 px-0 py-5 sm:px-6 sm:py-6 first:sm:pl-0 last:sm:pr-0">
+    <Link
+      href={href}
+      className={cn('group flex gap-4 px-0 py-5 sm:px-6 sm:py-6 first:sm:pl-0 last:sm:pr-0', className)}
+    >
       <span className="font-code text-micro text-zinc-deep">{index}</span>
       <span className="min-w-0">
         <span className="flex items-center gap-2 font-medium text-graphite">
