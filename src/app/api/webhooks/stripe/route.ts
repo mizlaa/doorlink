@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { PayoutStatus } from '@prisma/client'
+import type Stripe from 'stripe'
 import { paymentProvider, isPaymentsNotConfigured } from '@/lib/payments'
 import {
   applyPaymentFailed,
@@ -7,6 +8,10 @@ import {
   applyPayoutStatus,
   applyRefund,
 } from '@/lib/payments/ledger'
+import {
+  handleCheckoutSessionCompleted,
+  handleSubscriptionLifecycle,
+} from '@/lib/payments/subscription-sync'
 
 /**
  * The payment provider's webhook endpoint.
@@ -117,6 +122,17 @@ async function handleVerifiedEvent(type: string, payload: unknown): Promise<void
       const id = asString(data.id)
       if (!id) return
       await applyPayoutStatus(id, PayoutStatus.FAILED, null)
+      return
+    }
+
+    case 'checkout.session.completed': {
+      await handleCheckoutSessionCompleted(data as unknown as Stripe.Checkout.Session)
+      return
+    }
+
+    case 'customer.subscription.updated':
+    case 'customer.subscription.deleted': {
+      await handleSubscriptionLifecycle(data as unknown as Stripe.Subscription)
       return
     }
 

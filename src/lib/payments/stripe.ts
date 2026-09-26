@@ -1,5 +1,6 @@
 import 'server-only'
 
+import Stripe from 'stripe'
 import type {
   PaymentIntentRequest,
   PaymentIntentResult,
@@ -8,109 +9,111 @@ import type {
   PayoutResult,
   RefundRequest,
   RefundResult,
+  BillingPortalRequest,
+  BillingPortalResult,
   SubscriptionCheckoutRequest,
   SubscriptionCheckoutResult,
   VerifiedWebhookEvent,
 } from './types'
 import { PaymentsNotConfiguredError } from './types'
 
-/**
- * The Stripe adapter.
- *
- * This is the only file in the codebase that knows Stripe exists. It is
- * deliberately written as the *shape* of the integration rather than a
- * working one: the `stripe` SDK is not installed and no keys exist, and
- * installing an SDK we cannot call would add weight without adding
- * capability.
- *
- * Every method below documents the exact Stripe call that replaces it,
- * and throws `PaymentsNotConfiguredError` until then. Nothing fabricates
- * a successful response — a fake payment confirmation is the single most
- * dangerous thing this module could produce.
- *
- * ---------------------------------------------------------------------
- * TO CONNECT STRIPE
- * ---------------------------------------------------------------------
- *  1. `npm install stripe`
- *  2. Fill in, in `.env`:
- *       STRIPE_SECRET_KEY               sk_live_… / sk_test_…
- *       STRIPE_WEBHOOK_SECRET           whsec_…  (from the endpoint you
- *                                       register for /api/webhooks/stripe)
- *       NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY  pk_…
- *       STRIPE_CONNECT_CLIENT_ID        ca_…     (only for worker payouts)
- *  3. Replace each `notConfigured()` below with the call named in its
- *     comment. The surrounding types do not change.
- *  4. Create the prices in Stripe and put their ids on
- *     `SubscriptionPlan.stripePriceId`. A plan without one stays
- *     unsubscribable, and the UI already says so.
- *
- * Nothing outside this file needs to change.
- * ---------------------------------------------------------------------
- */
+function secretKey(): string | null {
+  const key = process.env.STRIPE_SECRET_KEY
+  return key && key.length > 0 ? key : null
+}
+
+function webhookSecret(): string | null {
+  const secret = process.env.STRIPE_WEBHOOK_SECRET
+  return secret && secret.length > 0 ? secret : null
+}
 
 function notConfigured(action: string): never {
   throw new PaymentsNotConfiguredError(action)
+}
+
+/** Shared Stripe client for checkout, webhooks, and subscription sync. */
+export function getStripeClient(): Stripe {
+  const key = secretKey()
+  if (!key) throw new PaymentsNotConfiguredError('call Stripe')
+  return new Stripe(key)
+}
+
+function subscriptionCheckoutReady(): boolean {
+  return !!(secretKey() && webhookSecret())
 }
 
 export function createStripeProvider(): PaymentProvider {
   return {
     name: 'stripe',
 
-    // stripe.paymentIntents.create({
-    //   amount, currency, description,
-    //   application_fee_amount: request.applicationFeeCents,
-    //   transfer_data: request.destinationAccountId
-    //     ? { destination: request.destinationAccountId }
-    //     : undefined,
-    //   metadata: { reference: request.reference, ...request.metadata },
-    // })
     async createPaymentIntent(_request: PaymentIntentRequest): Promise<PaymentIntentResult> {
+      if (!secretKey()) return notConfigured('take a payment')
       return notConfigured('take a payment')
     },
 
-    // stripe.refunds.create({
-    //   payment_intent: request.providerIntentId,
-    //   amount: request.amountCents,
-    //   reason: request.reason,
-    // })
     async refund(_request: RefundRequest): Promise<RefundResult> {
+      if (!secretKey()) return notConfigured('issue a refund')
       return notConfigured('issue a refund')
     },
 
-    // stripe.transfers.create({
-    //   amount, currency,
-    //   destination: request.destinationAccountId,
-    //   transfer_group: request.reference,
-    // })
     async createPayout(_request: PayoutRequest): Promise<PayoutResult> {
+      if (!secretKey()) return notConfigured('pay a technician')
       return notConfigured('pay a technician')
     },
 
-    // stripe.checkout.sessions.create({
-    //   mode: 'subscription',
-    //   line_items: [{ price: request.providerPriceId, quantity: 1 }],
-    //   customer_email: request.customerEmail,
-    //   client_reference_id: request.userId,
-    //   subscription_data: request.trialDays
-    //     ? { trial_period_days: request.trialDays }
-    //     : undefined,
-    //   success_url: request.successUrl,
-    //   cancel_url: request.cancelUrl,
-    // })
     async createSubscriptionCheckout(
-      _request: SubscriptionCheckoutRequest
+      request: SubscriptionCheckoutRequest
     ): Promise<SubscriptionCheckoutResult> {
-      return notConfigured('start a subscription')
+      if (!subscriptionCheckoutReady()) return notConfigured('start a subscription')
+
+      const stripe = getStripeClient()
+      const subscriptionData: Stripe.Checkout.SessionCreateParams.SubscriptionData = {
+        metadata: {
+          userId: request.userId,
+          planId: request.planId,
+        },
+      }
+      if (request.trialDays != null && request.trialDays > 0) {
+        subscriptionData.trial_period_days = request.trialDays
+      }
+
+      const session = await stripe.checkout.sessions.create({
+        mode: 'subscription',
+        line_items: [{ price: request.providerPriceId, quantity: 1 }],
+        customer_email: request.customerEmail,
+        client_reference_id: request.userId,
+        subscription_data: subscriptionData,
+        success_url: request.successUrl,
+        cancel_url: request.cancelUrl,
+      })
+
+      if (!session.url) {
+        throw new Error('Stripe did not return a checkout URL.')
+      }
+
+      return { url: session.url, providerSessionId: session.id }
     },
 
-    // stripe.webhooks.constructEvent(rawBody, signatureHeader, process.env.STRIPE_WEBHOOK_SECRET)
-    //
-    // This one matters more than the rest. It is the only path by which a
-    // Doorlink transaction is ever marked PAID, so it must verify the
-    // signature and throw on failure rather than parsing the body and
-    // hoping. Never replace it with JSON.parse.
-    async verifyWebhook(_rawBody: string, _signatureHeader: string): Promise<VerifiedWebhookEvent> {
-      return notConfigured('verify a webhook')
+    async createBillingPortalSession(request: BillingPortalRequest): Promise<BillingPortalResult> {
+      if (!subscriptionCheckoutReady()) return notConfigured('manage a subscription')
+
+      const stripe = getStripeClient()
+      const session = await stripe.billingPortal.sessions.create({
+        customer: request.providerCustomerId,
+        return_url: request.returnUrl,
+      })
+
+      return { url: session.url }
+    },
+
+    async verifyWebhook(rawBody: string, signatureHeader: string): Promise<VerifiedWebhookEvent> {
+      if (!secretKey()) return notConfigured('verify a webhook')
+      const whsec = webhookSecret()
+      if (!whsec) return notConfigured('verify a webhook')
+
+      const stripe = getStripeClient()
+      const event = stripe.webhooks.constructEvent(rawBody, signatureHeader, whsec)
+      return { id: event.id, type: event.type, payload: event }
     },
   }
 }

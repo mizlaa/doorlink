@@ -8,7 +8,7 @@ import { describe, expect, it, beforeEach, afterEach } from 'vitest'
  * silently empty result.
  */
 
-const KEYS = ['STRIPE_SECRET_KEY'] as const
+const KEYS = ['STRIPE_SECRET_KEY', 'STRIPE_WEBHOOK_SECRET'] as const
 const saved: Record<string, string | undefined> = {}
 
 beforeEach(() => {
@@ -51,10 +51,15 @@ describe('the Stripe adapter', () => {
         providerPriceId: 'price_test',
         customerEmail: 'a@example.com',
         userId: 'u1',
+        planId: 'plan1',
         successUrl: 'https://example.com/ok',
         cancelUrl: 'https://example.com/no',
       }),
       provider.verifyWebhook('{}', 't=1,v1=deadbeef'),
+      provider.createBillingPortalSession({
+        providerCustomerId: 'cus_test',
+        returnUrl: 'https://example.com/account',
+      }),
     ]
 
     for (const call of calls) {
@@ -62,11 +67,67 @@ describe('the Stripe adapter', () => {
     }
   })
 
-  // The one that matters most: a webhook whose signature cannot be
-  // checked must never come back as a verified event.
   it('never returns a verified event for an unverifiable webhook', async () => {
     const { createStripeProvider } = await import('./stripe')
     const provider = createStripeProvider()
     await expect(provider.verifyWebhook('{"type":"payment_intent.succeeded"}', 'nonsense')).rejects.toThrow()
+  })
+
+  it('still refuses marketplace charges when only the secret key is set', async () => {
+    process.env.STRIPE_SECRET_KEY = 'sk_test_not_real'
+    const { createStripeProvider } = await import('./stripe')
+    const { isPaymentsNotConfigured } = await import('./types')
+    const provider = createStripeProvider()
+
+    await expect(
+      provider.createPaymentIntent({
+        amountCents: 100,
+        currency: 'AUD',
+        reference: 'x',
+        description: 'x',
+        applicationFeeCents: 0,
+      })
+    ).rejects.toSatisfy(isPaymentsNotConfigured)
+
+    await expect(provider.refund({ providerIntentId: 'pi_test' })).rejects.toSatisfy(isPaymentsNotConfigured)
+
+    await expect(
+      provider.createPayout({
+        amountCents: 100,
+        currency: 'AUD',
+        destinationAccountId: 'acct_test',
+        reference: 'x',
+        description: 'x',
+      })
+    ).rejects.toSatisfy(isPaymentsNotConfigured)
+  })
+
+  it('refuses subscription checkout and webhooks without the webhook secret', async () => {
+    process.env.STRIPE_SECRET_KEY = 'sk_test_not_real'
+    const { createStripeProvider } = await import('./stripe')
+    const { isPaymentsNotConfigured } = await import('./types')
+    const provider = createStripeProvider()
+
+    await expect(
+      provider.createSubscriptionCheckout({
+        providerPriceId: 'price_test',
+        customerEmail: 'a@example.com',
+        userId: 'u1',
+        planId: 'plan1',
+        successUrl: 'https://example.com/ok',
+        cancelUrl: 'https://example.com/no',
+      })
+    ).rejects.toSatisfy(isPaymentsNotConfigured)
+
+    await expect(provider.verifyWebhook('{}', 't=1,v1=deadbeef')).rejects.toSatisfy(
+      isPaymentsNotConfigured
+    )
+
+    await expect(
+      provider.createBillingPortalSession({
+        providerCustomerId: 'cus_test',
+        returnUrl: 'https://example.com/account',
+      })
+    ).rejects.toSatisfy(isPaymentsNotConfigured)
   })
 })

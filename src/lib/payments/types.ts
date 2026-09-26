@@ -68,6 +68,8 @@ export interface SubscriptionCheckoutRequest {
   customerEmail: string
   /** Doorlink's own user id, echoed back on the webhook. */
   userId: string
+  /** Doorlink plan row id — stored on the Stripe subscription metadata. */
+  planId: string
   successUrl: string
   cancelUrl: string
   trialDays?: number | null
@@ -77,6 +79,15 @@ export interface SubscriptionCheckoutResult {
   /** Where to send the browser to complete the subscription. */
   url: string
   providerSessionId: string
+}
+
+export interface BillingPortalRequest {
+  providerCustomerId: string
+  returnUrl: string
+}
+
+export interface BillingPortalResult {
+  url: string
 }
 
 /**
@@ -97,6 +108,8 @@ export interface PaymentProvider {
   refund(request: RefundRequest): Promise<RefundResult>
   createPayout(request: PayoutRequest): Promise<PayoutResult>
   createSubscriptionCheckout(request: SubscriptionCheckoutRequest): Promise<SubscriptionCheckoutResult>
+  /** Stripe Customer Portal: cancel, update card, view invoices. */
+  createBillingPortalSession(request: BillingPortalRequest): Promise<BillingPortalResult>
   /**
    * Verifies a raw webhook body against its signature header. Throws if
    * the signature does not check out — a webhook that cannot be proved
