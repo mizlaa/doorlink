@@ -5,7 +5,10 @@ import { getSession } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { formatMoney } from '@/lib/money'
-import { paymentsAvailable } from '@/lib/payments'
+import { subscriptionCheckoutAvailable } from '@/lib/payments'
+import { refreshOpenStripeSubscriptions } from '@/lib/payments/subscription-sync'
+import { Button } from '@/components/ui/Button'
+import { openBillingPortal } from './actions'
 import { entitlementsFor, FEATURE_LABELS } from '@/lib/entitlements'
 import { NotConnected } from '@/components/ui/NotConnected'
 import { EmptyState } from '@/components/ui/EmptyState'
@@ -16,9 +19,13 @@ export const metadata: Metadata = { title: 'Subscription' }
 
 const INTERVAL_SUFFIX = { WEEK: 'per week', MONTH: 'per month', YEAR: 'per year' } as const
 
-export default async function SubscriptionPage() {
+type PageProps = { searchParams: Promise<{ checkout?: string }> }
+
+export default async function SubscriptionPage({ searchParams }: PageProps) {
   const session = await getSession()
   if (!session) redirect('/sign-in')
+
+  const params = await searchParams
 
   let history
   try {
@@ -36,9 +43,23 @@ export default async function SubscriptionPage() {
     )
   }
 
+  if (subscriptionCheckoutAvailable()) {
+    try {
+      await refreshOpenStripeSubscriptions(session.userId)
+      history = await prisma.subscription.findMany({
+        where: { userId: session.userId },
+        orderBy: { createdAt: 'desc' },
+        include: { plan: true },
+      })
+    } catch (error) {
+      if (!isDatabaseUnreachable(error)) throw error
+    }
+  }
+
   const entitlements = await entitlementsFor(session.userId)
-  const live = paymentsAvailable()
+  const checkoutReady = subscriptionCheckoutAvailable()
   const current = history.find((row) => row.status === entitlements.status) ?? null
+  const canManage = checkoutReady && Boolean(current?.providerCustomerId)
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:py-14">
@@ -52,6 +73,19 @@ export default async function SubscriptionPage() {
         <h1 className="text-2xl font-semibold tracking-tight text-graphite">Subscription</h1>
       </header>
 
+      {params.checkout === 'success' && !entitlements.subscribed && (
+        <div className="mb-8 rounded-md border border-line bg-rail p-4 text-sm text-graphite-soft">
+          Payment submitted. Stripe still has to confirm your subscription — this page will update once the
+          webhook lands. If nothing changes after a minute, contact support.
+        </div>
+      )}
+
+      {params.checkout === 'cancel' && (
+        <div className="mb-8 rounded-md border border-line bg-rail p-4 text-sm text-graphite-soft">
+          Checkout was cancelled. You have not been charged.
+        </div>
+      )}
+
       <section className="mb-10">
         {current ? (
           <div className="rounded-md border border-line bg-paper p-5">
@@ -64,8 +98,16 @@ export default async function SubscriptionPage() {
                     : 'Pricing not set'}
                 </p>
               </div>
-              <Badge tone={current.status === 'ACTIVE' || current.status === 'TRIALING' ? 'good' : 'caution'}>
-                {SUBSCRIPTION_STATUS_LABELS[current.status]}
+              <Badge
+                tone={
+                  current.cancelAtPeriodEnd
+                    ? 'caution'
+                    : current.status === 'ACTIVE' || current.status === 'TRIALING'
+                      ? 'good'
+                      : 'caution'
+                }
+              >
+                {current.cancelAtPeriodEnd ? 'Cancelling' : SUBSCRIPTION_STATUS_LABELS[current.status]}
               </Badge>
             </div>
 
@@ -74,6 +116,14 @@ export default async function SubscriptionPage() {
                 {current.cancelAtPeriodEnd ? 'Access ends' : 'Renews'} on{' '}
                 {current.currentPeriodEnd.toLocaleDateString('en-AU', { dateStyle: 'long' })}.
               </p>
+            )}
+
+            {canManage && (
+              <form action={openBillingPortal} className="mt-5">
+                <Button type="submit" variant="secondary">
+                  Manage subscription
+                </Button>
+              </form>
             )}
           </div>
         ) : (
@@ -84,14 +134,11 @@ export default async function SubscriptionPage() {
         )}
       </section>
 
-      {/* Upgrade / downgrade / cancel are provider operations. Rendering
-          them as buttons that cannot do anything would be worse than
-          saying, once, that the provider is not connected. */}
-      {!live && (
+      {!checkoutReady && (
         <div className="mb-10">
           <NotConnected
             feature="Changing your plan"
-            reason="Upgrading, downgrading and cancelling all happen through the payment provider, and none is connected yet. When Stripe is wired in, these become live without any other change to this page."
+            reason="Cancelling and updating a card happen in Stripe. Set STRIPE_SECRET_KEY and STRIPE_WEBHOOK_SECRET to open the billing portal from this page."
           />
         </div>
       )}
@@ -143,7 +190,11 @@ export default async function SubscriptionPage() {
                   <span className="text-micro text-zinc-deep">
                     started {row.createdAt.toLocaleDateString('en-AU', { dateStyle: 'medium' })}
                   </span>
-                  <Badge tone="neutral">{SUBSCRIPTION_STATUS_LABELS[row.status]}</Badge>
+                  <Badge tone="neutral">
+                    {row.cancelAtPeriodEnd && row.status !== 'CANCELLED'
+                      ? 'Cancelling'
+                      : SUBSCRIPTION_STATUS_LABELS[row.status]}
+                  </Badge>
                 </span>
               </li>
             ))}

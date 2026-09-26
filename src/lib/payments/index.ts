@@ -29,3 +29,15 @@ export function requirePaymentProvider(action: string): PaymentProvider {
 export function paymentsAvailable(): boolean {
   return isConnected('payments')
 }
+
+/** Subscription checkout and recording require both Stripe secrets. */
+export function subscriptionCheckoutAvailable(): boolean {
+  return configured(
+    process.env.STRIPE_SECRET_KEY,
+    process.env.STRIPE_WEBHOOK_SECRET
+  )
+}
+
+function configured(...vars: Array<string | undefined>): boolean {
+  return vars.every((value) => !!value && value.length > 0)
+}

@@ -1393,7 +1393,7 @@ model Subscription {
   cancelledAt            DateTime?
   provider               String?
   providerCustomerId     String?
-  providerSubscriptionId String?
+  providerSubscriptionId String?            @unique
   createdAt              DateTime           @default(now())
   updatedAt              DateTime           @updatedAt
 

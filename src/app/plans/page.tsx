@@ -4,12 +4,13 @@ import { getSession } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { formatMoney } from '@/lib/money'
-import { paymentsAvailable } from '@/lib/payments'
+import { subscriptionCheckoutAvailable } from '@/lib/payments'
 import { entitlementsFor, FEATURE_LABELS, type Feature } from '@/lib/entitlements'
 import { NotConnected } from '@/components/ui/NotConnected'
 import { EmptyState } from '@/components/ui/EmptyState'
-import { Badge } from '@/components/ui/Badge'
+import { Button } from '@/components/ui/Button'
 import { SUBSCRIPTION_STATUS_LABELS } from '@/lib/labels'
+import { startSubscriptionCheckout } from './actions'
 
 export const metadata: Metadata = {
   title: 'Plans',
@@ -38,7 +39,7 @@ export default async function PlansPage() {
   }
 
   const entitlements = await entitlementsFor(session?.userId ?? null)
-  const live = paymentsAvailable()
+  const checkoutReady = subscriptionCheckoutAvailable()
   const gated = [...entitlements.gated]
 
   return (
@@ -75,9 +76,18 @@ export default async function PlansPage() {
               ? 'The price for this plan has not been decided yet.'
               : !plan.stripePriceId
                 ? 'This plan is not connected to a payment provider yet.'
-                : !live
+                : !checkoutReady
                   ? 'No payment provider is connected yet.'
-                  : null
+                  : entitlements.subscribed
+                    ? 'You already have an active subscription.'
+                    : null
+
+            const canSubscribe =
+              priced &&
+              plan.stripePriceId &&
+              checkoutReady &&
+              !entitlements.subscribed &&
+              Boolean(session)
 
             return (
               <div key={plan.id} className="flex flex-col rounded-md border border-line bg-paper p-6">
@@ -104,13 +114,25 @@ export default async function PlansPage() {
 
                 <div className="mt-6 flex-1" />
 
-                {/* No button. A "Subscribe" control that cannot subscribe
-                    anyone is exactly the fake functionality this build
-                    does not ship. The reason it is unavailable is shown
-                    instead. */}
-                <p className="rounded border border-line bg-rail px-3 py-2.5 text-sm text-graphite-soft">
-                  {reason ?? 'Ready to subscribe.'}
-                </p>
+                {canSubscribe ? (
+                  <form action={startSubscriptionCheckout}>
+                    <input type="hidden" name="planId" value={plan.id} />
+                    <Button type="submit" className="w-full">
+                      Subscribe
+                    </Button>
+                  </form>
+                ) : priced && plan.stripePriceId && checkoutReady && !entitlements.subscribed && !session ? (
+                  <Link
+                    href="/sign-in?next=/plans"
+                    className="inline-flex h-11 w-full items-center justify-center rounded bg-signal text-sm font-medium text-paper hover:bg-signal-hover"
+                  >
+                    Sign in to subscribe
+                  </Link>
+                ) : (
+                  <p className="rounded border border-line bg-rail px-3 py-2.5 text-sm text-graphite-soft">
+                    {reason ?? 'Ready to subscribe.'}
+                  </p>
+                )}
               </div>
             )
           })}
@@ -139,7 +161,7 @@ export default async function PlansPage() {
         )}
       </section>
 
-      {!live && (
+      {!checkoutReady && (
         <div className="mt-10 max-w-prose">
           <NotConnected
             feature="Subscribing"
