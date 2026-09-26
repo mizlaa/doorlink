@@ -3,7 +3,7 @@
 import { useActionState, useMemo, useState } from 'react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
-import { saveConfigurationAction, type ConfigurationActionState } from './actions'
+import { saveConfigurationAction, generateDoorPreviewAction, type ConfigurationActionState, type PreviewActionState } from './actions'
 import {
   DEFAULT_SPEC,
   describeSpec,
@@ -16,6 +16,7 @@ import {
 import { lookFromSpec } from '@/lib/configurator/look'
 import { Button } from '@/components/ui/Button'
 import { Field, Input } from '@/components/ui/Field'
+import { NotConnected } from '@/components/ui/NotConnected'
 import { cn } from '@/lib/utils'
 
 // The scene is WebGL and several hundred kB; it has no business in the
@@ -31,10 +32,24 @@ const ConfiguratorScene = dynamic(
 
 const initialState: ConfigurationActionState = {}
 
-export function Configurator({ signedIn, initialSpec }: { signedIn: boolean; initialSpec?: DoorSpec }) {
+const initialPreviewState: PreviewActionState = {}
+
+export function Configurator({
+  signedIn,
+  initialSpec,
+  previewAvailable,
+}: {
+  signedIn: boolean
+  initialSpec?: DoorSpec
+  previewAvailable: boolean
+}) {
   const [spec, setSpec] = useState<DoorSpec>(initialSpec ?? DEFAULT_SPEC)
   const [open, setOpen] = useState(false)
   const [state, formAction, isPending] = useActionState(saveConfigurationAction, initialState)
+  const [previewState, previewAction, previewPending] = useActionState(
+    generateDoorPreviewAction,
+    initialPreviewState
+  )
 
   const groups = useMemo(() => groupsFor(spec.productType), [spec.productType])
   const look = useMemo(() => lookFromSpec(spec), [spec])
@@ -63,6 +78,56 @@ export function Configurator({ signedIn, initialSpec }: { signedIn: boolean; ini
           the shape and colour you have chosen. It is not a picture of a specific product, and no manufacturer
           has quoted on it.
         </p>
+
+        <section className="mt-6">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-deep">Photo preview</h2>
+          {previewAvailable ? (
+            <form action={previewAction} className="mt-3 flex flex-col gap-3">
+              <input type="hidden" name="spec" value={JSON.stringify(spec)} />
+              <p className="text-sm text-graphite-soft">
+                Upload a photo of your garage opening or the front of the house. We&apos;ll generate one
+                indicative image using your choices above. It is a demo, not a manufacturer quote photo.
+              </p>
+              <Field label="Your photo" htmlFor="preview-photo">
+                <Input
+                  id="preview-photo"
+                  name="photo"
+                  type="file"
+                  accept="image/jpeg,image/png,image/webp"
+                  required
+                />
+              </Field>
+              {previewState.error && (
+                <p role="alert" className="text-sm text-bad">
+                  {previewState.error}
+                </p>
+              )}
+              <Button type="submit" variant="secondary" disabled={previewPending}>
+                {previewPending ? 'Generating…' : 'Generate preview'}
+              </Button>
+              {previewState.imageDataUrl && (
+                <figure className="overflow-hidden rounded-md border border-line">
+                  {/* eslint-disable-next-line @next/next/no-img-element -- ephemeral data URL from OpenAI */}
+                  <img
+                    src={previewState.imageDataUrl}
+                    alt="Generated preview of your door choices on your photo"
+                    className="w-full"
+                  />
+                  <figcaption className="border-t border-line bg-rail px-3 py-2 text-micro text-zinc-deep">
+                    AI-generated preview from your photo and choices. Not a product photo from a manufacturer.
+                  </figcaption>
+                </figure>
+              )}
+            </form>
+          ) : (
+            <div className="mt-3">
+              <NotConnected
+                feature="Photo preview"
+                reason="No image provider is connected. Set OPENAI_API_KEY to try a test preview on your own photo."
+              />
+            </div>
+          )}
+        </section>
       </div>
 
       {/* ------------------------------------------------------------ */}

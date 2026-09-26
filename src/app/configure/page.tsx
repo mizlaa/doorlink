@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { getSession } from '@/lib/auth'
 import { parseSpec } from '@/lib/configurator/options'
+import { doorPreviewAvailable } from '@/lib/configurator/preview'
 import { Configurator } from './Configurator'
 
 export const metadata: Metadata = {
@@ -38,7 +39,11 @@ export default async function ConfigurePage({ searchParams }: PageProps) {
         </p>
       </header>
 
-      <Configurator signedIn={Boolean(session)} initialSpec={initialSpec} />
+      <Configurator
+        signedIn={Boolean(session)}
+        initialSpec={initialSpec}
+        previewAvailable={doorPreviewAvailable()}
+      />
     </div>
   )
 }
