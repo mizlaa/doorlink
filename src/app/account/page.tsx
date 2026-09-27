@@ -72,7 +72,11 @@ export default async function AccountPage() {
     data = { listingCount, activeListingCount, openTicketCount, claimedLeadCount, organization, user }
   } catch (error) {
     if (!isDatabaseUnreachable(error)) throw error
-    return <NotConnected feature="Your account" reason="Can't load your account data right now." />
+    return (
+      <div className="mx-auto max-w-shell px-4 py-10">
+        <NotConnected feature="Your account" reason="Can't load your account data right now." />
+      </div>
+    )
   }
 
   // Null when the database could not be read. The banner is simply absent
@@ -91,7 +95,7 @@ export default async function AccountPage() {
   }
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="mx-auto flex max-w-shell flex-col gap-8 px-4 py-10">
       {setupRemaining > 0 && (
         <Link
           href="/welcome"
