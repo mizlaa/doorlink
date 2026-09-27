@@ -11,6 +11,8 @@ import type {
   RefundResult,
   BillingPortalRequest,
   BillingPortalResult,
+  CreditPackCheckoutRequest,
+  CreditPackCheckoutResult,
   SubscriptionCheckoutRequest,
   SubscriptionCheckoutResult,
   VerifiedWebhookEvent,
@@ -104,6 +106,46 @@ export function createStripeProvider(): PaymentProvider {
       })
 
       return { url: session.url }
+    },
+
+    async createCreditPackCheckout(
+      request: CreditPackCheckoutRequest
+    ): Promise<CreditPackCheckoutResult> {
+      if (!subscriptionCheckoutReady()) return notConfigured('buy preview credits')
+
+      const stripe = getStripeClient()
+      const session = await stripe.checkout.sessions.create({
+        mode: 'payment',
+        customer_email: request.customerEmail,
+        client_reference_id: request.userId,
+        metadata: {
+          userId: request.userId,
+          packCode: request.packCode,
+          credits: String(request.credits),
+          priceCents: String(request.priceCents),
+        },
+        line_items: [
+          {
+            quantity: 1,
+            price_data: {
+              currency: request.currency.toLowerCase(),
+              unit_amount: request.priceCents,
+              product_data: {
+                name: request.packName,
+                description: `${request.credits} garage door photo preview credits`,
+              },
+            },
+          },
+        ],
+        success_url: request.successUrl,
+        cancel_url: request.cancelUrl,
+      })
+
+      if (!session.url) {
+        throw new Error('Stripe did not return a checkout URL.')
+      }
+
+      return { url: session.url, providerSessionId: session.id }
     },
 
     async verifyWebhook(rawBody: string, signatureHeader: string): Promise<VerifiedWebhookEvent> {

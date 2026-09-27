@@ -90,6 +90,23 @@ export interface BillingPortalResult {
   url: string
 }
 
+export interface CreditPackCheckoutRequest {
+  userId: string
+  customerEmail: string
+  packCode: string
+  packName: string
+  credits: number
+  priceCents: number
+  currency: string
+  successUrl: string
+  cancelUrl: string
+}
+
+export interface CreditPackCheckoutResult {
+  url: string
+  providerSessionId: string
+}
+
 /**
  * A webhook that has already been proved authentic by the provider
  * adapter. Nothing downstream ever sees an unverified payload — the only
@@ -110,6 +127,7 @@ export interface PaymentProvider {
   createSubscriptionCheckout(request: SubscriptionCheckoutRequest): Promise<SubscriptionCheckoutResult>
   /** Stripe Customer Portal: cancel, update card, view invoices. */
   createBillingPortalSession(request: BillingPortalRequest): Promise<BillingPortalResult>
+  createCreditPackCheckout(request: CreditPackCheckoutRequest): Promise<CreditPackCheckoutResult>
   /**
    * Verifies a raw webhook body against its signature header. Throws if
    * the signature does not check out — a webhook that cannot be proved

@@ -393,6 +393,8 @@ model User {
   reviewedManuals        ManualSubmission[]        @relation("ReviewedManuals")
   manualSubmissionEvents ManualSubmissionEvent[]   @relation("ManualSubmissionEvents")
   springCalculations     SpringCalculation[]       @relation("SpringCalculations")
+  creditBalance          CreditBalance?
+  creditLedger           CreditLedger[]
 }
 
 model Organization {
@@ -1399,6 +1401,57 @@ model Subscription {
 
   @@index([userId])
   @@index([status])
+}
+
+// ---------------------------------------------------------------------
+// Image preview credits
+// ---------------------------------------------------------------------
+
+enum CreditLedgerKind {
+  WELCOME
+  PURCHASE
+  SPEND
+  REFUND
+}
+
+model CreditPack {
+  id         String   @id @default(cuid())
+  code       String   @unique
+  name       String
+  credits    Int
+  priceCents Int
+  currency   String   @default("AUD")
+  isActive   Boolean  @default(true)
+  sortOrder  Int      @default(0)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model CreditBalance {
+  id                   String    @id @default(cuid())
+  user                 User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId               String    @unique
+  balance              Int       @default(0)
+  welcomeGranted       Boolean   @default(false)
+  inFlightGenerationId String?
+  inFlightStartedAt    DateTime?
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime  @updatedAt
+}
+
+model CreditLedger {
+  id                  String           @id @default(cuid())
+  user                User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId              String
+  delta               Int
+  kind                CreditLedgerKind
+  generationId        String?
+  providerSessionId   String?          @unique
+  packCode            String?
+  createdAt           DateTime         @default(now())
+
+  @@unique([generationId, kind])
+  @@index([userId])
 }
 
 // ---------------------------------------------------------------------

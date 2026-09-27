@@ -6,6 +6,8 @@ import { can } from '@/lib/rbac'
 import { prisma } from '@/lib/prisma'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { onboardingFor } from '@/lib/onboarding'
+import { doorPreviewAvailable } from '@/lib/configurator/preview'
+import { ensureWelcomeCredits, getCreditBalance } from '@/lib/credits/credits'
 import { NotConnected } from '@/components/ui/NotConnected'
 import { Badge } from '@/components/ui/Badge'
 import { ContactForm } from './ContactForm'
@@ -78,6 +80,16 @@ export default async function AccountPage() {
   const onboarding = await onboardingFor(session)
   const setupRemaining = onboarding && !onboarding.complete ? onboarding.total - onboarding.done : 0
 
+  let previewCredits: number | null = null
+  if (doorPreviewAvailable()) {
+    try {
+      await ensureWelcomeCredits(session.userId)
+      previewCredits = await getCreditBalance(session.userId)
+    } catch (error) {
+      if (!isDatabaseUnreachable(error)) throw error
+    }
+  }
+
   return (
     <div className="flex flex-col gap-8">
       {setupRemaining > 0 && (
@@ -102,6 +114,15 @@ export default async function AccountPage() {
           {data.organization && <Badge tone="neutral">{data.organization.name}</Badge>}
         </div>
         <p className="mt-2 text-sm text-zinc-deep">{session.email}</p>
+        {previewCredits !== null && (
+          <p className="mt-3 text-sm text-graphite-soft">
+            Photo preview credits:{' '}
+            <span className="font-medium text-graphite">{previewCredits}</span>.{' '}
+            <Link href="/configure" className="font-medium text-signal hover:text-signal-hover">
+              Design a door
+            </Link>
+          </p>
+        )}
       </div>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">

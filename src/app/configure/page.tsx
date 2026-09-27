@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import { getSession } from '@/lib/auth'
+import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { parseSpec } from '@/lib/configurator/options'
 import { doorPreviewAvailable } from '@/lib/configurator/preview'
+import { ensureWelcomeCredits, getCreditBalance, listCreditPacksForPurchase } from '@/lib/credits/credits'
+import { subscriptionCheckoutAvailable } from '@/lib/payments'
 import { Configurator } from './Configurator'
 
 export const metadata: Metadata = {
@@ -11,10 +14,11 @@ export const metadata: Metadata = {
   alternates: { canonical: '/configure' },
 }
 
-type PageProps = { searchParams: Promise<{ spec?: string }> }
+type PageProps = { searchParams: Promise<{ spec?: string; credits?: string }> }
 
 export default async function ConfigurePage({ searchParams }: PageProps) {
-  const { spec } = await searchParams
+  const params = await searchParams
+  const { spec } = params
   const session = await getSession()
 
   // A spec can arrive in the URL (from a shared link or a back button).
@@ -26,6 +30,30 @@ export default async function ConfigurePage({ searchParams }: PageProps) {
       initialSpec = parseSpec(JSON.parse(spec))
     } catch {
       initialSpec = undefined
+    }
+  }
+
+  const previewAvailable = doorPreviewAvailable()
+  const creditsCheckoutReady = subscriptionCheckoutAvailable()
+
+  if (session && previewAvailable) {
+    try {
+      await ensureWelcomeCredits(session.userId)
+    } catch (error) {
+      if (!isDatabaseUnreachable(error)) throw error
+    }
+  }
+
+  let creditBalance: number | null = null
+  let creditPacks: Awaited<ReturnType<typeof listCreditPacksForPurchase>> = []
+  if (session && previewAvailable) {
+    try {
+      creditBalance = await getCreditBalance(session.userId)
+      if (creditsCheckoutReady) {
+        creditPacks = await listCreditPacksForPurchase()
+      }
+    } catch (error) {
+      if (!isDatabaseUnreachable(error)) throw error
     }
   }
 
@@ -42,7 +70,17 @@ export default async function ConfigurePage({ searchParams }: PageProps) {
       <Configurator
         signedIn={Boolean(session)}
         initialSpec={initialSpec}
-        previewAvailable={doorPreviewAvailable()}
+        previewAvailable={previewAvailable}
+        creditBalance={creditBalance}
+        creditPacks={creditPacks}
+        creditsCheckoutReady={creditsCheckoutReady}
+        creditsCheckoutNotice={
+          params.credits === 'success'
+            ? 'Payment submitted. Your balance updates once Stripe confirms the purchase.'
+            : params.credits === 'cancel'
+              ? 'Checkout was cancelled. You were not charged.'
+              : null
+        }
       />
     </div>
   )

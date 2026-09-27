@@ -1,6 +1,7 @@
 'use server'
 
 import { revalidatePath } from 'next/cache'
+import { redirect } from 'next/navigation'
 import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
 import { getSession } from '@/lib/auth'
@@ -10,11 +11,28 @@ import { parseSpec, type ProductType } from '@/lib/configurator/options'
 import { makeReference } from '@/lib/reference'
 import { doorPreviewAvailable } from '@/lib/configurator/preview'
 import { generateDoorPreviewFromPhoto } from '@/lib/configurator/openai-preview'
-import { PREVIEW_IMAGE_MAX_BYTES } from '@/lib/configurator/preview-image-mime'
+import { PREVIEW_IMAGE_MAX_BYTES, sniffPreviewImageMime } from '@/lib/configurator/preview-image-mime'
+import {
+  beginPreviewSpend,
+  clearPreviewInFlight,
+  getCreditBalance,
+  refundPreviewCredit,
+} from '@/lib/credits/credits'
+import { PREVIEW_CREDIT_COST } from '@/lib/credits/constants'
+import {
+  requirePaymentProvider,
+  subscriptionCheckoutAvailable,
+} from '@/lib/payments'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
 
 export type ConfigurationActionState = { error?: string; savedId?: string }
 
-export type PreviewActionState = { error?: string; imageDataUrl?: string }
+export type PreviewActionState = {
+  error?: string
+  imageDataUrl?: string
+  balance?: number
+}
 
 const PREVIEW_PRODUCT_TYPES: ProductType[] = ['sectional', 'roller', 'tilt']
 
@@ -22,6 +40,8 @@ const schema = z.object({
   name: z.string().trim().min(1, 'Give it a name.').max(120),
   spec: z.string().trim().min(2),
 })
+
+const packCodeSchema = z.string().trim().min(1)
 
 export async function saveConfigurationAction(
   _prevState: ConfigurationActionState,
@@ -45,8 +65,6 @@ export async function saveConfigurationAction(
     return { error: 'That configuration could not be read.' }
   }
 
-  // Re-parsed server-side rather than stored as received: the spec came
-  // from a form field, and a form field is not a validated document.
   const spec = parseSpec(raw)
 
   try {
@@ -55,8 +73,6 @@ export async function saveConfigurationAction(
         userId,
         name: parsed.data.name,
         spec: spec as unknown as object,
-        // A share link that is not guessable from the id, so sharing one
-        // configuration does not expose the next person's.
         shareSlug: makeReference('CFG').toLowerCase(),
       },
     })
@@ -68,12 +84,55 @@ export async function saveConfigurationAction(
   }
 }
 
+export async function startCreditPackCheckout(packCode: string): Promise<void> {
+  if (!subscriptionCheckoutAvailable()) {
+    throw new Error('Buying credits is not connected yet.')
+  }
+
+  const session = await getSession()
+  if (!session) redirect('/sign-in?next=/configure')
+
+  const parsed = packCodeSchema.safeParse(packCode)
+  if (!parsed.success) throw new Error('Choose a credit pack.')
+
+  const pack = await prisma.creditPack.findFirst({
+    where: { code: parsed.data, isActive: true },
+  })
+  if (!pack) throw new Error('That credit pack is not available.')
+
+  const provider = requirePaymentProvider('buy preview credits')
+  const result = await provider.createCreditPackCheckout({
+    userId: session.userId,
+    customerEmail: session.email,
+    packCode: pack.code,
+    packName: pack.name,
+    credits: pack.credits,
+    priceCents: pack.priceCents,
+    currency: pack.currency,
+    successUrl: `${siteUrl}/configure?credits=success`,
+    cancelUrl: `${siteUrl}/configure?credits=cancel`,
+  })
+
+  redirect(result.url)
+}
+
+export async function startCreditPackCheckoutAction(formData: FormData): Promise<void> {
+  const packCode = formData.get('packCode')
+  if (typeof packCode !== 'string') throw new Error('Choose a credit pack.')
+  await startCreditPackCheckout(packCode)
+}
+
 export async function generateDoorPreviewAction(
   _prevState: PreviewActionState,
   formData: FormData
 ): Promise<PreviewActionState> {
   if (!doorPreviewAvailable()) {
     return { error: 'Photo preview is not connected yet.' }
+  }
+
+  const session = await getSession()
+  if (!session) {
+    return { error: 'Sign in to generate a photo preview.' }
   }
 
   const specRaw = formData.get('spec')
@@ -104,11 +163,46 @@ export async function generateDoorPreviewAction(
 
   const buffer = await file.arrayBuffer()
   const imageBytes = new Uint8Array(buffer)
-
-  const result = await generateDoorPreviewFromPhoto({ spec, imageBytes })
-  if ('error' in result) {
-    return { error: result.error }
+  if (!sniffPreviewImageMime(imageBytes)) {
+    return { error: 'Use a JPEG, PNG, or WebP photo.' }
   }
 
-  return { imageDataUrl: result.dataUrl }
+  const spend = await beginPreviewSpend(session.userId)
+  if (!spend.ok) {
+    if (spend.reason === 'in_flight') {
+      return { error: 'A preview is already generating. Wait for it to finish.' }
+    }
+    const balance = await getCreditBalance(session.userId)
+    return {
+      error: `You need ${PREVIEW_CREDIT_COST} credit to generate a preview. Buy more credits below.`,
+      balance,
+    }
+  }
+
+  let result: Awaited<ReturnType<typeof generateDoorPreviewFromPhoto>>
+  try {
+    result = await generateDoorPreviewFromPhoto({ spec, imageBytes })
+  } catch (error) {
+    await refundPreviewCredit(session.userId, spend.generationId)
+    if (isDatabaseUnreachable(error)) {
+      return { error: "Can't reach the database right now. Try again in a moment." }
+    }
+    throw error
+  }
+
+  if (!result.ok) {
+    if (result.refundCredit) {
+      await refundPreviewCredit(session.userId, spend.generationId)
+    } else {
+      await clearPreviewInFlight(session.userId, spend.generationId)
+    }
+    const balance = await getCreditBalance(session.userId)
+    return { error: result.error, balance }
+  }
+
+  await clearPreviewInFlight(session.userId, spend.generationId)
+  const balance = await getCreditBalance(session.userId)
+  revalidatePath('/configure')
+  revalidatePath('/account')
+  return { imageDataUrl: result.dataUrl, balance }
 }
