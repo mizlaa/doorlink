@@ -55,6 +55,17 @@ describe('the Stripe adapter', () => {
         successUrl: 'https://example.com/ok',
         cancelUrl: 'https://example.com/no',
       }),
+      provider.createCreditPackCheckout({
+        packCode: 'preview-5',
+        packName: '5 previews',
+        credits: 5,
+        priceCents: 900,
+        currency: 'AUD',
+        userId: 'u1',
+        customerEmail: 'a@example.com',
+        successUrl: 'https://example.com/ok',
+        cancelUrl: 'https://example.com/no',
+      }),
       provider.verifyWebhook('{}', 't=1,v1=deadbeef'),
       provider.createBillingPortalSession({
         providerCustomerId: 'cus_test',
@@ -114,6 +125,20 @@ describe('the Stripe adapter', () => {
         customerEmail: 'a@example.com',
         userId: 'u1',
         planId: 'plan1',
+        successUrl: 'https://example.com/ok',
+        cancelUrl: 'https://example.com/no',
+      })
+    ).rejects.toSatisfy(isPaymentsNotConfigured)
+
+    await expect(
+      provider.createCreditPackCheckout({
+        packCode: 'preview-5',
+        packName: '5 previews',
+        credits: 5,
+        priceCents: 900,
+        currency: 'AUD',
+        userId: 'u1',
+        customerEmail: 'a@example.com',
         successUrl: 'https://example.com/ok',
         cancelUrl: 'https://example.com/no',
       })

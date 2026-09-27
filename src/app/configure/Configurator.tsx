@@ -3,7 +3,9 @@
 import { useActionState, useMemo, useState } from 'react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
-import { saveConfigurationAction, generateDoorPreviewAction, type ConfigurationActionState, type PreviewActionState } from './actions'
+import { saveConfigurationAction, generateDoorPreviewAction, startCreditPackCheckoutAction, type ConfigurationActionState, type PreviewActionState } from './actions'
+import { PREVIEW_CREDIT_COST } from '@/lib/credits/constants'
+import { formatMoney } from '@/lib/money'
 import {
   DEFAULT_SPEC,
   describeSpec,
@@ -38,10 +40,24 @@ export function Configurator({
   signedIn,
   initialSpec,
   previewAvailable,
+  creditBalance,
+  creditPacks,
+  creditsCheckoutReady,
+  creditsCheckoutNotice,
 }: {
   signedIn: boolean
   initialSpec?: DoorSpec
   previewAvailable: boolean
+  creditBalance: number | null
+  creditPacks: Array<{
+    code: string
+    name: string
+    credits: number
+    priceCents: number
+    currency: string
+  }>
+  creditsCheckoutReady: boolean
+  creditsCheckoutNotice: string | null
 }) {
   const [spec, setSpec] = useState<DoorSpec>(initialSpec ?? DEFAULT_SPEC)
   const [open, setOpen] = useState(false)
@@ -58,6 +74,8 @@ export function Configurator({
   function set<K extends keyof DoorSpec>(key: K, value: DoorSpec[K]) {
     setSpec((current) => ({ ...current, [key]: value }))
   }
+
+  const displayBalance = previewState.balance ?? creditBalance
 
   return (
     <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-10">
@@ -81,49 +99,105 @@ export function Configurator({
 
         <section className="mt-6">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-deep">Photo preview</h2>
+          {creditsCheckoutNotice && (
+            <p className="mt-3 rounded-md border border-line bg-rail p-3 text-sm text-graphite-soft">
+              {creditsCheckoutNotice}
+            </p>
+          )}
           {previewAvailable ? (
-            <form action={previewAction} className="mt-3 flex flex-col gap-3">
-              <input type="hidden" name="spec" value={JSON.stringify(spec)} />
-              <p className="text-sm text-graphite-soft">
-                Upload a photo of your garage opening or the front of the house. We&apos;ll generate one
-                indicative image using your choices above. It is a demo, not a manufacturer quote photo.
-              </p>
-              <Field label="Your photo" htmlFor="preview-photo">
-                <Input
-                  id="preview-photo"
-                  name="photo"
-                  type="file"
-                  accept="image/jpeg,image/png,image/webp"
-                  required
-                />
-              </Field>
-              {previewState.error && (
-                <p role="alert" className="text-sm text-bad">
-                  {previewState.error}
+            <>
+              {!signedIn ? (
+                <p className="mt-3 text-sm text-graphite-soft">
+                  <Link href="/sign-in?next=/configure" className="font-medium text-signal hover:text-signal-hover">
+                    Sign in
+                  </Link>{' '}
+                  to use photo preview credits.
                 </p>
+              ) : (
+                <>
+                  <p className="mt-3 text-sm text-graphite-soft">
+                    Each successful preview uses {PREVIEW_CREDIT_COST} credit. You have{' '}
+                    <span className="font-medium text-graphite">{displayBalance ?? 0}</span> credit
+                    {(displayBalance ?? 0) === 1 ? '' : 's'}.
+                  </p>
+
+                  {previewState.imageDataUrl && (
+                    <figure className="mt-3 overflow-hidden rounded-md border border-line">
+                      {/* eslint-disable-next-line @next/next/no-img-element -- ephemeral data URL from OpenAI */}
+                      <img
+                        src={previewState.imageDataUrl}
+                        alt="Generated preview of your door choices on your photo"
+                        className="w-full"
+                      />
+                      <figcaption className="border-t border-line bg-rail px-3 py-2 text-micro text-zinc-deep">
+                        AI-generated preview from your photo and choices. Not a product photo from a manufacturer.
+                      </figcaption>
+                    </figure>
+                  )}
+
+                  {(displayBalance ?? 0) >= PREVIEW_CREDIT_COST ? (
+                    <form action={previewAction} className="mt-3 flex flex-col gap-3">
+                      <input type="hidden" name="spec" value={JSON.stringify(spec)} />
+                      <p className="text-sm text-graphite-soft">
+                        Upload a photo of your garage opening. We&apos;ll generate one indicative image using your
+                        choices above.
+                      </p>
+                      <Field label="Your photo" htmlFor="preview-photo">
+                        <Input
+                          id="preview-photo"
+                          name="photo"
+                          type="file"
+                          accept="image/jpeg,image/png,image/webp"
+                          required
+                        />
+                      </Field>
+                      {previewState.error && (
+                        <p role="alert" className="text-sm text-bad">
+                          {previewState.error}
+                        </p>
+                      )}
+                      <Button type="submit" variant="secondary" disabled={previewPending}>
+                        {previewPending ? 'Generating…' : 'Generate preview'}
+                      </Button>
+                    </form>
+                  ) : (
+                    <div className="mt-3 flex flex-col gap-3">
+                      {previewState.error && (
+                        <p role="alert" className="text-sm text-bad">
+                          {previewState.error}
+                        </p>
+                      )}
+                      <p className="text-sm text-graphite-soft">Buy credits to generate a preview.</p>
+                      {creditsCheckoutReady && creditPacks.length > 0 ? (
+                        <ul className="flex flex-col gap-2">
+                          {creditPacks.map((pack) => (
+                            <li key={pack.code}>
+                              <form action={startCreditPackCheckoutAction}>
+                                <input type="hidden" name="packCode" value={pack.code} />
+                                <Button type="submit" variant="secondary" className="w-full justify-between">
+                                  <span>{pack.name}</span>
+                                  <span>{formatMoney(pack.priceCents, pack.currency)}</span>
+                                </Button>
+                              </form>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <NotConnected
+                          feature="Buying credits"
+                          reason="Stripe is not connected yet. Set STRIPE_SECRET_KEY and STRIPE_WEBHOOK_SECRET to buy preview credits."
+                        />
+                      )}
+                    </div>
+                  )}
+                </>
               )}
-              <Button type="submit" variant="secondary" disabled={previewPending}>
-                {previewPending ? 'Generating…' : 'Generate preview'}
-              </Button>
-              {previewState.imageDataUrl && (
-                <figure className="overflow-hidden rounded-md border border-line">
-                  {/* eslint-disable-next-line @next/next/no-img-element -- ephemeral data URL from OpenAI */}
-                  <img
-                    src={previewState.imageDataUrl}
-                    alt="Generated preview of your door choices on your photo"
-                    className="w-full"
-                  />
-                  <figcaption className="border-t border-line bg-rail px-3 py-2 text-micro text-zinc-deep">
-                    AI-generated preview from your photo and choices. Not a product photo from a manufacturer.
-                  </figcaption>
-                </figure>
-              )}
-            </form>
+            </>
           ) : (
             <div className="mt-3">
               <NotConnected
                 feature="Photo preview"
-                reason="No image provider is connected. Set OPENAI_API_KEY to try a test preview on your own photo."
+                reason="No image provider is connected. Set OPENAI_API_KEY to enable photo preview."
               />
             </div>
           )}

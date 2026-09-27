@@ -2,12 +2,15 @@ import 'server-only'
 
 import { doorPreviewPrompt } from './preview-prompt'
 import { PREVIEW_IMAGE_MAX_BYTES, sniffPreviewImageMime, type PreviewImageMime } from './preview-image-mime'
+import { previewFailureRefundsCredit } from './preview-failure'
 import type { DoorSpec } from './options'
 
 const OPENAI_EDITS_URL = 'https://api.openai.com/v1/images/edits'
 const TIMEOUT_MS = 90_000
 
-export type PreviewGenerationResult = { dataUrl: string } | { error: string }
+export type PreviewGenerationResult =
+  | { ok: true; dataUrl: string }
+  | { ok: false; error: string; refundCredit: boolean }
 
 function extensionFor(mime: PreviewImageMime): string {
   if (mime === 'image/jpeg') return 'jpg'
@@ -21,16 +24,16 @@ export async function generateDoorPreviewFromPhoto(input: {
 }): Promise<PreviewGenerationResult> {
   const key = process.env.OPENAI_API_KEY
   if (!key) {
-    return { error: 'Photo preview is not connected yet.' }
+    return { ok: false, error: 'Photo preview is not connected yet.', refundCredit: true }
   }
 
   if (input.imageBytes.length > PREVIEW_IMAGE_MAX_BYTES) {
-    return { error: 'That photo is too large. Use a file under 8 MB.' }
+    return { ok: false, error: 'That photo is too large. Use a file under 8 MB.', refundCredit: true }
   }
 
   const mime = sniffPreviewImageMime(input.imageBytes)
   if (!mime) {
-    return { error: 'Use a JPEG, PNG, or WebP photo.' }
+    return { ok: false, error: 'Use a JPEG, PNG, or WebP photo.', refundCredit: true }
   }
 
   const prompt = doorPreviewPrompt(input.spec)
@@ -43,6 +46,9 @@ export async function generateDoorPreviewFromPhoto(input: {
     form.append('prompt', prompt)
     form.append('n', '1')
     form.append('size', '1024x1024')
+    // High quality at this size is about $0.17 of image output, plus a small
+    // photo-input charge, so one preview is planned at about $0.18 USD.
+    form.append('quality', 'high')
     const copy = new Uint8Array(input.imageBytes)
     form.append(
       'image',
@@ -58,29 +64,45 @@ export async function generateDoorPreviewFromPhoto(input: {
     })
 
     if (!response.ok) {
+      const refundCredit = previewFailureRefundsCredit({ httpStatus: response.status, aborted: false, networkError: false })
       if (response.status === 429) {
-        return { error: 'Too many requests. Wait a moment and try again.' }
+        return { ok: false, error: 'Too many requests. Wait a moment and try again.', refundCredit }
       }
       if (response.status === 402 || response.status === 403) {
         return {
+          ok: false,
           error: 'The image provider refused the request. Check billing and model access on your OpenAI account.',
+          refundCredit,
         }
       }
-      return { error: 'The image provider could not generate a preview.' }
+      return {
+        ok: false,
+        error: 'The image provider could not generate a preview.',
+        refundCredit,
+      }
     }
 
     const body = (await response.json()) as { data?: Array<{ b64_json?: string }> }
     const b64 = body.data?.[0]?.b64_json
     if (!b64) {
-      return { error: 'The image provider returned no image.' }
+      return {
+        ok: false,
+        error: 'The image provider returned no image.',
+        refundCredit: true,
+      }
     }
 
-    return { dataUrl: `data:image/png;base64,${b64}` }
+    return { ok: true, dataUrl: `data:image/png;base64,${b64}` }
   } catch (error) {
-    if (error instanceof Error && error.name === 'AbortError') {
-      return { error: 'That took too long. Try a smaller photo or try again.' }
+    const aborted = error instanceof Error && error.name === 'AbortError'
+    const refundCredit = previewFailureRefundsCredit({
+      aborted,
+      networkError: !aborted,
+    })
+    if (aborted) {
+      return { ok: false, error: 'That took too long. Try a smaller photo or try again.', refundCredit }
     }
-    return { error: 'Could not reach the image provider. Try again.' }
+    return { ok: false, error: 'Could not reach the image provider. Try again.', refundCredit }
   } finally {
     clearTimeout(timer)
   }

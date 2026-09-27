@@ -4,6 +4,7 @@ import type Stripe from 'stripe'
 import { SubscriptionStatus } from '@prisma/client'
 import { prisma } from '../prisma'
 import { getStripeClient } from './stripe'
+import { handleCreditPackCheckoutCompleted } from '../credits/credit-pack-sync'
 
 export function mapStripeSubscriptionStatus(status: Stripe.Subscription.Status): SubscriptionStatus {
   switch (status) {
@@ -105,6 +106,11 @@ export async function upsertSubscriptionFromStripe(sub: Stripe.Subscription): Pr
 }
 
 export async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session): Promise<void> {
+  if (session.mode === 'payment') {
+    await handleCreditPackCheckoutCompleted(session)
+    return
+  }
+
   const subscriptionId =
     typeof session.subscription === 'string'
       ? session.subscription
