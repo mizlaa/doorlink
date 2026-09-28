@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { getSession } from '@/lib/auth'
+import { roleRequiresTradeSubscription } from '@/lib/trade-subscription'
 import { prisma } from '@/lib/prisma'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { formatMoney } from '@/lib/money'
@@ -24,6 +25,7 @@ type PageProps = { searchParams: Promise<{ checkout?: string }> }
 export default async function SubscriptionPage({ searchParams }: PageProps) {
   const session = await getSession()
   if (!session) redirect('/sign-in')
+  if (!roleRequiresTradeSubscription(session.role)) redirect('/account')
 
   const params = await searchParams
 

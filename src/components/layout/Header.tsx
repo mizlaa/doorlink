@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { getSession } from '@/lib/auth'
 import { can } from '@/lib/rbac'
+import { roleRequiresTradeSubscription } from '@/lib/trade-subscription'
 import { signOutAction } from '@/lib/auth-session'
 import { prisma } from '@/lib/prisma'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
@@ -88,7 +89,9 @@ export async function Header() {
     if (can(session.role, 'inspection:read')) {
       accountLinks.push({ href: '/inspections', label: 'Inspections' })
     }
-    accountLinks.push({ href: '/account/subscription', label: 'Subscription' })
+    if (roleRequiresTradeSubscription(session.role)) {
+      accountLinks.push({ href: '/account/subscription', label: 'Subscription' })
+    }
     accountLinks.push({ href: '/support', label: 'Support' })
     if (can(session.role, 'catalogue:write')) {
       accountLinks.push({ href: '/admin', label: 'Admin' })

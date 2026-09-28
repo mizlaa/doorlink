@@ -3,7 +3,6 @@ import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { prisma } from '@/lib/prisma'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
-import { formatMoney } from '@/lib/money'
 import { formatCommissionRate } from '@/lib/commission'
 import { currentCommissionBps } from '@/lib/commission-settings'
 import { GarageDoorHero } from '@/components/garage-door/GarageDoorHero'
@@ -25,18 +24,13 @@ export const metadata: Metadata = {
  */
 async function landingFigures() {
   try {
-    const [manuals, manufacturers, services, commissionBps, plans] = await Promise.all([
+    const [manuals, manufacturers, services, commissionBps] = await Promise.all([
       prisma.document.count({ where: { isPublished: true } }),
       prisma.manufacturer.count(),
       prisma.serviceCategory.count({ where: { isActive: true } }),
       currentCommissionBps(),
-      prisma.subscriptionPlan.findMany({
-        where: { isActive: true },
-        orderBy: { sortOrder: 'asc' },
-        select: { id: true, name: true, interval: true, priceCents: true, currency: true, description: true },
-      }),
     ])
-    return { manuals, manufacturers, services, commissionBps, plans, available: true as const }
+    return { manuals, manufacturers, services, commissionBps, available: true as const }
   } catch (error) {
     if (!isDatabaseUnreachable(error)) throw error
     return {
@@ -44,13 +38,10 @@ async function landingFigures() {
       manufacturers: 0,
       services: 0,
       commissionBps: null,
-      plans: [],
       available: false as const,
     }
   }
 }
-
-const INTERVAL_SUFFIX = { WEEK: '/week', MONTH: '/month', YEAR: '/year' } as const
 
 export default async function HomePage() {
   const figures = await landingFigures()
@@ -189,42 +180,6 @@ export default async function HomePage() {
           </Reason>
         </div>
       </section>
-
-      {/* ---------------------------------------------------------------
-          Subscription
-          --------------------------------------------------------------- */}
-      {figures.plans.length > 0 && (
-        <section className="border-y border-line bg-rail">
-          <div className="mx-auto max-w-shell px-4 py-16 sm:py-20">
-            <SectionHeading eyebrow="Doorlink app" title="Plans" />
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              {figures.plans.map((plan) => (
-                <div key={plan.id} className="rounded-md border border-line bg-paper p-6">
-                  <p className="text-sm font-medium text-graphite">{plan.name}</p>
-                  <p className="mt-3 text-2xl font-semibold text-graphite">
-                    {plan.priceCents === null ? (
-                      <span className="text-base font-normal text-zinc-deep">Pricing not set</span>
-                    ) : (
-                      <>
-                        {formatMoney(plan.priceCents, plan.currency)}
-                        <span className="text-base font-normal text-zinc-deep">
-                          {INTERVAL_SUFFIX[plan.interval]}
-                        </span>
-                      </>
-                    )}
-                  </p>
-                  {plan.description && <p className="mt-2 text-sm text-zinc-deep">{plan.description}</p>}
-                </div>
-              ))}
-            </div>
-            <p className="mt-6 max-w-prose text-sm text-zinc-deep">
-              Subscriptions are not live. No payment provider is connected, so nothing here can be bought yet,
-               and a plan with no price is a plan whose price has not been decided. It is not a number we are
-              hiding.
-            </p>
-          </div>
-        </section>
-      )}
 
       {/* ---------------------------------------------------------------
           Get help

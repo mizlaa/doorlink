@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 import { getSession } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
@@ -22,6 +23,7 @@ const INTERVAL_SUFFIX = { WEEK: 'per week', MONTH: 'per month', YEAR: 'per year'
 
 export default async function PlansPage() {
   const session = await getSession()
+  if (session && !roleRequiresTradeSubscription(session.role)) redirect('/account')
 
   let plans
   try {
@@ -94,10 +96,9 @@ export default async function PlansPage() {
 
             const showSignIn =
               priced &&
-              plan.stripePriceId &&
+              Boolean(plan.stripePriceId) &&
               checkoutReady &&
               !entitlements.subscribed &&
-              tradeAccount &&
               !session
 
             const blockedReason =
