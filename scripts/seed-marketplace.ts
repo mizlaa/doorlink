@@ -31,26 +31,26 @@ const SERVICE_CATEGORIES = [
   { slug: 'other', name: 'Something else', description: 'Anything not covered by the categories above.' },
 ]
 
-// Only the weekly price is set. The brief fixes $4.99/week and leaves
-// monthly and annual explicitly undecided — a null price means the plan
-// exists but cannot be subscribed to, and the UI says "pricing not set"
-// rather than showing an invented number.
+// Trade accounts subscribe monthly at $9.99 AUD. Weekly and annual plans
+// stay in the database for history but are not offered for new sign-ups.
 const PLANS = [
   {
     code: 'doorlink-weekly',
     name: 'Doorlink Weekly',
-    description: 'Full access, billed weekly.',
+    description: 'Legacy weekly billing.',
     interval: BillingInterval.WEEK,
     priceCents: 499,
     sortOrder: 1,
+    isActive: false,
   },
   {
     code: 'doorlink-monthly',
-    name: 'Doorlink Monthly',
-    description: 'Full access, billed monthly.',
+    name: 'Doorlink Trade',
+    description: 'Trade access for technicians, suppliers, and manufacturers, billed monthly.',
     interval: BillingInterval.MONTH,
-    priceCents: null,
+    priceCents: 999,
     sortOrder: 2,
+    isActive: true,
   },
   {
     code: 'doorlink-annual',
@@ -59,6 +59,7 @@ const PLANS = [
     interval: BillingInterval.YEAR,
     priceCents: null,
     sortOrder: 3,
+    isActive: false,
   },
 ]
 
@@ -81,11 +82,12 @@ async function main() {
         interval: plan.interval,
         priceCents: plan.priceCents,
         sortOrder: plan.sortOrder,
+        isActive: plan.isActive,
       },
       create: { ...plan, currency: 'AUD' },
     })
   }
-  console.log(`  ✓ ${PLANS.length} subscription plans (weekly priced; monthly/annual awaiting a decision)`)
+  console.log(`  ✓ ${PLANS.length} subscription plans (monthly trade plan at $9.99 AUD)`)
 
   // Seeded only if absent — re-running this script must never reset a
   // rate an admin has deliberately changed.

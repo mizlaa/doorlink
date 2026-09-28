@@ -8,6 +8,8 @@ import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { NoOrganizationError, requireInspectionScope } from '@/lib/inspections/scope'
 import { compareInspections } from '@/lib/inspections/history'
 import { RbacError } from '@/lib/rbac'
+import { tradeSubscriptionAccess } from '@/lib/trade-subscription'
+import { TradeSubscriptionPaywall } from '@/components/subscription/TradeSubscriptionPaywall'
 import { NotConnected } from '@/components/ui/NotConnected'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { Badge } from '@/components/ui/Badge'
@@ -31,6 +33,15 @@ function formatDate(date: Date | null): string {
 export default async function AssetPage({ params }: { params: Promise<{ id: string }> }) {
   const session = await getSession()
   if (!session) redirect('/sign-in')
+
+  const tradeAccess = await tradeSubscriptionAccess(session)
+  if (!tradeAccess.allowed) {
+    return (
+      <div className="mx-auto max-w-shell px-4 py-10">
+        <TradeSubscriptionPaywall />
+      </div>
+    )
+  }
 
   let scope
   try {

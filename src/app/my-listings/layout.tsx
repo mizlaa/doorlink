@@ -2,6 +2,8 @@ import type { ReactNode } from 'react'
 import { redirect } from 'next/navigation'
 import { getSession } from '@/lib/auth'
 import { can } from '@/lib/rbac'
+import { tradeSubscriptionAccess } from '@/lib/trade-subscription'
+import { TradeSubscriptionPaywall } from '@/components/subscription/TradeSubscriptionPaywall'
 
 export default async function MyListingsLayout({ children }: { children: ReactNode }) {
   const session = await getSession()
@@ -11,6 +13,15 @@ export default async function MyListingsLayout({ children }: { children: ReactNo
   // explicit anyway rather than just testing for a session, so a future
   // role added without it is still protected by default.
   if (!can(session.role, 'listing:write:own')) redirect('/')
+
+  const tradeAccess = await tradeSubscriptionAccess(session)
+  if (!tradeAccess.allowed) {
+    return (
+      <div className="mx-auto max-w-shell px-4 py-10">
+        <TradeSubscriptionPaywall />
+      </div>
+    )
+  }
 
   return (
     <div className="mx-auto max-w-shell px-4 py-10">

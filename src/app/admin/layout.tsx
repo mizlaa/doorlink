@@ -1,8 +1,11 @@
 import type { ReactNode } from 'react'
 import Link from 'next/link'
 import { redirect } from 'next/navigation'
+import { Role } from '@prisma/client'
 import { getSession } from '@/lib/auth'
 import { can, type Permission } from '@/lib/rbac'
+import { tradeSubscriptionAccess } from '@/lib/trade-subscription'
+import { TradeSubscriptionPaywall } from '@/components/subscription/TradeSubscriptionPaywall'
 
 // `permission` is the gate for the link, not just for the page behind
 // it: this section is open to anyone who can edit the catalogue, which
@@ -38,6 +41,17 @@ export default async function AdminLayout({ children }: { children: ReactNode })
   const session = await getSession()
   if (!session) redirect('/sign-in')
   if (!can(session.role, 'catalogue:write')) redirect('/')
+
+  if (session.role === Role.MANUFACTURER) {
+    const access = await tradeSubscriptionAccess(session)
+    if (!access.allowed) {
+      return (
+        <div className="mx-auto max-w-shell px-4 py-10">
+          <TradeSubscriptionPaywall />
+        </div>
+      )
+    }
+  }
 
   return (
     <div className="mx-auto max-w-shell px-4 py-10">

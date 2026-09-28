@@ -16,6 +16,7 @@ import {
   ensureTechnicianProfile,
   missingForVerification,
 } from '@/lib/technician'
+import { requireTradeSubscription, isTradeSubscriptionRequiredError } from '@/lib/trade-subscription'
 
 export type ProfileActionState = { error?: string; ok?: boolean }
 
@@ -24,6 +25,7 @@ async function requireTechnician(): Promise<Session> {
   if (!can(session.role, 'marketplace:quote')) {
     throw new RbacError('Only technician accounts have a trade profile.', 403)
   }
+  await requireTradeSubscription(session)
   return session
 }
 
@@ -41,6 +43,7 @@ async function withProfile(
     session = await requireTechnician()
   } catch (error) {
     if (error instanceof RbacError) return { error: error.message }
+    if (isTradeSubscriptionRequiredError(error)) return { error: error.message }
     throw error
   }
 
