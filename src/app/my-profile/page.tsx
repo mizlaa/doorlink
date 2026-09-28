@@ -15,6 +15,8 @@ import {
 } from '@/lib/technician'
 import { NotConnected } from '@/components/ui/NotConnected'
 import { Badge } from '@/components/ui/Badge'
+import { tradeSubscriptionAccess } from '@/lib/trade-subscription'
+import { TradeSubscriptionPaywall } from '@/components/subscription/TradeSubscriptionPaywall'
 import { VERIFICATION_LABELS, VERIFICATION_TONE } from '@/lib/labels'
 import {
   AvailabilityEditor,
@@ -49,6 +51,15 @@ export default async function MyProfilePage() {
   const session = await getSession()
   if (!session) redirect('/sign-in')
   if (!can(session.role, 'marketplace:quote')) redirect('/account')
+
+  const tradeAccess = await tradeSubscriptionAccess(session)
+  if (!tradeAccess.allowed) {
+    return (
+      <div className="mx-auto max-w-shell px-4 py-10">
+        <TradeSubscriptionPaywall />
+      </div>
+    )
+  }
 
   let profile
   let categories

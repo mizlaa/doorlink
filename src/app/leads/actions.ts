@@ -10,6 +10,7 @@ import { isDatabaseUnreachable, isRecordNotFound } from '@/lib/db-errors'
 import { isQuotable } from '@/lib/marketplace'
 import { formatMoney, toMinorUnits } from '@/lib/money'
 import { notify } from '@/lib/notifications'
+import { requireTradeSubscription, isTradeSubscriptionRequiredError } from '@/lib/trade-subscription'
 
 export type QuoteFormState = { error?: string; ok?: boolean }
 
@@ -18,6 +19,7 @@ async function requireQuoter(): Promise<Session> {
   if (!can(session.role, 'marketplace:quote')) {
     throw new RbacError('Only technicians can quote on jobs.', 403)
   }
+  await requireTradeSubscription(session)
   return session
 }
 
@@ -38,6 +40,7 @@ export async function submitQuoteAction(
     session = await requireQuoter()
   } catch (error) {
     if (error instanceof RbacError) return { error: error.message }
+    if (isTradeSubscriptionRequiredError(error)) return { error: error.message }
     throw error
   }
 
@@ -122,6 +125,7 @@ export async function withdrawQuoteAction(
     session = await requireQuoter()
   } catch (error) {
     if (error instanceof RbacError) return { error: error.message }
+    if (isTradeSubscriptionRequiredError(error)) return { error: error.message }
     throw error
   }
 

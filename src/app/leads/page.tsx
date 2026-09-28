@@ -6,6 +6,8 @@ import { getSession } from '@/lib/auth'
 import { can } from '@/lib/rbac'
 import { prisma } from '@/lib/prisma'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
+import { tradeSubscriptionAccess } from '@/lib/trade-subscription'
+import { TradeSubscriptionPaywall } from '@/components/subscription/TradeSubscriptionPaywall'
 import { currentCommissionBps } from '@/lib/commission-settings'
 import { matchLead, QUOTABLE_LEAD_STATUSES } from '@/lib/marketplace'
 import { formatBudgetRange, formatMoney } from '@/lib/money'
@@ -30,6 +32,15 @@ export const metadata: Metadata = {
 export default async function JobBoardPage() {
   const session = await getSession()
   if (!session || !can(session.role, 'marketplace:quote')) redirect('/')
+
+  const tradeAccess = await tradeSubscriptionAccess(session)
+  if (!tradeAccess.allowed) {
+    return (
+      <div className="mx-auto max-w-shell px-4 py-10">
+        <TradeSubscriptionPaywall />
+      </div>
+    )
+  }
 
   let openLeads
   let myQuotes

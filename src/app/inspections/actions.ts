@@ -5,8 +5,12 @@ import { AnswerStatus, AssetType, InspectionStatus, Prisma } from '@prisma/clien
 import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
 import { getSession } from '@/lib/auth'
-import { RbacError } from '@/lib/rbac'
+import { requireSession, RbacError } from '@/lib/rbac'
 import { isDatabaseUnreachable, isRecordNotFound } from '@/lib/db-errors'
+import {
+  isTradeSubscriptionRequiredError,
+  requireTradeSubscription,
+} from '@/lib/trade-subscription'
 import { makeReference } from '@/lib/reference'
 import { canUpload } from '@/lib/storage'
 import {
@@ -35,12 +39,15 @@ async function scope(
   permission: 'inspection:read' | 'inspection:write' | 'asset:write' = 'inspection:write'
 ): Promise<InspectionScope | InspectionActionState> {
   try {
-    return requireInspectionScope(await getSession(), permission)
+    const session = requireSession(await getSession())
+    await requireTradeSubscription(session)
+    return requireInspectionScope(session, permission)
   } catch (error) {
     if (error instanceof NoOrganizationError) {
       return { error: 'Inspections belong to a company. Ask an owner to add you to one.' }
     }
     if (error instanceof RbacError) return { error: error.message }
+    if (isTradeSubscriptionRequiredError(error)) return { error: error.message }
     throw error
   }
 }

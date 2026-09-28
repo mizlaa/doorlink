@@ -9,6 +9,11 @@ import { getSession, type Session } from '@/lib/auth'
 import { requirePermission, RbacError } from '@/lib/rbac'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { toMinorUnits } from '@/lib/money'
+import {
+  isTradeSubscriptionRequiredError,
+  requireTradeSubscription,
+  roleRequiresTradeSubscription,
+} from '@/lib/trade-subscription'
 
 export type ListingFormState = { error?: string }
 
@@ -29,7 +34,11 @@ const listingSchema = z.object({
 // check is re-verified here regardless of which page rendered the form.
 async function assertCanManageOwnListings(): Promise<Session> {
   const session = await getSession()
-  return requirePermission(session, 'listing:write:own')
+  const allowed = requirePermission(session, 'listing:write:own')
+  if (roleRequiresTradeSubscription(allowed.role)) {
+    await requireTradeSubscription(allowed)
+  }
+  return allowed
 }
 
 // A listing belongs to the caller's organization if they have one (the
@@ -65,6 +74,7 @@ export async function createListingAction(
     session = await assertCanManageOwnListings()
   } catch (error) {
     if (error instanceof RbacError) return { error: error.message }
+    if (isTradeSubscriptionRequiredError(error)) return { error: error.message }
     throw error
   }
 
@@ -109,6 +119,7 @@ export async function updateListingAction(
     session = await assertCanManageOwnListings()
   } catch (error) {
     if (error instanceof RbacError) return { error: error.message }
+    if (isTradeSubscriptionRequiredError(error)) return { error: error.message }
     throw error
   }
 
@@ -152,6 +163,7 @@ export async function deleteListingAction(
     session = await assertCanManageOwnListings()
   } catch (error) {
     if (error instanceof RbacError) return { error: error.message }
+    if (isTradeSubscriptionRequiredError(error)) return { error: error.message }
     throw error
   }
 

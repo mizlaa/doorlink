@@ -5,12 +5,12 @@ import { prisma } from '@/lib/prisma'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { formatMoney } from '@/lib/money'
 import { subscriptionCheckoutAvailable } from '@/lib/payments'
-import { entitlementsFor, FEATURE_LABELS, type Feature } from '@/lib/entitlements'
+import { entitlementsFor } from '@/lib/entitlements'
+import { roleRequiresTradeSubscription } from '@/lib/trade-subscription'
 import { NotConnected } from '@/components/ui/NotConnected'
 import { EmptyState } from '@/components/ui/EmptyState'
-import { Button } from '@/components/ui/Button'
 import { SUBSCRIPTION_STATUS_LABELS } from '@/lib/labels'
-import { startSubscriptionCheckout } from './actions'
+import { PlansSubscribePanel } from './PlansSubscribePanel'
 
 export const metadata: Metadata = {
   title: 'Plans',
@@ -40,14 +40,16 @@ export default async function PlansPage() {
 
   const entitlements = await entitlementsFor(session?.userId ?? null)
   const checkoutReady = subscriptionCheckoutAvailable()
-  const gated = [...entitlements.gated]
+  const tradeAccount = session ? roleRequiresTradeSubscription(session.role) : false
 
   return (
     <div className="mx-auto max-w-shell px-4 py-10 sm:py-14">
       <header className="mb-8 max-w-prose">
         <h1 className="text-2xl font-semibold tracking-tight text-graphite">Doorlink plans</h1>
         <p className="mt-2 text-graphite-soft">
-          Doorlink is becoming a paid app. The plans below are the shape of it.
+          Trade accounts pay a monthly fee to quote, manage listings, run inspections, and edit a manufacturer
+          catalogue. Customers can use Doorlink free. The compliance pack and photo preview credits are separate
+          purchases.
         </p>
       </header>
 
@@ -87,7 +89,21 @@ export default async function PlansPage() {
               plan.stripePriceId &&
               checkoutReady &&
               !entitlements.subscribed &&
+              tradeAccount &&
               Boolean(session)
+
+            const showSignIn =
+              priced &&
+              plan.stripePriceId &&
+              checkoutReady &&
+              !entitlements.subscribed &&
+              tradeAccount &&
+              !session
+
+            const blockedReason =
+              session && !tradeAccount
+                ? 'Customer accounts do not need a trade subscription.'
+                : reason
 
             return (
               <div key={plan.id} className="flex flex-col rounded-md border border-line bg-paper p-6">
@@ -114,25 +130,12 @@ export default async function PlansPage() {
 
                 <div className="mt-6 flex-1" />
 
-                {canSubscribe ? (
-                  <form action={startSubscriptionCheckout}>
-                    <input type="hidden" name="planId" value={plan.id} />
-                    <Button type="submit" className="w-full">
-                      Subscribe
-                    </Button>
-                  </form>
-                ) : priced && plan.stripePriceId && checkoutReady && !entitlements.subscribed && !session ? (
-                  <Link
-                    href="/sign-in?next=/plans"
-                    className="inline-flex h-11 w-full items-center justify-center rounded bg-signal text-sm font-medium text-paper hover:bg-signal-hover"
-                  >
-                    Sign in to subscribe
-                  </Link>
-                ) : (
-                  <p className="rounded border border-line bg-rail px-3 py-2.5 text-sm text-graphite-soft">
-                    {reason ?? 'Ready to subscribe.'}
-                  </p>
-                )}
+                <PlansSubscribePanel
+                  planId={plan.id}
+                  canSubscribe={Boolean(canSubscribe)}
+                  reason={blockedReason}
+                  showSignIn={Boolean(showSignIn)}
+                />
               </div>
             )
           })}
@@ -141,24 +144,16 @@ export default async function PlansPage() {
 
       <section className="mt-12 max-w-prose">
         <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-deep">
-          What a subscription would cover
+          What the trade subscription covers
         </h2>
-        {gated.length === 0 ? (
-          <p className="mt-3 text-graphite-soft">
-            Nothing is behind the subscription today. Which features are premium is an admin setting rather than
-                    something written into the code, so it can be decided once the business model is settled, and until
-            it is, every part of Doorlink is available to everyone.
-          </p>
-        ) : (
-          <>
-            <p className="mt-3 text-graphite-soft">These currently need a subscription:</p>
-            <ul className="mt-3 flex list-disc flex-col gap-1 pl-5 text-graphite-soft">
-              {gated.map((feature: Feature) => (
-                <li key={feature}>{FEATURE_LABELS[feature]}</li>
-              ))}
-            </ul>
-          </>
-        )}
+        <p className="mt-3 text-graphite-soft">
+          Quoting on the job board, your trade profile, listing parts as a trade account, inspections and assets, and
+          manufacturer catalogue editing. Customers can still request technicians, use the configurator, and buy the
+          compliance pack without subscribing.
+        </p>
+        <p className="mt-3 text-graphite-soft">
+          Photo preview credits are billed separately when you generate an image on Build My Door.
+        </p>
       </section>
 
       {!checkoutReady && (

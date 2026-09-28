@@ -7,6 +7,8 @@ import { prisma } from '@/lib/prisma'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { NoOrganizationError, requireInspectionScope } from '@/lib/inspections/scope'
 import { RbacError } from '@/lib/rbac'
+import { tradeSubscriptionAccess } from '@/lib/trade-subscription'
+import { TradeSubscriptionPaywall } from '@/components/subscription/TradeSubscriptionPaywall'
 import { NotConnected } from '@/components/ui/NotConnected'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { Badge } from '@/components/ui/Badge'
@@ -59,6 +61,15 @@ export default async function InspectionsPage({
 }) {
   const session = await getSession()
   if (!session) redirect('/sign-in')
+
+  const tradeAccess = await tradeSubscriptionAccess(session)
+  if (!tradeAccess.allowed) {
+    return (
+      <div className="mx-auto max-w-shell px-4 py-10">
+        <TradeSubscriptionPaywall />
+      </div>
+    )
+  }
 
   let scope
   try {

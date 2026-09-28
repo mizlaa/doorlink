@@ -9,6 +9,7 @@ import { getSession } from '@/lib/auth'
 import { requirePermission, RbacError } from '@/lib/rbac'
 import { isDatabaseUnreachable, isRecordNotFound } from '@/lib/db-errors'
 import { slugify } from '@/lib/slug'
+import { requireTradeSubscription, isTradeSubscriptionRequiredError } from '@/lib/trade-subscription'
 
 export type ManufacturerFormState = { error?: string }
 
@@ -25,7 +26,14 @@ const manufacturerSchema = z.object({
 // trusting the page it was rendered from.
 async function assertCanManageCatalogue() {
   const session = await getSession()
-  return requirePermission(session, 'catalogue:write')
+  const allowed = requirePermission(session, 'catalogue:write')
+  try {
+    await requireTradeSubscription(allowed)
+  } catch (error) {
+    if (isTradeSubscriptionRequiredError(error)) throw new RbacError(error.message, 403)
+    throw error
+  }
+  return allowed
 }
 
 export async function createManufacturerAction(

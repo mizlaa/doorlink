@@ -3,6 +3,7 @@
 import { redirect } from 'next/navigation'
 import { z } from 'zod'
 import { getSession } from '@/lib/auth'
+import { roleRequiresTradeSubscription } from '@/lib/trade-subscription'
 import { prisma } from '@/lib/prisma'
 import { activeSubscription } from '@/lib/entitlements'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
@@ -23,6 +24,10 @@ export async function startSubscriptionCheckout(formData: FormData): Promise<voi
 
   const session = await getSession()
   if (!session) redirect('/sign-in?next=/plans')
+
+  if (!roleRequiresTradeSubscription(session.role)) {
+    throw new Error('Trade subscriptions are for technician, supplier, and manufacturer accounts.')
+  }
 
   const parsed = planIdSchema.safeParse(formData.get('planId'))
   if (!parsed.success) throw new Error('Choose a plan to subscribe.')
