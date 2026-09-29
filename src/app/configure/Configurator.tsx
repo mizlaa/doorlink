@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { saveConfigurationAction, generateDoorPreviewAction, startCreditPackCheckoutAction, type ConfigurationActionState, type PreviewActionState } from './actions'
 import { PREVIEW_CREDIT_COST } from '@/lib/credits/constants'
+import { PREVIEW_NOTE_MAX_WORDS, previewNoteWordCount } from '@/lib/configurator/preview-prompt'
 import { formatMoney } from '@/lib/money'
 import {
   DEFAULT_SPEC,
@@ -17,7 +18,7 @@ import {
 } from '@/lib/configurator/options'
 import { lookFromSpec } from '@/lib/configurator/look'
 import { Button } from '@/components/ui/Button'
-import { Field, Input } from '@/components/ui/Field'
+import { Field, Input, Textarea } from '@/components/ui/Field'
 import { NotConnected } from '@/components/ui/NotConnected'
 import { cn } from '@/lib/utils'
 
@@ -61,6 +62,7 @@ export function Configurator({
 }) {
   const [spec, setSpec] = useState<DoorSpec>(initialSpec ?? DEFAULT_SPEC)
   const [open, setOpen] = useState(false)
+  const [note, setNote] = useState('')
   const [state, formAction, isPending] = useActionState(saveConfigurationAction, initialState)
   const [previewState, previewAction, previewPending] = useActionState(
     generateDoorPreviewAction,
@@ -76,11 +78,12 @@ export function Configurator({
   }
 
   const displayBalance = previewState.balance ?? creditBalance
+  const noteWords = previewNoteWordCount(note)
 
   return (
-    <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-10">
+    <div className="flex w-full min-w-0 flex-col gap-8 lg:flex-row lg:items-start lg:gap-10">
       {/* ------------------------------------------------------------ */}
-      <div className="lg:sticky lg:top-6 lg:w-[54%] lg:shrink-0">
+      <div className="min-w-0 w-full max-w-full lg:sticky lg:top-6 lg:w-[54%] lg:shrink-0">
         <ConfiguratorScene look={look} isOpen={open} />
 
         <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
@@ -122,12 +125,12 @@ export function Configurator({
                   </p>
 
                   {previewState.imageDataUrl && (
-                    <figure className="mt-3 overflow-hidden rounded-md border border-line">
+                    <figure className="mt-3 max-w-full overflow-hidden rounded-md border border-line">
                       {/* eslint-disable-next-line @next/next/no-img-element -- ephemeral data URL from OpenAI */}
                       <img
                         src={previewState.imageDataUrl}
                         alt="Generated preview of your door choices on your photo"
-                        className="w-full"
+                        className="block h-auto w-full max-w-full"
                       />
                       <figcaption className="border-t border-line bg-rail px-3 py-2 text-micro text-zinc-deep">
                         AI-generated preview from your photo and choices. Not a product photo from a manufacturer.
@@ -151,12 +154,31 @@ export function Configurator({
                           required
                         />
                       </Field>
+                      <Field
+                        label="Notes for this preview"
+                        htmlFor="preview-note"
+                        hint={`${noteWords} / ${PREVIEW_NOTE_MAX_WORDS} words. Optional. Describe the opening, the house, or what to keep.`}
+                      >
+                        <Textarea
+                          id="preview-note"
+                          name="note"
+                          value={note}
+                          maxLength={2000}
+                          onChange={(event) => setNote(event.target.value)}
+                          placeholder="For example: keep the brick piers, and make the door charcoal."
+                        />
+                      </Field>
+                      {noteWords > PREVIEW_NOTE_MAX_WORDS && (
+                        <p role="alert" className="text-sm text-bad">
+                          Keep the notes to {PREVIEW_NOTE_MAX_WORDS} words.
+                        </p>
+                      )}
                       {previewState.error && (
                         <p role="alert" className="text-sm text-bad">
                           {previewState.error}
                         </p>
                       )}
-                      <Button type="submit" variant="secondary" disabled={previewPending}>
+                      <Button type="submit" variant="secondary" disabled={previewPending || noteWords > PREVIEW_NOTE_MAX_WORDS}>
                         {previewPending ? 'Generating…' : 'Generate preview'}
                       </Button>
                     </form>

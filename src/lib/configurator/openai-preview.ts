@@ -21,6 +21,7 @@ function extensionFor(mime: PreviewImageMime): string {
 export async function generateDoorPreviewFromPhoto(input: {
   spec: DoorSpec
   imageBytes: Uint8Array
+  note?: string
 }): Promise<PreviewGenerationResult> {
   const key = process.env.OPENAI_API_KEY
   if (!key) {
@@ -36,7 +37,7 @@ export async function generateDoorPreviewFromPhoto(input: {
     return { ok: false, error: 'Use a JPEG, PNG, or WebP photo.', refundCredit: true }
   }
 
-  const prompt = doorPreviewPrompt(input.spec)
+  const prompt = doorPreviewPrompt(input.spec, input.note)
   const controller = new AbortController()
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS)
 

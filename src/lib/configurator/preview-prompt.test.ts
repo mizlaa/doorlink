@@ -24,4 +24,12 @@ describe('doorPreviewPrompt', () => {
     const tilt = doorPreviewPrompt({ ...DEFAULT_SPEC, productType: 'tilt' })
     expect(tilt).not.toContain('Sections')
   })
+
+  it('adds a customer note and ignores one that is too long', () => {
+    const withNote = doorPreviewPrompt(DEFAULT_SPEC, 'Keep the existing brick pier on the left.')
+    expect(withNote).toContain('brick pier')
+
+    const tooLong = doorPreviewPrompt(DEFAULT_SPEC, Array.from({ length: 201 }, () => 'word').join(' '))
+    expect(tooLong).not.toContain('Also follow these notes')
+  })
 })

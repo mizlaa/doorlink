@@ -69,7 +69,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <style>{'[data-reveal]{opacity:1!important;transform:none!important}'}</style>
         </noscript>
       </head>
-      <body className="flex min-h-screen flex-col bg-paper font-sans text-graphite antialiased">
+      <body className="flex min-h-screen flex-col overflow-x-hidden bg-paper font-sans text-graphite antialiased">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(websiteJsonLd) }} />
         <SkipLink />
         <Header />

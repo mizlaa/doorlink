@@ -12,6 +12,7 @@ import { makeReference } from '@/lib/reference'
 import { doorPreviewAvailable } from '@/lib/configurator/preview'
 import { generateDoorPreviewFromPhoto } from '@/lib/configurator/openai-preview'
 import { PREVIEW_IMAGE_MAX_BYTES, sniffPreviewImageMime } from '@/lib/configurator/preview-image-mime'
+import { PREVIEW_NOTE_MAX_WORDS, previewNoteWordCount } from '@/lib/configurator/preview-prompt'
 import {
   beginPreviewSpend,
   clearPreviewInFlight,
@@ -167,6 +168,12 @@ export async function generateDoorPreviewAction(
     return { error: 'Use a JPEG, PNG, or WebP photo.' }
   }
 
+  const noteRaw = formData.get('note')
+  const note = typeof noteRaw === 'string' ? noteRaw.trim() : ''
+  if (previewNoteWordCount(note) > PREVIEW_NOTE_MAX_WORDS) {
+    return { error: `Keep the notes to ${PREVIEW_NOTE_MAX_WORDS} words.` }
+  }
+
   const spend = await beginPreviewSpend(session.userId)
   if (!spend.ok) {
     if (spend.reason === 'in_flight') {
@@ -181,7 +188,7 @@ export async function generateDoorPreviewAction(
 
   let result: Awaited<ReturnType<typeof generateDoorPreviewFromPhoto>>
   try {
-    result = await generateDoorPreviewFromPhoto({ spec, imageBytes })
+    result = await generateDoorPreviewFromPhoto({ spec, imageBytes, note })
   } catch (error) {
     await refundPreviewCredit(session.userId, spend.generationId)
     if (isDatabaseUnreachable(error)) {
