@@ -322,6 +322,8 @@ function RollerDoor({ isOpen, look, dims }: { isOpen: boolean; look: DoorLook; d
   const curtainRef = useRef<THREE.Group>(null)
   const progress = useRef(0)
   const slatHeight = (dims.doorHeight - PANEL_GAP * (ROLLER_SLAT_COUNT - 1)) / ROLLER_SLAT_COUNT
+  const textures = useSceneTextures()
+  const surface = look.finish === 'woodgrain' ? textures.wood : textures.paint
 
   useFrame((_, delta) => {
     if (!curtainRef.current) return
@@ -342,6 +344,9 @@ function RollerDoor({ isOpen, look, dims }: { isOpen: boolean; look: DoorLook; d
                 roughness={look.roughness}
                 metalness={look.metalness}
                 envMapIntensity={0.5}
+                map={surface.map}
+                bumpMap={surface.detail}
+                bumpScale={look.finish === 'woodgrain' ? 0.028 : 0.006}
               />
             </RoundedBox>
             <mesh position={[0, slatHeight / 2 - 0.008, PANEL_DEPTH / 2]}>
