@@ -253,6 +253,7 @@ function Tree({
       }),
     [textures]
   )
+  useLayoutEffect(() => () => bark.dispose(), [bark])
 
   return (
     <group position={[x, floorY, z]} scale={scale}>
@@ -297,6 +298,8 @@ function Flower({ x, z, floorY, color }: { x: number; z: number; floorY: number;
       }),
     [color]
   )
+  useLayoutEffect(() => () => petal.dispose(), [petal])
+
   return (
     <group position={[x, floorY, z]} scale={0.72}>
       <mesh position={[0, 0.18, 0]} castShadow>
