@@ -499,13 +499,15 @@ export function Garden({
               depth={4.5}
               floorY={floorY}
             />
-            <LeafCloud
-              count={165}
-              seed={side < 0 ? 113 : 293}
-              centerY={0.51}
-              shape={{ x: 0.78, y: 0.47, z: 0.65 }}
-              palette={side < 0 ? LEAF_PALETTES.olive : LEAF_PALETTES.silver}
-            />
+            <group position={[x, floorY, wallZ + 2.25]}>
+              <LeafCloud
+                count={165}
+                seed={side < 0 ? 113 : 293}
+                centerY={0.51}
+                shape={{ x: 0.78, y: 0.47, z: 0.65 }}
+                palette={side < 0 ? LEAF_PALETTES.olive : LEAF_PALETTES.silver}
+              />
+            </group>
             <group position={[side * (drivewayWidth / 2 + 3.3), floorY, wallZ + 7.1]}>
               <LeafCloud
                 count={190}
