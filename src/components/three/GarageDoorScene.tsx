@@ -9,8 +9,8 @@ import { ToneMappingMode } from 'postprocessing'
 import * as THREE from 'three'
 import { House } from './House'
 import { Garden } from './Garden'
-import { Birds } from './Birds'
 import { GarageInterior } from './GarageInterior'
+import { SceneMaterialsProvider, useSceneTextures } from './SceneMaterials'
 
 const BASE_DOOR_WIDTH = 3.2
 const BASE_DOOR_HEIGHT = 2.6
@@ -18,13 +18,14 @@ const PANEL_GAP = 0.03
 const PANEL_DEPTH = 0.14
 const NOMINAL_PANEL_COUNT = 4
 const JAMB_WIDTH = 0.3
-const SUN_POSITION: [number, number, number] = [8, 5, 6]
+const SUN_POSITION: [number, number, number] = [8, 9, 6]
 const ROLLER_SLAT_COUNT = 18
 
 export type DoorKind = 'sectional' | 'roller' | 'tilt'
 
 export interface DoorLook {
   kind: DoorKind
+  finish?: string
   /** Relative to the default 2400 mm opening width. */
   widthScale: number
   /** Relative to the default 2100 mm opening height. */
@@ -58,22 +59,14 @@ export function computeSceneDimensions(look: DoorLook): SceneDimensions {
     doorWidth,
     doorHeight,
     liftHeight,
-    floorY: -doorHeight / 2 - 0.42,
+    // Keep the driveway, interior slab and closed door on the same datum.
+    // The previous extra drop left a visible gap beneath every door.
+    floorY: -doorHeight / 2,
     ceilingY: doorHeight / 2 + 0.45,
     wallTopY: doorHeight / 2 + (liftHeight + 0.6),
     wallZ,
     backWallZ: wallZ - 3.1,
   }
-}
-
-function SunGlow() {
-  const direction = new THREE.Vector3(...SUN_POSITION).normalize().multiplyScalar(40)
-  return (
-    <mesh position={direction.toArray()}>
-      <sphereGeometry args={[2.2, 16, 16]} />
-      <meshBasicMaterial color="#fff6dd" toneMapped={false} />
-    </mesh>
-  )
 }
 
 function GarageDoorOpener({ dims }: { dims: SceneDimensions }) {
@@ -178,6 +171,8 @@ function PanelFace({
 }) {
   const embossWidth = doorWidth - 0.34
   const embossHeight = panelHeight - 0.14
+  const textures = useSceneTextures()
+  const surface = look.finish === 'woodgrain' ? textures.wood : textures.paint
 
   return (
     <>
@@ -187,6 +182,9 @@ function PanelFace({
           roughness={look.roughness}
           metalness={look.metalness}
           envMapIntensity={0.5}
+          map={surface.map}
+          bumpMap={surface.detail}
+          bumpScale={look.finish === 'woodgrain' ? 0.035 : 0.008}
         />
       </RoundedBox>
 
@@ -204,6 +202,9 @@ function PanelFace({
             roughness={Math.max(0.05, look.roughness - 0.07)}
             metalness={look.metalness + 0.04}
             envMapIntensity={0.6}
+            map={surface.map}
+            bumpMap={surface.detail}
+            bumpScale={look.finish === 'woodgrain' ? 0.028 : 0.006}
           />
         </RoundedBox>
       )}
@@ -217,6 +218,9 @@ function PanelFace({
               roughness={look.roughness}
               metalness={look.metalness}
               envMapIntensity={0.5}
+              map={surface.map}
+              bumpMap={surface.detail}
+              bumpScale={look.finish === 'woodgrain' ? 0.026 : 0.006}
             />
           </mesh>
         ))}
@@ -243,9 +247,9 @@ function PanelFace({
                 emissiveIntensity={0.4}
                 roughness={0.04}
                 metalness={0}
-                clearcoat={1}
-                transmission={0.3}
-                envMapIntensity={1.5}
+                clearcoat={0.8}
+                transmission={0.12}
+                envMapIntensity={1.25}
               />
             </mesh>
           ))}
@@ -388,7 +392,17 @@ function Facade({ dims }: { dims: SceneDimensions }) {
   const height = dims.doorHeight + dims.liftHeight + 0.6
   const y = dims.floorY + height / 2
   const jambX = dims.doorWidth / 2 + JAMB_WIDTH / 2
-  const wallMaterial = <meshStandardMaterial color="#E4E2DC" roughness={0.94} envMapIntensity={0.35} />
+  const textures = useSceneTextures()
+  const wallMaterial = (
+    <meshStandardMaterial
+      color="#e4e2dc"
+      map={textures.plaster.map}
+      bumpMap={textures.plaster.detail}
+      bumpScale={0.018}
+      roughness={0.93}
+      envMapIntensity={0.42}
+    />
+  )
 
   return (
     <group>
@@ -404,6 +418,26 @@ function Facade({ dims }: { dims: SceneDimensions }) {
         <boxGeometry args={[dims.doorWidth + JAMB_WIDTH * 2, dims.liftHeight + 0.6, 0.4]} />
         {wallMaterial}
       </mesh>
+
+      {/* A subtle stone-look portal and dark perimeter seal make the
+          opening read as a built assembly instead of a door placed on a
+          flat wall. */}
+      <mesh position={[-dims.doorWidth / 2 - 0.055, 0, dims.wallZ + 0.225]} castShadow receiveShadow>
+        <boxGeometry args={[0.085, dims.doorHeight + 0.1, 0.085]} />
+        <meshStandardMaterial color="#bcb8af" roughness={0.76} />
+      </mesh>
+      <mesh position={[dims.doorWidth / 2 + 0.055, 0, dims.wallZ + 0.225]} castShadow receiveShadow>
+        <boxGeometry args={[0.085, dims.doorHeight + 0.1, 0.085]} />
+        <meshStandardMaterial color="#bcb8af" roughness={0.76} />
+      </mesh>
+      <mesh position={[0, dims.doorHeight / 2 + 0.055, dims.wallZ + 0.225]} castShadow receiveShadow>
+        <boxGeometry args={[dims.doorWidth + 0.17, 0.085, 0.085]} />
+        <meshStandardMaterial color="#bcb8af" roughness={0.76} />
+      </mesh>
+      <mesh position={[0, -dims.doorHeight / 2 + 0.035, dims.wallZ + 0.19]} receiveShadow>
+        <boxGeometry args={[dims.doorWidth - 0.02, 0.055, 0.045]} />
+        <meshStandardMaterial color="#33383b" roughness={0.72} />
+      </mesh>
     </group>
   )
 }
@@ -415,7 +449,7 @@ function CameraDirector({ isOpen, widthScale }: { isOpen: boolean; widthScale: n
   const controls = useRef<OrbitControlsImpl>(null)
   const closeness = useRef(0)
   const { camera } = useThree()
-  const widthNudge = (widthScale - 1) * 0.9
+  const widthNudge = (widthScale - 1) * 1.2
 
   useFrame((_, delta) => {
     const instance = controls.current
@@ -426,18 +460,17 @@ function CameraDirector({ isOpen, widthScale }: { isOpen: boolean; widthScale: n
 
     const target = instance.target
     const offset = camera.position.clone().sub(target)
-    const closedRadius = CLOSED_RADIUS_BASE + widthNudge
-    const openRadius = OPEN_RADIUS_BASE + widthNudge
+    const closedRadius = CLOSED_RADIUS_BASE + widthNudge + 2.1
+    const openRadius = OPEN_RADIUS_BASE + widthNudge + 1.7
     const desired = THREE.MathUtils.lerp(closedRadius, openRadius, t)
     offset.setLength(THREE.MathUtils.damp(offset.length(), desired, 2.4, delta))
     camera.position.copy(target).add(offset)
 
-    const openArc = THREE.MathUtils.lerp(Math.PI / 2.3, 0.2, t)
-    instance.minAzimuthAngle = -openArc
-    instance.maxAzimuthAngle = openArc
-    instance.minPolarAngle = THREE.MathUtils.lerp(Math.PI / 2 - 0.45, Math.PI / 2 - 0.26, t)
-    instance.maxPolarAngle = THREE.MathUtils.lerp(Math.PI / 2 + 0.12, Math.PI / 2 + 0.02, t)
-    instance.autoRotateSpeed = 0.6 * (1 - t)
+    // Leave azimuth unconstrained so a drag can complete a full orbit.
+    // Polar limits stop the camera tipping beneath the ground or flipping.
+    instance.minPolarAngle = Math.PI / 2 - 0.48
+    instance.maxPolarAngle = Math.PI / 2 + 0.32
+    instance.autoRotateSpeed = 0.22 * (1 - t)
     instance.update()
   })
 
@@ -448,7 +481,9 @@ function CameraDirector({ isOpen, widthScale }: { isOpen: boolean; widthScale: n
       enablePan={false}
       enableZoom={false}
       autoRotate
-      autoRotateSpeed={0.6}
+      autoRotateSpeed={0.22}
+      minDistance={7.1}
+      maxDistance={13}
       enableDamping
       dampingFactor={0.08}
     />
@@ -457,6 +492,7 @@ function CameraDirector({ isOpen, widthScale }: { isOpen: boolean; widthScale: n
 
 export const DEFAULT_LOOK: DoorLook = {
   kind: 'sectional',
+  finish: 'satin',
   widthScale: 1,
   heightScale: 1,
   color: '#2C3033',
@@ -487,67 +523,70 @@ export function GarageDoorScene({
     <Canvas
       shadows="soft"
       dpr={[1, 1.5]}
-      gl={{ antialias: true }}
-      camera={{ position: [3.4, 1.5, 4.6], fov: 32 }}
+      gl={{ antialias: true, powerPreference: 'high-performance' }}
+      camera={{ position: [3.7, 2.8, 7.8], fov: 39 }}
     >
-      <Sky sunPosition={SUN_POSITION} turbidity={4} rayleigh={1.2} mieCoefficient={0.02} mieDirectionalG={0.9} />
-      <SunGlow />
-      <Birds />
-      <fog attach="fog" args={['#cfd8e3', 9, 21]} />
+      <SceneMaterialsProvider>
+        <Sky sunPosition={SUN_POSITION} turbidity={3.6} rayleigh={1.35} mieCoefficient={0.006} mieDirectionalG={0.82} />
+        <fog attach="fog" args={['#cbd5dc', 17, 39]} />
 
-      <Environment resolution={128} frames={1}>
-        <Sky sunPosition={SUN_POSITION} turbidity={4} rayleigh={1.2} mieCoefficient={0.02} mieDirectionalG={0.9} />
-      </Environment>
+        <Environment resolution={128} frames={1}>
+          <Sky
+            sunPosition={SUN_POSITION}
+            turbidity={3.6}
+            rayleigh={1.35}
+            mieCoefficient={0.006}
+            mieDirectionalG={0.82}
+          />
+        </Environment>
 
-      <ambientLight intensity={0.22} />
-      <directionalLight
-        position={[6, 7, 5]}
-        intensity={1.6}
-        color="#fff3e0"
-        castShadow
-        shadow-mapSize={[1024, 1024]}
-        shadow-bias={-0.0015}
-        shadow-camera-left={-4}
-        shadow-camera-right={4}
-        shadow-camera-top={4}
-        shadow-camera-bottom={-4}
-      />
-      <directionalLight position={[-5, 3, -3]} intensity={0.28} color="#cbd9ff" />
+        <hemisphereLight args={['#edf3f7', '#707b5e', 0.72]} />
+        <ambientLight intensity={0.16} />
+        <directionalLight
+          position={[8, 11, 7]}
+          intensity={2.0}
+          color="#fff1dd"
+          castShadow
+          shadow-mapSize={[2048, 2048]}
+          shadow-bias={-0.0008}
+          shadow-normalBias={0.025}
+          shadow-camera-left={-14}
+          shadow-camera-right={14}
+          shadow-camera-top={12}
+          shadow-camera-bottom={-10}
+        />
+        <directionalLight position={[-7, 4, -5]} intensity={0.32} color="#c5d7e4" />
 
-      <Facade dims={dims} />
-      <House
-        jambOuterX={dims.doorWidth / 2 + JAMB_WIDTH}
-        wallTopY={dims.wallTopY}
-        wallZ={dims.wallZ}
-        floorY={dims.floorY}
-        doorWidth={dims.doorWidth}
-      />
-      {look.kind === 'sectional' && <GarageDoorOpener dims={dims} />}
-      {look.kind === 'roller' && <RollerDrumAndGuides dims={dims} isOpen={isOpen} />}
-      <GarageInterior
-        isOpen={isOpen}
-        backWallZ={dims.backWallZ}
-        frontZ={dims.wallZ}
-        floorY={dims.floorY}
-        ceilingY={dims.ceilingY}
-        doorWidth={dims.doorWidth}
-        headline={revealHeadline}
-        wordmark={revealWordmark}
-      />
-      <DoorAssembly isOpen={isOpen} look={look} dims={dims} />
+        <Facade dims={dims} />
+        <House
+          jambOuterX={dims.doorWidth / 2 + JAMB_WIDTH}
+          wallTopY={dims.wallTopY}
+          wallZ={dims.wallZ}
+          floorY={dims.floorY}
+          doorWidth={dims.doorWidth}
+        />
+        {look.kind === 'sectional' && <GarageDoorOpener dims={dims} />}
+        {look.kind === 'roller' && <RollerDrumAndGuides dims={dims} isOpen={isOpen} />}
+        <GarageInterior
+          isOpen={isOpen}
+          backWallZ={dims.backWallZ}
+          frontZ={dims.wallZ}
+          floorY={dims.floorY}
+          ceilingY={dims.ceilingY}
+          doorWidth={dims.doorWidth}
+          headline={revealHeadline}
+          wordmark={revealWordmark}
+        />
+        <DoorAssembly isOpen={isOpen} look={look} dims={dims} />
+        <Garden doorWidth={dims.doorWidth} floorY={dims.floorY} wallZ={dims.wallZ} />
 
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, dims.floorY, 0]} receiveShadow>
-        <planeGeometry args={[16, 16]} />
-        <meshStandardMaterial color="#d9d5cb" roughness={0.96} envMapIntensity={0.25} />
-      </mesh>
-      <Garden doorWidth={dims.doorWidth} floorY={dims.floorY} wallZ={dims.wallZ} />
+        <EffectComposer>
+          <DepthOfField focusDistance={8.4} focusRange={9} bokehScale={0.55} />
+          <ToneMapping mode={ToneMappingMode.ACES_FILMIC} />
+        </EffectComposer>
 
-      <EffectComposer>
-        <DepthOfField focusDistance={5.7} focusRange={5.5} bokehScale={1.5} />
-        <ToneMapping mode={ToneMappingMode.ACES_FILMIC} />
-      </EffectComposer>
-
-      <CameraDirector isOpen={isOpen} widthScale={look.widthScale} />
+        <CameraDirector isOpen={isOpen} widthScale={look.widthScale} />
+      </SceneMaterialsProvider>
     </Canvas>
   )
 }
