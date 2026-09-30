@@ -526,7 +526,7 @@ export function GarageDoorScene({
 
   return (
     <Canvas
-      shadows
+      shadows="percentage"
       dpr={[1, 1.5]}
       gl={{ antialias: true, powerPreference: 'high-performance' }}
       camera={{ position: [3.7, 2.8, 7.8], fov: 39 }}
