@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 
-export type SurfaceKind = 'paint' | 'wood' | 'plaster' | 'concrete' | 'mulch' | 'roof'
+export type SurfaceKind = 'paint' | 'wood' | 'plaster' | 'concrete' | 'mulch' | 'roof' | 'grass'
 
 export interface SurfaceTextureSet {
   map: THREE.DataTexture
@@ -23,6 +23,7 @@ const BASE_TONES: Record<SurfaceKind, [number, number, number]> = {
   concrete: [242, 241, 238],
   mulch: [240, 234, 222],
   roof: [242, 241, 238],
+  grass: [246, 246, 242],
 }
 
 const STRENGTH: Record<SurfaceKind, number> = {
@@ -32,6 +33,7 @@ const STRENGTH: Record<SurfaceKind, number> = {
   concrete: 15,
   mulch: 24,
   roof: 11,
+  grass: 12,
 }
 
 function hashNoise(x: number, y: number, seed: number): number {
@@ -147,6 +149,7 @@ export function createSceneTextures(anisotropy: number): SceneTextureSet {
     concrete: createSurface('concrete', 211, anisotropy),
     mulch: createSurface('mulch', 307, anisotropy),
     roof: createSurface('roof', 401, anisotropy),
+    grass: createSurface('grass', 503, anisotropy),
   }
 }
 
