@@ -3,18 +3,7 @@
 import { useEffect, useState } from 'react'
 import { GarageDoorScene } from './GarageDoorScene'
 import { GarageDoorFallback } from './GarageDoorFallback'
-
-function supportsWebGL(): boolean {
-  try {
-    const canvas = document.createElement('canvas')
-    return !!(
-      window.WebGLRenderingContext &&
-      (canvas.getContext('webgl') || canvas.getContext('experimental-webgl'))
-    )
-  } catch {
-    return false
-  }
-}
+import { supportsThreeWebGL } from './webgl'
 
 // Some phones and locked-down browsers genuinely don't have WebGL. The CSS
 // scene keeps the entry experience useful instead of showing a broken canvas.
@@ -31,7 +20,7 @@ export function DoorHero3D() {
   const [supported, setSupported] = useState<boolean | null>(null)
 
   useEffect(() => {
-    setSupported(supportsWebGL())
+    setSupported(supportsThreeWebGL())
   }, [])
 
   if (supported === false) return <HeroFallback isOpen={isOpen} onToggle={() => setIsOpen((value) => !value)} />

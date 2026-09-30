@@ -14,6 +14,7 @@ export interface SceneTextureSet {
   concrete: SurfaceTextureSet
   mulch: SurfaceTextureSet
   roof: SurfaceTextureSet
+  grass: SurfaceTextureSet
 }
 
 const BASE_TONES: Record<SurfaceKind, [number, number, number]> = {
