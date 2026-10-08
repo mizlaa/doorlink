@@ -21,7 +21,7 @@ export const services: Service[] = [
   { id: 'taper-fade', name: 'Taper', price: 35, duration: 30, description: 'A softer, shorter-to-longer taper around the ears and neckline.' },
   { id: 'classic-cut', name: 'Classic Cut', price: 30, duration: 20, description: 'Clippers and scissors, finished clean. Timeless and tidy.' },
   { id: 'kids-cut', name: 'Kids Cut (under 12)', price: 25, duration: 20, description: 'Patient, friendly and perfect for first haircuts.', kids: true },
-  { id: 'hot-wax', name: 'Hot Wax', price: null, duration: 30, description: 'Hot wax for a clean finish. Price depends on the area, so ask in the chair.' },
+  { id: 'hot-wax', name: 'Hot Wax', price: null, duration: 15, description: 'Hot wax for a clean finish. Price depends on the area, so ask in the chair.' },
 ];
 
 export const getService = (id?: string | null) => services.find((s) => s.id === id) ?? null;

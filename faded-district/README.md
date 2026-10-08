@@ -91,7 +91,7 @@ Re-run after changing a scene's look.
 4. Add your domain under *Settings → Domains*.
 
 ## Things to replace before launch
-- Barber names and photos (placeholders), Hot Wax duration (assumed 30 min)
+- Barber names and photos (placeholders)
 - `business.googleReviewsUrl` → the exact Google Maps place link
 - Footer "Studio credit" text; `siteUrl` domain
 - Map tiles use CARTO dark (free, attribution required). For heavy traffic, use your own Mapbox/Stadia key.
