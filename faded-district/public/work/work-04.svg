@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 900" width="800" height="900">
-<defs><linearGradient id="f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0A0A0A"/><stop offset="1" stop-color="#C9A96E" stop-opacity=".55"/></linearGradient>
-<radialGradient id="r" cx=".5" cy=".42" r=".55"><stop offset="0" stop-color="#C9A96E" stop-opacity=".35"/><stop offset="1" stop-color="#0A0A0A" stop-opacity="0"/></radialGradient></defs>
-<rect width="100%" height="100%" fill="#161616"/><rect width="100%" height="100%" fill="url(#r)"/>
-<g transform="translate(400 414) scale(0.9)"><path d="M-140 330 L-120 210 C-220 180 -260 80 -250 -40 C-240 -190 -130 -290 0 -290 C140 -290 250 -190 250 -50 C250 80 210 180 130 210 L150 330 Z" fill="url(#f)" stroke="#C9A96E" stroke-opacity=".5" stroke-width="3"/>
-<path d="M-250 -10 C-250 -150 -150 -250 0 -250 C150 -250 250 -150 250 -10 C190 -70 120 -90 0 -90 C-120 -90 -190 -70 -250 -10Z" fill="#0A0A0A"/></g>
-<text x="40" y="856" fill="#F2EFE9" font-family="Impact,Arial Narrow,sans-serif" font-size="42" letter-spacing="3" opacity=".7">CUT 04</text></svg>

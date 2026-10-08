@@ -116,7 +116,7 @@ export function Hero() {
               <p className="max-w-md text-lg text-chrome md:text-xl">{copy.hero.sub}</p>
               <div className="flex flex-wrap items-center gap-3">
                 <Magnetic><button className="btn btn-gold" data-cursor="Book" onClick={() => { play(260); open(); }}>{copy.hero.primary}</button></Magnetic>
-                <Magnetic><a className="btn btn-ghost" href="#work" data-cursor="View" onClick={(e) => { e.preventDefault(); scrollToTarget('#work'); }}>{copy.hero.ghost}</a></Magnetic>
+                <Magnetic><a className="btn btn-ghost" href="#services" data-cursor="View" onClick={(e) => { e.preventDefault(); scrollToTarget('#services'); }}>{copy.hero.ghost}</a></Magnetic>
               </div>
             </div>
             <div className="mt-5 flex items-center justify-between text-[11px] font-semibold uppercase tracking-[0.2em] text-steel">

@@ -27,10 +27,9 @@ Everything editable lives in **`/data`**:
 | `barbers.ts` | **Barbers** (names, role, specialty, photo path, Instagram) |
 | `reviews.ts` | Reviews shown in the marquee |
 | `styles.ts` | Fade Style Explorer cards (links to a service id for pricing / booking prefill) |
-| `gallery.ts` | Gallery image array |
 | `copy.ts` | SEO title/description, hero copy, process steps, chair hotspots |
 
-Images go in `/public`: `work/` (gallery), `barbers/` (portraits). The current files are generated placeholders; replace them (any size/ratio; update `width`/`height` in `gallery.ts`).
+Barber portraits go in `/public/barbers`. The current files are generated placeholders; replace them.
 
 ### Opening hours & the "Open now" pill
 Hours are minutes-from-midnight in `data/business.ts`. The pill, the hours table highlight and the booking time slots are all computed in **Australia/Sydney** time with `Intl`, regardless of the visitor's device timezone (`lib/hours.ts`).
@@ -40,10 +39,6 @@ Hours are minutes-from-midnight in `data/business.ts`. The pill, the hours table
 Bookings are by text or call. `/book` and the modal run a 4-step request flow (service → barber → day/time → name & mobile) and finish by opening the visitor's messaging app with a pre-written `sms:` link to 0406 961 333, plus a "Call instead" button.
 
 **Swapping in Fresha / Square Appointments / Timely:** the UI never builds the SMS itself. It collects a `BookingRequest` and passes it to a provider in `lib/booking/providers.ts`, which returns a `BookingResult` (`sms`, `redirect` or `done`) that the final screen renders generically. Add a provider (API call or deep link), then set `booking.provider` in `data/business.ts`. No UI rebuild is needed.
-
-## Instagram gallery
-
-`lib/instagram.ts → fetchInstagramMedia()` is the marked hook. It currently returns the local array; replace the body with an Instagram Graph API call (keep the token server-side) that returns `GalleryItem[]`.
 
 ## 3D: how it works and how to swap models
 
@@ -96,7 +91,6 @@ Re-run after changing a scene's look.
 
 ## Things to replace before launch
 - Service prices/durations and barber names/photos (placeholders)
-- Gallery photos (`public/work`), or hook up Instagram
 - `business.googleReviewsUrl` → the exact Google Maps place link
 - Footer "Studio credit" text; `siteUrl` domain
 - Map tiles use CARTO dark (free, attribution required). For heavy traffic, use your own Mapbox/Stadia key.
