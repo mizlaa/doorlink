@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faded District | Barber, Liverpool NSW</title>
+  <meta name="description" content="Faded District barbershop in Liverpool NSW. Haircuts, fades, beard trims and razor shaves. Book online.">
+  <link rel="icon" href="logo.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="logo.jpg" alt="Faded District logo"><span>FADED DISTRICT</span></a>
+    <nav>
+      <a class="hide-sm" href="#services">Services</a>
+      <a class="hide-sm" href="#hours">Hours</a>
+      <a class="hide-sm" href="#find">Find us</a>
+      <a class="btn" href="book.html">Book now</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <img src="logo.jpg" alt="Faded District, est. 2021">
+      <h1 data-shop="name"></h1>
+      <p data-shop="tagline"></p>
+      <a class="btn" href="book.html">Book your cut</a>
+    </div>
+  </div>
+
+  <section id="services"><div class="wrap">
+    <h2>Services</h2>
+    <div class="grid" id="service-list"></div>
+  </div></section>
+
+  <section id="hours"><div class="wrap">
+    <h2>Opening hours</h2>
+    <table class="hours" id="hours-table"></table>
+  </div></section>
+
+  <section id="find"><div class="wrap cols">
+    <div>
+      <h2>Find us</h2>
+      <p id="address"></p>
+      <p id="phone"></p>
+      <p><a class="btn ghost" id="maps-link" target="_blank" rel="noopener">Open in Google Maps</a>
+         <a class="btn ghost" id="ig-link" target="_blank" rel="noopener">Instagram</a></p>
+    </div>
+    <div>
+      <h2>Ready?</h2>
+      <p class="note">Pick a service, a time and a barber. It takes under a minute.</p>
+      <a class="btn" href="book.html">Book now</a>
+    </div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">&copy; <span id="year"></span> Faded District &middot; Est. 2021</div></footer>
+
+<script src="config.js"></script>
+<script>
+(function () {
+  var S = window.SHOP, $ = function (id) { return document.getElementById(id); };
+  document.querySelectorAll("[data-shop]").forEach(function (el) { el.textContent = S[el.dataset.shop]; });
+  $("service-list").innerHTML = S.services.map(function (s) {
+    return '<div class="card"><h3><span>' + s.name + '</span><span class="price">$' + s.price +
+      '</span></h3><p>' + s.desc + '</p><p>' + s.mins + ' min</p></div>';
+  }).join("");
+  var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  function fmt(t) { var p = t.split(":"), h = +p[0]; return (h % 12 || 12) + (p[1] === "00" ? "" : ":" + p[1]) + (h < 12 ? "am" : "pm"); }
+  $("hours-table").innerHTML = [1,2,3,4,5,6,0].map(function (d) {
+    var h = S.hours[d];
+    return "<tr><td>" + days[d] + "</td><td>" + (h ? fmt(h[0]) + " – " + fmt(h[1]) : "Closed") + "</td></tr>";
+  }).join("");
+  $("address").textContent = S.address;
+  $("phone").innerHTML = S.phone ? 'Call <a href="tel:' + S.phone.replace(/\s/g, "") + '">' + S.phone + "</a>" : "";
+  $("maps-link").href = S.mapsUrl;
+  $("ig-link").href = S.instagram;
+  $("year").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

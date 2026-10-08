@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book | Faded District</title>
+  <link rel="icon" href="logo.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="logo.jpg" alt="Faded District logo"><span>FADED DISTRICT</span></a>
+    <nav><a href="./">Home</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <form id="form" class="steps" novalidate>
+    <div class="step"><h2><span>1</span>Choose a service</h2><div class="choice" id="services"></div></div>
+    <div class="step"><h2><span>2</span>Choose a barber</h2><div class="choice" id="barbers"></div></div>
+    <div class="step">
+      <h2><span>3</span>Pick a date and time</h2>
+      <label>Date <input type="date" id="date"></label>
+      <div class="slots" id="slots"></div>
+      <p class="note" id="slot-msg"></p>
+    </div>
+    <div class="step">
+      <h2><span>4</span>Your details</h2>
+      <div class="row">
+        <label>Name <input id="name" autocomplete="name" required></label>
+        <label>Mobile <input id="phone" type="tel" autocomplete="tel" required></label>
+      </div>
+      <label>Email (optional) <input id="email" type="email" autocomplete="email"></label>
+      <label>Notes (optional) <textarea id="notes" rows="2"></textarea></label>
+    </div>
+    <div class="summary" id="summary"></div>
+    <p class="note" id="error" style="color:var(--danger)"></p>
+    <button class="btn" id="submit" type="submit" disabled>Request booking</button>
+  </form>
+
+  <div id="done" class="steps hidden">
+    <h2>Booking request ready</h2>
+    <div class="summary" id="done-summary"></div>
+    <p class="note" id="done-note"></p>
+    <p><a class="btn" id="send-link" target="_blank" rel="noopener">Send request</a>
+       <a class="btn ghost" href="./">Back to home</a></p>
+  </div>
+</main>
+
+<script src="config.js"></script>
+<script>
+(function () {
+  var S = window.SHOP, $ = function (id) { return document.getElementById(id); };
+  var state = { service: null, barber: S.barbers[0].id, time: null };
+  var STORE = "fd-bookings";
+
+  function load() { try { return JSON.parse(localStorage.getItem(STORE)) || []; } catch (e) { return []; } }
+  function save(list) { try { localStorage.setItem(STORE, JSON.stringify(list)); } catch (e) {} }
+  function toMin(t) { var p = t.split(":"); return +p[0] * 60 + +p[1]; }
+  function fmt(m) { var h = Math.floor(m / 60), mm = m % 60; return (h % 12 || 12) + ":" + String(mm).padStart(2, "0") + (h < 12 ? "am" : "pm"); }
+  function iso(d) { return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+  function svc() { return S.services.filter(function (s) { return s.id === state.service; })[0]; }
+  function barber() { return S.barbers.filter(function (b) { return b.id === state.barber; })[0]; }
+
+  $("services").innerHTML = S.services.map(function (s) {
+    return '<button type="button" class="opt" data-id="' + s.id + '" aria-pressed="false">' + esc(s.name) +
+      ' &middot; $' + s.price + "<small>" + s.mins + " min</small></button>";
+  }).join("");
+  $("barbers").innerHTML = S.barbers.map(function (b) {
+    return '<button type="button" class="opt" data-id="' + b.id + '" aria-pressed="' + (b.id === state.barber) + '">' + esc(b.name) + "</button>";
+  }).join("");
+
+  function pick(container, key) {
+    $(container).addEventListener("click", function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      state[key] = b.dataset.id; state.time = null;
+      $(container).querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+      render();
+    });
+  }
+  pick("services", "service"); pick("barbers", "barber");
+
+  var d = $("date"), today = new Date();
+  d.min = iso(today);
+  var max = new Date(); max.setDate(max.getDate() + 60); d.max = iso(max);
+  d.value = iso(today);
+  d.addEventListener("change", function () { state.time = null; render(); });
+
+  // Bookings that would overlap on this device. Without a server we cannot see
+  // other customers' bookings; the shop confirms every request.
+  function taken(date, start, len, barberId) {
+    return load().some(function (b) {
+      if (b.date !== date) return false;
+      if (barberId !== "any" && b.barber !== "any" && b.barber !== barberId) return false;
+      return start < b.start + b.mins && b.start < start + len;
+    });
+  }
+
+  function slots() {
+    var s = svc(); if (!s || !d.value) return [];
+    var parts = d.value.split("-"), day = new Date(+parts[0], +parts[1] - 1, +parts[2]).getDay();
+    var h = S.hours[day]; if (!h) return null;
+    var out = [], open = toMin(h[0]), close = toMin(h[1]);
+    var now = new Date(), isToday = d.value === iso(now), nowMin = now.getHours() * 60 + now.getMinutes();
+    for (var t = open; t + s.mins <= close; t += S.slotMinutes) {
+      out.push({ t: t, off: (isToday && t <= nowMin + 15) || taken(d.value, t, s.mins, state.barber) });
+    }
+    return out;
+  }
+
+  function render() {
+    var list = slots(), el = $("slots"), msg = $("slot-msg");
+    el.innerHTML = ""; msg.textContent = "";
+    if (!svc()) msg.textContent = "Choose a service to see available times.";
+    else if (list === null) msg.textContent = "We're closed that day. Please pick another date.";
+    else if (!list.some(function (x) { return !x.off; })) msg.textContent = "No times left that day. Try another date.";
+    if (list) el.innerHTML = list.map(function (x) {
+      return '<button type="button" class="opt" data-t="' + x.t + '" aria-pressed="' + (state.time === x.t) + '"' + (x.off ? " disabled" : "") + ">" + fmt(x.t) + "</button>";
+    }).join("");
+    var s = svc();
+    $("summary").innerHTML = "<dl><dt>Service</dt><dd>" + (s ? esc(s.name) + " ($" + s.price + ")" : "–") +
+      "</dd><dt>Barber</dt><dd>" + esc(barber().name) + "</dd><dt>When</dt><dd>" +
+      (state.time != null ? esc(d.value) + " at " + fmt(state.time) : "–") + "</dd></dl>";
+    $("submit").disabled = !(s && state.time != null);
+  }
+  $("slots").addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b || b.disabled) return;
+    state.time = +b.dataset.t; render();
+  });
+
+  $("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = $("name").value.trim(), phone = $("phone").value.trim();
+    if (!name || phone.replace(/\D/g, "").length < 8) { $("error").textContent = "Please enter your name and a valid mobile number."; return; }
+    $("error").textContent = "";
+    var s = svc(), when = d.value + " at " + fmt(state.time);
+    var rec = { date: d.value, start: state.time, mins: s.mins, barber: state.barber, service: s.id, name: name, phone: phone };
+    var list = load(); list.push(rec); save(list);
+
+    var text = "Booking request – " + S.name + "\nService: " + s.name + " ($" + s.price + ")\nBarber: " + barber().name +
+      "\nWhen: " + when + "\nName: " + name + "\nMobile: " + phone +
+      ($("email").value ? "\nEmail: " + $("email").value : "") + ($("notes").value ? "\nNotes: " + $("notes").value : "");
+    $("done-summary").innerHTML = "<dl><dt>Service</dt><dd>" + esc(s.name) + "</dd><dt>Barber</dt><dd>" + esc(barber().name) +
+      "</dd><dt>When</dt><dd>" + esc(when) + "</dd><dt>Name</dt><dd>" + esc(name) + "</dd></dl>";
+    var link = $("send-link");
+    if (S.bookingEmail) {
+      link.href = "mailto:" + S.bookingEmail + "?subject=" + encodeURIComponent("Booking request: " + when) + "&body=" + encodeURIComponent(text);
+      link.textContent = "Send request by email";
+      $("done-note").textContent = "Tap the button to send this request to the shop. It isn't confirmed until they reply.";
+    } else if (S.phone) {
+      link.href = "sms:" + S.phone.replace(/\s/g, "") + "?&body=" + encodeURIComponent(text);
+      link.textContent = "Send request by text";
+      $("done-note").textContent = "Tap the button to text this request to the shop. It isn't confirmed until they reply.";
+    } else {
+      link.classList.add("hidden");
+      $("done-note").textContent = "Shop contact details haven't been set up yet, so this request has only been saved on this device.";
+    }
+    $("form").classList.add("hidden"); $("done").classList.remove("hidden");
+    window.scrollTo(0, 0);
+  });
+  render();
+})();
+</script>
+</body>
+</html>
