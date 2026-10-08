@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useMemo, useState } from 'react';
 import dynamic from 'next/dynamic';
 
-export type Prefill = { serviceId?: string; barberId?: string };
+export type Prefill = { serviceId?: string };
 type Ctx = { open: (p?: Prefill) => void; close: () => void; isOpen: boolean; prefill: Prefill };
 
 const BookingCtx = createContext<Ctx>({ open() {}, close() {}, isOpen: false, prefill: {} });

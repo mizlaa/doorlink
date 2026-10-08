@@ -3,7 +3,6 @@ import { FadeShowcase } from '@/components/sections/FadeShowcase';
 import { StyleExplorer } from '@/components/sections/StyleExplorer';
 import { ServicesMenu } from '@/components/sections/ServicesMenu';
 import { ChairTour } from '@/components/sections/ChairTour';
-import { Barbers } from '@/components/sections/Barbers';
 import { Gallery } from '@/components/sections/Gallery';
 import { Reviews } from '@/components/sections/Reviews';
 import { Visit } from '@/components/sections/Visit';
@@ -18,7 +17,6 @@ export default function Home() {
         <StyleExplorer />
         <ServicesMenu />
         <ChairTour />
-        <Barbers />
         <Gallery />
         <Reviews />
         <Visit />

@@ -24,20 +24,17 @@ Everything editable lives in **`/data`**:
 | --- | --- |
 | `business.ts` | Name, phone, address, geo, Instagram, rating, Google link, **opening hours**, booking provider |
 | `services.ts` | **Service menu, prices & durations** (booking fee is `booking.fee` in `business.ts`) |
-| `barbers.ts` | **Barbers** (names, role, specialty, photo path, Instagram) |
 | `reviews.ts` | Reviews shown in the marquee |
 | `styles.ts` | Fade Style Explorer cards (links to a service id for pricing / booking prefill) |
 | `gallery.ts` | **Gallery** photos & videos (files in `public/work`; add a line per item) |
 | `copy.ts` | SEO title/description, hero copy, process steps, chair hotspots |
-
-Barber portraits go in `/public/barbers`. The current files are generated placeholders; replace them.
 
 ### Opening hours & the "Open now" pill
 Hours are minutes-from-midnight in `data/business.ts`. The pill, the hours table highlight and the booking time slots are all computed in **Australia/Sydney** time with `Intl`, regardless of the visitor's device timezone (`lib/hours.ts`).
 
 ## Booking
 
-Bookings are by text or call. `/book` and the modal run a 4-step request flow (service → barber → day/time → name & mobile) and finish by opening the visitor's messaging app with a pre-written `sms:` link to 0406 961 333, plus a "Call instead" button.
+Bookings are by text or call. `/book` and the modal run a 3-step request flow (service → day/time → name & mobile) and finish by opening the visitor's messaging app with a pre-written `sms:` link to 0406 961 333, plus a "Call instead" button.
 
 **Swapping in Fresha / Square Appointments / Timely:** the UI never builds the SMS itself. It collects a `BookingRequest` and passes it to a provider in `lib/booking/providers.ts`, which returns a `BookingResult` (`sms`, `redirect` or `done`) that the final screen renders generically. Add a provider (API call or deep link), then set `booking.provider` in `data/business.ts`. No UI rebuild is needed.
 
@@ -91,7 +88,6 @@ Re-run after changing a scene's look.
 4. Add your domain under *Settings → Domains*.
 
 ## Things to replace before launch
-- Barber names and photos (placeholders)
 - `business.googleReviewsUrl` → the exact Google Maps place link
 - Footer "Studio credit" text; `siteUrl` domain
 - Map tiles use CARTO dark (free, attribution required). For heavy traffic, use your own Mapbox/Stadia key.

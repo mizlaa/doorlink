@@ -13,8 +13,6 @@ await dlg.waitFor();
 // step 1: keyboard-select the first service via arrow keys then continue with Enter
 await dlg.locator('input[value="skin-fade"]').check({ force: true });
 await page.keyboard.press('Enter');
-await dlg.getByLabel(/Anyone available/).check({ force: true });
-await dlg.getByRole('button', { name: 'Continue' }).click();
 // step 3: first enabled time
 const t = dlg.locator('input[name=time]:not([disabled])').first();
 await t.check({ force: true });
@@ -32,6 +30,6 @@ await page.keyboard.press('Escape');
 console.log('closed on Esc:', !(await dlg.isVisible().catch(() => false)));
 // /book page with prefill
 await page.goto(`${base}/book?service=kids-cut`);
-console.log('prefill → step:', await page.getByText(/Step 2 \/ 4/).isVisible());
+console.log('prefill → step:', await page.getByText(/Step 2 \/ 3/).isVisible());
 console.log(errs.length ? 'ERRORS: ' + errs.join('\n') : 'no page errors');
 await browser.close();

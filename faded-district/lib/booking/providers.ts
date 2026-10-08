@@ -1,6 +1,5 @@
 import { business } from '@/data/business';
 import type { Service } from '@/data/services';
-import type { Barber } from '@/data/barbers';
 
 /**
  * ───────────────────────────────────────────────────────────────
@@ -16,7 +15,6 @@ import type { Barber } from '@/data/barbers';
  */
 export type BookingRequest = {
   service: Service;
-  barber: Barber | null; // null = anyone available
   dateISO: string; // yyyy-mm-dd (Sydney)
   dateLabel: string; // "Sat 12 Oct"
   time: string; // "11am"
@@ -35,8 +33,7 @@ export interface BookingProvider {
 }
 
 export function buildSmsMessage(r: BookingRequest): string {
-  const who = r.barber ? ` with ${r.barber.name}` : '';
-  return `Hi Faded District, I'd like to book a ${r.service.name}${who} on ${r.dateLabel} around ${r.time}. Name: ${r.name}.`;
+  return `Hi Faded District, I'd like to book a ${r.service.name} on ${r.dateLabel} around ${r.time}. Name: ${r.name}.`;
 }
 
 const smsProvider: BookingProvider = {

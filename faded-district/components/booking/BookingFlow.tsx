@@ -3,13 +3,12 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { business } from '@/data/business';
 import { services, formatBookingPrice, getService } from '@/data/services';
-import { barbers, getBarber } from '@/data/barbers';
 import { getDays, getSlots } from '@/lib/booking/slots';
 import { getBookingProvider, type BookingResult } from '@/lib/booking/providers';
 import { useSound } from '@/lib/sound';
 import type { Prefill } from './BookingProvider';
 
-const STEPS = ['Service', 'Barber', 'Time', 'Details'] as const;
+const STEPS = ['Service', 'Time', 'Details'] as const;
 const PHONE_RE = /^(?:\+?61|0)4\d{8}$/;
 
 const radioCard = 'group relative flex cursor-pointer items-center justify-between gap-4 rounded-2xl border border-white/10 bg-ink/60 p-4 text-left transition-colors hover:border-white/30 has-[:checked]:border-gold has-[:checked]:bg-gold/10 has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-gold';
@@ -17,10 +16,9 @@ const radioCard = 'group relative flex cursor-pointer items-center justify-betwe
 export function BookingFlow({ initial = {}, onClose }: { initial?: Prefill; onClose?: () => void }) {
   const { play } = useSound();
   const headingRef = useRef<HTMLHeadingElement>(null);
-  const [step, setStep] = useState(initial.serviceId ? (initial.barberId ? 2 : 1) : 0);
+  const [step, setStep] = useState(initial.serviceId ? 1 : 0);
   const [dir, setDir] = useState(1);
   const [serviceId, setServiceId] = useState(initial.serviceId ?? '');
-  const [barberId, setBarberId] = useState(initial.barberId ?? (initial.serviceId ? 'any' : ''));
   const [dayIso, setDayIso] = useState('');
   const [time, setTime] = useState('');
   const [name, setName] = useState('');
@@ -34,7 +32,6 @@ export function BookingFlow({ initial = {}, onClose }: { initial?: Prefill; onCl
   const service = getService(serviceId);
   const duration = service?.duration ?? 30;
   const slots = useMemo(() => (day ? getSlots(day, duration) : []), [day, duration]);
-  const barber = barberId === 'any' ? null : getBarber(barberId);
 
   // Default to the first day that still has an open slot
   useEffect(() => {
@@ -51,19 +48,19 @@ export function BookingFlow({ initial = {}, onClose }: { initial?: Prefill; onCl
 
   const phoneOk = PHONE_RE.test(phone.replace(/\s|-/g, ''));
   const nameOk = name.trim().length >= 2;
-  const canNext = [!!service, !!barberId, !!day && !!time, nameOk && phoneOk][step];
+  const canNext = [!!service, !!day && !!time, nameOk && phoneOk][step];
 
   const go = (n: number) => { setDir(n > step ? 1 : -1); setStep(n); };
   const next = async () => {
     play(160);
-    if (step < 3) { go(step + 1); return; }
+    if (step < 2) { go(step + 1); return; }
     setTouched(true);
     if (!canNext || !service || !day) return;
-    const res = await getBookingProvider().submit({ service, barber, dateISO: day.iso, dateLabel: day.long, time, name: name.trim(), phone });
+    const res = await getBookingProvider().submit({ service, dateISO: day.iso, dateLabel: day.long, time, name: name.trim(), phone });
     setResult(res);
   };
 
-  const onSubmit = (e: React.FormEvent) => { e.preventDefault(); if (canNext || step === 3) next(); };
+  const onSubmit = (e: React.FormEvent) => { e.preventDefault(); if (canNext || step === 2) next(); };
 
   const variants = { enter: (d: number) => ({ opacity: 0, x: 40 * d, filter: 'blur(8px)' }), center: { opacity: 1, x: 0, filter: 'blur(0px)' }, exit: (d: number) => ({ opacity: 0, x: -40 * d, filter: 'blur(8px)' }) };
 
@@ -105,14 +102,14 @@ export function BookingFlow({ initial = {}, onClose }: { initial?: Prefill; onCl
     <form onSubmit={onSubmit} noValidate>
       {/* Progress */}
       <div className="pr-14" aria-label={`Step ${step + 1} of ${STEPS.length}: ${STEPS[step]}`}>
-        <div className="flex items-center gap-2" role="progressbar" aria-valuemin={1} aria-valuemax={4} aria-valuenow={step + 1}>
+        <div className="flex items-center gap-2" role="progressbar" aria-valuemin={1} aria-valuemax={3} aria-valuenow={step + 1}>
           {STEPS.map((s, i) => (
             <div key={s} className="h-[3px] flex-1 overflow-hidden rounded-full bg-white/10">
               <motion.div className="h-full bg-gold" initial={false} animate={{ width: i <= step ? '100%' : '0%' }} transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }} />
             </div>
           ))}
         </div>
-        <p className="eyebrow mt-4">Step {step + 1} / 4 · {STEPS[step]}</p>
+        <p className="eyebrow mt-4">Step {step + 1} / 3 · {STEPS[step]}</p>
       </div>
 
       <div className="relative mt-3 min-h-[360px]">
@@ -133,20 +130,6 @@ export function BookingFlow({ initial = {}, onClose }: { initial?: Prefill; onCl
               </fieldset>
             )}
             {step === 1 && (
-              <fieldset>
-                <legend><h2 ref={headingRef} tabIndex={-1} className="display h-lg outline-none">WHO’S CUTTING?</h2></legend>
-                <div className="mt-6 grid gap-3">
-                  {[{ id: 'any', name: 'Anyone available', sub: 'Fastest to get in the chair' }, ...barbers.map((b) => ({ id: b.id, name: b.name, sub: b.specialty }))].map((b) => (
-                    <label key={b.id} className={radioCard}>
-                      <input type="radio" name="barber" value={b.id} checked={barberId === b.id} onChange={() => setBarberId(b.id)} className="sr-only" />
-                      <span><span className="block font-semibold text-bone">{b.name}</span><span className="text-sm text-steel">{b.sub}</span></span>
-                      <span aria-hidden className="h-4 w-4 rounded-full border border-white/30 group-has-[:checked]:border-gold group-has-[:checked]:bg-gold" />
-                    </label>
-                  ))}
-                </div>
-              </fieldset>
-            )}
-            {step === 2 && (
               <div>
                 <h2 ref={headingRef} tabIndex={-1} className="display h-lg outline-none">PICK A TIME</h2>
                 <p className="mt-2 text-sm text-steel">Sydney time · {service?.name} takes about {duration} min</p>
@@ -177,10 +160,10 @@ export function BookingFlow({ initial = {}, onClose }: { initial?: Prefill; onCl
                 </fieldset>
               </div>
             )}
-            {step === 3 && (
+            {step === 2 && (
               <div>
                 <h2 ref={headingRef} tabIndex={-1} className="display h-lg outline-none">YOUR DETAILS</h2>
-                <p className="mt-2 text-sm text-steel">{service?.name} · {barber?.name ?? 'Anyone available'} · {day?.long} around {time}{service ? ` · ${formatBookingPrice(service.price, business.booking.fee)}` : ''}</p>
+                <p className="mt-2 text-sm text-steel">{service?.name} · {day?.long} around {time}{service ? ` · ${formatBookingPrice(service.price, business.booking.fee)}` : ''}</p>
                 <div className="mt-6 grid gap-5">
                   <div>
                     <label htmlFor="bk-name" className="text-xs font-semibold uppercase tracking-[0.18em] text-steel">Name</label>
@@ -203,7 +186,7 @@ export function BookingFlow({ initial = {}, onClose }: { initial?: Prefill; onCl
         <button type="button" onClick={() => go(step - 1)} disabled={step === 0} className="btn btn-ghost min-h-[48px] px-5 disabled:invisible">Back</button>
         <div className="flex items-center gap-3">
           <a href={`tel:${business.phoneTel}`} className="hidden text-sm text-steel underline underline-offset-4 hover:text-gold sm:inline">Call instead</a>
-          <button type="submit" className="btn btn-gold min-h-[48px]" disabled={!canNext && step < 3}>{step === 3 ? 'Create request' : 'Continue'}</button>
+          <button type="submit" className="btn btn-gold min-h-[48px]" disabled={!canNext && step < 2}>{step === 2 ? 'Create request' : 'Continue'}</button>
         </div>
       </div>
     </form>
