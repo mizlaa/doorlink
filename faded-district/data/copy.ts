@@ -6,7 +6,7 @@ export const copy = {
       'Faded District is a Liverpool NSW barber known for skin fades, tapers, beard line-ups and kids haircuts. 4.9★ on Google. Call or text 0406 961 333 to book. 311 Macquarie St.',
     keywords: ['barber Liverpool', 'skin fade Liverpool', 'kids haircut Liverpool', 'barbershop Liverpool NSW', 'mens haircut Liverpool', 'fade haircut Sydney south-west'],
   },
-  hero: { headline: ['FADED', 'DISTRICT'], sub: 'Precision cuts. Liverpool, NSW.', primary: 'Book a Chair', ghost: 'View Services' },
+  hero: { headline: ['FADED', 'DISTRICT'], sub: 'Precision cuts. Liverpool, NSW.', primary: 'Book a Chair', ghost: 'View the Work' },
   fade: {
     eyebrow: 'The Fade, Engineered',
     title: 'FROM RAW TO RAZOR',

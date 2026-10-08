@@ -27,6 +27,7 @@ Everything editable lives in **`/data`**:
 | `barbers.ts` | **Barbers** (names, role, specialty, photo path, Instagram) |
 | `reviews.ts` | Reviews shown in the marquee |
 | `styles.ts` | Fade Style Explorer cards (links to a service id for pricing / booking prefill) |
+| `gallery.ts` | **Gallery** photos & videos (files in `public/work`; add a line per item) |
 | `copy.ts` | SEO title/description, hero copy, process steps, chair hotspots |
 
 Barber portraits go in `/public/barbers`. The current files are generated placeholders; replace them.
