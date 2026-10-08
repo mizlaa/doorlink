@@ -1,0 +1,20 @@
+// Usage: node scripts/shot.mjs <out.png> [scrollY|#selector] [width] [height] [url]
+import { chromium } from 'playwright-core';
+const [out, at = '0', w = '1440', h = '900', url = 'http://localhost:3100/?3d=on'] = process.argv.slice(2);
+const exe = process.env.CHROMIUM_PATH || '/opt/pw-browsers/chromium';
+const browser = await chromium.launch({ executablePath: exe, args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist', '--no-sandbox'] });
+const mobile = +w < 600;
+const ctx = await browser.newContext({ viewport: { width: +w, height: +h }, deviceScaleFactor: 1, hasTouch: mobile, isMobile: mobile });
+const page = await ctx.newPage();
+const errs = [];
+page.on('console', (m) => { if (['error', 'warning'].includes(m.type())) errs.push(m.type() + ': ' + m.text().slice(0, 200)); });
+page.on('pageerror', (e) => errs.push('pageerror: ' + e.message.slice(0, 300)));
+await page.goto(url, { waitUntil: 'load' });
+await page.waitForFunction(() => document.documentElement.dataset.loaded === 'true', null, { timeout: 20000 }).catch(() => errs.push('preloader never finished'));
+await page.waitForTimeout(+(process.env.WAIT||6000));
+if (at.startsWith('#')) await page.evaluate((s) => document.querySelector(s)?.scrollIntoView(), at);
+else await page.evaluate((y) => window.scrollTo(0, +y), at);
+await page.waitForTimeout(+(process.env.WAIT||6000));
+await page.screenshot({ path: out });
+console.log(errs.join('\n') || 'no console errors');
+await browser.close();

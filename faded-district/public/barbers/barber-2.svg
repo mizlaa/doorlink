@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000"><defs><linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#26241f"/><stop offset="1" stop-color="#0A0A0A"/></linearGradient><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9DCE1"/><stop offset="1" stop-color="#4a4d53"/></linearGradient></defs>
+<rect width="800" height="1000" fill="url(#b)"/><ellipse cx="400" cy="1000" rx="330" ry="260" fill="#2b2b2e"/><rect x="340" y="620" width="120" height="200" fill="#3a3a3e"/>
+<ellipse cx="400" cy="440" rx="170" ry="210" fill="url(#s)" opacity=".85"/><path d="M230 410 C230 250 320 200 400 200 C480 200 570 250 570 410 C540 330 480 310 400 310 C320 310 260 330 230 410Z" fill="#0A0A0A"/>
+<text x="400" y="940" text-anchor="middle" fill="#C9A96E" opacity=".8" font-family="Impact,sans-serif" font-size="34" letter-spacing="6">PHOTO 2</text></svg>
