@@ -22,12 +22,12 @@ export function getDays(count = 14): DayOption[] {
 
 export type Slot = { time: string; minutes: number; disabled: boolean };
 
-/** Half-hour start times inside opening hours; past times disabled (Sydney clock, 15 min lead). */
-export function getSlots(day: DayOption): Slot[] {
+/** Half-hour start times where the whole service fits before closing; past times disabled (Sydney clock, 15 min lead). */
+export function getSlots(day: DayOption, duration = 30): Slot[] {
   const h = hours[day.dow];
   const n = sydneyNow();
   const slots: Slot[] = [];
-  for (let m = h.open; m <= h.close - 30; m += 30) {
+  for (let m = h.open; m + duration <= h.close; m += 30) {
     const past = day.isToday && m <= n.minutes + 15;
     slots.push({ time: formatClock(m), minutes: m, disabled: past });
   }

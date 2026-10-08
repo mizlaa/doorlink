@@ -31,6 +31,8 @@ export const business = {
    * set provider to 'external' and fill in externalUrl (see lib/booking/providers.ts).
    */
   booking: {
+    /** Extra charge (AUD) added to every service when booking ahead (walk-in prices are lower). */
+    fee: 15,
     provider: 'sms' as 'sms' | 'external',
     externalUrl: 'https://www.fresha.com/', // PLACEHOLDER
   },

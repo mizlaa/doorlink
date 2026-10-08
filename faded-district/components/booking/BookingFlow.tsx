@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { business } from '@/data/business';
-import { services, formatPrice, getService } from '@/data/services';
+import { services, formatBookingPrice, getService } from '@/data/services';
 import { barbers, getBarber } from '@/data/barbers';
 import { getDays, getSlots } from '@/lib/booking/slots';
 import { getBookingProvider, type BookingResult } from '@/lib/booking/providers';
@@ -31,17 +31,21 @@ export function BookingFlow({ initial = {}, onClose }: { initial?: Prefill; onCl
 
   const days = useMemo(() => getDays(14), []);
   const day = days.find((d) => d.iso === dayIso) ?? null;
-  const slots = useMemo(() => (day ? getSlots(day) : []), [day]);
   const service = getService(serviceId);
+  const duration = service?.duration ?? 30;
+  const slots = useMemo(() => (day ? getSlots(day, duration) : []), [day, duration]);
   const barber = barberId === 'any' ? null : getBarber(barberId);
 
   // Default to the first day that still has an open slot
   useEffect(() => {
     if (!dayIso) {
-      const first = days.find((d) => getSlots(d).some((s) => !s.disabled));
+      const first = days.find((d) => getSlots(d, duration).some((s) => !s.disabled));
       if (first) setDayIso(first.iso);
     }
-  }, [days, dayIso]);
+  }, [days, dayIso, duration]);
+
+  // a previously picked time may no longer fit if the service changed
+  useEffect(() => { if (time && !slots.some((s) => s.time === time && !s.disabled)) setTime(''); }, [slots, time]);
 
   useEffect(() => { headingRef.current?.focus({ preventScroll: true }); }, [step, result]);
 
@@ -116,13 +120,13 @@ export function BookingFlow({ initial = {}, onClose }: { initial?: Prefill; onCl
           <motion.div key={step} custom={dir} variants={variants} initial="enter" animate="center" exit="exit" transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}>
             {step === 0 && (
               <fieldset>
-                <legend><h2 ref={headingRef} tabIndex={-1} className="display h-lg outline-none">CHOOSE YOUR CUT</h2></legend>
+                <legend><h2 ref={headingRef} tabIndex={-1} className="display h-lg outline-none">CHOOSE YOUR CUT</h2><p className="mt-2 text-sm text-steel">Booking prices include a ${business.booking.fee} booking fee. Walk-ins pay the lower menu price.</p></legend>
                 <div className="mt-6 grid gap-3 sm:grid-cols-2">
                   {services.map((s) => (
                     <label key={s.id} className={radioCard}>
                       <input type="radio" name="service" value={s.id} checked={serviceId === s.id} onChange={() => setServiceId(s.id)} className="sr-only" />
                       <span><span className="block font-semibold text-bone">{s.name}</span><span className="text-sm text-steel">{s.duration} min</span></span>
-                      <span className="display text-2xl text-gold">{formatPrice(s.price)}</span>
+                      <span className="display text-2xl text-gold">{formatBookingPrice(s.price, business.booking.fee)}</span>
                     </label>
                   ))}
                 </div>
@@ -145,7 +149,7 @@ export function BookingFlow({ initial = {}, onClose }: { initial?: Prefill; onCl
             {step === 2 && (
               <div>
                 <h2 ref={headingRef} tabIndex={-1} className="display h-lg outline-none">PICK A TIME</h2>
-                <p className="mt-2 text-sm text-steel">Sydney time · within opening hours</p>
+                <p className="mt-2 text-sm text-steel">Sydney time · {service?.name} takes about {duration} min</p>
                 <fieldset className="mt-5">
                   <legend className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-steel">Day</legend>
                   <div className="no-scrollbar -mx-1 flex gap-2 overflow-x-auto px-1 py-1">
@@ -176,7 +180,7 @@ export function BookingFlow({ initial = {}, onClose }: { initial?: Prefill; onCl
             {step === 3 && (
               <div>
                 <h2 ref={headingRef} tabIndex={-1} className="display h-lg outline-none">YOUR DETAILS</h2>
-                <p className="mt-2 text-sm text-steel">{service?.name} · {barber?.name ?? 'Anyone available'} · {day?.long} around {time}</p>
+                <p className="mt-2 text-sm text-steel">{service?.name} · {barber?.name ?? 'Anyone available'} · {day?.long} around {time}{service ? ` · ${formatBookingPrice(service.price, business.booking.fee)}` : ''}</p>
                 <div className="mt-6 grid gap-5">
                   <div>
                     <label htmlFor="bk-name" className="text-xs font-semibold uppercase tracking-[0.18em] text-steel">Name</label>

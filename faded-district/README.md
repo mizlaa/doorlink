@@ -23,7 +23,7 @@ Everything editable lives in **`/data`**:
 | File | What it controls |
 | --- | --- |
 | `business.ts` | Name, phone, address, geo, Instagram, rating, Google link, **opening hours**, booking provider |
-| `services.ts` | **Service menu & prices** (placeholder values: replace) |
+| `services.ts` | **Service menu, prices & durations** (booking fee is `booking.fee` in `business.ts`) |
 | `barbers.ts` | **Barbers** (names, role, specialty, photo path, Instagram) |
 | `reviews.ts` | Reviews shown in the marquee |
 | `styles.ts` | Fade Style Explorer cards (links to a service id for pricing / booking prefill) |
@@ -91,7 +91,7 @@ Re-run after changing a scene's look.
 4. Add your domain under *Settings → Domains*.
 
 ## Things to replace before launch
-- Service prices/durations and barber names/photos (placeholders)
+- Barber names and photos (placeholders), Hot Wax duration (assumed 30 min)
 - `business.googleReviewsUrl` → the exact Google Maps place link
 - Footer "Studio credit" text; `siteUrl` domain
 - Map tiles use CARTO dark (free, attribution required). For heavy traffic, use your own Mapbox/Stadia key.

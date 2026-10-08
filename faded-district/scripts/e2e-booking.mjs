@@ -11,7 +11,7 @@ await page.getByRole('button', { name: 'Book', exact: true }).first().click();
 const dlg = page.getByRole('dialog', { name: 'Book a chair' });
 await dlg.waitFor();
 // step 1: keyboard-select the first service via arrow keys then continue with Enter
-await dlg.getByLabel(/Skin Fade/).check({ force: true });
+await dlg.locator('input[value="skin-fade"]').check({ force: true });
 await page.keyboard.press('Enter');
 await dlg.getByLabel(/Anyone available/).check({ force: true });
 await dlg.getByRole('button', { name: 'Continue' }).click();
