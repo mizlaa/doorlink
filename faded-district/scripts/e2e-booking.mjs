@@ -11,9 +11,9 @@ await page.getByRole('button', { name: 'Book', exact: true }).first().click();
 const dlg = page.getByRole('dialog', { name: 'Book a chair' });
 await dlg.waitFor();
 // step 1: keyboard-select the first service via arrow keys then continue with Enter
-await dlg.getByLabel(/Skin Fade/).check();
+await dlg.getByLabel(/Skin Fade/).check({ force: true });
 await page.keyboard.press('Enter');
-await dlg.getByLabel(/Anyone available/).check();
+await dlg.getByLabel(/Anyone available/).check({ force: true });
 await dlg.getByRole('button', { name: 'Continue' }).click();
 // step 3: first enabled time
 const t = dlg.locator('input[name=time]:not([disabled])').first();
@@ -21,7 +21,7 @@ await t.check({ force: true });
 await dlg.getByRole('button', { name: 'Continue' }).click();
 // step 4 validation
 await dlg.getByRole('button', { name: 'Create request' }).click();
-console.log('validation shown:', await dlg.getByText('Please enter your name.').isVisible());
+console.log('validation shown:', await dlg.getByText('Please enter your name.').waitFor({ timeout: 2000 }).then(() => true, () => false));
 await dlg.getByLabel('Name').fill('Sam');
 await dlg.getByLabel('Mobile number').fill('0412 345 678');
 await dlg.getByRole('button', { name: 'Create request' }).click();

@@ -59,7 +59,7 @@ export function BookingFlow({ initial = {}, onClose }: { initial?: Prefill; onCl
     setResult(res);
   };
 
-  const onSubmit = (e: React.FormEvent) => { e.preventDefault(); if (canNext) next(); };
+  const onSubmit = (e: React.FormEvent) => { e.preventDefault(); if (canNext || step === 3) next(); };
 
   const variants = { enter: (d: number) => ({ opacity: 0, x: 40 * d, filter: 'blur(8px)' }), center: { opacity: 1, x: 0, filter: 'blur(0px)' }, exit: (d: number) => ({ opacity: 0, x: -40 * d, filter: 'blur(8px)' }) };
 
