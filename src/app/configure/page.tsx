@@ -62,8 +62,7 @@ export default async function ConfigurePage({ searchParams }: PageProps) {
       <header className="mb-8 max-w-prose">
         <h1 className="text-2xl font-semibold tracking-tight text-graphite">Design your door</h1>
         <p className="mt-2 text-graphite-soft">
-          Pick the type, size and finish, watch it change on the house, then send the specification to
-          technicians in your area for a price.
+          Pick a style, then get quotes from local technicians.
         </p>
       </header>
 

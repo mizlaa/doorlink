@@ -55,7 +55,7 @@ export function RequestForm({
             </Select>
           </Field>
 
-          <Field label="Job title" htmlFor="title" hint='A short summary, for example, "Roller door will not close fully".'>
+          <Field label="Job title" htmlFor="title" hint='e.g. "Roller door won’t close"'>
             <Input id="title" name="title" required maxLength={120} defaultValue={prefill?.title ?? ''} />
           </Field>
         </div>
@@ -63,7 +63,7 @@ export function RequestForm({
         <Field
           label="Describe the problem"
           htmlFor="message"
-          hint="The more detail, the more accurate the quotes. Include what happens, any noises, and when it started."
+          hint="What happens, any noises, when it started."
         >
           <Textarea
             id="message"
@@ -78,7 +78,7 @@ export function RequestForm({
         <Field
           label="Which product is it?"
           htmlFor="modelId"
-          hint="Optional. Skip it if you do not know. You can find it later with Find your part."
+          hint="Optional."
         >
           <Select id="modelId" name="modelId" defaultValue="">
             <option value="">Not sure / not listed</option>
@@ -128,7 +128,7 @@ export function RequestForm({
         <Field
           label="Preferred times"
           htmlFor="preferredTiming"
-          hint='Optional, for example, "weekday mornings" or "after 4pm".'
+          hint='Optional, e.g. "weekday mornings"'
         >
           <Input id="preferredTiming" name="preferredTiming" />
         </Field>
@@ -138,10 +138,6 @@ export function RequestForm({
         <legend className="text-sm font-semibold uppercase tracking-[0.14em] text-graphite">
           Budget <span className="font-normal normal-case text-zinc-deep">(optional)</span>
         </legend>
-        <p className="text-sm text-zinc-deep">
-          A rough range helps technicians decide whether to quote. Leave both blank if you would rather just
-          see what comes back.
-        </p>
         <div className="grid gap-4 sm:grid-cols-2">
           <Field label="From (AUD)" htmlFor="budgetMin">
             <Input id="budgetMin" name="budgetMin" type="number" min="0" step="1" inputMode="decimal" />
@@ -166,14 +162,13 @@ export function RequestForm({
           </Field>
         </div>
 
-        <Field label="Phone" htmlFor="phone" hint="Optional, but technicians usually quote faster with one.">
+        <Field label="Phone" htmlFor="phone" hint="Optional. Quotes come faster with one.">
            <Input id="phone" name="phone" type="tel" autoComplete="tel" />
         </Field>
 
         {!signedIn && (
           <p className="rounded-md border border-line bg-rail p-3 text-sm text-graphite-soft">
-             You can post without an account. Signing in first lets you track quotes and compare
-            technicians from your dashboard.
+            No account needed. Sign in to track your quotes.
           </p>
         )}
       </fieldset>
