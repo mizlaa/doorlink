@@ -3,36 +3,47 @@ import type { Config } from 'tailwindcss'
 /**
  * Doorlink design tokens.
  *
- * The interface uses one restrained industrial palette. Orange is reserved
- * for the current action or a single status highlight in a visual group.
+ * The Doorlink colour system: bright, architectural and calm. Soft Grey
+ * pages, Pure White surfaces, Deep Navy text, and Architectural Blue for
+ * actions, selections and focus. Orange is kept only for warnings, and
+ * Natural Green for positive status. Token names are semantic and
+ * predate this palette, so `graphite` is the text colour and `signal`
+ * the action colour.
+ *
+ * Secondary text uses a slate a step deeper than the #64748B in the
+ * brand sheet: that value falls just short of 4.5:1 on the Soft Grey
+ * page background, and secondary text sits on both.
  */
 const config: Config = {
   content: ['./src/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        paper: '#0B0B0C',
-        rail: '#141416',
-        line: '#2A2A2E',
+        paper: '#F3F6F8',
+        rail: '#FFFFFF',
+        line: '#DCE4EC',
         zinc: {
-          DEFAULT: '#A1A1A6',
-          deep: '#A1A1A6',
+          DEFAULT: '#5A6A80',
+          deep: '#5A6A80',
         },
         graphite: {
-          DEFAULT: '#FFFFFF',
-          soft: '#A1A1A6',
+          DEFAULT: '#17324D',
+          soft: '#5A6A80',
         },
         signal: {
-          DEFAULT: '#FF6A00',
-          hover: '#FF8124',
-          tint: 'rgba(255,106,0,0.12)',
+          DEFAULT: '#1769D2',
+          hover: '#1257B0',
+          tint: 'rgba(23,105,210,0.10)',
         },
         caution: {
-          DEFAULT: '#FF6A00',
-          tint: 'rgba(255,106,0,0.12)',
+          DEFAULT: '#B4530A',
+          tint: 'rgba(180,83,10,0.10)',
         },
-        good: '#A1A1A6',
-        bad: '#FF6A00',
+        // Natural Green (#70B77E) is too light to carry text; this is the
+        // same hue deepened to 4.5:1. Use `natural` for decorative marks.
+        good: '#2E7D46',
+        natural: '#70B77E',
+        bad: '#C0362C',
       },
       fontFamily: {
         sans: ['var(--font-plex-sans)', 'system-ui', 'sans-serif'],
@@ -50,8 +61,8 @@ const config: Config = {
         lg: '10px',
       },
       boxShadow: {
-        panel: '0 12px 28px rgba(0, 0, 0, 0.24)',
-        lift: '0 16px 32px rgba(0, 0, 0, 0.3)',
+        panel: '0 1px 2px rgba(23, 50, 77, 0.05), 0 12px 28px -12px rgba(23, 50, 77, 0.16)',
+        lift: '0 1px 2px rgba(23, 50, 77, 0.06), 0 18px 36px -14px rgba(23, 50, 77, 0.22)',
       },
       maxWidth: {
         prose: '68ch',
