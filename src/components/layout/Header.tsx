@@ -113,7 +113,7 @@ export async function Header() {
           <span>Doorlink</span>
         </Link>
 
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
           <HeaderSearch />
           {NAV_LINKS.map((link) => (
             <Link
@@ -136,7 +136,7 @@ export async function Header() {
           )}
         </nav>
 
-        <div className="flex items-center gap-1 md:hidden">
+        <div className="flex items-center gap-1 lg:hidden">
           <HeaderSearch />
           <MobileNavToggle
             links={mobileLinks}
