@@ -13,7 +13,7 @@ export default function FindPage() {
     <div className="mx-auto max-w-shell px-4 py-10">
       <h1 className="text-2xl font-semibold text-graphite">Find your product</h1>
       <p className="mt-2 max-w-prose text-graphite-soft">
-        Work through category, manufacturer and model to reach the right product.
+        Pick the category, then the make and model.
       </p>
       <Panel className="mt-6">
         <PanelHeader>

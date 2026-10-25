@@ -8,7 +8,6 @@ import { isDatabaseUnreachable } from '@/lib/db-errors'
 import {
   COMPLIANCE_DISCLAIMER,
   DOCUMENT_COUNT,
-  SECTION_COUNT,
   TOTAL_PAGES,
   documentsBySection,
 } from '@/lib/compliance/catalogue'
@@ -54,9 +53,7 @@ export default async function CompliancePage() {
           Compliance &amp; Safety Pack
         </h1>
         <p className="max-w-prose text-graphite-soft">
-          {DOCUMENT_COUNT} documents across {SECTION_COUNT} sections, written for the door, gate and shutter
-          trade. Fill in your business details once and every document carries your logo, your ABN, your
-          insurances and your signature block.
+          {DOCUMENT_COUNT} safety documents for door and gate work, branded with your business.
         </p>
 
         <div className="flex flex-wrap items-baseline gap-x-6 gap-y-2">
@@ -101,13 +98,9 @@ export default async function CompliancePage() {
             rel="noreferrer"
             className="text-sm font-medium text-signal hover:text-signal-hover"
           >
-            Read the source documents before buying (PDF)
+            Preview the documents (PDF)
             <span aria-hidden="true"> →</span>
           </a>
-          <p className="text-micro text-zinc-deep">
-            The unbranded master these templates are written from. What you buy is Doorlink&rsquo;s
-            version, carrying your business details.
-          </p>
         </div>
       </header>
 
@@ -115,16 +108,10 @@ export default async function CompliancePage() {
           a compliance product needs to know it is a template pack rather
           than a compliance service. */}
       <Panel className="border-caution/30 bg-caution-tint">
-        <PanelBody className="flex flex-col gap-2">
-          <h2 className="text-sm font-semibold text-caution">What this is, and what it is not</h2>
-          <p className="max-w-prose text-sm text-graphite">
-            These are templates. They give you a consistent structure and a starting point drawn from common
-            practice in the trade. They are not legal advice, they are not a substitute for a competent person
-            assessing your actual worksites, and completing them does not by itself make a business compliant.
-          </p>
-          <p className="max-w-prose text-sm text-graphite">
-            Doorlink holds the New South Wales legislation list. If you work in another state, the documents
-            will say so and leave the state instruments for you to add rather than citing the wrong ones.
+        <PanelBody>
+          <p className="text-sm text-graphite">
+            <span className="font-semibold text-caution">Templates, not legal advice.</span> NSW legislation
+            is included; other states add their own.
           </p>
         </PanelBody>
       </Panel>
@@ -132,31 +119,19 @@ export default async function CompliancePage() {
       <section className="flex flex-col gap-5">
         <h2 className="text-lg font-semibold text-graphite">What is in the pack</h2>
 
-        <div className="flex flex-col gap-6">
+        {/* Titles only: the preview PDF above has every document in full. */}
+        <div className="grid gap-x-10 gap-y-6 md:grid-cols-2">
           {sections.map(({ section, documents }) => (
-            <div key={section.number} className="flex flex-col gap-3">
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-zinc-deep">
-                {section.number} {section.title}
+            <div key={section.number}>
+              <h3 className="text-micro font-semibold uppercase tracking-wide text-zinc-deep">
+                {section.title}
               </h3>
-              <ul className="flex flex-col gap-3">
+              <ul className="mt-2 divide-y divide-line rounded-lg border border-line bg-rail">
                 {documents.map((doc) => (
-                  <li key={doc.code}>
-                    <Panel>
-                      <PanelBody className="flex flex-col gap-1.5">
-                        <div className="flex flex-wrap items-center gap-2">
-                          <span className="font-code text-micro text-zinc-deep">{doc.code}</span>
-                          <h4 className="font-medium text-graphite">{doc.title}</h4>
-                          <span className="text-micro text-zinc-deep">
-                            {doc.pages} {doc.pages === 1 ? 'page' : 'pages'}
-                          </span>
-                          {doc.jurisdictionSpecific && <Badge tone="caution">State-specific</Badge>}
-                          {doc.needsProfessionalReview && (
-                            <Badge tone="caution">Needs professional review</Badge>
-                          )}
-                        </div>
-                        <p className="max-w-prose text-sm text-zinc-deep">{doc.purpose}</p>
-                      </PanelBody>
-                    </Panel>
+                  <li key={doc.code} className="flex flex-wrap items-center gap-x-2 gap-y-1 px-4 py-3">
+                    <span className="font-medium text-graphite">{doc.title}</span>
+                    {doc.jurisdictionSpecific && <Badge tone="caution">State-specific</Badge>}
+                    {doc.needsProfessionalReview && <Badge tone="caution">Needs review</Badge>}
                   </li>
                 ))}
               </ul>

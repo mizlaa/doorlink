@@ -90,8 +90,7 @@ export default async function MarketplacePage({ searchParams }: { searchParams: 
     <div className="mx-auto max-w-shell px-4 py-10">
       <h1 className="text-2xl font-semibold text-graphite">Marketplace</h1>
       <p className="mt-2 max-w-prose text-graphite-soft">
-        Parts and accessories listed by other Doorlink members and businesses. Meet up and buy directly
-        from whoever's selling. Every listing shows where it comes from.
+        Parts from other members. Buy direct from the seller.
       </p>
 
       <form method="GET" className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">

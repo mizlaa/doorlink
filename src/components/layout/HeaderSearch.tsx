@@ -12,7 +12,7 @@ import Link from 'next/link'
 export function HeaderSearch() {
   return (
     <>
-      <form action="/search" className="hidden items-center md:flex">
+      <form action="/search" className="hidden items-center lg:flex">
         <label htmlFor="header-search" className="sr-only">
           Search Doorlink
         </label>
@@ -29,7 +29,7 @@ export function HeaderSearch() {
       <Link
         href="/search"
         aria-label="Search"
-        className="inline-flex h-10 w-10 items-center justify-center rounded text-graphite hover:bg-rail md:hidden"
+        className="inline-flex h-10 w-10 items-center justify-center rounded text-graphite hover:bg-rail lg:hidden"
       >
         <svg width="20" height="20" viewBox="0 0 22 22" fill="none" aria-hidden="true">
           <circle cx="9.5" cy="9.5" r="5.5" stroke="currentColor" strokeWidth="1.7" />
