@@ -121,12 +121,11 @@ export default async function JobBoardPage() {
   const matchingCount = matchedLeads.filter((entry) => entry.match.score > 0).length
 
   return (
-    <div className="flex flex-col gap-10">
+    <div className="mx-auto flex max-w-shell flex-col gap-10 px-4 py-10">
       <header>
-        <h1 className="text-xl font-semibold text-graphite">Job board</h1>
+        <h1 className="text-2xl font-semibold text-graphite">Job board</h1>
         <p className="mt-1 max-w-prose text-sm text-zinc-deep">
-          Open requests from customers. Send a quote to be considered. The customer chooses who to hire, and
-          only then do you exchange contact details.
+          Quote on local jobs. Contact details are shared once you&rsquo;re hired.
         </p>
         {matcher ? (
           matchingCount > 0 && (
