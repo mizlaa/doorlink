@@ -27,7 +27,7 @@ export function MobileNavToggle({
     <>
       <button
         type="button"
-        className="flex h-11 w-11 items-center justify-center rounded md:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-signal"
+        className="flex h-11 w-11 items-center justify-center rounded lg:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-signal"
         aria-expanded={open}
         aria-controls="mobile-nav"
         onClick={() => setOpen((value) => !value)}
@@ -45,7 +45,7 @@ export function MobileNavToggle({
       {open && (
         <nav
           id="mobile-nav"
-          className="absolute inset-x-0 top-full z-10 border-t border-line bg-paper md:hidden"
+          className="absolute inset-x-0 top-full z-10 border-t border-line bg-paper lg:hidden"
         >
           <ul className="flex flex-col">
             {links.map((link) => (

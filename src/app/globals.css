@@ -3,15 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0B0B0C;
-  --surface: #141416;
-  --surface-raised: #1C1C1F;
-  --border: #2A2A2E;
-  --text: #FFFFFF;
-  --text-muted: #A1A1A6;
-  --accent: #FF6A00;
-  --accent-hover: #FF8124;
-  --accent-dim: rgba(255, 106, 0, 0.12);
+  /* Doorlink colour system: Soft Grey pages, Pure White surfaces, Deep
+     Navy text and Architectural Blue for actions. Mirrors tailwind.config. */
+  --bg: #F3F6F8;
+  --surface: #FFFFFF;
+  --surface-raised: #F8FAFC;
+  --border: #DCE4EC;
+  --text: #17324D;
+  --text-muted: #5A6A80;
+  --accent: #1769D2;
+  --accent-hover: #1257B0;
+  --accent-dim: rgba(23, 105, 210, 0.12);
+  --natural: #70B77E;
 }
 
 /* Respected globally, not just on individual animated components. */
@@ -32,10 +35,10 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-/* Native selects: room between the value and the chevron, and a dark option list. */
+/* Native selects: room between the value and the chevron, and a light option list. */
 .field-select {
-  color-scheme: dark;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6.5 8 10.5 12 6.5' stroke='%23A1A1A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  color-scheme: light;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6.5 8 10.5 12 6.5' stroke='%235A6A80' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 0.875rem center;
   background-size: 1rem;
@@ -290,42 +293,30 @@ body {
 }
 
 /* -------------------------------------------------------------------------
-   CSS garage-door introduction
+   Garage-door simulator (home hero)
+
+   A photographic plate supplies the house; the door is four live panels
+   registered over it. The stage keeps the plate's aspect ratio and covers
+   the scene, so the door coordinates below are fractions of the plate.
    ------------------------------------------------------------------------- */
 
 .garage-door-hero {
   position: relative;
-  min-height: calc(100svh - 65px);
-  overflow: hidden;
   background: var(--bg);
 }
 
-.garage-door-hero::before {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  content: '';
-  opacity: 0.4;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
-  background-size: 40px 40px;
-  mask-image: linear-gradient(to bottom, #000, transparent 86%);
-}
-
-.garage-door-hero-grid {
-  position: relative;
-  z-index: 1;
+.garage-door-hero-inner {
   display: grid;
   width: min(1248px, calc(100% - 32px));
-  min-height: calc(100svh - 65px);
   margin: 0 auto;
-  align-items: center;
   gap: 32px;
-  padding: 48px 0 64px;
+  padding: 56px 0 64px;
 }
 
 .garage-door-hero-copy {
-  max-width: 480px;
+  display: grid;
+  gap: 24px;
+  align-items: end;
 }
 
 .garage-door-kicker {
@@ -339,22 +330,21 @@ body {
 }
 
 .garage-door-hero-copy h1 {
-  margin-top: 24px;
+  margin-top: 16px;
   color: var(--text);
-  font-size: clamp(40px, 5vw, 64px);
+  font-size: clamp(36px, 4.4vw, 56px);
   font-weight: 600;
-  letter-spacing: -0.04em;
-  line-height: 1.02;
+  letter-spacing: -0.035em;
+  line-height: 1.04;
 }
 
 .garage-door-hero-copy h1 span {
   display: block;
-  color: var(--text-muted);
+  color: var(--accent);
 }
 
 .garage-door-hero-description {
-  max-width: 46ch;
-  margin-top: 24px;
+  max-width: 48ch;
   color: var(--text-muted);
   font-size: 16px;
   line-height: 24px;
@@ -364,7 +354,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 32px;
+  margin-top: 24px;
 }
 
 .garage-door-primary-action,
@@ -376,16 +366,18 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  border-radius: 6px;
-  padding: 0 16px;
+  border-radius: 10px;
+  padding: 0 18px;
   font-size: 14px;
   font-weight: 600;
-  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease,
+    box-shadow 160ms ease, transform 160ms ease;
 }
 
 .garage-door-primary-action {
   background: var(--accent);
-  color: var(--text);
+  color: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(23, 50, 77, 0.12);
 }
 
 .garage-door-primary-action:hover {
@@ -394,12 +386,21 @@ body {
 
 .garage-door-secondary-action {
   border: 1px solid var(--border);
+  background: var(--surface);
   color: var(--text);
 }
 
 .garage-door-secondary-action:hover {
-  border-color: var(--text-muted);
-  background: var(--surface);
+  border-color: #B9C6D3;
+  background: var(--surface-raised);
+}
+
+.garage-door-primary-action:focus-visible,
+.garage-door-secondary-action:focus-visible,
+.garage-door-open-button:focus-visible,
+.garage-door-replay-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .garage-door-primary-action:active,
@@ -410,7 +411,7 @@ body {
 }
 
 .garage-door-hero-meta {
-  margin-top: 48px;
+  margin-top: 24px;
   color: var(--text-muted);
   font-family: var(--font-plex-mono), ui-monospace, monospace;
   font-size: 12px;
@@ -418,367 +419,265 @@ body {
   line-height: 16px;
 }
 
-.garage-door-hero-scene {
+/* The card. White, a hairline border and a soft shadow: separated from
+   the page without a dark frame. */
+.garage-door-sim {
   position: relative;
-  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: 0 1px 2px rgba(23, 50, 77, 0.05), 0 18px 48px -24px rgba(23, 50, 77, 0.22);
 }
 
 .garage-door-scene {
   position: relative;
-  isolation: isolate;
-  min-height: 520px;
+  container-type: size;
+  /* Taller than the plate: the extra depth below it is where the driveway
+     fades out and the controls sit, clear of the door. */
+  aspect-ratio: 1534 / 770;
+  min-height: 300px;
   overflow: hidden;
   cursor: ns-resize;
   touch-action: none;
-   background:
-     radial-gradient(circle at 50% 44%, rgba(255, 129, 36, 0.08), transparent 32%),
-     #101012;
-  perspective: 1100px;
-  perspective-origin: 52% 44%;
+  background: #CFE3F5;
   user-select: none;
+  -webkit-user-select: none;
 }
 
-.garage-door-scene::after {
+.garage-door-scene.is-dragging {
+  cursor: grabbing;
+}
+
+/* The plate at its own aspect ratio, anchored to the top of the scene
+   and centred. (The door's centre is 51.43% across the plate — close
+   enough to centre at this width; phones re-centre on it below.) */
+.garage-door-stage {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: max(100cqw, calc(100cqh * 1534 / 770));
+  aspect-ratio: 1534 / 686;
+  transform: translateX(-50%);
+}
+
+.garage-door-plate {
   position: absolute;
   inset: 0;
-  z-index: 5;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
-  content: '';
-  border: 1px solid var(--border);
 }
 
-.garage-door-skyline {
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-  background:
-    radial-gradient(circle at 77% 24%, rgba(255, 129, 36, 0.16), transparent 19%),
-    radial-gradient(circle at 21% 46%, rgba(76, 99, 124, 0.2), transparent 33%),
-    linear-gradient(155deg, #2B303B 0%, #17191F 54%, #0B0B0C 100%);
-  transform: translateZ(-100px) scale(1.12);
-  transform-origin: center;
-  animation: garage-door-sky-drift 14s ease-in-out infinite alternate;
-}
-
-.garage-door-skyline::before,
-.garage-door-skyline::after {
-  position: absolute;
-  bottom: 22%;
-  width: 18%;
-  height: 48%;
-  content: '';
-  background: linear-gradient(160deg, #30343D, #1C1C1F 72%);
-  box-shadow: 0 0 0 1px var(--border), 18px 18px 32px rgba(0, 0, 0, 0.22);
-}
-
-.garage-door-skyline::before {
-  left: -4%;
-  transform: skewY(-12deg);
-}
-
-.garage-door-skyline::after {
-  right: -4%;
-  transform: skewY(12deg);
-}
-
-.garage-door-sun {
-  position: absolute;
-  z-index: 1;
-  top: 13%;
-  right: 18%;
-  width: 64px;
-  height: 64px;
-  border: 1px solid rgba(255, 129, 36, 0.68);
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #ff8124, #ff6a00 58%, rgba(255, 106, 0, 0.18) 60%, transparent 72%);
-  box-shadow: 0 0 0 12px rgba(255, 106, 0, 0.04), 0 0 42px rgba(255, 106, 0, 0.16);
-  opacity: 0.9;
-  transform: translateZ(-36px);
-  animation: garage-door-sun-pulse 5s ease-in-out infinite alternate;
-}
-
-.garage-door-birds {
-  position: absolute;
-  z-index: 1;
-  top: 23%;
-  left: 14%;
-  display: flex;
-  gap: 18px;
-  align-items: flex-start;
-  opacity: 0.68;
-  transform: translateZ(-18px);
-  animation: garage-door-birds-drift 9s ease-in-out infinite alternate;
-}
-
-.garage-door-birds span {
-  position: relative;
-  display: block;
-  width: 18px;
-  height: 9px;
-   border-top: 2px solid #5eb7ff;
-  border-radius: 50% 50% 0 0;
-  transform: rotate(-12deg);
-}
-
-.garage-door-birds span::after {
-  position: absolute;
-  top: -1px;
-  left: 8px;
-  width: 10px;
-  height: 9px;
-   border-top: 2px solid #5eb7ff;
-  border-radius: 50% 50% 0 0;
-  content: '';
-  transform: rotate(24deg);
-}
-
-.garage-door-birds span:nth-child(2) {
-  margin-top: 14px;
-  transform: scale(0.72) rotate(8deg);
-}
-
-.garage-door-birds span:nth-child(3) {
-  margin-top: -7px;
-  transform: scale(0.52) rotate(-18deg);
-}
-
-.garage-door-bushes {
-  position: absolute;
-  z-index: 3;
-  right: 2%;
-  bottom: 8%;
-  left: 2%;
-  height: 23%;
-  pointer-events: none;
-  transform: perspective(500px) rotateX(12deg);
-  transform-origin: bottom;
-  animation: garage-door-bush-drift 7s ease-in-out infinite alternate;
-}
-
-.garage-door-bush {
-  position: absolute;
-  bottom: 0;
-  width: 25%;
-  height: 75%;
-   border: 1px solid #2d7d4b;
-  border-radius: 52% 48% 16% 16%;
-  background:
-     radial-gradient(circle at 28% 35%, #83d36b 0 8%, transparent 9%),
-     radial-gradient(circle at 64% 28%, #4eaf59 0 11%, transparent 12%),
-     radial-gradient(circle at 45% 64%, #28733e 0 18%, transparent 19%),
-     linear-gradient(160deg, #3c9850, #123d27 72%);
-   box-shadow: 0 12px 18px rgba(0, 0, 0, 0.36), 0 0 22px rgba(54, 180, 91, 0.16), inset 8px 5px 0 rgba(255, 255, 255, 0.08);
-}
-
-.garage-door-bush-left {
-  left: -2%;
-  transform: scale(0.78) rotate(-5deg);
-}
-
-.garage-door-bush-center {
-  right: 37%;
-  height: 56%;
-  transform: scale(0.62);
-}
-
-.garage-door-bush-right {
-  right: -2%;
-  transform: scale(0.88) rotate(6deg);
-}
-
+/* The door's exact rectangle in the plate. Everything inside is clipped
+   to it, so panels pass up behind the lintel. */
 .garage-door-opening {
   position: absolute;
-  top: 11%;
-  right: 12%;
-  bottom: 12%;
-  left: 12%;
+  top: 30.321%;
+  left: 23.729%;
+  width: 55.411%;
+  height: 59.184%;
   overflow: hidden;
-  transform: translateZ(18px) rotateY(-2deg) rotateX(1deg);
-  transform-style: preserve-3d;
-  background: #0B0B0C;
-   box-shadow: 0 28px 42px rgba(0, 0, 0, 0.42), 0 0 0 1px rgba(255, 129, 36, 0.18), inset 0 0 0 10px #1C1C1F;
+  perspective: 1100px;
+  perspective-origin: 50% 0%;
 }
 
-.garage-door-opening::before,
-.garage-door-opening::after {
+/* What the door reveals: a dim garage, lit from a ceiling fitting, with a
+   concrete floor running back from the threshold. */
+.garage-door-interior {
   position: absolute;
-  z-index: 3;
-  top: 0;
-  bottom: 0;
-  width: 10px;
-  content: '';
-  background: #1C1C1F;
-}
-
-.garage-door-opening::before {
-  left: 0;
-}
-
-.garage-door-opening::after {
-  right: 0;
-}
-
-.garage-door-back-wall {
-  position: absolute;
-  inset: 10px;
+  inset: 0;
   background:
-    linear-gradient(90deg, transparent 49.8%, rgba(255, 255, 255, 0.035) 50%, transparent 50.2%),
-    radial-gradient(circle at 45% 28%, rgba(90, 104, 124, 0.14), transparent 50%),
-    #0B0B0C;
+    linear-gradient(to bottom, rgba(10, 14, 20, 0.72), rgba(10, 14, 20, 0) 26%),
+    radial-gradient(ellipse 46% 38% at 50% 18%, rgba(255, 244, 226, 0.34), rgba(255, 244, 226, 0) 70%),
+    linear-gradient(to bottom, #49505A 0%, #5A616B 52%, #444A52 66%);
+  /* Ambient occlusion where the side walls and ceiling meet. */
+  box-shadow: inset 0 0 64px 8px rgba(8, 12, 18, 0.5), inset 0 18px 28px -12px rgba(8, 12, 18, 0.6);
 }
 
-.garage-door-shadow {
+.garage-door-interior::before {
   position: absolute;
-  inset: 10px;
-  z-index: 1;
-  pointer-events: none;
-  background: radial-gradient(ellipse at 50% 46%, rgba(255, 255, 255, 0.08), transparent 56%);
-  opacity: 0.7;
+  top: 8%;
+  left: 50%;
+  width: 22%;
+  height: 2.2%;
+  border-radius: 999px;
+  content: '';
+  background: #FFF6E6;
+  box-shadow: 0 0 24px 6px rgba(255, 240, 214, 0.38);
+  transform: translateX(-50%);
 }
 
-.garage-door-floor {
+.garage-door-interior::after {
   position: absolute;
-  z-index: 2;
   right: 0;
   bottom: 0;
   left: 0;
-  height: 24%;
-  transform: perspective(260px) rotateX(52deg);
-  transform-origin: bottom;
-  background: repeating-linear-gradient(175deg, #1C1C1F 0 12px, #141416 12px 14px);
+  height: 34%;
+  content: '';
+  /* Concrete running back from the threshold: darker at the back wall,
+     lighter where daylight falls on it, shaded towards the side walls. */
+  background:
+    linear-gradient(to right, rgba(12, 16, 22, 0.42), rgba(12, 16, 22, 0) 18% 82%, rgba(12, 16, 22, 0.42)),
+    radial-gradient(ellipse 55% 60% at 50% 0%, rgba(255, 244, 226, 0.12), transparent 70%),
+    linear-gradient(to bottom, #474C52 0%, #6A6D6E 38%, #92938F 82%, #A9A9A3 100%);
+  box-shadow: inset 0 14px 16px -12px rgba(0, 0, 0, 0.55);
 }
 
 .garage-door-panels {
   position: absolute;
-  z-index: 4;
-  top: 14%;
-  right: 8%;
-  left: 8%;
-  height: 66%;
-  transform: translateZ(24px);
+  z-index: 2;
+  inset: 0;
+  container-type: size;
   transform-style: preserve-3d;
 }
 
+/* Each panel carries its own slice of the photographed door, cut along
+   the real seams — which is why the four are not equal heights. */
 .garage-door-panel {
   position: absolute;
   right: 0;
   left: 0;
-  height: 25%;
-  overflow: hidden;
   transform-origin: top center;
-  transform-style: preserve-3d;
-   border: 1px solid #636773;
-  background:
-    linear-gradient(105deg, rgba(255, 255, 255, 0.06), transparent 23% 73%, rgba(255, 106, 0, 0.08)),
-    linear-gradient(160deg, #383A42, #242428 62%, #1D1D21);
-   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.13),
-    inset 0 -10px 20px rgba(0, 0, 0, 0.13),
-     0 8px 16px rgba(0, 0, 0, 0.22),
-     0 0 18px rgba(107, 142, 184, 0.06);
+  /* Charcoal until the texture arrives, so a closed door never reads as
+     open while it loads. */
+  background-color: #3E444B;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  backface-visibility: hidden;
   will-change: transform;
+  transition: transform 900ms cubic-bezier(0.33, 0.06, 0.2, 1);
+}
+
+/* While a finger or pointer is on the door, it follows exactly. */
+.garage-door-scene.is-dragging .garage-door-panel {
+  transition: none;
 }
 
 .garage-door-panel:nth-child(1) {
   top: 0;
+  height: 22.167%;
+  background-image: url('/images/simulator/door-panel-1.webp');
 }
 
 .garage-door-panel:nth-child(2) {
-  top: 25%;
+  top: 22.167%;
+  height: 26.108%;
+  background-image: url('/images/simulator/door-panel-2.webp');
 }
 
 .garage-door-panel:nth-child(3) {
-  top: 50%;
+  top: 48.276%;
+  height: 25.123%;
+  background-image: url('/images/simulator/door-panel-3.webp');
 }
 
 .garage-door-panel:nth-child(4) {
-  top: 75%;
-}
-
-.garage-door-panel-groove {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 3px;
-  background: #0B0B0C;
-}
-
-.garage-door-panel-highlight {
-  position: absolute;
-  top: 8px;
-  right: 10px;
-  bottom: 8px;
-  left: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: inset 12px 0 22px rgba(103, 119, 143, 0.08), inset -12px 0 22px rgba(255, 106, 0, 0.04);
-}
-
-.garage-door-led {
-  position: absolute;
-  right: 4px;
-  bottom: -2px;
-  left: 4px;
-  height: 3px;
-  background: var(--accent);
-  box-shadow: 0 0 14px rgba(255, 106, 0, 0.5);
-}
-
-.garage-door-light {
-  position: absolute;
-  top: 9%;
-  left: 21%;
-  width: 42%;
-  height: 40%;
-  pointer-events: none;
-  background: linear-gradient(90deg, rgba(81, 111, 145, 0.12), rgba(255, 129, 36, 0.1), transparent);
-  filter: blur(30px);
-  transform: rotate(-18deg);
-  animation: garage-door-light-sweep 8s ease-in-out infinite alternate;
+  top: 73.399%;
+  height: 26.601%;
+  background-image: url('/images/simulator/door-panel-4.webp');
+  /* The bottom edge casts onto the floor once the door lifts. */
+  box-shadow: 0 10px 14px -6px rgba(0, 0, 0, 0.45);
 }
 
 .garage-door-intro {
   position: absolute;
-  z-index: 2;
-  top: 39%;
-  right: 15%;
-  left: 15%;
+  z-index: 1;
+  top: 34%;
+  right: 10%;
+  left: 10%;
   text-align: center;
   transition: opacity 220ms ease, transform 220ms ease;
   will-change: opacity, transform;
 }
 
 .garage-door-intro p {
-  color: var(--text-muted);
-  font-size: 14px;
-  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.72);
+  font-family: var(--font-plex-mono), ui-monospace, monospace;
+  font-size: clamp(10px, 1.1vw, 13px);
+  letter-spacing: 0.22em;
   line-height: 20px;
 }
 
 .garage-door-intro h2 {
-  margin-top: 12px;
-  color: var(--text);
-  font-size: clamp(24px, 3vw, 40px);
+  margin-top: 10px;
+  color: #FFFFFF;
+  font-size: clamp(20px, 2.8vw, 38px);
   font-weight: 600;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
   line-height: 1.05;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
 .garage-door-intro h2 span {
-  color: var(--accent);
+  color: #9CC3F5;
+}
+
+/* Lets the driveway fall away into the card, as in an architectural
+   photograph set on a page, and gives the controls a quiet ground. */
+.garage-door-fade {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* Starts at the door's sill (79.8% down the scene), never over it. */
+  height: 20%;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 58%, #FFFFFF 80%);
+}
+
+.garage-door-scene-note {
+  position: absolute;
+  z-index: 3;
+  top: 20px;
+  right: 20px;
+  border: 1px solid rgba(220, 228, 236, 0.9);
+  border-radius: 999px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--text);
+  font-family: var(--font-plex-mono), ui-monospace, monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  line-height: 16px;
+  pointer-events: none;
+  backdrop-filter: blur(6px);
+}
+
+.garage-door-sim-bar {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 24px 22px;
+  pointer-events: none;
 }
 
 .garage-door-hint {
-  position: absolute;
-  z-index: 6;
-  bottom: 20px;
-  left: 20px;
-  color: var(--text-muted);
+  display: inline-flex;
+  min-width: 0;
+  white-space: nowrap;
+  align-items: center;
+  gap: 12px;
+  color: var(--text);
   font-family: var(--font-plex-mono), ui-monospace, monospace;
   font-size: 12px;
+  font-weight: 500;
   letter-spacing: 0.14em;
   opacity: 1;
   transition: opacity 160ms ease;
+}
+
+.garage-door-hint svg {
+  color: var(--text);
+  flex: none;
 }
 
 .garage-door-hint.is-hidden {
@@ -786,28 +685,20 @@ body {
 }
 
 .garage-door-open-button {
-  position: absolute;
-  z-index: 8;
-  right: 20px;
-  bottom: 20px;
-  border: 1px solid var(--accent);
+  flex: none;
+  white-space: nowrap;
+  min-height: 48px;
+  padding: 0 22px;
   background: var(--accent);
-  color: var(--text);
+  color: #FFFFFF;
+  font-family: var(--font-plex-mono), ui-monospace, monospace;
+  letter-spacing: 0.1em;
+  box-shadow: 0 8px 20px -8px rgba(23, 105, 210, 0.55);
+  pointer-events: auto;
 }
 
 .garage-door-open-button:hover {
   background: var(--accent-hover);
-}
-
-.garage-door-scene-note {
-  position: absolute;
-  z-index: 8;
-  top: 20px;
-  right: 20px;
-  color: var(--text-muted);
-  font-family: var(--font-plex-mono), ui-monospace, monospace;
-  font-size: 12px;
-  letter-spacing: 0.12em;
 }
 
 .garage-door-replay {
@@ -830,12 +721,13 @@ body {
 
 .garage-door-replay-button {
   border: 1px solid var(--border);
-  background: var(--surface-raised);
+  background: var(--surface);
   color: var(--text);
 }
 
 .garage-door-replay-button:hover {
   border-color: var(--accent);
+  color: var(--accent);
 }
 
 .garage-door-replay-icon {
@@ -844,93 +736,91 @@ body {
 }
 
 @media (min-width: 900px) {
-  .garage-door-hero-grid {
-    grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1.28fr);
-  }
-}
-
-@media (max-width: 899px) {
-  .garage-door-hero-grid {
-    min-height: auto;
-    padding: 48px 0 32px;
-  }
-
   .garage-door-hero-copy {
-    max-width: none;
-  }
-
-  .garage-door-hero-meta {
-    margin-top: 32px;
-  }
-
-  .garage-door-scene {
-    min-height: min(68svh, 560px);
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 48px;
   }
 }
 
-@media (max-width: 520px) {
-  .garage-door-hero-grid {
+/* Phones: a taller scene so the door stays large, and the controls move
+   below the photograph instead of covering it. */
+@media (max-width: 719px) {
+  .garage-door-hero-inner {
     width: min(100% - 24px, 1248px);
     gap: 24px;
-    padding-top: 32px;
+    padding: 32px 0 40px;
   }
 
   .garage-door-hero-copy h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   .garage-door-hero-description {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 15px;
+    line-height: 23px;
+  }
+
+  .garage-door-sim {
+    border-radius: 16px;
   }
 
   .garage-door-scene {
-    min-height: 440px;
+    aspect-ratio: 4 / 3;
+    min-height: 0;
   }
 
-  .garage-door-opening {
-    top: 14%;
-    right: 8%;
-    bottom: 12%;
-    left: 8%;
+  /* Cover the taller frame: the plate's sides are cropped, door centred. */
+  .garage-door-stage {
+    top: 50%;
+    width: max(100cqw, calc(100cqh * 1534 / 686));
+    transform: translate(-51.43%, -50%);
   }
 
-  .garage-door-sun {
-    top: 11%;
-    right: 11%;
-    width: 46px;
-    height: 46px;
-  }
-
-  .garage-door-birds {
-    top: 20%;
-    left: 10%;
-    transform: scale(0.75);
-    transform-origin: left top;
+  .garage-door-fade {
+    height: 9%;
   }
 
   .garage-door-scene-note {
+    top: 12px;
+    right: 12px;
+    padding: 6px 12px;
     font-size: 10px;
+  }
+
+  .garage-door-sim-bar {
+    position: static;
+    padding: 14px 16px 16px;
   }
 
   .garage-door-hint {
-    bottom: 18px;
-    left: 16px;
+    gap: 8px;
     font-size: 10px;
+    letter-spacing: 0.1em;
   }
 
   .garage-door-open-button {
-    right: 16px;
-    bottom: 16px;
     min-height: 44px;
-    padding: 0 12px;
+    padding: 0 14px;
     font-size: 12px;
+    letter-spacing: 0.06em;
   }
 
   .garage-door-replay {
     align-items: flex-start;
     flex-direction: column;
     padding: 20px 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .garage-door-sim-bar {
+    gap: 10px;
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .garage-door-hint {
+    letter-spacing: 0.04em;
   }
 }
 
@@ -942,67 +832,5 @@ body {
   .garage-door-open-button,
   .garage-door-replay-button {
     transition: none;
-  }
-
-  .garage-door-skyline,
-  .garage-door-sun,
-  .garage-door-birds,
-  .garage-door-bushes,
-  .garage-door-light {
-    animation: none;
-  }
-}
-
-@keyframes garage-door-sky-drift {
-  from {
-    transform: translate3d(-1%, 0, -100px) scale(1.12);
-  }
-
-  to {
-    transform: translate3d(1%, -1%, -100px) scale(1.14);
-  }
-}
-
-@keyframes garage-door-sun-pulse {
-  from {
-    filter: saturate(0.88);
-    transform: translate3d(-3px, 2px, -36px) scale(0.97);
-  }
-
-  to {
-    filter: saturate(1.12);
-    transform: translate3d(3px, -2px, -36px) scale(1.04);
-  }
-}
-
-@keyframes garage-door-birds-drift {
-  from {
-    transform: translate3d(-3px, 2px, -18px);
-  }
-
-  to {
-    transform: translate3d(9px, -4px, -18px);
-  }
-}
-
-@keyframes garage-door-bush-drift {
-  from {
-    transform: perspective(500px) rotateX(12deg) translateX(-2px);
-  }
-
-  to {
-    transform: perspective(500px) rotateX(12deg) translateX(2px);
-  }
-}
-
-@keyframes garage-door-light-sweep {
-  from {
-    opacity: 0.72;
-    transform: rotate(-18deg) translateX(-8px);
-  }
-
-  to {
-    opacity: 1;
-    transform: rotate(-14deg) translateX(18px);
   }
 }
