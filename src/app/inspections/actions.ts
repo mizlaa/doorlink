@@ -417,7 +417,7 @@ export async function saveAnswerAction(input: {
 const submitSchema = z.object({
   inspectionId: z.string().trim().min(1),
   reviewStatement: z.literal('on', {
-    errorMap: () => ({ message: 'Confirm the record reflects the inspection you carried out.' }),
+    error: 'Confirm the record reflects the inspection you carried out.',
   }),
   customerAckName: z.string().trim().max(200).optional(),
   notes: z.string().trim().max(4000).optional(),

@@ -20,7 +20,7 @@ export type SettingsFormState = { error?: string; ok?: boolean }
 // operator did not type.
 const commissionSchema = z.object({
   percent: z.coerce
-    .number({ invalid_type_error: 'Enter the commission as a percentage.' })
+    .number({ error: 'Enter the commission as a percentage.' })
     .min(0, 'The commission cannot be negative.')
     .max(MAX_COMMISSION_BPS / 100, `The commission cannot exceed ${MAX_COMMISSION_BPS / 100}%.`),
 })
@@ -96,7 +96,7 @@ export async function updateCommissionAction(
 
 const compliancePriceSchema = z.object({
   dollars: z.coerce
-    .number({ invalid_type_error: 'Enter the price in dollars.' })
+    .number({ error: 'Enter the price in dollars.' })
     .min(0, 'The price cannot be negative.')
     .max(MAX_COMPLIANCE_PRICE_CENTS / 100, `The price cannot exceed $${MAX_COMPLIANCE_PRICE_CENTS / 100}.`),
 })
