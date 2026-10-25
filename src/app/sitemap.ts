@@ -2,6 +2,10 @@ import type { MetadataRoute } from 'next'
 import { prisma } from '@/lib/prisma'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 
+// Production's schema may not be initialized until publishing completes.
+// Database-backed sitemap entries must be read at request time, not at build.
+export const dynamic = 'force-dynamic'
+
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
 
 // Only genuinely public, indexable routes — not /admin, /my-listings,

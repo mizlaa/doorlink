@@ -6,7 +6,7 @@
 
 run = "npm run dev -- --hostname 0.0.0.0 --port $PORT"
 entrypoint = "src/app/page.tsx"
-modules = ["nodejs-22", "postgresql-16", "python-base-3.13"]
+modules = ["nodejs-22", "python-base-3.13", "postgresql-16"]
 
 hidden = [".next", "node_modules", ".git"]
 
