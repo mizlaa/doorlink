@@ -42,6 +42,7 @@ export function lookFromSpec(spec: DoorSpec): DoorLook {
 
   return {
     kind,
+    finish: spec.finish,
     widthScale,
     heightScale,
     color: colourHex(spec.colour),

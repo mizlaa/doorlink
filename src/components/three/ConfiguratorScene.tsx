@@ -2,18 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { GarageDoorScene, type DoorLook } from './GarageDoorScene'
-
-function supportsWebGL(): boolean {
-  try {
-    const canvas = document.createElement('canvas')
-    return !!(
-      window.WebGLRenderingContext &&
-      (canvas.getContext('webgl') || canvas.getContext('experimental-webgl'))
-    )
-  } catch {
-    return false
-  }
-}
+import { supportsThreeWebGL } from './webgl'
 
 /**
  * The configurator's preview.
@@ -27,7 +16,7 @@ export function ConfiguratorScene({ look, isOpen }: { look: DoorLook; isOpen: bo
   const [supported, setSupported] = useState<boolean | null>(null)
 
   useEffect(() => {
-    setSupported(supportsWebGL())
+    setSupported(supportsThreeWebGL())
   }, [])
 
   if (supported === false) {

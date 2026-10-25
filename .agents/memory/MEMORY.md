@@ -2,3 +2,4 @@
 - [Manual contribution boundary](manual-contributions.md) — route user manual suggestions through review with a public source link until storage is connected.
 - [Workflow port conflicts](workflow-port-conflicts.md) — a stale Next process can make a healthy app look crashed and block the replacement workflow on port 5000.
 - [Prisma client generation](prisma-client-generation.md) — regenerate Prisma Client after schema or branch changes before diagnosing missing types.
+- [WebGL preview limitation](webgl-preview-limit.md) — the hosted screenshot browser may have no WebGL 2 context even when the app workflow is healthy.

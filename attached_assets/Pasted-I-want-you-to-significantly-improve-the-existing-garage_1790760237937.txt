@@ -1,0 +1,536 @@
+I want you to significantly improve the existing garage door 360° simulation in this project.
+
+IMPORTANT:
+Do NOT remove or simplify the existing garage-door configurator functionality.
+Do NOT turn the scene into a static image.
+The garage door must remain an interactive 360°/3D simulation that the user can drag around and inspect.
+Keep the existing “Open the door” interaction and make sure the garage door can still visually open/close.
+The goal is to make the environment around the garage door look genuinely photorealistic and high quality.
+
+I have provided a screenshot showing the current implementation. Use it as a visual reference for the existing UI and layout, but improve the actual 3D scene substantially.
+
+==================================================
+1. OVERALL VISUAL GOAL
+==================================================
+
+Transform the current simplistic/low-poly garage environment into a highly realistic architectural visualization.
+
+The finished scene should look like a professionally photographed modern residential property.
+
+The environment should have:
+
+- Photorealistic house architecture
+- Realistic garage door materials
+- Detailed wall textures
+- Realistic concrete driveway
+- Natural landscaping
+- Realistic bushes and shrubs
+- Realistic trees
+- Grass with visible variation
+- Garden beds
+- Natural soil/mulch
+- Realistic shadows
+- Physically believable lighting
+- Realistic reflections
+- Ambient occlusion
+- Natural depth and perspective
+- Subtle imperfections in materials
+- High-quality PBR textures
+- Realistic scale and proportions
+
+Avoid anything that looks like:
+- Cartoon graphics
+- Low-poly assets
+- Flat-colored geometry
+- Generic green blobs
+- Primitive spheres used as bushes
+- Plastic-looking materials
+- Artificial lighting
+- Excessive saturation
+- Floating objects
+- Repeating obvious textures
+
+The scene should look like a real house photographed with a professional camera.
+
+==================================================
+2. KEEP THE GARAGE DOOR SIMULATION
+==================================================
+
+The garage door is the primary product and must remain clearly visible.
+
+Keep:
+
+- Garage door display
+- Door customization
+- Door opening/closing
+- 360° camera interaction
+- Drag-to-look-around interaction
+- Existing controls
+- Existing door configuration functionality
+- Existing UI structure unless improvements are required
+
+The garage door should remain the visual focal point.
+
+When the user changes:
+
+- Door style
+- Door colour
+- Door finish
+- Door material
+- Window configuration
+- Panel configuration
+- Size
+
+the physical 3D garage door should update accordingly.
+
+Do not fake this with a flat image.
+
+The actual 3D garage door should change.
+
+==================================================
+3. GARAGE DOOR MATERIALS
+==================================================
+
+Make the garage door look physically realistic.
+
+Use proper PBR-style material properties where possible:
+
+- Base colour
+- Roughness
+- Metallic
+- Normal/bump mapping
+- Ambient occlusion
+- Subtle surface variation
+
+Depending on the selected finish, support realistic materials such as:
+
+- Painted steel
+- Matte black
+- Dark charcoal
+- White
+- Warm grey
+- Wood-look finish
+- Natural timber
+- Dark timber
+- Modern aluminium
+
+Avoid perfectly uniform surfaces.
+
+For painted metal:
+
+- Add extremely subtle roughness variation
+- Slight realistic reflections
+- Fine surface texture
+- Accurate edge highlights
+
+For timber:
+
+- Use realistic wood grain
+- Grain should follow the panel direction
+- Avoid repeated identical patterns
+- Add subtle colour variation
+- Add realistic roughness
+
+Garage door panels should have realistic seams and construction details.
+
+==================================================
+4. HOUSE ARCHITECTURE
+==================================================
+
+Replace the current simplistic building geometry with a convincing modern residential garage façade.
+
+Include realistic:
+
+- Stucco/rendered walls
+- Concrete or stone details
+- Window frames
+- Garage opening
+- Roof/eaves
+- Exterior trim
+- Downpipes where appropriate
+- Wall joints
+- Architectural recesses
+- Door frame
+- Exterior lights
+
+Materials should have physical depth.
+
+For example, the wall should not simply be a flat beige colour.
+
+It should have:
+
+- Fine plaster/stucco texture
+- Subtle roughness variation
+- Small imperfections
+- Natural shadowing
+- Realistic edge transitions
+
+Use bevels on architectural edges where appropriate so they catch light naturally.
+
+==================================================
+5. LANDSCAPING
+==================================================
+
+This is one of the most important changes.
+
+Completely remove the current simplistic bushes/low-poly vegetation.
+
+Replace them with realistic landscaping.
+
+Include a believable combination of:
+
+TREES:
+- Mature deciduous trees
+- Smaller ornamental trees
+- Natural branching
+- Detailed leaves
+- Variation in leaf density
+- Realistic trunks and bark
+- Natural silhouettes
+
+BUSHES:
+- Different shrub species
+- Dense foliage
+- Individual leaves where practical
+- Different sizes
+- Different heights
+- Natural irregular shapes
+
+GROUND PLANTS:
+- Ornamental grasses
+- Small flowering plants
+- Ground cover
+- Perennials
+- Low shrubs
+
+GRASS:
+- Realistic lawn
+- Slight colour variation
+- Different blade lengths
+- Natural edge transitions
+- No perfectly uniform green surface
+
+GARDEN BEDS:
+- Dark natural soil
+- Mulch
+- Rocks/stones where appropriate
+- Natural plant spacing
+
+Vegetation should be distributed naturally.
+
+Do NOT arrange plants in obvious repeating patterns.
+
+Do NOT use identical copies of the same bush everywhere.
+
+Use variation in:
+
+- Scale
+- Rotation
+- Colour
+- Density
+- Species
+- Position
+
+==================================================
+6. REMOVE BIRDS
+==================================================
+
+Remove ALL birds from the scene.
+
+There should be:
+
+- No flying birds
+- No bird models
+- No bird silhouettes
+- No bird animations
+
+Do not replace them with another distracting animated element.
+
+==================================================
+7. DRIVEWAY
+==================================================
+
+Make the driveway realistic.
+
+Use a realistic concrete driveway with:
+
+- Fine concrete texture
+- Slight colour variation
+- Expansion joints
+- Subtle cracks/imperfections
+- Natural roughness
+- Realistic contact shadows
+
+The driveway should not look like a single flat grey plane.
+
+Make sure the garage door physically meets the driveway correctly.
+
+Add realistic shadows where:
+
+- House meets ground
+- Garage door meets ground
+- Plants meet ground
+- Trees cast shadows
+- Architectural features block sunlight
+
+==================================================
+8. LIGHTING
+==================================================
+
+Use realistic outdoor lighting.
+
+Aim for a high-end architectural photography look.
+
+Use:
+
+- Natural daylight
+- Physically believable sun direction
+- Soft ambient lighting
+- Realistic sky illumination
+- Ambient occlusion
+- Contact shadows
+- Natural reflections
+
+Avoid:
+
+- Extremely bright white lighting
+- Neon colours
+- Overexposure
+- Completely flat lighting
+- Excessive HDR glow
+
+The lighting should create believable depth.
+
+The scene should look particularly good during daytime.
+
+If technically practical, use a realistic sky/environment map.
+
+==================================================
+9. CAMERA / 360° EXPERIENCE
+==================================================
+
+The 360° interaction needs to feel smooth and professional.
+
+The user should be able to:
+
+- Drag horizontally to rotate around the property
+- Drag vertically within reasonable limits
+- Inspect the garage from different angles
+- See the surrounding landscaping
+- See architectural details
+- Return naturally to the primary garage-door view
+
+Use sensible camera limits so the user cannot accidentally:
+
+- Go underground
+- Look through the house
+- Rotate upside down
+- Clip through walls
+- Zoom inside objects
+
+Camera movement should have subtle smoothing/inertia.
+
+Avoid an overly sensitive camera.
+
+The default camera position should showcase the garage door clearly.
+
+==================================================
+10. REALISTIC SCALE
+==================================================
+
+Everything must have believable real-world proportions.
+
+The garage door should be approximately realistic residential dimensions.
+
+Trees, bushes, windows, driveway and architectural elements must all use consistent scale.
+
+Do not create miniature-looking landscaping.
+
+Do not make the garage door excessively large compared with the house.
+
+==================================================
+11. ENVIRONMENT DETAIL
+==================================================
+
+Add subtle environmental details that improve realism without distracting from the garage door.
+
+Examples:
+
+- Window reflections
+- Slight dirt/weathering
+- Small variations in wall texture
+- Subtle edge wear
+- Natural shadows
+- Small garden stones
+- Mulch
+- Concrete expansion joints
+- Exterior light fixtures
+- Realistic window glass
+- Subtle reflections in glass
+- Realistic trim
+- Downpipes/gutters if appropriate
+
+The goal is not to make the scene cluttered.
+
+The goal is to make it feel physically real.
+
+==================================================
+12. UI
+==================================================
+
+Keep the existing dark interface style.
+
+The current interface contains:
+
+“Design your door”
+
+“Pick the type, size and finish, watch it change on the house, then send the specification to technicians in your area for a price.”
+
+Keep this general structure.
+
+The large rounded 360° viewer should remain the central element.
+
+Keep:
+
+- “Open the door” button
+- “Drag to look around.” instruction
+- Door configuration controls
+- Existing functionality
+
+Improve the viewer presentation so the realistic 3D scene fills the available space elegantly.
+
+The UI should feel like a premium garage-door company's website.
+
+==================================================
+13. PERFORMANCE
+==================================================
+
+The scene must remain performant in a browser.
+
+Do NOT solve realism by loading enormous numbers of high-poly objects.
+
+Use appropriate techniques such as:
+
+- Instancing
+- Level of detail
+- Efficient textures
+- Compressed assets
+- Optimized geometry
+- Texture reuse where appropriate
+- Efficient shadows
+- Lazy loading where appropriate
+
+The scene should work smoothly on a normal modern desktop browser.
+
+Target a smooth interactive experience rather than a cinematic scene that runs at 10 FPS.
+
+==================================================
+14. TECHNOLOGY
+==================================================
+
+First inspect the existing codebase and determine what 3D technology is already being used.
+
+If the project already uses Three.js, React Three Fiber, Babylon.js, or another WebGL framework:
+
+KEEP the existing framework and improve the current implementation.
+
+Do not unnecessarily rewrite the entire application.
+
+If Three.js is already being used, take advantage of:
+
+- GLTF/GLB models
+- OrbitControls or equivalent
+- PBR materials
+- Environment maps
+- Shadow mapping
+- Instanced meshes
+- Proper scene lighting
+
+If external 3D assets are required, structure the code so assets can be replaced easily.
+
+Use freely available/licensed assets only.
+
+Do not introduce copyrighted commercial assets without permission.
+
+==================================================
+15. IMPORTANT — DO NOT FAKE THE 360 VIEW
+==================================================
+
+The final result must remain an actual interactive 3D/360 experience.
+
+Do NOT simply put a generated photograph inside the viewer and pretend it is 360°.
+
+The user needs to be able to drag around and see the environment from different angles.
+
+The garage door itself must remain an actual interactive 3D object.
+
+==================================================
+16. REALISM CHECKLIST
+==================================================
+
+Before considering the work finished, inspect the scene carefully.
+
+Ask yourself:
+
+Does this look like a real house?
+
+Do the plants look like real plants?
+
+Do the trees have natural silhouettes?
+
+Does the grass look natural?
+
+Does the concrete look like concrete?
+
+Does the wall have physical texture?
+
+Does the garage door look like a real manufactured garage door?
+
+Do the shadows make physical sense?
+
+Are objects sitting correctly on the ground?
+
+Are there any floating objects?
+
+Are there any obvious repeated plants?
+
+Are any materials overly glossy?
+
+Does the scene look like a low-poly game?
+
+If any answer indicates an artificial or low-quality appearance, improve it.
+
+==================================================
+17. FINAL RESULT
+==================================================
+
+The finished experience should resemble a premium architectural visualization / garage-door product configurator.
+
+Think:
+
+“High-end real estate photography + interactive 3D garage-door configurator.”
+
+NOT:
+
+“Simple 3D demo with green bushes.”
+
+The garage door should remain the product being demonstrated, while the surrounding house and landscaping provide a convincing real-world context.
+
+Please first inspect the existing project structure and current 360° implementation.
+
+Then modify the existing implementation rather than creating an unrelated demo.
+
+After making the changes:
+
+1. Run the application.
+2. Test the 360° camera.
+3. Test opening and closing the garage door.
+4. Test changing door finishes/options.
+5. Check that no birds remain.
+6. Check that vegetation looks realistic.
+7. Check that materials and lighting are realistic.
+8. Check for clipping, floating objects and broken interactions.
+9. Fix any issues you find.
+10. Leave the project in a working state.
+
+Prioritize photorealism, believable materials, natural landscaping, smooth 360° interaction, and preserving the existing garage-door configurator functionality.

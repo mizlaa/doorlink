@@ -93,6 +93,10 @@ describe('lookFromSpec', () => {
     expect(lookFromSpec({ ...DEFAULT_SPEC, productType: 'tilt' }).kind).toBe('tilt')
   })
 
+  it('passes the selected finish through to the renderer', () => {
+    expect(lookFromSpec({ ...DEFAULT_SPEC, finish: 'woodgrain' }).finish).toBe('woodgrain')
+  })
+
   it('clamps opening size scales so the house stays in frame', () => {
     expect(lookFromSpec({ ...DEFAULT_SPEC, widthMm: 2400, heightMm: 2100 })).toMatchObject({
       widthScale: 1,
