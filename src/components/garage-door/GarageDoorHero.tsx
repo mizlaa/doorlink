@@ -52,27 +52,17 @@ export function GarageDoorHero() {
     <section className="garage-door-hero">
       <div className="garage-door-hero-inner">
         <div className="garage-door-hero-copy">
-          <div>
-            <p className="garage-door-kicker">DOORLINK / TRADE PLATFORM</p>
-            <h1>
-              Everything for your door.
-              <span>One connected system.</span>
-            </h1>
-          </div>
-          <div>
-            <p className="garage-door-hero-description">
-              Identify products, find the right professional, and get the manual you need for garage doors,
-              gates, shutters and access systems.
-            </p>
-            <div className="garage-door-hero-actions">
-              <Link href="/request-technician" className="garage-door-primary-action">
-                Find a professional <span aria-hidden="true">↗</span>
-              </Link>
-              <Link href="/configure" className="garage-door-secondary-action">
-                Design a door
-              </Link>
-            </div>
-            <p className="garage-door-hero-meta">REAL DOCUMENTS&nbsp;&nbsp; / &nbsp;&nbsp;TRADE-READY WORKFLOWS</p>
+          <h1>
+            Everything for your door.
+            <span>One connected system.</span>
+          </h1>
+          <div className="garage-door-hero-actions">
+            <Link href="/request-technician" className="garage-door-primary-action">
+              Hire a pro <span aria-hidden="true">↗</span>
+            </Link>
+            <Link href="/configure" className="garage-door-secondary-action">
+              Design a door
+            </Link>
           </div>
         </div>
 

@@ -330,7 +330,6 @@ body {
 }
 
 .garage-door-hero-copy h1 {
-  margin-top: 16px;
   color: var(--text);
   font-size: clamp(36px, 4.4vw, 56px);
   font-weight: 600;
@@ -343,18 +342,11 @@ body {
   color: var(--accent);
 }
 
-.garage-door-hero-description {
-  max-width: 48ch;
-  color: var(--text-muted);
-  font-size: 16px;
-  line-height: 24px;
-}
 
 .garage-door-hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 24px;
 }
 
 .garage-door-primary-action,
@@ -410,14 +402,6 @@ body {
   transform: translateY(1px);
 }
 
-.garage-door-hero-meta {
-  margin-top: 24px;
-  color: var(--text-muted);
-  font-family: var(--font-plex-mono), ui-monospace, monospace;
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  line-height: 16px;
-}
 
 /* The card. White, a hairline border and a soft shadow: separated from
    the page without a dark frame. */
@@ -737,7 +721,7 @@ body {
 
 @media (min-width: 900px) {
   .garage-door-hero-copy {
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 48px;
   }
 }
@@ -755,10 +739,6 @@ body {
     font-size: 36px;
   }
 
-  .garage-door-hero-description {
-    font-size: 15px;
-    line-height: 23px;
-  }
 
   .garage-door-sim {
     border-radius: 16px;

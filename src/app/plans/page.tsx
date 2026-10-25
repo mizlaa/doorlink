@@ -49,9 +49,7 @@ export default async function PlansPage() {
       <header className="mb-8 max-w-prose">
         <h1 className="text-2xl font-semibold tracking-tight text-graphite">Doorlink plans</h1>
         <p className="mt-2 text-graphite-soft">
-          Trade accounts pay a monthly fee to quote, manage listings, run inspections, and edit a manufacturer
-          catalogue. Customers can use Doorlink free. The compliance pack and photo preview credits are separate
-          purchases.
+          Trade accounts pay monthly. Customers use Doorlink free.
         </p>
       </header>
 
@@ -147,21 +145,23 @@ export default async function PlansPage() {
         <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-deep">
           What the trade subscription covers
         </h2>
-        <p className="mt-3 text-graphite-soft">
-          Quoting on the job board, your trade profile, listing parts as a trade account, inspections and assets, and
-          manufacturer catalogue editing. Customers can still request technicians, use the configurator, and buy the
-          compliance pack without subscribing.
-        </p>
-        <p className="mt-3 text-graphite-soft">
-          Photo preview credits are billed separately when you generate an image on Build My Door.
-        </p>
+        <ul className="mt-3 grid gap-2 text-graphite-soft sm:grid-cols-2">
+          {['Quote on the job board', 'Trade profile', 'Trade listings', 'Inspections and assets', 'Catalogue editing'].map(
+            (item) => (
+              <li key={item} className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 flex-none rounded-full bg-natural" aria-hidden="true" />
+                {item}
+              </li>
+            ),
+          )}
+        </ul>
       </section>
 
       {!checkoutReady && (
         <div className="mt-10 max-w-prose">
           <NotConnected
             feature="Subscribing"
-              reason="No payment provider is connected, so no plan can be bought yet. The plans, the billing states and the feature gate are all built. What is missing is the Stripe keys."
+              reason="Payments aren't switched on yet, so plans can't be bought."
           />
         </div>
       )}

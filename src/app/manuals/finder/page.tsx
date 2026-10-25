@@ -264,8 +264,7 @@ function Header() {
     <header className="mb-5">
       <h1 className="text-2xl font-semibold tracking-tight text-graphite">Find your manual</h1>
       <p className="mt-1 text-graphite-soft">
-        Tell Doorlink what you have and it finds the documentation. Every result says who published
-        it and whether the link has been checked.
+        Search by model or manufacturer.
       </p>
     </header>
   )
@@ -302,17 +301,8 @@ function UnknownModel() {
       <PanelBody className="flex flex-col gap-2">
         <h2 className="text-sm font-semibold text-graphite">I don&rsquo;t know my model</h2>
         <p className="text-sm text-graphite-soft">
-          The model number is usually printed on a label on the motor housing, inside the cover, or
-          on the back of the remote. Search any part of it above — a partial number is offered as a
-          possible match rather than a definite one.
-        </p>
-        <p className="text-sm text-graphite-soft">
-          You can also search a phrase from the manual itself, such as an error code or a terminal
-          label, if the document&rsquo;s text has been indexed.
-        </p>
-        <p className="text-micro text-zinc-deep">
-          Photo identification of a motor or serial plate is not built yet. Doorlink will not guess
-          at a model from a description.
+          Check the label on the motor, inside the cover or on the remote, and search any part of it.
+          An error code works too.
         </p>
       </PanelBody>
     </Panel>
@@ -333,9 +323,7 @@ function AddManual() {
       <PanelBody className="flex flex-col gap-2">
         <h2 className="text-sm font-semibold text-graphite">Can&rsquo;t find your manual?</h2>
         <p className="text-sm text-graphite-soft">
-          If you have a copy of it, send it in and we&rsquo;ll add it for everyone else. It is checked
-          and then read by a person before it appears in the library, so it will not show up straight
-          away.
+          Send in your copy. We check it before it goes live.
         </p>
         <div>
           <Link

@@ -10,20 +10,20 @@ import { unreadMessageCount } from '@/lib/messaging'
 import { HeaderSearch } from './HeaderSearch'
 import { MobileNavToggle } from './MobileNavToggle'
 import { AccountMenu } from './AccountMenu'
+import { findWorkHref } from '@/lib/find-work'
 
-// Four destinations, named the way the landing page names them. "Data
-// sources" moved to the footer: it matters, but it is not something
-// someone arrives wanting, and a five-item row was crowding the ones
-// that are.
-const NAV_LINKS = [
-  { href: '/request-technician', label: 'Find a professional' },
-  { href: '/configure', label: 'Design a door' },
-  { href: '/find', label: 'Door systems' },
-  { href: '/manuals/finder', label: 'Manuals' },
-  { href: '/tools', label: 'Tools' },
-  { href: '/marketplace', label: 'Parts' },
-  { href: '/compliance', label: 'Compliance' },
-]
+// Named for what someone came to do, the same words as the home page
+// tiles. Designing a door, identifying one, the spring calculator and the
+// compliance pack live under Tools rather than each taking a slot here.
+function navLinks(workHref: string | null) {
+  return [
+    { href: '/request-technician', label: 'Hire a pro' },
+    ...(workHref ? [{ href: workHref, label: 'Find work' }] : []),
+    { href: '/marketplace', label: 'Marketplace' },
+    { href: '/manuals', label: 'Manuals' },
+    { href: '/tools', label: 'Tools' },
+  ]
+}
 
 /**
  * Counts shown in the header are decoration, not the page. If one cannot
@@ -101,7 +101,8 @@ export async function Header() {
   // The mobile hamburger still shows everything flat — on a phone there's
   // no crowded single row to protect, and the bottom tab bar already
   // covers the handful of destinations worth one tap.
-  const mobileLinks = [...NAV_LINKS, ...accountLinks]
+  const primaryLinks = navLinks(findWorkHref(session))
+  const mobileLinks = [...primaryLinks, ...accountLinks]
 
   return (
     <header className="relative z-20 border-b border-line bg-paper">
@@ -115,7 +116,7 @@ export async function Header() {
 
         <nav className="hidden items-center gap-6 lg:flex">
           <HeaderSearch />
-          {NAV_LINKS.map((link) => (
+          {primaryLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}

@@ -76,9 +76,7 @@ export default async function ManualsPage({ searchParams }: { searchParams: Sear
           <div>
             <h1 className="text-2xl font-semibold tracking-tight text-graphite sm:text-3xl">User manuals</h1>
             <p className="mt-2 text-graphite-soft">
-              Installation manuals, programming guides, wiring diagrams and troubleshooting documents for
-              automated doors, gates, motors and access systems. Search the text inside the documents, not
-              just their titles.
+              Installation, programming, wiring and troubleshooting manuals.
             </p>
           </div>
           <Link
