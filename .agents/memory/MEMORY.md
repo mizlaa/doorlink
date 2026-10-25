@@ -5,3 +5,4 @@
 - [WebGL preview limitation](webgl-preview-limit.md) — the hosted screenshot browser may have no WebGL 2 context even when the app workflow is healthy.
 - [Dependency patch boundaries](dependency-patches.md) — security overrides avoid unrelated Next/Tailwind migrations; reassess upstream fixes before removing them.
 - [Database-backed metadata](database-backed-metadata.md) — publishing can build before production schema initialization; metadata must not require tables at build time.
+- [Publish enum-array quoting](publish-enum-arrays.md) — mixed-case enum names caused malformed generated array types; preserve the lowercase database mapping.

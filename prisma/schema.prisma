@@ -1691,6 +1691,10 @@ enum AssetType {
   INDUSTRIAL_DOOR
   MANUAL_DOOR
   OTHER
+
+  // An unquoted database type name avoids malformed enum-array SQL in Publish.
+  // The application enum and its values remain unchanged.
+  @@map("asset_type")
 }
 
 enum InspectionStatus {
