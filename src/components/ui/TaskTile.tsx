@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { NavigationLink as Link } from './NavigationLink'
 import type { ReactNode } from 'react'
 
 /**

@@ -1,16 +1,21 @@
 'use client'
 
-import { useRef } from 'react'
+import { memo, useMemo, useRef } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Environment, OrbitControls, RoundedBox, Sky } from '@react-three/drei'
 import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib'
 import { EffectComposer, DepthOfField, ToneMapping } from '@react-three/postprocessing'
 import { ToneMappingMode } from 'postprocessing'
 import * as THREE from 'three'
-import { House } from './House'
-import { Garden } from './Garden'
-import { GarageInterior } from './GarageInterior'
+import { House as HouseComponent } from './House'
+import { Garden as GardenComponent } from './Garden'
+import { GarageInterior as GarageInteriorComponent } from './GarageInterior'
 import { SceneMaterialsProvider, useSceneTextures } from './SceneMaterials'
+
+// Colour/profile edits affect the door, not the surrounding house and garden.
+const House = memo(HouseComponent)
+const Garden = memo(GardenComponent)
+const GarageInterior = memo(GarageInteriorComponent)
 
 const BASE_DOOR_WIDTH = 3.2
 const BASE_DOOR_HEIGHT = 2.6
@@ -50,7 +55,7 @@ export interface SceneDimensions {
   backWallZ: number
 }
 
-export function computeSceneDimensions(look: DoorLook): SceneDimensions {
+export function computeSceneDimensions(look: Pick<DoorLook, 'widthScale' | 'heightScale'>): SceneDimensions {
   const doorWidth = BASE_DOOR_WIDTH * look.widthScale
   const doorHeight = BASE_DOOR_HEIGHT * look.heightScale
   const liftHeight = doorHeight + 0.9
@@ -522,7 +527,11 @@ export function GarageDoorScene({
   revealHeadline,
   revealWordmark,
 }: GarageDoorSceneProps) {
-  const dims = computeSceneDimensions(look)
+  const { widthScale, heightScale } = look
+  const dims = useMemo(
+    () => computeSceneDimensions({ widthScale, heightScale }),
+    [widthScale, heightScale]
+  )
 
   return (
     <Canvas

@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import { NavigationLink as Link } from '@/components/ui/NavigationLink'
 import { useCallback, useEffect, useState } from 'react'
 import { GarageDoorScene } from './GarageDoorScene'
 import { useDoorDrag } from './useDoorDrag'

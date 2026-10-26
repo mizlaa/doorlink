@@ -3,7 +3,7 @@ import { getSession } from '@/lib/auth'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { parseSpec } from '@/lib/configurator/options'
 import { doorPreviewAvailable } from '@/lib/configurator/preview'
-import { ensureWelcomeCredits, getCreditBalance, listCreditPacksForPurchase } from '@/lib/credits/credits'
+import { getWelcomeCreditBalance, listCreditPacksForPurchase } from '@/lib/credits/credits'
 import { subscriptionCheckoutAvailable } from '@/lib/payments'
 import { Configurator } from './Configurator'
 
@@ -36,22 +36,16 @@ export default async function ConfigurePage({ searchParams }: PageProps) {
   const previewAvailable = doorPreviewAvailable()
   const creditsCheckoutReady = subscriptionCheckoutAvailable()
 
-  if (session && previewAvailable) {
-    try {
-      await ensureWelcomeCredits(session.userId)
-    } catch (error) {
-      if (!isDatabaseUnreachable(error)) throw error
-    }
-  }
-
   let creditBalance: number | null = null
   let creditPacks: Awaited<ReturnType<typeof listCreditPacksForPurchase>> = []
   if (session && previewAvailable) {
     try {
-      creditBalance = await getCreditBalance(session.userId)
-      if (creditsCheckoutReady) {
-        creditPacks = await listCreditPacksForPurchase()
-      }
+      const [balance, packs] = await Promise.all([
+        getWelcomeCreditBalance(session.userId),
+        creditsCheckoutReady ? listCreditPacksForPurchase() : Promise.resolve([]),
+      ])
+      creditBalance = balance
+      creditPacks = packs
     } catch (error) {
       if (!isDatabaseUnreachable(error)) throw error
     }

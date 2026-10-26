@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import { NavigationLink as Link } from '@/components/ui/NavigationLink'
 import { useState } from 'react'
 
 interface NavLink {

@@ -21,8 +21,7 @@ export function HeaderSearch() {
           name="q"
           type="search"
           placeholder="Search"
-          className="h-9 w-40 rounded border border-line bg-paper px-3 text-sm text-graphite placeholder:text-zinc focus-visible:w-56 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-signal lg:w-52 lg:focus-visible:w-64"
-          style={{ transition: 'width 160ms ease-out' }}
+          className="h-9 w-40 rounded border border-line bg-paper px-3 text-sm text-graphite transition-[width] duration-[160ms] ease-out placeholder:text-zinc focus-visible:w-56 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-signal motion-reduce:transition-none lg:w-52 lg:focus-visible:w-64"
         />
       </form>
 

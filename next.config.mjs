@@ -2,6 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // Avoid recompiling recently visited screens while moving between tools
+  // in the development preview. Production serves prebuilt routes.
+  onDemandEntries: {
+    maxInactiveAge: 5 * 60 * 1000,
+    pagesBufferLength: 8,
+  },
   images: { formats: ['image/avif', 'image/webp'], remotePatterns: [] },
   experimental: {
     serverActions: {

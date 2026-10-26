@@ -1,10 +1,12 @@
 import { cookies } from 'next/headers'
+import { cache } from 'react'
 import type { Role } from '@prisma/client'
 import { prisma } from './prisma'
 import { isDatabaseUnreachable } from './db-errors'
 import { isConnected } from './integrations'
 import { DEV_SESSION_COOKIE } from './session-cookie'
 import { createSupabaseServerClient } from './supabase/server'
+import { hasSupabaseSessionCookie } from './supabase/session-cookie'
 
 export type Session = {
   userId: string
@@ -57,6 +59,8 @@ class DevCookieSessionProvider implements SessionProvider {
 
 class SupabaseSessionProvider implements SessionProvider {
   async getSession(): Promise<Session | null> {
+    const store = await cookies()
+    if (!hasSupabaseSessionCookie(store.getAll())) return null
     const supabase = await createSupabaseServerClient()
     const {
       data: { user },
@@ -74,6 +78,8 @@ function activeSessionProvider(): SessionProvider {
 
 // The one place a real provider (Supabase) gets swapped in — every route
 // and component below only ever calls getSession().
-export function getSession(): Promise<Session | null> {
+// React's cache is scoped to a server render/request, never shared across users.
+// The header, mobile navigation and page must not repeat auth and user queries.
+export const getSession = cache(async (): Promise<Session | null> => {
   return activeSessionProvider().getSession()
-}
+})

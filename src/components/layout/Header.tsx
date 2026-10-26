@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { NavigationLink as Link } from '@/components/ui/NavigationLink'
 import { getSession } from '@/lib/auth'
 import { can } from '@/lib/rbac'
 import { roleRequiresTradeSubscription } from '@/lib/trade-subscription'

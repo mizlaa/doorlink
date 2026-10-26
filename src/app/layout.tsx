@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import type { ReactNode } from 'react'
+import { Suspense, type ReactNode } from 'react'
 import { IBM_Plex_Mono, IBM_Plex_Sans } from 'next/font/google'
 import { SkipLink } from '@/components/layout/SkipLink'
 import { Header } from '@/components/layout/Header'
@@ -72,12 +72,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="flex min-h-screen flex-col overflow-x-hidden bg-paper font-sans text-graphite antialiased">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(websiteJsonLd) }} />
         <SkipLink />
-        <Header />
+        <Suspense fallback={<div className="h-16 border-b border-line" role="status" aria-label="Loading navigation" />}>
+          <Header />
+        </Suspense>
         <main id="main" className="flex-1">
           {children}
         </main>
         <Footer />
-        <MobileTabBar />
+        <Suspense fallback={null}>
+          <MobileTabBar />
+        </Suspense>
         <InstallPrompt />
         <ServiceWorkerRegister />
       </body>

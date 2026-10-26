@@ -87,6 +87,19 @@ export async function getCreditBalance(userId: string): Promise<number> {
   return row?.balance ?? 0
 }
 
+/** Returning visitors need a read, not a write transaction on every page visit. */
+export async function getWelcomeCreditBalance(userId: string): Promise<number> {
+  const row = await prisma.creditBalance.findUnique({
+    where: { userId },
+    select: { balance: true, welcomeGranted: true },
+  })
+  if (row?.welcomeGranted) return row.balance
+
+  // Keep the existing atomic grant for first visits and concurrent requests.
+  await ensureWelcomeCredits(userId)
+  return getCreditBalance(userId)
+}
+
 export async function listCreditPacksForPurchase() {
   return prisma.creditPack.findMany({
     where: { isActive: true },

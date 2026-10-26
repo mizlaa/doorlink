@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { memo, useEffect, useState } from 'react'
 import { GarageDoorScene, type DoorLook } from './GarageDoorScene'
 import { supportsThreeWebGL } from './webgl'
 
@@ -12,7 +12,7 @@ import { supportsThreeWebGL } from './webgl'
  * being implemented twice. The reveal text is empty here — this is a
  * product preview, not the marketing hero.
  */
-export function ConfiguratorScene({ look, isOpen }: { look: DoorLook; isOpen: boolean }) {
+export const ConfiguratorScene = memo(function ConfiguratorScene({ look, isOpen }: { look: DoorLook; isOpen: boolean }) {
   const [supported, setSupported] = useState<boolean | null>(null)
 
   useEffect(() => {
@@ -45,4 +45,4 @@ export function ConfiguratorScene({ look, isOpen }: { look: DoorLook; isOpen: bo
       )}
     </div>
   )
-}
+})

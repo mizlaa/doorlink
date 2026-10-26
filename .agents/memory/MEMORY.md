@@ -6,3 +6,4 @@
 - [Dependency patch boundaries](dependency-patches.md) — security overrides avoid unrelated Next/Tailwind migrations; reassess upstream fixes before removing them.
 - [Database-backed metadata](database-backed-metadata.md) — publishing can build before production schema initialization; metadata must not require tables at build time.
 - [Publish enum-array quoting](publish-enum-arrays.md) — mixed-case enum names caused malformed generated array types; preserve the lowercase database mapping.
+- [Navigation performance](navigation-performance.md) — distinguish preview compilation from request latency; keep auth deduplication request-scoped.

@@ -1,6 +1,6 @@
 'use client'
 
-import { useActionState, useMemo, useState } from 'react'
+import { useActionState, useDeferredValue, useMemo, useState } from 'react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { saveConfigurationAction, generateDoorPreviewAction, startCreditPackCheckoutAction, type ConfigurationActionState, type PreviewActionState } from './actions'
@@ -71,6 +71,9 @@ export function Configurator({
 
   const groups = useMemo(() => groupsFor(spec.productType), [spec.productType])
   const look = useMemo(() => lookFromSpec(spec), [spec])
+  // Commit the selected button/input immediately; expensive WebGL updates
+  // can follow without blocking typing or another selection.
+  const sceneLook = useDeferredValue(look)
   const summary = useMemo(() => describeSpec(spec), [spec])
 
   function set<K extends keyof DoorSpec>(key: K, value: DoorSpec[K]) {
@@ -84,7 +87,7 @@ export function Configurator({
     <div className="flex w-full min-w-0 flex-col gap-8 lg:flex-row lg:items-start lg:gap-10">
       {/* ------------------------------------------------------------ */}
       <div className="min-w-0 w-full max-w-full lg:sticky lg:top-6 lg:w-[54%] lg:shrink-0">
-        <ConfiguratorScene look={look} isOpen={open} />
+        <ConfiguratorScene look={sceneLook} isOpen={open} />
 
         <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
           <Button type="button" variant="secondary" size="sm" onClick={() => setOpen((value) => !value)}>
