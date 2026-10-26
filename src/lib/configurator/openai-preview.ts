@@ -43,7 +43,7 @@ export async function generateDoorPreviewFromPhoto(input: {
 
   try {
     const form = new FormData()
-    form.append('model', 'gpt-image-1')
+    form.append('model', 'gpt-image-2.5-sunburst')
     form.append('prompt', prompt)
     form.append('n', '1')
     form.append('size', '1024x1024')
