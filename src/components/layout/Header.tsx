@@ -1,5 +1,6 @@
 import { NavigationLink as Link } from '@/components/ui/NavigationLink'
 import { getSession } from '@/lib/auth'
+import { AUTH_UNAVAILABLE_MESSAGE, isAuthServiceUnavailable } from '@/lib/supabase/auth-service'
 import { can } from '@/lib/rbac'
 import { roleRequiresTradeSubscription } from '@/lib/trade-subscription'
 import { signOutAction } from '@/lib/auth-session'
@@ -105,6 +106,12 @@ export async function Header() {
   const mobileLinks = [...primaryLinks, ...accountLinks]
 
   return (
+    <>
+    {isAuthServiceUnavailable() && (
+      <p role="status" className="border-b border-line bg-paper px-4 py-2 text-center text-sm text-graphite">
+        {AUTH_UNAVAILABLE_MESSAGE}
+      </p>
+    )}
     <header className="relative z-20 border-b border-line bg-paper">
       <div className="mx-auto flex h-16 max-w-shell items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2.5 text-lg font-semibold tracking-tight text-graphite">
@@ -147,5 +154,6 @@ export async function Header() {
         </div>
       </div>
     </header>
+    </>
   )
 }

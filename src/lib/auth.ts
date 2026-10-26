@@ -5,7 +5,8 @@ import { prisma } from './prisma'
 import { isDatabaseUnreachable } from './db-errors'
 import { isConnected } from './integrations'
 import { DEV_SESSION_COOKIE } from './session-cookie'
-import { createSupabaseServerClient } from './supabase/server'
+import { withSupabaseServerClient } from './supabase/server'
+import { AuthServiceUnavailableError } from './supabase/auth-service'
 import { hasSupabaseSessionCookie } from './supabase/session-cookie'
 
 export type Session = {
@@ -61,10 +62,14 @@ class SupabaseSessionProvider implements SessionProvider {
   async getSession(): Promise<Session | null> {
     const store = await cookies()
     if (!hasSupabaseSessionCookie(store.getAll())) return null
-    const supabase = await createSupabaseServerClient()
-    const {
-      data: { user },
-    } = await supabase.auth.getUser()
+    let user
+    try {
+      const result = await withSupabaseServerClient((supabase) => supabase.auth.getUser())
+      user = result.data.user
+    } catch (error) {
+      if (error instanceof AuthServiceUnavailableError) return null
+      throw error
+    }
     if (!user?.email) return null
 
     return doorlinkSessionFromEmail(user.email)

@@ -5,6 +5,7 @@
   "description": "DoorLink — everything for your door, in one place.",
   "scripts": {
     "dev": "next dev",
+    "preview": "npm run build && next start",
     "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",

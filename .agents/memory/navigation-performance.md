@@ -14,3 +14,9 @@ Session deduplication must stay scoped to a single server request/render, not a 
 **Why:** Shared layout components and pages need the same session, but cross-request caching risks leaking one user's identity to another. Anonymous cookie-free requests can skip session verification; cookie-bearing requests still require the real authentication provider.
 
 **How to apply:** Preserve provider verification for all session cookies, including chunked cookies. Never replace verification with trusting decoded cookie contents, or make speed changes that share authenticated results across users.
+
+Authentication outages must not hold public navigation open for the provider SDK's full refresh-retry window.
+
+**Why:** A DNS failure in the configured authentication endpoint combined with existing session cookies held page requests for about 30 seconds. A fetch timeout alone is insufficient because the SDK retries refreshes after network errors.
+
+**How to apply:** Bound the complete authentication operation, suppress late cookie writes and additional network attempts after it ends, and keep any shared outage cooldown limited to service availability—not user/session data. Preserve cookies on network failure; report the outage explicitly rather than bypassing verification. Middleware may refresh cookies without trusting their user data; server authorization must still verify the user.

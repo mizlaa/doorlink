@@ -10,7 +10,8 @@ import { isConnected } from './integrations'
 import { registerDoorlinkUser } from './register-user'
 import { DEV_SESSION_COOKIE } from './session-cookie'
 import { createSupabaseAdminClient } from './supabase/admin'
-import { createSupabaseServerClient } from './supabase/server'
+import { withSupabaseServerClient } from './supabase/server'
+import { AUTH_UNAVAILABLE_MESSAGE, AuthServiceUnavailableError } from './supabase/auth-service'
 import {
   devRegisterAction,
   devSignInAction,
@@ -57,11 +58,17 @@ async function supabaseSignInAction(_prevState: SignInState, formData: FormData)
     return { error: parsed.error.issues[0]?.message ?? 'Check the form and try again.' }
   }
 
-  const supabase = await createSupabaseServerClient()
-  const { error } = await supabase.auth.signInWithPassword({
-    email: parsed.data.email,
-    password: parsed.data.password,
-  })
+  let result
+  try {
+    result = await withSupabaseServerClient((supabase) => supabase.auth.signInWithPassword({
+      email: parsed.data.email,
+      password: parsed.data.password,
+    }))
+  } catch (error) {
+    if (error instanceof AuthServiceUnavailableError) return { error: AUTH_UNAVAILABLE_MESSAGE }
+    throw error
+  }
+  const { error } = result
   if (error) {
     return { error: error.message === 'Invalid login credentials' ? 'Email or password is incorrect.' : error.message }
   }
@@ -69,7 +76,7 @@ async function supabaseSignInAction(_prevState: SignInState, formData: FormData)
   try {
     const doorlinkUser = await prisma.user.findUnique({ where: { email: parsed.data.email } })
     if (!doorlinkUser) {
-      await supabase.auth.signOut()
+      await withSupabaseServerClient((supabase) => supabase.auth.signOut())
       return {
         error:
           'This sign-in is valid in Supabase but there is no matching Doorlink account. Register first or contact support.',
@@ -77,7 +84,7 @@ async function supabaseSignInAction(_prevState: SignInState, formData: FormData)
     }
   } catch (err) {
     if (isDatabaseUnreachable(err)) {
-      await supabase.auth.signOut()
+      await withSupabaseServerClient((supabase) => supabase.auth.signOut())
       return { error: 'The account database is not reachable right now.' }
     }
     throw err
@@ -111,11 +118,14 @@ async function supabaseRegisterAction(_prevState: RegisterState, formData: FormD
     throw err
   }
 
-  const supabase = await createSupabaseServerClient()
-  const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
-    email,
-    password,
-  })
+  let result
+  try {
+    result = await withSupabaseServerClient((supabase) => supabase.auth.signUp({ email, password }))
+  } catch (error) {
+    if (error instanceof AuthServiceUnavailableError) return { error: AUTH_UNAVAILABLE_MESSAGE }
+    throw error
+  }
+  const { data: signUpData, error: signUpError } = result
   if (signUpError) {
     return { error: signUpError.message }
   }
@@ -144,8 +154,7 @@ async function supabaseRegisterAction(_prevState: RegisterState, formData: FormD
 }
 
 async function supabaseSignOutAction(_formData: FormData): Promise<void> {
-  const supabase = await createSupabaseServerClient()
-  await supabase.auth.signOut()
+  await withSupabaseServerClient((supabase) => supabase.auth.signOut())
   const store = await cookies()
   store.delete(DEV_SESSION_COOKIE)
   redirect('/')

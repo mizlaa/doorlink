@@ -1,5 +1,6 @@
 import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
+import { runAuthOperation } from './auth-service'
 
 function supabaseUrl(): string | null {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL
@@ -15,7 +16,10 @@ export function isSupabaseAuthConfigured(): boolean {
   return !!(supabaseUrl() && supabaseAnonKey())
 }
 
-export async function createSupabaseServerClient() {
+async function createSupabaseServerClient(context: {
+  fetch: typeof fetch
+  canWriteCookies: () => boolean
+}) {
   const url = supabaseUrl()
   const anonKey = supabaseAnonKey()
   if (!url || !anonKey) {
@@ -25,11 +29,13 @@ export async function createSupabaseServerClient() {
   const cookieStore = await cookies()
 
   return createServerClient(url, anonKey, {
+    global: { fetch: context.fetch },
     cookies: {
       getAll() {
         return cookieStore.getAll()
       },
       setAll(cookiesToSet) {
+        if (!context.canWriteCookies()) return
         try {
           cookiesToSet.forEach(({ name, value, options }) => {
             cookieStore.set(name, value, options)
@@ -40,4 +46,10 @@ export async function createSupabaseServerClient() {
       },
     },
   })
+}
+
+export async function withSupabaseServerClient<T>(
+  run: (client: Awaited<ReturnType<typeof createSupabaseServerClient>>) => Promise<T>
+): Promise<T> {
+  return runAuthOperation(async (context) => run(await createSupabaseServerClient(context)))
 }
