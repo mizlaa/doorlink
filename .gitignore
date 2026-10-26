@@ -1,5 +1,7 @@
 node_modules
 .next
+.next-preview/
+.next-preview.lock
 .env
 .env.local
 /prisma/*.db

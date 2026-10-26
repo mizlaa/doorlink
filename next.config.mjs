@@ -2,6 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // A normal build/type-check must never overwrite a live preview's assets.
+  distDir: process.env.DOORLINK_PREVIEW === 'true' ? '.next-preview' : '.next',
+  typescript: {
+    tsconfigPath: process.env.DOORLINK_PREVIEW === 'true' ? 'tsconfig.preview.json' : 'tsconfig.json',
+  },
   // Avoid recompiling recently visited screens while moving between tools
   // in the development preview. Production serves prebuilt routes.
   onDemandEntries: {

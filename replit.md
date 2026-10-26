@@ -24,6 +24,9 @@ The workspace Run button uses `npm run preview` (build, then production
 server on port 5000), so client demonstrations do not compile each page
 on its first visit. After editing, restart **Start application** to rebuild
 the preview. For hot-reload development, use `npm run dev` instead.
+The optimized preview has a separate `.next-preview` build directory and a
+lifetime lock. Do not run another preview outside the managed workflow.
+Normal `npm run build` uses `.next` and cannot overwrite live preview assets.
 
 Secrets: `DATABASE_URL` and `DIRECT_URL` (same Postgres URL on Replit).
 
