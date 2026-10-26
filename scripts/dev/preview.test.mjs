@@ -1,9 +1,9 @@
 import { afterEach, describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { mkdtempSync, rmSync, writeFileSync, existsSync } from 'node:fs'
+import { mkdtempSync, mkdirSync, rmSync, writeFileSync, existsSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
-import { acquirePreviewLock } from './preview.mjs'
+import { acquirePreviewLock, isPreviewBuildCurrent, previewFingerprint } from './preview.mjs'
 
 const dirs = []
 function lockPath() {
@@ -33,5 +33,24 @@ describe('preview lifecycle lock', () => {
     writeFileSync(path, 'not-a-pid')
     assert.throws(() => acquirePreviewLock(path), /Invalid preview lock/)
     assert.equal(existsSync(path), true)
+  })
+})
+
+describe('preview build reuse', () => {
+  it('reuses a build only while all app source and dependency inputs match', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'doorlink-fingerprint-'))
+    dirs.push(dir)
+    mkdirSync(join(dir, 'src/app'), { recursive: true })
+    writeFileSync(join(dir, 'src/app/page.tsx'), 'initial page')
+    const fingerprint = previewFingerprint(dir)
+    const dist = join(dir, '.next-preview')
+    mkdirSync(dist)
+    writeFileSync(join(dist, 'BUILD_ID'), 'build-id')
+    writeFileSync(join(dist, 'source-fingerprint'), fingerprint)
+    assert.equal(isPreviewBuildCurrent(dir), true)
+
+    writeFileSync(join(dir, 'src/app/page.tsx'), 'updated page')
+    assert.notEqual(previewFingerprint(dir), fingerprint)
+    assert.equal(isPreviewBuildCurrent(dir), false)
   })
 })

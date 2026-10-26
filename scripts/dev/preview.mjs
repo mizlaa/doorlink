@@ -1,5 +1,17 @@
 import { spawn } from 'node:child_process'
-import { openSync, readFileSync, unlinkSync, writeFileSync, closeSync } from 'node:fs'
+import {
+  closeSync,
+  existsSync,
+  mkdirSync,
+  openSync,
+  readFileSync,
+  readdirSync,
+  renameSync,
+  statSync,
+  unlinkSync,
+  writeFileSync,
+} from 'node:fs'
+import { createHash } from 'node:crypto'
 import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -26,6 +38,56 @@ export function acquirePreviewLock(path) {
   return () => {
     if (readFileSync(path, 'utf8') === String(process.pid)) unlinkSync(path)
   }
+}
+
+const BUILD_INPUTS = [
+  'src',
+  'public',
+  'prisma',
+  'data',
+  'scripts',
+  'package.json',
+  'package-lock.json',
+  'next.config.mjs',
+  'next-env.d.ts',
+  'postcss.config.mjs',
+  'tailwind.config.ts',
+  'tailwind.config.js',
+  'tsconfig.json',
+  'tsconfig.preview.json',
+]
+
+export function previewFingerprint(root = process.cwd()) {
+  const hash = createHash('sha256')
+  const visit = (relativePath) => {
+    const absolutePath = resolve(root, relativePath)
+    if (!existsSync(absolutePath)) return
+    if (statSync(absolutePath).isDirectory()) {
+      for (const entry of readdirSync(absolutePath).sort()) visit(`${relativePath}/${entry}`)
+      return
+    }
+    hash.update(relativePath)
+    hash.update('\0')
+    hash.update(readFileSync(absolutePath))
+    hash.update('\0')
+  }
+  for (const input of BUILD_INPUTS) visit(input)
+  return hash.digest('hex')
+}
+
+export function isPreviewBuildCurrent(root = process.cwd()) {
+  const dist = resolve(root, '.next-preview')
+  const stamp = resolve(dist, 'source-fingerprint')
+  const buildId = resolve(dist, 'BUILD_ID')
+  return existsSync(buildId) && existsSync(stamp) && readFileSync(stamp, 'utf8') === previewFingerprint(root)
+}
+
+function recordPreviewBuild(root = process.cwd()) {
+  const dist = resolve(root, '.next-preview')
+  mkdirSync(dist, { recursive: true })
+  const temporaryStamp = resolve(dist, `source-fingerprint-${process.pid}.tmp`)
+  writeFileSync(temporaryStamp, previewFingerprint(root))
+  renameSync(temporaryStamp, resolve(dist, 'source-fingerprint'))
 }
 
 async function main() {
@@ -63,10 +125,15 @@ async function main() {
     })
   })
   try {
-    const buildCode = await run('npm', ['run', 'build'])
-    if (stopping || buildCode !== 0) {
-      process.exitCode = stopping ? 0 : buildCode
-      return
+    if (!isPreviewBuildCurrent()) {
+      const buildCode = await run('npm', ['run', 'build'])
+      if (stopping || buildCode !== 0) {
+        process.exitCode = stopping ? 0 : buildCode
+        return
+      }
+      recordPreviewBuild()
+    } else {
+      console.log('App unchanged; starting the existing optimized build.')
     }
     process.exitCode = await run('npm', ['run', 'start', '--', ...process.argv.slice(2)])
     if (stopping) process.exitCode = 0
