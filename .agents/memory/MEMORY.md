@@ -7,3 +7,4 @@
 - [Database-backed metadata](database-backed-metadata.md) — publishing can build before production schema initialization; metadata must not require tables at build time.
 - [Publish enum-array quoting](publish-enum-arrays.md) — mixed-case enum names caused malformed generated array types; preserve the lowercase database mapping.
 - [Navigation performance](navigation-performance.md) — distinguish preview compilation from request latency; keep auth deduplication request-scoped.
+- [Supabase availability](supabase-availability.md) — paused projects can cause DNS failure even when the URL and keys match; check pause state before replacing auth.
