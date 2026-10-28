@@ -2,6 +2,7 @@
 
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import { safeNextPath } from './safe-next'
 import { z } from 'zod'
 import { Role } from '@prisma/client'
 import { prisma } from './prisma'
@@ -83,7 +84,7 @@ async function supabaseSignInAction(_prevState: SignInState, formData: FormData)
     throw err
   }
 
-  redirect('/')
+  redirect(safeNextPath(formData.get('next')))
 }
 
 async function supabaseRegisterAction(_prevState: RegisterState, formData: FormData): Promise<RegisterState> {

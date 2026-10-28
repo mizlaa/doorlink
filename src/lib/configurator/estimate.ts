@@ -47,6 +47,9 @@ function areaM2(spec: DoorSpec): number {
 export function estimateFor(spec: DoorSpec): Estimate | null {
   const family = familyOf(spec.productType)
 
+  // Window shutters only: there is no published curtain weight for shop
+  // shutter profiles to estimate from, so none is made up.
+  if (spec.productType === 'shop-shutter') return null
   if (family === 'shutter') {
     const kgPerM2 = SLAT_KG_PER_M2[spec.slat] ?? SLAT_KG_PER_M2['39']
     const totalKg = areaM2(spec) * kgPerM2 * BOTTOM_RAIL_ALLOWANCE

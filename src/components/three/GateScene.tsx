@@ -24,7 +24,12 @@ import { SceneMaterialsProvider, useSceneTextures } from './SceneMaterials'
  * product the customer has not chosen.
  */
 
-export type GateKind = 'sliding' | 'swing' | 'pedestrian' | 'fence' | 'shutter'
+export type GateKind = 'sliding' | 'swing' | 'pedestrian' | 'fence' | 'shutter' | 'shop'
+
+/** Window and shop shutters share the wall-and-curtain scene. */
+function isShutterKind(kind: GateKind): boolean {
+  return kind === 'shutter' || kind === 'shop'
+}
 export type GateInfill = 'slats' | 'spaced-slats' | 'pickets' | 'solid'
 export type SwingMotorStyle = 'ram' | 'arm' | 'underground'
 
@@ -293,7 +298,7 @@ function Ground({ drivewayWidth, kind }: { drivewayWidth: number; kind: GateKind
           bumpScale={0.03}
         />
       </mesh>
-      {kind !== 'shutter' && (
+      {!isShutterKind(kind) && (
         <>
           {/* Driveway on the property side, footpath and road beyond. */}
           {drivewayWidth > 0 && (
@@ -677,14 +682,23 @@ function SwingGate({
   )
 }
 
-/** A house wall with a window, and the shutter face-fixed above it. */
+/**
+ * A wall with an opening and the shutter face-fixed above it: a house
+ * window, or — for a shop shutter — a shopfront at street level with a
+ * deeper hood and a heavier curtain.
+ */
 function WindowShutter({ look, isOpen }: { look: GateLook; isOpen: boolean }) {
   const textures = useSceneTextures()
   const material = usePanelMaterial(look)
   const { widthM: w, heightM: h, slatM } = look
-  const sill = 0.9
+  const shop = look.kind === 'shop'
+  const sill = shop ? 0 : 0.9
   const wallW = Math.max(w + 3.2, 5.5)
-  const boxH = slatM > 0.045 ? 0.25 : 0.2
+  const boxH = shop ? 0.42 : slatM > 0.045 ? 0.25 : 0.2
+  const boxD = shop ? 0.36 : 0.22
+  const guideW = shop ? 0.08 : 0.05
+  // Shopfront glazing bars roughly every 1.2 m.
+  const mullions = Math.max(2, Math.round(w / 1.2))
   const wallH = sill + h + boxH + 0.9
   const wallT = 0.25
   const face = wallT / 2
@@ -707,7 +721,7 @@ function WindowShutter({ look, isOpen }: { look: GateLook; isOpen: boolean }) {
 
   const wallMaterial = (
     <meshStandardMaterial
-      color="#c9b497"
+      color={shop ? '#b8b3aa' : '#c9b497'}
       roughness={0.95}
       map={textures.plaster.map}
       bumpMap={textures.plaster.detail}
@@ -727,10 +741,12 @@ function WindowShutter({ look, isOpen }: { look: GateLook; isOpen: boolean }) {
         <boxGeometry args={[side, wallH, wallT]} />
         {wallMaterial}
       </mesh>
-      <mesh position={[0, sill / 2, 0]} castShadow receiveShadow>
-        <boxGeometry args={[w, sill, wallT]} />
-        {wallMaterial}
-      </mesh>
+      {sill > 0 && (
+        <mesh position={[0, sill / 2, 0]} castShadow receiveShadow>
+          <boxGeometry args={[w, sill, wallT]} />
+          {wallMaterial}
+        </mesh>
+      )}
       <mesh position={[0, (wallH + sill + h) / 2, 0]} castShadow receiveShadow>
         <boxGeometry args={[w, wallH - sill - h, wallT]} />
         {wallMaterial}
@@ -739,41 +755,72 @@ function WindowShutter({ look, isOpen }: { look: GateLook; isOpen: boolean }) {
       <Box args={[wallW + 0.6, 0.12, 0.7]} position={[0, wallH + 0.06, 0.2]} color="#55595c" roughness={0.8} />
       <Box args={[wallW + 0.6, 0.1, 0.1]} position={[0, wallH - 0.02, 0.58]} color="#e9e9e6" roughness={0.6} />
 
-      {/* Window: frame, glass and a dim room behind. */}
-      <Box args={[w, 0.05, 0.06]} position={[0, sill + 0.025, -0.02]} color="#f1f1ee" />
-      <Box args={[w, 0.05, 0.06]} position={[0, sill + h - 0.025, -0.02]} color="#f1f1ee" />
-      <Box args={[0.05, h, 0.06]} position={[-w / 2 + 0.025, sill + h / 2, -0.02]} color="#f1f1ee" />
-      <Box args={[0.05, h, 0.06]} position={[w / 2 - 0.025, sill + h / 2, -0.02]} color="#f1f1ee" />
-      <Box args={[0.04, h, 0.05]} position={[0, sill + h / 2, -0.02]} color="#f1f1ee" />
-      <mesh position={[0, sill + h / 2, -0.02]}>
-        <planeGeometry args={[w - 0.1, h - 0.1]} />
-        <meshPhysicalMaterial color="#9fb6c4" roughness={0.05} metalness={0.1} transparent opacity={0.45} />
-      </mesh>
-      <mesh position={[0, sill + h / 2, -0.5]}>
-        <planeGeometry args={[w + 0.4, h + 0.4]} />
-        <meshStandardMaterial color="#3a3a38" roughness={1} />
-      </mesh>
-      <Box
-        args={[w + 0.12, 0.04, 0.2]}
-        position={[0, sill - 0.02, face + 0.05]}
-        color="#d8d2c6"
-        roughness={0.9}
-      />
+      {shop ? (
+        <>
+          {/* Shopfront: dark aluminium frame, glazing and a lit interior. */}
+          <Box args={[w, 0.06, 0.08]} position={[0, h - 0.03, -0.05]} color="#2f3336" metalness={0.5} />
+          {Array.from({ length: mullions + 1 }, (_, i) => (
+            <Box
+              key={i}
+              args={[0.06, h, 0.08]}
+              position={[-w / 2 + 0.03 + (i * (w - 0.06)) / mullions, h / 2, -0.05]}
+              color="#2f3336"
+              metalness={0.5}
+            />
+          ))}
+          <mesh position={[0, h / 2, -0.05]}>
+            <planeGeometry args={[w - 0.06, h - 0.06]} />
+            <meshPhysicalMaterial color="#a9bfcc" roughness={0.05} metalness={0.1} transparent opacity={0.4} />
+          </mesh>
+          <mesh position={[0, h / 2, -1.2]}>
+            <planeGeometry args={[w + 0.4, h + 0.4]} />
+            <meshStandardMaterial color="#d9d4c8" roughness={1} />
+          </mesh>
+          {/* The shop floor, so the open shutter shows an interior, not lawn. */}
+          <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.003, -0.6]} receiveShadow>
+            <planeGeometry args={[w + 0.4, 1.2]} />
+            <meshStandardMaterial color="#9c968b" roughness={0.85} />
+          </mesh>
+        </>
+      ) : (
+        <>
+          {/* Window: frame, glass and a dim room behind. */}
+          <Box args={[w, 0.05, 0.06]} position={[0, sill + 0.025, -0.02]} color="#f1f1ee" />
+          <Box args={[w, 0.05, 0.06]} position={[0, sill + h - 0.025, -0.02]} color="#f1f1ee" />
+          <Box args={[0.05, h, 0.06]} position={[-w / 2 + 0.025, sill + h / 2, -0.02]} color="#f1f1ee" />
+          <Box args={[0.05, h, 0.06]} position={[w / 2 - 0.025, sill + h / 2, -0.02]} color="#f1f1ee" />
+          <Box args={[0.04, h, 0.05]} position={[0, sill + h / 2, -0.02]} color="#f1f1ee" />
+          <mesh position={[0, sill + h / 2, -0.02]}>
+            <planeGeometry args={[w - 0.1, h - 0.1]} />
+            <meshPhysicalMaterial color="#9fb6c4" roughness={0.05} metalness={0.1} transparent opacity={0.45} />
+          </mesh>
+          <mesh position={[0, sill + h / 2, -0.5]}>
+            <planeGeometry args={[w + 0.4, h + 0.4]} />
+            <meshStandardMaterial color="#3a3a38" roughness={1} />
+          </mesh>
+          <Box
+            args={[w + 0.12, 0.04, 0.2]}
+            position={[0, sill - 0.02, face + 0.05]}
+            color="#d8d2c6"
+            roughness={0.9}
+          />
+        </>
+      )}
 
       {/* Shutter box, guides and curtain. */}
       <RoundedBox
-        args={[w + 0.12, boxH, 0.22]}
+        args={[w + 0.12, boxH, boxD]}
         radius={0.02}
         smoothness={3}
-        position={[0, boxBottom + boxH / 2, face + 0.11]}
+        position={[0, boxBottom + boxH / 2, face + boxD / 2]}
         material={material}
         castShadow
       />
       {[-1, 1].map((s) => (
         <Box
           key={s}
-          args={[0.05, h, 0.07]}
-          position={[s * (w / 2 + 0.035), sill + h / 2, face + 0.04]}
+          args={[guideW, h, 0.07]}
+          position={[s * (w / 2 + guideW / 2 + 0.01), sill + h / 2, face + 0.04]}
           material={material}
         />
       ))}
@@ -788,22 +835,32 @@ function WindowShutter({ look, isOpen }: { look: GateLook; isOpen: boolean }) {
         ))}
       </group>
 
-      {/* A garden bed under the window. */}
-      <mesh position={[0, 0.06, face + 0.55]} receiveShadow>
-        <boxGeometry args={[wallW - 0.4, 0.12, 0.9]} />
-        <meshStandardMaterial color="#4e4436" roughness={1} map={textures.mulch.map} />
-      </mesh>
-      {[-1.6, -0.6, 0.5, 1.4].map((x, i) => (
-        <mesh
-          key={x}
-          position={[x * Math.max(1, w / 2.2), 0.32, face + 0.55]}
-          scale={[0.36, 0.3 + (i % 2) * 0.08, 0.32]}
-          castShadow
-        >
-          <sphereGeometry args={[1, 14, 10]} />
-          <meshStandardMaterial color={i % 2 ? '#4d6842' : '#5b7449'} roughness={1} />
+      {shop ? (
+        // A footpath in front of the shopfront.
+        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.004, face + 1.6]} receiveShadow>
+          <planeGeometry args={[wallW + 4, 3]} />
+          <meshStandardMaterial color="#c4bfb5" roughness={0.9} map={textures.concrete.map} />
         </mesh>
-      ))}
+      ) : (
+        <>
+          {/* A garden bed under the window. */}
+          <mesh position={[0, 0.06, face + 0.55]} receiveShadow>
+            <boxGeometry args={[wallW - 0.4, 0.12, 0.9]} />
+            <meshStandardMaterial color="#4e4436" roughness={1} map={textures.mulch.map} />
+          </mesh>
+          {[-1.6, -0.6, 0.5, 1.4].map((x, i) => (
+            <mesh
+              key={x}
+              position={[x * Math.max(1, w / 2.2), 0.32, face + 0.55]}
+              scale={[0.36, 0.3 + (i % 2) * 0.08, 0.32]}
+              castShadow
+            >
+              <sphereGeometry args={[1, 14, 10]} />
+              <meshStandardMaterial color={i % 2 ? '#4d6842' : '#5b7449'} roughness={1} />
+            </mesh>
+          ))}
+        </>
+      )}
     </group>
   )
 }
@@ -858,14 +915,15 @@ function CameraRig({ look }: { look: GateLook }) {
   const { camera } = useThree()
   // How much of the scene has to fit across the frame. A fence is seen
   // at an angle along its run, so it needs less than its full length.
-  const span =
-    look.kind === 'shutter'
-      ? Math.max(look.widthM + 1.6, look.heightM + 2.2)
-      : look.kind === 'fence'
-        ? look.widthM * 0.75 + 1
-        : look.widthM * (look.kind === 'sliding' ? 1.6 : 1.25) + 1.2
-  const radius = THREE.MathUtils.clamp(look.kind === 'shutter' ? span + 1.4 : span * 1.15 + 2.2, 4.2, 26)
-  const targetY = look.kind === 'shutter' ? 0.9 + look.heightM / 2 : Math.min(1.1, look.heightM * 0.5)
+  const span = isShutterKind(look.kind)
+    ? Math.max(look.widthM + 1.6, look.heightM + 2.2)
+    : look.kind === 'fence'
+      ? look.widthM * 0.75 + 1
+      : look.widthM * (look.kind === 'sliding' ? 1.6 : 1.25) + 1.2
+  const radius = THREE.MathUtils.clamp(isShutterKind(look.kind) ? span + 1.4 : span * 1.15 + 2.2, 4.2, 26)
+  const targetY = isShutterKind(look.kind)
+    ? (look.kind === 'shop' ? 0 : 0.9) + look.heightM / 2
+    : Math.min(1.1, look.heightM * 0.5)
   const targetX = look.kind === 'sliding' ? look.widthM * 0.3 : 0
   const sweep = useRef(1)
 
@@ -950,19 +1008,19 @@ export function GateScene({ look, isOpen }: { look: GateLook; isOpen: boolean })
         <Ground
           kind={look.kind}
           drivewayWidth={
-            look.kind === 'fence' || look.kind === 'shutter'
+            look.kind === 'fence' || isShutterKind(look.kind)
               ? 0
               : look.kind === 'pedestrian'
                 ? 1.1
                 : look.widthM
           }
         />
-        {look.kind === 'shutter' ? (
+        {isShutterKind(look.kind) ? (
           <WindowShutter look={look} isOpen={isOpen} />
         ) : (
           <GateLayout look={look} isOpen={isOpen} />
         )}
-        {look.kind !== 'shutter' && <Backdrop z={-11} />}
+        {!isShutterKind(look.kind) && <Backdrop z={-11} />}
 
         <EffectComposer>
           <ToneMapping mode={ToneMappingMode.ACES_FILMIC} />

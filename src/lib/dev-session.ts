@@ -2,6 +2,7 @@
 
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import { safeNextPath } from './safe-next'
 import { z } from 'zod'
 import { Role } from '@prisma/client'
 import { prisma } from './prisma'
@@ -45,7 +46,7 @@ export async function devSignInAction(_prevState: SignInState, formData: FormDat
     throw error
   }
 
-  redirect('/')
+  redirect(safeNextPath(formData.get('next')))
 }
 
 const REGISTRABLE_ROLES = ['CUSTOMER', 'TECHNICIAN', 'SUPPLIER', 'MANUFACTURER'] as const

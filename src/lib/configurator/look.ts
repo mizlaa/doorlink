@@ -61,6 +61,7 @@ const GATE_KIND: Record<string, GateKind> = {
   'pedestrian-gate': 'pedestrian',
   fence: 'fence',
   'window-shutter': 'shutter',
+  'shop-shutter': 'shop',
 }
 
 /**
@@ -87,7 +88,8 @@ export function gateLookFromSpec(spec: DoorSpec): GateLook {
       ? spec.swingMotor
       : 'ram') as SwingMotorStyle,
     motorised: isMotorised(spec),
-    slatM: spec.slat === '55' ? 0.055 : 0.039,
+    // Shop shutters are drawn with a deeper commercial slat.
+    slatM: spec.productType === 'shop-shutter' ? 0.077 : spec.slat === '55' ? 0.055 : 0.039,
   }
 }
 

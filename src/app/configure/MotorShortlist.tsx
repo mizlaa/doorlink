@@ -13,7 +13,7 @@ import { familyOf, isMotorised, type DoorSpec } from '@/lib/configurator/options
  */
 export function MotorShortlist({ spec, motors }: { spec: DoorSpec; motors: MotorCandidate[] }) {
   const family = familyOf(spec.productType)
-  if (family === 'garage' || family === 'fence') return null
+  if (family === 'garage' || family === 'fence' || spec.productType === 'shop-shutter') return null
 
   const estimate = estimateFor(spec)
   const requirement = requirementFor(spec)

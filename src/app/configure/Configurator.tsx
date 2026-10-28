@@ -425,20 +425,34 @@ export function Configurator({
               </Link>
             </p>
           )}
+          {/* Instant quotes from companies' own prices; posting the job stays as the fallback. */}
           <Link
-            href={`/request-technician?spec=${encodeURIComponent(JSON.stringify(effective))}`}
+            href={`/quote?spec=${encodeURIComponent(JSON.stringify(effective))}`}
             className="inline-flex h-12 items-center justify-center rounded-md bg-signal px-5 text-sm font-semibold text-paper transition-colors hover:bg-signal-hover"
           >
-            Get quotes on this
+            Get instant quotes
           </Link>
-          {!signedIn && (
-            <p className="text-center text-sm text-zinc-deep">
-              <Link href="/sign-in?next=/configure" className="font-medium text-signal hover:text-signal-hover">
-                Sign in
-              </Link>{' '}
-              to save it.
-            </p>
-          )}
+          <p className="text-center text-sm text-zinc-deep">
+            or{' '}
+            <Link
+              href={`/request-technician?spec=${encodeURIComponent(JSON.stringify(effective))}`}
+              className="font-medium text-signal hover:text-signal-hover"
+            >
+              post it as a job
+            </Link>
+            {!signedIn && (
+              <>
+                {' · '}
+                <Link
+                  href={`/sign-in?next=${encodeURIComponent(`/configure?spec=${encodeURIComponent(JSON.stringify(effective))}`)}`}
+                  className="font-medium text-signal hover:text-signal-hover"
+                >
+                  sign in
+                </Link>{' '}
+                to save it
+              </>
+            )}
+          </p>
         </form>
       </div>
     </div>

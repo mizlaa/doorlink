@@ -10,7 +10,7 @@
  * Everything here is validated on the server before it is written. A
  * data URI is user-supplied text that ends up inside an `<img src>` on a
  * document the buyer sends to their clients, so the type allow-list is a
- * security boundary, not a convenience: `image/svg+xml` is deliberately
+ * trust boundary, not a convenience: `image/svg+xml` is deliberately
  * absent, because an SVG can carry script.
  */
 

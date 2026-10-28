@@ -23,6 +23,7 @@ export type ProductType =
   | 'pedestrian-gate'
   | 'fence'
   | 'window-shutter'
+  | 'shop-shutter'
 
 /** What the customer is designing, before which kind of it. */
 export type ProductFamily = 'garage' | 'gate' | 'fence' | 'shutter'
@@ -31,7 +32,7 @@ export const PRODUCT_FAMILIES: Array<{ id: ProductFamily; label: string; types: 
   { id: 'garage', label: 'Garage door', types: ['sectional', 'roller', 'tilt'] },
   { id: 'gate', label: 'Gate', types: ['sliding-gate', 'swing-gate', 'pedestrian-gate'] },
   { id: 'fence', label: 'Fence', types: ['fence'] },
-  { id: 'shutter', label: 'Shutter', types: ['window-shutter'] },
+  { id: 'shutter', label: 'Shutter', types: ['window-shutter', 'shop-shutter'] },
 ]
 
 export function familyOf(productType: ProductType): ProductFamily {
@@ -99,8 +100,13 @@ export const PRODUCT_TYPES: OptionValue[] = [
   },
   {
     id: 'window-shutter',
-    label: 'Roller shutter',
-    description: 'An aluminium curtain that rolls into a box above the window, for security, shade and noise.',
+    label: 'Window shutter',
+    description: 'An aluminium curtain that rolls into a box above the window, for privacy, shade and quiet.',
+  },
+  {
+    id: 'shop-shutter',
+    label: 'Shop shutter',
+    description: 'A heavier roller shutter across a shopfront or service opening, rolling into a hood above it.',
   },
 ]
 
@@ -259,7 +265,7 @@ export const OPTION_GROUPS: OptionGroup[] = [
   {
     id: 'operation',
     label: 'Operation',
-    only: MOTORISED_GATES,
+    only: [...MOTORISED_GATES, 'shop-shutter'],
     values: [
       { id: 'motorised', label: 'Motorised', description: 'Opens from a remote, keypad or phone.' },
       { id: 'manual', label: 'Manual', description: 'Opened by hand, with a latch or lock.' },
@@ -300,18 +306,19 @@ export const OPTION_GROUPS: OptionGroup[] = [
   {
     id: 'motorBrand',
     label: 'Motor brand',
-    help: 'Matched against each motor’s published rating.',
+    // The client's lists: Benincà, BFT, FAAC, Merlin, Grifco and Nice for
+    // gates; CW Products (CWP), Maxim, Somfy, SIMU and Nice for window
+    // shutters. Shop shutters have no brand list, so no brand choice.
     only: [...MOTORISED_GATES, 'window-shutter'],
     values: [
-      { id: 'any', label: 'Best match' },
+      { id: 'any', label: 'Any brand' },
       { id: 'beninca', label: 'Benincà', only: GATES },
       { id: 'bft', label: 'BFT', only: GATES },
-      { id: 'dea', label: 'DEA', only: GATES },
       { id: 'faac', label: 'FAAC', only: GATES },
       { id: 'grifco', label: 'Grifco', only: GATES },
       { id: 'merlin', label: 'Merlin', only: GATES },
       { id: 'nice', label: 'Nice' },
-      { id: 'cw-products', label: 'CW Products', only: ['window-shutter'] },
+      { id: 'cw-products', label: 'CW Products (CWP)', only: ['window-shutter'] },
       { id: 'maxim', label: 'Maxim', only: ['window-shutter'] },
       { id: 'simu', label: 'SIMU', only: ['window-shutter'] },
       { id: 'somfy', label: 'Somfy', only: ['window-shutter'] },
@@ -403,6 +410,12 @@ const SIZES: Record<
     widthMm: { min: 400, max: 4000, step: 10, default: 1200 },
     heightMm: { min: 400, max: 3000, step: 10, default: 1500 },
   },
+  // A shopfront or service opening: wider and taller than a window, and
+  // starting at ground level.
+  'shop-shutter': {
+    widthMm: { min: 1000, max: 10000, step: 10, default: 3000 },
+    heightMm: { min: 1500, max: 6000, step: 10, default: 2700 },
+  },
 }
 
 export function sizeLimitsFor(productType: ProductType): {
@@ -424,6 +437,7 @@ const TYPE_DEFAULTS: Partial<Record<ProductType, Partial<DoorSpec>>> = {
   'pedestrian-gate': { operation: 'manual' },
   'sliding-gate': { operation: 'motorised' },
   'swing-gate': { operation: 'motorised' },
+  'shop-shutter': { operation: 'motorised' },
 }
 
 /**
@@ -564,7 +578,10 @@ function describeOutdoor(
     rows.push({ label: 'Run', value: `${spec.widthMm} mm long × ${spec.heightMm} mm high` })
   } else if (family === 'shutter') {
     rows.push({ label: 'Shutter', value: typeLabel })
-    rows.push({ label: 'Window', value: `${spec.widthMm} × ${spec.heightMm} mm` })
+    rows.push({
+      label: spec.productType === 'shop-shutter' ? 'Opening' : 'Window',
+      value: `${spec.widthMm} × ${spec.heightMm} mm`,
+    })
   } else {
     rows.push({ label: 'Gate type', value: typeLabel })
     rows.push({ label: 'Opening', value: `${spec.widthMm} × ${spec.heightMm} mm` })
@@ -596,6 +613,7 @@ function describeOutdoor(
 export function isMotorised(spec: DoorSpec): boolean {
   const family = familyOf(spec.productType)
   if (family === 'gate') return spec.operation === 'motorised'
+  if (spec.productType === 'shop-shutter') return spec.operation === 'motorised'
   if (family === 'shutter') return spec.control !== 'manual'
   return false
 }
