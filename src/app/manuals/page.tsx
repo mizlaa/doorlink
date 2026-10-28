@@ -112,6 +112,7 @@ export default async function ManualsPage({ searchParams }: { searchParams: Sear
         <aside className="lg:w-56 lg:shrink-0">
           <FacetGroup
             title="Manufacturer"
+            limit={10}
             items={facets.manufacturers.map((m) => ({
               label: m.name,
               count: m.count,
@@ -233,34 +234,64 @@ export default async function ManualsPage({ searchParams }: { searchParams: Sear
   )
 }
 
+/**
+ * A filter list. Long ones (there are 160-odd manufacturers) show the
+ * biggest few, plus whatever is selected, and fold the rest into an
+ * "All" disclosure — a plain <details>, so it works without JavaScript.
+ */
 function FacetGroup({
   title,
   items,
+  limit,
 }: {
   title: string
   items: Array<{ label: string; count: number; href: string; active: boolean }>
+  limit?: number
 }) {
   if (items.length === 0) return null
+  const folded = limit !== undefined && items.length > limit + 2
+  const top = folded
+    ? new Set([...items].sort((a, b) => b.count - a.count).slice(0, limit).map((item) => item.href))
+    : null
+  const shown = top ? items.filter((item) => top.has(item.href) || item.active) : items
+  const rest = top ? items.filter((item) => !top.has(item.href) && !item.active) : []
   return (
     <div className="mb-6">
       <h2 className="mb-2 text-micro font-semibold uppercase tracking-wide text-zinc-deep">{title}</h2>
-      <ul className="flex flex-col gap-1">
-        {items.map((item) => (
-          <li key={item.href}>
-            <Link
-              href={item.href}
-              className={
-                item.active
-                  ? 'flex items-center justify-between rounded bg-signal-tint px-2 py-1.5 text-sm font-medium text-signal'
-                  : 'flex items-center justify-between rounded px-2 py-1.5 text-sm text-graphite hover:bg-rail'
-              }
-            >
-              <span className="truncate">{item.label}</span>
-              <span className="ml-2 shrink-0 text-micro text-zinc-deep">{item.count}</span>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <FacetList items={shown} />
+      {rest.length > 0 && (
+        <details className="group mt-1">
+          <summary className="cursor-pointer list-none rounded px-2 py-1.5 text-sm font-medium text-signal hover:bg-rail [&::-webkit-details-marker]:hidden">
+            <span className="group-open:hidden">All {items.length} {title.toLowerCase()}s</span>
+            <span className="hidden group-open:inline">Show fewer</span>
+          </summary>
+          <div className="mt-1 max-h-80 overflow-y-auto pr-1">
+            <FacetList items={rest} />
+          </div>
+        </details>
+      )}
     </div>
+  )
+}
+
+function FacetList({ items }: { items: Array<{ label: string; count: number; href: string; active: boolean }> }) {
+  return (
+    <ul className="flex flex-col gap-1">
+      {items.map((item) => (
+        <li key={item.href}>
+          <Link
+            href={item.href}
+            className={
+              item.active
+                ? 'flex items-center justify-between rounded bg-signal-tint px-2 py-1.5 text-sm font-medium text-signal'
+                : 'flex items-center justify-between rounded px-2 py-1.5 text-sm text-graphite hover:bg-rail'
+            }
+          >
+            <span className="truncate">{item.label}</span>
+            <span className="ml-2 shrink-0 text-micro text-zinc-deep">{item.count}</span>
+          </Link>
+        </li>
+      ))}
+    </ul>
   )
 }

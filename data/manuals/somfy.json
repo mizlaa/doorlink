@@ -271,8 +271,6 @@
       "category": "roller-shutter-motors",
       "region": "CA",
       "aliases": [],
-      "documents": [],
-      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet.",
       "summary": "Larger-diameter radio tubular motor for heavy shutters.",
       "specs": [
         {
@@ -306,7 +304,9 @@
       "specSource": {
         "url": "https://securityshutter.ca/products/somfy-660r2-rts",
         "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
-      }
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
     },
     {
       "modelCode": "Oximo",
@@ -337,8 +337,6 @@
       "category": "roller-shutter-motors",
       "region": "GLOBAL",
       "aliases": [],
-      "documents": [],
-      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet.",
       "summary": "Two-way radio (io-homecontrol) tubular shutter motor for 50 mm tubes, 6–50 Nm.",
       "specs": [
         {
@@ -363,7 +361,21 @@
       "specSource": {
         "url": "https://lacentrale-eco.com/en/accessoires/moteur-de-volet-roulant/moteurs-somfy-fr/moteur-radio/moteur-radio-somfy-oximo-io-10-nm.html",
         "note": "Reseller listing, not the manufacturer — check against the manual before quoting. The full torque list is the range across Oximo io versions; confirm the exact step with the supplier."
-      }
+      },
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Somfy Oximo io Tubular Motor Installation Guide",
+          "sourceUrl": "https://aluroli.pl/userdata/public/assets/Instrukcje%20automatyka/Somfy/somfy-oximo-io.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "aluroli.pl",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Somfy Oximo io Tubular Motor Installation Guide\" (host: aluroli.pl). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
     },
     {
       "modelCode": "Oximo RTS",
@@ -371,8 +383,6 @@
       "category": "roller-shutter-motors",
       "region": "GLOBAL",
       "aliases": [],
-      "documents": [],
-      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet.",
       "summary": "Radio (RTS) tubular shutter motor for 50 mm tubes, 6–50 Nm.",
       "specs": [
         {
@@ -397,7 +407,21 @@
       "specSource": {
         "url": "https://lacentrale-eco.com/en/accessoires/moteur-de-volet-roulant/moteurs-somfy-fr/moteur-radio/moteur-radio-somfy-oximo-rts-20-nm-somfy.html",
         "note": "Reseller listing, not the manufacturer — check against the manual before quoting. The full torque list is the range across Oximo RTS versions; confirm the exact step with the supplier."
-      }
+      },
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Somfy Oximo RTS Tubular Motor Installation Instructions (ref. 5005319)",
+          "sourceUrl": "https://set-gmbh.de/mediafiles/Anleitungen/1490065_Anleitung.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "set-gmbh.de",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Somfy Oximo RTS Tubular Motor Installation Instructions (ref. 5005319)\" (host: set-gmbh.de). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
     },
     {
       "modelCode": "Roller Shutter Motors",

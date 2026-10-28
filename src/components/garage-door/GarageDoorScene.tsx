@@ -5,6 +5,8 @@ import { GarageDoorPanels } from './GarageDoorPanels'
 
 interface GarageDoorSceneProps {
   progress: number
+  /** Shown behind the door once it opens; nothing when signed out. */
+  poweredBy: string | null
   isDragging: boolean
   dragHandlers: {
     onPointerDown: (event: React.PointerEvent<HTMLElement>) => void
@@ -27,7 +29,7 @@ interface GarageDoorSceneProps {
  * any width; on narrow screens the sides of the plate are cropped and the
  * door stays centred.
  */
-export function GarageDoorScene({ progress, isDragging, dragHandlers }: GarageDoorSceneProps) {
+export function GarageDoorScene({ progress, isDragging, dragHandlers, poweredBy }: GarageDoorSceneProps) {
   return (
     <div
       className={`garage-door-scene ${isDragging ? 'is-dragging' : ''}`}
@@ -51,7 +53,7 @@ export function GarageDoorScene({ progress, isDragging, dragHandlers }: GarageDo
         />
         <div className="garage-door-opening">
           <div className="garage-door-interior" aria-hidden="true" />
-          <AutomatedDoorsIntro progress={progress} />
+          {poweredBy && <AutomatedDoorsIntro progress={progress} name={poweredBy} />}
           <GarageDoorPanels progress={progress} />
         </div>
       </div>

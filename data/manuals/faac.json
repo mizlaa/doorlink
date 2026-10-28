@@ -58,8 +58,6 @@
       "aliases": [
         "391 24V"
       ],
-      "documents": [],
-      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet.",
       "summary": "Low-voltage articulated-arm operator for pillar-mounted swing leaves.",
       "specs": [
         {
@@ -83,7 +81,9 @@
       "specSource": {
         "url": "https://www.faac.co.uk/swing-gates/on-gate/391-24v-swing-gate-operator",
         "note": "Manufacturer product page."
-      }
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
     },
     {
       "modelCode": "400",
@@ -91,20 +91,6 @@
       "category": "gate-motors",
       "region": "EU",
       "aliases": [],
-      "documents": [
-        {
-          "kind": "SPEC_SHEET",
-          "title": "FAAC 400 Series Hydraulic Swing Gate Operator Spec Sheet",
-          "sourceUrl": "https://www.southwestautomated.com/product/attachment/1042021277/FAAC%20400%20Series%20Spec%20Sheet.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "southwestautomated.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"FAAC 400 Series Hydraulic Swing Gate Operator Spec Sheet\" (host: www.southwestautomated.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ],
       "summary": "Hydraulic ram operator for swing leaves; leaf length 2.2–7 m depending on model.",
       "specs": [
         {
@@ -128,7 +114,21 @@
       "specSource": {
         "url": "https://www.southwestautomated.com/product/attachment/1042021277/FAAC%20400%20Series%20Spec%20Sheet.pdf",
         "note": "FAAC spec sheet hosted by a dealer. The range spans 2.2–7 m; the shortest is used so a long leaf is not matched to the wrong model."
-      }
+      },
+      "documents": [
+        {
+          "kind": "SPEC_SHEET",
+          "title": "FAAC 400 Series Hydraulic Swing Gate Operator Spec Sheet",
+          "sourceUrl": "https://www.southwestautomated.com/product/attachment/1042021277/FAAC%20400%20Series%20Spec%20Sheet.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "southwestautomated.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 400 Series Hydraulic Swing Gate Operator Spec Sheet\" (host: www.southwestautomated.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
     },
     {
       "modelCode": "402",
@@ -201,8 +201,6 @@
       "aliases": [
         "415 24V"
       ],
-      "documents": [],
-      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet.",
       "summary": "Low-voltage ram operator for swing leaves up to 3 m (415 L: 4 m).",
       "specs": [
         {
@@ -222,7 +220,45 @@
       "specSource": {
         "url": "https://www.faacgateopeners.com/faac-415-24vdc-operator-only-10441811.html",
         "note": "Reseller listing, not the manufacturer — check against the manual before quoting. The long-stroke 415 L is rated to 4 m."
-      }
+      },
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 415 Swing Gate Operator Manual (US, Rev A)",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0537/7916/9453/files/415_58I0457_RevA_US.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cdn.shopify.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 415 Swing Gate Operator Manual (US, Rev A)\" (host: cdn.shopify.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 415 Swing Gate Operator Manual",
+          "sourceUrl": "https://www.tlc-direct.co.uk/Technical/DataSheets/Faac/415_MANUAL.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "tlc-direct.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 415 Swing Gate Operator Manual\" (host: www.tlc-direct.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "FAAC 415 Swing Gate Operator Installation Manual (2007)",
+          "sourceUrl": "https://ardengateautomation.co.uk/downloads/62f612edf27dd480faac-415-manual-2007.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ardengateautomation.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 415 Swing Gate Operator Installation Manual (2007)\" (host: ardengateautomation.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
     },
     {
       "modelCode": "740",
@@ -231,27 +267,6 @@
       "region": "GLOBAL",
       "aliases": [
         "FAAC 740"
-      ],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "740 / 741 Sliding Gate Operator Manual (Rev. D)",
-          "sourceUrl": "https://faac.blob.core.windows.net/web/1/gate-automation/faac-sliding-gates/740-230v-sliding-gate-operator/740-741-732484-revd-en.pdf",
-          "origin": "MANUFACTURER_ORIGINAL",
-          "region": "GLOBAL",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "documentCode": "732484",
-          "revision": "D",
-          "evidence": "FAAC's own CDN. Document code 732484 and revision D read from the filename. One manual covers both 740 and 741. Not fetched - egress blocked.",
-          "altSources": [
-            {
-              "url": "https://www.global-access.com.au/wp-content/uploads/2025/04/FAAC-740-741-Gate-Motor-Manual.pdf",
-              "authority": "AUTHORISED_DISTRIBUTOR",
-              "label": "Global Access (AU) copy"
-            }
-          ]
-        }
       ],
       "summary": "Mains sliding gate operator for residential gates up to 500 kg.",
       "specs": [
@@ -286,7 +301,28 @@
       "specSource": {
         "url": "https://www.faac.co.uk/productfiles/48_DataSheet_radFF2F3.pdf",
         "note": "Manufacturer's own manual or datasheet."
-      }
+      },
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "740 / 741 Sliding Gate Operator Manual (Rev. D)",
+          "sourceUrl": "https://faac.blob.core.windows.net/web/1/gate-automation/faac-sliding-gates/740-230v-sliding-gate-operator/740-741-732484-revd-en.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "documentCode": "732484",
+          "revision": "D",
+          "evidence": "FAAC's own CDN. Document code 732484 and revision D read from the filename. One manual covers both 740 and 741. Not fetched - egress blocked.",
+          "altSources": [
+            {
+              "url": "https://www.global-access.com.au/wp-content/uploads/2025/04/FAAC-740-741-Gate-Motor-Manual.pdf",
+              "authority": "AUTHORISED_DISTRIBUTOR",
+              "label": "Global Access (AU) copy"
+            }
+          ]
+        }
+      ]
     },
     {
       "modelCode": "740 / 741",
@@ -350,20 +386,6 @@
       "aliases": [
         "FAAC 741"
       ],
-      "documents": [
-        {
-          "kind": "USER_MANUAL",
-          "title": "741 User Manual",
-          "sourceUrl": "https://www.manualslib.com/manual/1339777/Faac-741.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualsLib",
-          "region": "GLOBAL",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Aggregator listing for the 741 entry of the shared 740/741 documentation. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ],
       "summary": "Mains sliding gate operator for gates up to 900 kg.",
       "specs": [
         {
@@ -397,7 +419,21 @@
       "specSource": {
         "url": "https://www.faac.co.uk/productfiles/48_DataSheet_radFF2F3.pdf",
         "note": "Manufacturer's own manual or datasheet."
-      }
+      },
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "741 User Manual",
+          "sourceUrl": "https://www.manualslib.com/manual/1339777/Faac-741.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualsLib",
+          "region": "GLOBAL",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing for the 741 entry of the shared 740/741 documentation. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
     },
     {
       "modelCode": "746 / 844 with CP81",
@@ -447,8 +483,6 @@
       "category": "gate-motors",
       "region": "GLOBAL",
       "aliases": [],
-      "documents": [],
-      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet.",
       "summary": "Underground operator for swing leaves, hidden in a foundation box.",
       "specs": [
         {
@@ -469,7 +503,21 @@
       "specSource": {
         "url": "https://fastgateopeners.com/store/resources/resources-hub/range-of-low-voltage-swing-gate-openers.html",
         "note": "Reseller listing, not the manufacturer — check against the manual before quoting. Published as 10 ft / 1110 lb; converted and rounded down."
-      }
+      },
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 770 Underground Swing Gate Operator Manual",
+          "sourceUrl": "https://www.tlc-direct.co.uk/Technical/DataSheets/Faac/770_MANUAL.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "tlc-direct.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 770 Underground Swing Gate Operator Manual\" (host: www.tlc-direct.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
     },
     {
       "modelCode": "844",
@@ -477,20 +525,6 @@
       "category": "gate-motors",
       "region": "EU",
       "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "FAAC 844 Chain and Rack and Pinion Gate Operators Manual",
-          "sourceUrl": "http://www.faacgateopeners.com/FAAC-Manuals/FAAC-844-Chain-and-Rack-and-Pinion-Gate-Operators.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "faacgateopeners.com",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"FAAC 844 Chain and Rack and Pinion Gate Operators Manual\" (host: www.faacgateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ],
       "summary": "Industrial mains sliding gate operator for gates up to 1800 kg.",
       "specs": [
         {
@@ -519,7 +553,21 @@
       "specSource": {
         "url": "https://www.faac.co.uk/sliding/844-er-230v-sliding-gate-operator",
         "note": "Manufacturer product page."
-      }
+      },
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC 844 Chain and Rack and Pinion Gate Operators Manual",
+          "sourceUrl": "http://www.faacgateopeners.com/FAAC-Manuals/FAAC-844-Chain-and-Rack-and-Pinion-Gate-Operators.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "faacgateopeners.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC 844 Chain and Rack and Pinion Gate Operators Manual\" (host: www.faacgateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
     },
     {
       "modelCode": "B680H",
@@ -590,8 +638,6 @@
       "category": "gate-motors",
       "region": "GLOBAL",
       "aliases": [],
-      "documents": [],
-      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet.",
       "summary": "Low-voltage sliding gate operator for gates up to 400 kg.",
       "specs": [
         {
@@ -616,7 +662,21 @@
       "specSource": {
         "url": "https://faac.com.au/products/family-gates/automations-for-gates/sliding-gates-operators/faac-c720-gates/",
         "note": "Manufacturer product page."
-      }
+      },
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC C720 / C721 Sliding Gate Operator Manual",
+          "sourceUrl": "https://fastgateopeners.com/store/media/pdfs/C720_C721%20Manual%205-24.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "fastgateopeners.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC C720 / C721 Sliding Gate Operator Manual\" (host: fastgateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
     },
     {
       "modelCode": "C721",
@@ -624,8 +684,6 @@
       "category": "gate-motors",
       "region": "GLOBAL",
       "aliases": [],
-      "documents": [],
-      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet.",
       "summary": "Low-voltage sliding gate operator for gates up to 800 kg.",
       "specs": [
         {
@@ -650,7 +708,21 @@
       "specSource": {
         "url": "https://www.global-access.com.au/product/faac-c721-24v-electric-sliding-gate-motor/",
         "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
-      }
+      },
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "FAAC C720 / C721 Sliding Gate Operator Manual",
+          "sourceUrl": "https://fastgateopeners.com/store/media/pdfs/C720_C721%20Manual%205-24.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "fastgateopeners.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"FAAC C720 / C721 Sliding Gate Operator Manual\" (host: fastgateopeners.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
     },
     {
       "modelCode": "E024 U",
@@ -748,6 +820,35 @@
         "S 418",
         "104301.5"
       ],
+      "summary": "Compact low-voltage ram operator for residential swing leaves.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Swing gate — ram"
+        },
+        {
+          "label": "Max leaf length",
+          "value": "2.3",
+          "unit": "m"
+        },
+        {
+          "label": "Leaf length note",
+          "value": "2.7 m with an electric lock fitted"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V DC"
+        },
+        {
+          "label": "Power",
+          "value": "35",
+          "unit": "W"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.faac.co.uk/swing-gates/on-gate/s418-24v-swing-gate-operator",
+        "note": "Manufacturer product page."
+      },
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -788,36 +889,7 @@
             }
           ]
         }
-      ],
-      "summary": "Compact low-voltage ram operator for residential swing leaves.",
-      "specs": [
-        {
-          "label": "Operator",
-          "value": "Swing gate — ram"
-        },
-        {
-          "label": "Max leaf length",
-          "value": "2.3",
-          "unit": "m"
-        },
-        {
-          "label": "Leaf length note",
-          "value": "2.7 m with an electric lock fitted"
-        },
-        {
-          "label": "Supply",
-          "value": "24 V DC"
-        },
-        {
-          "label": "Power",
-          "value": "35",
-          "unit": "W"
-        }
-      ],
-      "specSource": {
-        "url": "https://www.faac.co.uk/swing-gates/on-gate/s418-24v-swing-gate-operator",
-        "note": "Manufacturer product page."
-      }
+      ]
     }
   ]
 }

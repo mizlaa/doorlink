@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // The development badge (the black circle bottom-left) is replaced by
+  // the app's own loading ring; build errors still show as an overlay.
+  devIndicators: false,
   images: { formats: ['image/avif', 'image/webp'], remotePatterns: [] },
   experimental: {
     serverActions: {

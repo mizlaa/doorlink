@@ -31,7 +31,7 @@ export const PRODUCT_FAMILIES: Array<{ id: ProductFamily; label: string; types: 
   { id: 'garage', label: 'Garage door', types: ['sectional', 'roller', 'tilt'] },
   { id: 'gate', label: 'Gate', types: ['sliding-gate', 'swing-gate', 'pedestrian-gate'] },
   { id: 'fence', label: 'Fence', types: ['fence'] },
-  { id: 'shutter', label: 'Window shutter', types: ['window-shutter'] },
+  { id: 'shutter', label: 'Shutter', types: ['window-shutter'] },
 ]
 
 export function familyOf(productType: ProductType): ProductFamily {

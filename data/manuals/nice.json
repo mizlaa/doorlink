@@ -123,8 +123,20 @@
         "url": "https://www.rolluikonderdelen.nl/en/era-mat-la-tubular-motor.html",
         "note": "Reseller listing, not the manufacturer — check against the manual before quoting. Torque options list the ends of each size range; the exact model steps sit between them."
       },
-      "documents": [],
-      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Nice Era Mat T Tubular Motor Instructions and Warnings",
+          "sourceUrl": "https://pim.niceforyou.com//NicePIM/Products/E%20MAT%20MT%205012/Documents/is0082a03mm.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "pim.niceforyou.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Era Mat T Tubular Motor Instructions and Warnings\" (host: pim.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
     },
     {
       "modelCode": "ERA MAT MHT",
@@ -315,8 +327,20 @@
         "url": "https://www.linkcare.net/nice-hyppo-hy7005-24vdc-articulated-arm-gate-motor-automating-swing-gates-3m",
         "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
       },
-      "documents": [],
-      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Nice Hyppo Swing Gate Instructions and Warnings for Installation and Use",
+          "sourceUrl": "https://www.montersi.pl/instrukcje/HYPPO.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "montersi.pl",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Hyppo Swing Gate Instructions and Warnings for Installation and Use\" (host: www.montersi.pl). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
     },
     {
       "modelCode": "idv0420a00en",

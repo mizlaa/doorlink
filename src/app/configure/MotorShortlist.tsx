@@ -34,11 +34,11 @@ export function MotorShortlist({ spec, motors }: { spec: DoorSpec; motors: Motor
   }
 
   return (
-    <section aria-labelledby="motor-heading" className="mb-8 rounded-lg border border-line bg-rail p-4">
-      <h2 id="motor-heading" className="text-sm font-semibold uppercase tracking-wide text-zinc-deep">
-        Motor match
+    <section aria-labelledby="motor-heading" className="rounded-lg border border-line bg-rail p-4">
+      <h2 id="motor-heading" className="text-sm font-medium text-graphite">
+        Matching motors
       </h2>
-      {facts.length > 0 && <p className="mt-2 text-sm text-graphite">{facts.join(' · ')}</p>}
+      {facts.length > 0 && <p className="mt-1 text-sm text-zinc-deep">{facts.join(' · ')}</p>}
 
       {!isMotorised(spec) ? (
         <p className="mt-2 text-sm text-zinc-deep">No motor — choose motorised to see matching motors.</p>
@@ -78,8 +78,7 @@ export function MotorShortlist({ spec, motors }: { spec: DoorSpec; motors: Motor
       )}
 
       <p className="mt-3 text-micro text-zinc-deep">
-        Weight is a planning estimate from typical figures for the material. Ratings are as published; slope,
-        wind and hinge condition change what a motor can move, so have the installer confirm.
+        Estimated weight, matched to published ratings. Your installer confirms on site.
       </p>
     </section>
   )

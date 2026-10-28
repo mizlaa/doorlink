@@ -14,8 +14,6 @@
       "category": "gate-motors",
       "region": "GLOBAL",
       "aliases": [],
-      "documents": [],
-      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet.",
       "summary": "Articulated-arm operator for small swing leaves up to 2.3 m.",
       "specs": [
         {
@@ -36,7 +34,9 @@
       "specSource": {
         "url": "https://www.deasystem.com/en/product/angolo-the-motor-with-an-arm-for-small-sized-swing-gates",
         "note": "Manufacturer product page."
-      }
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
     },
     {
       "modelCode": "Gate Automation",
@@ -65,8 +65,6 @@
       "category": "gate-motors",
       "region": "GLOBAL",
       "aliases": [],
-      "documents": [],
-      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet.",
       "summary": "Underground operator for swing leaves up to 3.5 m.",
       "specs": [
         {
@@ -96,7 +94,9 @@
       "specSource": {
         "url": "https://www.accesscontrolsuppliesltd.co.uk/product/dea-ghost-100-individual-underground-motor-for-swing-gates/",
         "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
-      }
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
     },
     {
       "modelCode": "GHOST 200",
@@ -104,20 +104,6 @@
       "category": "gate-motors",
       "region": "UK",
       "aliases": [],
-      "documents": [
-        {
-          "kind": "TECHNICAL_DOCUMENT",
-          "title": "DEA Ghost 200 Technical Sheet and Flyer",
-          "sourceUrl": "https://www.ardengateautomation.co.uk/downloads/1435056191DEA_ghost_200_tech_sheet_&_flyer.pdf",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ardengateautomation.co.uk",
-          "region": "UK",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Recorded from a web search result naming this URL as \"DEA Ghost 200 Technical Sheet and Flyer\" (host: www.ardengateautomation.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ],
       "summary": "Underground operator for swing leaves up to 4 m.",
       "specs": [
         {
@@ -142,7 +128,33 @@
       "specSource": {
         "url": "https://deasystem.net/assets.deasystem.com/download/9/Catalistino2025_EN_WP.pdf",
         "note": "DEA 2025 product catalogue."
-      }
+      },
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DEA Ghost 200 Technical Sheet and Flyer",
+          "sourceUrl": "https://www.ardengateautomation.co.uk/downloads/1435056191DEA_ghost_200_tech_sheet_&_flyer.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ardengateautomation.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DEA Ghost 200 Technical Sheet and Flyer\" (host: www.ardengateautomation.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DEA GHOST 200 Info Sheet",
+          "sourceUrl": "https://downee.com.au/app/uploads/2024/03/GHOST-200-Info-Sheet.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "downee.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DEA GHOST 200 Info Sheet\" (host: downee.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
     },
     {
       "modelCode": "GULLIVER",
@@ -276,20 +288,6 @@
       "aliases": [
         "LIVI N"
       ],
-      "documents": [
-        {
-          "kind": "INSTALL_MANUAL",
-          "title": "DEA LIVI/N Series Operating Instructions and Warnings",
-          "sourceUrl": "https://www.manualslib.com/manual/1603144/Dea-Livi-N-Series.html",
-          "origin": "THIRD_PARTY_GUIDE",
-          "publisher": "ManualsLib",
-          "region": "EU",
-          "rights": "LINK_ONLY",
-          "language": "en",
-          "evidence": "Aggregator listing, 108 pages per the result. Kept separate from the 500 series because the aggregator files it as a distinct series, not because the difference was confirmed. Not fetched - egress blocked.",
-          "altSources": []
-        }
-      ],
       "summary": "Low-voltage sliding gate operator for gates up to 900 kg.",
       "specs": [
         {
@@ -319,7 +317,21 @@
       "specSource": {
         "url": "https://samtonline.com.au/shop/dea-livi-n/",
         "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
-      }
+      },
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "DEA LIVI/N Series Operating Instructions and Warnings",
+          "sourceUrl": "https://www.manualslib.com/manual/1603144/Dea-Livi-N-Series.html",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ManualsLib",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Aggregator listing, 108 pages per the result. Kept separate from the 500 series because the aggregator files it as a distinct series, not because the difference was confirmed. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
     },
     {
       "modelCode": "LOOK",
@@ -327,8 +339,6 @@
       "category": "gate-motors",
       "region": "GLOBAL",
       "aliases": [],
-      "documents": [],
-      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet.",
       "summary": "Ram operator kit for swing leaves up to 3 m.",
       "specs": [
         {
@@ -344,7 +354,21 @@
       "specSource": {
         "url": "https://www.ardengateautomation.co.uk/gate-automation-c1/above-ground-automation-kits-c8/dea-look-kit-electromechanical-swing-gate-kit-up-to-3m-p3553",
         "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
-      }
+      },
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DEA LOOK Swing Gate Info Sheet",
+          "sourceUrl": "https://downee.com.au/app/uploads/2024/03/Look_info-sheet.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "downee.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DEA LOOK Swing Gate Info Sheet\" (host: downee.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
     },
     {
       "modelCode": "REV MAG",
@@ -352,8 +376,6 @@
       "category": "gate-motors",
       "region": "AU",
       "aliases": [],
-      "documents": [],
-      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet.",
       "summary": "Low-voltage sliding gate operator for gates up to 1000 kg.",
       "specs": [
         {
@@ -388,7 +410,21 @@
       "specSource": {
         "url": "https://gatemaster.com.au/product/dea-rev-mag-24v-sliding-gate-motor-1000kg/",
         "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
-      }
+      },
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "DEA REV Series Sliding Gate Operating Instructions (Rev 15, 2025)",
+          "sourceUrl": "https://downee.com.au/app/uploads/2025/10/REV-Manual_R15.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "downee.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DEA REV Series Sliding Gate Operating Instructions (Rev 15, 2025)\" (host: downee.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
     }
   ]
 }

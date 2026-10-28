@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { prisma } from '@/lib/prisma'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { getSession } from '@/lib/auth'
+import { poweredByName } from '@/lib/powered-by'
 import { findWorkHref } from '@/lib/find-work'
 import { GarageDoorHero } from '@/components/garage-door/GarageDoorHero'
 import { TaskTile } from '@/components/ui/TaskTile'
@@ -16,6 +17,10 @@ import {
   MarketIcon,
   WorkIcon,
 } from '@/components/ui/TaskIcons'
+
+// Rendered per visitor: the door reveals whoever is signed in ("Powered by …"),
+// so this page must never be served from a shared static copy.
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   description:
@@ -47,10 +52,11 @@ const PROMISES = [
 export default async function HomePage() {
   const [manuals, session] = await Promise.all([manualCount(), getSession()])
   const workHref = findWorkHref(session)
+  const poweredBy = await poweredByName(session)
 
   return (
     <div>
-      <GarageDoorHero />
+      <GarageDoorHero poweredBy={poweredBy} />
 
       <section className="mx-auto max-w-shell px-4 pb-16 pt-4 sm:pb-20">
         <h2 className="text-2xl font-semibold tracking-tight text-graphite">What do you need?</h2>
@@ -65,7 +71,7 @@ export default async function HomePage() {
             hint={manuals ? `${manuals.toLocaleString('en-AU')} manuals` : 'Search the library'}
           />
           <TaskTile href="/tools/spring-calculator" icon={<CalculatorIcon />} title="Spring calculator" hint="Size a spring" />
-          <TaskTile href="/configure" icon={<DoorIcon />} title="Design a door" hint="See it on a house" />
+          <TaskTile href="/configure" icon={<DoorIcon />} title="Design" hint="Doors, gates, fences, shutters" />
           <TaskTile href="/find" icon={<IdentifyIcon />} title="Identify my door" hint="Find the model" />
           <TaskTile href="/compliance" icon={<ComplianceIcon />} title="Compliance pack" hint="Safety documents" />
           <TaskTile href="/find/unknown" icon={<HelpIcon />} title="Not sure?" hint="Answer a few questions" />
