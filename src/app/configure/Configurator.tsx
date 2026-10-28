@@ -407,6 +407,12 @@ export function Configurator({
                   >
                     Get quotes on this
                   </Link>
+                  <Link
+                    href={`/quote?category=garage-door&spec=${encodeURIComponent(JSON.stringify(spec))}`}
+                    className="inline-flex h-11 items-center rounded border border-line bg-paper px-4 text-sm font-medium text-graphite transition-colors hover:bg-rail"
+                  >
+                    Get instant quotes
+                  </Link>
                 </div>
               </>
             ) : (
@@ -416,6 +422,12 @@ export function Configurator({
                   className="inline-flex h-11 items-center rounded bg-signal px-5 text-sm font-medium text-paper transition-colors hover:bg-signal-hover"
                 >
                   Get quotes on this
+                </Link>
+                <Link
+                  href={`/quote?category=garage-door&spec=${encodeURIComponent(JSON.stringify(spec))}`}
+                  className="inline-flex h-11 items-center rounded border border-line bg-paper px-4 text-sm font-medium text-graphite transition-colors hover:bg-rail"
+                >
+                  Get instant quotes
                 </Link>
                 <p className="text-sm text-zinc-deep">
                   <Link href="/sign-in" className="font-medium text-signal hover:text-signal-hover">

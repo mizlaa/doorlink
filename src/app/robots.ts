@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       // Nothing here is useful to a crawler without a session, and
       // /admin doubly so shouldn't be discoverable.
-      disallow: ['/admin', '/my-listings', '/cart', '/support', '/sign-in', '/register'],
+      disallow: ['/admin', '/my-listings', '/cart', '/support', '/sign-in', '/register', '/pricing', '/quotes'],
     },
     sitemap: `${siteUrl}/sitemap.xml`,
   }

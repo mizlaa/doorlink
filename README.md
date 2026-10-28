@@ -63,4 +63,5 @@ src/components/finder/   the product finder cascade
 src/app/api/finder/      one endpoint, all five finder steps
 ```
 
-See `DEVELOPMENT.md` for build status and what is outstanding.
+See `DEVELOPMENT.md` for build status and what is outstanding, and
+`AUTOMATED_QUOTING.md` for the design, pricing and quoting system.

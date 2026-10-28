@@ -395,6 +395,7 @@ model User {
   springCalculations     SpringCalculation[]       @relation("SpringCalculations")
   creditBalance          CreditBalance?
   creditLedger           CreditLedger[]
+  quoteRequests          QuoteRequest[]            @relation("QuoteRequestCustomer")
 }
 
 model Organization {
@@ -419,6 +420,10 @@ model Organization {
   inspectionTemplates InspectionTemplate[]
   inspections         Inspection[]
   correctiveActions   CorrectiveAction[]
+
+  companyProfile CompanyProfile?
+  pricingRules   PricingRule[]
+  autoQuotes     AutoQuote[]
 }
 
 model OrganizationMember {
@@ -1440,15 +1445,15 @@ model CreditBalance {
 }
 
 model CreditLedger {
-  id                  String           @id @default(cuid())
-  user                User             @relation(fields: [userId], references: [id], onDelete: Cascade)
-  userId              String
-  delta               Int
-  kind                CreditLedgerKind
-  generationId        String?
-  providerSessionId   String?          @unique
-  packCode            String?
-  createdAt           DateTime         @default(now())
+  id                String           @id @default(cuid())
+  user              User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId            String
+  delta             Int
+  kind              CreditLedgerKind
+  generationId      String?
+  providerSessionId String?          @unique
+  packCode          String?
+  createdAt         DateTime         @default(now())
 
   @@unique([generationId, kind])
   @@index([userId])
@@ -2577,4 +2582,155 @@ model SpringCalculation {
 
   @@index([performedById])
   @@index([assetId])
+}
+
+// ---------------------------------------------------------------------
+// Automated quoting
+// ---------------------------------------------------------------------
+// A participating business (an Organization whose members hold a trade
+// subscription) sets its own prices as rules: one product, one brand,
+// one motor arrangement, inclusive width and height ranges, a price and
+// how GST and installation apply. Nothing here is a Doorlink price list.
+//
+// Privacy boundary: PricingRule and AutoQuote are only ever read through
+// src/lib/quoting/*, which scopes every query to the caller's own
+// organization (rules) or to the customer and quoting organization
+// (quotes). No route returns another business's rules.
+
+enum QuoteProductCategory {
+  GARAGE_DOOR
+  SLIDING_GATE
+  SWING_GATE
+  PEDESTRIAN_GATE
+  FENCE
+  WINDOW_SHUTTER
+  SHOP_SHUTTER
+}
+
+enum GstTreatment {
+  // The configured price already includes GST.
+  INCLUSIVE
+  // GST is charged on top of the configured price.
+  EXCLUSIVE
+}
+
+enum InstallationMode {
+  INCLUDED
+  // Offered for the extra amount in installPriceCents.
+  EXTRA
+  // Supply only.
+  NOT_OFFERED
+}
+
+enum MotorChoice {
+  NONE
+  ANY
+  BRAND
+}
+
+enum AutoQuoteStatus {
+  QUOTED
+  UNAVAILABLE
+}
+
+// What a business shows customers when they compare companies. Ratings
+// are not stored here: they are computed from genuine WorkerReview rows.
+model CompanyProfile {
+  id             String       @id @default(cuid())
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  organizationId String       @unique
+  about          String?
+  serviceArea    String?
+  phone          String?
+  website        String?
+  abn            String?
+  // Off until the business turns it on, so a half-configured price list
+  // never quotes anyone.
+  quotingEnabled Boolean      @default(false)
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+}
+
+model PricingRule {
+  id                String               @id @default(cuid())
+  organization      Organization         @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  organizationId    String
+  category          QuoteProductCategory
+  // As the business typed it, and a normalised key for matching ("" = no
+  // brand given).
+  brand             String?
+  brandKey          String               @default("")
+  widthMinMm        Int
+  widthMaxMm        Int
+  heightMinMm       Int
+  heightMaxMm       Int
+  motorIncluded     Boolean
+  motorBrand        String?
+  motorBrandKey     String               @default("")
+  installation      InstallationMode
+  installPriceCents Int?
+  priceCents        Int
+  gst               GstTreatment
+  notes             String?
+  isActive          Boolean              @default(true)
+  createdAt         DateTime             @default(now())
+  updatedAt         DateTime             @updatedAt
+
+  @@index([organizationId, category])
+}
+
+// What a signed-in customer asked for. One request can go to several
+// companies; each answer is an AutoQuote.
+model QuoteRequest {
+  id                 String               @id @default(cuid())
+  reference          String               @unique
+  customer           User                 @relation("QuoteRequestCustomer", fields: [customerId], references: [id], onDelete: Cascade)
+  customerId         String
+  category           QuoteProductCategory
+  brand              String?
+  motorChoice        MotorChoice
+  motorBrand         String?
+  widthMm            Int
+  heightMm           Int
+  installationWanted Boolean
+  // The customer's design choices (colour, style). Not priced.
+  design             Json?
+  // Whether the customer agreed to the quoting companies seeing their
+  // name and email.
+  shareContact       Boolean              @default(false)
+  createdAt          DateTime             @default(now())
+
+  quotes AutoQuote[]
+
+  @@index([customerId, createdAt])
+}
+
+// One company's answer to a request. Every figure is copied from the rule
+// at the moment of quoting, so editing a rule later never rewrites a quote
+// a customer already holds.
+model AutoQuote {
+  id                String            @id @default(cuid())
+  request           QuoteRequest      @relation(fields: [requestId], references: [id], onDelete: Cascade)
+  requestId         String
+  organization      Organization      @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  organizationId    String
+  status            AutoQuoteStatus
+  unavailableReason String?
+  ruleId            String?
+  brand             String?
+  motorIncluded     Boolean?
+  motorBrand        String?
+  installation      InstallationMode?
+  basePriceCents    Int?
+  installPriceCents Int?
+  gst               GstTreatment?
+  exGstCents        Int?
+  gstCents          Int?
+  totalCents        Int?
+  currency          String            @default("AUD")
+  notes             String?
+  createdAt         DateTime          @default(now())
+
+  @@index([organizationId, createdAt])
+  @@index([requestId])
 }

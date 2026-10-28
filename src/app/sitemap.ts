@@ -7,7 +7,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
 // Only genuinely public, indexable routes — not /admin, /my-listings,
 // /cart, /support, or auth screens, which need a session to do anything
 // useful and have nothing for a crawler to index.
-const STATIC_ROUTES = ['', '/find', '/find/unknown', '/data-sources', '/marketplace']
+const STATIC_ROUTES = ['', '/find', '/find/unknown', '/data-sources', '/marketplace', '/quote']
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticEntries: MetadataRoute.Sitemap = STATIC_ROUTES.map((path) => ({

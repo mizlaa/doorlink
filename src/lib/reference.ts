@@ -28,6 +28,7 @@ export type ReferenceKind =
   | 'ASSET'
   | 'MAN'
   | 'SPR'
+  | 'QTE'
 
 export function makeReference(kind: ReferenceKind, length = 7): string {
   return `DL-${kind}-${randomCode(length)}`

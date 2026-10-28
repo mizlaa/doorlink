@@ -45,6 +45,12 @@ export type Permission =
   | 'inspection:write'
   | 'asset:write'
   | 'inspection:template:write'
+  // Automated quoting. A business manages only its own price list
+  // (scoped to its organization in src/lib/quoting/company.ts, never by
+  // role alone). Platform admins deliberately do not get it: a company's
+  // prices are its own commercial information.
+  | 'pricing:manage:own'
+  | 'quote:request'
 
 // listing:write:own is granted to every role — Doorlink's marketplace is
 // peer-to-peer (anyone with an account can list an item, business or
@@ -64,6 +70,7 @@ const MATRIX: Record<Role, Permission[]> = {
     'marketplace:hire',
     'support:read:own',
     'manual:submit',
+    'quote:request',
   ],
   TECHNICIAN: [
     'catalogue:read',
@@ -80,6 +87,8 @@ const MATRIX: Record<Role, Permission[]> = {
     'inspection:write',
     'asset:write',
     'manual:submit',
+    'pricing:manage:own',
+    'quote:request',
   ],
   SUPPLIER: [
     'catalogue:read',
@@ -89,6 +98,8 @@ const MATRIX: Record<Role, Permission[]> = {
     'marketplace:hire',
     'support:read:own',
     'manual:submit',
+    'pricing:manage:own',
+    'quote:request',
   ],
   MANUFACTURER: [
     'catalogue:read',
@@ -99,6 +110,8 @@ const MATRIX: Record<Role, Permission[]> = {
     'marketplace:hire',
     'support:read:own',
     'manual:submit',
+    'pricing:manage:own',
+    'quote:request',
   ],
   ADMIN: [
     'catalogue:read',
@@ -123,6 +136,7 @@ const MATRIX: Record<Role, Permission[]> = {
     'inspection:write',
     'asset:write',
     'inspection:template:write',
+    'quote:request',
   ],
 }
 

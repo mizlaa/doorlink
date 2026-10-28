@@ -1577,6 +1577,16 @@ prettier run cannot convert a file to double quotes and semicolons.
 
 ---
 
+### Session 19 — automated design, pricing and quoting
+
+Customers design a garage door, gate, fence, window shutter or shop shutter
+at `/quote` (garage doors via the existing `/configure` 3D designer) and get
+instant quotes worked out from each participating business's own price
+rules. Businesses manage their prices at `/pricing` with the existing trade
+subscription. Separation between businesses is enforced in
+`src/lib/quoting/`. Full details, rules and open questions:
+`AUTOMATED_QUOTING.md`.
+
 ## Status by module
 
 | # | Module | Status |

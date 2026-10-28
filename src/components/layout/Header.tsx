@@ -18,6 +18,7 @@ import { AccountMenu } from './AccountMenu'
 const NAV_LINKS = [
   { href: '/request-technician', label: 'Find a professional' },
   { href: '/configure', label: 'Design a door' },
+  { href: '/quote', label: 'Get a quote' },
   { href: '/find', label: 'Door systems' },
   { href: '/manuals/finder', label: 'Manuals' },
   { href: '/tools', label: 'Tools' },
@@ -75,6 +76,14 @@ export async function Header() {
       accountLinks.push({ href: '/my-listings', label: 'My listings' })
     }
     accountLinks.push({ href: '/my-requests', label: 'My requests' })
+    if (can(session.role, 'quote:request')) {
+      accountLinks.push({ href: '/quotes', label: 'My quotes' })
+    }
+    // A business's own automated price list. The page also checks the
+    // trade subscription and scopes everything to the user's business.
+    if (can(session.role, 'pricing:manage:own')) {
+      accountLinks.push({ href: '/pricing', label: 'Automated pricing' })
+    }
     // The job board is the technician's side of the same marketplace, so
     // it is gated on being able to quote rather than on owning leads.
     if (can(session.role, 'marketplace:quote')) {
