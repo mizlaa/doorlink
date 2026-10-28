@@ -1,7 +1,7 @@
 'use server'
 
 import { redirect } from 'next/navigation'
-import { Prisma } from '@prisma/client'
+import { NotificationType, Prisma } from '@prisma/client'
 import { getSession, type Session } from '@/lib/auth'
 import { parseSpec, type DoorSpec } from '@/lib/configurator/options'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
@@ -16,7 +16,9 @@ import {
   toRuleTerms,
 } from '@/lib/pricing/business'
 import { matchRules, type UnavailableReason } from '@/lib/pricing/engine'
-import { requestFromSpec } from '@/lib/pricing/products'
+import { productLabel, requestFromSpec } from '@/lib/pricing/products'
+import { notifyBusiness } from '@/lib/pricing/notify'
+import { formatMoney } from '@/lib/money'
 
 export type QuoteRequestState = {
   error?: string
@@ -82,6 +84,16 @@ export async function requestQuoteAction(
     }
 
     reference = await createQuote()
+
+    // The business hears about every quote its prices produce. Only the
+    // customer's first name goes with it; contact details follow a booking.
+    const cheapest = result.options[0]
+    await notifyBusiness(key, {
+      type: NotificationType.LEAD_MATCHED,
+      title: `New quote: ${productLabel(request.product)} ${request.widthMm} × ${request.heightMm} mm`,
+      body: `${session.name.split(' ')[0]} was quoted ${formatMoney(cheapest.totalIncGstCents, cheapest.currency)} inc GST from your prices.`,
+      href: `/quotes/${reference}`,
+    })
 
     async function createQuote(attempt = 0): Promise<string> {
       const candidate = makeReference('QTE', 8)

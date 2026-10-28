@@ -3,7 +3,13 @@ import Link from 'next/link'
 import { getSession } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { formatMoney } from '@/lib/money'
-import { businessKeyFor, pricingSession, ruleOwnerWhere, toRuleTerms } from '@/lib/pricing/business'
+import {
+  businessKeyFor,
+  loadBusinessDetails,
+  pricingSession,
+  ruleOwnerWhere,
+  toRuleTerms,
+} from '@/lib/pricing/business'
 import { sizeRangeLabel } from '@/lib/pricing/describe'
 import { gstBreakdown } from '@/lib/pricing/engine'
 import {
@@ -23,7 +29,7 @@ export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = { title: 'Automated pricing' }
 
-type PageProps = { searchParams: Promise<{ saved?: string; overlap?: string }> }
+type PageProps = { searchParams: Promise<{ saved?: string; overlap?: string; details?: string }> }
 
 export default async function PricingPage({ searchParams }: PageProps) {
   const params = await searchParams
@@ -31,10 +37,15 @@ export default async function PricingPage({ searchParams }: PageProps) {
   // session so the query can only ever return this business's rules.
   const session = await pricingSession(await getSession())
   if (!session) return null
-  const rules = await prisma.pricingRule.findMany({
-    where: ruleOwnerWhere(businessKeyFor(session)),
-    orderBy: [{ product: 'asc' }, { productBrand: 'asc' }, { minWidthMm: 'asc' }, { minHeightMm: 'asc' }],
-  })
+  const key = businessKeyFor(session)
+  const [rules, details] = await Promise.all([
+    prisma.pricingRule.findMany({
+      where: ruleOwnerWhere(key),
+      orderBy: [{ product: 'asc' }, { productBrand: 'asc' }, { minWidthMm: 'asc' }, { minHeightMm: 'asc' }],
+    }),
+    loadBusinessDetails(key),
+  ])
+  const detailsMissing = !details || !details.businessName || !details.phone || !details.email
 
   const byProduct = PRICED_PRODUCTS.map((product) => ({
     product,
@@ -47,6 +58,16 @@ export default async function PricingPage({ searchParams }: PageProps) {
         <h2 id="prices-heading" className="text-sm font-medium text-graphite">
           Your prices
         </h2>
+        {detailsMissing && (
+          <p className="mt-2 rounded-md border border-caution/30 bg-caution-tint px-3 py-2 text-sm text-graphite">
+            Add your{' '}
+            <Link href="/pricing/business" className="font-medium text-signal hover:text-signal-hover">
+              business details
+            </Link>{' '}
+            so customers see your name and quote alerts reach you.
+          </p>
+        )}
+        {params.details && <p className="mt-2 text-sm text-good">Business details saved.</p>}
         {params.saved && <p className="mt-2 text-sm text-good">Saved.</p>}
         {params.overlap && (
           <p role="alert" className="mt-2 text-sm text-bad">

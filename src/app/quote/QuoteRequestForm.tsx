@@ -1,6 +1,7 @@
 'use client'
 
 import { useActionState } from 'react'
+import { keepValuesOnSubmit } from '@/lib/keep-form-values'
 import Link from 'next/link'
 import { requestQuoteAction, type QuoteRequestState } from './actions'
 import type { UnavailableReason } from '@/lib/pricing/engine'
@@ -43,7 +44,7 @@ export function QuoteRequestForm({
   const [state, formAction, isPending] = useActionState(requestQuoteAction, initialState)
 
   return (
-    <form action={formAction} className="flex flex-col gap-6">
+    <form action={formAction} onSubmit={keepValuesOnSubmit(formAction)} className="flex flex-col gap-6">
       <input type="hidden" name="spec" value={spec} />
 
       <div className="grid gap-4 sm:grid-cols-2">
@@ -115,7 +116,9 @@ export function QuoteRequestForm({
                     <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
                       <Stars average={company.ratingAvg} count={company.ratingCount} />
                       {company.jobsCompleted > 0 && (
-                        <span className="text-sm text-zinc-deep">{company.jobsCompleted} jobs done</span>
+                        <span className="text-sm text-zinc-deep">
+                          {company.jobsCompleted} {company.jobsCompleted === 1 ? 'job' : 'jobs'} done
+                        </span>
                       )}
                       {company.baseSuburb && (
                         <span className="text-sm text-zinc-deep">{company.baseSuburb}</span>

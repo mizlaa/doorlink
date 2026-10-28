@@ -8,24 +8,27 @@ export const metadata: Metadata = {
   title: 'Register',
 }
 
-export default function RegisterPage() {
+export default async function RegisterPage({ searchParams }: { searchParams: Promise<{ as?: string }> }) {
+  // /register?as=business opens on the installer option.
+  const { as } = await searchParams
+  const initialRole = as === 'business' ? 'TECHNICIAN' : 'CUSTOMER'
   const supabaseAuth = isConnected('auth')
   const devModeAvailable = !supabaseAuth && process.env.NODE_ENV !== 'production'
 
   return (
-    <div className="mx-auto max-w-sm px-4 py-16">
+    <div className="mx-auto max-w-md px-4 py-12 sm:py-16">
       <h1 className="text-2xl font-semibold text-graphite">Create an account</h1>
       <p className="mt-2 text-sm text-graphite-soft">
         {supabaseAuth
-          ? 'Choose an account type and set a password. Demo seed accounts are not created in Supabase automatically.'
-          : 'No password is set. This creates a development-only session, not real authentication.'}
+          ? 'Customers get quotes and hire. Businesses get found and quote.'
+          : 'Development mode: no password is set, and this is not real authentication.'}
       </p>
 
       <div className="mt-8">
         {supabaseAuth ? (
-          <RegisterForm mode="supabase" />
+          <RegisterForm mode="supabase" initialRole={initialRole} />
         ) : devModeAvailable ? (
-          <RegisterForm mode="dev" />
+          <RegisterForm mode="dev" initialRole={initialRole} />
         ) : (
           <NotConnected feature="Registration" reason="No authentication provider is connected in production yet." />
         )}

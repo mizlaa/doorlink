@@ -1,6 +1,7 @@
 'use client'
 
 import { useActionState, useState } from 'react'
+import { keepValuesOnSubmit } from '@/lib/keep-form-values'
 import Link from 'next/link'
 import { saveRuleAction, type RuleFormState } from './actions'
 import {
@@ -138,7 +139,7 @@ export function PricingRuleForm({ initial = EMPTY_RULE }: { initial?: RuleFormVa
   }
 
   return (
-    <form action={formAction} className="flex flex-col gap-5">
+    <form action={formAction} onSubmit={keepValuesOnSubmit(formAction)} className="flex flex-col gap-5">
       {values.id && <input type="hidden" name="id" value={values.id} />}
 
       <div className="grid gap-4 sm:grid-cols-2">

@@ -38,7 +38,7 @@ export function isValidPriceCents(value: unknown): value is number {
 export function purchaseReference(now: Date = new Date()): string {
   const stamp = now
     .toISOString()
-    .replace(/[-:T.]/g, '')
+    .replace(/\D/g, '') // digits only: drops - : T . Z
     .slice(0, 14)
   const suffix = Math.random().toString(36).slice(2, 8).toUpperCase()
   return `CSP-${stamp}-${suffix}`

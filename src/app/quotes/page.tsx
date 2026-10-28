@@ -5,6 +5,7 @@ import { getSession } from '@/lib/auth'
 import { formatMoney } from '@/lib/money'
 import { prisma } from '@/lib/prisma'
 import { productLabel } from '@/lib/pricing/products'
+import { Badge } from '@/components/ui/Badge'
 import { EmptyState } from '@/components/ui/EmptyState'
 
 // Per-account data: always rendered for the signed-in visitor, never cached.
@@ -48,7 +49,10 @@ export default async function MyQuotesPage() {
                 className="flex items-center justify-between gap-4 rounded-lg border border-line bg-paper p-4 hover:border-signal"
               >
                 <span className="min-w-0">
-                  <span className="block font-medium text-graphite">{quote.businessName}</span>
+                  <span className="flex items-center gap-2 font-medium text-graphite">
+                    {quote.businessName}
+                    {quote.status === 'BOOKED' && <Badge tone="good">Booked</Badge>}
+                  </span>
                   <span className="block text-sm text-zinc-deep">
                     {productLabel(quote.product)} · {quote.widthMm} × {quote.heightMm} mm ·{' '}
                     {quote.createdAt.toLocaleDateString('en-AU')}

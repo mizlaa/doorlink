@@ -192,7 +192,7 @@ function StarRating({ value, onChange }: { value: number; onChange: (next: numbe
               onChange={() => onChange(n)}
               className="sr-only"
             />
-            <span aria-hidden="true" className={n <= value ? 'text-graphite' : 'text-line'}>
+            <span aria-hidden="true" className={n <= value ? 'text-caution' : 'text-line'}>
               ★
             </span>
             <span className="sr-only">

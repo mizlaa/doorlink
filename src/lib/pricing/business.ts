@@ -103,7 +103,7 @@ export function toRuleTerms(rule: PricingRule): RuleTerms {
 }
 
 /** The account(s) behind a business: its members, or the one account. */
-async function businessUserIds(key: BusinessKey): Promise<string[]> {
+export async function businessUserIds(key: BusinessKey): Promise<string[]> {
   if (key.kind === 'user') return [key.id]
   const members = await prisma.organizationMember.findMany({
     where: { organizationId: key.id },
@@ -224,4 +224,87 @@ export async function offeredBrands(product: PricedProduct): Promise<string[]> {
     if (brand && !seen.has(key)) seen.set(key, brand)
   }
   return [...seen.values()].sort((a, b) => a.localeCompare(b))
+}
+
+export interface BusinessDetails {
+  businessName: string
+  phone: string
+  email: string
+  abn: string
+  suburb: string
+  state: string
+  postcode: string
+}
+
+/** The editable details of a business, as stored. */
+export async function loadBusinessDetails(key: BusinessKey): Promise<BusinessDetails | null> {
+  if (key.kind === 'organization') {
+    const org = await prisma.organization.findUnique({ where: { id: key.id } })
+    if (!org) return null
+    return {
+      businessName: org.name,
+      phone: org.phone ?? '',
+      email: org.email ?? '',
+      abn: org.abn ?? '',
+      suburb: org.suburb ?? '',
+      state: org.state ?? '',
+      postcode: org.postcode ?? '',
+    }
+  }
+  const user = await prisma.user.findUnique({
+    where: { id: key.id },
+    select: { name: true, email: true, phone: true, technicianProfile: true },
+  })
+  if (!user) return null
+  const p = user.technicianProfile
+  return {
+    businessName: p?.businessName ?? '',
+    phone: p?.businessPhone ?? user.phone ?? '',
+    email: p?.businessEmail ?? '',
+    abn: p?.abn ?? '',
+    suburb: p?.baseSuburb ?? '',
+    state: p?.baseState ?? '',
+    postcode: p?.basePostcode ?? '',
+  }
+}
+
+/** Where quote and booking alerts go: the business's alert email, else the owner's login. */
+export async function businessAlertEmail(key: BusinessKey): Promise<string | null> {
+  if (key.kind === 'organization') {
+    const org = await prisma.organization.findUnique({
+      where: { id: key.id },
+      select: {
+        email: true,
+        members: { where: { role: 'OWNER' }, select: { user: { select: { email: true } } }, take: 1 },
+      },
+    })
+    return org?.email ?? org?.members[0]?.user.email ?? null
+  }
+  const user = await prisma.user.findUnique({
+    where: { id: key.id },
+    select: { email: true, technicianProfile: { select: { businessEmail: true } } },
+  })
+  return user?.technicianProfile?.businessEmail ?? user?.email ?? null
+}
+
+/**
+ * The account that works a booked job: the sole trader, or the
+ * organisation's owner. Jobs have a single worker, so an organisation's
+ * bookings land with whoever owns it.
+ */
+export async function businessWorker(
+  key: BusinessKey
+): Promise<{ userId: string; technicianId: string | null } | null> {
+  const userId =
+    key.kind === 'user'
+      ? key.id
+      : ((
+          await prisma.organizationMember.findFirst({
+            where: { organizationId: key.id, role: 'OWNER' },
+            select: { userId: true },
+          })
+        )?.userId ?? null)
+  if (!userId) return null
+  const profile = await prisma.technicianProfile.findUnique({ where: { userId }, select: { id: true } })
+  return { userId, technicianId: profile?.id ?? null }
 }

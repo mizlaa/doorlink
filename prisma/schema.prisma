@@ -405,6 +405,14 @@ model Organization {
   id        String   @id @default(cuid())
   name      String
   type      OrgType
+  // Business details, entered at sign-up and editable in the pricing area.
+  abn       String?
+  phone     String?
+  // Where quote and booking alerts go.
+  email     String?
+  suburb    String?
+  state     String?
+  postcode  String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -459,6 +467,8 @@ model TechnicianProfile {
   // The number a technician puts on the side of the van, which is often
   // not the number on their personal account record.
   businessPhone   String?
+  // Where quote and booking alerts go, when it differs from the login.
+  businessEmail   String?
   abn             String?
   avatarUrl       String?
   headline        String?
@@ -1063,6 +1073,9 @@ model Job {
   cancellationReason String?
   createdAt          DateTime           @default(now())
   updatedAt          DateTime           @updatedAt
+
+  // Set when the job was booked from an automated quote.
+  automatedQuote AutomatedQuote?
 
   statusEvents  JobStatusEvent[]
   transactions  Transaction[]
@@ -2603,6 +2616,11 @@ enum PricedProduct {
   SHOP_SHUTTER
 }
 
+enum AutomatedQuoteStatus {
+  ISSUED
+  BOOKED
+}
+
 // Whether the configured price already contains GST or has it added.
 enum GstTreatment {
   INCLUSIVE
@@ -2692,6 +2710,22 @@ model AutomatedQuote {
   motorRequired   Boolean
   requestedMotor  String?
   installRequired Boolean
+
+  status           AutomatedQuoteStatus @default(ISSUED)
+  // Booking: the option the customer accepted, the job it became, and
+  // the site and contact details they gave the business.
+  acceptedOptionId String?
+  bookedAt         DateTime?
+  job              Job?                 @relation(fields: [jobId], references: [id], onDelete: SetNull)
+  jobId            String?              @unique
+  bookingName      String?
+  bookingPhone     String?
+  bookingAddress   String?
+  bookingSuburb    String?
+  bookingState     String?
+  bookingPostcode  String?
+  bookingTiming    String?
+  bookingNotes     String?
 
   createdAt DateTime @default(now())
 

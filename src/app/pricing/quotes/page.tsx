@@ -5,6 +5,7 @@ import { formatMoney } from '@/lib/money'
 import { prisma } from '@/lib/prisma'
 import { businessKeyFor, quoteBusinessWhere, pricingSession } from '@/lib/pricing/business'
 import { productLabel } from '@/lib/pricing/products'
+import { Badge } from '@/components/ui/Badge'
 import { EmptyState } from '@/components/ui/EmptyState'
 
 // Per-account data: always rendered for the signed-in visitor, never cached.
@@ -18,7 +19,7 @@ export default async function QuotesIssuedPage() {
   // Only quotes issued from this business's own prices.
   const quotes = await prisma.automatedQuote.findMany({
     where: quoteBusinessWhere(businessKeyFor(session)),
-    orderBy: { createdAt: 'desc' },
+    orderBy: [{ status: 'desc' }, { createdAt: 'desc' }],
     include: {
       customer: { select: { name: true } },
       options: { orderBy: { sortOrder: 'asc' }, take: 1 },
@@ -40,12 +41,13 @@ export default async function QuotesIssuedPage() {
       {quotes.map((quote) => (
         <li key={quote.id}>
           <Link
-            href={`/quotes/${quote.reference}`}
+            href={quote.jobId ? `/jobs/${quote.jobId}` : `/quotes/${quote.reference}`}
             className="flex items-center justify-between gap-4 rounded-lg border border-line bg-paper p-4 hover:border-signal"
           >
             <span className="min-w-0">
-              <span className="block font-medium text-graphite">
+              <span className="flex items-center gap-2 font-medium text-graphite">
                 {productLabel(quote.product)} · {quote.widthMm} × {quote.heightMm} mm
+                {quote.status === 'BOOKED' && <Badge tone="good">Booked</Badge>}
               </span>
               <span className="block text-sm text-zinc-deep">
                 {quote.customer.name.split(' ')[0]} · {quote.createdAt.toLocaleDateString('en-AU')} ·{' '}

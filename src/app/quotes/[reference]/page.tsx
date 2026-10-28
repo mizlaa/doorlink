@@ -9,6 +9,8 @@ import { motorLabel, productLabel, styleLabel } from '@/lib/pricing/products'
 import { motorCheck, quoteForViewer, type MotorCheck } from '@/lib/pricing/quotes'
 import { Stars } from '@/components/quotes/Stars'
 import { PrintButton } from '@/components/ui/PrintButton'
+import { prisma } from '@/lib/prisma'
+import { BookingForm } from './BookingForm'
 
 // Per-account data: always rendered for the signed-in visitor, never cached.
 export const dynamic = 'force-dynamic'
@@ -75,6 +77,9 @@ export default async function QuoteViewPage({ params }: { params: Promise<{ refe
       : { kind: 'user', id: quote.businessUserId! }
   )
   const isCustomer = quote.customerId === session.userId
+  const customerPhone = isCustomer
+    ? (await prisma.user.findUnique({ where: { id: session.userId }, select: { phone: true } }))?.phone
+    : null
   const style = styleLabel(quote.productStyle)
 
   return (
@@ -86,8 +91,8 @@ export default async function QuoteViewPage({ params }: { params: Promise<{ refe
             Quote from {quote.businessName}
           </h1>
           <p className="mt-1 text-sm text-graphite-soft">
-            {[style, productLabel(quote.product)].filter(Boolean).join(' ')} · {quote.widthMm} ×{' '}
-            {quote.heightMm} mm ·{' '}
+            {style ? `${style} ${productLabel(quote.product).toLowerCase()}` : productLabel(quote.product)} ·{' '}
+            {quote.widthMm} × {quote.heightMm} mm ·{' '}
             {quote.createdAt.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' })}
           </p>
           {card && (
@@ -113,14 +118,23 @@ export default async function QuoteViewPage({ params }: { params: Promise<{ refe
         </h2>
         <ul className="mt-3 flex flex-col gap-4">
           {quote.options.map((option, index) => (
-            <li key={option.id} className="rounded-lg border border-line bg-paper p-5 shadow-panel">
+            <li
+              key={option.id}
+              className={`rounded-lg border bg-paper p-5 shadow-panel ${quote.acceptedOptionId === option.id ? 'border-good ring-1 ring-good' : 'border-line'}`}
+            >
               <div className="flex flex-wrap items-baseline justify-between gap-2">
                 <p className="font-semibold text-graphite">
                   {quote.options.length > 1 && `Option ${index + 1}: `}
                   {option.productBrand ?? 'Brand not named'}
                 </p>
                 <p className="text-sm text-zinc-deep">
-                  {option.gst === 'EXCLUSIVE' ? 'Priced plus GST' : 'Priced including GST'}
+                  {quote.acceptedOptionId === option.id ? (
+                    <span className="font-semibold text-good">Booked</span>
+                  ) : option.gst === 'EXCLUSIVE' ? (
+                    'Priced plus GST'
+                  ) : (
+                    'Priced including GST'
+                  )}
                 </p>
               </div>
               <dl className="mt-3">
@@ -128,25 +142,22 @@ export default async function QuoteViewPage({ params }: { params: Promise<{ refe
                   label={option.installation === 'INCLUDED' ? 'Supply and installation' : 'Supply'}
                   value={formatMoney(option.priceCents, option.currency)}
                 />
-                {option.installPriceCents !== null && (
-                  <Row label="Installation" value={formatMoney(option.installPriceCents, option.currency)} />
-                )}
+                <Row
+                  label="Installation"
+                  value={
+                    option.installation === 'INCLUDED'
+                      ? 'Included'
+                      : option.installPriceCents !== null
+                        ? formatMoney(option.installPriceCents, option.currency)
+                        : 'Not included'
+                  }
+                />
                 <Row
                   label="Motor"
                   value={
                     option.motorIncluded
                       ? `Included${option.motorBrand ? ` · ${motorLabel(quote.product, option.motorBrand)}` : ''}`
                       : 'Not included'
-                  }
-                />
-                <Row
-                  label="Installation terms"
-                  value={
-                    option.installation === 'INCLUDED'
-                      ? 'Included in the price'
-                      : option.installPriceCents !== null
-                        ? 'Priced separately (added)'
-                        : 'Not included (supply only)'
                   }
                 />
                 <Row
@@ -168,6 +179,49 @@ export default async function QuoteViewPage({ params }: { params: Promise<{ refe
           ))}
         </ul>
       </section>
+
+      {quote.status === 'BOOKED' ? (
+        <section className="mt-6 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-good/40 bg-natural/10 p-4">
+          <p className="text-sm text-graphite">
+            <span className="font-semibold">Booked</span>
+            {quote.bookedAt &&
+              ` on ${quote.bookedAt.toLocaleDateString('en-AU', { day: 'numeric', month: 'long' })}`}
+            . {isCustomer ? `${quote.businessName} will confirm a date with you.` : 'Schedule it from the job.'}
+          </p>
+          {quote.jobId && (
+            <Link
+              href={`/jobs/${quote.jobId}`}
+              className="inline-flex h-10 items-center rounded-md bg-signal px-4 text-sm font-semibold text-paper hover:bg-signal-hover"
+            >
+              View job
+            </Link>
+          )}
+        </section>
+      ) : (
+        isCustomer && (
+          <section
+            className="mt-8 rounded-lg border border-line bg-paper p-5 shadow-panel"
+            aria-labelledby="book-heading"
+          >
+            <h2 id="book-heading" className="text-lg font-semibold text-graphite">
+              Book this quote
+            </h2>
+            <p className="mb-4 mt-1 text-sm text-graphite-soft">
+              {quote.businessName} gets your address and number, and confirms a date.
+            </p>
+            <BookingForm
+              reference={quote.reference}
+              businessName={quote.businessName}
+              options={quote.options.map((option, index) => ({
+                id: option.id,
+                label: `${quote.options.length > 1 ? `Option ${index + 1}: ` : ''}${option.productBrand ?? 'Brand not named'}`,
+                total: formatMoney(option.totalIncGstCents, option.currency),
+              }))}
+              defaults={{ name: session.name, phone: customerPhone ?? '' }}
+            />
+          </section>
+        )
+      )}
 
       <section className="mt-8 rounded-lg border border-line bg-rail p-4">
         <h2 className="text-sm font-medium text-graphite">Design</h2>

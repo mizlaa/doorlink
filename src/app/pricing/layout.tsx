@@ -55,7 +55,10 @@ export default async function PricingLayout({ children }: { children: ReactNode 
             Prices
           </Link>
           <Link href="/pricing/quotes" className="rounded-md px-3 py-1.5 text-graphite hover:bg-paper">
-            Quotes issued
+            Quotes &amp; bookings
+          </Link>
+          <Link href="/pricing/business" className="rounded-md px-3 py-1.5 text-graphite hover:bg-paper">
+            Business details
           </Link>
         </nav>
       </div>
