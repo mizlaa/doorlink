@@ -63,3 +63,25 @@ next person it was looked for.
 
 Nothing here requires a code change. `scripts/import-manuals.ts` reads
 every `*.json` in this directory.
+
+## Motor ratings (`specs`, `specSource`, `summary`)
+
+A model can carry its published ratings as `specs` — label, value and
+optional unit — which the import writes to the model's spec rows. The
+labels in `src/lib/motors/specs.ts` (`Operator`, `Max gate weight`,
+`Max leaf length`, `Leaf weight by length`, `Torque options` and so on)
+are what the designer reads back to shortlist a motor for a gate or
+shutter; any other label is simply shown on the model page.
+
+Rules:
+
+- `specs` without a `specSource` (`url` and `note`) fail validation. The
+  note says what kind of source it is, and says so plainly when it is a
+  reseller rather than the manufacturer.
+- Where sources disagree, the lower (safer) figure is used and the note
+  says so. Where a figure could not be pinned down it is left out, not
+  guessed.
+- `Operator` must be one of the values in `OPERATORS`; a model without it
+  is still catalogued but never recommended.
+- When `specs` is present the import replaces that model's spec rows;
+  when it is absent the rows are left alone.

@@ -14,7 +14,33 @@
  * shutters additive rather than a second implementation.
  */
 
-export type ProductType = 'sectional' | 'roller' | 'tilt'
+export type ProductType =
+  | 'sectional'
+  | 'roller'
+  | 'tilt'
+  | 'sliding-gate'
+  | 'swing-gate'
+  | 'pedestrian-gate'
+  | 'fence'
+  | 'window-shutter'
+
+/** What the customer is designing, before which kind of it. */
+export type ProductFamily = 'garage' | 'gate' | 'fence' | 'shutter'
+
+export const PRODUCT_FAMILIES: Array<{ id: ProductFamily; label: string; types: ProductType[] }> = [
+  { id: 'garage', label: 'Garage door', types: ['sectional', 'roller', 'tilt'] },
+  { id: 'gate', label: 'Gate', types: ['sliding-gate', 'swing-gate', 'pedestrian-gate'] },
+  { id: 'fence', label: 'Fence', types: ['fence'] },
+  { id: 'shutter', label: 'Window shutter', types: ['window-shutter'] },
+]
+
+export function familyOf(productType: ProductType): ProductFamily {
+  return PRODUCT_FAMILIES.find((family) => family.types.includes(productType))?.id ?? 'garage'
+}
+
+const GARAGE: ProductType[] = ['sectional', 'roller', 'tilt']
+const GATES: ProductType[] = ['sliding-gate', 'swing-gate', 'pedestrian-gate']
+const MOTORISED_GATES: ProductType[] = ['sliding-gate', 'swing-gate', 'pedestrian-gate']
 
 export interface OptionValue {
   id: string
@@ -51,6 +77,31 @@ export const PRODUCT_TYPES: OptionValue[] = [
     label: 'Tilt',
     description: 'One rigid panel that tilts up and out. Common on older houses and single garages.',
   },
+  {
+    id: 'sliding-gate',
+    label: 'Sliding gate',
+    description: 'One leaf that runs sideways on a ground track. Needs clear wall alongside, not swing room.',
+  },
+  {
+    id: 'swing-gate',
+    label: 'Swing gate',
+    description: 'One or two leaves on hinges. Needs clear, fairly level ground for the leaves to swing over.',
+  },
+  {
+    id: 'pedestrian-gate',
+    label: 'Pedestrian gate',
+    description: 'A single walk-through leaf, usually 900–1100 mm wide. Pool gates must self-close.',
+  },
+  {
+    id: 'fence',
+    label: 'Fence',
+    description: 'A run of panels between posts, in the same infill as the gate so the two match.',
+  },
+  {
+    id: 'window-shutter',
+    label: 'Roller shutter',
+    description: 'An aluminium curtain that rolls into a box above the window, for security, shade and noise.',
+  },
 ]
 
 export const OPTION_GROUPS: OptionGroup[] = [
@@ -67,6 +118,7 @@ export const OPTION_GROUPS: OptionGroup[] = [
       { id: 'ironbark', label: 'Ironbark', hex: '#3E3A34' },
       { id: 'forest', label: 'Deep forest', hex: '#2E4034' },
       { id: 'oxide', label: 'Oxide red', hex: '#6E3A32' },
+      { id: 'black', label: 'Satin black', hex: '#1F2124' },
     ],
   },
   {
@@ -110,8 +162,65 @@ export const OPTION_GROUPS: OptionGroup[] = [
     ],
   },
   {
+    id: 'infill',
+    label: 'Infill',
+    only: [...GATES, 'fence'],
+    values: [
+      {
+        id: 'slats',
+        label: 'Horizontal slats',
+        description: 'Closed-up slats. Private, and the usual modern look.',
+      },
+      {
+        id: 'spaced-slats',
+        label: 'Spaced slats',
+        description: 'Slats with a gap between. Lets light and air through.',
+      },
+      { id: 'pickets', label: 'Vertical pickets', description: 'Tubular uprights. Open, and hard to climb.' },
+      { id: 'solid', label: 'Solid sheet', description: 'One flat face. Most privacy, and most wind load.' },
+    ],
+  },
+  {
+    id: 'material',
+    label: 'Material',
+    help: 'Sets the weight estimate the motor is matched against.',
+    only: [...GATES, 'fence'],
+    values: [
+      { id: 'aluminium', label: 'Aluminium', description: 'Light and rust-free. About 10–12 kg per m².' },
+      {
+        id: 'tubular-steel',
+        label: 'Tubular steel',
+        description: 'Stronger frame, heavier. About 15–25 kg per m².',
+      },
+      { id: 'solid-steel', label: 'Solid steel', description: 'Heaviest and toughest. About 40–50 kg per m².' },
+    ],
+  },
+  {
+    id: 'leaves',
+    label: 'Leaves',
+    only: ['swing-gate'],
+    values: [
+      {
+        id: '2',
+        label: 'Double',
+        description: 'Two leaves meeting in the middle. Each swings half the width.',
+      },
+      { id: '1', label: 'Single', description: 'One leaf across the whole opening. Needs more swing room.' },
+    ],
+  },
+  {
+    id: 'slat',
+    label: 'Slat size',
+    only: ['window-shutter'],
+    values: [
+      { id: '39', label: '39 mm slats', description: 'Smaller box. Suits most house windows.' },
+      { id: '55', label: '55 mm slats', description: 'Stronger curtain for wide windows and doors.' },
+    ],
+  },
+  {
     id: 'hardware',
     label: 'Hardware',
+    only: [...GARAGE, ...GATES],
     values: [
       { id: 'brushed', label: 'Brushed steel', hex: '#B7BBC0' },
       { id: 'black', label: 'Matte black', hex: '#2A2C2E' },
@@ -121,6 +230,7 @@ export const OPTION_GROUPS: OptionGroup[] = [
   {
     id: 'insulation',
     label: 'Insulation',
+    only: GARAGE,
     values: [
       { id: 'none', label: 'None' },
       { id: 'backed', label: 'Backed', description: 'A bonded backing layer. Quieter, a little warmer.' },
@@ -134,6 +244,7 @@ export const OPTION_GROUPS: OptionGroup[] = [
   {
     id: 'opener',
     label: 'Opener',
+    only: GARAGE,
     values: [
       { id: 'none', label: 'Keep my existing opener' },
       {
@@ -143,6 +254,67 @@ export const OPTION_GROUPS: OptionGroup[] = [
       },
       { id: 'chain', label: 'Chain drive', description: 'Cheaper and hard-wearing, but louder.' },
       { id: 'direct', label: 'Direct drive', description: 'Motor travels on the rail. Few moving parts.' },
+    ],
+  },
+  {
+    id: 'operation',
+    label: 'Operation',
+    only: MOTORISED_GATES,
+    values: [
+      { id: 'motorised', label: 'Motorised', description: 'Opens from a remote, keypad or phone.' },
+      { id: 'manual', label: 'Manual', description: 'Opened by hand, with a latch or lock.' },
+    ],
+  },
+  {
+    id: 'swingMotor',
+    label: 'Motor style',
+    only: ['swing-gate', 'pedestrian-gate'],
+    values: [
+      { id: 'ram', label: 'Ram', description: 'A straight actuator from post to leaf. The usual choice.' },
+      {
+        id: 'arm',
+        label: 'Articulated arm',
+        description: 'Folding arm for wide pillars where a ram will not fit.',
+      },
+      {
+        id: 'underground',
+        label: 'Underground',
+        description: 'Hidden in a box under the hinge. Nothing on show.',
+      },
+    ],
+  },
+  {
+    id: 'control',
+    label: 'Control',
+    only: ['window-shutter'],
+    values: [
+      {
+        id: 'radio',
+        label: 'Remote',
+        description: 'A radio motor with a hand-held remote or wall transmitter.',
+      },
+      { id: 'switch', label: 'Wall switch', description: 'A wired motor on an up/down switch.' },
+      { id: 'manual', label: 'Manual', description: 'A strap or crank winder. No motor.' },
+    ],
+  },
+  {
+    id: 'motorBrand',
+    label: 'Motor brand',
+    help: 'Matched against each motor’s published rating.',
+    only: [...MOTORISED_GATES, 'window-shutter'],
+    values: [
+      { id: 'any', label: 'Best match' },
+      { id: 'beninca', label: 'Benincà', only: GATES },
+      { id: 'bft', label: 'BFT', only: GATES },
+      { id: 'dea', label: 'DEA', only: GATES },
+      { id: 'faac', label: 'FAAC', only: GATES },
+      { id: 'grifco', label: 'Grifco', only: GATES },
+      { id: 'merlin', label: 'Merlin', only: GATES },
+      { id: 'nice', label: 'Nice' },
+      { id: 'cw-products', label: 'CW Products', only: ['window-shutter'] },
+      { id: 'maxim', label: 'Maxim', only: ['window-shutter'] },
+      { id: 'simu', label: 'SIMU', only: ['window-shutter'] },
+      { id: 'somfy', label: 'Somfy', only: ['window-shutter'] },
     ],
   },
 ]
@@ -157,6 +329,14 @@ export type DoorSpec = {
   hardware: string
   insulation: string
   opener: string
+  infill: string
+  material: string
+  leaves: string
+  slat: string
+  operation: string
+  swingMotor: string
+  control: string
+  motorBrand: string
   widthMm: number
   heightMm: number
 }
@@ -171,6 +351,14 @@ export const DEFAULT_SPEC: DoorSpec = {
   hardware: 'brushed',
   insulation: 'backed',
   opener: 'belt',
+  infill: 'slats',
+  material: 'aluminium',
+  leaves: '2',
+  slat: '39',
+  operation: 'motorised',
+  swingMotor: 'ram',
+  control: 'radio',
+  motorBrand: 'any',
   // A single-car opening, which is the most common thing to be
   // replacing. Millimetres because that is what the trade quotes in.
   widthMm: 2400,
@@ -181,6 +369,86 @@ export const SIZE_LIMITS = {
   widthMm: { min: 1800, max: 6000, step: 10 },
   heightMm: { min: 1800, max: 3000, step: 10 },
 } as const
+
+type SizeRange = { min: number; max: number; step: number; default: number }
+
+/**
+ * Size ranges for everything that is not a garage door. Typical sizes are
+ * a sliding gate 3–5 m wide and 1.8–2 m tall, a pair of swing leaves up to
+ * about 3.6 m, a pedestrian gate 900–1100 mm wide (a pool gate at least
+ * 1200 mm tall), and a window anywhere from a toilet to a sliding door.
+ * The ranges are wider than typical so an unusual job can still be drawn.
+ */
+const SIZES: Record<
+  Exclude<ProductType, 'sectional' | 'roller' | 'tilt'>,
+  { widthMm: SizeRange; heightMm: SizeRange }
+> = {
+  'sliding-gate': {
+    widthMm: { min: 2000, max: 12000, step: 10, default: 4000 },
+    heightMm: { min: 900, max: 2400, step: 10, default: 1800 },
+  },
+  'swing-gate': {
+    widthMm: { min: 1000, max: 8000, step: 10, default: 3600 },
+    heightMm: { min: 900, max: 2400, step: 10, default: 1800 },
+  },
+  'pedestrian-gate': {
+    widthMm: { min: 800, max: 1500, step: 10, default: 1000 },
+    heightMm: { min: 900, max: 2400, step: 10, default: 1800 },
+  },
+  fence: {
+    widthMm: { min: 1000, max: 30000, step: 100, default: 6000 },
+    heightMm: { min: 600, max: 2400, step: 10, default: 1800 },
+  },
+  'window-shutter': {
+    widthMm: { min: 400, max: 4000, step: 10, default: 1200 },
+    heightMm: { min: 400, max: 3000, step: 10, default: 1500 },
+  },
+}
+
+export function sizeLimitsFor(productType: ProductType): {
+  widthMm: { min: number; max: number; step: number }
+  heightMm: { min: number; max: number; step: number }
+} {
+  return familyOf(productType) === 'garage' ? SIZE_LIMITS : SIZES[productType as keyof typeof SIZES]
+}
+
+export function defaultSizeFor(productType: ProductType): { widthMm: number; heightMm: number } {
+  if (familyOf(productType) === 'garage')
+    return { widthMm: DEFAULT_SPEC.widthMm, heightMm: DEFAULT_SPEC.heightMm }
+  const sizes = SIZES[productType as keyof typeof SIZES]
+  return { widthMm: sizes.widthMm.default, heightMm: sizes.heightMm.default }
+}
+
+/** What a gate is usually bought as: a pedestrian gate on a latch, a drive gate motorised. */
+const TYPE_DEFAULTS: Partial<Record<ProductType, Partial<DoorSpec>>> = {
+  'pedestrian-gate': { operation: 'manual' },
+  'sliding-gate': { operation: 'motorised' },
+  'swing-gate': { operation: 'motorised' },
+}
+
+/**
+ * Switches a spec to another product type. Within a family the size
+ * carries over (clamped); across families it resets, because a garage
+ * door's 2400 mm is not a sensible starting point for a window. Colour
+ * and finish always carry over — they are the customer's taste, not the
+ * product's.
+ */
+export function specForType(spec: DoorSpec, productType: ProductType): DoorSpec {
+  const sameFamily = familyOf(spec.productType) === familyOf(productType)
+  const limits = sizeLimitsFor(productType)
+  const size = sameFamily
+    ? {
+        widthMm: Math.min(limits.widthMm.max, Math.max(limits.widthMm.min, spec.widthMm)),
+        heightMm: Math.min(limits.heightMm.max, Math.max(limits.heightMm.min, spec.heightMm)),
+      }
+    : defaultSizeFor(productType)
+  const next = { ...spec, ...TYPE_DEFAULTS[productType], productType, ...size }
+  // A brand that does not make this kind of motor falls back to the best match.
+  const brandFits = groupsFor(productType)
+    .find((group) => group.id === 'motorBrand')
+    ?.values.some((value) => value.id === next.motorBrand)
+  return brandFits === false ? { ...next, motorBrand: 'any' } : next
+}
 
 export function groupsFor(productType: ProductType): OptionGroup[] {
   return OPTION_GROUPS.filter((group) => !group.only || group.only.includes(productType)).map((group) => ({
@@ -223,6 +491,9 @@ export function parseSpec(raw: unknown): DoorSpec {
     return typeof value === 'string' && group?.values.some((option) => option.id === value) ? value : fallback
   }
 
+  const limits = sizeLimitsFor(productType)
+  const defaults = defaultSizeFor(productType)
+
   const clamp = (value: unknown, limits: { min: number; max: number }, fallback: number) => {
     const numeric = typeof value === 'number' ? value : Number(value)
     if (!Number.isFinite(numeric)) return fallback
@@ -239,13 +510,24 @@ export function parseSpec(raw: unknown): DoorSpec {
     hardware: pick('hardware', DEFAULT_SPEC.hardware),
     insulation: pick('insulation', DEFAULT_SPEC.insulation),
     opener: pick('opener', DEFAULT_SPEC.opener),
-    widthMm: clamp(input.widthMm, SIZE_LIMITS.widthMm, DEFAULT_SPEC.widthMm),
-    heightMm: clamp(input.heightMm, SIZE_LIMITS.heightMm, DEFAULT_SPEC.heightMm),
+    infill: pick('infill', DEFAULT_SPEC.infill),
+    material: pick('material', DEFAULT_SPEC.material),
+    leaves: pick('leaves', DEFAULT_SPEC.leaves),
+    slat: pick('slat', DEFAULT_SPEC.slat),
+    operation: pick('operation', TYPE_DEFAULTS[productType]?.operation ?? DEFAULT_SPEC.operation),
+    swingMotor: pick('swingMotor', DEFAULT_SPEC.swingMotor),
+    control: pick('control', DEFAULT_SPEC.control),
+    motorBrand: pick('motorBrand', DEFAULT_SPEC.motorBrand),
+    widthMm: clamp(input.widthMm, limits.widthMm, defaults.widthMm),
+    heightMm: clamp(input.heightMm, limits.heightMm, defaults.heightMm),
   }
 }
 
 /** A spec written out the way a person would read it to a technician. */
 export function describeSpec(spec: DoorSpec): Array<{ label: string; value: string }> {
+  const family = familyOf(spec.productType)
+  if (family !== 'garage') return describeOutdoor(spec, family)
+
   const type = PRODUCT_TYPES.find((candidate) => candidate.id === spec.productType)
   const rows: Array<{ label: string; value: string }> = [
     { label: 'Door type', value: type?.label ?? spec.productType },
@@ -266,6 +548,56 @@ export function describeSpec(spec: DoorSpec): Array<{ label: string; value: stri
   rows.push({ label: 'Insulation', value: optionLabel('insulation', spec.insulation) })
   rows.push({ label: 'Opener', value: optionLabel('opener', spec.opener) })
   return rows
+}
+
+function describeOutdoor(
+  spec: DoorSpec,
+  family: Exclude<ProductFamily, 'garage'>
+): Array<{ label: string; value: string }> {
+  const type = PRODUCT_TYPES.find((candidate) => candidate.id === spec.productType)
+  const typeLabel = type?.label ?? spec.productType
+  const has = (groupId: string) => groupsFor(spec.productType).some((group) => group.id === groupId)
+  const rows: Array<{ label: string; value: string }> = []
+
+  if (family === 'fence') {
+    rows.push({ label: 'Fence', value: typeLabel })
+    rows.push({ label: 'Run', value: `${spec.widthMm} mm long × ${spec.heightMm} mm high` })
+  } else if (family === 'shutter') {
+    rows.push({ label: 'Shutter', value: typeLabel })
+    rows.push({ label: 'Window', value: `${spec.widthMm} × ${spec.heightMm} mm` })
+  } else {
+    rows.push({ label: 'Gate type', value: typeLabel })
+    rows.push({ label: 'Opening', value: `${spec.widthMm} × ${spec.heightMm} mm` })
+  }
+
+  rows.push({ label: 'Colour', value: optionLabel('colour', spec.colour) })
+  rows.push({ label: 'Finish', value: optionLabel('finish', spec.finish) })
+
+  const groupRow = (groupId: keyof DoorSpec, label: string) => {
+    if (has(groupId)) rows.push({ label, value: optionLabel(groupId, String(spec[groupId])) })
+  }
+  groupRow('leaves', 'Leaves')
+  groupRow('infill', 'Infill')
+  groupRow('material', 'Material')
+  groupRow('slat', 'Slat size')
+  groupRow('hardware', 'Hardware')
+  groupRow('operation', 'Operation')
+  groupRow('control', 'Control')
+
+  if (isMotorised(spec)) {
+    if (has('swingMotor'))
+      rows.push({ label: 'Motor style', value: optionLabel('swingMotor', spec.swingMotor) })
+    rows.push({ label: 'Motor brand', value: optionLabel('motorBrand', spec.motorBrand) })
+  }
+  return rows
+}
+
+/** Whether this spec needs a motor at all. */
+export function isMotorised(spec: DoorSpec): boolean {
+  const family = familyOf(spec.productType)
+  if (family === 'gate') return spec.operation === 'motorised'
+  if (family === 'shutter') return spec.control !== 'manual'
+  return false
 }
 
 /** The same thing as a paragraph, for prefilling a job request. */

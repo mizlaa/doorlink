@@ -15,7 +15,16 @@ import { EmptyState } from '@/components/ui/EmptyState'
 import { NotConnected } from '@/components/ui/NotConnected'
 import { DOCUMENT_KIND_LABELS } from '@/lib/labels'
 import { AddToCartButton } from '@/app/cart/AddToCartButton'
+import { SPEC_NOTE_LABEL, SPEC_SOURCE_LABEL } from '@/lib/motors/specs'
 import { InterestedButton } from '@/components/marketplace/InterestedButton'
+
+function hostOf(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '')
+  } catch {
+    return url
+  }
+}
 
 const CONFIDENCE_TONE: Record<CompatibilityConfidence, 'good' | 'signal' | 'caution'> = {
   CONFIRMED: 'good',
@@ -50,7 +59,9 @@ async function getModel(id: string) {
       },
       compatibleTo: {
         include: {
-          fromModel: { select: { id: true, name: true, modelCode: true, category: { select: { name: true } } } },
+          fromModel: {
+            select: { id: true, name: true, modelCode: true, category: { select: { name: true } } },
+          },
         },
       },
     },
@@ -101,6 +112,14 @@ export default async function ModelProfilePage({ params }: PageProps) {
   }
 
   if (!model) notFound()
+
+  // Where a rating came from is shown as a sentence under the list, not
+  // as a row: a long URL in a two-column spec grid is unreadable.
+  const specSource = model.specs.find((spec) => spec.label === SPEC_SOURCE_LABEL)?.value
+  const specNote = model.specs.find((spec) => spec.label === SPEC_NOTE_LABEL)?.value
+  const ratings = model.specs.filter(
+    (spec) => spec.label !== SPEC_SOURCE_LABEL && spec.label !== SPEC_NOTE_LABEL
+  )
 
   const compatible = [
     ...model.compatibleFrom.map((link) => ({
@@ -171,18 +190,47 @@ export default async function ModelProfilePage({ params }: PageProps) {
       <div className="mt-10 grid gap-10 lg:grid-cols-3">
         <div className="flex flex-col gap-10 lg:col-span-2">
           <section aria-labelledby="specs-heading">
-            <h2 id="specs-heading" className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-deep">
+            <h2
+              id="specs-heading"
+              className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-deep"
+            >
               Specifications
             </h2>
-            {model.specs.length > 0 ? (
-              <SpecList items={model.specs.map((spec) => ({ label: spec.label, value: spec.value, unit: spec.unit ?? undefined }))} />
+            {ratings.length > 0 ? (
+              <>
+                <SpecList
+                  items={ratings.map((spec) => ({
+                    label: spec.label,
+                    value: spec.value,
+                    unit: spec.unit ?? undefined,
+                  }))}
+                />
+                {specSource && (
+                  <p className="mt-3 text-sm text-zinc-deep">
+                    Ratings from{' '}
+                    <a
+                      href={specSource}
+                      className="text-signal underline"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      {hostOf(specSource)}
+                    </a>
+                    {specNote ? `. ${specNote}` : '.'} Slope, wind and hinge condition all change what a motor
+                    can move, so confirm against the manual.
+                  </p>
+                )}
+              </>
             ) : (
               <EmptyState title="No specifications recorded yet" />
             )}
           </section>
 
           <section aria-labelledby="documents-heading">
-            <h2 id="documents-heading" className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-deep">
+            <h2
+              id="documents-heading"
+              className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-deep"
+            >
               Documents
             </h2>
             {model.documents.length === 0 ? (
@@ -197,7 +245,10 @@ export default async function ModelProfilePage({ params }: PageProps) {
             ) : (
               <ul className="flex flex-col gap-2">
                 {model.documents.map((doc) => (
-                  <li key={doc.id} className="flex items-center justify-between rounded border border-line px-4 py-3">
+                  <li
+                    key={doc.id}
+                    className="flex items-center justify-between rounded border border-line px-4 py-3"
+                  >
                     <div>
                       <p className="text-sm font-medium text-graphite">{doc.title}</p>
                       <p className="text-micro uppercase tracking-wide text-zinc-deep">
@@ -212,17 +263,29 @@ export default async function ModelProfilePage({ params }: PageProps) {
           </section>
 
           <section aria-labelledby="compatible-heading">
-            <h2 id="compatible-heading" className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-deep">
+            <h2
+              id="compatible-heading"
+              className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-deep"
+            >
               Compatible parts
             </h2>
             {compatible.length === 0 ? (
-              <EmptyState title="No compatibility records yet" description="Nothing has been linked to this model." />
+              <EmptyState
+                title="No compatibility records yet"
+                description="Nothing has been linked to this model."
+              />
             ) : (
               <ul className="flex flex-col gap-2">
                 {compatible.map((link) => (
-                  <li key={link.id} className="flex items-center justify-between gap-4 rounded border border-line px-4 py-3">
+                  <li
+                    key={link.id}
+                    className="flex items-center justify-between gap-4 rounded border border-line px-4 py-3"
+                  >
                     <div>
-                      <Link href={`/model/${link.related.id}`} className="text-sm font-medium text-graphite hover:text-signal">
+                      <Link
+                        href={`/model/${link.related.id}`}
+                        className="text-sm font-medium text-graphite hover:text-signal"
+                      >
                         {link.related.name}
                       </Link>
                       <p className="text-micro uppercase tracking-wide text-zinc-deep">
@@ -238,7 +301,10 @@ export default async function ModelProfilePage({ params }: PageProps) {
         </div>
 
         <aside aria-labelledby="listings-heading">
-          <h2 id="listings-heading" className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-deep">
+          <h2
+            id="listings-heading"
+            className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-deep"
+          >
             Available from
           </h2>
           {model.listings.length === 0 ? (

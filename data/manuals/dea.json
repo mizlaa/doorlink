@@ -9,6 +9,142 @@
   },
   "models": [
     {
+      "modelCode": "ANGOLO",
+      "name": "DEA ANGOLO Articulated Arm Swing Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet.",
+      "summary": "Articulated-arm operator for small swing leaves up to 2.3 m.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Swing gate — articulated arm"
+        },
+        {
+          "label": "Max leaf length",
+          "value": "2.3",
+          "unit": "m"
+        },
+        {
+          "label": "Max leaf weight",
+          "value": "200",
+          "unit": "kg"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.deasystem.com/en/product/angolo-the-motor-with-an-arm-for-small-sized-swing-gates",
+        "note": "Manufacturer product page."
+      }
+    },
+    {
+      "modelCode": "Gate Automation",
+      "name": "DEA System Gate Automation",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DEA System 2025 Product Catalogue",
+          "sourceUrl": "https://deasystem.net/assets.deasystem.com/download/9/Catalistino2025_EN_WP.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "deasystem.net",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DEA System 2025 Product Catalogue\" (host: deasystem.net). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "GHOST 100",
+      "name": "DEA GHOST 100 Underground Swing Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet.",
+      "summary": "Underground operator for swing leaves up to 3.5 m.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Swing gate — underground"
+        },
+        {
+          "label": "Max leaf length",
+          "value": "3.5",
+          "unit": "m"
+        },
+        {
+          "label": "Max leaf weight",
+          "value": "400",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V"
+        },
+        {
+          "label": "Torque",
+          "value": "200",
+          "unit": "Nm"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.accesscontrolsuppliesltd.co.uk/product/dea-ghost-100-individual-underground-motor-for-swing-gates/",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      }
+    },
+    {
+      "modelCode": "GHOST 200",
+      "name": "DEA System GHOST 200",
+      "category": "gate-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "DEA Ghost 200 Technical Sheet and Flyer",
+          "sourceUrl": "https://www.ardengateautomation.co.uk/downloads/1435056191DEA_ghost_200_tech_sheet_&_flyer.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ardengateautomation.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"DEA Ghost 200 Technical Sheet and Flyer\" (host: www.ardengateautomation.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ],
+      "summary": "Underground operator for swing leaves up to 4 m.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Swing gate — underground"
+        },
+        {
+          "label": "Max leaf length",
+          "value": "4",
+          "unit": "m"
+        },
+        {
+          "label": "Max leaf weight",
+          "value": "400",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "230 V AC or 24 V (by version)"
+        }
+      ],
+      "specSource": {
+        "url": "https://deasystem.net/assets.deasystem.com/download/9/Catalistino2025_EN_WP.pdf",
+        "note": "DEA 2025 product catalogue."
+      }
+    },
+    {
       "modelCode": "GULLIVER",
       "name": "DEA Gulliver Sliding Gate Operator",
       "category": "gate-motors",
@@ -153,7 +289,106 @@
           "evidence": "Aggregator listing, 108 pages per the result. Kept separate from the 500 series because the aggregator files it as a distinct series, not because the difference was confirmed. Not fetched - egress blocked.",
           "altSources": []
         }
-      ]
+      ],
+      "summary": "Low-voltage sliding gate operator for gates up to 900 kg.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "900",
+          "unit": "kg"
+        },
+        {
+          "label": "Max gate length",
+          "value": "12",
+          "unit": "m"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V"
+        },
+        {
+          "label": "Thrust",
+          "value": "240",
+          "unit": "N"
+        }
+      ],
+      "specSource": {
+        "url": "https://samtonline.com.au/shop/dea-livi-n/",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      }
+    },
+    {
+      "modelCode": "LOOK",
+      "name": "DEA LOOK Swing Gate Ram",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet.",
+      "summary": "Ram operator kit for swing leaves up to 3 m.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Swing gate — ram"
+        },
+        {
+          "label": "Max leaf length",
+          "value": "3",
+          "unit": "m"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.ardengateautomation.co.uk/gate-automation-c1/above-ground-automation-kits-c8/dea-look-kit-electromechanical-swing-gate-kit-up-to-3m-p3553",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      }
+    },
+    {
+      "modelCode": "REV MAG",
+      "name": "DEA REV MAG Sliding Gate Operator",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet.",
+      "summary": "Low-voltage sliding gate operator for gates up to 1000 kg.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "1000",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V"
+        },
+        {
+          "label": "Thrust",
+          "value": "450",
+          "unit": "N"
+        },
+        {
+          "label": "Duty cycle",
+          "value": "60",
+          "unit": "%"
+        },
+        {
+          "label": "Power",
+          "value": "250",
+          "unit": "W"
+        }
+      ],
+      "specSource": {
+        "url": "https://gatemaster.com.au/product/dea-rev-mag-24v-sliding-gate-motor-1000kg/",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      }
     }
   ]
 }

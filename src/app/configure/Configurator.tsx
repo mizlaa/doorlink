@@ -3,20 +3,33 @@
 import { useActionState, useMemo, useState } from 'react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
-import { saveConfigurationAction, generateDoorPreviewAction, startCreditPackCheckoutAction, type ConfigurationActionState, type PreviewActionState } from './actions'
+import {
+  saveConfigurationAction,
+  generateDoorPreviewAction,
+  startCreditPackCheckoutAction,
+  type ConfigurationActionState,
+  type PreviewActionState,
+} from './actions'
 import { PREVIEW_CREDIT_COST } from '@/lib/credits/constants'
 import { PREVIEW_NOTE_MAX_WORDS, previewNoteWordCount } from '@/lib/configurator/preview-prompt'
 import { formatMoney } from '@/lib/money'
 import {
   DEFAULT_SPEC,
   describeSpec,
+  familyOf,
   groupsFor,
+  parseSpec,
+  PRODUCT_FAMILIES,
   PRODUCT_TYPES,
-  SIZE_LIMITS,
+  sizeLimitsFor,
+  specForType,
   type DoorSpec,
+  type ProductFamily,
   type ProductType,
 } from '@/lib/configurator/options'
-import { lookFromSpec } from '@/lib/configurator/look'
+import { previewFromSpec } from '@/lib/configurator/look'
+import type { MotorCandidate } from '@/lib/motors/specs'
+import { MotorShortlist } from './MotorShortlist'
 import { Button } from '@/components/ui/Button'
 import { Field, Input, Textarea } from '@/components/ui/Field'
 import { NotConnected } from '@/components/ui/NotConnected'
@@ -37,8 +50,48 @@ const initialState: ConfigurationActionState = {}
 
 const initialPreviewState: PreviewActionState = {}
 
+/** What the open/close button and the size fields say, per family. */
+const FAMILY_WORDS: Record<
+  ProductFamily,
+  { open: string; close: string; size: string; width: string; height: string; saveAs: string }
+> = {
+  garage: {
+    open: 'Open the door',
+    close: 'Close the door',
+    size: 'Opening size',
+    width: 'Width (mm)',
+    height: 'Height (mm)',
+    saveAs: 'My garage door',
+  },
+  gate: {
+    open: 'Open the gate',
+    close: 'Close the gate',
+    size: 'Opening size',
+    width: 'Width (mm)',
+    height: 'Height (mm)',
+    saveAs: 'My gate',
+  },
+  fence: {
+    open: '',
+    close: '',
+    size: 'Fence size',
+    width: 'Run length (mm)',
+    height: 'Height (mm)',
+    saveAs: 'My fence',
+  },
+  shutter: {
+    open: 'Raise the shutter',
+    close: 'Lower the shutter',
+    size: 'Window size',
+    width: 'Width (mm)',
+    height: 'Height (mm)',
+    saveAs: 'My window shutter',
+  },
+}
+
 export function Configurator({
   signedIn,
+  motors = [],
   initialSpec,
   previewAvailable,
   creditBalance,
@@ -47,6 +100,7 @@ export function Configurator({
   creditsCheckoutNotice,
 }: {
   signedIn: boolean
+  motors?: MotorCandidate[]
   initialSpec?: DoorSpec
   previewAvailable: boolean
   creditBalance: number | null
@@ -70,11 +124,26 @@ export function Configurator({
   )
 
   const groups = useMemo(() => groupsFor(spec.productType), [spec.productType])
-  const look = useMemo(() => lookFromSpec(spec), [spec])
-  const summary = useMemo(() => describeSpec(spec), [spec])
+  // The form holds whatever is typed; everything drawn or matched uses the
+  // same clamped spec the server would store, so a half-typed width can't
+  // draw a zero-metre gate.
+  const effective = useMemo(() => parseSpec(spec), [spec])
+  const preview = useMemo(() => previewFromSpec(effective), [effective])
+  const summary = useMemo(() => describeSpec(effective), [effective])
+  const family = familyOf(spec.productType)
+  const words = FAMILY_WORDS[family]
+  const limits = sizeLimitsFor(spec.productType)
+  const familyTypes = PRODUCT_TYPES.filter((type) =>
+    PRODUCT_FAMILIES.find((candidate) => candidate.id === family)?.types.includes(type.id as ProductType)
+  )
 
   function set<K extends keyof DoorSpec>(key: K, value: DoorSpec[K]) {
     setSpec((current) => ({ ...current, [key]: value }))
+  }
+
+  function setType(productType: ProductType) {
+    setSpec((current) => specForType(current, productType))
+    setOpen(false)
   }
 
   const displayBalance = previewState.balance ?? creditBalance
@@ -84,12 +153,16 @@ export function Configurator({
     <div className="flex w-full min-w-0 flex-col gap-8 lg:flex-row lg:items-start lg:gap-10">
       {/* ------------------------------------------------------------ */}
       <div className="min-w-0 w-full max-w-full lg:sticky lg:top-6 lg:w-[54%] lg:shrink-0">
-        <ConfiguratorScene look={look} isOpen={open} />
+        <ConfiguratorScene preview={preview} isOpen={open} />
 
         <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
-          <Button type="button" variant="secondary" size="sm" onClick={() => setOpen((value) => !value)}>
-            {open ? 'Close the door' : 'Open the door'}
-          </Button>
+          {words.open ? (
+            <Button type="button" variant="secondary" size="sm" onClick={() => setOpen((value) => !value)}>
+              {open ? words.close : words.open}
+            </Button>
+          ) : (
+            <span />
+          )}
           <p className="text-micro text-zinc-deep">Drag to look around.</p>
         </div>
 
@@ -98,140 +171,180 @@ export function Configurator({
           Generic Doorlink options, not a specific manufacturer&apos;s product.
         </p>
 
-        <section className="mt-6">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-deep">Photo preview</h2>
-          {creditsCheckoutNotice && (
-            <p className="mt-3 rounded-md border border-line bg-rail p-3 text-sm text-graphite-soft">
-              {creditsCheckoutNotice}
-            </p>
-          )}
-          {previewAvailable ? (
-            <>
-              {!signedIn ? (
-                <p className="mt-3 text-sm text-graphite-soft">
-                  <Link href="/sign-in?next=/configure" className="font-medium text-signal hover:text-signal-hover">
-                    Sign in
-                  </Link>{' '}
-                  to use photo preview credits.
-                </p>
-              ) : (
-                <>
+        {/* Photo preview is prompted for garage doors only, and the action refuses anything else. */}
+        {family === 'garage' && (
+          <section className="mt-6">
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-deep">Photo preview</h2>
+            {creditsCheckoutNotice && (
+              <p className="mt-3 rounded-md border border-line bg-rail p-3 text-sm text-graphite-soft">
+                {creditsCheckoutNotice}
+              </p>
+            )}
+            {previewAvailable ? (
+              <>
+                {!signedIn ? (
                   <p className="mt-3 text-sm text-graphite-soft">
-                    Each successful preview uses {PREVIEW_CREDIT_COST} credit. You have{' '}
-                    <span className="font-medium text-graphite">{displayBalance ?? 0}</span> credit
-                    {(displayBalance ?? 0) === 1 ? '' : 's'}.
+                    <Link
+                      href="/sign-in?next=/configure"
+                      className="font-medium text-signal hover:text-signal-hover"
+                    >
+                      Sign in
+                    </Link>{' '}
+                    to use photo preview credits.
                   </p>
+                ) : (
+                  <>
+                    <p className="mt-3 text-sm text-graphite-soft">
+                      Each successful preview uses {PREVIEW_CREDIT_COST} credit. You have{' '}
+                      <span className="font-medium text-graphite">{displayBalance ?? 0}</span> credit
+                      {(displayBalance ?? 0) === 1 ? '' : 's'}.
+                    </p>
 
-                  {previewState.imageDataUrl && (
-                    <figure className="mt-3 max-w-full overflow-hidden rounded-md border border-line">
-                      {/* eslint-disable-next-line @next/next/no-img-element -- ephemeral data URL from OpenAI */}
-                      <img
-                        src={previewState.imageDataUrl}
-                        alt="Generated preview of your door choices on your photo"
-                        className="block h-auto w-full max-w-full"
-                      />
-                      <figcaption className="border-t border-line bg-rail px-3 py-2 text-micro text-zinc-deep">
-                        AI-generated preview from your photo and choices. Not a product photo from a manufacturer.
-                      </figcaption>
-                    </figure>
-                  )}
+                    {previewState.imageDataUrl && (
+                      <figure className="mt-3 max-w-full overflow-hidden rounded-md border border-line">
+                        {/* eslint-disable-next-line @next/next/no-img-element -- ephemeral data URL from OpenAI */}
+                        <img
+                          src={previewState.imageDataUrl}
+                          alt="Generated preview of your door choices on your photo"
+                          className="block h-auto w-full max-w-full"
+                        />
+                        <figcaption className="border-t border-line bg-rail px-3 py-2 text-micro text-zinc-deep">
+                          AI-generated preview from your photo and choices. Not a product photo from a
+                          manufacturer.
+                        </figcaption>
+                      </figure>
+                    )}
 
-                  {(displayBalance ?? 0) >= PREVIEW_CREDIT_COST ? (
-                    <form action={previewAction} className="mt-3 flex flex-col gap-3">
-                      <input type="hidden" name="spec" value={JSON.stringify(spec)} />
-                      <p className="text-sm text-graphite-soft">
-                        Upload a photo of your garage opening. We&apos;ll generate one indicative image using your
-                        choices above.
-                      </p>
-                      <Field label="Your photo" htmlFor="preview-photo">
-                        <Input
-                          id="preview-photo"
-                          name="photo"
-                          type="file"
-                          accept="image/jpeg,image/png,image/webp"
-                          required
-                        />
-                      </Field>
-                      <Field
-                        label="Notes for this preview"
-                        htmlFor="preview-note"
-                        hint={`${noteWords} / ${PREVIEW_NOTE_MAX_WORDS} words. Optional. Describe the opening, the house, or what to keep.`}
-                      >
-                        <Textarea
-                          id="preview-note"
-                          name="note"
-                          value={note}
-                          maxLength={2000}
-                          onChange={(event) => setNote(event.target.value)}
-                          placeholder="For example: keep the brick piers, and make the door charcoal."
-                        />
-                      </Field>
-                      {noteWords > PREVIEW_NOTE_MAX_WORDS && (
-                        <p role="alert" className="text-sm text-bad">
-                          Keep the notes to {PREVIEW_NOTE_MAX_WORDS} words.
+                    {(displayBalance ?? 0) >= PREVIEW_CREDIT_COST ? (
+                      <form action={previewAction} className="mt-3 flex flex-col gap-3">
+                        <input type="hidden" name="spec" value={JSON.stringify(spec)} />
+                        <p className="text-sm text-graphite-soft">
+                          Upload a photo of your garage opening. We&apos;ll generate one indicative image using
+                          your choices above.
                         </p>
-                      )}
-                      {previewState.error && (
-                        <p role="alert" className="text-sm text-bad">
-                          {previewState.error}
-                        </p>
-                      )}
-                      <Button type="submit" variant="secondary" disabled={previewPending || noteWords > PREVIEW_NOTE_MAX_WORDS}>
-                        {previewPending ? 'Generating…' : 'Generate preview'}
-                      </Button>
-                    </form>
-                  ) : (
-                    <div className="mt-3 flex flex-col gap-3">
-                      {previewState.error && (
-                        <p role="alert" className="text-sm text-bad">
-                          {previewState.error}
-                        </p>
-                      )}
-                      <p className="text-sm text-graphite-soft">Buy credits to generate a preview.</p>
-                      {creditsCheckoutReady && creditPacks.length > 0 ? (
-                        <ul className="flex flex-col gap-2">
-                          {creditPacks.map((pack) => (
-                            <li key={pack.code}>
-                              <form action={startCreditPackCheckoutAction}>
-                                <input type="hidden" name="packCode" value={pack.code} />
-                                <Button type="submit" variant="secondary" className="w-full justify-between">
-                                  <span>{pack.name}</span>
-                                  <span>{formatMoney(pack.priceCents, pack.currency)}</span>
-                                </Button>
-                              </form>
-                            </li>
-                          ))}
-                        </ul>
-                      ) : (
-                        <NotConnected
-                          feature="Buying credits"
-                          reason="Stripe is not connected yet. Set STRIPE_SECRET_KEY and STRIPE_WEBHOOK_SECRET to buy preview credits."
-                        />
-                      )}
-                    </div>
-                  )}
-                </>
-              )}
-            </>
-          ) : (
-            <div className="mt-3">
-              <NotConnected
-                feature="Photo preview"
-                reason="No image provider is connected. Set OPENAI_API_KEY to enable photo preview."
-              />
-            </div>
-          )}
-        </section>
+                        <Field label="Your photo" htmlFor="preview-photo">
+                          <Input
+                            id="preview-photo"
+                            name="photo"
+                            type="file"
+                            accept="image/jpeg,image/png,image/webp"
+                            required
+                          />
+                        </Field>
+                        <Field
+                          label="Notes for this preview"
+                          htmlFor="preview-note"
+                          hint={`${noteWords} / ${PREVIEW_NOTE_MAX_WORDS} words. Optional. Describe the opening, the house, or what to keep.`}
+                        >
+                          <Textarea
+                            id="preview-note"
+                            name="note"
+                            value={note}
+                            maxLength={2000}
+                            onChange={(event) => setNote(event.target.value)}
+                            placeholder="For example: keep the brick piers, and make the door charcoal."
+                          />
+                        </Field>
+                        {noteWords > PREVIEW_NOTE_MAX_WORDS && (
+                          <p role="alert" className="text-sm text-bad">
+                            Keep the notes to {PREVIEW_NOTE_MAX_WORDS} words.
+                          </p>
+                        )}
+                        {previewState.error && (
+                          <p role="alert" className="text-sm text-bad">
+                            {previewState.error}
+                          </p>
+                        )}
+                        <Button
+                          type="submit"
+                          variant="secondary"
+                          disabled={previewPending || noteWords > PREVIEW_NOTE_MAX_WORDS}
+                        >
+                          {previewPending ? 'Generating…' : 'Generate preview'}
+                        </Button>
+                      </form>
+                    ) : (
+                      <div className="mt-3 flex flex-col gap-3">
+                        {previewState.error && (
+                          <p role="alert" className="text-sm text-bad">
+                            {previewState.error}
+                          </p>
+                        )}
+                        <p className="text-sm text-graphite-soft">Buy credits to generate a preview.</p>
+                        {creditsCheckoutReady && creditPacks.length > 0 ? (
+                          <ul className="flex flex-col gap-2">
+                            {creditPacks.map((pack) => (
+                              <li key={pack.code}>
+                                <form action={startCreditPackCheckoutAction}>
+                                  <input type="hidden" name="packCode" value={pack.code} />
+                                  <Button type="submit" variant="secondary" className="w-full justify-between">
+                                    <span>{pack.name}</span>
+                                    <span>{formatMoney(pack.priceCents, pack.currency)}</span>
+                                  </Button>
+                                </form>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <NotConnected
+                            feature="Buying credits"
+                            reason="Stripe is not connected yet. Set STRIPE_SECRET_KEY and STRIPE_WEBHOOK_SECRET to buy preview credits."
+                          />
+                        )}
+                      </div>
+                    )}
+                  </>
+                )}
+              </>
+            ) : (
+              <div className="mt-3">
+                <NotConnected
+                  feature="Photo preview"
+                  reason="No image provider is connected. Set OPENAI_API_KEY to enable photo preview."
+                />
+              </div>
+            )}
+          </section>
+        )}
       </div>
 
       {/* ------------------------------------------------------------ */}
       <div className="min-w-0 flex-1">
+        <fieldset className="mb-6">
+          <legend className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-deep">
+            What are you designing?
+          </legend>
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+            {PRODUCT_FAMILIES.map((candidate) => (
+              <label
+                key={candidate.id}
+                className={cn(
+                  'cursor-pointer rounded-md border p-3 text-center transition-colors',
+                  family === candidate.id
+                    ? 'border-signal bg-signal-tint'
+                    : 'border-line bg-paper hover:border-zinc'
+                )}
+              >
+                <input
+                  type="radio"
+                  name="family"
+                  value={candidate.id}
+                  checked={family === candidate.id}
+                  onChange={() => setType(candidate.types[0])}
+                  className="sr-only"
+                />
+                <span className="block text-sm font-medium text-graphite">{candidate.label}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+
         <fieldset className="mb-8">
           <legend className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-deep">
-            Door type
+            {family === 'garage' ? 'Door type' : family === 'gate' ? 'Gate type' : 'Type'}
           </legend>
           <div className="grid gap-2 sm:grid-cols-3">
-            {PRODUCT_TYPES.map((type) => (
+            {familyTypes.map((type) => (
               <label
                 key={type.id}
                 className={cn(
@@ -246,7 +359,7 @@ export function Configurator({
                   name="productType"
                   value={type.id}
                   checked={spec.productType === type.id}
-                  onChange={() => set('productType', type.id as ProductType)}
+                  onChange={() => setType(type.id as ProductType)}
                   className="sr-only"
                 />
                 <span className="block text-sm font-medium text-graphite">{type.label}</span>
@@ -260,29 +373,33 @@ export function Configurator({
 
         <fieldset className="mb-8">
           <legend className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-deep">
-            Opening size
+            {words.size}
           </legend>
           <div className="grid gap-4 sm:grid-cols-2">
-            <Field label="Width (mm)" htmlFor="widthMm">
+            <Field label={words.width} htmlFor="widthMm" hint={`${limits.widthMm.min}–${limits.widthMm.max}`}>
               <Input
                 id="widthMm"
                 type="number"
                 inputMode="numeric"
-                min={SIZE_LIMITS.widthMm.min}
-                max={SIZE_LIMITS.widthMm.max}
-                step={SIZE_LIMITS.widthMm.step}
+                min={limits.widthMm.min}
+                max={limits.widthMm.max}
+                step={limits.widthMm.step}
                 value={spec.widthMm}
                 onChange={(event) => set('widthMm', Number(event.target.value))}
               />
             </Field>
-            <Field label="Height (mm)" htmlFor="heightMm">
+            <Field
+              label={words.height}
+              htmlFor="heightMm"
+              hint={`${limits.heightMm.min}–${limits.heightMm.max}`}
+            >
               <Input
                 id="heightMm"
                 type="number"
                 inputMode="numeric"
-                min={SIZE_LIMITS.heightMm.min}
-                max={SIZE_LIMITS.heightMm.max}
-                step={SIZE_LIMITS.heightMm.step}
+                min={limits.heightMm.min}
+                max={limits.heightMm.max}
+                step={limits.heightMm.step}
                 value={spec.heightMm}
                 onChange={(event) => set('heightMm', Number(event.target.value))}
               />
@@ -357,6 +474,8 @@ export function Configurator({
           </fieldset>
         ))}
 
+        <MotorShortlist spec={effective} motors={motors} />
+
         {/* ---------------------------------------------------------- */}
         <section className="border-t border-line pt-8">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-deep">Your specification</h2>
@@ -373,12 +492,19 @@ export function Configurator({
           </dl>
 
           <form action={formAction} className="mt-6 flex flex-col gap-4">
-            <input type="hidden" name="spec" value={JSON.stringify(spec)} />
+            <input type="hidden" name="spec" value={JSON.stringify(effective)} />
 
             {signedIn ? (
               <>
                 <Field label="Name this configuration" htmlFor="name" hint="So you can find it again.">
-                  <Input id="name" name="name" maxLength={120} required defaultValue="My garage door" />
+                  <Input
+                    key={family}
+                    id="name"
+                    name="name"
+                    maxLength={120}
+                    required
+                    defaultValue={words.saveAs}
+                  />
                 </Field>
 
                 {state.error && (
@@ -400,7 +526,7 @@ export function Configurator({
                     {isPending ? 'Saving…' : 'Save this configuration'}
                   </Button>
                   <Link
-                    href={`/request-technician?spec=${encodeURIComponent(JSON.stringify(spec))}`}
+                    href={`/request-technician?spec=${encodeURIComponent(JSON.stringify(effective))}`}
                     className="inline-flex h-11 items-center rounded border border-line bg-paper px-4 text-sm font-medium text-graphite transition-colors hover:bg-rail"
                   >
                     Get quotes on this
@@ -410,7 +536,7 @@ export function Configurator({
             ) : (
               <div className="flex flex-wrap items-center gap-3">
                 <Link
-                  href={`/request-technician?spec=${encodeURIComponent(JSON.stringify(spec))}`}
+                  href={`/request-technician?spec=${encodeURIComponent(JSON.stringify(effective))}`}
                   className="inline-flex h-11 items-center rounded bg-signal px-5 text-sm font-medium text-paper transition-colors hover:bg-signal-hover"
                 >
                   Get quotes on this

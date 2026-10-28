@@ -5,12 +5,13 @@ import { parseSpec } from '@/lib/configurator/options'
 import { doorPreviewAvailable } from '@/lib/configurator/preview'
 import { ensureWelcomeCredits, getCreditBalance, listCreditPacksForPurchase } from '@/lib/credits/credits'
 import { subscriptionCheckoutAvailable } from '@/lib/payments'
+import { loadMotorCandidates } from '@/lib/motors/catalogue'
 import { Configurator } from './Configurator'
 
 export const metadata: Metadata = {
-  title: 'Design your door',
+  title: 'Design your door, gate or shutter',
   description:
-    'Choose a door type, size, colour, finish and opener, see it on a house, and get quotes from technicians.',
+    'Design a garage door, gate, fence or window shutter, see it in 3D, match a motor to it, and get quotes from technicians.',
   alternates: { canonical: '/configure' },
 }
 
@@ -57,17 +58,22 @@ export default async function ConfigurePage({ searchParams }: PageProps) {
     }
   }
 
+  const motors = await loadMotorCandidates()
+
   return (
     <div className="mx-auto w-full min-w-0 max-w-shell overflow-x-hidden px-4 py-10 sm:py-14">
       <header className="mb-8 max-w-prose">
-        <h1 className="text-2xl font-semibold tracking-tight text-graphite">Design your door</h1>
+        <h1 className="text-2xl font-semibold tracking-tight text-graphite">
+          Design your door, gate or shutter
+        </h1>
         <p className="mt-2 text-graphite-soft">
-          Pick a style, then get quotes from local technicians.
+          Pick a style, match a motor, then get quotes from local technicians.
         </p>
       </header>
 
       <Configurator
         signedIn={Boolean(session)}
+        motors={motors}
         initialSpec={initialSpec}
         previewAvailable={previewAvailable}
         creditBalance={creditBalance}

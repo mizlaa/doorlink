@@ -1709,3 +1709,17 @@ Wiśniowski | MIDO 600 | Wisniowski Mido 600 Assembly and Operating Instructions
 Wiśniowski | Sectional garage door | Instrukcja obsługi i konserwacji - brama garażowa segmentowa (Operating and Maintenance Manual, sectional garage door) | https://sklep.wisniowski.pl/img/products_certificates/garage-door/Instrukcja-obs%C5%82ugi-i-konserwacji-brama-garazowa-segmentowa.pdf
 Wiśniowski | UNIPRO | Wiśniowski UNIPRO Operating and Maintenance Manual | https://www.manualslib.com/manual/2358464/Wisniowski-Unipro.html
 Won-Door | FIREGUARD SLIM | Won-Door FireGuard Slim Fire-Rated Accordion Folding Doors Manual | https://manuals.plus/won-door/fireguard-slim-fire-rated-accordion-folding-doors-manual
+Benincà | BULL 424 ESA / BULL 624 ESA | Benincà BULL424ESA / BULL624ESA Sliding Gate Operator Manual | https://benincauk.co.uk/wp-content/uploads/2022/02/BULL424ESA-BULL624ESA.pdf
+FAAC | 740 / 741 | FAAC 740 / 741 Sliding Gate Operator Data Sheet | https://www.faac.co.uk/productfiles/48_DataSheet_radFF2F3.pdf
+FAAC | 400 | FAAC 400 Series Hydraulic Swing Gate Operator Spec Sheet | https://www.southwestautomated.com/product/attachment/1042021277/FAAC%20400%20Series%20Spec%20Sheet.pdf
+Grifco | LG-Drive | Grifco 1000 Sliding Gate Opener Manual | https://www.gatesplus.com.au/pdf/Grifco1000.pdf
+Grifco | LG-Drive | Grifco LG-Drive Sliding Gate Opener Installation Manual | https://wholesalegaragedoors.com.au/wp-content/uploads/2022/06/Grifco-LG-Drive-Sliding-Gate-Opener-Installation-Manual.pdf
+Nice | ROBUS RB400 / RB600 / RB1000 / RB250HS / RB500HS | Nice Robus Range Brochure | https://www.niceforyou.com/sites/default/files/upload/catalogues-brochures/Nice_brochure_robus_range_EN.pdf
+Nice | Swing Gate Range | Nice Swing Gate Operator Specifications | http://atlasrollingentry.com/site/wp-content/uploads/2014/10/Nice_Swing_Specifications.pdf
+Nice | ERA MAT MHT | Nice Era Mat MHT Tubular Motor Instructions | https://www.niceforyou.com/sites/default/files/upload/manuals/IS0110A01MM.pdf
+Nice | ERA STAR A | Nice Era Star A Tubular Motor Instructions | https://www.niceforyou.com/sites/default/files/upload/manuals/IS0084A02MM.pdf
+Nice | ERA MAT T | Nice Era Mat T Tubular Motor Instructions | https://www.ennemoser-sonnenschutz.at/wp-content/uploads/Era_Mat_T.pdf
+DEA System | Gate Automation | DEA System 2025 Product Catalogue | https://deasystem.net/assets.deasystem.com/download/9/Catalistino2025_EN_WP.pdf
+DEA System | GHOST 200 | DEA Ghost 200 Technical Sheet and Flyer | https://www.ardengateautomation.co.uk/downloads/1435056191DEA_ghost_200_tech_sheet_&_flyer.pdf
+BFT | Swing Gate Range | BFT Electromechanical Swing Gate Operators Leaflet (2020) | https://bft-automation.com/fileadmin/user_upload/commercial_download/leaflet_battenti_elettromeccanici_ENG_2020.pdf?28889280=
+BFT | Gate Automation | BFT Gate Automation Brochure 2023 (UK) | https://www.bftautomationuk.com/media/attachments/2023/02/14/gate-automation-brochure-2023.pdf

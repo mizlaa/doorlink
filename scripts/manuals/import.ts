@@ -5,6 +5,7 @@ import { manufacturerFileSchema } from './schema'
 import { aliasSpellings, normaliseModel } from '../../src/lib/manuals/normalise'
 import { documentSlug, modelSlug } from '../../src/lib/manuals/slug'
 import { reportFailure } from './db-guard'
+import { SPEC_NOTE_LABEL, SPEC_SOURCE_LABEL } from '../../src/lib/motors/specs'
 
 // Imports data/manuals/*.json into the catalogue.
 //
@@ -37,6 +38,7 @@ async function main() {
   let documents = 0
   let aliases = 0
   let altSources = 0
+  let specRows = 0
   const gaps: string[] = []
 
   for (const file of files) {
@@ -117,6 +119,7 @@ async function main() {
           name: seed.name,
           categoryId: category.id,
           slug: modelSlug(manufacturer.slug, seed.modelCode),
+          ...(seed.summary !== undefined ? { summary: seed.summary } : {}),
         },
         create: {
           manufacturerId: mfr.id,
@@ -124,10 +127,33 @@ async function main() {
           name: seed.name,
           modelCode: seed.modelCode,
           slug: modelSlug(manufacturer.slug, seed.modelCode),
+          summary: seed.summary ?? null,
           dataSource: DataSource.IMPORTED,
         },
       })
       models += 1
+
+      // Specs are replaced as a set, and only when the seed states them.
+      // The source goes in as the last row so the model page shows where
+      // the figures came from alongside the figures themselves.
+      if (seed.specs && seed.specs.length > 0) {
+        const rows = [
+          ...seed.specs,
+          ...(seed.specSource ? [{ label: SPEC_SOURCE_LABEL, value: seed.specSource.url, unit: undefined }] : []),
+          ...(seed.specSource ? [{ label: SPEC_NOTE_LABEL, value: seed.specSource.note, unit: undefined }] : []),
+        ]
+        await prisma.modelSpec.deleteMany({ where: { modelId: model.id } })
+        await prisma.modelSpec.createMany({
+          data: rows.map((row, sortOrder) => ({
+            modelId: model.id,
+            label: row.label,
+            value: row.value,
+            unit: row.unit ?? null,
+            sortOrder,
+          })),
+        })
+        specRows += rows.length
+      }
 
       if (seed.documents.length === 0) {
         gaps.push(`${manufacturer.name} ${seed.modelCode} — ${seed.note ?? 'no documentation located'}`)
@@ -339,7 +365,7 @@ async function main() {
 
   console.log(
     `\nImported ${manufacturers} manufacturers, ${models} models, ${documents} documents, ` +
-      `${aliases} aliases, ${altSources} alternate sources.`
+      `${aliases} aliases, ${altSources} alternate sources, ${specRows} spec rows.`
   )
   console.log('Every document is UNVERIFIED. Run `npm run manuals:verify` where the network allows.')
 

@@ -93,6 +93,82 @@
       ]
     },
     {
+      "modelCode": "ERA MAT",
+      "name": "Nice Era Mat Tubular Shutter Motor",
+      "category": "roller-shutter-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "summary": "Tubular shutter motor family in three diameters: S Ø35 mm (3–13 Nm), M Ø45 mm (5–50 Nm), L Ø55 mm (55–120 Nm).",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Roller shutter — tubular"
+        },
+        {
+          "label": "Torque options",
+          "value": "3, 5, 13, 50, 55, 120",
+          "unit": "Nm"
+        },
+        {
+          "label": "Motor size",
+          "value": "Ø35, Ø45 and Ø55",
+          "unit": "mm"
+        },
+        {
+          "label": "Control",
+          "value": "Wired; radio versions available"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.rolluikonderdelen.nl/en/era-mat-la-tubular-motor.html",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting. Torque options list the ends of each size range; the exact model steps sit between them."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    },
+    {
+      "modelCode": "ERA MAT MHT",
+      "name": "Nice ERA MAT MHT",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Nice Era Mat MHT Tubular Motor Instructions",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/IS0110A01MM.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "niceforyou.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Era Mat MHT Tubular Motor Instructions\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ERA MAT T",
+      "name": "Nice ERA MAT T",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Nice Era Mat T Tubular Motor Instructions",
+          "sourceUrl": "https://www.ennemoser-sonnenschutz.at/wp-content/uploads/Era_Mat_T.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ennemoser-sonnenschutz.at",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Era Mat T Tubular Motor Instructions\" (host: www.ennemoser-sonnenschutz.at). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "ERA ONE",
       "name": "Nice ERA ONE",
       "category": "gate-motors",
@@ -112,6 +188,62 @@
           "altSources": []
         }
       ]
+    },
+    {
+      "modelCode": "ERA STAR A",
+      "name": "Nice ERA STAR A",
+      "category": "roller-shutter-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "USER_MANUAL",
+          "title": "Nice Era Star A Tubular Motor Instructions",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/manuals/IS0084A02MM.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "niceforyou.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Era Star A Tubular Motor Instructions\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ERA XL",
+      "name": "Nice Era XL Tubular Motor",
+      "category": "roller-shutter-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "summary": "Large-diameter tubular motor for heavy shutters, up to 300 Nm.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Roller shutter — tubular"
+        },
+        {
+          "label": "Torque options",
+          "value": "300",
+          "unit": "Nm"
+        },
+        {
+          "label": "Motor size",
+          "value": "Ø90",
+          "unit": "mm"
+        },
+        {
+          "label": "Speed",
+          "value": "12",
+          "unit": "rpm"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.rolluikonderdelen.nl/en/era-xl-tubular-motor.html",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
     },
     {
       "modelCode": "ET-500 PLUS",
@@ -154,6 +286,37 @@
           "altSources": []
         }
       ]
+    },
+    {
+      "modelCode": "HYPPO HY7005",
+      "name": "Nice Hyppo HY7005 Articulated Arm Swing Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "HY7005"
+      ],
+      "summary": "Articulated-arm operator for pillar-mounted swing leaves up to 3 m.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Swing gate — articulated arm"
+        },
+        {
+          "label": "Max leaf length",
+          "value": "3",
+          "unit": "m"
+        },
+        {
+          "label": "Supply",
+          "value": "230 V AC"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.linkcare.net/nice-hyppo-hy7005-24vdc-articulated-arm-gate-motor-automating-swing-gates-3m",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
     },
     {
       "modelCode": "idv0420a00en",
@@ -410,6 +573,83 @@
       ]
     },
     {
+      "modelCode": "RB1000",
+      "name": "Nice Robus RB1000 Sliding Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "ROBUS 1000"
+      ],
+      "summary": "Low-voltage Robus sliding gate operator for gates up to 1000 kg.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "1000",
+          "unit": "kg"
+        },
+        {
+          "label": "Max gate length",
+          "value": "12",
+          "unit": "m"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V"
+        },
+        {
+          "label": "Speed",
+          "value": "16",
+          "unit": "m/min"
+        }
+      ],
+      "specSource": {
+        "url": "https://nice-products.co.uk/niceshop/nice-sliding-gate-automation/nice-robus/nice-robus-1000/",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      },
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Nice Robus Instructions and Warnings for Installation and Use",
+          "sourceUrl": "https://www.aelec.cl/wp-content/uploads/2024/08/Manual-NICE-Robus-400-600-1000-250HS-500HS.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "aelec.cl",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Robus Instructions and Warnings for Installation and Use\" (host: www.aelec.cl). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice Robus Sliding Gate Opener Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/Nice_RB250HS_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ismartgate.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Robus Sliding Gate Opener Manual\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice Robus Range Brochure",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/catalogues-brochures/Nice_brochure_robus_range_EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "niceforyou.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Robus Range Brochure\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "RB400",
       "name": "Robus RB400 Sliding Gate Gearmotor",
       "category": "gate-motors",
@@ -418,6 +658,35 @@
         "ROBUS 400",
         "RB 400"
       ],
+      "summary": "Low-voltage Robus sliding gate operator for gates up to 400 kg.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "400",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V"
+        },
+        {
+          "label": "Speed",
+          "value": "20",
+          "unit": "m/min"
+        },
+        {
+          "label": "Protection",
+          "value": "IP44"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.linkcare.net/nice-robus400-24vdc-gate-motor-sliding-gates-400kg",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      },
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -484,6 +753,78 @@
           "language": "en",
           "documentCode": "idv0620a01en",
           "evidence": "On niceforyou.com. Document code idv0620a01en is the file name; the trailing en is the language and a01 the edition. One manual covers three drives, so they share this record. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "RB600",
+      "name": "Nice Robus RB600 Sliding Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "ROBUS 600"
+      ],
+      "summary": "Low-voltage Robus sliding gate operator for gates up to 600 kg.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "600",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V"
+        },
+        {
+          "label": "Speed",
+          "value": "18",
+          "unit": "m/min"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.niceforyou.com/sites/default/files/upload/catalogues-brochures/Nice_brochure_robus_range_EN.pdf",
+        "note": "Nice Robus range brochure."
+      },
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Nice Robus Instructions and Warnings for Installation and Use",
+          "sourceUrl": "https://www.aelec.cl/wp-content/uploads/2024/08/Manual-NICE-Robus-400-600-1000-250HS-500HS.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "aelec.cl",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Robus Instructions and Warnings for Installation and Use\" (host: www.aelec.cl). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice Robus Sliding Gate Opener Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/Nice_RB250HS_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ismartgate.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Robus Sliding Gate Opener Manual\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice Robus Range Brochure",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/catalogues-brochures/Nice_brochure_robus_range_EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "niceforyou.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Robus Range Brochure\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -565,6 +906,18 @@
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Nice Robus Sliding Gate Opener Manual\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
+        },
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice Robus Range Brochure",
+          "sourceUrl": "https://www.niceforyou.com/sites/default/files/upload/catalogues-brochures/Nice_brochure_robus_range_EN.pdf",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "niceforyou.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Robus Range Brochure\" (host: www.niceforyou.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
         }
       ]
     },
@@ -577,6 +930,31 @@
         "RUN 1500",
         "RUN1500 "
       ],
+      "summary": "Low-voltage industrial sliding gate operator for gates up to 1500 kg.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "1500",
+          "unit": "kg"
+        },
+        {
+          "label": "Max gate length",
+          "value": "14",
+          "unit": "m"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.rollingcenter.co.uk/products/nice-run1500-24v-sliding-gate-motor/",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      },
       "documents": [
         {
           "kind": "INSTALL_MANUAL",
@@ -592,6 +970,37 @@
           "altSources": []
         }
       ]
+    },
+    {
+      "modelCode": "RUN2500",
+      "name": "Nice RUN2500 Sliding Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "RUN 2500"
+      ],
+      "summary": "Mains industrial sliding gate operator for gates up to 2500 kg.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "2500",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "230 V AC"
+        }
+      ],
+      "specSource": {
+        "url": "https://nice-products.co.uk/niceshop/nice-sliding-gate-automation/nice-run/nice-run-2500/",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
     },
     {
       "modelCode": "SIGNO",
@@ -697,6 +1106,130 @@
           "altSources": []
         }
       ]
+    },
+    {
+      "modelCode": "Swing Gate Range",
+      "name": "Nice Swing Gate Range",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Nice Swing Gate Operator Specifications",
+          "sourceUrl": "http://atlasrollingentry.com/site/wp-content/uploads/2014/10/Nice_Swing_Specifications.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "atlasrollingentry.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Nice Swing Gate Operator Specifications\" (host: atlasrollingentry.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "TO4024",
+      "name": "Nice Toona TO4024 Swing Gate Ram",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "TOONA 4",
+        "TOONA 4024"
+      ],
+      "summary": "Low-voltage Toona ram for swing leaves up to 3 m.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Swing gate — ram"
+        },
+        {
+          "label": "Max leaf length",
+          "value": "3",
+          "unit": "m"
+        },
+        {
+          "label": "Leaf weight by length",
+          "value": "500 kg at 2 m, 300 kg at 3 m"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.niceforyou.com/en/professional-area/videos-faq/swing-gates/toona-24v",
+        "note": "Nice FAQ page."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    },
+    {
+      "modelCode": "TO5024",
+      "name": "Nice Toona TO5024 Swing Gate Ram",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "TOONA 5"
+      ],
+      "summary": "Low-voltage Toona ram for long swing leaves up to 5 m.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Swing gate — ram"
+        },
+        {
+          "label": "Max leaf length",
+          "value": "5",
+          "unit": "m"
+        },
+        {
+          "label": "Max leaf weight",
+          "value": "500",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.niceforyou.com/en/professional-area/videos-faq/swing-gates/toona-24v",
+        "note": "Nice FAQ page."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    },
+    {
+      "modelCode": "TO7024",
+      "name": "Nice Toona TO7024 Swing Gate Ram",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "TOONA 7"
+      ],
+      "summary": "Low-voltage Toona ram for very long swing leaves up to 7 m.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Swing gate — ram"
+        },
+        {
+          "label": "Max leaf length",
+          "value": "7",
+          "unit": "m"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.niceforyou.com/en/professional-area/videos-faq/swing-gates/toona-24v",
+        "note": "Nice FAQ page. Published leaf weights conflict between sources, so none is given."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
     },
     {
       "modelCode": "TOONA",
@@ -847,6 +1380,42 @@
           "altSources": []
         }
       ]
+    },
+    {
+      "modelCode": "WINGO 3524",
+      "name": "Nice Wingo 3524 Swing Gate Ram",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "WG3524"
+      ],
+      "summary": "Compact low-voltage ram for residential swing leaves up to 3.5 m.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Swing gate — ram"
+        },
+        {
+          "label": "Max leaf length",
+          "value": "3.5",
+          "unit": "m"
+        },
+        {
+          "label": "Max leaf weight",
+          "value": "400",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V"
+        }
+      ],
+      "specSource": {
+        "url": "https://sps24.eu/en/products/gate-automation-systems/nice/nice-wingo-3524-24v-set-for-double-leaf-gate-without-photocells-87507.html",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
     },
     {
       "modelCode": "Wingo 3524 HS",
