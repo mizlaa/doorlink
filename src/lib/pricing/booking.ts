@@ -35,10 +35,10 @@ const schema = z.object({
   phone: z.string().trim().refine(isAuPhone, 'Enter an Australian phone number the company can call.'),
   address: z.string().trim().min(3, 'Enter the street address for the job.').max(200),
   suburb: z.string().trim().min(2, 'Enter the suburb.').max(60),
-  state: z.enum(AU_STATES, { errorMap: () => ({ message: 'Choose a state.' }) }),
+  state: z.enum(AU_STATES, { message: 'Choose a state.' }),
   postcode: z.string().trim().refine(isAuPostcode, 'Postcodes are 4 digits.'),
   timing: z.enum(BOOKING_TIMINGS.map((t) => t.id) as [BookingTiming, ...BookingTiming[]], {
-    errorMap: () => ({ message: 'Choose when you’d like it done.' }),
+    message: 'Choose when you’d like it done.',
   }),
   notes: z
     .string()

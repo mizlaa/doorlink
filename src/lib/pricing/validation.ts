@@ -32,7 +32,7 @@ const MAX_PRICE_CENTS = 100_000_000 // $1,000,000
 
 const mm = (label: string) =>
   z.coerce
-    .number({ invalid_type_error: `${label} must be a number.` })
+    .number({ error: `${label} must be a number.` })
     .int(`${label} must be whole millimetres.`)
     .min(SIZE_BOUNDS.min, `${label} must be at least ${SIZE_BOUNDS.min} mm.`)
     .max(SIZE_BOUNDS.max, `${label} must be at most ${SIZE_BOUNDS.max} mm.`)
@@ -55,14 +55,14 @@ const optionalText = (max: number) =>
 
 const schema = z.object({
   product: z.enum(PRICED_PRODUCTS.map((p) => p.id) as [PricedProductId, ...PricedProductId[]], {
-    errorMap: () => ({ message: 'Choose a product.' }),
+    message: 'Choose a product.',
   }),
   productStyle: z.string().trim(),
   productBrand: optionalText(60),
-  motorIncluded: z.enum(['yes', 'no'], { errorMap: () => ({ message: 'Say whether a motor is included.' }) }),
+  motorIncluded: z.enum(['yes', 'no'], { message: 'Say whether a motor is included.' }),
   motorBrand: optionalText(60),
   installation: z.enum(['INCLUDED', 'SEPARATE', 'NOT_INCLUDED'], {
-    errorMap: () => ({ message: 'Choose the installation terms.' }),
+    message: 'Choose the installation terms.',
   }),
   installPrice: z.string().trim(),
   minWidthMm: mm('Minimum width'),
@@ -71,7 +71,7 @@ const schema = z.object({
   maxHeightMm: mm('Maximum height'),
   price: z.string().trim(),
   gst: z.enum(['INCLUSIVE', 'EXCLUSIVE'], {
-    errorMap: () => ({ message: 'Say whether the price includes GST.' }),
+    message: 'Say whether the price includes GST.',
   }),
   note: optionalText(300),
   active: z.boolean(),
