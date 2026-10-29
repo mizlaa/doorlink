@@ -7,7 +7,10 @@ import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { NotConnected } from '@/components/ui/NotConnected'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { COMMISSION_SETTING_KEY, formatCommissionRate } from '@/lib/commission'
-import { currentCommissionBps } from '@/lib/commission-settings'
+import { commissionExemptKeys, currentCommissionBps } from '@/lib/commission-settings'
+import { businessCard, decodeBusinessKey, encodeBusinessKey } from '@/lib/pricing/business'
+import { Badge } from '@/components/ui/Badge'
+import { setFeeExemptAction } from './actions'
 import { CommissionForm } from './CommissionForm'
 import { CompliancePriceForm } from './CompliancePriceForm'
 import { currentCompliancePriceCents } from '@/lib/compliance/pricing-settings'
@@ -24,6 +27,7 @@ export default async function AdminSettingsPage() {
   let currentBps: number
 
   let compliancePriceCents: number
+  let businesses: Array<{ key: string; name: string; exempt: boolean }>
   let history: Array<{
     id: string
     createdAt: Date
@@ -31,7 +35,7 @@ export default async function AdminSettingsPage() {
     actor: { name: string } | null
   }>
   try {
-    ;[currentBps, compliancePriceCents, history] = await Promise.all([
+    ;[currentBps, compliancePriceCents, history, businesses] = await Promise.all([
       currentCommissionBps(),
       currentCompliancePriceCents(),
       prisma.auditLog.findMany({
@@ -43,6 +47,7 @@ export default async function AdminSettingsPage() {
         take: 20,
         include: { actor: { select: { name: true } } },
       }),
+      feeBusinesses(),
     ])
   } catch (error) {
     if (!isDatabaseUnreachable(error)) throw error
@@ -54,8 +59,9 @@ export default async function AdminSettingsPage() {
       <section>
         <h2 className="text-lg font-semibold text-graphite">Marketplace commission</h2>
         <p className="mt-1 max-w-prose text-sm text-graphite-soft">
-          What Doorlink takes from a completed job, deducted from the price the technician quotes. Changing it
-          affects jobs hired from now on: every job already accepted keeps the rate it was agreed at, because
+          What Doorlink takes from each job hired from the job board or booked from an automated quote. It comes
+          out of the business&apos;s side: the customer pays the quoted price and never sees the fee. Changing
+          it affects jobs hired from now on: every job already accepted keeps the rate it was agreed at, because
           the rate is recorded on the transaction at the moment of hiring rather than looked up later.
         </p>
         <p className="mt-3 text-sm text-graphite">
@@ -65,6 +71,42 @@ export default async function AdminSettingsPage() {
         <div className="mt-5">
           <CommissionForm currentBps={currentBps} />
         </div>
+      </section>
+
+      <section className="border-t border-line pt-10">
+        <h2 className="text-lg font-semibold text-graphite">Fee-free businesses</h2>
+        <p className="mt-1 max-w-prose text-sm text-graphite-soft">
+          Businesses that pay no commission on bookings or hires, such as your own company. Only businesses with
+          automated prices are listed. The fee is never shown to customers either way.
+        </p>
+        {businesses.length === 0 ? (
+          <p className="mt-4 text-sm text-zinc-deep">No business has published automated prices yet.</p>
+        ) : (
+          <ul className="mt-4 flex max-w-xl flex-col gap-2">
+            {businesses.map((business) => (
+              <li
+                key={business.key}
+                className="flex items-center justify-between gap-3 rounded-md border border-line bg-paper px-4 py-3 text-sm"
+              >
+                <span className="flex min-w-0 items-center gap-2 font-medium text-graphite">
+                  <span className="truncate">{business.name}</span>
+                  {business.exempt ? (
+                    <Badge tone="good">Fee-free</Badge>
+                  ) : (
+                    <Badge>{formatCommissionRate(currentBps)}</Badge>
+                  )}
+                </span>
+                <form action={setFeeExemptAction}>
+                  <input type="hidden" name="business" value={business.key} />
+                  <input type="hidden" name="exempt" value={business.exempt ? '0' : '1'} />
+                  <button type="submit" className="font-medium text-signal hover:text-signal-hover">
+                    {business.exempt ? 'Charge the fee' : 'Make fee-free'}
+                  </button>
+                </form>
+              </li>
+            ))}
+          </ul>
+        )}
       </section>
 
       <section className="border-t border-line pt-10">
@@ -127,4 +169,33 @@ export default async function AdminSettingsPage() {
       </section>
     </div>
   )
+}
+
+/** Businesses with automated prices, plus any already fee-free, by name. */
+async function feeBusinesses(): Promise<Array<{ key: string; name: string; exempt: boolean }>> {
+  const [owners, exempt] = await Promise.all([
+    prisma.pricingRule.findMany({
+      select: { organizationId: true, ownerId: true },
+      distinct: ['organizationId', 'ownerId'],
+    }),
+    commissionExemptKeys(),
+  ])
+  const keys = new Set([
+    ...owners.map((o) =>
+      encodeBusinessKey(
+        o.organizationId ? { kind: 'organization', id: o.organizationId } : { kind: 'user', id: o.ownerId! }
+      )
+    ),
+    ...exempt,
+  ])
+  const rows = await Promise.all(
+    [...keys].map(async (key) => {
+      const decoded = decodeBusinessKey(key)
+      const card = decoded ? await businessCard(decoded) : null
+      return card ? { key, name: card.name, exempt: exempt.includes(key) } : null
+    })
+  )
+  return rows
+    .filter((row): row is { key: string; name: string; exempt: boolean } => row !== null)
+    .sort((a, b) => Number(b.exempt) - Number(a.exempt) || a.name.localeCompare(b.name))
 }

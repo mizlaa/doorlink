@@ -61,7 +61,7 @@ export default async function ConfigurePage({ searchParams }: PageProps) {
   const motors = await loadMotorCandidates()
 
   return (
-    <div className="mx-auto w-full min-w-0 max-w-shell overflow-x-hidden px-4 py-10 sm:py-14">
+    <div className="mx-auto w-full min-w-0 max-w-shell overflow-x-clip px-4 py-10 sm:py-14">
       <header className="mb-6 max-w-prose">
         <h1 className="text-2xl font-semibold tracking-tight text-graphite">Design</h1>
         <p className="mt-1 text-graphite-soft">Pick a style and size, then get quotes.</p>

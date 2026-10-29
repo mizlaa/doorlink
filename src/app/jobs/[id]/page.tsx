@@ -149,10 +149,16 @@ export default async function JobDetailPage({ params, searchParams }: PageProps)
     })
   }
   if (job.completedAt) {
-    details.push({ label: 'Completed', value: job.completedAt.toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' }) })
+    details.push({
+      label: 'Completed',
+      value: job.completedAt.toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' }),
+    })
   }
   const location = booking
-    ? [booking.bookingAddress, [booking.bookingSuburb, booking.bookingState, booking.bookingPostcode].filter(Boolean).join(' ')]
+    ? [
+        booking.bookingAddress,
+        [booking.bookingSuburb, booking.bookingState, booking.bookingPostcode].filter(Boolean).join(' '),
+      ]
         .filter(Boolean)
         .join(', ')
     : [job.lead?.suburb, job.lead?.state, job.lead?.postcode].filter(Boolean).join(' ')
@@ -174,15 +180,17 @@ export default async function JobDetailPage({ params, searchParams }: PageProps)
           <div className="flex flex-wrap items-start justify-between gap-3">
             <h1 className="text-2xl font-semibold tracking-tight text-graphite">
               {job.lead?.title ??
-                (booking ? `${productLabel(booking.product)} · ${booking.widthMm} × ${booking.heightMm} mm` : 'Job')}
+                (booking
+                  ? `${productLabel(booking.product)} · ${booking.widthMm} × ${booking.heightMm} mm`
+                  : 'Job')}
             </h1>
             <Badge tone={JOB_STATUS_TONE[job.status]}>{JOB_STATUS_LABELS[job.status]}</Badge>
           </div>
 
           {booked && actor === 'customer' && (
             <p className="mt-4 rounded-md border border-good/40 bg-natural/10 px-4 py-3 text-sm text-graphite">
-              <span className="font-semibold">Booked.</span> {counterparty.name} has your details and will confirm a date.
-              You’ll get a notification when they do.
+              <span className="font-semibold">Booked.</span> {counterparty.name} has your details and will
+              confirm a date. You’ll get a notification when they do.
             </p>
           )}
 
@@ -234,10 +242,7 @@ export default async function JobDetailPage({ params, searchParams }: PageProps)
                   )}
                 </p>
                 <div className="mt-3">
-                  <OpenConversationButton
-                    jobId={job.id}
-                    label={`Message ${counterpartyLabel.toLowerCase()}`}
-                  />
+                  <OpenConversationButton jobId={job.id} label={`Message ${counterpartyLabel.toLowerCase()}`} />
                 </div>
               </div>
             </section>
@@ -259,7 +264,9 @@ export default async function JobDetailPage({ params, searchParams }: PageProps)
               </h2>
               <ReviewForm
                 jobId={job.id}
-                existing={job.workerReview ? { rating: job.workerReview.rating, body: job.workerReview.body } : null}
+                existing={
+                  job.workerReview ? { rating: job.workerReview.rating, body: job.workerReview.body } : null
+                }
               />
             </section>
           )}
@@ -291,7 +298,10 @@ export default async function JobDetailPage({ params, searchParams }: PageProps)
           <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-deep">Details</h2>
           <SpecList items={details} columns={1} />
 
-          {transaction && (
+          {/* The fee is between Doorlink and the business: it comes out of
+              their side and never changes what the customer pays, so the
+              customer sees the agreed price and nothing else. */}
+          {transaction && actor !== 'customer' && (
             <div className="mt-6">
               <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-zinc-deep">Payment</h2>
               <dl className="rounded-md border border-line bg-paper p-4 text-sm">
@@ -310,7 +320,9 @@ export default async function JobDetailPage({ params, searchParams }: PageProps)
                   </dd>
                 </div>
                 <div className="mt-1 flex justify-between border-t border-line pt-1">
-                  <dt className="font-medium text-graphite">Technician receives</dt>
+                  <dt className="font-medium text-graphite">
+                    {actor === 'worker' ? 'You receive' : 'Business receives'}
+                  </dt>
                   <dd className="font-medium text-graphite">
                     {formatMoney(transaction.workerPayoutCents, transaction.currency)}
                   </dd>
@@ -325,7 +337,7 @@ export default async function JobDetailPage({ params, searchParams }: PageProps)
                 <div className="mt-3">
                   <NotConnected
                     feature="Taking payment"
-                    reason="No payment provider is connected, so this records the agreed split only. No money moves through Doorlink yet. Settle directly with each other for now."
+                    reason="No payment provider is connected yet, so this records the agreed split only. The customer pays the business directly and the fee is settled separately."
                   />
                 </div>
               )}

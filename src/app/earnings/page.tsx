@@ -7,6 +7,7 @@ import { prisma } from '@/lib/prisma'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { formatMoney } from '@/lib/money'
 import { formatCommissionRate } from '@/lib/commission'
+import { productLabel } from '@/lib/pricing/products'
 import { workerEarnings } from '@/lib/payments/ledger'
 import { paymentsAvailable } from '@/lib/payments'
 import { NotConnected } from '@/components/ui/NotConnected'
@@ -32,7 +33,14 @@ export default async function EarningsPage() {
         orderBy: { createdAt: 'desc' },
         take: 50,
         include: {
-          job: { select: { id: true, reference: true, lead: { select: { title: true } } } },
+          job: {
+            select: {
+              id: true,
+              reference: true,
+              lead: { select: { title: true } },
+              automatedQuote: { select: { product: true, widthMm: true, heightMm: true } },
+            },
+          },
           payout: { select: { status: true, paidAt: true, amountCents: true } },
         },
       }),
@@ -117,7 +125,10 @@ export default async function EarningsPage() {
                           href={`/jobs/${transaction.job.id}`}
                           className="text-signal hover:text-signal-hover"
                         >
-                          {transaction.job.lead?.title ?? transaction.job.reference}
+                          {transaction.job.lead?.title ??
+                            (transaction.job.automatedQuote
+                              ? `${productLabel(transaction.job.automatedQuote.product)} · ${transaction.job.automatedQuote.widthMm} × ${transaction.job.automatedQuote.heightMm} mm`
+                              : transaction.job.reference)}
                         </Link>
                       ) : (
                         'Transaction'

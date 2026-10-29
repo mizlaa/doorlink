@@ -3,8 +3,11 @@ import Link from 'next/link'
 import { getSession } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { formatMoney } from '@/lib/money'
+import { calculateSplit, formatCommissionRate } from '@/lib/commission'
+import { commissionBpsForBusiness } from '@/lib/commission-settings'
 import {
   businessKeyFor,
+  encodeBusinessKey,
   loadBusinessDetails,
   pricingSession,
   ruleOwnerWhere,
@@ -38,13 +41,15 @@ export default async function PricingPage({ searchParams }: PageProps) {
   const session = await pricingSession(await getSession())
   if (!session) return null
   const key = businessKeyFor(session)
-  const [rules, details] = await Promise.all([
+  const [rules, details, feeBps] = await Promise.all([
     prisma.pricingRule.findMany({
       where: ruleOwnerWhere(key),
       orderBy: [{ product: 'asc' }, { productBrand: 'asc' }, { minWidthMm: 'asc' }, { minHeightMm: 'asc' }],
     }),
     loadBusinessDetails(key),
+    commissionBpsForBusiness(encodeBusinessKey(key)),
   ])
+  const feeExample = calculateSplit(500_000, feeBps)
   const detailsMissing = !details || !details.businessName || !details.phone || !details.email
 
   const byProduct = PRICED_PRODUCTS.map((product) => ({
@@ -67,6 +72,11 @@ export default async function PricingPage({ searchParams }: PageProps) {
             so customers see your name and quote alerts reach you.
           </p>
         )}
+        <p className="mt-1 text-sm text-zinc-deep">
+          {feeBps > 0
+            ? `Doorlink fee: ${formatCommissionRate(feeBps)} of each job booked through Doorlink, from your side. Customers pay your quoted price; on a $5,000 job you receive ${formatMoney(feeExample.workerPayoutCents)}.`
+            : 'No Doorlink fee on your bookings.'}
+        </p>
         {params.details && <p className="mt-2 text-sm text-good">Business details saved.</p>}
         {params.saved && <p className="mt-2 text-sm text-good">Saved.</p>}
         {params.overlap && (

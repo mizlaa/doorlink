@@ -15,8 +15,19 @@
  */
 export const COMMISSION_SETTING_KEY = 'marketplace_commission_bps'
 
-/** 10% — a starting point, not a business decision that has been made. */
-export const DEFAULT_COMMISSION_BPS = 1000
+/**
+ * 5% of the job price, until an admin sets something else. Lower than
+ * general-task marketplaces (Airtasker takes 12.5–20% from Taskers)
+ * because door and gate work is materials-heavy: installers typically
+ * net 10–20%, and businesses here already pay a subscription.
+ */
+export const DEFAULT_COMMISSION_BPS = 500
+
+/**
+ * Businesses that pay no commission — the platform owner's own company.
+ * A list of business keys ("o_<org id>" / "u_<user id>").
+ */
+export const COMMISSION_EXEMPT_SETTING_KEY = 'commission_exempt_businesses'
 
 export const MAX_COMMISSION_BPS = 5000
 

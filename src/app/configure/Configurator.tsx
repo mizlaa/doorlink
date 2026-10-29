@@ -347,7 +347,7 @@ export function Configurator({
                 min={limits.widthMm.min}
                 max={limits.widthMm.max}
                 step={limits.widthMm.step}
-                value={spec.widthMm}
+                value={spec.widthMm || ''}
                 onChange={(event) => set('widthMm', Number(event.target.value))}
               />
             </label>
@@ -362,7 +362,7 @@ export function Configurator({
                 min={limits.heightMm.min}
                 max={limits.heightMm.max}
                 step={limits.heightMm.step}
-                value={spec.heightMm}
+                value={spec.heightMm || ''}
                 onChange={(event) => set('heightMm', Number(event.target.value))}
               />
             </label>

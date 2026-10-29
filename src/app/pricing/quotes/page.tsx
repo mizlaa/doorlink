@@ -23,6 +23,18 @@ export default async function QuotesIssuedPage() {
     include: {
       customer: { select: { name: true } },
       options: { orderBy: { sortOrder: 'asc' }, take: 1 },
+      _count: { select: { options: true } },
+      job: {
+        select: {
+          agreedPriceCents: true,
+          currency: true,
+          transactions: {
+            orderBy: { createdAt: 'desc' },
+            take: 1,
+            select: { commissionCents: true, workerPayoutCents: true },
+          },
+        },
+      },
     },
     take: 200,
   })
@@ -54,11 +66,26 @@ export default async function QuotesIssuedPage() {
                 <span className="font-code">{quote.reference}</span>
               </span>
             </span>
-            {quote.options[0] && (
+            {quote.job?.agreedPriceCents != null ? (
+              // A booking: the price the customer accepted, and what reaches
+              // the business after Doorlink's fee.
               <span className="text-right font-semibold text-graphite">
-                {formatMoney(quote.options[0].totalIncGstCents, quote.options[0].currency)}
-                <span className="block text-micro font-normal text-zinc-deep">inc GST</span>
+                {formatMoney(quote.job.agreedPriceCents, quote.job.currency)}
+                <span className="block text-micro font-normal text-zinc-deep">
+                  {quote.job.transactions[0] && quote.job.transactions[0].commissionCents > 0
+                    ? `You receive ${formatMoney(quote.job.transactions[0].workerPayoutCents, quote.job.currency)}`
+                    : 'inc GST'}
+                </span>
               </span>
+            ) : (
+              quote.options[0] && (
+                <span className="text-right font-semibold text-graphite">
+                  {formatMoney(quote.options[0].totalIncGstCents, quote.options[0].currency)}
+                  <span className="block text-micro font-normal text-zinc-deep">
+                    {quote._count.options > 1 ? 'from, inc GST' : 'inc GST'}
+                  </span>
+                </span>
+              )
             )}
           </Link>
         </li>

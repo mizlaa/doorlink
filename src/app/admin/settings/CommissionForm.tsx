@@ -13,7 +13,7 @@ const initialState: SettingsFormState = {}
 // example so nobody mistakes it for a real job, and it exists because
 // "12.5%" and "$62.50 off a $500 job" are different amounts of
 // information when you are deciding what to charge people.
-const EXAMPLE_JOB_CENTS = 50_000
+const EXAMPLE_JOB_CENTS = 500_000
 
 export function CommissionForm({ currentBps }: { currentBps: number }) {
   const [state, formAction, isPending] = useActionState(updateCommissionAction, initialState)
@@ -64,7 +64,7 @@ export function CommissionForm({ currentBps }: { currentBps: number }) {
             <dd className="text-graphite">{formatMoney(split.commissionCents)}</dd>
           </div>
           <div className="mt-1 flex justify-between border-t border-line pt-1">
-            <dt className="font-medium text-graphite">Technician receives</dt>
+            <dt className="font-medium text-graphite">Business receives</dt>
             <dd className="font-medium text-graphite">{formatMoney(split.workerPayoutCents)}</dd>
           </div>
         </dl>

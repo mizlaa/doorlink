@@ -6,6 +6,8 @@ import { JobStatus, NotificationType, Prisma } from '@prisma/client'
 import { getSession, type Session } from '@/lib/auth'
 import { describeSpec, parseSpec } from '@/lib/configurator/options'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
+import { calculateSplit, formatCommissionRate } from '@/lib/commission'
+import { commissionBpsForWorker } from '@/lib/commission-settings'
 import { formatMoney } from '@/lib/money'
 import { prisma } from '@/lib/prisma'
 import { makeReference } from '@/lib/reference'
@@ -28,6 +30,10 @@ class BookingError extends Error {}
  *     the job board, so scheduling, completion and reviews all work
  *  3. the quote is marked booked, with the site and contact details the
  *     customer gave, which only now reach the business
+ *  4. Doorlink's fee is recorded against the job at today's rate (zero
+ *     for a fee-free business), the same as a job hired from the board.
+ *     It comes out of the business's side; the customer's price is the
+ *     quoted total either way
  *
  * A quote can be booked once. The business is told straight after.
  */
@@ -48,7 +54,7 @@ export async function bookQuoteAction(_prev: BookingState, formData: FormData): 
 
   let jobId: string
   let key: BusinessKey
-  let summary: { product: string; total: string; suburb: string }
+  let summary: { product: string; total: string; suburb: string; payout: string; feeRate: number }
   try {
     const quote = await prisma.automatedQuote.findFirst({
       where: { reference, customerId: session.userId },
@@ -64,6 +70,8 @@ export async function bookQuoteAction(_prev: BookingState, formData: FormData): 
     if (!(await businessIsSubscribed(key))) return { error: 'This company isn’t taking bookings right now.' }
     const worker = await businessWorker(key)
     if (!worker) return { error: 'This company isn’t taking bookings right now.' }
+
+    const split = calculateSplit(option.totalIncGstCents, await commissionBpsForWorker(worker.userId))
 
     const spec = parseSpec(quote.spec)
     const product = `${productLabel(quote.product)} ${quote.widthMm} × ${quote.heightMm} mm`
@@ -114,6 +122,22 @@ export async function bookQuoteAction(_prev: BookingState, formData: FormData): 
             note: `Booked from quote ${quote.reference}`,
           },
         })
+        await tx.transaction.create({
+          data: {
+            reference: makeReference('TXN'),
+            jobId: job.id,
+            customerId: session.userId,
+            workerId: worker.userId,
+            grossCents: split.grossCents,
+            commissionRateBps: split.commissionRateBps,
+            commissionCents: split.commissionCents,
+            workerPayoutCents: split.workerPayoutCents,
+            currency: option.currency,
+            // No payment provider is connected: this records the agreed
+            // split, and only a real provider webhook ever marks it paid.
+            status: 'PENDING',
+          },
+        })
         await tx.automatedQuote.update({
           where: { id: quote.id },
           data: {
@@ -135,7 +159,13 @@ export async function bookQuoteAction(_prev: BookingState, formData: FormData): 
       },
       { isolationLevel: Prisma.TransactionIsolationLevel.Serializable }
     )
-    summary = { product, total: formatMoney(option.totalIncGstCents, option.currency), suburb: b.suburb }
+    summary = {
+      product,
+      total: formatMoney(option.totalIncGstCents, option.currency),
+      suburb: b.suburb,
+      payout: formatMoney(split.workerPayoutCents, option.currency),
+      feeRate: split.commissionRateBps,
+    }
   } catch (error) {
     if (error instanceof BookingError) return { error: error.message }
     if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === 'P2034') {
@@ -148,7 +178,11 @@ export async function bookQuoteAction(_prev: BookingState, formData: FormData): 
   await notifyBusiness(key, {
     type: NotificationType.QUOTE_ACCEPTED,
     title: `New booking: ${summary.product}`,
-    body: `${b.name} booked your ${summary.total} quote in ${summary.suburb} (${timingLabel(b.timing)?.toLowerCase()}). Schedule it from the job.`,
+    body: `${b.name} booked your ${summary.total} quote in ${summary.suburb} (${timingLabel(b.timing)?.toLowerCase()}). ${
+      summary.feeRate > 0
+        ? `You receive ${summary.payout} after the ${formatCommissionRate(summary.feeRate)} Doorlink fee. `
+        : ''
+    }Schedule it from the job.`,
     href: `/jobs/${jobId}`,
   })
 
