@@ -1,0 +1,250 @@
+{
+  "manufacturer": {
+    "name": "Maxim",
+    "slug": "maxim",
+    "country": "AU",
+    "note": "Tubular roller shutter motors sold through Australian shutter suppliers. Listed in the brief as \"Maximus\"; no motor brand of that name was found, and Maxim is the closest match on sale in the same market. No direct-PDF manuals were located, so the models carry ratings from reseller listings and no documents."
+  },
+  "models": [
+    {
+      "modelCode": "RF 10NM",
+      "name": "Maxim RF 10NM Radio Tubular Motor",
+      "category": "roller-shutter-motors",
+      "region": "AU",
+      "aliases": [],
+      "summary": "Radio 10 Nm tubular shutter motor.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Roller shutter — tubular"
+        },
+        {
+          "label": "Torque options",
+          "value": "10",
+          "unit": "Nm"
+        },
+        {
+          "label": "Supply",
+          "value": "230 V AC"
+        },
+        {
+          "label": "Control",
+          "value": "Radio remote"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.ozrollershutters.com.au/product/maxim-rf-10nm-tubular-motor",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    },
+    {
+      "modelCode": "RF 20NM",
+      "name": "Maxim RF 20NM Radio Tubular Motor",
+      "category": "roller-shutter-motors",
+      "region": "AU",
+      "aliases": [],
+      "summary": "Radio 20 Nm tubular shutter motor.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Roller shutter — tubular"
+        },
+        {
+          "label": "Torque options",
+          "value": "20",
+          "unit": "Nm"
+        },
+        {
+          "label": "Supply",
+          "value": "230 V AC"
+        },
+        {
+          "label": "Control",
+          "value": "Radio remote"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.ozrollershutters.com.au/product/maxim-rf-20nm-tubular-motor",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    },
+    {
+      "modelCode": "RF 50NM",
+      "name": "Maxim RF 50NM Radio Tubular Motor",
+      "category": "roller-shutter-motors",
+      "region": "AU",
+      "aliases": [],
+      "summary": "Radio 50 Nm tubular shutter motor.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Roller shutter — tubular"
+        },
+        {
+          "label": "Torque options",
+          "value": "50",
+          "unit": "Nm"
+        },
+        {
+          "label": "Supply",
+          "value": "230 V AC"
+        },
+        {
+          "label": "Control",
+          "value": "Radio remote"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.ozrollershutters.com.au/product/maxim-rf-50nm-tubular-motor/",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting. Published speed conflicts between listings, so none is given."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    },
+    {
+      "modelCode": "S10NM",
+      "name": "Maxim S10NM Tubular Shutter Motor",
+      "category": "roller-shutter-motors",
+      "region": "AU",
+      "aliases": [],
+      "summary": "Wired 10 Nm tubular shutter motor.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Roller shutter — tubular"
+        },
+        {
+          "label": "Torque options",
+          "value": "10",
+          "unit": "Nm"
+        },
+        {
+          "label": "Speed",
+          "value": "17",
+          "unit": "rpm"
+        },
+        {
+          "label": "Lifting capacity",
+          "value": "16",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "230 V AC"
+        },
+        {
+          "label": "Protection",
+          "value": "IP44"
+        },
+        {
+          "label": "Control",
+          "value": "Wall switch"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.ozrollershutters.com.au/product/maxim-s10nm-motor",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    },
+    {
+      "modelCode": "S20NM",
+      "name": "Maxim S20NM Tubular Shutter Motor",
+      "category": "roller-shutter-motors",
+      "region": "AU",
+      "aliases": [],
+      "summary": "Wired 20 Nm tubular shutter motor.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Roller shutter — tubular"
+        },
+        {
+          "label": "Torque options",
+          "value": "20",
+          "unit": "Nm"
+        },
+        {
+          "label": "Speed",
+          "value": "17",
+          "unit": "rpm"
+        },
+        {
+          "label": "Lifting capacity",
+          "value": "40",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "230 V AC"
+        },
+        {
+          "label": "Protection",
+          "value": "IP44"
+        },
+        {
+          "label": "Control",
+          "value": "Wall switch"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.ozrollershutters.com.au/product/maxim-s20nm-motor",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    },
+    {
+      "modelCode": "S50NM",
+      "name": "Maxim S50NM Tubular Shutter Motor",
+      "category": "roller-shutter-motors",
+      "region": "AU",
+      "aliases": [],
+      "summary": "Wired 50 Nm tubular shutter motor.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Roller shutter — tubular"
+        },
+        {
+          "label": "Torque options",
+          "value": "50",
+          "unit": "Nm"
+        },
+        {
+          "label": "Speed",
+          "value": "12",
+          "unit": "rpm"
+        },
+        {
+          "label": "Lifting capacity",
+          "value": "80",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "230 V AC"
+        },
+        {
+          "label": "Protection",
+          "value": "IP44"
+        },
+        {
+          "label": "Control",
+          "value": "Wall switch"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.ozrollershutters.com.au/product/maxim-s50nm-motor",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    }
+  ]
+}

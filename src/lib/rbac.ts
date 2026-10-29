@@ -45,6 +45,13 @@ export type Permission =
   | 'inspection:write'
   | 'asset:write'
   | 'inspection:template:write'
+  // Automated pricing. A business sets and sees its own prices only —
+  // there is deliberately no "any" variant, not even for platform admins,
+  // because one business's prices are never another's to read.
+  | 'pricing:write:own'
+  // Asking businesses for an automated quote. Customers only, so a
+  // competitor cannot probe rival prices by posing as a customer.
+  | 'quote:request'
 
 // listing:write:own is granted to every role — Doorlink's marketplace is
 // peer-to-peer (anyone with an account can list an item, business or
@@ -64,6 +71,7 @@ const MATRIX: Record<Role, Permission[]> = {
     'marketplace:hire',
     'support:read:own',
     'manual:submit',
+    'quote:request',
   ],
   TECHNICIAN: [
     'catalogue:read',
@@ -80,6 +88,7 @@ const MATRIX: Record<Role, Permission[]> = {
     'inspection:write',
     'asset:write',
     'manual:submit',
+    'pricing:write:own',
   ],
   SUPPLIER: [
     'catalogue:read',
@@ -89,6 +98,7 @@ const MATRIX: Record<Role, Permission[]> = {
     'marketplace:hire',
     'support:read:own',
     'manual:submit',
+    'pricing:write:own',
   ],
   MANUFACTURER: [
     'catalogue:read',

@@ -51,6 +51,93 @@
       ]
     },
     {
+      "modelCode": "ARES ULTRA BT A1000",
+      "name": "BFT ARES ULTRA BT A1000 Sliding Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "summary": "Low-voltage sliding gate operator for gates up to 1000 kg.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "1000",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V"
+        },
+        {
+          "label": "Speed",
+          "value": "9",
+          "unit": "m/min"
+        }
+      ],
+      "specSource": {
+        "url": "https://gatesandaccessories.co.uk/product/bft-ares-ultra-bt-a1000-sliding-gate-motor/",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      },
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT ARES ULTRA BT A 1000 / A 1500 Installation and User Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/BFT_Ares_Ultra_A_1500_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ismartgate.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT ARES ULTRA BT A 1000 / A 1500 Installation and User Manual\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "ARES ULTRA BT A1500",
+      "name": "BFT ARES ULTRA BT A1500 Sliding Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "summary": "Low-voltage sliding gate operator for heavy gates up to 1500 kg.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "1500",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V DC"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.electricgatemotors.co.uk/product/bft-ares-ultra-bt-a1500/",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      },
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT ARES ULTRA BT A 1000 / A 1500 Installation and User Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/BFT_Ares_Ultra_A_1500_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ismartgate.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT ARES ULTRA BT A 1000 / A 1500 Installation and User Manual\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "DEIMOS",
       "name": "DEIMOS Rack Sliding Gate Actuator",
       "category": "gate-motors",
@@ -98,6 +185,104 @@
       ]
     },
     {
+      "modelCode": "DEIMOS ULTRA BT A400",
+      "name": "BFT DEIMOS ULTRA BT A400 Sliding Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "DEIMOS BT A400"
+      ],
+      "summary": "Low-voltage sliding gate operator for residential gates up to 400 kg.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "400",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V"
+        },
+        {
+          "label": "Speed",
+          "value": "12",
+          "unit": "m/min"
+        },
+        {
+          "label": "Torque",
+          "value": "20",
+          "unit": "Nm"
+        },
+        {
+          "label": "Protection",
+          "value": "IP44"
+        },
+        {
+          "label": "Status",
+          "value": "Phased out by BFT"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.bft-automation.com/en_INT/product/deimos-ultra-bt-a400/",
+        "note": "Manufacturer product page. Torque from the installation manual."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    },
+    {
+      "modelCode": "DEIMOS ULTRA BT A600",
+      "name": "BFT DEIMOS ULTRA BT A600 Sliding Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "DEIMOS BT A600"
+      ],
+      "summary": "Low-voltage sliding gate operator for residential gates up to 600 kg.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "600",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V"
+        },
+        {
+          "label": "Speed",
+          "value": "12",
+          "unit": "m/min"
+        },
+        {
+          "label": "Torque",
+          "value": "30",
+          "unit": "Nm"
+        },
+        {
+          "label": "Protection",
+          "value": "IP44"
+        },
+        {
+          "label": "Status",
+          "value": "Phased out by BFT"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.bft-automation.com/en_INT/product/deimos-ultra-bt-a600/",
+        "note": "Manufacturer product page."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    },
+    {
       "modelCode": "ECOSOL PHOBOS",
       "name": "ECOSOL PHOBOS Solar Swing Gate Kit",
       "category": "gate-motors",
@@ -114,6 +299,27 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Distributor store copy. Region recorded as US from the distributor's market; not confirmed from the document. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Gate Automation",
+      "name": "BFT Gate Automation",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BFT Gate Automation Brochure 2023 (UK)",
+          "sourceUrl": "https://www.bftautomationuk.com/media/attachments/2023/02/14/gate-automation-brochure-2023.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "bftautomationuk.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Gate Automation Brochure 2023 (UK)\" (host: www.bftautomationuk.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -182,6 +388,56 @@
       ]
     },
     {
+      "modelCode": "IGEA BT",
+      "name": "BFT IGEA BT Articulated Arm Swing Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "summary": "Articulated-arm operator for pillar-mounted swing leaves up to 2.5 m.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Swing gate — articulated arm"
+        },
+        {
+          "label": "Max leaf length",
+          "value": "2.5",
+          "unit": "m"
+        },
+        {
+          "label": "Max leaf weight",
+          "value": "250",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V"
+        },
+        {
+          "label": "Opening angle",
+          "value": "up to 125°"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.bftautomationuk.com/products/articulated-arm/691-igeabt.html",
+        "note": "BFT UK distributor page."
+      },
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT IGEA BT Articulated Arm Installation Manual",
+          "sourceUrl": "https://ismartgate.com/manuals/BFT_IGEA_BT_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ismartgate.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT IGEA BT Articulated Arm Installation Manual\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "MICHELANGELO 24V",
       "name": "BFT MICHELANGELO 24V",
       "category": "gate-motors",
@@ -221,6 +477,106 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Aggregator listing. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "PHOBOS BT A25",
+      "name": "BFT PHOBOS BT A25 Swing Gate Ram",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "summary": "Low-voltage ram operator for swing leaves up to 2.5 m.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Swing gate — ram"
+        },
+        {
+          "label": "Max leaf length",
+          "value": "2",
+          "unit": "m"
+        },
+        {
+          "label": "Leaf length note",
+          "value": "2.5 m with an electric lock fitted"
+        },
+        {
+          "label": "Max leaf weight",
+          "value": "400",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.easygates.co.uk/product/bft-phobos-bt-a25/",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting. The 2 m figure applies without an electric lock."
+      },
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT PHOBOS BT A25 / A40 Installation Manual (EN/ES)",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0537/7916/9453/files/BFT-PHOBOS_BT_A_A25-A40_ENG-ESP_MANUAL.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cdn.shopify.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT PHOBOS BT A25 / A40 Installation Manual (EN/ES)\" (host: cdn.shopify.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "PHOBOS BT A40",
+      "name": "BFT PHOBOS BT A40 Swing Gate Ram",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "summary": "Low-voltage ram operator for swing leaves up to 4 m.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Swing gate — ram"
+        },
+        {
+          "label": "Max leaf length",
+          "value": "3",
+          "unit": "m"
+        },
+        {
+          "label": "Leaf length note",
+          "value": "4 m with an electric lock fitted"
+        },
+        {
+          "label": "Max leaf weight",
+          "value": "500",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.bftautomationuk.com/products/electromechanical/1049-phobosbta40-kit.html",
+        "note": "BFT UK distributor page. The 3 m figure applies without an electric lock."
+      },
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "BFT PHOBOS BT A25 / A40 Installation Manual (EN/ES)",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0537/7916/9453/files/BFT-PHOBOS_BT_A_A25-A40_ENG-ESP_MANUAL.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cdn.shopify.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT PHOBOS BT A25 / A40 Installation Manual (EN/ES)\" (host: cdn.shopify.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -381,6 +737,27 @@
       ]
     },
     {
+      "modelCode": "Swing Gate Range",
+      "name": "BFT Swing Gate Range",
+      "category": "gate-motors",
+      "region": "EU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "BFT Electromechanical Swing Gate Operators Leaflet (2020)",
+          "sourceUrl": "https://bft-automation.com/fileadmin/user_upload/commercial_download/leaflet_battenti_elettromeccanici_ENG_2020.pdf?28889280=",
+          "origin": "MANUFACTURER_ORIGINAL",
+          "publisher": "bft-automation.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"BFT Electromechanical Swing Gate Operators Leaflet (2020)\" (host: bft-automation.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "THALIA L",
       "name": "BFT THALIA L",
       "category": "gate-motors",
@@ -400,6 +777,55 @@
           "altSources": []
         }
       ]
+    },
+    {
+      "modelCode": "VIRGO SMART BT A 20",
+      "name": "BFT VIRGO SMART BT A 20 Articulated Arm Swing Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "VIRGO SMART BT A20"
+      ],
+      "summary": "Compact articulated-arm operator for residential swing leaves up to 2 m.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Swing gate — articulated arm"
+        },
+        {
+          "label": "Max leaf length",
+          "value": "2",
+          "unit": "m"
+        },
+        {
+          "label": "Max leaf weight",
+          "value": "200",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V"
+        },
+        {
+          "label": "Opening angle",
+          "value": "up to 120°"
+        },
+        {
+          "label": "Opening time",
+          "value": "14",
+          "unit": "s"
+        },
+        {
+          "label": "Protection",
+          "value": "IP44"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.bft-automation.com/en_INT/product/virgo-smart-bt-a-20/",
+        "note": "Manufacturer product page."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
     }
   ]
 }

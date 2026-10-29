@@ -93,6 +93,83 @@
       ]
     },
     {
+      "modelCode": "BOB21M",
+      "name": "Benincà BOB21M Swing Gate Ram",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "BOB 21M"
+      ],
+      "summary": "Irreversible ram operator for swing leaves up to 2.1 m.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Swing gate — ram"
+        },
+        {
+          "label": "Max leaf length",
+          "value": "2.1",
+          "unit": "m"
+        },
+        {
+          "label": "Supply",
+          "value": "230 V AC"
+        },
+        {
+          "label": "Thrust",
+          "value": "1800",
+          "unit": "N"
+        },
+        {
+          "label": "Stroke",
+          "value": "270",
+          "unit": "mm"
+        },
+        {
+          "label": "Duty cycle",
+          "value": "30",
+          "unit": "%"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.beninca.com/en/product/automations-for-swinging-gates/bob21m.html",
+        "note": "Manufacturer product page."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    },
+    {
+      "modelCode": "BOB30M",
+      "name": "Benincà BOB30M Swing Gate Ram",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "BOB 30M"
+      ],
+      "summary": "Ram operator for swing leaves up to 3 m, in 230 V and 24 V versions.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Swing gate — ram"
+        },
+        {
+          "label": "Max leaf length",
+          "value": "3",
+          "unit": "m"
+        },
+        {
+          "label": "Supply",
+          "value": "230 V AC or 24 V DC (by version)"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.beninca.com/en/product/automations-for-swinging-gates/bob30m.html",
+        "note": "Manufacturer product page."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    },
+    {
       "modelCode": "BOB5024",
       "name": "Beninca BOB5024 Swing Gate Automation",
       "category": "gate-motors",
@@ -144,6 +221,79 @@
       ]
     },
     {
+      "modelCode": "BULL 424 ESA",
+      "name": "Benincà BULL 424 ESA Sliding Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "BULL424ESA"
+      ],
+      "summary": "Low-voltage sliding gate operator for residential gates.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "350",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V DC"
+        },
+        {
+          "label": "Torque",
+          "value": "12",
+          "unit": "Nm"
+        },
+        {
+          "label": "Protection",
+          "value": "IP44"
+        }
+      ],
+      "specSource": {
+        "url": "https://benincauk.co.uk/wp-content/uploads/2022/02/BULL424ESA-BULL624ESA.pdf",
+        "note": "Manufacturer's own manual or datasheet. Some resellers list 400–450 kg; the manual figure is used here."
+      },
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Benincà BULL424ESA / BULL624ESA Sliding Gate Operator Manual",
+          "sourceUrl": "https://benincauk.co.uk/wp-content/uploads/2022/02/BULL424ESA-BULL624ESA.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "benincauk.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Benincà BULL424ESA / BULL624ESA Sliding Gate Operator Manual\" (host: benincauk.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BULL 424 ESA / BULL 624 ESA",
+      "name": "Benincà BULL 424 ESA / BULL 624 ESA",
+      "category": "gate-motors",
+      "region": "UK",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Benincà BULL424ESA / BULL624ESA Sliding Gate Operator Manual",
+          "sourceUrl": "https://benincauk.co.uk/wp-content/uploads/2022/02/BULL424ESA-BULL624ESA.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "benincauk.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Benincà BULL424ESA / BULL624ESA Sliding Gate Operator Manual\" (host: benincauk.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
       "modelCode": "BULL 5M",
       "name": "Benincà BULL 5M",
       "category": "gate-motors",
@@ -160,6 +310,155 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Benincà Bull 5M Sliding Gate Motor Instruction Manual\" (host: manuals.plus). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BULL 624 ESA",
+      "name": "Benincà BULL 624 ESA Sliding Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "BULL624ESA"
+      ],
+      "summary": "Low-voltage sliding gate operator for heavier residential gates.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "600",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "24 V DC"
+        }
+      ],
+      "specSource": {
+        "url": "https://benincauk.co.uk/wp-content/uploads/2022/02/BULL424ESA-BULL624ESA.pdf",
+        "note": "Manufacturer's own manual or datasheet."
+      },
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Benincà BULL424ESA / BULL624ESA Sliding Gate Operator Manual",
+          "sourceUrl": "https://benincauk.co.uk/wp-content/uploads/2022/02/BULL424ESA-BULL624ESA.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "benincauk.co.uk",
+          "region": "UK",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Benincà BULL424ESA / BULL624ESA Sliding Gate Operator Manual\" (host: benincauk.co.uk). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BULL10M",
+      "name": "Benincà BULL10M Sliding Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "BULL 10M"
+      ],
+      "summary": "Mains sliding gate operator for gates up to 1000 kg.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "1000",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "230 V AC"
+        },
+        {
+          "label": "Thrust",
+          "value": "1000",
+          "unit": "N"
+        },
+        {
+          "label": "Duty cycle",
+          "value": "40",
+          "unit": "%"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.beninca.com/en/product/automations-for-sliding-gates/bull10m.html",
+        "note": "Manufacturer product page."
+      },
+      "documents": [
+        {
+          "kind": "PARTS_LIST",
+          "title": "Benincà BULL 10M / 15M / 20M Operating Instructions and Spare Parts Catalogue",
+          "sourceUrl": "https://ismartgate.com/manuals/Beninca_BULL_10M_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ismartgate.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Benincà BULL 10M / 15M / 20M Operating Instructions and Spare Parts Catalogue\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "BULL15M",
+      "name": "Benincà BULL15M Sliding Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "BULL 15M"
+      ],
+      "summary": "Heavy-duty mains sliding gate operator for gates up to 1500 kg.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "1500",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "230 V AC"
+        },
+        {
+          "label": "Thrust",
+          "value": "1250",
+          "unit": "N"
+        },
+        {
+          "label": "Duty cycle",
+          "value": "60",
+          "unit": "%"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.beninca.com/en/product/automations-for-sliding-gates/bull15m.html",
+        "note": "Manufacturer product page."
+      },
+      "documents": [
+        {
+          "kind": "PARTS_LIST",
+          "title": "Benincà BULL 10M / 15M / 20M Operating Instructions and Spare Parts Catalogue",
+          "sourceUrl": "https://ismartgate.com/manuals/Beninca_BULL_10M_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "ismartgate.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Benincà BULL 10M / 15M / 20M Operating Instructions and Spare Parts Catalogue\" (host: ismartgate.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]
@@ -184,6 +483,98 @@
           "altSources": []
         }
       ]
+    },
+    {
+      "modelCode": "BULL8M",
+      "name": "Benincà BULL8M Sliding Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "BULL 8M"
+      ],
+      "summary": "Mains sliding gate operator for gates up to 800 kg.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "800",
+          "unit": "kg"
+        },
+        {
+          "label": "Supply",
+          "value": "230 V AC"
+        },
+        {
+          "label": "Thrust",
+          "value": "940",
+          "unit": "N"
+        },
+        {
+          "label": "Duty cycle",
+          "value": "30",
+          "unit": "%"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.beninca.com/en/product/automations-for-sliding-gates/bull8m.html",
+        "note": "Manufacturer product page."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    },
+    {
+      "modelCode": "DU.IT14N",
+      "name": "Benincà DU.IT14N Underground Swing Gate Operator",
+      "category": "gate-motors",
+      "region": "GLOBAL",
+      "aliases": [
+        "DUIT14N",
+        "DU IT14N"
+      ],
+      "summary": "Underground operator for swing leaves up to 3.5 m, hidden in a foundation box.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Swing gate — underground"
+        },
+        {
+          "label": "Max leaf length",
+          "value": "3.5",
+          "unit": "m"
+        },
+        {
+          "label": "Supply",
+          "value": "230 V AC"
+        },
+        {
+          "label": "Torque",
+          "value": "370",
+          "unit": "Nm"
+        },
+        {
+          "label": "Opening time",
+          "value": "22",
+          "unit": "s"
+        },
+        {
+          "label": "Duty cycle",
+          "value": "30",
+          "unit": "%"
+        },
+        {
+          "label": "Protection",
+          "value": "IP67"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.beninca.com/en/product/automations-for-swinging-gates/du-it14n.html",
+        "note": "Manufacturer product page."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
     },
     {
       "modelCode": "IT24N",

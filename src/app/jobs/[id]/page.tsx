@@ -12,16 +12,19 @@ import { isConnected } from '@/lib/integrations'
 import { NotConnected } from '@/components/ui/NotConnected'
 import { Badge } from '@/components/ui/Badge'
 import { SpecList } from '@/components/ui/Table'
+import { timingLabel } from '@/lib/pricing/booking'
+import { productLabel } from '@/lib/pricing/products'
 import { JOB_STATUS_LABELS, JOB_STATUS_TONE, TRANSACTION_STATUS_LABELS } from '@/lib/labels'
 import { JobTransitionControls, ReviewForm } from './JobControls'
 import { OpenConversationButton } from '@/app/messages/OpenConversation'
 
 export const metadata: Metadata = { title: 'Job' }
 
-type PageProps = { params: Promise<{ id: string }> }
+type PageProps = { params: Promise<{ id: string }>; searchParams: Promise<{ booked?: string }> }
 
-export default async function JobDetailPage({ params }: PageProps) {
+export default async function JobDetailPage({ params, searchParams }: PageProps) {
   const { id } = await params
+  const booked = (await searchParams).booked === '1'
   const session = await getSession()
   if (!session) redirect('/sign-in')
 
@@ -37,7 +40,9 @@ export default async function JobDetailPage({ params }: PageProps) {
             name: true,
             email: true,
             phone: true,
-            technicianProfile: { select: { businessName: true, businessPhone: true, headline: true } },
+            technicianProfile: {
+              select: { businessName: true, businessPhone: true, businessEmail: true, headline: true },
+            },
           },
         },
         lead: {
@@ -54,6 +59,23 @@ export default async function JobDetailPage({ params }: PageProps) {
           },
         },
         quote: { select: { amountCents: true, message: true, currency: true } },
+        organization: { select: { name: true, phone: true, email: true } },
+        automatedQuote: {
+          select: {
+            reference: true,
+            businessName: true,
+            product: true,
+            widthMm: true,
+            heightMm: true,
+            bookingName: true,
+            bookingPhone: true,
+            bookingAddress: true,
+            bookingSuburb: true,
+            bookingState: true,
+            bookingPostcode: true,
+            bookingTiming: true,
+          },
+        },
         transactions: { orderBy: { createdAt: 'desc' } },
         workerReview: true,
         statusEvents: {
@@ -83,19 +105,35 @@ export default async function JobDetailPage({ params }: PageProps) {
   // not their account record: the phone number they want a technician to
   // ring is the one they typed on this job, and an account created years
   // ago may have no phone on it at all.
+  // A job booked from an automated quote carries the booking: the site
+  // and phone the customer gave, and the company it was booked with.
+  const booking = job.automatedQuote
   const counterparty =
     actor === 'customer'
       ? {
-          name: job.worker?.technicianProfile?.businessName || job.worker?.name || null,
-          email: job.worker?.email ?? null,
-          phone: job.worker?.technicianProfile?.businessPhone || job.worker?.phone || null,
+          name:
+            booking?.businessName ||
+            job.organization?.name ||
+            job.worker?.technicianProfile?.businessName ||
+            job.worker?.name ||
+            null,
+          email:
+            job.organization?.email ||
+            job.worker?.technicianProfile?.businessEmail ||
+            job.worker?.email ||
+            null,
+          phone:
+            job.organization?.phone ||
+            job.worker?.technicianProfile?.businessPhone ||
+            job.worker?.phone ||
+            null,
         }
       : {
-          name: job.lead?.name || job.customer?.name || null,
+          name: booking?.bookingName || job.lead?.name || job.customer?.name || null,
           email: job.lead?.email || job.customer?.email || null,
-          phone: job.lead?.phone || job.customer?.phone || null,
+          phone: booking?.bookingPhone || job.lead?.phone || job.customer?.phone || null,
         }
-  const counterpartyLabel = actor === 'customer' ? 'Technician' : 'Customer'
+  const counterpartyLabel = actor === 'customer' ? (booking ? 'Company' : 'Technician') : 'Customer'
 
   const details: Array<{ label: string; value: string }> = [
     { label: 'Reference', value: job.reference },
@@ -111,10 +149,23 @@ export default async function JobDetailPage({ params }: PageProps) {
     })
   }
   if (job.completedAt) {
-    details.push({ label: 'Completed', value: job.completedAt.toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' }) })
+    details.push({
+      label: 'Completed',
+      value: job.completedAt.toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' }),
+    })
   }
-  const location = [job.lead?.suburb, job.lead?.state, job.lead?.postcode].filter(Boolean).join(' ')
-  if (location) details.push({ label: 'Location', value: location })
+  const location = booking
+    ? [
+        booking.bookingAddress,
+        [booking.bookingSuburb, booking.bookingState, booking.bookingPostcode].filter(Boolean).join(' '),
+      ]
+        .filter(Boolean)
+        .join(', ')
+    : [job.lead?.suburb, job.lead?.state, job.lead?.postcode].filter(Boolean).join(' ')
+  if (location) details.push({ label: booking ? 'Site' : 'Location', value: location })
+  const timing = timingLabel(booking?.bookingTiming ?? null)
+  if (timing) details.push({ label: 'Wanted', value: timing })
+  if (booking) details.push({ label: 'Quote', value: booking.reference })
 
   return (
     <div className="mx-auto max-w-shell px-4 py-10 sm:py-14">
@@ -128,12 +179,31 @@ export default async function JobDetailPage({ params }: PageProps) {
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-start justify-between gap-3">
             <h1 className="text-2xl font-semibold tracking-tight text-graphite">
-              {job.lead?.title ?? 'Job'}
+              {job.lead?.title ??
+                (booking
+                  ? `${productLabel(booking.product)} · ${booking.widthMm} × ${booking.heightMm} mm`
+                  : 'Job')}
             </h1>
             <Badge tone={JOB_STATUS_TONE[job.status]}>{JOB_STATUS_LABELS[job.status]}</Badge>
           </div>
 
+          {booked && actor === 'customer' && (
+            <p className="mt-4 rounded-md border border-good/40 bg-natural/10 px-4 py-3 text-sm text-graphite">
+              <span className="font-semibold">Booked.</span> {counterparty.name} has your details and will
+              confirm a date. You’ll get a notification when they do.
+            </p>
+          )}
+
           <p className="mt-4 whitespace-pre-wrap text-graphite-soft">{job.description}</p>
+
+          {booking && (
+            <Link
+              href={`/quotes/${booking.reference}`}
+              className="mt-3 inline-block text-sm font-medium text-signal hover:text-signal-hover"
+            >
+              View the quote
+            </Link>
+          )}
 
           {job.quote?.message && (
             <div className="mt-6 rounded-md border border-line bg-rail p-4">
@@ -172,10 +242,7 @@ export default async function JobDetailPage({ params }: PageProps) {
                   )}
                 </p>
                 <div className="mt-3">
-                  <OpenConversationButton
-                    jobId={job.id}
-                    label={`Message ${counterpartyLabel.toLowerCase()}`}
-                  />
+                  <OpenConversationButton jobId={job.id} label={`Message ${counterpartyLabel.toLowerCase()}`} />
                 </div>
               </div>
             </section>
@@ -197,7 +264,9 @@ export default async function JobDetailPage({ params }: PageProps) {
               </h2>
               <ReviewForm
                 jobId={job.id}
-                existing={job.workerReview ? { rating: job.workerReview.rating, body: job.workerReview.body } : null}
+                existing={
+                  job.workerReview ? { rating: job.workerReview.rating, body: job.workerReview.body } : null
+                }
               />
             </section>
           )}
@@ -229,7 +298,10 @@ export default async function JobDetailPage({ params }: PageProps) {
           <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-deep">Details</h2>
           <SpecList items={details} columns={1} />
 
-          {transaction && (
+          {/* The fee is between Doorlink and the business: it comes out of
+              their side and never changes what the customer pays, so the
+              customer sees the agreed price and nothing else. */}
+          {transaction && actor !== 'customer' && (
             <div className="mt-6">
               <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-zinc-deep">Payment</h2>
               <dl className="rounded-md border border-line bg-paper p-4 text-sm">
@@ -248,7 +320,9 @@ export default async function JobDetailPage({ params }: PageProps) {
                   </dd>
                 </div>
                 <div className="mt-1 flex justify-between border-t border-line pt-1">
-                  <dt className="font-medium text-graphite">Technician receives</dt>
+                  <dt className="font-medium text-graphite">
+                    {actor === 'worker' ? 'You receive' : 'Business receives'}
+                  </dt>
                   <dd className="font-medium text-graphite">
                     {formatMoney(transaction.workerPayoutCents, transaction.currency)}
                   </dd>
@@ -263,7 +337,7 @@ export default async function JobDetailPage({ params }: PageProps) {
                 <div className="mt-3">
                   <NotConnected
                     feature="Taking payment"
-                    reason="No payment provider is connected, so this records the agreed split only. No money moves through Doorlink yet. Settle directly with each other for now."
+                    reason="No payment provider is connected yet, so this records the agreed split only. The customer pays the business directly and the fee is settled separately."
                   />
                 </div>
               )}

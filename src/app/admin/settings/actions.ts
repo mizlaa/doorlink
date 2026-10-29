@@ -6,8 +6,9 @@ import { prisma } from '@/lib/prisma'
 import { getSession } from '@/lib/auth'
 import { requirePermission, RbacError } from '@/lib/rbac'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
-import { COMMISSION_SETTING_KEY, MAX_COMMISSION_BPS } from '@/lib/commission'
-import { currentCommissionBps } from '@/lib/commission-settings'
+import { COMMISSION_EXEMPT_SETTING_KEY, COMMISSION_SETTING_KEY, MAX_COMMISSION_BPS } from '@/lib/commission'
+import { commissionExemptKeys, currentCommissionBps } from '@/lib/commission-settings'
+import { decodeBusinessKey } from '@/lib/pricing/business'
 import { COMPLIANCE_PRICE_SETTING_KEY, MAX_COMPLIANCE_PRICE_CENTS } from '@/lib/compliance/pricing'
 import { currentCompliancePriceCents } from '@/lib/compliance/pricing-settings'
 
@@ -161,4 +162,45 @@ export async function updateCompliancePriceAction(
   revalidatePath('/admin/settings')
   revalidatePath('/compliance')
   return { ok: true }
+}
+
+// ---------------------------------------------------------------------
+// Fee-free businesses
+// ---------------------------------------------------------------------
+
+/**
+ * Marks a business as paying no commission — meant for the platform
+ * owner's own company. Bookings already made keep the fee they were
+ * recorded with; only new ones change.
+ */
+export async function setFeeExemptAction(formData: FormData): Promise<void> {
+  const session = requirePermission(await getSession(), 'admin:settings')
+  const raw = String(formData.get('business') ?? '')
+  const key = decodeBusinessKey(raw)
+  if (!key) return
+  const exempt = formData.get('exempt') === '1'
+
+  const current = await commissionExemptKeys()
+  const next = exempt ? [...new Set([...current, raw])] : current.filter((k) => k !== raw)
+  if (next.length === current.length && current.includes(raw) === exempt) return
+
+  await prisma.$transaction(async (tx) => {
+    await tx.platformSetting.upsert({
+      where: { key: COMMISSION_EXEMPT_SETTING_KEY },
+      update: { value: next },
+      create: { key: COMMISSION_EXEMPT_SETTING_KEY, value: next },
+    })
+    await tx.auditLog.create({
+      data: {
+        actorId: session.userId,
+        action: exempt ? 'commission.exempt' : 'commission.unexempt',
+        entityType: 'PlatformSetting',
+        entityId: COMMISSION_EXEMPT_SETTING_KEY,
+        metadata: { business: raw },
+      },
+    })
+  })
+
+  revalidatePath('/admin/settings')
+  revalidatePath('/pricing')
 }

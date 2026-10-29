@@ -395,12 +395,24 @@ model User {
   springCalculations     SpringCalculation[]       @relation("SpringCalculations")
   creditBalance          CreditBalance?
   creditLedger           CreditLedger[]
+
+  pricingRules    PricingRule[]    @relation("PricingRuleOwner")
+  quotesRequested AutomatedQuote[] @relation("AutomatedQuoteCustomer")
+  quotesIssued    AutomatedQuote[] @relation("AutomatedQuoteBusinessUser")
 }
 
 model Organization {
   id        String   @id @default(cuid())
   name      String
   type      OrgType
+  // Business details, entered at sign-up and editable in the pricing area.
+  abn       String?
+  phone     String?
+  // Where quote and booking alerts go.
+  email     String?
+  suburb    String?
+  state     String?
+  postcode  String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -419,6 +431,9 @@ model Organization {
   inspectionTemplates InspectionTemplate[]
   inspections         Inspection[]
   correctiveActions   CorrectiveAction[]
+
+  pricingRules PricingRule[]    @relation("PricingRuleOrganization")
+  quotesIssued AutomatedQuote[] @relation("AutomatedQuoteBusinessOrganization")
 }
 
 model OrganizationMember {
@@ -452,6 +467,8 @@ model TechnicianProfile {
   // The number a technician puts on the side of the van, which is often
   // not the number on their personal account record.
   businessPhone   String?
+  // Where quote and booking alerts go, when it differs from the login.
+  businessEmail   String?
   abn             String?
   avatarUrl       String?
   headline        String?
@@ -1057,6 +1074,9 @@ model Job {
   createdAt          DateTime           @default(now())
   updatedAt          DateTime           @updatedAt
 
+  // Set when the job was booked from an automated quote.
+  automatedQuote AutomatedQuote?
+
   statusEvents  JobStatusEvent[]
   transactions  Transaction[]
   workerReview  WorkerReview?
@@ -1440,15 +1460,15 @@ model CreditBalance {
 }
 
 model CreditLedger {
-  id                  String           @id @default(cuid())
-  user                User             @relation(fields: [userId], references: [id], onDelete: Cascade)
-  userId              String
-  delta               Int
-  kind                CreditLedgerKind
-  generationId        String?
-  providerSessionId   String?          @unique
-  packCode            String?
-  createdAt           DateTime         @default(now())
+  id                String           @id @default(cuid())
+  user              User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId            String
+  delta             Int
+  kind              CreditLedgerKind
+  generationId      String?
+  providerSessionId String?          @unique
+  packCode          String?
+  createdAt         DateTime         @default(now())
 
   @@unique([generationId, kind])
   @@index([userId])
@@ -2581,4 +2601,166 @@ model SpringCalculation {
 
   @@index([performedById])
   @@index([assetId])
+}
+
+// ---------------------------------------------------------------------
+// Automated pricing and quotes
+// ---------------------------------------------------------------------
+
+// What a business prices. One per product category the designer offers;
+// garage door styles (sectional, roller, tilt) are a refinement on the
+// rule rather than separate products.
+enum PricedProduct {
+  GARAGE_DOOR
+  SLIDING_GATE
+  SWING_GATE
+  PEDESTRIAN_GATE
+  FENCE
+  WINDOW_SHUTTER
+  SHOP_SHUTTER
+}
+
+enum AutomatedQuoteStatus {
+  ISSUED
+  BOOKED
+}
+
+// Whether the configured price already contains GST or has it added.
+enum GstTreatment {
+  INCLUSIVE
+  EXCLUSIVE
+}
+
+// INCLUDED: the price covers installation. SEPARATE: installation is
+// offered at its own configured price. NOT_INCLUDED: supply only.
+enum InstallationTerms {
+  INCLUDED
+  SEPARATE
+  NOT_INCLUDED
+}
+
+// One business's price for one product configuration across a range of
+// sizes. Owned by an organisation when the business has one, otherwise
+// by the trade account itself — the same rule listings follow — and only
+// ever read or written by that owner. Never shown to another business.
+model PricingRule {
+  id             String        @id @default(cuid())
+  organization   Organization? @relation("PricingRuleOrganization", fields: [organizationId], references: [id], onDelete: Cascade)
+  organizationId String?
+  owner          User?         @relation("PricingRuleOwner", fields: [ownerId], references: [id], onDelete: Cascade)
+  ownerId        String?
+
+  product      PricedProduct
+  // Garage doors only: sectional / roller / tilt, or null for all styles.
+  productStyle String?
+  // The product brand the business supplies (e.g. a garage door brand).
+  // Null means the business has not named one.
+  productBrand String?
+
+  motorIncluded Boolean
+  // Motor brand slug when a motor is included and the business names one.
+  motorBrand    String?
+
+  installation      InstallationTerms
+  // Only for SEPARATE installation.
+  installPriceCents Int?
+
+  // Inclusive ranges, in millimetres.
+  minWidthMm  Int
+  maxWidthMm  Int
+  minHeightMm Int
+  maxHeightMm Int
+
+  priceCents Int
+  gst        GstTreatment
+  currency   String       @default("AUD")
+  note       String?
+  active     Boolean      @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  quoteOptions AutomatedQuoteOption[]
+
+  @@index([organizationId])
+  @@index([ownerId])
+  @@index([product, active])
+}
+
+// A quote the system issued from one business's rules for one
+// customer's design. The prices are copied onto the options at issue
+// time, so editing or deleting a rule later never changes a quote a
+// customer has already been given.
+model AutomatedQuote {
+  id        String @id @default(cuid())
+  reference String @unique
+
+  customer   User   @relation("AutomatedQuoteCustomer", fields: [customerId], references: [id], onDelete: Cascade)
+  customerId String
+
+  businessOrganization   Organization? @relation("AutomatedQuoteBusinessOrganization", fields: [businessOrganizationId], references: [id], onDelete: Cascade)
+  businessOrganizationId String?
+  businessUser           User?         @relation("AutomatedQuoteBusinessUser", fields: [businessUserId], references: [id], onDelete: Cascade)
+  businessUserId         String?
+  // The business's display name when the quote was issued.
+  businessName           String
+
+  product         PricedProduct
+  productStyle    String?
+  spec            Json
+  widthMm         Int
+  heightMm        Int
+  requestedBrand  String?
+  motorRequired   Boolean
+  requestedMotor  String?
+  installRequired Boolean
+
+  status           AutomatedQuoteStatus @default(ISSUED)
+  // Booking: the option the customer accepted, the job it became, and
+  // the site and contact details they gave the business.
+  acceptedOptionId String?
+  bookedAt         DateTime?
+  job              Job?                 @relation(fields: [jobId], references: [id], onDelete: SetNull)
+  jobId            String?              @unique
+  bookingName      String?
+  bookingPhone     String?
+  bookingAddress   String?
+  bookingSuburb    String?
+  bookingState     String?
+  bookingPostcode  String?
+  bookingTiming    String?
+  bookingNotes     String?
+
+  createdAt DateTime @default(now())
+
+  options AutomatedQuoteOption[]
+
+  @@index([customerId])
+  @@index([businessOrganizationId])
+  @@index([businessUserId])
+}
+
+model AutomatedQuoteOption {
+  id      String         @id @default(cuid())
+  quote   AutomatedQuote @relation(fields: [quoteId], references: [id], onDelete: Cascade)
+  quoteId String
+  rule    PricingRule?   @relation(fields: [ruleId], references: [id], onDelete: SetNull)
+  ruleId  String?
+
+  productBrand       String?
+  motorIncluded      Boolean
+  motorBrand         String?
+  installation       InstallationTerms
+  gst                GstTreatment
+  // As configured, then broken down.
+  priceCents         Int
+  installPriceCents  Int?
+  subtotalExGstCents Int
+  gstCents           Int
+  totalIncGstCents   Int
+  currency           String            @default("AUD")
+  note               String?
+  sortOrder          Int               @default(0)
+
+  @@index([quoteId])
 }

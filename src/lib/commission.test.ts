@@ -26,6 +26,13 @@ describe('calculateSplit', () => {
     }
   })
 
+  it('takes $250 of a $5,000 booking at the default rate', () => {
+    const split = calculateSplit(500_000, DEFAULT_COMMISSION_BPS)
+    expect(formatCommissionRate(DEFAULT_COMMISSION_BPS)).toBe('5%')
+    expect(split.commissionCents).toBe(25_000)
+    expect(split.workerPayoutCents).toBe(475_000)
+  })
+
   it('takes nothing at a zero rate', () => {
     const split = calculateSplit(12_345, 0)
     expect(split.commissionCents).toBe(0)

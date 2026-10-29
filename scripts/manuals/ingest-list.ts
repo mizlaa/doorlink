@@ -397,11 +397,11 @@ function main() {
       )
       const settled = matched ?? dominant ?? LAST_RESORT_CATEGORY
       // Only models this script owns end to end get recategorised; a
-      // model with any hand-written document may have had its category
-      // set deliberately.
-      const ownedOutright = model.documents.every((d) =>
-        d.evidence.startsWith(INGEST_EVIDENCE_PREFIX),
-      )
+      // model with any hand-written document, or with rated specs, may
+      // have had its category set deliberately.
+      const ownedOutright =
+        !model.specs?.length &&
+        model.documents.every((d) => d.evidence.startsWith(INGEST_EVIDENCE_PREFIX))
       if (ownedOutright && model.category !== settled) {
         model.category = settled
         touched.add(slug)

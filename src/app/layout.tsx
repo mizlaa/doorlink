@@ -7,6 +7,7 @@ import { Footer } from '@/components/layout/Footer'
 import { MobileTabBar } from '@/components/layout/MobileTabBar'
 import { InstallPrompt } from '@/components/layout/InstallPrompt'
 import { ServiceWorkerRegister } from '@/components/layout/ServiceWorkerRegister'
+import { NavigationSpinner } from '@/components/layout/NavigationSpinner'
 import { toJsonLd } from '@/lib/json-ld'
 import './globals.css'
 
@@ -31,7 +32,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-      default: 'Doorlink: automated doors, connected professionals',
+    default: 'Doorlink: automated doors, connected professionals',
     template: '%s · Doorlink',
   },
   description:
@@ -81,6 +82,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Footer />
         <Suspense fallback={null}>
           <MobileTabBar />
+        </Suspense>
+        {/* useSearchParams needs a boundary, or every page would opt out of static rendering. */}
+        <Suspense fallback={null}>
+          <NavigationSpinner />
         </Suspense>
         <InstallPrompt />
         <ServiceWorkerRegister />

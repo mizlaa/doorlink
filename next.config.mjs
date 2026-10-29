@@ -13,6 +13,9 @@ const nextConfig = {
     maxInactiveAge: 5 * 60 * 1000,
     pagesBufferLength: 8,
   },
+  // The development badge (the black circle bottom-left) is replaced by
+  // the app's own loading ring; build errors still show as an overlay.
+  devIndicators: false,
   images: { formats: ['image/avif', 'image/webp'], remotePatterns: [] },
   experimental: {
     serverActions: {

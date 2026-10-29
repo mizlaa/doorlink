@@ -3,7 +3,7 @@ import { prisma } from '@/lib/prisma'
 import { getSession } from '@/lib/auth'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { NotConnected } from '@/components/ui/NotConnected'
-import { describeSpec, parseSpec, specAsBrief } from '@/lib/configurator/options'
+import { describeSpec, familyOf, parseSpec, specAsBrief } from '@/lib/configurator/options'
 import { RequestForm } from './RequestForm'
 
 export const metadata: Metadata = {
@@ -28,9 +28,13 @@ export default async function RequestTechnicianPage({ searchParams }: PageProps)
     try {
       const parsed = parseSpec(JSON.parse(spec))
       const type = describeSpec(parsed)[0]?.value ?? 'garage door'
+      const garage = familyOf(parsed.productType) === 'garage'
+      // "Roller shutter" and "Sliding gate" already name the product; a
+      // garage door type ("Sectional") does not.
+      const product = garage ? `${type.toLowerCase()} garage door` : type.toLowerCase()
       prefill = {
-        title: `New ${type.toLowerCase()} garage door: supply and install`,
-        message: `I've designed a door in the Doorlink configurator and would like a price to supply and install it.\n\n${specAsBrief(parsed)}\n\nThese are Doorlink's generic options rather than a specific product, so let me know the nearest equivalent you can supply.`,
+        title: `New ${product}: supply and install`,
+        message: `I've designed a ${garage ? 'door' : product} in the Doorlink configurator and would like a price to supply and install it.\n\n${specAsBrief(parsed)}\n\nThese are Doorlink's generic options rather than a specific product, so let me know the nearest equivalent you can supply.`,
       }
     } catch {
       prefill = undefined

@@ -29,7 +29,8 @@ function paymentsEnabled(): boolean {
 }
 
 function emailEnabled(): boolean {
-  return configured(process.env.RESEND_API_KEY)
+  // A key without a verified sender cannot send anything (see lib/email.ts).
+  return configured(process.env.RESEND_API_KEY, process.env.EMAIL_FROM)
 }
 
 function pushEnabled(): boolean {
@@ -56,7 +57,7 @@ export const integrations: Record<IntegrationKey, IntegrationStatus> = {
     : { enabled: false, reason: 'Stripe is not configured. Checkout stays in demo mode.' },
   email: emailEnabled()
     ? { enabled: true }
-    : { enabled: false, reason: 'Resend is not configured. No transactional email is sent.' },
+    : { enabled: false, reason: 'Resend is not configured (RESEND_API_KEY and EMAIL_FROM). No transactional email is sent.' },
   push: pushEnabled()
     ? { enabled: true }
     : { enabled: false, reason: 'No VAPID keys are configured. No push notification is sent.' },

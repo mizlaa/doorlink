@@ -266,6 +266,49 @@
       ]
     },
     {
+      "modelCode": "LT60 RTS",
+      "name": "Somfy LT60 RTS Tubular Motor",
+      "category": "roller-shutter-motors",
+      "region": "CA",
+      "aliases": [],
+      "summary": "Larger-diameter radio tubular motor for heavy shutters.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Roller shutter — tubular"
+        },
+        {
+          "label": "Torque options",
+          "value": "60, 80",
+          "unit": "Nm"
+        },
+        {
+          "label": "Motor size",
+          "value": "Ø60",
+          "unit": "mm"
+        },
+        {
+          "label": "Speed",
+          "value": "14",
+          "unit": "rpm"
+        },
+        {
+          "label": "Supply",
+          "value": "120 V AC (North American version)"
+        },
+        {
+          "label": "Control",
+          "value": "Somfy RTS radio"
+        }
+      ],
+      "specSource": {
+        "url": "https://securityshutter.ca/products/somfy-660r2-rts",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    },
+    {
       "modelCode": "Oximo",
       "name": "Somfy Oximo Tubular Motor",
       "category": "roller-shutter-motors",
@@ -284,6 +327,98 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Aggregator listing, 4 pages. Somfy South Africa's download page is described as carrying Oximo RTS technical data sheets and installation guides; no URL for those surfaced, so that page is registered as a portal instead. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Oximo io",
+      "name": "Somfy Oximo io Tubular Shutter Motor",
+      "category": "roller-shutter-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "summary": "Two-way radio (io-homecontrol) tubular shutter motor for 50 mm tubes, 6–50 Nm.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Roller shutter — tubular"
+        },
+        {
+          "label": "Torque options",
+          "value": "6, 10, 15, 20, 25, 30, 40, 50",
+          "unit": "Nm"
+        },
+        {
+          "label": "Motor size",
+          "value": "Ø50",
+          "unit": "mm"
+        },
+        {
+          "label": "Control",
+          "value": "io-homecontrol two-way radio"
+        }
+      ],
+      "specSource": {
+        "url": "https://lacentrale-eco.com/en/accessoires/moteur-de-volet-roulant/moteurs-somfy-fr/moteur-radio/moteur-radio-somfy-oximo-io-10-nm.html",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting. The full torque list is the range across Oximo io versions; confirm the exact step with the supplier."
+      },
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Somfy Oximo io Tubular Motor Installation Guide",
+          "sourceUrl": "https://aluroli.pl/userdata/public/assets/Instrukcje%20automatyka/Somfy/somfy-oximo-io.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "aluroli.pl",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Somfy Oximo io Tubular Motor Installation Guide\" (host: aluroli.pl). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "Oximo RTS",
+      "name": "Somfy Oximo RTS Tubular Shutter Motor",
+      "category": "roller-shutter-motors",
+      "region": "GLOBAL",
+      "aliases": [],
+      "summary": "Radio (RTS) tubular shutter motor for 50 mm tubes, 6–50 Nm.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Roller shutter — tubular"
+        },
+        {
+          "label": "Torque options",
+          "value": "6, 10, 15, 20, 25, 30, 40, 50",
+          "unit": "Nm"
+        },
+        {
+          "label": "Motor size",
+          "value": "Ø50",
+          "unit": "mm"
+        },
+        {
+          "label": "Control",
+          "value": "Somfy RTS radio, 433.42 MHz"
+        }
+      ],
+      "specSource": {
+        "url": "https://lacentrale-eco.com/en/accessoires/moteur-de-volet-roulant/moteurs-somfy-fr/moteur-radio/moteur-radio-somfy-oximo-rts-20-nm-somfy.html",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting. The full torque list is the range across Oximo RTS versions; confirm the exact step with the supplier."
+      },
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Somfy Oximo RTS Tubular Motor Installation Instructions (ref. 5005319)",
+          "sourceUrl": "https://set-gmbh.de/mediafiles/Anleitungen/1490065_Anleitung.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "set-gmbh.de",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Somfy Oximo RTS Tubular Motor Installation Instructions (ref. 5005319)\" (host: set-gmbh.de). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

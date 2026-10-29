@@ -7,7 +7,7 @@ import { useDoorDrag } from './useDoorDrag'
 
 const SESSION_KEY = 'doorlink:garage-door-intro-seen'
 
-export function GarageDoorHero() {
+export function GarageDoorHero({ poweredBy }: { poweredBy: string | null }) {
   const [mounted, setMounted] = useState(false)
   const [hasPlayed, setHasPlayed] = useState(false)
 
@@ -35,7 +35,7 @@ export function GarageDoorHero() {
     return (
       <section className="garage-door-replay" aria-label="Doorlink introduction">
         <div>
-          <p className="garage-door-kicker">DOORLINK / AUTOMATED DOORS &amp; GATES</p>
+          <p className="garage-door-kicker">{poweredBy ? `POWERED BY ${poweredBy.toUpperCase()}` : 'DOORLINK'}</p>
           <p className="garage-door-replay-copy">Your workspace is ready.</p>
         </div>
         <button type="button" onClick={replay} className="garage-door-replay-button">
@@ -61,14 +61,18 @@ export function GarageDoorHero() {
               Hire a pro <span aria-hidden="true">↗</span>
             </Link>
             <Link href="/configure" className="garage-door-secondary-action">
-              Design a door
+              Design yours
             </Link>
           </div>
         </div>
 
         <div className="garage-door-sim">
-          <GarageDoorScene progress={progress} isDragging={isDragging} dragHandlers={dragHandlers} />
-          <p className="garage-door-scene-note">SECTIONAL SYSTEM / 04 PANELS</p>
+          <GarageDoorScene
+            progress={progress}
+            isDragging={isDragging}
+            dragHandlers={dragHandlers}
+            poweredBy={poweredBy}
+          />
           <div className="garage-door-sim-bar">
             <p className={`garage-door-hint ${isDragging ? 'is-hidden' : ''}`}>
               <svg viewBox="0 0 16 24" width="14" height="22" aria-hidden="true" focusable="false">

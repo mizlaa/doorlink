@@ -1,7 +1,7 @@
 import { JobStatus, LeadStatus, NotificationType, Prisma, QuoteStatus } from '@prisma/client'
 import { prisma } from './prisma'
 import { calculateSplit } from './commission'
-import { currentCommissionBps } from './commission-settings'
+import { commissionBpsForWorker } from './commission-settings'
 import { makeReference } from './reference'
 import { notify } from './notifications'
 import { formatMoney } from './money'
@@ -102,8 +102,6 @@ export function jobActorFor(
  * If any step fails, none of them happened.
  */
 export async function acceptQuote(quoteId: string, acceptingUserId: string) {
-  const commissionRateBps = await currentCommissionBps()
-
   return prisma.$transaction(async (tx) => {
     const quote = await tx.quote.findUnique({
       where: { id: quoteId },
@@ -162,6 +160,7 @@ export async function acceptQuote(quoteId: string, acceptingUserId: string) {
       },
     })
 
+    const commissionRateBps = await commissionBpsForWorker(quote.workerId)
     const split = calculateSplit(quote.amountCents, commissionRateBps)
     await tx.transaction.create({
       data: {

@@ -1,0 +1,126 @@
+{
+  "manufacturer": {
+    "name": "CW Products",
+    "slug": "cw-products",
+    "country": "AU",
+    "website": "https://www.cwproducts.com.au/",
+    "note": "Australian supplier of roller shutter components and its own CW tubular motors; also the exclusive Australian distributor of SIMU. No direct-PDF CW motor manuals were located, so the models below carry ratings from product pages and no documents."
+  },
+  "models": [
+    {
+      "modelCode": "CW5",
+      "name": "CW5 240V 50mm Wired Tubular Motor",
+      "category": "roller-shutter-motors",
+      "region": "AU",
+      "aliases": [],
+      "summary": "Wired 50 mm tubular shutter motor with manual end limits, 10–50 Nm.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Roller shutter — tubular"
+        },
+        {
+          "label": "Torque options",
+          "value": "10, 20, 30, 40, 50",
+          "unit": "Nm"
+        },
+        {
+          "label": "Motor size",
+          "value": "Ø50",
+          "unit": "mm"
+        },
+        {
+          "label": "Supply",
+          "value": "240 V AC"
+        },
+        {
+          "label": "Control",
+          "value": "Wired switch, manual end limits"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.cwproducts.com.au/products/cw-motorisation-and-controls/cw5-240v-50mm-wired-tubular-motor/",
+        "note": "Manufacturer product page. The page gives 10–50 Nm; intermediate steps are the usual 10 Nm increments — confirm with CW Products."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    },
+    {
+      "modelCode": "CW5R",
+      "name": "CW5R 20Nm Radio Tubular Motor",
+      "category": "roller-shutter-motors",
+      "region": "AU",
+      "aliases": [],
+      "summary": "Radio-controlled 50 mm tubular shutter motor, 20 Nm.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Roller shutter — tubular"
+        },
+        {
+          "label": "Torque options",
+          "value": "20",
+          "unit": "Nm"
+        },
+        {
+          "label": "Motor size",
+          "value": "Ø50",
+          "unit": "mm"
+        },
+        {
+          "label": "Control",
+          "value": "Radio"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.ozrollershutters.com.au/product/cw5r-20nm-tubular-motor/",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    },
+    {
+      "modelCode": "CW6M",
+      "name": "CW6M 240V 60mm Wired Tubular Motor",
+      "category": "roller-shutter-motors",
+      "region": "AU",
+      "aliases": [],
+      "summary": "Wired 60 mm tubular motor with manual override for large shutters, up to 120 Nm.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Roller shutter — tubular"
+        },
+        {
+          "label": "Torque options",
+          "value": "120",
+          "unit": "Nm"
+        },
+        {
+          "label": "Motor size",
+          "value": "Ø60",
+          "unit": "mm"
+        },
+        {
+          "label": "Speed",
+          "value": "12",
+          "unit": "rpm"
+        },
+        {
+          "label": "Supply",
+          "value": "240 V AC"
+        },
+        {
+          "label": "Control",
+          "value": "Wired switch, manual override"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.cwproducts.com.au/products/cw-motorisation-and-controls/cw6m-240v-60mm-wired-tubular-motor/",
+        "note": "Manufacturer product page."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    }
+  ]
+}

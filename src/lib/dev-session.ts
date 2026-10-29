@@ -2,11 +2,12 @@
 
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import { safeNextPath } from './safe-next'
 import { z } from 'zod'
 import { Role } from '@prisma/client'
 import { prisma } from './prisma'
 import { isDatabaseUnreachable } from './db-errors'
-import { registerDoorlinkUser } from './register-user'
+import { readSignUpBusiness, registerDoorlinkUser } from './register-user'
 import { DEV_SESSION_COOKIE } from './session-cookie'
 
 // Everything in this file is the dev-only stand-in for real authentication:
@@ -15,8 +16,7 @@ import { DEV_SESSION_COOKIE } from './session-cookie'
 // a real provider (Supabase) is wired in, this whole file gets replaced —
 // nothing here is part of the provider-agnostic SessionProvider interface.
 
-export type SignInState = { error?: string }
-export type RegisterState = { error?: string }
+import type { RegisterState, SignInState } from './auth-state'
 
 const signInSchema = z.object({
   email: z.string().trim().toLowerCase().email('Enter a valid email address.'),
@@ -45,7 +45,7 @@ export async function devSignInAction(_prevState: SignInState, formData: FormDat
     throw error
   }
 
-  redirect('/')
+  redirect(safeNextPath(formData.get('next')))
 }
 
 const REGISTRABLE_ROLES = ['CUSTOMER', 'TECHNICIAN', 'SUPPLIER', 'MANUFACTURER'] as const
@@ -58,7 +58,8 @@ const registerSchema = z
     organizationName: z.string().trim().optional(),
   })
   .refine(
-    (data) => (data.role === 'SUPPLIER' || data.role === 'MANUFACTURER' ? !!data.organizationName : true),
+    // Suppliers give a business name in the business details instead.
+    (data) => (data.role === 'MANUFACTURER' ? !!data.organizationName : true),
     {
       message: 'Enter your organization name.',
       path: ['organizationName'],
@@ -84,12 +85,14 @@ export async function devRegisterAction(_prevState: RegisterState, formData: For
 
   const { name, email, organizationName } = parsed.data
   const role = Role[parsed.data.role]
+  const signUpBusiness = readSignUpBusiness(parsed.data.role, formData)
+  if (!signUpBusiness.ok) return { error: signUpBusiness.error }
 
   try {
     const existing = await prisma.user.findUnique({ where: { email } })
     if (existing) return { error: 'An account with that email already exists.' }
 
-    const user = await registerDoorlinkUser({ name, email, role, organizationName })
+    const user = await registerDoorlinkUser({ name, email, role, organizationName, business: signUpBusiness.business })
 
     const store = await cookies()
     store.set(DEV_SESSION_COOKIE, user.email, { httpOnly: true, sameSite: 'lax', path: '/' })

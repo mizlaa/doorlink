@@ -76,6 +76,12 @@ export async function Header() {
       accountLinks.push({ href: '/my-listings', label: 'My listings' })
     }
     accountLinks.push({ href: '/my-requests', label: 'My requests' })
+    if (can(session.role, 'quote:request')) {
+      accountLinks.push({ href: '/quotes', label: 'My quotes' })
+    }
+    if (can(session.role, 'pricing:write:own')) {
+      accountLinks.push({ href: '/pricing', label: 'Automated pricing' })
+    }
     // The job board is the technician's side of the same marketplace, so
     // it is gated on being able to quote rather than on owning leads.
     if (can(session.role, 'marketplace:quote')) {

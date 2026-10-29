@@ -69,7 +69,7 @@ const CATEGORY_PATTERNS: ReadonlyArray<readonly [RegExp, string]> = [
   [/\b(sliding door operator|swing door operator|pedestrian|automatic (sliding|swing) door|revolving|slimdrive|powerturn|dura-glide|besam|tormax)/i, 'automatic-pedestrian-doors'],
   [/\b(gate|barrier|bollard|swing|sliding gate|boom)/i, 'gate-motors'],
   [/\b(roller shutter|rolling shutter|tubular motor|awning|blind|shutter)/i, 'roller-shutter-motors'],
-  [/\b(garage|sectional|tilt|roller door|overhead door|up[- ]and[- ]over)/i, 'garage-door-openers'],
+  [/\b(garage|sectional|tilt|roller door|overhead door|up[- ]and[- ]over|commercial door opener)/i, 'garage-door-openers'],
 ]
 
 /** The matched category, or null when nothing in the text says. */

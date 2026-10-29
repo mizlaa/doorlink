@@ -2,25 +2,19 @@
 
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import { safeNextPath } from './safe-next'
 import { z } from 'zod'
 import { Role } from '@prisma/client'
 import { prisma } from './prisma'
 import { isDatabaseUnreachable } from './db-errors'
 import { isConnected } from './integrations'
-import { registerDoorlinkUser } from './register-user'
+import { readSignUpBusiness, registerDoorlinkUser } from './register-user'
 import { DEV_SESSION_COOKIE } from './session-cookie'
 import { createSupabaseAdminClient } from './supabase/admin'
 import { withSupabaseServerClient } from './supabase/server'
 import { AUTH_UNAVAILABLE_MESSAGE, AuthServiceUnavailableError } from './supabase/auth-service'
-import {
-  devRegisterAction,
-  devSignInAction,
-  devSignOutAction,
-  type RegisterState,
-  type SignInState,
-} from './dev-session'
-
-export type { RegisterState, SignInState }
+import { devRegisterAction, devSignInAction, devSignOutAction } from './dev-session'
+import type { RegisterState, SignInState } from './auth-state'
 
 const REGISTRABLE_ROLES = ['CUSTOMER', 'TECHNICIAN', 'SUPPLIER', 'MANUFACTURER'] as const
 
@@ -42,7 +36,8 @@ const registerSchema = z
     organizationName: z.string().trim().optional(),
   })
   .refine(
-    (data) => (data.role === 'SUPPLIER' || data.role === 'MANUFACTURER' ? !!data.organizationName : true),
+    // Suppliers give a business name in the business details instead.
+    (data) => (data.role === 'MANUFACTURER' ? !!data.organizationName : true),
     {
       message: 'Enter your organization name.',
       path: ['organizationName'],
@@ -90,7 +85,7 @@ async function supabaseSignInAction(_prevState: SignInState, formData: FormData)
     throw err
   }
 
-  redirect('/')
+  redirect(safeNextPath(formData.get('next')))
 }
 
 async function supabaseRegisterAction(_prevState: RegisterState, formData: FormData): Promise<RegisterState> {
@@ -107,6 +102,8 @@ async function supabaseRegisterAction(_prevState: RegisterState, formData: FormD
 
   const { name, email, password, organizationName } = parsed.data
   const role = Role[parsed.data.role]
+  const signUpBusiness = readSignUpBusiness(parsed.data.role, formData)
+  if (!signUpBusiness.ok) return { error: signUpBusiness.error }
 
   try {
     const existing = await prisma.user.findUnique({ where: { email } })
@@ -136,7 +133,7 @@ async function supabaseRegisterAction(_prevState: RegisterState, formData: FormD
   }
 
   try {
-    await registerDoorlinkUser({ name, email, role, organizationName })
+    await registerDoorlinkUser({ name, email, role, organizationName, business: signUpBusiness.business })
   } catch (err) {
     try {
       const admin = createSupabaseAdminClient()

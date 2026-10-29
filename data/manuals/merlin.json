@@ -48,7 +48,98 @@
           "evidence": "Recorded from a web search result naming this URL as \"Merlin MGS1000 Sliding Gate Opener Installation Manual\" (host: wholesalegaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
-      ]
+      ],
+      "summary": "Mains sliding gate opener for heavy residential gates up to 1000 kg.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "1000",
+          "unit": "kg"
+        },
+        {
+          "label": "Max gate length",
+          "value": "10",
+          "unit": "m"
+        },
+        {
+          "label": "Supply",
+          "value": "240 V AC"
+        },
+        {
+          "label": "Power",
+          "value": "480",
+          "unit": "W"
+        },
+        {
+          "label": "Duty cycle",
+          "value": "30",
+          "unit": "%"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.egaragesystems.com.au/pdf/manuals/merlin/gate_openers/MGS300-500-1000_installation_manual.pdf",
+        "note": "Manufacturer's own manual or datasheet. Merlin range manual hosted by a dealer."
+      }
+    },
+    {
+      "modelCode": "MGS300",
+      "name": "Merlin MGS300 Sliding Gate Opener",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Merlin Professional Sliding Gate Motor Manual for MGS300, MGS500 and MGS1000",
+          "sourceUrl": "https://www.egaragesystems.com.au/pdf/manuals/merlin/gate_openers/MGS300-500-1000_installation_manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "egaragesystems.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Merlin Professional Sliding Gate Motor Manual for MGS300, MGS500 and MGS1000\" (host: www.egaragesystems.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ],
+      "summary": "Mains sliding gate opener for light residential gates.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "300",
+          "unit": "kg"
+        },
+        {
+          "label": "Max gate length",
+          "value": "5",
+          "unit": "m"
+        },
+        {
+          "label": "Supply",
+          "value": "240 V AC"
+        },
+        {
+          "label": "Power",
+          "value": "300",
+          "unit": "W"
+        },
+        {
+          "label": "Duty cycle",
+          "value": "30",
+          "unit": "%"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.egaragesystems.com.au/pdf/manuals/merlin/gate_openers/MGS300-500-1000_installation_manual.pdf",
+        "note": "Manufacturer's own manual or datasheet. Merlin range manual hosted by a dealer."
+      }
     },
     {
       "modelCode": "MGS300 / MGS500 / MGS1000",
@@ -90,7 +181,74 @@
           "evidence": "Recorded from a web search result naming this URL as \"Merlin MGS500 Sliding Gate Opener Installation Manual\" (host: wholesalegaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
-      ]
+      ],
+      "summary": "Mains sliding gate opener for residential gates up to 500 kg.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "500",
+          "unit": "kg"
+        },
+        {
+          "label": "Max gate length",
+          "value": "8",
+          "unit": "m"
+        },
+        {
+          "label": "Supply",
+          "value": "240 V AC"
+        },
+        {
+          "label": "Power",
+          "value": "360",
+          "unit": "W"
+        },
+        {
+          "label": "Duty cycle",
+          "value": "30",
+          "unit": "%"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.egaragesystems.com.au/pdf/manuals/merlin/gate_openers/MGS300-500-1000_installation_manual.pdf",
+        "note": "Manufacturer's own manual or datasheet. Merlin range manual hosted by a dealer."
+      }
+    },
+    {
+      "modelCode": "MGSK600",
+      "name": "Merlin Slide 600 (MGSK600) Sliding Gate Opener",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [
+        "Slide 600"
+      ],
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet.",
+      "summary": "Sliding gate opener kit (Slide 600) for gates up to 600 kg.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "600",
+          "unit": "kg"
+        },
+        {
+          "label": "Max gate length",
+          "value": "8",
+          "unit": "m"
+        }
+      ],
+      "specSource": {
+        "url": "https://merlingaragedooropener.com.au/product/merlin-slide-600-mgsk600/",
+        "note": "Reseller listing, not the manufacturer — check against the manual before quoting."
+      }
     },
     {
       "modelCode": "MR655MYQ",
@@ -364,7 +522,45 @@
           "evidence": "Recorded from a web search result naming this URL as \"Merlin Swing L 300 Gate Opener Installation Manual\" (host: wholesalegaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
-      ]
+      ],
+      "summary": "Linear actuator for swing leaves; allowed weight falls as the leaf gets longer.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Swing gate — ram"
+        },
+        {
+          "label": "Max leaf length",
+          "value": "3",
+          "unit": "m"
+        },
+        {
+          "label": "Leaf weight by length",
+          "value": "300 kg at 2 m, 250 kg at 2.5 m, 200 kg at 3 m"
+        },
+        {
+          "label": "Thrust",
+          "value": "1500",
+          "unit": "N"
+        },
+        {
+          "label": "Power",
+          "value": "50",
+          "unit": "W"
+        },
+        {
+          "label": "Opening angle",
+          "value": "up to 120°"
+        },
+        {
+          "label": "Protection",
+          "value": "IP44"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.gomerlin.com.au/product/swing-l-300-linear-actuator-arm-double-swing-gate-opener-mgldkmgldk-lv/",
+        "note": "Manufacturer product page. Also sold under the Grifco name. The installation manual gives narrower width limits for some brackets."
+      }
     }
   ]
 }

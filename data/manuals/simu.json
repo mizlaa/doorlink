@@ -76,6 +76,39 @@
       "category": "roller-shutter-motors",
       "region": "EU",
       "aliases": [],
+      "summary": "Wired tubular shutter motor with manual override, 15–50 Nm.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Roller shutter — tubular"
+        },
+        {
+          "label": "Torque options",
+          "value": "15, 25, 40, 50",
+          "unit": "Nm"
+        },
+        {
+          "label": "Speed",
+          "value": "17 rpm (15, 25 Nm); 12 rpm (40, 50 Nm)"
+        },
+        {
+          "label": "Supply",
+          "value": "240 V AC"
+        },
+        {
+          "label": "Power",
+          "value": "140–240",
+          "unit": "W"
+        },
+        {
+          "label": "Control",
+          "value": "Wired switch, manual override"
+        }
+      ],
+      "specSource": {
+        "url": "https://wpstaq-ap-southeast-2-media.s3.amazonaws.com/cwproducts/wp-content/uploads/media/2023/02/16-CWP020_SIMU_T5_DMI_Factsheet_Web.pdf",
+        "note": "SIMU factsheet published by CW Products, the Australian distributor."
+      },
       "documents": [
         {
           "kind": "TECHNICAL_DOCUMENT",
@@ -87,6 +120,86 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Simu T5 DMI 240V Wired Tubular Motor with Manual Override Factsheet\" (host: wpstaq-ap-southeast-2-media.s3.amazonaws.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "T5 E Hz",
+      "name": "SIMU T5 E Hz Tubular Shutter Motor",
+      "category": "roller-shutter-motors",
+      "region": "AU",
+      "aliases": [],
+      "summary": "Radio tubular shutter motor with obstacle detection, 10–35 Nm.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Roller shutter — tubular"
+        },
+        {
+          "label": "Torque options",
+          "value": "10, 20, 35",
+          "unit": "Nm"
+        },
+        {
+          "label": "Supply",
+          "value": "240 V AC"
+        },
+        {
+          "label": "Control",
+          "value": "SIMU Hz radio"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.cwproducts.com.au/products/simu-motorisation-and-controls/t5-e-hz/",
+        "note": "CW Products (Australian SIMU distributor) product page."
+      },
+      "documents": [],
+      "note": "Created to carry published ratings. No direct-PDF manual has been located for this model yet."
+    },
+    {
+      "modelCode": "T5 Hz.02",
+      "name": "SIMU T5 Hz.02 Tubular Shutter Motor",
+      "category": "roller-shutter-motors",
+      "region": "AU",
+      "aliases": [
+        "T5Hz.02"
+      ],
+      "summary": "Radio (Hz) tubular shutter motor with electronic limits, 8–50 Nm.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Roller shutter — tubular"
+        },
+        {
+          "label": "Torque options",
+          "value": "8, 15, 25, 35, 50",
+          "unit": "Nm"
+        },
+        {
+          "label": "Supply",
+          "value": "240 V AC"
+        },
+        {
+          "label": "Control",
+          "value": "SIMU Hz radio, electronic end limits"
+        }
+      ],
+      "specSource": {
+        "url": "https://www.cwproducts.com.au/products/simu-motorisation-and-controls/t5-hz02-240v-motor/",
+        "note": "CW Products (Australian SIMU distributor) product page."
+      },
+      "documents": [
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "SIMU T3.5 / T5 / T6 Hz.02 Tubular Motor Installation Information",
+          "sourceUrl": "https://cdn.shopify.com/s/files/1/0262/8337/6749/files/t6_install_info.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "cdn.shopify.com",
+          "region": "EU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"SIMU T3.5 / T5 / T6 Hz.02 Tubular Motor Installation Information\" (host: cdn.shopify.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

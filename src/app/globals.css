@@ -592,10 +592,12 @@ body {
   letter-spacing: -0.025em;
   line-height: 1.05;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
-}
-
-.garage-door-intro h2 span {
-  color: #9CC3F5;
+  /* A business name can be long; wrap it rather than run off the door. */
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* Lets the driveway fall away into the card, as in an architectural
@@ -611,24 +613,6 @@ body {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 58%, #FFFFFF 80%);
 }
 
-.garage-door-scene-note {
-  position: absolute;
-  z-index: 3;
-  top: 20px;
-  right: 20px;
-  border: 1px solid rgba(220, 228, 236, 0.9);
-  border-radius: 999px;
-  padding: 8px 16px;
-  background: rgba(255, 255, 255, 0.86);
-  color: var(--text);
-  font-family: var(--font-plex-mono), ui-monospace, monospace;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  line-height: 16px;
-  pointer-events: none;
-  backdrop-filter: blur(6px);
-}
 
 .garage-door-sim-bar {
   position: absolute;
@@ -760,12 +744,6 @@ body {
     height: 9%;
   }
 
-  .garage-door-scene-note {
-    top: 12px;
-    right: 12px;
-    padding: 6px 12px;
-    font-size: 10px;
-  }
 
   .garage-door-sim-bar {
     position: static;

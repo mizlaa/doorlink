@@ -3,20 +3,32 @@
 import { useActionState, useDeferredValue, useMemo, useState } from 'react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
-import { saveConfigurationAction, generateDoorPreviewAction, startCreditPackCheckoutAction, type ConfigurationActionState, type PreviewActionState } from './actions'
+import {
+  saveConfigurationAction,
+  generateDoorPreviewAction,
+  startCreditPackCheckoutAction,
+  type ConfigurationActionState,
+  type PreviewActionState,
+} from './actions'
 import { PREVIEW_CREDIT_COST } from '@/lib/credits/constants'
 import { PREVIEW_NOTE_MAX_WORDS, previewNoteWordCount } from '@/lib/configurator/preview-prompt'
 import { formatMoney } from '@/lib/money'
 import {
   DEFAULT_SPEC,
-  describeSpec,
+  familyOf,
   groupsFor,
+  parseSpec,
+  PRODUCT_FAMILIES,
   PRODUCT_TYPES,
-  SIZE_LIMITS,
+  sizeLimitsFor,
+  specForType,
   type DoorSpec,
+  type ProductFamily,
   type ProductType,
 } from '@/lib/configurator/options'
-import { lookFromSpec } from '@/lib/configurator/look'
+import { previewFromSpec } from '@/lib/configurator/look'
+import type { MotorCandidate } from '@/lib/motors/specs'
+import { MotorShortlist } from './MotorShortlist'
 import { Button } from '@/components/ui/Button'
 import { Field, Input, Textarea } from '@/components/ui/Field'
 import { NotConnected } from '@/components/ui/NotConnected'
@@ -37,8 +49,48 @@ const initialState: ConfigurationActionState = {}
 
 const initialPreviewState: PreviewActionState = {}
 
+/** What the open/close button and the size fields say, per family. */
+const FAMILY_WORDS: Record<
+  ProductFamily,
+  { open: string; close: string; size: string; width: string; height: string; saveAs: string }
+> = {
+  garage: {
+    open: 'Open the door',
+    close: 'Close the door',
+    size: 'Opening size',
+    width: 'Width (mm)',
+    height: 'Height (mm)',
+    saveAs: 'My garage door',
+  },
+  gate: {
+    open: 'Open the gate',
+    close: 'Close the gate',
+    size: 'Opening size',
+    width: 'Width (mm)',
+    height: 'Height (mm)',
+    saveAs: 'My gate',
+  },
+  fence: {
+    open: '',
+    close: '',
+    size: 'Fence size',
+    width: 'Run length (mm)',
+    height: 'Height (mm)',
+    saveAs: 'My fence',
+  },
+  shutter: {
+    open: 'Raise the shutter',
+    close: 'Lower the shutter',
+    size: 'Window size',
+    width: 'Width (mm)',
+    height: 'Height (mm)',
+    saveAs: 'My window shutter',
+  },
+}
+
 export function Configurator({
   signedIn,
+  motors = [],
   initialSpec,
   previewAvailable,
   creditBalance,
@@ -47,6 +99,7 @@ export function Configurator({
   creditsCheckoutNotice,
 }: {
   signedIn: boolean
+  motors?: MotorCandidate[]
   initialSpec?: DoorSpec
   previewAvailable: boolean
   creditBalance: number | null
@@ -70,14 +123,28 @@ export function Configurator({
   )
 
   const groups = useMemo(() => groupsFor(spec.productType), [spec.productType])
-  const look = useMemo(() => lookFromSpec(spec), [spec])
+  // The form holds whatever is typed; everything drawn or matched uses the
+  // same clamped spec the server would store, so a half-typed width can't
+  // draw a zero-metre gate.
+  const effective = useMemo(() => parseSpec(spec), [spec])
+  const preview = useMemo(() => previewFromSpec(effective), [effective])
   // Commit the selected button/input immediately; expensive WebGL updates
   // can follow without blocking typing or another selection.
-  const sceneLook = useDeferredValue(look)
-  const summary = useMemo(() => describeSpec(spec), [spec])
+  const scenePreview = useDeferredValue(preview)
+  const family = familyOf(spec.productType)
+  const words = FAMILY_WORDS[family]
+  const limits = sizeLimitsFor(spec.productType)
+  const familyTypes = PRODUCT_TYPES.filter((type) =>
+    PRODUCT_FAMILIES.find((candidate) => candidate.id === family)?.types.includes(type.id as ProductType)
+  )
 
   function set<K extends keyof DoorSpec>(key: K, value: DoorSpec[K]) {
     setSpec((current) => ({ ...current, [key]: value }))
+  }
+
+  function setType(productType: ProductType) {
+    setSpec((current) => specForType(current, productType))
+    setOpen(false)
   }
 
   const displayBalance = previewState.balance ?? creditBalance
@@ -86,349 +153,420 @@ export function Configurator({
   return (
     <div className="flex w-full min-w-0 flex-col gap-8 lg:flex-row lg:items-start lg:gap-10">
       {/* ------------------------------------------------------------ */}
-      <div className="min-w-0 w-full max-w-full lg:sticky lg:top-6 lg:w-[54%] lg:shrink-0">
-        <ConfiguratorScene look={sceneLook} isOpen={open} />
+      {/* On a phone held upright the column dissolves (`contents`) so the
+          preview can pin to the top of the whole designer, keeping the
+          design in view while the options scroll beneath it. */}
+      <div className="min-w-0 w-full max-w-full max-lg:portrait:contents lg:sticky lg:top-6 lg:w-[54%] lg:shrink-0">
+        <div className="max-lg:portrait:sticky max-lg:portrait:top-0 max-lg:portrait:z-20 max-lg:portrait:-mx-4 max-lg:portrait:-mb-6 max-lg:portrait:bg-paper/95 max-lg:portrait:px-4 max-lg:portrait:pb-3 max-lg:portrait:pt-3 max-lg:portrait:shadow-[0_8px_16px_-12px_rgba(23,50,77,0.35)] max-lg:portrait:backdrop-blur">
+          <ConfiguratorScene preview={scenePreview} isOpen={open} />
 
-        <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
-          <Button type="button" variant="secondary" size="sm" onClick={() => setOpen((value) => !value)}>
-            {open ? 'Close the door' : 'Open the door'}
-          </Button>
-          <p className="text-micro text-zinc-deep">Drag to look around.</p>
+          <div className="mt-3 flex items-center justify-between gap-3">
+            {words.open ? (
+              <Button type="button" size="sm" onClick={() => setOpen((value) => !value)}>
+                {open ? words.close : words.open}
+              </Button>
+            ) : (
+              <span />
+            )}
+            <p className="text-micro text-zinc-deep">Drag to turn</p>
+          </div>
         </div>
-
-        {/* The single most important sentence on this page. */}
-        <p className="mt-4 rounded-md border border-caution/30 bg-caution-tint p-3 text-sm text-graphite">
-          Generic Doorlink options, not a specific manufacturer&apos;s product.
+        <p className="mt-2 text-micro text-zinc-deep max-lg:portrait:order-last max-lg:portrait:mt-0">
+          Generic Doorlink styles, not a specific manufacturer&apos;s product.
         </p>
 
-        <section className="mt-6">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-deep">Photo preview</h2>
-          {creditsCheckoutNotice && (
-            <p className="mt-3 rounded-md border border-line bg-rail p-3 text-sm text-graphite-soft">
-              {creditsCheckoutNotice}
-            </p>
-          )}
-          {previewAvailable ? (
-            <>
-              {!signedIn ? (
-                <p className="mt-3 text-sm text-graphite-soft">
-                  <Link href="/sign-in?next=/configure" className="font-medium text-signal hover:text-signal-hover">
-                    Sign in
-                  </Link>{' '}
-                  to use photo preview credits.
-                </p>
-              ) : (
-                <>
+        {/* Photo preview is prompted for garage doors only, and the action refuses anything else.
+            Hidden until an image provider is connected: a "not connected" box is noise to a customer. */}
+        {family === 'garage' && previewAvailable && (
+          <section className="mt-6">
+            <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-deep">Photo preview</h2>
+            {creditsCheckoutNotice && (
+              <p className="mt-3 rounded-md border border-line bg-rail p-3 text-sm text-graphite-soft">
+                {creditsCheckoutNotice}
+              </p>
+            )}
+            {previewAvailable ? (
+              <>
+                {!signedIn ? (
                   <p className="mt-3 text-sm text-graphite-soft">
-                    Each successful preview uses {PREVIEW_CREDIT_COST} credit. You have{' '}
-                    <span className="font-medium text-graphite">{displayBalance ?? 0}</span> credit
-                    {(displayBalance ?? 0) === 1 ? '' : 's'}.
+                    <Link
+                      href="/sign-in?next=/configure"
+                      className="font-medium text-signal hover:text-signal-hover"
+                    >
+                      Sign in
+                    </Link>{' '}
+                    to use photo preview credits.
                   </p>
+                ) : (
+                  <>
+                    <p className="mt-3 text-sm text-graphite-soft">
+                      Each successful preview uses {PREVIEW_CREDIT_COST} credit. You have{' '}
+                      <span className="font-medium text-graphite">{displayBalance ?? 0}</span> credit
+                      {(displayBalance ?? 0) === 1 ? '' : 's'}.
+                    </p>
 
-                  {previewState.imageDataUrl && (
-                    <figure className="mt-3 max-w-full overflow-hidden rounded-md border border-line">
-                      {/* eslint-disable-next-line @next/next/no-img-element -- ephemeral data URL from OpenAI */}
-                      <img
-                        src={previewState.imageDataUrl}
-                        alt="Generated preview of your door choices on your photo"
-                        className="block h-auto w-full max-w-full"
-                      />
-                      <figcaption className="border-t border-line bg-rail px-3 py-2 text-micro text-zinc-deep">
-                        AI-generated preview from your photo and choices. Not a product photo from a manufacturer.
-                      </figcaption>
-                    </figure>
-                  )}
+                    {previewState.imageDataUrl && (
+                      <figure className="mt-3 max-w-full overflow-hidden rounded-md border border-line">
+                        {/* eslint-disable-next-line @next/next/no-img-element -- ephemeral data URL from OpenAI */}
+                        <img
+                          src={previewState.imageDataUrl}
+                          alt="Generated preview of your door choices on your photo"
+                          className="block h-auto w-full max-w-full"
+                        />
+                        <figcaption className="border-t border-line bg-rail px-3 py-2 text-micro text-zinc-deep">
+                          AI-generated preview from your photo and choices. Not a product photo from a
+                          manufacturer.
+                        </figcaption>
+                      </figure>
+                    )}
 
-                  {(displayBalance ?? 0) >= PREVIEW_CREDIT_COST ? (
-                    <form action={previewAction} className="mt-3 flex flex-col gap-3">
-                      <input type="hidden" name="spec" value={JSON.stringify(spec)} />
-                      <p className="text-sm text-graphite-soft">
-                        Upload a photo of your garage opening. We&apos;ll generate one indicative image using your
-                        choices above.
-                      </p>
-                      <Field label="Your photo" htmlFor="preview-photo">
-                        <Input
-                          id="preview-photo"
-                          name="photo"
-                          type="file"
-                          accept="image/jpeg,image/png,image/webp"
-                          required
-                        />
-                      </Field>
-                      <Field
-                        label="Notes for this preview"
-                        htmlFor="preview-note"
-                        hint={`${noteWords} / ${PREVIEW_NOTE_MAX_WORDS} words. Optional. Describe the opening, the house, or what to keep.`}
-                      >
-                        <Textarea
-                          id="preview-note"
-                          name="note"
-                          value={note}
-                          maxLength={2000}
-                          onChange={(event) => setNote(event.target.value)}
-                          placeholder="For example: keep the brick piers, and make the door charcoal."
-                        />
-                      </Field>
-                      {noteWords > PREVIEW_NOTE_MAX_WORDS && (
-                        <p role="alert" className="text-sm text-bad">
-                          Keep the notes to {PREVIEW_NOTE_MAX_WORDS} words.
+                    {(displayBalance ?? 0) >= PREVIEW_CREDIT_COST ? (
+                      <form action={previewAction} className="mt-3 flex flex-col gap-3">
+                        <input type="hidden" name="spec" value={JSON.stringify(spec)} />
+                        <p className="text-sm text-graphite-soft">
+                          Upload a photo of your garage opening. We&apos;ll generate one indicative image using
+                          your choices above.
                         </p>
-                      )}
-                      {previewState.error && (
-                        <p role="alert" className="text-sm text-bad">
-                          {previewState.error}
-                        </p>
-                      )}
-                      <Button type="submit" variant="secondary" disabled={previewPending || noteWords > PREVIEW_NOTE_MAX_WORDS}>
-                        {previewPending ? 'Generating…' : 'Generate preview'}
-                      </Button>
-                    </form>
-                  ) : (
-                    <div className="mt-3 flex flex-col gap-3">
-                      {previewState.error && (
-                        <p role="alert" className="text-sm text-bad">
-                          {previewState.error}
-                        </p>
-                      )}
-                      <p className="text-sm text-graphite-soft">Buy credits to generate a preview.</p>
-                      {creditsCheckoutReady && creditPacks.length > 0 ? (
-                        <ul className="flex flex-col gap-2">
-                          {creditPacks.map((pack) => (
-                            <li key={pack.code}>
-                              <form action={startCreditPackCheckoutAction}>
-                                <input type="hidden" name="packCode" value={pack.code} />
-                                <Button type="submit" variant="secondary" className="w-full justify-between">
-                                  <span>{pack.name}</span>
-                                  <span>{formatMoney(pack.priceCents, pack.currency)}</span>
-                                </Button>
-                              </form>
-                            </li>
-                          ))}
-                        </ul>
-                      ) : (
-                        <NotConnected
-                          feature="Buying credits"
-                          reason="Stripe is not connected yet. Set STRIPE_SECRET_KEY and STRIPE_WEBHOOK_SECRET to buy preview credits."
-                        />
-                      )}
-                    </div>
-                  )}
-                </>
-              )}
-            </>
-          ) : (
-            <div className="mt-3">
-              <NotConnected
-                feature="Photo preview"
-                reason="No image provider is connected. Set OPENAI_API_KEY to enable photo preview."
-              />
-            </div>
-          )}
-        </section>
+                        <Field label="Your photo" htmlFor="preview-photo">
+                          <Input
+                            id="preview-photo"
+                            name="photo"
+                            type="file"
+                            accept="image/jpeg,image/png,image/webp"
+                            required
+                          />
+                        </Field>
+                        <Field
+                          label="Notes for this preview"
+                          htmlFor="preview-note"
+                          hint={`${noteWords} / ${PREVIEW_NOTE_MAX_WORDS} words. Optional. Describe the opening, the house, or what to keep.`}
+                        >
+                          <Textarea
+                            id="preview-note"
+                            name="note"
+                            value={note}
+                            maxLength={2000}
+                            onChange={(event) => setNote(event.target.value)}
+                            placeholder="For example: keep the brick piers, and make the door charcoal."
+                          />
+                        </Field>
+                        {noteWords > PREVIEW_NOTE_MAX_WORDS && (
+                          <p role="alert" className="text-sm text-bad">
+                            Keep the notes to {PREVIEW_NOTE_MAX_WORDS} words.
+                          </p>
+                        )}
+                        {previewState.error && (
+                          <p role="alert" className="text-sm text-bad">
+                            {previewState.error}
+                          </p>
+                        )}
+                        <Button
+                          type="submit"
+                          variant="secondary"
+                          disabled={previewPending || noteWords > PREVIEW_NOTE_MAX_WORDS}
+                        >
+                          {previewPending ? 'Generating…' : 'Generate preview'}
+                        </Button>
+                      </form>
+                    ) : (
+                      <div className="mt-3 flex flex-col gap-3">
+                        {previewState.error && (
+                          <p role="alert" className="text-sm text-bad">
+                            {previewState.error}
+                          </p>
+                        )}
+                        <p className="text-sm text-graphite-soft">Buy credits to generate a preview.</p>
+                        {creditsCheckoutReady && creditPacks.length > 0 ? (
+                          <ul className="flex flex-col gap-2">
+                            {creditPacks.map((pack) => (
+                              <li key={pack.code}>
+                                <form action={startCreditPackCheckoutAction}>
+                                  <input type="hidden" name="packCode" value={pack.code} />
+                                  <Button type="submit" variant="secondary" className="w-full justify-between">
+                                    <span>{pack.name}</span>
+                                    <span>{formatMoney(pack.priceCents, pack.currency)}</span>
+                                  </Button>
+                                </form>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <NotConnected
+                            feature="Buying credits"
+                            reason="Stripe is not connected yet. Set STRIPE_SECRET_KEY and STRIPE_WEBHOOK_SECRET to buy preview credits."
+                          />
+                        )}
+                      </div>
+                    )}
+                  </>
+                )}
+              </>
+            ) : (
+              <div className="mt-3">
+                <NotConnected
+                  feature="Photo preview"
+                  reason="No image provider is connected. Set OPENAI_API_KEY to enable photo preview."
+                />
+              </div>
+            )}
+          </section>
+        )}
       </div>
 
       {/* ------------------------------------------------------------ */}
-      <div className="min-w-0 flex-1">
-        <fieldset className="mb-8">
-          <legend className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-deep">
-            Door type
-          </legend>
-          <div className="grid gap-2 sm:grid-cols-3">
-            {PRODUCT_TYPES.map((type) => (
-              <label
-                key={type.id}
-                className={cn(
-                  'cursor-pointer rounded-md border p-3 transition-colors',
-                  spec.productType === type.id
-                    ? 'border-signal bg-signal-tint'
-                    : 'border-line bg-paper hover:border-zinc'
-                )}
-              >
-                <input
-                  type="radio"
-                  name="productType"
-                  value={type.id}
-                  checked={spec.productType === type.id}
-                  onChange={() => set('productType', type.id as ProductType)}
-                  className="sr-only"
-                />
-                <span className="block text-sm font-medium text-graphite">{type.label}</span>
-                {type.description && (
-                  <span className="mt-1 block text-micro text-zinc-deep">{type.description}</span>
-                )}
-              </label>
-            ))}
-          </div>
-        </fieldset>
-
-        <fieldset className="mb-8">
-          <legend className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-deep">
-            Opening size
-          </legend>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Field label="Width (mm)" htmlFor="widthMm">
-              <Input
-                id="widthMm"
-                type="number"
-                inputMode="numeric"
-                min={SIZE_LIMITS.widthMm.min}
-                max={SIZE_LIMITS.widthMm.max}
-                step={SIZE_LIMITS.widthMm.step}
-                value={spec.widthMm}
-                onChange={(event) => set('widthMm', Number(event.target.value))}
-              />
-            </Field>
-            <Field label="Height (mm)" htmlFor="heightMm">
-              <Input
-                id="heightMm"
-                type="number"
-                inputMode="numeric"
-                min={SIZE_LIMITS.heightMm.min}
-                max={SIZE_LIMITS.heightMm.max}
-                step={SIZE_LIMITS.heightMm.step}
-                value={spec.heightMm}
-                onChange={(event) => set('heightMm', Number(event.target.value))}
-              />
-            </Field>
-          </div>
-        </fieldset>
-
-        {groups.map((group) => (
-          <fieldset key={group.id} className="mb-8">
-            <legend className="mb-1 text-sm font-semibold uppercase tracking-wide text-zinc-deep">
-              {group.label}
-            </legend>
-            {group.help && <p className="mb-3 text-micro text-zinc-deep">{group.help}</p>}
-
-            <div
+      <div className="flex min-w-0 flex-1 flex-col gap-6">
+        <div className="grid grid-cols-2 gap-1 rounded-lg border border-line bg-rail p-1 sm:grid-cols-4">
+          {PRODUCT_FAMILIES.map((candidate) => (
+            <button
+              key={candidate.id}
+              type="button"
+              aria-pressed={family === candidate.id}
+              onClick={() => family !== candidate.id && setType(candidate.types[0])}
               className={cn(
-                'grid gap-2',
-                group.id === 'colour' ? 'grid-cols-4 sm:grid-cols-8' : 'sm:grid-cols-2'
+                'rounded-md px-3 py-2.5 text-sm font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-signal',
+                family === candidate.id
+                  ? 'bg-signal text-paper shadow-panel'
+                  : 'text-graphite-soft hover:bg-paper hover:text-graphite'
               )}
             >
-              {group.values.map((value) => {
-                const selected = spec[group.id as keyof DoorSpec] === value.id
-                if (group.id === 'colour' || group.id === 'hardware') {
-                  return (
-                    <label key={value.id} className="flex cursor-pointer flex-col items-center gap-1">
-                      <input
-                        type="radio"
-                        name={group.id}
-                        value={value.id}
-                        checked={selected}
-                        onChange={() => set(group.id as keyof DoorSpec, value.id as never)}
-                        className="peer sr-only"
-                      />
-                      <span
-                        aria-hidden="true"
-                        style={{ backgroundColor: value.hex }}
-                        className={cn(
-                          'h-10 w-full rounded border transition-[box-shadow,border-color]',
-                          selected ? 'border-graphite ring-2 ring-signal ring-offset-1' : 'border-line',
-                          'peer-focus-visible:ring-2 peer-focus-visible:ring-signal peer-focus-visible:ring-offset-1'
-                        )}
-                      />
-                      <span className="text-center text-micro text-zinc-deep">{value.label}</span>
-                    </label>
-                  )
-                }
+              {candidate.label}
+            </button>
+          ))}
+        </div>
 
-                return (
-                  <label
-                    key={value.id}
-                    className={cn(
-                      'cursor-pointer rounded-md border p-3 transition-colors',
-                      selected ? 'border-signal bg-signal-tint' : 'border-line bg-paper hover:border-zinc'
-                    )}
-                  >
-                    <input
-                      type="radio"
-                      name={group.id}
-                      value={value.id}
-                      checked={selected}
-                      onChange={() => set(group.id as keyof DoorSpec, value.id as never)}
-                      className="sr-only"
-                    />
-                    <span className="block text-sm font-medium text-graphite">{value.label}</span>
-                    {value.description && (
-                      <span className="mt-1 block text-micro text-zinc-deep">{value.description}</span>
-                    )}
-                  </label>
-                )
-              })}
-            </div>
-          </fieldset>
-        ))}
+        {familyTypes.length > 1 && (
+          <ChoiceRow
+            label="Type"
+            name="productType"
+            value={spec.productType}
+            options={familyTypes}
+            onChange={(id) => setType(id as ProductType)}
+          />
+        )}
+
+        <fieldset>
+          <legend className="mb-2 text-sm font-medium text-graphite">{words.size}</legend>
+          <div className="flex items-end gap-2">
+            <label className="min-w-0 flex-1">
+              <span className="mb-1 block text-micro text-zinc-deep">{words.width}</span>
+              <Input
+                type="number"
+                inputMode="numeric"
+                min={limits.widthMm.min}
+                max={limits.widthMm.max}
+                step={limits.widthMm.step}
+                value={spec.widthMm || ''}
+                onChange={(event) => set('widthMm', Number(event.target.value))}
+              />
+            </label>
+            <span className="pb-3 text-zinc-deep" aria-hidden="true">
+              ×
+            </span>
+            <label className="min-w-0 flex-1">
+              <span className="mb-1 block text-micro text-zinc-deep">{words.height}</span>
+              <Input
+                type="number"
+                inputMode="numeric"
+                min={limits.heightMm.min}
+                max={limits.heightMm.max}
+                step={limits.heightMm.step}
+                value={spec.heightMm || ''}
+                onChange={(event) => set('heightMm', Number(event.target.value))}
+              />
+            </label>
+          </div>
+        </fieldset>
+
+        {groups.map((group) =>
+          group.id === 'colour' || group.id === 'hardware' ? (
+            <SwatchRow
+              key={group.id}
+              label={group.label}
+              name={group.id}
+              value={String(spec[group.id as keyof DoorSpec])}
+              options={group.values}
+              onChange={(id) => set(group.id as keyof DoorSpec, id as never)}
+            />
+          ) : (
+            <ChoiceRow
+              key={group.id}
+              label={group.label}
+              name={group.id}
+              value={String(spec[group.id as keyof DoorSpec])}
+              options={group.values}
+              onChange={(id) => set(group.id as keyof DoorSpec, id as never)}
+            />
+          )
+        )}
+
+        <MotorShortlist spec={effective} motors={motors} />
 
         {/* ---------------------------------------------------------- */}
-        <section className="border-t border-line pt-8">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-deep">Your specification</h2>
-          <dl className="mt-3 grid gap-x-8 gap-y-1.5 sm:grid-cols-2">
-            {summary.map((row) => (
-              <div
-                key={row.label}
-                className="flex items-baseline justify-between gap-4 border-b border-line pb-1.5"
-              >
-                <dt className="text-sm text-zinc-deep">{row.label}</dt>
-                <dd className="text-right text-sm text-graphite">{row.value}</dd>
-              </div>
-            ))}
-          </dl>
-
-          <form action={formAction} className="mt-6 flex flex-col gap-4">
-            <input type="hidden" name="spec" value={JSON.stringify(spec)} />
-
-            {signedIn ? (
+        <form action={formAction} className="flex flex-col gap-3 border-t border-line pt-6">
+          <input type="hidden" name="spec" value={JSON.stringify(effective)} />
+          {signedIn && (
+            <div className="flex gap-2">
+              <Input
+                key={family}
+                aria-label="Name this design"
+                name="name"
+                maxLength={120}
+                required
+                defaultValue={words.saveAs}
+                className="min-w-0 flex-1"
+              />
+              <Button type="submit" variant="secondary" disabled={isPending}>
+                {isPending ? 'Saving…' : 'Save'}
+              </Button>
+            </div>
+          )}
+          {state.error && (
+            <p role="alert" className="text-sm text-bad">
+              {state.error}
+            </p>
+          )}
+          {state.savedId && (
+            <p className="text-sm text-good">
+              Saved.{' '}
+              <Link href="/saved" className="font-medium text-signal hover:text-signal-hover">
+                See saved designs
+              </Link>
+            </p>
+          )}
+          {/* Instant quotes from companies' own prices; posting the job stays as the fallback. */}
+          <Link
+            href={`/quote?spec=${encodeURIComponent(JSON.stringify(effective))}`}
+            className="inline-flex h-12 items-center justify-center rounded-md bg-signal px-5 text-sm font-semibold text-paper transition-colors hover:bg-signal-hover"
+          >
+            Get instant quotes
+          </Link>
+          <p className="text-center text-sm text-zinc-deep">
+            or{' '}
+            <Link
+              href={`/request-technician?spec=${encodeURIComponent(JSON.stringify(effective))}`}
+              className="font-medium text-signal hover:text-signal-hover"
+            >
+              post it as a job
+            </Link>
+            {!signedIn && (
               <>
-                <Field label="Name this configuration" htmlFor="name" hint="So you can find it again.">
-                  <Input id="name" name="name" maxLength={120} required defaultValue="My garage door" />
-                </Field>
-
-                {state.error && (
-                  <p role="alert" className="text-sm text-bad">
-                    {state.error}
-                  </p>
-                )}
-                {state.savedId && (
-                  <p className="text-sm text-good">
-                    Saved.{' '}
-                    <Link href="/saved" className="font-medium text-signal hover:text-signal-hover">
-                      See your saved configurations
-                    </Link>
-                  </p>
-                )}
-
-                <div className="flex flex-wrap gap-3">
-                  <Button type="submit" disabled={isPending}>
-                    {isPending ? 'Saving…' : 'Save this configuration'}
-                  </Button>
-                  <Link
-                    href={`/request-technician?spec=${encodeURIComponent(JSON.stringify(spec))}`}
-                    className="inline-flex h-11 items-center rounded border border-line bg-paper px-4 text-sm font-medium text-graphite transition-colors hover:bg-rail"
-                  >
-                    Get quotes on this
-                  </Link>
-                </div>
-              </>
-            ) : (
-              <div className="flex flex-wrap items-center gap-3">
+                {' · '}
                 <Link
-                  href={`/request-technician?spec=${encodeURIComponent(JSON.stringify(spec))}`}
-                  className="inline-flex h-11 items-center rounded bg-signal px-5 text-sm font-medium text-paper transition-colors hover:bg-signal-hover"
+                  href={`/sign-in?next=${encodeURIComponent(`/configure?spec=${encodeURIComponent(JSON.stringify(effective))}`)}`}
+                  className="font-medium text-signal hover:text-signal-hover"
                 >
-                  Get quotes on this
-                </Link>
-                <p className="text-sm text-zinc-deep">
-                  <Link href="/sign-in" className="font-medium text-signal hover:text-signal-hover">
-                    Sign in
-                  </Link>{' '}
-                  to save it.
-                </p>
-              </div>
+                  sign in
+                </Link>{' '}
+                to save it
+              </>
             )}
-          </form>
-        </section>
+          </p>
+        </form>
       </div>
     </div>
+  )
+}
+
+type Choice = { id: string; label: string; hex?: string; description?: string }
+
+/** One question, its answers as chips. The longer description is a tooltip, not a paragraph. */
+function ChoiceRow({
+  label,
+  name,
+  value,
+  options,
+  onChange,
+}: {
+  label: string
+  name: string
+  value: string
+  options: Choice[]
+  onChange: (id: string) => void
+}) {
+  return (
+    <fieldset>
+      <legend className="mb-2 text-sm font-medium text-graphite">{label}</legend>
+      <div className="flex flex-wrap gap-2">
+        {options.map((option) => {
+          const selected = option.id === value
+          return (
+            <label
+              key={option.id}
+              title={option.description}
+              className={cn(
+                'cursor-pointer rounded-full border px-3.5 py-1.5 text-sm transition-colors has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-signal',
+                selected
+                  ? 'border-signal bg-signal text-paper'
+                  : 'border-line bg-paper text-graphite hover:border-zinc'
+              )}
+            >
+              <input
+                type="radio"
+                name={name}
+                value={option.id}
+                checked={selected}
+                onChange={() => onChange(option.id)}
+                className="sr-only"
+              />
+              {option.label}
+            </label>
+          )
+        })}
+      </div>
+    </fieldset>
+  )
+}
+
+/** Colours as round swatches; the chosen name sits beside the heading. */
+function SwatchRow({
+  label,
+  name,
+  value,
+  options,
+  onChange,
+}: {
+  label: string
+  name: string
+  value: string
+  options: Choice[]
+  onChange: (id: string) => void
+}) {
+  const current = options.find((option) => option.id === value)
+  return (
+    <fieldset>
+      <legend className="mb-2 text-sm font-medium text-graphite">
+        {label}
+        {current && <span className="ml-2 font-normal text-zinc-deep">{current.label}</span>}
+      </legend>
+      <div className="flex flex-wrap gap-2.5">
+        {options.map((option) => {
+          const selected = option.id === value
+          return (
+            <label key={option.id} title={option.label} className="cursor-pointer">
+              <input
+                type="radio"
+                name={name}
+                value={option.id}
+                checked={selected}
+                onChange={() => onChange(option.id)}
+                className="peer sr-only"
+              />
+              <span className="sr-only">{option.label}</span>
+              <span
+                aria-hidden="true"
+                style={{ backgroundColor: option.hex }}
+                className={cn(
+                  'block h-9 w-9 rounded-full border border-black/10 shadow-inner transition-shadow',
+                  selected
+                    ? 'ring-2 ring-signal ring-offset-2'
+                    : 'hover:ring-2 hover:ring-line hover:ring-offset-1',
+                  'peer-focus-visible:ring-2 peer-focus-visible:ring-signal peer-focus-visible:ring-offset-2'
+                )}
+              />
+            </label>
+          )
+        })}
+      </div>
+    </fieldset>
   )
 }

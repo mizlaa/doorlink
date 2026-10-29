@@ -9,7 +9,7 @@
     {
       "modelCode": "eDrive",
       "name": "Grifco eDrive",
-      "category": "industrial-high-speed-doors",
+      "category": "garage-door-openers",
       "region": "AU",
       "aliases": [],
       "documents": [
@@ -23,6 +23,83 @@
           "rights": "LINK_ONLY",
           "language": "en",
           "evidence": "Recorded from a web search result naming this URL as \"Grifco eDrive Commercial Door Opener Installation and Users Manual\" (host: affordabledoorsandgates.com). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        }
+      ]
+    },
+    {
+      "modelCode": "LG-Drive",
+      "name": "Grifco LG-Drive",
+      "category": "gate-motors",
+      "region": "AU",
+      "aliases": [],
+      "summary": "Sliding gate opener (GGS1000 / GLD-GO) for gates up to 1000 kg.",
+      "specs": [
+        {
+          "label": "Operator",
+          "value": "Sliding gate"
+        },
+        {
+          "label": "Max gate weight",
+          "value": "1000",
+          "unit": "kg"
+        },
+        {
+          "label": "Max gate length",
+          "value": "12",
+          "unit": "m"
+        },
+        {
+          "label": "Supply",
+          "value": "240 V AC mains, 24 V DC motor"
+        },
+        {
+          "label": "Thrust",
+          "value": "800",
+          "unit": "N"
+        },
+        {
+          "label": "Torque",
+          "value": "22.5",
+          "unit": "Nm"
+        },
+        {
+          "label": "Speed",
+          "value": "310",
+          "unit": "mm/s"
+        },
+        {
+          "label": "Protection",
+          "value": "IP44"
+        }
+      ],
+      "specSource": {
+        "url": "https://grifco.com.au/lg-drive/",
+        "note": "Manufacturer product page."
+      },
+      "documents": [
+        {
+          "kind": "TECHNICAL_DOCUMENT",
+          "title": "Grifco 1000 Sliding Gate Opener Manual",
+          "sourceUrl": "https://www.gatesplus.com.au/pdf/Grifco1000.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "gatesplus.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Grifco 1000 Sliding Gate Opener Manual\" (host: www.gatesplus.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
+          "altSources": []
+        },
+        {
+          "kind": "INSTALL_MANUAL",
+          "title": "Grifco LG-Drive Sliding Gate Opener Installation Manual",
+          "sourceUrl": "https://wholesalegaragedoors.com.au/wp-content/uploads/2022/06/Grifco-LG-Drive-Sliding-Gate-Opener-Installation-Manual.pdf",
+          "origin": "THIRD_PARTY_GUIDE",
+          "publisher": "wholesalegaragedoors.com.au",
+          "region": "AU",
+          "rights": "LINK_ONLY",
+          "language": "en",
+          "evidence": "Recorded from a web search result naming this URL as \"Grifco LG-Drive Sliding Gate Opener Installation Manual\" (host: wholesalegaragedoors.com.au). Neither the document nor the page has been opened, so its presence at this URL, its edition and its contents are all unconfirmed. Treat as a lead, not a citation, until manuals:verify has run against it. Not fetched - egress blocked.",
           "altSources": []
         }
       ]

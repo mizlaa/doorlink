@@ -3,12 +3,17 @@ import Link from 'next/link'
 import { SignInForm } from '@/components/auth/SignInForm'
 import { NotConnected } from '@/components/ui/NotConnected'
 import { isConnected } from '@/lib/integrations'
+import { safeNextPath } from '@/lib/safe-next'
 
 export const metadata: Metadata = {
   title: 'Sign in',
 }
 
-export default function SignInPage() {
+export default async function SignInPage({ searchParams }: { searchParams: Promise<{ next?: string }> }) {
+  // Back to where the person was — a quote they were about to request,
+  // say — but only ever to a page on this site.
+  const { next: rawNext } = await searchParams
+  const next = safeNextPath(rawNext, '')
   const supabaseAuth = isConnected('auth')
   const devModeAvailable = !supabaseAuth && process.env.NODE_ENV !== 'production'
 
@@ -23,9 +28,9 @@ export default function SignInPage() {
 
       <div className="mt-8">
         {supabaseAuth ? (
-          <SignInForm mode="supabase" />
+          <SignInForm mode="supabase" next={next || undefined} />
         ) : devModeAvailable ? (
-          <SignInForm mode="dev" />
+          <SignInForm mode="dev" next={next || undefined} />
         ) : (
           <NotConnected feature="Sign-in" reason="No authentication provider is connected in production yet." />
         )}
