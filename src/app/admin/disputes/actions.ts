@@ -7,6 +7,8 @@ import { prisma } from '@/lib/prisma'
 import { getSession } from '@/lib/auth'
 import { requirePermission, RbacError } from '@/lib/rbac'
 import { isDatabaseUnreachable, isRecordNotFound } from '@/lib/db-errors'
+import { connectConfigured } from '@/lib/payments/connect'
+import { refundJob } from '@/lib/payments/job-payments'
 import { notify } from '@/lib/notifications'
 
 export type DisputeActionState = { error?: string; ok?: boolean }
@@ -58,6 +60,7 @@ export async function decideDisputeAction(
       },
     })
     if (!dispute) return { error: 'That dispute no longer exists.' }
+    const refund = formData.get('refund') === 'on' && parsed.data.jobOutcome === 'CANCELLED'
 
     await prisma.$transaction(async (tx) => {
       await tx.dispute.update({
@@ -124,6 +127,11 @@ export async function decideDisputeAction(
         )
       }
     })
+    // Refunds go back through Stripe on the business's account; the ledger
+    // updates when Stripe confirms them.
+    if (refund && connectConfigured()) {
+      await refundJob(dispute.job.id, `Dispute resolved: ${parsed.data.resolution ?? ''}`.trim())
+    }
   } catch (error) {
     if (isRecordNotFound(error)) return { error: 'That dispute no longer exists.' }
     if (isDatabaseUnreachable(error)) return { error: 'The database is not reachable right now.' }

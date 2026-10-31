@@ -2,9 +2,7 @@ import type { Metadata } from 'next'
 import { getSession } from '@/lib/auth'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { parseSpec } from '@/lib/configurator/options'
-import { doorPreviewAvailable } from '@/lib/configurator/preview'
-import { ensureWelcomeCredits, getCreditBalance, listCreditPacksForPurchase } from '@/lib/credits/credits'
-import { subscriptionCheckoutAvailable } from '@/lib/payments'
+import { aiImagesAvailable } from '@/lib/ai/design-image'
 import { loadMotorCandidates } from '@/lib/motors/catalogue'
 import { Configurator } from './Configurator'
 
@@ -15,7 +13,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/configure' },
 }
 
-type PageProps = { searchParams: Promise<{ spec?: string; credits?: string }> }
+type PageProps = { searchParams: Promise<{ spec?: string }> }
 
 export default async function ConfigurePage({ searchParams }: PageProps) {
   const params = await searchParams
@@ -34,29 +32,7 @@ export default async function ConfigurePage({ searchParams }: PageProps) {
     }
   }
 
-  const previewAvailable = doorPreviewAvailable()
-  const creditsCheckoutReady = subscriptionCheckoutAvailable()
-
-  if (session && previewAvailable) {
-    try {
-      await ensureWelcomeCredits(session.userId)
-    } catch (error) {
-      if (!isDatabaseUnreachable(error)) throw error
-    }
-  }
-
-  let creditBalance: number | null = null
-  let creditPacks: Awaited<ReturnType<typeof listCreditPacksForPurchase>> = []
-  if (session && previewAvailable) {
-    try {
-      creditBalance = await getCreditBalance(session.userId)
-      if (creditsCheckoutReady) {
-        creditPacks = await listCreditPacksForPurchase()
-      }
-    } catch (error) {
-      if (!isDatabaseUnreachable(error)) throw error
-    }
-  }
+  const previewAvailable = aiImagesAvailable()
 
   const motors = await loadMotorCandidates()
 
@@ -72,16 +48,6 @@ export default async function ConfigurePage({ searchParams }: PageProps) {
         motors={motors}
         initialSpec={initialSpec}
         previewAvailable={previewAvailable}
-        creditBalance={creditBalance}
-        creditPacks={creditPacks}
-        creditsCheckoutReady={creditsCheckoutReady}
-        creditsCheckoutNotice={
-          params.credits === 'success'
-            ? 'Payment submitted. Your balance updates once Stripe confirms the purchase.'
-            : params.credits === 'cancel'
-              ? 'Checkout was cancelled. You were not charged.'
-              : null
-        }
       />
     </div>
   )

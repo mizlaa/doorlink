@@ -86,8 +86,12 @@ export function toRuleTerms(rule: PricingRule): RuleTerms {
     product: rule.product,
     productStyle: rule.productStyle,
     productBrand: rule.productBrand,
+    productModel: rule.productModel,
+    material: rule.material,
+    priceType: rule.priceType,
     motorIncluded: rule.motorIncluded,
     motorBrand: rule.motorBrand,
+    motorAddOnCents: rule.motorAddOnCents,
     installation: rule.installation,
     installPriceCents: rule.installPriceCents,
     minWidthMm: rule.minWidthMm,
@@ -132,13 +136,18 @@ export interface BusinessCard {
   ratingCount: number
   jobsCompleted: number
   baseSuburb: string | null
+  logoUrl: string | null
+  /** Licence and insurance checked by a Doorlink admin (technician verification). */
+  verified: boolean
+  warranty: string | null
+  leadTimeDays: number | null
 }
 
 export async function businessCard(key: BusinessKey): Promise<BusinessCard | null> {
   const userIds = await businessUserIds(key)
   if (userIds.length === 0) return null
 
-  const [organization, users, reviews] = await Promise.all([
+  const [organization, users, reviews, profileRow] = await Promise.all([
     key.kind === 'organization'
       ? prisma.organization.findUnique({ where: { id: key.id }, select: { name: true } })
       : Promise.resolve(null),
@@ -147,14 +156,19 @@ export async function businessCard(key: BusinessKey): Promise<BusinessCard | nul
       select: {
         id: true,
         name: true,
-        technicianProfile: { select: { businessName: true, jobsCompleted: true, baseSuburb: true } },
+        technicianProfile: { select: { businessName: true, jobsCompleted: true, baseSuburb: true, verified: true } },
         memberships: { select: { organizationId: true, role: true } },
       },
     }),
     prisma.workerReview.aggregate({
-      where: { workerId: { in: userIds } },
+      // Only published reviews count; a review hidden by moderation does not.
+      where: { workerId: { in: userIds }, status: 'PUBLISHED' },
       _avg: { rating: true },
       _count: { _all: true },
+    }),
+    prisma.businessProfile.findUnique({
+      where: { businessKey: encodeBusinessKey(key) },
+      select: { logoKey: true, warranty: true, leadTimeDays: true },
     }),
   ])
 
@@ -177,11 +191,15 @@ export async function businessCard(key: BusinessKey): Promise<BusinessCard | nul
   return {
     key: encodeBusinessKey(key),
     name,
-    profileHref: profile && owner ? `/technicians/${owner.id}` : null,
+    profileHref: `/businesses/${encodeBusinessKey(key)}`,
     ratingAvg: reviews._count._all > 0 ? reviews._avg.rating : null,
     ratingCount: reviews._count._all,
     jobsCompleted: users.reduce((sum, u) => sum + (u.technicianProfile?.jobsCompleted ?? 0), 0),
     baseSuburb: profile?.baseSuburb ?? null,
+    logoUrl: profileRow?.logoKey ? `/api/media/${profileRow.logoKey}` : null,
+    verified: !!profile?.verified,
+    warranty: profileRow?.warranty ?? null,
+    leadTimeDays: profileRow?.leadTimeDays ?? null,
   }
 }
 

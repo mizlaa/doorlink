@@ -20,3 +20,7 @@ data/manuals/harvested/
 # images and similar artefacts are derived from source already in the
 # repo, and 64 of them had grown to dominate the checkout.
 .agents/outputs/
+
+# Local development image uploads (never used in production)
+.uploads/
+.sim/

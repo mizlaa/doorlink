@@ -147,6 +147,12 @@ enum JobStatus {
   ACCEPTED
   AWAITING_PAYMENT
   DISPUTED
+  // Booked from a quote: the business has said no.
+  DECLINED
+  // The agreed payment (deposit or full) has been confirmed by Stripe.
+  PAYMENT_CONFIRMED
+  // The business says the work is done; the customer confirms it.
+  BUSINESS_COMPLETED
 }
 
 enum UrgencyLevel {
@@ -220,6 +226,7 @@ enum ReportStatus {
 }
 
 enum ReportTargetType {
+  WORKER_REVIEW
   USER
   LEAD
   JOB
@@ -244,6 +251,9 @@ enum SupportPriority {
 
 enum NotificationType {
   ORDER_UPDATE
+  BOOKING_UPDATE
+  REVIEW_REQUEST
+  DESIGN_READY
   LEAD_ASSIGNED
   DOCUMENT_UPDATED
   SUPPORT_REPLY
@@ -396,9 +406,13 @@ model User {
   creditBalance          CreditBalance?
   creditLedger           CreditLedger[]
 
-  pricingRules    PricingRule[]    @relation("PricingRuleOwner")
-  quotesRequested AutomatedQuote[] @relation("AutomatedQuoteCustomer")
-  quotesIssued    AutomatedQuote[] @relation("AutomatedQuoteBusinessUser")
+  pricingRules    PricingRule[]     @relation("PricingRuleOwner")
+  quotesRequested AutomatedQuote[]  @relation("AutomatedQuoteCustomer")
+  quotesIssued    AutomatedQuote[]  @relation("AutomatedQuoteBusinessUser")
+  businessProfile BusinessProfile?  @relation("BusinessProfileUser")
+  comparisons     QuoteComparison[]
+  aiGenerations   AiGeneration[]
+  jobUpdates      JobUpdate[]
 }
 
 model Organization {
@@ -432,8 +446,9 @@ model Organization {
   inspections         Inspection[]
   correctiveActions   CorrectiveAction[]
 
-  pricingRules PricingRule[]    @relation("PricingRuleOrganization")
-  quotesIssued AutomatedQuote[] @relation("AutomatedQuoteBusinessOrganization")
+  pricingRules    PricingRule[]    @relation("PricingRuleOrganization")
+  quotesIssued    AutomatedQuote[] @relation("AutomatedQuoteBusinessOrganization")
+  businessProfile BusinessProfile?
 }
 
 model OrganizationMember {
@@ -1077,6 +1092,22 @@ model Job {
   // Set when the job was booked from an automated quote.
   automatedQuote AutomatedQuote?
 
+  // Booking terms. A fixed price stands; an estimate is confirmed by the
+  // business (after a site inspection if needed) before the customer pays.
+  priceType           QuotePriceType?
+  // Ex-GST part of the agreed price, the basis Doorlink's fee is worked on.
+  agreedExGstCents    Int?
+  depositPercent      Int?
+  businessNote        String?
+  businessConfirmedAt DateTime?
+  termsAcceptedAt     DateTime?
+  declinedReason      String?
+  // The business marked the work done; the customer confirms or disputes.
+  // If they do neither, it completes itself at autoCompleteAt.
+  businessCompletedAt DateTime?
+  autoCompleteAt      DateTime?
+  updates             JobUpdate[]
+
   statusEvents  JobStatusEvent[]
   transactions  Transaction[]
   workerReview  WorkerReview?
@@ -1279,21 +1310,47 @@ model MessageAttachment {
 // actually COMPLETED — a review for work that never happened is the
 // single easiest way to make a marketplace's ratings meaningless.
 model WorkerReview {
-  id              String    @id @default(cuid())
-  job             Job       @relation(fields: [jobId], references: [id], onDelete: Cascade)
-  jobId           String    @unique
-  author          User      @relation("ReviewAuthor", fields: [authorId], references: [id], onDelete: Cascade)
+  id              String       @id @default(cuid())
+  job             Job          @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  jobId           String       @unique
+  author          User         @relation("ReviewAuthor", fields: [authorId], references: [id], onDelete: Cascade)
   authorId        String
-  worker          User      @relation("ReviewSubject", fields: [workerId], references: [id], onDelete: Cascade)
+  worker          User         @relation("ReviewSubject", fields: [workerId], references: [id], onDelete: Cascade)
   workerId        String
   rating          Int
   body            String?
+  // Optional detail ratings, 1-5.
+  workmanship     Int?
+  communication   Int?
+  valueForMoney   Int?
+  punctuality     Int?
+  recommend       Boolean?
+  photoKeys       String[]     @default([])
+  status          ReviewStatus @default(PUBLISHED)
+  moderationNote  String?
+  editedAt        DateTime?
   workerReply     String?
   workerRepliedAt DateTime?
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  revisions WorkerReviewRevision[]
 
   @@index([workerId])
+}
+
+// The previous wording of a review each time its author edits it. Kept so
+// an edit can't quietly rewrite what a business replied to.
+model WorkerReviewRevision {
+  id        String       @id @default(cuid())
+  review    WorkerReview @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+  reviewId  String
+  rating    Int
+  body      String?
+  detail    Json?
+  createdAt DateTime     @default(now())
+
+  @@index([reviewId])
 }
 
 // ---------------------------------------------------------------------
@@ -1321,14 +1378,23 @@ model Transaction {
   refundedCents     Int    @default(0)
   currency          String @default("AUD")
 
-  status        TransactionStatus @default(PENDING)
-  provider      String?
-  providerRef   String?
+  status              TransactionStatus @default(PENDING)
+  kind                PaymentKind       @default(FULL)
+  // The Ex-GST amount the commission was worked on, when known.
+  commissionBaseCents Int?
+  // Stripe Connect: the business's account the charge was made on, the
+  // Checkout Session that took it, and Stripe's processing fee (paid by
+  // the business on a direct charge), recorded from the balance transaction.
+  stripeAccountId     String?
+  checkoutSessionId   String?           @unique
+  processingFeeCents  Int?
+  provider            String?
+  providerRef         String?
   // When the provider confirmed the money actually arrived. Null on
   // every transaction that has not been through a verified webhook,
   // which is the only thing that sets it.
-  paidAt        DateTime?
-  failureReason String?
+  paidAt              DateTime?
+  failureReason       String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -2619,6 +2685,39 @@ enum PricedProduct {
 enum AutomatedQuoteStatus {
   ISSUED
   BOOKED
+  // No automatic price matched; the business has been asked for one.
+  CUSTOM_REQUESTED
+  // The business declined the custom request or the booking.
+  DECLINED
+}
+
+// A fixed price, or an estimate the business confirms at a site inspection.
+enum QuotePriceType {
+  FIXED
+  ESTIMATE
+}
+
+enum BusinessStatus {
+  PENDING
+  APPROVED
+  SUSPENDED
+}
+
+enum PaymentKind {
+  FULL
+  DEPOSIT
+  BALANCE
+}
+
+enum ReviewStatus {
+  PUBLISHED
+  HIDDEN
+}
+
+enum AiGenerationStatus {
+  PENDING
+  SUCCEEDED
+  FAILED
 }
 
 // Whether the configured price already contains GST or has it added.
@@ -2646,12 +2745,18 @@ model PricingRule {
   owner          User?         @relation("PricingRuleOwner", fields: [ownerId], references: [id], onDelete: Cascade)
   ownerId        String?
 
-  product      PricedProduct
+  product         PricedProduct
   // Garage doors only: sectional / roller / tilt, or null for all styles.
-  productStyle String?
+  productStyle    String?
   // The product brand the business supplies (e.g. a garage door brand).
   // Null means the business has not named one.
-  productBrand String?
+  productBrand    String?
+  productModel    String?
+  // Gates and fences: aluminium / tubular-steel / solid-steel, or null for any.
+  material        String?
+  priceType       QuotePriceType @default(FIXED)
+  // When no motor is included: what adding one costs, if the business offers it.
+  motorAddOnCents Int?
 
   motorIncluded Boolean
   // Motor brand slug when a motor is included and the business names one.
@@ -2711,6 +2816,18 @@ model AutomatedQuote {
   requestedMotor  String?
   installRequired Boolean
 
+  comparison     QuoteComparison? @relation(fields: [comparisonId], references: [id], onDelete: SetNull)
+  comparisonId   String?
+  postcode       String?
+  accessories    String[]         @default([])
+  // The business's terms when the quote was issued.
+  warranty       String?
+  leadTimeDays   Int?
+  // A custom request: what the customer asked, and the business's reply.
+  customMessage  String?
+  respondedAt    DateTime?
+  declinedReason String?
+
   status           AutomatedQuoteStatus @default(ISSUED)
   // Booking: the option the customer accepted, the job it became, and
   // the site and contact details they gave the business.
@@ -2734,6 +2851,7 @@ model AutomatedQuote {
   @@index([customerId])
   @@index([businessOrganizationId])
   @@index([businessUserId])
+  @@index([comparisonId])
 }
 
 model AutomatedQuoteOption {
@@ -2743,20 +2861,168 @@ model AutomatedQuoteOption {
   rule    PricingRule?   @relation(fields: [ruleId], references: [id], onDelete: SetNull)
   ruleId  String?
 
-  productBrand       String?
-  motorIncluded      Boolean
-  motorBrand         String?
-  installation       InstallationTerms
-  gst                GstTreatment
+  productBrand        String?
+  motorIncluded       Boolean
+  motorBrand          String?
+  installation        InstallationTerms
+  gst                 GstTreatment
   // As configured, then broken down.
-  priceCents         Int
-  installPriceCents  Int?
-  subtotalExGstCents Int
-  gstCents           Int
-  totalIncGstCents   Int
-  currency           String            @default("AUD")
-  note               String?
-  sortOrder          Int               @default(0)
+  priceCents          Int
+  installPriceCents   Int?
+  subtotalExGstCents  Int
+  gstCents            Int
+  totalIncGstCents    Int
+  currency            String            @default("AUD")
+  note                String?
+  sortOrder           Int               @default(0)
+  priceType           QuotePriceType    @default(FIXED)
+  // Itemised, as configured: base, installation, motor, accessories, travel.
+  lines               Json?
+  // Accessories the customer asked for that this business has no price for.
+  unpricedAccessories String[]          @default([])
 
   @@index([quoteId])
+}
+
+// One "Compare free quotes" request: the design, where, and what the
+// customer wants, with a quote from every eligible business.
+model QuoteComparison {
+  id              String        @id @default(cuid())
+  reference       String        @unique
+  customer        User          @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  customerId      String
+  product         PricedProduct
+  spec            Json
+  widthMm         Int
+  heightMm        Int
+  postcode        String
+  suburb          String?
+  requestedBrand  String?
+  motorRequired   Boolean
+  requestedMotor  String?
+  installRequired Boolean
+  accessories     String[]      @default([])
+  // Eligible businesses that had no automatic price: [{ businessKey, name, reason }].
+  unavailable     Json?
+  createdAt       DateTime      @default(now())
+
+  quotes AutomatedQuote[]
+
+  @@index([customerId])
+}
+
+// A business on the marketplace, keyed the same way as its prices:
+// "o_<organisation id>" or "u_<user id>".
+model BusinessProfile {
+  id             String        @id @default(cuid())
+  businessKey    String        @unique
+  organization   Organization? @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  organizationId String?       @unique
+  user           User?         @relation("BusinessProfileUser", fields: [userId], references: [id], onDelete: Cascade)
+  userId         String?       @unique
+
+  // Only APPROVED businesses are quoted to customers or take bookings.
+  status          BusinessStatus @default(PENDING)
+  statusNote      String?
+  statusChangedAt DateTime?
+
+  logoKey        String?
+  description    String?
+  // Product categories the business supplies, for search and its profile.
+  products       PricedProduct[] @default([])
+  warranty       String?
+  // Typical days from booking to installation.
+  leadTimeDays   Int?
+  // Share of the agreed price taken when the customer accepts (100 = full).
+  depositPercent Int             @default(100)
+
+  stripeAccountId        String?   @unique
+  stripeChargesEnabled   Boolean   @default(false)
+  stripePayoutsEnabled   Boolean   @default(false)
+  stripeDetailsSubmitted Boolean   @default(false)
+  stripeUpdatedAt        DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  serviceAreas BusinessServiceArea[]
+  accessories  BusinessAccessory[]
+  portfolio    BusinessPortfolioItem[]
+
+  @@index([status])
+}
+
+// Postcodes a business serves, as inclusive ranges, with any travel fee.
+model BusinessServiceArea {
+  id             String          @id @default(cuid())
+  profile        BusinessProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  profileId      String
+  fromPostcode   String
+  toPostcode     String
+  travelFeeCents Int             @default(0)
+
+  @@index([profileId])
+}
+
+// What a business charges for an optional accessory.
+model BusinessAccessory {
+  id         String          @id @default(cuid())
+  profile    BusinessProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  profileId  String
+  accessory  String
+  priceCents Int
+  gst        GstTreatment
+
+  @@unique([profileId, accessory])
+}
+
+model BusinessPortfolioItem {
+  id        String          @id @default(cuid())
+  profile   BusinessProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  profileId String
+  imageKey  String
+  caption   String?
+  createdAt DateTime        @default(now())
+
+  @@index([profileId])
+}
+
+// Progress a business posts on a job: a note and optional photos.
+model JobUpdate {
+  id        String   @id @default(cuid())
+  job       Job      @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  jobId     String
+  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  authorId  String
+  note      String?
+  photoKeys String[] @default([])
+  createdAt DateTime @default(now())
+
+  @@index([jobId])
+}
+
+// Every AI design generation, paid for by Doorlink. A cache hit is
+// recorded too (cached = true, no cost) so usage is complete.
+model AiGeneration {
+  id          String             @id @default(cuid())
+  user        User?              @relation(fields: [userId], references: [id], onDelete: SetNull)
+  userId      String?
+  cacheKey    String
+  status      AiGenerationStatus @default(PENDING)
+  cached      Boolean            @default(false)
+  provider    String
+  model       String
+  productType String
+  hasPhoto    Boolean
+  imageKey    String?
+  // What it cost Doorlink, from the configured per-image cost when made.
+  costCents   Int?
+  usage       Json?
+  error       String?
+  durationMs  Int?
+  createdAt   DateTime           @default(now())
+
+  @@index([cacheKey, status])
+  @@index([userId, createdAt])
+  @@index([createdAt])
 }

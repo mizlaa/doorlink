@@ -6,8 +6,8 @@ import {
   applyPaymentFailed,
   applyPaymentSucceeded,
   applyPayoutStatus,
-  applyRefund,
 } from '@/lib/payments/ledger'
+import { applyRefundTotal } from '@/lib/payments/job-payments'
 import {
   handleCheckoutSessionCompleted,
   handleSubscriptionLifecycle,
@@ -105,7 +105,8 @@ async function handleVerifiedEvent(type: string, payload: unknown): Promise<void
       const intentId = asString(data.payment_intent)
       const refunded = asNumber(data.amount_refunded)
       if (!intentId || refunded === null) return
-      await applyRefund(intentId, refunded, 'Refunded by the provider.')
+      // amount_refunded is the charge's running total, so set it, never add it.
+      await applyRefundTotal(intentId, refunded)
       return
     }
 
