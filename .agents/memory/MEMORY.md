@@ -8,3 +8,4 @@
 - [Publish enum-array quoting](publish-enum-arrays.md) — mixed-case enum names caused malformed generated array types; preserve the lowercase database mapping.
 - [Navigation performance](navigation-performance.md) — distinguish preview compilation from request latency; keep auth deduplication request-scoped.
 - [Supabase availability](supabase-availability.md) — paused projects can cause DNS failure even when the URL and keys match; check pause state before replacing auth.
+- [Replit preview framing](replit-preview-framing.md) — allow Replit ancestors only in the development preview; keep production anti-framing headers enabled.

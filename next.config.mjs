@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const isReplitPreview = process.env.DOORLINK_PREVIEW === 'true'
+
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
@@ -23,13 +25,23 @@ const nextConfig = {
     },
   },
   async headers() {
+    const framingHeaders = isReplitPreview
+      ? [
+          {
+            key: 'Content-Security-Policy',
+            value:
+              "frame-ancestors 'self' https://replit.com https://*.replit.com https://*.replit.dev https://*.replit.app",
+          },
+        ]
+      : [{ key: 'X-Frame-Options', value: 'DENY' }]
+
     return [
       {
         source: '/:path*',
         headers: [
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-          { key: 'X-Frame-Options', value: 'DENY' },
+          ...framingHeaders,
           { key: 'Permissions-Policy', value: 'camera=(self), geolocation=(self), microphone=()' },
         ],
       },
