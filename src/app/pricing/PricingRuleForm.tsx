@@ -17,7 +17,7 @@ import {
   PRICED_PRODUCTS,
   productHasMotor,
 } from '@/lib/pricing/products'
-import { parseMoney } from '@/lib/pricing/validation'
+import { parseMoney, RULE_MATERIALS } from '@/lib/pricing/validation'
 import { formatMoney } from '@/lib/money'
 import { Button } from '@/components/ui/Button'
 import { Field, Input, Select, Textarea } from '@/components/ui/Field'
@@ -28,8 +28,12 @@ export interface RuleFormValues {
   product: PricedProductId
   productStyle: string
   productBrand: string
+  productModel: string
+  material: string
+  priceType: 'FIXED' | 'ESTIMATE'
   motorIncluded: boolean
   motorBrand: string
+  motorAddOn: string
   installation: InstallationTermsId
   installPrice: string
   minWidthMm: string
@@ -46,8 +50,12 @@ export const EMPTY_RULE: RuleFormValues = {
   product: 'GARAGE_DOOR',
   productStyle: '',
   productBrand: '',
+  productModel: '',
+  material: '',
+  priceType: 'FIXED',
   motorIncluded: true,
   motorBrand: '',
+  motorAddOn: '',
   installation: 'INCLUDED',
   installPrice: '',
   minWidthMm: '',
@@ -123,12 +131,15 @@ export function PricingRuleForm({ initial = EMPTY_RULE }: { initial?: RuleFormVa
 
   const listedMotors = motorBrandsFor(values.product)
   const hasMotor = productHasMotor(values.product)
+  const hasMaterial = ['SLIDING_GATE', 'SWING_GATE', 'PEDESTRIAN_GATE', 'FENCE'].includes(values.product)
+  const showMotorBrand = values.motorIncluded || values.motorAddOn.trim() !== ''
 
   function changeProduct(product: PricedProductId) {
     setValues((current) => ({
       ...current,
       product,
       productStyle: product === 'GARAGE_DOOR' ? current.productStyle : '',
+      material: ['SLIDING_GATE', 'SWING_GATE', 'PEDESTRIAN_GATE', 'FENCE'].includes(product) ? current.material : '',
       motorIncluded: productHasMotor(product) ? current.motorIncluded : false,
       // A listed brand from another product would not be valid here.
       motorBrand:
@@ -178,19 +189,45 @@ export function PricingRuleForm({ initial = EMPTY_RULE }: { initial?: RuleFormVa
         )}
       </div>
 
-      <Field
-        label="Brand (optional)"
-        htmlFor="productBrand"
-        hint="The brand you supply, e.g. Gliderol or DoorWorks. Leave blank if you don’t name one."
-      >
-        <Input
-          id="productBrand"
-          name="productBrand"
-          maxLength={60}
-          value={values.productBrand}
-          onChange={(e) => set('productBrand', e.target.value)}
-        />
-      </Field>
+      <div className="grid gap-4 sm:grid-cols-2">
+        <Field
+          label="Brand (optional)"
+          htmlFor="productBrand"
+          hint="The brand you supply, e.g. Gliderol. Leave blank if you don’t name one."
+        >
+          <Input
+            id="productBrand"
+            name="productBrand"
+            maxLength={60}
+            value={values.productBrand}
+            onChange={(e) => set('productBrand', e.target.value)}
+          />
+        </Field>
+        <Field label="Model or range (optional)" htmlFor="productModel">
+          <Input
+            id="productModel"
+            name="productModel"
+            maxLength={80}
+            value={values.productModel}
+            onChange={(e) => set('productModel', e.target.value)}
+          />
+        </Field>
+      </div>
+
+      {hasMaterial ? (
+        <Field label="Material" htmlFor="material" hint="Customers who choose another material don’t match this price.">
+          <Select id="material" name="material" value={values.material} onChange={(e) => set('material', e.target.value)}>
+            <option value="">Any material</option>
+            {RULE_MATERIALS.map((m) => (
+              <option key={m.id} value={m.id}>
+                {m.label}
+              </option>
+            ))}
+          </Select>
+        </Field>
+      ) : (
+        <input type="hidden" name="material" value="" />
+      )}
 
       <fieldset>
         <legend className="mb-2 text-sm font-medium text-graphite">
@@ -235,7 +272,24 @@ export function PricingRuleForm({ initial = EMPTY_RULE }: { initial?: RuleFormVa
             ]}
             onChange={(v) => set('motorIncluded', v === 'yes')}
           />
-          {values.motorIncluded && (
+          {!values.motorIncluded && (
+            <div className="mt-3 max-w-xs">
+              <Field
+                label="Motor add-on price ($, optional)"
+                htmlFor="motorAddOn"
+                hint="Lets customers who want a motor get this price plus the motor."
+              >
+                <Input
+                  id="motorAddOn"
+                  name="motorAddOn"
+                  inputMode="decimal"
+                  value={values.motorAddOn}
+                  onChange={(e) => set('motorAddOn', e.target.value)}
+                />
+              </Field>
+            </div>
+          )}
+          {showMotorBrand && (
             <div className="mt-3 max-w-sm">
               {listedMotors.length > 0 ? (
                 <Field
@@ -337,6 +391,22 @@ export function PricingRuleForm({ initial = EMPTY_RULE }: { initial?: RuleFormVa
       </div>
 
       <PricePreview values={values} />
+
+      <fieldset>
+        <legend className="mb-2 text-sm font-medium text-graphite">Price type</legend>
+        <Segmented
+          name="priceType"
+          value={values.priceType}
+          options={[
+            { id: 'FIXED', label: 'Fixed price' },
+            { id: 'ESTIMATE', label: 'Estimate, confirmed on inspection' },
+          ]}
+          onChange={(v) => set('priceType', v)}
+        />
+        <p className="mt-2 text-micro text-zinc-deep">
+          With an estimate, you confirm the final price before the customer pays.
+        </p>
+      </fieldset>
 
       <Field label="Note on the quote (optional)" htmlFor="note" hint="e.g. what’s included, lead time.">
         <Textarea

@@ -2,7 +2,7 @@
 
 import { useActionState, useState } from 'react'
 import type { JobStatus } from '@prisma/client'
-import { transitionJobAction, reviewJobAction, type JobActionState } from '../actions'
+import { transitionJobAction, reviewJobAction, replyToReviewAction, type JobActionState } from '../actions'
 import { Button } from '@/components/ui/Button'
 import { Field, Input, Textarea } from '@/components/ui/Field'
 
@@ -17,17 +17,22 @@ const TRANSITION_LABELS: Record<JobStatus, string> = {
   REQUESTED: 'Move back to requested',
   ACCEPTED: 'Mark as accepted',
   AWAITING_PAYMENT: 'Mark as awaiting payment',
+  PAYMENT_CONFIRMED: 'Mark payment confirmed',
   SCHEDULED: 'Book a time',
   IN_PROGRESS: 'Start work',
-  COMPLETED: 'Mark as complete',
+  BUSINESS_COMPLETED: 'Mark work as finished',
+  COMPLETED: 'Confirm the work is complete',
   CANCELLED: 'Cancel this job',
   DISPUTED: 'Raise a dispute',
+  DECLINED: 'Decline',
 }
 
 const TRANSITION_PROMPTS: Partial<Record<JobStatus, string>> = {
   SCHEDULED: 'Pick the time you have agreed with the other side. They will see it on this page.',
   IN_PROGRESS: 'This tells the customer you are on site and have started.',
-  COMPLETED: 'Only mark this complete once the work is genuinely finished. The customer is asked to review it next.',
+  BUSINESS_COMPLETED:
+    'Only mark this once the work is genuinely finished. The customer is asked to confirm it, and it completes itself after 7 days if they don’t respond.',
+  COMPLETED: 'Confirm the work has been done to your satisfaction. You can then leave a verified review.',
   CANCELLED: 'Cancelling is final. Say why, so there is a record both sides can read.',
   DISPUTED: 'Describe what has gone wrong. A Doorlink admin reviews disputes before a job can move again.',
 }
@@ -41,10 +46,13 @@ const DESTRUCTIVE: JobStatus[] = ['CANCELLED', 'DISPUTED']
 export function JobTransitionControls({
   jobId,
   transitions,
+  current,
 }: {
   jobId: string
   transitions: JobStatus[]
+  current?: JobStatus
 }) {
+  const label = (status: JobStatus) => (status === current && status === 'SCHEDULED' ? 'Reschedule' : TRANSITION_LABELS[status])
   const [state, formAction, isPending] = useActionState(transitionJobAction, initialState)
   const [selected, setSelected] = useState<JobStatus | null>(null)
 
@@ -67,7 +75,7 @@ export function JobTransitionControls({
               variant={DESTRUCTIVE.includes(status) ? 'secondary' : 'primary'}
               onClick={() => setSelected(status)}
             >
-              {TRANSITION_LABELS[status]}
+              {label(status)}
             </Button>
           ))}
         </div>
@@ -89,7 +97,7 @@ export function JobTransitionControls({
       <input type="hidden" name="toStatus" value={active} />
 
       <p className="text-sm text-graphite">
-        <span className="font-medium">{TRANSITION_LABELS[active]}.</span>{' '}
+        <span className="font-medium">{label(active)}.</span>{' '}
         {TRANSITION_PROMPTS[active]}
       </p>
 
@@ -132,12 +140,32 @@ export function JobTransitionControls({
   )
 }
 
+const DETAIL_RATINGS = [
+  ['workmanship', 'Workmanship'],
+  ['communication', 'Communication'],
+  ['valueForMoney', 'Value for money'],
+  ['punctuality', 'Punctuality'],
+] as const
+
+export interface ExistingReview {
+  rating: number
+  body: string | null
+  workmanship: number | null
+  communication: number | null
+  valueForMoney: number | null
+  punctuality: number | null
+  recommend: boolean | null
+  photoCount: number
+}
+
 export function ReviewForm({
   jobId,
   existing,
+  uploads,
 }: {
   jobId: string
-  existing: { rating: number; body: string | null } | null
+  existing: ExistingReview | null
+  uploads: boolean
 }) {
   const [state, formAction, isPending] = useActionState(reviewJobAction, initialState)
   const [rating, setRating] = useState(existing?.rating ?? 0)
@@ -148,13 +176,66 @@ export function ReviewForm({
 
       <StarRating value={rating} onChange={setRating} />
 
+      <fieldset>
+        <legend className="mb-2 text-sm font-medium text-graphite">In detail (optional)</legend>
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {DETAIL_RATINGS.map(([name, label]) => (
+            <label key={name} className="flex flex-col gap-1 text-sm">
+              <span className="text-zinc-deep">{label}</span>
+              <select
+                name={name}
+                defaultValue={existing?.[name] ? String(existing[name]) : ''}
+                className="h-10 rounded-md border border-line bg-paper px-2 text-graphite"
+              >
+                <option value="">–</option>
+                {[5, 4, 3, 2, 1].map((n) => (
+                  <option key={n} value={n}>
+                    {'★'.repeat(n)}
+                  </option>
+                ))}
+              </select>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend className="mb-2 text-sm font-medium text-graphite">Would you recommend them?</legend>
+        <div className="flex gap-2">
+          {[
+            ['yes', 'Yes'],
+            ['no', 'No'],
+          ].map(([value, label]) => (
+            <label
+              key={value}
+              className="cursor-pointer rounded-full border border-line bg-paper px-3.5 py-1.5 text-sm text-graphite has-[:checked]:border-signal has-[:checked]:bg-signal has-[:checked]:text-paper"
+            >
+              <input
+                type="radio"
+                name="recommend"
+                value={value}
+                defaultChecked={existing?.recommend === (value === 'yes')}
+                className="sr-only"
+              />
+              {label}
+            </label>
+          ))}
+        </div>
+      </fieldset>
+
       <Field
         label="What was the work like?"
         htmlFor="body"
-        hint="Optional. Other customers will read this on the technician's profile."
+        hint="Optional. Shown on the business’s profile as a verified review."
       >
         <Textarea id="body" name="body" rows={4} maxLength={2000} defaultValue={existing?.body ?? ''} />
       </Field>
+
+      {uploads && (existing?.photoCount ?? 0) < 4 && (
+        <Field label="Photos of the finished job (optional, up to 4)" htmlFor="photos">
+          <Input id="photos" name="photos" type="file" multiple accept="image/jpeg,image/png,image/webp" />
+        </Field>
+      )}
 
       {state.error && (
         <p role="alert" className="text-sm text-bad">
@@ -166,6 +247,24 @@ export function ReviewForm({
       <div>
         <Button type="submit" disabled={isPending || rating === 0}>
           {isPending ? 'Saving…' : existing ? 'Update review' : 'Publish review'}
+        </Button>
+        {existing && <p className="mt-2 text-micro text-zinc-deep">Edits are marked as edited, and the earlier version is kept.</p>}
+      </div>
+    </form>
+  )
+}
+
+export function ReviewReplyForm({ reviewId, existing }: { reviewId: string; existing: string | null }) {
+  const [state, formAction, isPending] = useActionState(replyToReviewAction, initialState)
+  return (
+    <form action={formAction} className="mt-3 flex flex-col gap-2">
+      <input type="hidden" name="reviewId" value={reviewId} />
+      <Textarea name="reply" maxLength={1000} className="min-h-20" defaultValue={existing ?? ''} aria-label="Your public reply" placeholder="A professional public reply" />
+      {state.error && <p className="text-sm text-bad">{state.error}</p>}
+      {state.ok && <p className="text-sm text-good">Reply published.</p>}
+      <div>
+        <Button type="submit" size="sm" disabled={isPending}>
+          {isPending ? 'Saving…' : existing ? 'Update reply' : 'Reply publicly'}
         </Button>
       </div>
     </form>

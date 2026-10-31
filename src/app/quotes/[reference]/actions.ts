@@ -6,13 +6,12 @@ import { JobStatus, NotificationType, Prisma } from '@prisma/client'
 import { getSession, type Session } from '@/lib/auth'
 import { describeSpec, parseSpec } from '@/lib/configurator/options'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
-import { calculateSplit, formatCommissionRate } from '@/lib/commission'
-import { commissionBpsForWorker } from '@/lib/commission-settings'
 import { formatMoney } from '@/lib/money'
 import { prisma } from '@/lib/prisma'
 import { makeReference } from '@/lib/reference'
 import { RbacError, requirePermission } from '@/lib/rbac'
-import { businessIsSubscribed, businessWorker, type BusinessKey } from '@/lib/pricing/business'
+import { businessWorker, encodeBusinessKey, type BusinessKey } from '@/lib/pricing/business'
+import { businessIsEligible, loadBusinessProfile } from '@/lib/business/profile'
 import { readBookingForm, timingLabel } from '@/lib/pricing/booking'
 import { notifyBusiness } from '@/lib/pricing/notify'
 import { INSTALLATION_LABELS, motorLabel, productLabel } from '@/lib/pricing/products'
@@ -25,15 +24,14 @@ class BookingError extends Error {}
  * Accepting an automated quote. In one transaction:
  *
  *  1. the quote is checked to be this customer's and still open
- *  2. a Job is created with the business, at the quoted total, waiting
- *     for the business to schedule it — the same job flow as hiring from
- *     the job board, so scheduling, completion and reviews all work
+ *  2. a Job is created with the business at the quoted total, awaiting
+ *     the business's confirmation, with the quote's terms (fixed or
+ *     estimate, the business's deposit) snapshotted onto it
  *  3. the quote is marked booked, with the site and contact details the
  *     customer gave, which only now reach the business
- *  4. Doorlink's fee is recorded against the job at today's rate (zero
- *     for a fee-free business), the same as a job hired from the board.
- *     It comes out of the business's side; the customer's price is the
- *     quoted total either way
+ *
+ * Nothing is charged here. The business confirms (and, for an estimate,
+ * sets the final price); the customer then accepts and pays.
  *
  * A quote can be booked once. The business is told straight after.
  */
@@ -54,7 +52,7 @@ export async function bookQuoteAction(_prev: BookingState, formData: FormData): 
 
   let jobId: string
   let key: BusinessKey
-  let summary: { product: string; total: string; suburb: string; payout: string; feeRate: number }
+  let summary: { product: string; total: string; suburb: string }
   try {
     const quote = await prisma.automatedQuote.findFirst({
       where: { reference, customerId: session.userId },
@@ -67,11 +65,12 @@ export async function bookQuoteAction(_prev: BookingState, formData: FormData): 
     key = quote.businessOrganizationId
       ? { kind: 'organization', id: quote.businessOrganizationId }
       : { kind: 'user', id: quote.businessUserId! }
-    if (!(await businessIsSubscribed(key))) return { error: 'This company isn’t taking bookings right now.' }
+    if (quote.status !== 'ISSUED') return { error: 'This quote has already been booked.' }
+    const profile = await loadBusinessProfile(encodeBusinessKey(key))
+    if (!profile || !(await businessIsEligible(key, profile)))
+      return { error: 'This company isn’t taking bookings right now.' }
     const worker = await businessWorker(key)
     if (!worker) return { error: 'This company isn’t taking bookings right now.' }
-
-    const split = calculateSplit(option.totalIncGstCents, await commissionBpsForWorker(worker.userId))
 
     const spec = parseSpec(quote.spec)
     const product = `${productLabel(quote.product)} ${quote.widthMm} × ${quote.heightMm} mm`
@@ -109,33 +108,20 @@ export async function bookQuoteAction(_prev: BookingState, formData: FormData): 
             customerId: session.userId,
             description,
             agreedPriceCents: option.totalIncGstCents,
+            agreedExGstCents: option.subtotalExGstCents,
+            priceType: option.priceType,
+            depositPercent: profile.depositPercent,
             currency: option.currency,
-            status: JobStatus.ACCEPTED,
+            status: JobStatus.REQUESTED,
           },
         })
         await tx.jobStatusEvent.create({
           data: {
             jobId: job.id,
             fromStatus: null,
-            toStatus: JobStatus.ACCEPTED,
+            toStatus: JobStatus.REQUESTED,
             actorId: session.userId,
             note: `Booked from quote ${quote.reference}`,
-          },
-        })
-        await tx.transaction.create({
-          data: {
-            reference: makeReference('TXN'),
-            jobId: job.id,
-            customerId: session.userId,
-            workerId: worker.userId,
-            grossCents: split.grossCents,
-            commissionRateBps: split.commissionRateBps,
-            commissionCents: split.commissionCents,
-            workerPayoutCents: split.workerPayoutCents,
-            currency: option.currency,
-            // No payment provider is connected: this records the agreed
-            // split, and only a real provider webhook ever marks it paid.
-            status: 'PENDING',
           },
         })
         await tx.automatedQuote.update({
@@ -159,13 +145,7 @@ export async function bookQuoteAction(_prev: BookingState, formData: FormData): 
       },
       { isolationLevel: Prisma.TransactionIsolationLevel.Serializable }
     )
-    summary = {
-      product,
-      total: formatMoney(option.totalIncGstCents, option.currency),
-      suburb: b.suburb,
-      payout: formatMoney(split.workerPayoutCents, option.currency),
-      feeRate: split.commissionRateBps,
-    }
+    summary = { product, total: formatMoney(option.totalIncGstCents, option.currency), suburb: b.suburb }
   } catch (error) {
     if (error instanceof BookingError) return { error: error.message }
     if (error instanceof Prisma.PrismaClientKnownRequestError && error.code === 'P2034') {
@@ -177,12 +157,8 @@ export async function bookQuoteAction(_prev: BookingState, formData: FormData): 
 
   await notifyBusiness(key, {
     type: NotificationType.QUOTE_ACCEPTED,
-    title: `New booking: ${summary.product}`,
-    body: `${b.name} booked your ${summary.total} quote in ${summary.suburb} (${timingLabel(b.timing)?.toLowerCase()}). ${
-      summary.feeRate > 0
-        ? `You receive ${summary.payout} after the ${formatCommissionRate(summary.feeRate)} Doorlink fee. `
-        : ''
-    }Schedule it from the job.`,
+    title: `New booking request: ${summary.product}`,
+    body: `${b.name} chose your ${summary.total} quote in ${summary.suburb} (${timingLabel(b.timing)?.toLowerCase()}). Confirm or decline it from the job.`,
     href: `/jobs/${jobId}`,
   })
 

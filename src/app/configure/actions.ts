@@ -9,8 +9,8 @@ import { requireSession, RbacError } from '@/lib/rbac'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { parseSpec, type ProductType } from '@/lib/configurator/options'
 import { makeReference } from '@/lib/reference'
-import { doorPreviewAvailable } from '@/lib/configurator/preview'
-import { generateDoorPreviewFromPhoto } from '@/lib/configurator/openai-preview'
+import { generateDesignImage } from '@/lib/ai/generate'
+import { aiImagesAvailable } from '@/lib/ai/design-image'
 import { PREVIEW_IMAGE_MAX_BYTES, sniffPreviewImageMime } from '@/lib/configurator/preview-image-mime'
 import { PREVIEW_NOTE_MAX_WORDS, previewNoteWordCount } from '@/lib/configurator/preview-prompt'
 import {
@@ -32,10 +32,8 @@ export type ConfigurationActionState = { error?: string; savedId?: string }
 export type PreviewActionState = {
   error?: string
   imageDataUrl?: string
-  balance?: number
+  cached?: boolean
 }
-
-const PREVIEW_PRODUCT_TYPES: ProductType[] = ['sectional', 'roller', 'tilt']
 
 const schema = z.object({
   name: z.string().trim().min(1, 'Give it a name.').max(120),
@@ -123,93 +121,46 @@ export async function startCreditPackCheckoutAction(formData: FormData): Promise
   await startCreditPackCheckout(packCode)
 }
 
-export async function generateDoorPreviewAction(
+/**
+ * A free AI image of the customer's design, optionally on a photo of
+ * their home. Doorlink pays the provider; the customer is never charged.
+ * Signing in is required so fair-use limits apply per person (and bots
+ * can't run up the bill).
+ */
+export async function generateDesignImageAction(
   _prevState: PreviewActionState,
   formData: FormData
 ): Promise<PreviewActionState> {
-  if (!doorPreviewAvailable()) {
-    return { error: 'Photo preview is not connected yet.' }
-  }
-
+  if (!aiImagesAvailable()) return { error: 'AI images aren’t switched on yet. Your 3D design still works.' }
   const session = await getSession()
-  if (!session) {
-    return { error: 'Sign in to generate a photo preview.' }
-  }
+  if (!session) return { error: 'Sign in to generate a free AI image.' }
 
-  const specRaw = formData.get('spec')
-  if (typeof specRaw !== 'string' || specRaw.trim().length < 2) {
-    return { error: 'Choose your door options first.' }
-  }
-
-  let parsed: unknown
+  let spec
   try {
-    parsed = JSON.parse(specRaw)
+    spec = parseSpec(JSON.parse(String(formData.get('spec') ?? '')))
   } catch {
-    return { error: 'That configuration could not be read.' }
+    return { error: 'That design could not be read.' }
   }
 
-  const spec = parseSpec(parsed)
-  if (!PREVIEW_PRODUCT_TYPES.includes(spec.productType)) {
-    return { error: 'Photo preview is only available for sectional, roller, and tilt doors.' }
-  }
+  const note = String(formData.get('note') ?? '').trim()
+  if (previewNoteWordCount(note) > PREVIEW_NOTE_MAX_WORDS) return { error: `Keep the notes to ${PREVIEW_NOTE_MAX_WORDS} words.` }
 
+  let photo: { bytes: Uint8Array; type: string } | null = null
   const file = formData.get('photo')
-  if (!(file instanceof File) || file.size === 0) {
-    return { error: 'Choose a photo of your garage opening.' }
+  if (file instanceof File && file.size > 0) {
+    if (file.size > PREVIEW_IMAGE_MAX_BYTES) return { error: 'That photo is too large. Use one under 8 MB.' }
+    const bytes = new Uint8Array(await file.arrayBuffer())
+    const type = sniffPreviewImageMime(bytes)
+    if (!type) return { error: 'Use a JPEG, PNG or WebP photo.' }
+    photo = { bytes, type }
   }
 
-  if (file.size > PREVIEW_IMAGE_MAX_BYTES) {
-    return { error: 'That photo is too large. Use a file under 8 MB.' }
-  }
-
-  const buffer = await file.arrayBuffer()
-  const imageBytes = new Uint8Array(buffer)
-  if (!sniffPreviewImageMime(imageBytes)) {
-    return { error: 'Use a JPEG, PNG, or WebP photo.' }
-  }
-
-  const noteRaw = formData.get('note')
-  const note = typeof noteRaw === 'string' ? noteRaw.trim() : ''
-  if (previewNoteWordCount(note) > PREVIEW_NOTE_MAX_WORDS) {
-    return { error: `Keep the notes to ${PREVIEW_NOTE_MAX_WORDS} words.` }
-  }
-
-  const spend = await beginPreviewSpend(session.userId)
-  if (!spend.ok) {
-    if (spend.reason === 'in_flight') {
-      return { error: 'A preview is already generating. Wait for it to finish.' }
-    }
-    const balance = await getCreditBalance(session.userId)
-    return {
-      error: `You need ${PREVIEW_CREDIT_COST} credit to generate a preview. Buy more credits below.`,
-      balance,
-    }
-  }
-
-  let result: Awaited<ReturnType<typeof generateDoorPreviewFromPhoto>>
   try {
-    result = await generateDoorPreviewFromPhoto({ spec, imageBytes, note })
+    const result = await generateDesignImage({ userId: session.userId, spec, photo, note })
+    if (!result.ok) return { error: result.error }
+    return { imageDataUrl: result.imageUrl, cached: result.cached }
   } catch (error) {
-    await refundPreviewCredit(session.userId, spend.generationId)
-    if (isDatabaseUnreachable(error)) {
-      return { error: "Can't reach the database right now. Try again in a moment." }
-    }
+    if (isDatabaseUnreachable(error)) return { error: 'Can’t reach the database right now. Try again in a moment.' }
     throw error
   }
-
-  if (!result.ok) {
-    if (result.refundCredit) {
-      await refundPreviewCredit(session.userId, spend.generationId)
-    } else {
-      await clearPreviewInFlight(session.userId, spend.generationId)
-    }
-    const balance = await getCreditBalance(session.userId)
-    return { error: result.error, balance }
-  }
-
-  await clearPreviewInFlight(session.userId, spend.generationId)
-  const balance = await getCreditBalance(session.userId)
-  revalidatePath('/configure')
-  revalidatePath('/account')
-  return { imageDataUrl: result.dataUrl, balance }
 }

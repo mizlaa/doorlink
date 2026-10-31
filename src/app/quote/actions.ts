@@ -1,41 +1,30 @@
 'use server'
 
 import { redirect } from 'next/navigation'
-import { NotificationType, Prisma } from '@prisma/client'
+import { z } from 'zod'
 import { getSession, type Session } from '@/lib/auth'
 import { parseSpec, type DoorSpec } from '@/lib/configurator/options'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
-import { prisma } from '@/lib/prisma'
-import { makeReference } from '@/lib/reference'
 import { RbacError, requirePermission } from '@/lib/rbac'
-import {
-  businessCard,
-  businessIsSubscribed,
-  decodeBusinessKey,
-  ruleOwnerWhere,
-  toRuleTerms,
-} from '@/lib/pricing/business'
-import { matchRules, type UnavailableReason } from '@/lib/pricing/engine'
-import { productLabel, requestFromSpec } from '@/lib/pricing/products'
-import { notifyBusiness } from '@/lib/pricing/notify'
-import { formatMoney } from '@/lib/money'
+import { isAuPostcode } from '@/lib/australia'
+import { isAccessoryId } from '@/lib/pricing/accessories'
+import { compareQuotes } from '@/lib/pricing/compare'
+import { requestFromSpec } from '@/lib/pricing/products'
 
-export type QuoteRequestState = {
-  error?: string
-  unavailable?: { businessKey: string; businessName: string; reason: UnavailableReason }
-}
+export type CompareState = { error?: string }
+
+const schema = z.object({
+  postcode: z.string().trim().refine(isAuPostcode, 'Enter the 4-digit postcode where the work is.'),
+  suburb: z.string().trim().max(60),
+  brand: z.string().trim().max(60, 'That brand name is too long.'),
+})
 
 /**
- * Issues an automated quote from one business's own prices for the
- * customer's design. Everything is re-read on the server: the design is
- * re-validated, the business must still be subscribed, and its rules are
- * read here and never sent to the browser. No rule, no quote — the
- * customer is told plainly instead.
+ * "Compare free quotes". Free, and for customer accounts only, so
+ * businesses can't read each other's prices. The design is re-validated
+ * here; every price comes from the businesses' own rules on the server.
  */
-export async function requestQuoteAction(
-  _prev: QuoteRequestState,
-  formData: FormData
-): Promise<QuoteRequestState> {
+export async function compareQuotesAction(_prev: CompareState, formData: FormData): Promise<CompareState> {
   let session: Session
   try {
     session = requirePermission(await getSession(), 'quote:request')
@@ -44,8 +33,8 @@ export async function requestQuoteAction(
       return {
         error:
           error.status === 401
-            ? 'Sign in with a customer account to get a quote.'
-            : 'Automated quotes are for customer accounts.',
+            ? 'Sign in with a customer account to compare quotes.'
+            : 'Quote comparison is for customer accounts.',
       }
     }
     throw error
@@ -58,98 +47,33 @@ export async function requestQuoteAction(
     return { error: 'The design could not be read. Go back to Design and try again.' }
   }
 
-  const key = decodeBusinessKey(String(formData.get('business') ?? ''))
-  if (!key) return { error: 'Choose a company.' }
+  const parsed = schema.safeParse({
+    postcode: formData.get('postcode') ?? '',
+    suburb: formData.get('suburb') ?? '',
+    brand: formData.get('brand') ?? '',
+  })
+  if (!parsed.success) return { error: parsed.error.issues[0]?.message ?? 'Check the form.' }
 
-  const brandInput = String(formData.get('brand') ?? '').trim()
-  if (brandInput.length > 60) return { error: 'That brand name is too long.' }
   const request = requestFromSpec(spec, {
-    brand: brandInput === '' ? null : brandInput,
+    brand: parsed.data.brand === '' ? null : parsed.data.brand,
     installRequired: formData.get('install') !== 'supply',
   })
+  const accessories = formData.getAll('accessories').map(String).filter(isAccessoryId)
 
   let reference: string
   try {
-    if (!(await businessIsSubscribed(key)))
-      return { error: 'That company is not taking automated quotes right now.' }
-    const card = await businessCard(key)
-    if (!card) return { error: 'That company was not found.' }
-
-    const rules = await prisma.pricingRule.findMany({
-      where: { ...ruleOwnerWhere(key), product: request.product, active: true },
+    reference = await compareQuotes({
+      customerId: session.userId,
+      customerFirstName: session.name.split(' ')[0],
+      spec,
+      request,
+      postcode: parsed.data.postcode,
+      suburb: parsed.data.suburb || null,
+      accessories,
     })
-    const result = matchRules(request, rules.map(toRuleTerms))
-    if (!result.available) {
-      return { unavailable: { businessKey: card.key, businessName: card.name, reason: result.reason } }
-    }
-
-    reference = await createQuote()
-
-    // The business hears about every quote its prices produce. Only the
-    // customer's first name goes with it; contact details follow a booking.
-    const cheapest = result.options[0]
-    await notifyBusiness(key, {
-      type: NotificationType.LEAD_MATCHED,
-      title: `New quote: ${productLabel(request.product)} ${request.widthMm} × ${request.heightMm} mm`,
-      body: `${session.name.split(' ')[0]} was quoted ${formatMoney(cheapest.totalIncGstCents, cheapest.currency)} inc GST from your prices.`,
-      href: `/quotes/${reference}`,
-    })
-
-    async function createQuote(attempt = 0): Promise<string> {
-      const candidate = makeReference('QTE', 8)
-      try {
-        await prisma.automatedQuote.create({
-          data: {
-            reference: candidate,
-            customerId: session.userId,
-            ...(key!.kind === 'organization'
-              ? { businessOrganizationId: key!.id }
-              : { businessUserId: key!.id }),
-            businessName: card!.name,
-            product: request.product,
-            productStyle: request.productStyle,
-            spec: spec as unknown as Prisma.InputJsonValue,
-            widthMm: request.widthMm,
-            heightMm: request.heightMm,
-            requestedBrand: request.brand,
-            motorRequired: request.motorRequired,
-            requestedMotor: request.motorBrand,
-            installRequired: request.installRequired,
-            options: {
-              create: (result as Extract<typeof result, { available: true }>).options.map(
-                (option, sortOrder) => ({
-                  ruleId: option.ruleId,
-                  productBrand: option.productBrand,
-                  motorIncluded: option.motorIncluded,
-                  motorBrand: option.motorBrand,
-                  installation: option.installation,
-                  gst: option.gst,
-                  priceCents: option.priceCents,
-                  installPriceCents: option.installPriceCents,
-                  subtotalExGstCents: option.subtotalExGstCents,
-                  gstCents: option.gstCents,
-                  totalIncGstCents: option.totalIncGstCents,
-                  currency: option.currency,
-                  note: option.note,
-                  sortOrder,
-                })
-              ),
-            },
-          },
-        })
-        return candidate
-      } catch (error) {
-        // A reference collision is astronomically rare; one retry.
-        if (attempt === 0 && error instanceof Prisma.PrismaClientKnownRequestError && error.code === 'P2002') {
-          return createQuote(1)
-        }
-        throw error
-      }
-    }
   } catch (error) {
     if (isDatabaseUnreachable(error)) return { error: 'The database is not reachable right now.' }
     throw error
   }
-
-  redirect(`/quotes/${reference}`)
+  redirect(`/compare/${reference}`)
 }

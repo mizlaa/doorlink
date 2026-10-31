@@ -5,17 +5,19 @@ import { getSession } from '@/lib/auth'
 import { describeSpec, parseSpec, type DoorSpec } from '@/lib/configurator/options'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { can } from '@/lib/rbac'
-import { offeredBrands, participatingBusinesses, type BusinessCard } from '@/lib/pricing/business'
-import { productForSpec, productLabel } from '@/lib/pricing/products'
+import { offeredBrands } from '@/lib/pricing/business'
+import { accessoriesFor } from '@/lib/pricing/accessories'
+import { productForSpec, productLabel, specNeedsMotor } from '@/lib/pricing/products'
+import { prisma } from '@/lib/prisma'
 import { NotConnected } from '@/components/ui/NotConnected'
-import { QuoteRequestForm } from './QuoteRequestForm'
+import { CompareForm } from './CompareForm'
 
 // Per-account data: always rendered for the signed-in visitor, never cached.
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Get quotes',
-  description: 'Choose a company and get an automated quote for your design.',
+  title: 'Compare free quotes',
+  description: 'Compare prices for your design from every business that services your area.',
 }
 
 type PageProps = { searchParams: Promise<{ spec?: string }> }
@@ -36,15 +38,27 @@ export default async function QuotePage({ searchParams }: PageProps) {
   const session = await getSession()
   const mode = !session ? 'signed-out' : can(session.role, 'quote:request') ? 'customer' : 'business'
 
-  let companies: BusinessCard[] = []
   let brands: string[] = []
+  let defaults = { postcode: '', suburb: '' }
   let unreachable = false
   try {
-    ;[companies, brands] = await Promise.all([participatingBusinesses(product), offeredBrands(product)])
+    const [offered, last] = await Promise.all([
+      offeredBrands(product),
+      session
+        ? prisma.quoteComparison.findFirst({
+            where: { customerId: session.userId },
+            orderBy: { createdAt: 'desc' },
+            select: { postcode: true, suburb: true },
+          })
+        : null,
+    ])
+    brands = offered
+    if (last) defaults = { postcode: last.postcode, suburb: last.suburb ?? '' }
   } catch (error) {
     if (!isDatabaseUnreachable(error)) throw error
     unreachable = true
   }
+  const accessories = accessoriesFor(product, specNeedsMotor(spec)).map((a) => ({ id: a.id, label: a.label }))
 
   const rows = describeSpec(spec)
   const here = `/quote?spec=${encodeURIComponent(encoded)}`
@@ -52,9 +66,10 @@ export default async function QuotePage({ searchParams }: PageProps) {
   return (
     <div className="mx-auto w-full max-w-shell px-4 py-10 sm:py-14">
       <header className="mb-6 max-w-prose">
-        <h1 className="text-2xl font-semibold tracking-tight text-graphite">Get quotes</h1>
+        <h1 className="text-2xl font-semibold tracking-tight text-graphite">Compare free quotes</h1>
         <p className="mt-1 text-graphite-soft">
-          Choose a company. Its own prices are matched to your design instantly.
+          Every approved business that services your postcode is priced on your design instantly, from its own
+          prices.
         </p>
       </header>
 
@@ -89,11 +104,12 @@ export default async function QuotePage({ searchParams }: PageProps) {
               reason="The database isn’t reachable right now, so company prices can’t be read."
             />
           ) : (
-            <QuoteRequestForm
+            <CompareForm
               spec={encoded}
-              companies={companies}
               brands={brands}
+              accessories={accessories}
               mode={mode}
+              defaults={defaults}
               signInHref={`/sign-in?next=${encodeURIComponent(here)}`}
             />
           )}

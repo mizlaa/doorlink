@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import type { GstTreatmentId, InstallationTermsId, PricedProductId } from './engine'
+import type { GstTreatmentId, InstallationTermsId, PriceTypeId, PricedProductId } from './engine'
 import { GARAGE_STYLES, motorBrandIsListed, motorBrandsFor, PRICED_PRODUCTS } from './products'
 
 /**
@@ -13,8 +13,12 @@ export interface RuleInput {
   product: PricedProductId
   productStyle: string | null
   productBrand: string | null
+  productModel: string | null
+  material: string | null
+  priceType: PriceTypeId
   motorIncluded: boolean
   motorBrand: string | null
+  motorAddOnCents: number | null
   installation: InstallationTermsId
   installPriceCents: number | null
   minWidthMm: number
@@ -26,6 +30,13 @@ export interface RuleInput {
   note: string | null
   active: boolean
 }
+
+/** Materials a gate or fence price can be limited to (the designer's list). */
+export const RULE_MATERIALS = [
+  { id: 'aluminium', label: 'Aluminium' },
+  { id: 'tubular-steel', label: 'Tubular steel' },
+  { id: 'solid-steel', label: 'Solid steel' },
+] as const
 
 export const SIZE_BOUNDS = { min: 100, max: 20000 } as const
 const MAX_PRICE_CENTS = 100_000_000 // $1,000,000
@@ -59,6 +70,10 @@ const schema = z.object({
   }),
   productStyle: z.string().trim(),
   productBrand: optionalText(60),
+  productModel: optionalText(80),
+  material: z.string().trim(),
+  priceType: z.enum(['FIXED', 'ESTIMATE'], { message: 'Say whether the price is fixed or an estimate.' }),
+  motorAddOn: z.string().trim(),
   motorIncluded: z.enum(['yes', 'no'], { message: 'Say whether a motor is included.' }),
   motorBrand: optionalText(60),
   installation: z.enum(['INCLUDED', 'SEPARATE', 'NOT_INCLUDED'], {
@@ -84,6 +99,10 @@ export function readRuleForm(formData: FormData): RuleValidation {
     product: formData.get('product'),
     productStyle: formData.get('productStyle') ?? '',
     productBrand: formData.get('productBrand') ?? '',
+    productModel: formData.get('productModel') ?? '',
+    material: formData.get('material') ?? '',
+    priceType: formData.get('priceType') ?? 'FIXED',
+    motorAddOn: formData.get('motorAddOn') ?? '',
     motorIncluded: formData.get('motorIncluded'),
     motorBrand: formData.get('motorBrand') ?? '',
     installation: formData.get('installation'),
@@ -131,6 +150,30 @@ export function readRuleForm(formData: FormData): RuleValidation {
     motorBrand = input.motorBrand
   }
 
+  let material: string | null = null
+  if (input.material) {
+    if (!['SLIDING_GATE', 'SWING_GATE', 'PEDESTRIAN_GATE', 'FENCE'].includes(input.product))
+      return { ok: false, error: 'Material applies to gates and fences only.' }
+    if (!RULE_MATERIALS.some((m) => m.id === input.material)) return { ok: false, error: 'Choose a material.' }
+    material = input.material
+  }
+
+  // A manual price can offer a motor as an add-on. Its brand, if named,
+  // is the same motor brand field.
+  let motorAddOnCents: number | null = null
+  if (!motorIncluded && input.motorAddOn) {
+    if (input.product === 'FENCE') return { ok: false, error: 'Fences have no motor.' }
+    motorAddOnCents = parseMoney(input.motorAddOn)
+    if (motorAddOnCents === null || motorAddOnCents <= 0)
+      return { ok: false, error: 'Enter the motor add-on price in dollars.' }
+    if (motorAddOnCents > MAX_PRICE_CENTS) return { ok: false, error: 'That motor price is too large.' }
+    if (input.motorBrand) {
+      if (motorBrandIsListed(input.product) && !motorBrandsFor(input.product).some((b) => b.id === input.motorBrand))
+        return { ok: false, error: 'Choose a motor brand from the list.' }
+      motorBrand = input.motorBrand
+    }
+  }
+
   let installPriceCents: number | null = null
   if (input.installation === 'SEPARATE') {
     installPriceCents = parseMoney(input.installPrice)
@@ -147,8 +190,12 @@ export function readRuleForm(formData: FormData): RuleValidation {
       product: input.product,
       productStyle,
       productBrand: input.productBrand,
+      productModel: input.productModel,
+      material,
+      priceType: input.priceType,
       motorIncluded,
       motorBrand,
+      motorAddOnCents,
       installation: input.installation,
       installPriceCents,
       minWidthMm: input.minWidthMm,

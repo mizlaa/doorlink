@@ -25,6 +25,8 @@ export type PricedProductId =
 
 export type GstTreatmentId = 'INCLUSIVE' | 'EXCLUSIVE'
 export type InstallationTermsId = 'INCLUDED' | 'SEPARATE' | 'NOT_INCLUDED'
+/** FIXED stands as quoted; ESTIMATE is confirmed by the business, after a site inspection if needed. */
+export type PriceTypeId = 'FIXED' | 'ESTIMATE'
 
 /** Australian GST: 10%. */
 export const GST_RATE = 0.1
@@ -34,8 +36,15 @@ export interface RuleTerms {
   product: PricedProductId
   productStyle: string | null
   productBrand: string | null
+  productModel?: string | null
+  /** Gates and fences; null for any material. */
+  material?: string | null
+  priceType?: PriceTypeId
   motorIncluded: boolean
+  /** The included motor's brand, or, with an add-on price, the brand of motor added. */
   motorBrand: string | null
+  /** Without an included motor: what adding one costs, when the business offers it. */
+  motorAddOnCents?: number | null
   installation: InstallationTermsId
   installPriceCents: number | null
   minWidthMm: number
@@ -57,6 +66,8 @@ export interface QuoteRequest {
   heightMm: number
   /** Null when the customer has no brand preference. */
   brand: string | null
+  /** Gates and fences: the chosen material. */
+  material?: string | null
   motorRequired: boolean
   /** Null when any motor brand will do. */
   motorBrand: string | null
@@ -69,9 +80,22 @@ export interface PriceBreakdown {
   totalIncGstCents: number
 }
 
+/** One priced line of a quote, as the business configured it. */
+export interface QuoteLine {
+  kind: 'base' | 'installation' | 'motor' | 'accessory' | 'travel'
+  label: string
+  amountCents: number
+  gst: GstTreatmentId
+}
+
 export interface QuoteOptionDraft extends PriceBreakdown {
   ruleId: string
   productBrand: string | null
+  productModel: string | null
+  priceType: PriceTypeId
+  lines: QuoteLine[]
+  /** Set when the motor is priced as an add-on rather than included. */
+  motorAddOnCents: number | null
   motorIncluded: boolean
   motorBrand: string | null
   installation: InstallationTermsId
@@ -110,6 +134,27 @@ export function gstBreakdown(amountCents: number, gst: GstTreatmentId): PriceBre
   return { subtotalExGstCents: amountCents, gstCents, totalIncGstCents: amountCents + gstCents }
 }
 
+/**
+ * Totals for lines that may mix GST treatments: inclusive and exclusive
+ * amounts are each broken down once, then added, so a quote's GST is the
+ * same however its lines are ordered.
+ */
+export function totalsForLines(lines: Array<Pick<QuoteLine, 'amountCents' | 'gst'>>): PriceBreakdown {
+  const sum = (gst: GstTreatmentId) =>
+    lines.filter((line) => line.gst === gst).reduce((total, line) => total + line.amountCents, 0)
+  const inclusive = gstBreakdown(sum('INCLUSIVE'), 'INCLUSIVE')
+  const exclusive = gstBreakdown(sum('EXCLUSIVE'), 'EXCLUSIVE')
+  return {
+    subtotalExGstCents: inclusive.subtotalExGstCents + exclusive.subtotalExGstCents,
+    gstCents: inclusive.gstCents + exclusive.gstCents,
+    totalIncGstCents: inclusive.totalIncGstCents + exclusive.totalIncGstCents,
+  }
+}
+
+function hasMotorAddOn(rule: RuleTerms): boolean {
+  return !rule.motorIncluded && rule.motorAddOnCents !== null && rule.motorAddOnCents !== undefined
+}
+
 function servesInstall(terms: InstallationTermsId): boolean {
   return terms === 'INCLUDED' || terms === 'SEPARATE'
 }
@@ -139,9 +184,17 @@ function coversConfiguration(rule: RuleTerms, request: QuoteRequest): boolean {
   const wantedBrand = normaliseBrand(request.brand)
   if (wantedBrand && normaliseBrand(rule.productBrand) !== wantedBrand) return false
 
-  // Motor inclusion must match exactly: a motorised price is not a price
-  // for a manual gate, and a manual price says nothing about the motor.
-  if (rule.motorIncluded !== request.motorRequired) return false
+  // A rule for one material covers only that material; no material, all.
+  if (rule.material && rule.material !== (request.material ?? null)) return false
+
+  // A motorised price is not a price for a manual gate. A manual price
+  // covers a motorised request only when the business priced the motor
+  // as an add-on; otherwise it says nothing about the motor.
+  if (request.motorRequired) {
+    if (!rule.motorIncluded && !hasMotorAddOn(rule)) return false
+  } else if (rule.motorIncluded) {
+    return false
+  }
   if (request.motorRequired) {
     const wantedMotor = normaliseBrand(request.motorBrand)
     if (wantedMotor && normaliseBrand(rule.motorBrand) !== wantedMotor) return false
@@ -150,25 +203,49 @@ function coversConfiguration(rule: RuleTerms, request: QuoteRequest): boolean {
   return request.installRequired ? servesInstall(rule.installation) : servesSupplyOnly(rule.installation)
 }
 
-export function optionFromRule(rule: RuleTerms, installRequired: boolean): QuoteOptionDraft {
+export function optionFromRule(
+  rule: RuleTerms,
+  installRequired: boolean,
+  motorRequired = rule.motorIncluded
+): QuoteOptionDraft {
   const addInstall = installRequired && rule.installation === 'SEPARATE'
   if (addInstall && (rule.installPriceCents === null || rule.installPriceCents === undefined)) {
     throw new Error(`rule ${rule.id} offers separate installation without a price`)
   }
   const installPriceCents = addInstall ? (rule.installPriceCents as number) : null
+  const motorAddOnCents = motorRequired && hasMotorAddOn(rule) ? (rule.motorAddOnCents as number) : null
+  const lines: QuoteLine[] = [{ kind: 'base', label: 'Product', amountCents: rule.priceCents, gst: rule.gst }]
+  if (installPriceCents !== null)
+    lines.push({ kind: 'installation', label: 'Installation', amountCents: installPriceCents, gst: rule.gst })
+  if (motorAddOnCents !== null)
+    lines.push({ kind: 'motor', label: 'Motor', amountCents: motorAddOnCents, gst: rule.gst })
   return {
     ruleId: rule.id,
     productBrand: rule.productBrand,
-    motorIncluded: rule.motorIncluded,
-    motorBrand: rule.motorIncluded ? rule.motorBrand : null,
+    productModel: rule.productModel ?? null,
+    priceType: rule.priceType ?? 'FIXED',
+    lines,
+    motorAddOnCents,
+    motorIncluded: rule.motorIncluded || motorAddOnCents !== null,
+    motorBrand: rule.motorIncluded || motorAddOnCents !== null ? rule.motorBrand : null,
     installation: rule.installation,
     gst: rule.gst,
     priceCents: rule.priceCents,
     installPriceCents,
     currency: rule.currency,
     note: rule.note,
-    ...gstBreakdown(rule.priceCents + (installPriceCents ?? 0), rule.gst),
+    ...totalsForLines(lines),
   }
+}
+
+/**
+ * Adds the business-level extras to an option: accessories the customer
+ * chose that the business prices, and any travel fee for the postcode.
+ */
+export function withExtras(option: QuoteOptionDraft, extras: QuoteLine[]): QuoteOptionDraft {
+  if (extras.length === 0) return option
+  const lines = [...option.lines, ...extras]
+  return { ...option, lines, ...totalsForLines(lines) }
 }
 
 /**
@@ -188,7 +265,7 @@ export function matchRules(request: QuoteRequest, rules: RuleTerms[]): MatchResu
   if (matching.length === 0) return { available: false, reason: 'configuration' }
 
   const options = matching
-    .map((rule) => optionFromRule(rule, request.installRequired))
+    .map((rule) => optionFromRule(rule, request.installRequired, request.motorRequired))
     .sort((a, b) => a.totalIncGstCents - b.totalIncGstCents || a.ruleId.localeCompare(b.ruleId))
   return { available: true, options }
 }
@@ -208,8 +285,16 @@ export function rulesConflict(a: RuleTerms, b: RuleTerms): boolean {
   if (a.product !== b.product) return false
   if (a.productStyle && b.productStyle && a.productStyle !== b.productStyle) return false
   if (normaliseBrand(a.productBrand) !== normaliseBrand(b.productBrand)) return false
-  if (a.motorIncluded !== b.motorIncluded) return false
-  if (a.motorIncluded && normaliseBrand(a.motorBrand) !== normaliseBrand(b.motorBrand)) return false
+  if (normaliseBrand(a.productModel) !== normaliseBrand(b.productModel)) return false
+  if (a.material && b.material && a.material !== b.material) return false
+  // Two rules clash on motor terms when both price a manual product, or
+  // both price a motorised one (included or as an add-on) with the same
+  // motor brand.
+  const bothManual = !a.motorIncluded && !b.motorIncluded
+  const aMotor = a.motorIncluded || hasMotorAddOn(a)
+  const bMotor = b.motorIncluded || hasMotorAddOn(b)
+  const bothMotorSameBrand = aMotor && bMotor && normaliseBrand(a.motorBrand) === normaliseBrand(b.motorBrand)
+  if (!bothManual && !bothMotorSameBrand) return false
   const sameService =
     (servesInstall(a.installation) && servesInstall(b.installation)) ||
     (servesSupplyOnly(a.installation) && servesSupplyOnly(b.installation))

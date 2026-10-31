@@ -10,7 +10,7 @@ export function Stars({ average, count }: { average: number | null; count: numbe
   return (
     <span
       className="inline-flex items-center gap-1.5 text-sm"
-      aria-label={`${average.toFixed(1)} out of 5 from ${count} review${count === 1 ? '' : 's'}`}
+      aria-label={`${average.toFixed(1)} out of 5 from ${count} verified review${count === 1 ? '' : 's'}`}
     >
       <span aria-hidden="true" className="flex">
         {[1, 2, 3, 4, 5].map((star) => (
@@ -30,9 +30,9 @@ export function Stars({ average, count }: { average: number | null; count: numbe
           </svg>
         ))}
       </span>
-      <span className="font-medium text-graphite">{average.toFixed(1)}</span>
+      <span className="font-medium text-graphite">{average.toFixed(1)}/5</span>
       <span className="text-zinc-deep">
-        ({count} review{count === 1 ? '' : 's'})
+        · {count} verified review{count === 1 ? '' : 's'}
       </span>
     </span>
   )

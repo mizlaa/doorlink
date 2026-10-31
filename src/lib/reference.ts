@@ -29,6 +29,7 @@ export type ReferenceKind =
   | 'MAN'
   | 'SPR'
   | 'QTE'
+  | 'CMP'
 
 export function makeReference(kind: ReferenceKind, length = 7): string {
   return `DL-${kind}-${randomCode(length)}`

@@ -5,14 +5,11 @@ import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import {
   saveConfigurationAction,
-  generateDoorPreviewAction,
-  startCreditPackCheckoutAction,
+  generateDesignImageAction,
   type ConfigurationActionState,
   type PreviewActionState,
 } from './actions'
-import { PREVIEW_CREDIT_COST } from '@/lib/credits/constants'
 import { PREVIEW_NOTE_MAX_WORDS, previewNoteWordCount } from '@/lib/configurator/preview-prompt'
-import { formatMoney } from '@/lib/money'
 import {
   DEFAULT_SPEC,
   familyOf,
@@ -31,7 +28,6 @@ import type { MotorCandidate } from '@/lib/motors/specs'
 import { MotorShortlist } from './MotorShortlist'
 import { Button } from '@/components/ui/Button'
 import { Field, Input, Textarea } from '@/components/ui/Field'
-import { NotConnected } from '@/components/ui/NotConnected'
 import { cn } from '@/lib/utils'
 
 // The scene is WebGL and several hundred kB; it has no business in the
@@ -93,32 +89,18 @@ export function Configurator({
   motors = [],
   initialSpec,
   previewAvailable,
-  creditBalance,
-  creditPacks,
-  creditsCheckoutReady,
-  creditsCheckoutNotice,
 }: {
   signedIn: boolean
   motors?: MotorCandidate[]
   initialSpec?: DoorSpec
   previewAvailable: boolean
-  creditBalance: number | null
-  creditPacks: Array<{
-    code: string
-    name: string
-    credits: number
-    priceCents: number
-    currency: string
-  }>
-  creditsCheckoutReady: boolean
-  creditsCheckoutNotice: string | null
 }) {
   const [spec, setSpec] = useState<DoorSpec>(initialSpec ?? DEFAULT_SPEC)
   const [open, setOpen] = useState(false)
   const [note, setNote] = useState('')
   const [state, formAction, isPending] = useActionState(saveConfigurationAction, initialState)
   const [previewState, previewAction, previewPending] = useActionState(
-    generateDoorPreviewAction,
+    generateDesignImageAction,
     initialPreviewState
   )
 
@@ -147,7 +129,6 @@ export function Configurator({
     setOpen(false)
   }
 
-  const displayBalance = previewState.balance ?? creditBalance
   const noteWords = previewNoteWordCount(note)
 
   return (
@@ -175,139 +156,66 @@ export function Configurator({
           Generic Doorlink styles, not a specific manufacturer&apos;s product.
         </p>
 
-        {/* Photo preview is prompted for garage doors only, and the action refuses anything else.
-            Hidden until an image provider is connected: a "not connected" box is noise to a customer. */}
-        {family === 'garage' && previewAvailable && (
-          <section className="mt-6">
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-deep">Photo preview</h2>
-            {creditsCheckoutNotice && (
-              <p className="mt-3 rounded-md border border-line bg-rail p-3 text-sm text-graphite-soft">
-                {creditsCheckoutNotice}
-              </p>
-            )}
-            {previewAvailable ? (
-              <>
-                {!signedIn ? (
-                  <p className="mt-3 text-sm text-graphite-soft">
-                    <Link
-                      href="/sign-in?next=/configure"
-                      className="font-medium text-signal hover:text-signal-hover"
-                    >
-                      Sign in
-                    </Link>{' '}
-                    to use photo preview credits.
-                  </p>
-                ) : (
-                  <>
-                    <p className="mt-3 text-sm text-graphite-soft">
-                      Each successful preview uses {PREVIEW_CREDIT_COST} credit. You have{' '}
-                      <span className="font-medium text-graphite">{displayBalance ?? 0}</span> credit
-                      {(displayBalance ?? 0) === 1 ? '' : 's'}.
-                    </p>
-
-                    {previewState.imageDataUrl && (
-                      <figure className="mt-3 max-w-full overflow-hidden rounded-md border border-line">
-                        {/* eslint-disable-next-line @next/next/no-img-element -- ephemeral data URL from OpenAI */}
-                        <img
-                          src={previewState.imageDataUrl}
-                          alt="Generated preview of your door choices on your photo"
-                          className="block h-auto w-full max-w-full"
-                        />
-                        <figcaption className="border-t border-line bg-rail px-3 py-2 text-micro text-zinc-deep">
-                          AI-generated preview from your photo and choices. Not a product photo from a
-                          manufacturer.
-                        </figcaption>
-                      </figure>
-                    )}
-
-                    {(displayBalance ?? 0) >= PREVIEW_CREDIT_COST ? (
-                      <form action={previewAction} className="mt-3 flex flex-col gap-3">
-                        <input type="hidden" name="spec" value={JSON.stringify(spec)} />
-                        <p className="text-sm text-graphite-soft">
-                          Upload a photo of your garage opening. We&apos;ll generate one indicative image using
-                          your choices above.
-                        </p>
-                        <Field label="Your photo" htmlFor="preview-photo">
-                          <Input
-                            id="preview-photo"
-                            name="photo"
-                            type="file"
-                            accept="image/jpeg,image/png,image/webp"
-                            required
-                          />
-                        </Field>
-                        <Field
-                          label="Notes for this preview"
-                          htmlFor="preview-note"
-                          hint={`${noteWords} / ${PREVIEW_NOTE_MAX_WORDS} words. Optional. Describe the opening, the house, or what to keep.`}
-                        >
-                          <Textarea
-                            id="preview-note"
-                            name="note"
-                            value={note}
-                            maxLength={2000}
-                            onChange={(event) => setNote(event.target.value)}
-                            placeholder="For example: keep the brick piers, and make the door charcoal."
-                          />
-                        </Field>
-                        {noteWords > PREVIEW_NOTE_MAX_WORDS && (
-                          <p role="alert" className="text-sm text-bad">
-                            Keep the notes to {PREVIEW_NOTE_MAX_WORDS} words.
-                          </p>
-                        )}
-                        {previewState.error && (
-                          <p role="alert" className="text-sm text-bad">
-                            {previewState.error}
-                          </p>
-                        )}
-                        <Button
-                          type="submit"
-                          variant="secondary"
-                          disabled={previewPending || noteWords > PREVIEW_NOTE_MAX_WORDS}
-                        >
-                          {previewPending ? 'Generating…' : 'Generate preview'}
-                        </Button>
-                      </form>
-                    ) : (
-                      <div className="mt-3 flex flex-col gap-3">
-                        {previewState.error && (
-                          <p role="alert" className="text-sm text-bad">
-                            {previewState.error}
-                          </p>
-                        )}
-                        <p className="text-sm text-graphite-soft">Buy credits to generate a preview.</p>
-                        {creditsCheckoutReady && creditPacks.length > 0 ? (
-                          <ul className="flex flex-col gap-2">
-                            {creditPacks.map((pack) => (
-                              <li key={pack.code}>
-                                <form action={startCreditPackCheckoutAction}>
-                                  <input type="hidden" name="packCode" value={pack.code} />
-                                  <Button type="submit" variant="secondary" className="w-full justify-between">
-                                    <span>{pack.name}</span>
-                                    <span>{formatMoney(pack.priceCents, pack.currency)}</span>
-                                  </Button>
-                                </form>
-                              </li>
-                            ))}
-                          </ul>
-                        ) : (
-                          <NotConnected
-                            feature="Buying credits"
-                            reason="Stripe is not connected yet. Set STRIPE_SECRET_KEY and STRIPE_WEBHOOK_SECRET to buy preview credits."
-                          />
-                        )}
-                      </div>
-                    )}
-                  </>
-                )}
-              </>
-            ) : (
-              <div className="mt-3">
-                <NotConnected
-                  feature="Photo preview"
-                  reason="No image provider is connected. Set OPENAI_API_KEY to enable photo preview."
+        {/* Free AI image of the design, paid for by Doorlink. Hidden until an
+            image provider is connected: a "not connected" box is noise to a customer. */}
+        {previewAvailable && (
+          <section className="mt-6 rounded-lg border border-line bg-paper p-4" aria-labelledby="ai-heading">
+            <h2 id="ai-heading" className="flex items-center gap-2 text-sm font-semibold text-graphite">
+              AI photo of your design <span className="rounded-full bg-good/15 px-2 py-0.5 text-micro font-semibold text-good">Free</span>
+            </h2>
+            {previewState.imageDataUrl && (
+              <figure className="mt-3 max-w-full overflow-hidden rounded-md border border-line">
+                {/* eslint-disable-next-line @next/next/no-img-element -- generated image */}
+                <img
+                  src={previewState.imageDataUrl}
+                  alt="AI-generated image of your design"
+                  className="block h-auto w-full max-w-full"
                 />
-              </div>
+                <figcaption className="border-t border-line bg-rail px-3 py-2 text-micro text-zinc-deep">
+                  AI-generated from your choices. Indicative only, not a manufacturer’s product photo.
+                </figcaption>
+              </figure>
+            )}
+            {!signedIn ? (
+              <p className="mt-2 text-sm text-graphite-soft">
+                <Link href="/sign-in?next=/configure" className="font-medium text-signal hover:text-signal-hover">
+                  Sign in
+                </Link>{' '}
+                to generate a free, realistic image of your design, on a photo of your home if you like.
+              </p>
+            ) : (
+              <form action={previewAction} className="mt-3 flex flex-col gap-3">
+                <input type="hidden" name="spec" value={JSON.stringify(spec)} />
+                <Field
+                  label="Photo of your home (optional)"
+                  htmlFor="preview-photo"
+                  hint="Add one to see the design in place. Without one, you get a realistic stand-alone image."
+                >
+                  <Input id="preview-photo" name="photo" type="file" accept="image/jpeg,image/png,image/webp" />
+                </Field>
+                <Field
+                  label="Notes (optional)"
+                  htmlFor="preview-note"
+                  hint={`${noteWords} / ${PREVIEW_NOTE_MAX_WORDS} words.`}
+                >
+                  <Textarea
+                    id="preview-note"
+                    name="note"
+                    value={note}
+                    maxLength={2000}
+                    onChange={(event) => setNote(event.target.value)}
+                    placeholder="For example: keep the brick piers."
+                  />
+                </Field>
+                {previewState.error && (
+                  <p role="alert" className="text-sm text-bad">
+                    {previewState.error}
+                  </p>
+                )}
+                <Button type="submit" variant="secondary" disabled={previewPending || noteWords > PREVIEW_NOTE_MAX_WORDS}>
+                  {previewPending ? 'Generating… (up to a minute)' : previewState.imageDataUrl ? 'Regenerate, free' : 'Generate free AI image'}
+                </Button>
+              </form>
             )}
           </section>
         )}
