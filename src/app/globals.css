@@ -228,9 +228,13 @@ body {
   position: relative;
   display: block;
   flex: 1;
-  border: 5px solid #aeb5ba;
+  border: 5px solid var(--garage-fallback-hardware-color, #aeb5ba);
   border-radius: 2px;
-  background: linear-gradient(135deg, #454d52, #22282b 72%);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--garage-fallback-door-color, #343a3e), white 18%),
+    var(--garage-fallback-door-color, #343a3e) 72%
+  );
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.13), 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -239,6 +243,70 @@ body {
   inset: 8px;
   border: 1px solid rgba(255, 255, 255, 0.13);
   background: linear-gradient(160deg, transparent 40%, rgba(0, 0, 0, 0.14));
+}
+
+.garage-fallback-door[data-profile='flush'] .garage-fallback-panel-inset,
+.garage-fallback-door[data-kind='roller'] .garage-fallback-panel-inset {
+  display: none;
+}
+
+.garage-fallback-door[data-profile='ribbed'] .garage-fallback-panel {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 5px,
+    rgba(255, 255, 255, 0.2) 6px,
+    rgba(0, 0, 0, 0.16) 8px
+  );
+}
+
+.garage-fallback-door[data-finish='woodgrain'] .garage-fallback-panel {
+  background-image: repeating-linear-gradient(
+    2deg,
+    transparent 0 8px,
+    rgba(255, 255, 255, 0.12) 9px,
+    rgba(0, 0, 0, 0.1) 11px
+  );
+}
+
+.garage-fallback-door[data-finish='gloss'] .garage-fallback-panel {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.32),
+    inset 0 -12px 22px rgba(0, 0, 0, 0.13),
+    0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.garage-fallback-door[data-kind='roller'] {
+  gap: 1px;
+}
+
+.garage-fallback-door[data-kind='roller'] .garage-fallback-panel {
+  border-width: 1px 4px;
+  border-radius: 0;
+}
+
+.garage-fallback-door[data-windows='top-row'] .garage-fallback-panel:first-child::after,
+.garage-fallback-door[data-windows='top-row-wide'] .garage-fallback-panel:first-child::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 48%;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(238, 246, 248, 0.82);
+  border-radius: 2px;
+  background: linear-gradient(145deg, #c8e0eb, #617c8b);
+  box-shadow: inset 0 0 0 2px rgba(26, 43, 52, 0.4);
+  content: '';
+}
+
+.garage-fallback-door[data-windows='top-row'] .garage-fallback-panel:first-child::after {
+  width: 28%;
+  background:
+    linear-gradient(90deg, transparent 30%, #435965 30% 35%, transparent 35% 65%, #435965 65% 70%, transparent 70%),
+    linear-gradient(145deg, #c8e0eb, #617c8b);
+}
+
+.garage-fallback-door[data-windows='top-row-wide'] .garage-fallback-panel:first-child::after {
+  width: 84%;
 }
 
 .garage-fallback-controls {
@@ -290,6 +358,50 @@ body {
   color: rgba(245, 247, 249, 0.48);
   font-size: 0.5rem;
   letter-spacing: 0.1em;
+}
+
+.configurator-fallback-scene {
+  position: relative;
+  isolation: isolate;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  overflow: hidden;
+  touch-action: pan-y;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #b8d3e6 0%, #eaf0ee 68%, #aab3b3 100%);
+  user-select: none;
+}
+
+.configurator-fallback-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.configurator-fallback-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  background: rgba(23, 50, 77, 0.72);
+  padding: 6px 10px;
+  color: white;
+  font-family: var(--font-plex-mono), ui-monospace, monospace;
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+@media (min-width: 640px) {
+  .configurator-fallback-scene {
+    aspect-ratio: 16 / 10;
+  }
 }
 
 /* -------------------------------------------------------------------------

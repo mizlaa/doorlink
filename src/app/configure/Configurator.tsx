@@ -158,7 +158,11 @@ export function Configurator({
           design in view while the options scroll beneath it. */}
       <div className="min-w-0 w-full max-w-full max-lg:portrait:contents lg:sticky lg:top-6 lg:w-[54%] lg:shrink-0">
         <div className="max-lg:portrait:sticky max-lg:portrait:top-0 max-lg:portrait:z-20 max-lg:portrait:-mx-4 max-lg:portrait:-mb-6 max-lg:portrait:bg-paper/95 max-lg:portrait:px-4 max-lg:portrait:pb-3 max-lg:portrait:pt-3 max-lg:portrait:shadow-[0_8px_16px_-12px_rgba(23,50,77,0.35)] max-lg:portrait:backdrop-blur">
-          <ConfiguratorScene preview={scenePreview} isOpen={open} />
+          <ConfiguratorScene
+            preview={scenePreview}
+            isOpen={open}
+            onToggle={() => setOpen((value) => !value)}
+          />
 
           <div className="mt-3 flex items-center justify-between gap-3">
             {words.open ? (
@@ -168,7 +172,7 @@ export function Configurator({
             ) : (
               <span />
             )}
-            <p className="text-micro text-zinc-deep">Drag to turn</p>
+            <p className="text-micro text-zinc-deep">Drag to explore</p>
           </div>
         </div>
         <p className="mt-2 text-micro text-zinc-deep max-lg:portrait:order-last max-lg:portrait:mt-0">

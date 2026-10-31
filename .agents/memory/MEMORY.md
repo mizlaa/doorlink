@@ -2,7 +2,7 @@
 - [Manual contribution boundary](manual-contributions.md) — route user manual suggestions through review with a public source link until storage is connected.
 - [Workflow port conflicts](workflow-port-conflicts.md) — a stale Next process can make a healthy app look crashed and block the replacement workflow on port 5000.
 - [Prisma client generation](prisma-client-generation.md) — regenerate Prisma Client after schema or branch changes before diagnosing missing types.
-- [WebGL preview limitation](webgl-preview-limit.md) — the hosted screenshot browser may have no WebGL 2 context even when the app workflow is healthy.
+- [WebGL preview limitation](webgl-preview-limit.md) — keep configurator previews interactive and option-aware when WebGL 2 is unavailable.
 - [Dependency patch boundaries](dependency-patches.md) — security overrides avoid unrelated Next/Tailwind migrations; reassess upstream fixes before removing them.
 - [Database-backed metadata](database-backed-metadata.md) — publishing can build before production schema initialization; metadata must not require tables at build time.
 - [Publish enum-array quoting](publish-enum-arrays.md) — mixed-case enum names caused malformed generated array types; preserve the lowercase database mapping.
