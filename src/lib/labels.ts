@@ -86,25 +86,31 @@ export const LEAD_STATUS_TONE: Record<LeadStatus, Tone> = {
 }
 
 export const JOB_STATUS_LABELS: Record<JobStatus, string> = {
-  REQUESTED: 'Requested',
-  ACCEPTED: 'Accepted',
-  AWAITING_PAYMENT: 'Awaiting payment',
+  REQUESTED: 'Awaiting business confirmation',
+  ACCEPTED: 'Confirmed',
+  AWAITING_PAYMENT: 'Awaiting customer payment',
+  PAYMENT_CONFIRMED: 'Payment confirmed',
   SCHEDULED: 'Scheduled',
-  IN_PROGRESS: 'In progress',
+  IN_PROGRESS: 'Work in progress',
+  BUSINESS_COMPLETED: 'Awaiting customer confirmation',
   COMPLETED: 'Completed',
   CANCELLED: 'Cancelled',
   DISPUTED: 'Disputed',
+  DECLINED: 'Declined',
 }
 
 export const JOB_STATUS_TONE: Record<JobStatus, Tone> = {
   REQUESTED: 'signal',
   ACCEPTED: 'signal',
   AWAITING_PAYMENT: 'caution',
+  PAYMENT_CONFIRMED: 'good',
   SCHEDULED: 'caution',
   IN_PROGRESS: 'caution',
+  BUSINESS_COMPLETED: 'caution',
   COMPLETED: 'good',
   CANCELLED: 'neutral',
   DISPUTED: 'bad',
+  DECLINED: 'neutral',
 }
 
 export const QUOTE_STATUS_LABELS: Record<QuoteStatus, string> = {

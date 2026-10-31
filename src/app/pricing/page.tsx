@@ -112,7 +112,7 @@ export default async function PricingPage({ searchParams }: PageProps) {
                         <div className="flex flex-wrap items-start justify-between gap-3">
                           <div className="min-w-0">
                             <p className="font-medium text-graphite">
-                              {[rule.productBrand ?? 'No brand named', style].filter(Boolean).join(' · ')}
+                              {[rule.productBrand ?? 'No brand named', rule.productModel, style].filter(Boolean).join(' · ')}
                             </p>
                             <p className="mt-0.5 font-code text-sm text-graphite-soft">
                               {sizeRangeLabel(terms)}
@@ -124,6 +124,11 @@ export default async function PricingPage({ searchParams }: PageProps) {
                                   : 'No motor'}
                               </Badge>
                               <Badge>{INSTALLATION_LABELS[rule.installation]}</Badge>
+                              {rule.priceType === 'ESTIMATE' && <Badge tone="caution">Estimate</Badge>}
+                              {rule.material && <Badge>{rule.material.replace('-', ' ')}</Badge>}
+                              {rule.motorAddOnCents !== null && (
+                                <Badge>Motor add-on {formatMoney(rule.motorAddOnCents)}</Badge>
+                              )}
                               {!rule.active && <Badge tone="caution">Off</Badge>}
                             </div>
                           </div>

@@ -73,3 +73,29 @@ export function formatCommissionRate(bps: number): string {
   const percent = (bps / 100).toFixed(2).replace(/\.?0+$/, '')
   return `${percent}%`
 }
+
+/**
+ * The split for a marketplace payment whose commission is worked on part
+ * of it — the price before GST, since GST is the tax office's money, not
+ * the business's revenue. On a $3,300 job ($3,000 + GST) at 5%, Doorlink's
+ * fee is $150 and $3,150 goes to the business's side, before its card
+ * processing fees.
+ */
+export function calculateBasedSplit(grossCents: number, baseCents: number, commissionRateBps: number): CommissionSplit {
+  if (!Number.isInteger(baseCents) || baseCents < 0 || baseCents > grossCents) {
+    throw new Error('baseCents must be whole cents between 0 and the gross')
+  }
+  const base = calculateSplit(baseCents, commissionRateBps)
+  return {
+    grossCents,
+    commissionRateBps,
+    commissionCents: base.commissionCents,
+    workerPayoutCents: grossCents - base.commissionCents,
+  }
+}
+
+/** The share of a commission base that belongs to one part payment (a deposit or a balance). */
+export function proportionalBase(totalBaseCents: number, totalGrossCents: number, partGrossCents: number): number {
+  if (totalGrossCents <= 0) return 0
+  return Math.min(partGrossCents, Math.round((totalBaseCents * partGrossCents) / totalGrossCents))
+}

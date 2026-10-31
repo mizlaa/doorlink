@@ -32,48 +32,81 @@ export const ACTIVE_JOB_STATUSES: JobStatus[] = [
   JobStatus.REQUESTED,
   JobStatus.ACCEPTED,
   JobStatus.AWAITING_PAYMENT,
+  JobStatus.PAYMENT_CONFIRMED,
   JobStatus.SCHEDULED,
   JobStatus.IN_PROGRESS,
+  JobStatus.BUSINESS_COMPLETED,
 ]
+
+/** How many days a customer has to confirm or dispute finished work before it completes itself. */
+export const AUTO_COMPLETE_DAYS = 7
 
 /**
  * Which status a given actor is allowed to move a job to.
  *
- * Deliberately asymmetric: a worker can say "I've started" and "I'm
- * done", but only a customer can cancel outright, and neither side can
+ * Deliberately asymmetric: a business says "I've started" and "I'm
+ * done", the customer confirms the work is done, and neither side can
  * unilaterally declare a dispute resolved. Encoding this as data rather
  * than scattered `if` statements means the job page can render exactly
  * the buttons a person is allowed to press.
+ *
+ * Confirming or declining a booking, accepting the price and paying are
+ * their own actions (they carry a price, terms or money) and are not
+ * plain transitions.
  */
 export type JobActor = 'customer' | 'worker' | 'admin'
 
 const TRANSITIONS: Record<JobActor, Partial<Record<JobStatus, JobStatus[]>>> = {
   worker: {
-    [JobStatus.ACCEPTED]: [JobStatus.SCHEDULED],
-    [JobStatus.SCHEDULED]: [JobStatus.IN_PROGRESS],
-    [JobStatus.IN_PROGRESS]: [JobStatus.COMPLETED],
+    [JobStatus.ACCEPTED]: [JobStatus.SCHEDULED, JobStatus.CANCELLED],
+    [JobStatus.PAYMENT_CONFIRMED]: [JobStatus.SCHEDULED, JobStatus.CANCELLED],
+    [JobStatus.SCHEDULED]: [JobStatus.IN_PROGRESS, JobStatus.SCHEDULED, JobStatus.CANCELLED],
+    [JobStatus.IN_PROGRESS]: [JobStatus.BUSINESS_COMPLETED],
   },
   customer: {
+    [JobStatus.REQUESTED]: [JobStatus.CANCELLED],
+    [JobStatus.AWAITING_PAYMENT]: [JobStatus.CANCELLED],
     [JobStatus.ACCEPTED]: [JobStatus.CANCELLED, JobStatus.DISPUTED],
+    [JobStatus.PAYMENT_CONFIRMED]: [JobStatus.CANCELLED, JobStatus.DISPUTED],
     [JobStatus.SCHEDULED]: [JobStatus.CANCELLED, JobStatus.DISPUTED],
     [JobStatus.IN_PROGRESS]: [JobStatus.DISPUTED],
+    [JobStatus.BUSINESS_COMPLETED]: [JobStatus.COMPLETED, JobStatus.DISPUTED],
     [JobStatus.COMPLETED]: [JobStatus.DISPUTED],
   },
   admin: {
+    [JobStatus.REQUESTED]: [JobStatus.CANCELLED],
+    [JobStatus.AWAITING_PAYMENT]: [JobStatus.CANCELLED],
     [JobStatus.ACCEPTED]: [JobStatus.SCHEDULED, JobStatus.CANCELLED, JobStatus.DISPUTED],
+    [JobStatus.PAYMENT_CONFIRMED]: [JobStatus.SCHEDULED, JobStatus.CANCELLED, JobStatus.DISPUTED],
     [JobStatus.SCHEDULED]: [JobStatus.IN_PROGRESS, JobStatus.CANCELLED, JobStatus.DISPUTED],
-    [JobStatus.IN_PROGRESS]: [JobStatus.COMPLETED, JobStatus.CANCELLED, JobStatus.DISPUTED],
+    [JobStatus.IN_PROGRESS]: [JobStatus.BUSINESS_COMPLETED, JobStatus.CANCELLED, JobStatus.DISPUTED],
+    [JobStatus.BUSINESS_COMPLETED]: [JobStatus.COMPLETED, JobStatus.DISPUTED],
     [JobStatus.COMPLETED]: [JobStatus.DISPUTED],
     [JobStatus.DISPUTED]: [JobStatus.COMPLETED, JobStatus.CANCELLED],
   },
 }
 
-export function allowedTransitions(actor: JobActor, from: JobStatus): JobStatus[] {
-  return TRANSITIONS[actor][from] ?? []
+export interface TransitionContext {
+  /** Money has been taken through Doorlink for this job. */
+  paid?: boolean
 }
 
-export function canTransition(actor: JobActor, from: JobStatus, to: JobStatus): boolean {
-  return allowedTransitions(actor, from).includes(to)
+export function allowedTransitions(actor: JobActor, from: JobStatus, context: TransitionContext = {}): JobStatus[] {
+  const moves = TRANSITIONS[actor][from] ?? []
+  // Once a customer has paid through Doorlink, walking away is a dispute
+  // (so a refund is decided), not a one-click cancel. A business can
+  // still cancel; that refunds the customer in full.
+  if (context.paid && actor === 'customer') return moves.filter((to) => to !== JobStatus.CANCELLED)
+  return moves
+}
+
+export function canTransition(
+  actor: JobActor,
+  from: JobStatus,
+  to: JobStatus,
+  context: TransitionContext = {}
+): boolean {
+  return allowedTransitions(actor, from, context).includes(to)
 }
 
 export function jobActorFor(
@@ -219,7 +252,7 @@ export async function acceptQuote(quoteId: string, acceptingUserId: string) {
  */
 export async function recomputeWorkerRating(workerUserId: string, tx: Prisma.TransactionClient = prisma) {
   const aggregate = await tx.workerReview.aggregate({
-    where: { workerId: workerUserId },
+    where: { workerId: workerUserId, status: 'PUBLISHED' },
     _avg: { rating: true },
     _count: true,
   })

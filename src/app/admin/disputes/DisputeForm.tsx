@@ -89,6 +89,12 @@ export function DisputeForm({ disputeId, jobIsDisputed }: { disputeId: string; j
           </Select>
         </Field>
       )}
+      {decision !== 'IN_REVIEW' && jobIsDisputed && (
+        <label className="flex items-center gap-2 text-sm text-graphite">
+          <input type="checkbox" name="refund" className="h-4 w-4 accent-signal" />
+          If cancelled, refund everything the customer paid through Doorlink
+        </label>
+      )}
 
       {state.error && (
         <p role="alert" className="text-sm text-bad">

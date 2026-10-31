@@ -122,6 +122,7 @@ export function requestFromSpec(
     widthMm: spec.widthMm,
     heightMm: spec.heightMm,
     brand: choices.brand,
+    material: ['SLIDING_GATE', 'SWING_GATE', 'PEDESTRIAN_GATE', 'FENCE'].includes(product) ? spec.material : null,
     motorRequired,
     motorBrand: motorRequired && listed ? spec.motorBrand : null,
     installRequired: choices.installRequired,

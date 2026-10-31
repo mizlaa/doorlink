@@ -8,6 +8,7 @@ import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { NotConnected } from '@/components/ui/NotConnected'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { Badge } from '@/components/ui/Badge'
+import { moderateReviewAction } from './review-actions'
 import { ReportActions } from './ReportActions'
 
 export const metadata: Metadata = { title: 'Reports' }
@@ -53,6 +54,15 @@ export default async function AdminReportsPage() {
     if (!isDatabaseUnreachable(error)) throw error
     return <NotConnected feature="Reports" reason="Can't reach the database right now." />
   }
+  const reviewIds = open.filter((r) => r.targetType === 'WORKER_REVIEW').map((r) => r.targetId)
+  const reviews = new Map(
+    (
+      await prisma.workerReview.findMany({
+        where: { id: { in: reviewIds } },
+        include: { author: { select: { name: true } }, worker: { select: { name: true } } },
+      })
+    ).map((review) => [review.id, review])
+  )
 
   return (
     <div className="flex flex-col gap-10">
@@ -89,6 +99,40 @@ export default async function AdminReportsPage() {
                   {report.detail && (
                     <p className="mt-3 whitespace-pre-wrap text-sm text-graphite-soft">{report.detail}</p>
                   )}
+                  {reviews.get(report.targetId) && (() => {
+                    const review = reviews.get(report.targetId)!
+                    return (
+                      <div className="mt-3 rounded-md bg-rail p-3 text-sm">
+                        <p className="text-micro text-zinc-deep">
+                          {review.rating}★ review by {review.author.name} of {review.worker.name} ·{' '}
+                          {review.status === 'HIDDEN' ? 'hidden' : 'published'}
+                        </p>
+                        {review.body && <p className="mt-1 whitespace-pre-line text-graphite">{review.body}</p>}
+                        <form action={moderateReviewAction} className="mt-3 flex flex-wrap items-center gap-2">
+                          <input type="hidden" name="reviewId" value={review.id} />
+                          <input
+                            name="note"
+                            maxLength={500}
+                            placeholder="Reason (shown to the author)"
+                            aria-label="Reason"
+                            className="h-9 min-w-56 flex-1 rounded-md border border-line bg-paper px-2"
+                          />
+                          {review.status === 'PUBLISHED' ? (
+                            <button name="status" value="HIDDEN" className="h-9 rounded-md border border-bad/40 px-3 font-semibold text-bad">
+                              Hide review
+                            </button>
+                          ) : (
+                            <button name="status" value="PUBLISHED" className="h-9 rounded-md border border-line px-3 font-semibold text-graphite">
+                              Restore review
+                            </button>
+                          )}
+                        </form>
+                        <p className="mt-2 text-micro text-zinc-deep">
+                          Hide only fake, abusive or private content. Honest negative reviews stay up.
+                        </p>
+                      </div>
+                    )
+                  })()}
 
                   <div className="mt-4 border-t border-line pt-4">
                     <ReportActions reportId={report.id} />

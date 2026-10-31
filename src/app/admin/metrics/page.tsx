@@ -5,6 +5,8 @@ import { getSession } from '@/lib/auth'
 import { can } from '@/lib/rbac'
 import { formatMoney } from '@/lib/money'
 import { platformMetrics } from '@/lib/metrics'
+import { businessPerformance, marketplaceAnalytics } from '@/lib/marketplace-analytics'
+import { businessCard, decodeBusinessKey } from '@/lib/pricing/business'
 import { paymentsAvailable } from '@/lib/payments'
 import { NotConnected } from '@/components/ui/NotConnected'
 import { Panel, PanelBody } from '@/components/ui/Panel'
@@ -22,9 +24,83 @@ export default async function AdminMetricsPage() {
   }
 
   const live = paymentsAvailable()
+  const [m, performance] = await Promise.all([marketplaceAnalytics(), businessPerformance()])
+  const names = new Map(
+    await Promise.all(
+      performance.map(async (p) => {
+        const key = decodeBusinessKey(p.businessKey)
+        return [p.businessKey, (key && (await businessCard(key))?.name) || p.businessKey] as const
+      })
+    )
+  )
+  const pct = (v: number | null) => (v === null ? '—' : `${v}%`)
 
   return (
     <div className="flex flex-col gap-10">
+      <section>
+        <h2 className="text-lg font-semibold text-graphite">Design-to-job marketplace</h2>
+        <p className="mt-1 max-w-prose text-sm text-graphite-soft">Counted from real records. Nothing is estimated.</p>
+        <Grid>
+          <Figure label="Businesses live" value={m.businesses.approved} detail={`${m.businesses.pending} awaiting approval · ${m.businesses.suspended} suspended`} href="/admin/businesses" />
+          <Figure label="Active customers, 30 days" value={m.activeCustomers} detail="Compared quotes or had a job" />
+          <Figure label="Designs" value={m.designsSaved} detail={`${m.aiImages} AI images made`} />
+          <Figure label="Free quote comparisons" value={m.comparisons} detail={`${m.quotesIssued} quotes issued · ${m.customRequests} custom requests`} />
+          <Figure label="Bookings requested" value={m.jobs.requested} detail={`${m.jobs.confirmed} confirmed · ${m.jobs.declined} declined`} />
+          <Figure label="Jobs completed" value={m.jobs.completed} detail={`${m.jobs.disputed} disputed now · ${m.disputesOpen} disputes open`} href="/admin/disputes" />
+        </Grid>
+        <Grid className="mt-4">
+          <Figure label="Gross paid through Doorlink" value={formatMoney(m.money.grossCents)} detail={`${m.money.payments} payments`} />
+          <Figure label="Doorlink commission" value={formatMoney(m.money.commissionCents)} detail={`Plus ${formatMoney(m.money.commissionDirectCents)} on jobs paid directly, to invoice`} />
+          <Figure label="Stripe processing fees" value={formatMoney(m.money.processingFeeCents)} detail="Paid by businesses on their charges" />
+          <Figure label="Refunded" value={formatMoney(m.money.refundedCents)} />
+          <Figure label="AI spend" value={formatMoney(m.money.aiSpendCents)} detail="At the configured cost per image" href="/admin/ai" />
+          <Figure
+            label="Average rating"
+            value={m.ratings.average === null ? '—' : `${m.ratings.average.toFixed(2)}/5`}
+            detail={`${m.ratings.count} verified reviews`}
+          />
+        </Grid>
+        <Grid className="mt-4">
+          <Figure label="Comparison → booking" value={pct(m.conversion.comparisonToBooking)} />
+          <Figure label="Booking → confirmed" value={pct(m.conversion.bookingToConfirmed)} />
+          <Figure label="Confirmed → completed" value={pct(m.conversion.confirmedToCompleted)} />
+        </Grid>
+        {performance.length > 0 && (
+          <div className="mt-6 overflow-x-auto">
+            <table className="w-full min-w-[36rem] text-sm">
+              <thead>
+                <tr className="border-b border-line text-left text-micro uppercase tracking-wide text-zinc-deep">
+                  <th className="py-2 font-medium">Business</th>
+                  <th className="py-2 text-right font-medium">Quotes</th>
+                  <th className="py-2 text-right font-medium">Booked</th>
+                  <th className="py-2 text-right font-medium">Completed</th>
+                  <th className="py-2 text-right font-medium">Paid</th>
+                  <th className="py-2 text-right font-medium">Commission</th>
+                </tr>
+              </thead>
+              <tbody>
+                {performance
+                  .sort((a, b) => b.grossCents - a.grossCents || b.booked - a.booked)
+                  .map((p) => (
+                    <tr key={p.businessKey} className="border-b border-line">
+                      <td className="py-2">
+                        <Link href={`/businesses/${p.businessKey}`} className="text-signal hover:text-signal-hover">
+                          {names.get(p.businessKey)}
+                        </Link>
+                      </td>
+                      <td className="py-2 text-right">{p.quotes}</td>
+                      <td className="py-2 text-right">{p.booked}</td>
+                      <td className="py-2 text-right">{p.completed}</td>
+                      <td className="py-2 text-right">{formatMoney(p.grossCents)}</td>
+                      <td className="py-2 text-right">{formatMoney(p.commissionCents)}</td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </section>
+
       <section>
         <h2 className="text-lg font-semibold text-graphite">People</h2>
         <Grid>

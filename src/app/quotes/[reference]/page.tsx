@@ -11,6 +11,9 @@ import { Stars } from '@/components/quotes/Stars'
 import { PrintButton } from '@/components/ui/PrintButton'
 import { prisma } from '@/lib/prisma'
 import { BookingForm } from './BookingForm'
+import { Badge } from '@/components/ui/Badge'
+import { accessoryLabel } from '@/lib/pricing/accessories'
+import type { QuoteLine } from '@/lib/pricing/engine'
 
 // Per-account data: always rendered for the signed-in visitor, never cached.
 export const dynamic = 'force-dynamic'
@@ -81,6 +84,10 @@ export default async function QuoteViewPage({ params }: { params: Promise<{ refe
     ? (await prisma.user.findUnique({ where: { id: session.userId }, select: { phone: true } }))?.phone
     : null
   const style = styleLabel(quote.productStyle)
+  const comparison = quote.comparisonId
+    ? await prisma.quoteComparison.findUnique({ where: { id: quote.comparisonId }, select: { reference: true } })
+    : null
+  const bookable = quote.status === 'ISSUED' && quote.options.length > 0
 
   return (
     <div className="mx-auto w-full max-w-3xl px-4 py-10 sm:py-14">
@@ -113,9 +120,21 @@ export default async function QuoteViewPage({ params }: { params: Promise<{ refe
       </div>
 
       <section className="mt-8">
-        <h2 className="text-sm font-medium text-graphite">
-          {quote.options.length === 1 ? 'Price' : `${quote.options.length} options, lowest first`}
-        </h2>
+        {quote.status === 'CUSTOM_REQUESTED' && (
+          <p className="rounded-lg border border-caution/30 bg-caution-tint p-4 text-sm text-graphite">
+            You asked {quote.businessName} for a custom quote. You’ll be notified when they reply.
+          </p>
+        )}
+        {quote.status === 'DECLINED' && quote.options.length === 0 && (
+          <p className="rounded-lg border border-line bg-rail p-4 text-sm text-graphite">
+            {quote.businessName} can’t quote this design{quote.declinedReason ? `: ${quote.declinedReason}` : '.'}
+          </p>
+        )}
+        {quote.options.length > 0 && (
+          <h2 className="text-sm font-medium text-graphite">
+            {quote.options.length === 1 ? 'Price' : `${quote.options.length} options, lowest first`}
+          </h2>
+        )}
         <ul className="mt-3 flex flex-col gap-4">
           {quote.options.map((option, index) => (
             <li
@@ -137,18 +156,41 @@ export default async function QuoteViewPage({ params }: { params: Promise<{ refe
                   )}
                 </p>
               </div>
+              <p className="mt-2">
+                {option.priceType === 'ESTIMATE' ? (
+                  <Badge tone="caution">Estimate · the business confirms the final price after inspecting the site</Badge>
+                ) : (
+                  <Badge tone="good">Fixed price</Badge>
+                )}
+              </p>
               <dl className="mt-3">
-                <Row
-                  label={option.installation === 'INCLUDED' ? 'Supply and installation' : 'Supply'}
-                  value={formatMoney(option.priceCents, option.currency)}
-                />
+                {Array.isArray(option.lines) ? (
+                  (option.lines as unknown as QuoteLine[]).map((line, i) => (
+                    <Row
+                      key={i}
+                      label={
+                        line.kind === 'base'
+                          ? option.installation === 'INCLUDED'
+                            ? 'Supply and installation'
+                            : 'Supply'
+                          : line.label
+                      }
+                      value={`${formatMoney(line.amountCents, option.currency)}${line.gst === 'EXCLUSIVE' ? ' + GST' : ''}`}
+                    />
+                  ))
+                ) : (
+                  <Row
+                    label={option.installation === 'INCLUDED' ? 'Supply and installation' : 'Supply'}
+                    value={formatMoney(option.priceCents, option.currency)}
+                  />
+                )}
                 <Row
                   label="Installation"
                   value={
                     option.installation === 'INCLUDED'
                       ? 'Included'
                       : option.installPriceCents !== null
-                        ? formatMoney(option.installPriceCents, option.currency)
+                        ? 'Priced above'
                         : 'Not included'
                   }
                 />
@@ -171,6 +213,11 @@ export default async function QuoteViewPage({ params }: { params: Promise<{ refe
                   strong
                 />
               </dl>
+              {option.unpricedAccessories.length > 0 && (
+                <p className="mt-1 text-sm text-caution">
+                  Not priced: {option.unpricedAccessories.map(accessoryLabel).join(', ')}. Ask {quote.businessName} when you book.
+                </p>
+              )}
               <div className="mt-2 flex flex-col gap-1">
                 <MotorNote check={checks[index]} />
                 {option.note && <p className="text-sm text-graphite-soft">“{option.note}”</p>}
@@ -186,7 +233,7 @@ export default async function QuoteViewPage({ params }: { params: Promise<{ refe
             <span className="font-semibold">Booked</span>
             {quote.bookedAt &&
               ` on ${quote.bookedAt.toLocaleDateString('en-AU', { day: 'numeric', month: 'long' })}`}
-            . {isCustomer ? `${quote.businessName} will confirm a date with you.` : 'Schedule it from the job.'}
+            . {isCustomer ? `${quote.businessName} confirms the booking next.` : 'Confirm or decline it from the job.'}
           </p>
           {quote.jobId && (
             <Link
@@ -198,16 +245,19 @@ export default async function QuoteViewPage({ params }: { params: Promise<{ refe
           )}
         </section>
       ) : (
-        isCustomer && (
+        isCustomer &&
+        bookable && (
           <section
             className="mt-8 rounded-lg border border-line bg-paper p-5 shadow-panel"
             aria-labelledby="book-heading"
           >
             <h2 id="book-heading" className="text-lg font-semibold text-graphite">
-              Book this quote
+              Choose {quote.businessName}
             </h2>
             <p className="mb-4 mt-1 text-sm text-graphite-soft">
-              {quote.businessName} gets your address and number, and confirms a date.
+              Free to request. {quote.businessName} gets your address and number and confirms the booking
+              {quote.options.some((o) => o.priceType === 'ESTIMATE') ? ' and final price' : ''}. You only pay once
+              you’ve accepted the final price and terms.
             </p>
             <BookingForm
               reference={quote.reference}
@@ -247,18 +297,26 @@ export default async function QuoteViewPage({ params }: { params: Promise<{ refe
         </dl>
       </section>
 
-      <p className="mt-6 text-micro text-zinc-deep">
-        Issued automatically from {quote.businessName}’s own prices for the size and options above. Prices are
-        fixed on this quote even if the company changes its prices later.
+      {(quote.warranty || quote.leadTimeDays !== null) && (
+        <p className="mt-6 text-sm text-graphite-soft">
+          {quote.warranty && <>Warranty: {quote.warranty}. </>}
+          {quote.leadTimeDays !== null && <>Usually installs within {quote.leadTimeDays} days of booking.</>}
+        </p>
+      )}
+      <p className="mt-3 text-micro text-zinc-deep">
+        {quote.customMessage !== null || quote.respondedAt
+          ? `Quoted by ${quote.businessName} for the design above.`
+          : `Issued automatically from ${quote.businessName}’s own prices for the size and options above.`}{' '}
+        This quote stays as issued even if the company changes its prices later.
       </p>
 
       {isCustomer && (
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
-            href={`/quote?spec=${encodeURIComponent(JSON.stringify(spec))}`}
+            href={comparison ? `/compare/${comparison.reference}` : `/quote?spec=${encodeURIComponent(JSON.stringify(spec))}`}
             className="inline-flex h-11 items-center rounded-md border border-line bg-paper px-4 text-sm font-medium text-graphite hover:bg-rail"
           >
-            Compare other companies
+            {comparison ? 'Back to all quotes' : 'Compare other companies'}
           </Link>
           <Link
             href="/quotes"
