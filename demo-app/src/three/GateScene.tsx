@@ -8,6 +8,7 @@ import { SceneMaterialsProvider, useSceneTextures } from '@/components/three/Sce
 import { useSceneTextures as usePbrTextures } from './assets'
 import { useHouseMaterials } from './materials'
 import { worldBox, seeded } from './geometry'
+import { MergeStatic } from './merge'
 import { NeighbourHouse, TileRoofBlock } from './House'
 import { ColorbondFence } from './Landscape'
 import { addDistantTree, addGumTree, addShrub, addTuft, emptyPlantSet, Plants } from './Plants'
@@ -222,7 +223,7 @@ export function InfillPanel({
     }
   }
 
-  return <group>{items}</group>
+  return <MergeStatic bakeKey={`${width}:${height}:${infill}:${framed}:${material.uuid}`}>{items}</MergeStatic>
 }
 
 export function Pillar({ x, height }: { x: number; height: number }) {

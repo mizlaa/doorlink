@@ -1,6 +1,6 @@
 import { NavigationLink as Link } from '@/components/ui/NavigationLink'
-import { lazy, Suspense, useCallback, useEffect, useState } from 'react'
-import { GarageDoorScene } from '@/components/garage-door/GarageDoorScene'
+import { lazy, Suspense, useCallback, useEffect, useRef, useState } from 'react'
+import { PortalGarageScene, PortalTravel } from '../world/Portal'
 import { useDoorDrag } from '@/components/garage-door/useDoorDrag'
 import './xray.css'
 import '../world/world.css'
@@ -18,6 +18,26 @@ const SESSION_KEY = 'doorlink:garage-door-intro-seen'
 export function GarageDoorHero({ poweredBy }: { poweredBy: string | null }) {
   const [xray, setXray] = useState(false)
   const [world, setWorld] = useState(false)
+  // The portal journey: where it starts, whether it fills the screen yet, and whether the world is ready.
+  const [trip, setTrip] = useState<DOMRect | null>(null)
+  const [tripFull, setTripFull] = useState(false)
+  const [worldReady, setWorldReady] = useState(false)
+  const [revealed, setRevealed] = useState(false)
+  const sim = useRef<HTMLDivElement>(null)
+  const enter = () => {
+    const frame = document.querySelector('.portal-frame')
+    setWorldReady(false)
+    setRevealed(false)
+    setTripFull(false)
+    if (frame && !window.location.search.includes('snapshot')) setTrip(frame.getBoundingClientRect())
+    else setTripFull(true)
+    setWorld(true)
+  }
+  const leave = () => {
+    setWorld(false)
+    setTrip(null)
+    setRevealed(false)
+  }
   const [mounted, setMounted] = useState(false)
   const [hasPlayed, setHasPlayed] = useState(false)
 
@@ -56,6 +76,10 @@ export function GarageDoorHero({ poweredBy }: { poweredBy: string | null }) {
     )
   }
 
+  // Fetch the world's code while the door is still rising, so entering is instant.
+  useEffect(() => {
+    if (progress > 0.15) void import('../world/DoorlinkWorld')
+  }, [progress > 0.15])
   const isOpen = progress > 0.5
   const fullyOpen = progress >= 0.999 && !isDragging
 
@@ -77,20 +101,20 @@ export function GarageDoorHero({ poweredBy }: { poweredBy: string | null }) {
           </div>
         </div>
 
-        <div className="garage-door-sim">
-          <GarageDoorScene
+        <div className="garage-door-sim" ref={sim}>
+          <PortalGarageScene
             progress={progress}
             isDragging={isDragging}
             dragHandlers={dragHandlers}
             poweredBy={poweredBy}
           />
           {fullyOpen && !xray && !world && (
-            <div className="xray-invite">
-              <p>Doorlink is more than garage doors.</p>
-              <button type="button" className="xray-button world-explore" onClick={() => setWorld(true)}>
-                Explore Doorlink World
+            <div className="portal-invite">
+              <p className="portal-invite-title">YOUR WORLD. YOUR DESIGN.</p>
+              <button type="button" className="portal-invite-button" onClick={enter}>
+                Enter Doorlink World
               </button>
-              <button type="button" className="world-link" onClick={() => setXray(true)}>
+              <button type="button" className="portal-invite-link" onClick={() => setXray(true)}>
                 or X-ray this garage door
               </button>
             </div>
@@ -124,10 +148,24 @@ export function GarageDoorHero({ poweredBy }: { poweredBy: string | null }) {
           <XRayGarage onExit={() => setXray(false)} />
         </Suspense>
       )}
-      {world && (
-        <Suspense fallback={<div className="world-root"><div className="xray-loading">Building the property…</div></div>}>
-          <DoorlinkWorld onExit={() => setWorld(false)} />
+      {world && tripFull && (
+        <Suspense fallback={null}>
+          <DoorlinkWorld
+            onExit={leave}
+            arrival
+            revealed={revealed || !trip}
+            onSceneReady={() => setWorldReady(true)}
+          />
         </Suspense>
+      )}
+      {world && trip && !revealed && (
+        <PortalTravel
+          from={trip}
+          sim={sim.current}
+          ready={worldReady}
+          onFull={() => setTripFull(true)}
+          onDone={() => setRevealed(true)}
+        />
       )}
     </section>
   )

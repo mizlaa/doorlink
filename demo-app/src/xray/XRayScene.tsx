@@ -71,7 +71,7 @@ const ghost = new THREE.MeshStandardMaterial({
   side: THREE.DoubleSide,
   roughness: 0.4,
 })
-const edgeMaterial = new THREE.LineBasicMaterial({ color: '#c8d7e6', transparent: true, opacity: 0.32 })
+const edgeMaterial = new THREE.LineBasicMaterial({ color: '#5A6A80', transparent: true, opacity: 0.42 })
 
 function GhostMesh({ geometry, position, rotation }: { geometry: THREE.BufferGeometry; position: [number, number, number]; rotation?: [number, number, number] }) {
   const edges = useMemo(() => new THREE.EdgesGeometry(geometry, 25), [geometry])
@@ -174,7 +174,7 @@ function Driver({
     const c = control.current
     const dt = Math.min(delta, 0.25)
     // Selected parts glow gently; the motor glows harder while it drives.
-    HIGHLIGHT.emissiveIntensity = 0.42 + Math.sin(clock.elapsedTime * 2.6) * 0.14 + (part === 'opener' && c.moving ? 0.5 : 0)
+    HIGHLIGHT.emissiveIntensity = 0.3 + Math.sin(clock.elapsedTime * 2.2) * 0.08 + (part === 'opener' && c.moving ? 0.5 : 0)
     if (!c.playing) {
       c.moving = false
       return
@@ -268,10 +268,10 @@ function Contents({
         args={[40, 40]}
         cellSize={0.5}
         cellThickness={0.6}
-        cellColor="#2a3540"
+        cellColor="#CFD9E3"
         sectionSize={2}
         sectionThickness={1}
-        sectionColor="#3c4a57"
+        sectionColor="#B3C2D1"
         fadeDistance={22}
         fadeStrength={1.4}
         infiniteGrid

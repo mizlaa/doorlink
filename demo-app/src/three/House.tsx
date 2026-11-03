@@ -1,6 +1,7 @@
 import { memo, useMemo } from 'react'
 import * as THREE from 'three'
 import type { HouseMaterials } from './materials'
+import { MergeStatic } from './merge'
 import { extrudeUV, hipRoof, placeAlong, wallWithOpenings, worldBox } from './geometry'
 
 /**
@@ -283,6 +284,7 @@ export const House = memo(function House({ layout, m }: { layout: HouseLayout; m
   const bulkheadH = garageH - doorH
 
   return (
+    <MergeStatic bakeKey={`${doorW}:${doorH}`}>
     <group>
       {/* ---------- Garage ---------- */}
       <mesh geometry={garageFront} material={m.brick} position={[-garageW / 2, 0, -WALL_T]} castShadow receiveShadow />
@@ -344,6 +346,7 @@ export const House = memo(function House({ layout, m }: { layout: HouseLayout; m
       <TileRoofBlock width={houseW} depth={houseD} cx={houseCx} cz={houseCz} y={houseH} m={m} />
       <Downpipe x={houseX0 - 0.045} z={houseFront - 0.18} top={houseH - 0.24} gutterX={houseX0 - EAVE - 0.07} m={m} />
     </group>
+    </MergeStatic>
   )
 })
 

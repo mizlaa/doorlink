@@ -5,6 +5,7 @@ import { worldBox } from './geometry'
 import { NeighbourHouse, WALL_T, type HouseLayout } from './House'
 import { addDistantTree, addGumTree, addShrub, addTuft, emptyPlantSet, Plants } from './Plants'
 import { seeded } from './geometry'
+import { MergeStatic } from './merge'
 
 /**
  * The block around the house: lawn, a broom-finished concrete driveway
@@ -162,6 +163,7 @@ export const Landscape = memo(function Landscape({
   }, [driveW])
 
   return (
+    <MergeStatic bakeKey={`${doorW}:${letterbox}`}>
     <group>
       {/* Lawn everywhere, the hard surfaces on top of it */}
       <mesh geometry={groundGeometry} material={m.lawn} receiveShadow />
@@ -209,5 +211,6 @@ export const Landscape = memo(function Landscape({
       {/* Garage floor */}
       <Slab size={[garageW - WALL_T * 2, 0.02, garageD - WALL_T]} position={[0, 0.006, -(garageD - WALL_T) / 2]} material={m.slab} />
     </group>
+    </MergeStatic>
   )
 })

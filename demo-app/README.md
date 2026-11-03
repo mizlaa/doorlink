@@ -97,13 +97,19 @@ These hosts were not reachable from the build environment, so nothing here prete
 
 ## Doorlink World
 
-Once the hero garage door is fully open, **Explore Doorlink World** (`src/world/`, loaded only when asked for) pulls the camera back from the garage to the whole property. It's built from the designer's own house, landscape, sectional door, gate, fence and pillar parts, with neighbours on both sides and across the street.
+Once the hero garage door is fully open, **Enter Doorlink World** (`src/world/`, loaded only when asked for) carries the visitor through a portal in the garage into the whole property. It's built from the designer's own house, landscape, sectional door, gate, fence and pillar parts, with neighbours on both sides and across the street.
 
 - **Transform my property** runs one sequence: a new garage door is fitted while the old one is up, then an automated sliding gate between new pillars, then the old pickets are swapped for a matching slat fence and pedestrian gate, then roller shutters go on the front windows, and finally everything operates together. It can be skipped and replayed.
 - Afterwards, tap any product (or its label) to operate it. Each card has an **X-ray** view: gate motor and track, gate hinges and latch, shutter axle and guide rails, fence posts and footings. The garage card also opens the full X-Ray Garage.
 - Fence styles (charcoal slats, timber-look slats, pale pickets, solid grey) restyle the gates as well.
 - **Night** switches to moonlight, lit windows, wall lanterns, path and garden lights, and closes the gates, shutters and garage in turn.
 - The camera orbits all the way round, but stays above the ground, within zoom limits and out of the buildings: if it would enter one, it slides towards its target instead. Portrait screens get a wider lens and views pulled back to the same framing.
+
+### The portal and performance
+
+- **Portal:** as the hero door rises, a luminous doorway fades in on the garage's back wall, showing a glimpse of Doorlink World (`public/images/world/glimpse-*.webp`, captured from the live scene at its arrival framing). It is pure CSS, so the homepage doesn't use WebGL. **Enter Doorlink World** grows the portal to fill the screen while the hero dollies in. The world mounts behind it only once the portal fills the screen, so the expansion never stutters; until the scene is ready the glimpse holds on screen. The glimpse then dissolves into the matching live view, and the camera eases back to the overview. The world's code is fetched while the door is still opening. Reduced-motion and small screens get a shorter version. To refresh the glimpses after changing the scene, open `?snapshot=1#/` and enter the world: it opens at the arrival framing with no interface.
+- **Performance:** `three/merge.tsx` bakes static subtrees (house, landscape, street, every fence and gate panel) into one mesh per material, and `three/shadows.tsx` redraws the shadow map only while something is moving. The distant suburb is two instanced meshes. Measured in the headless test browser on the same view: 1,574 → 281 draw calls per frame and 1,148 → 294 geometries. `?perf` in the URL exposes the renderer for these measurements.
+- **Look:** the world and X-ray overlays use the app's palette (paper, white glass panels, navy text, Doorlink blue). A depth-of-field pass follows the orbit target, so the property stays sharp while the suburb beyond softens (tiers with post-processing only).
 
 ## X-Ray Garage
 

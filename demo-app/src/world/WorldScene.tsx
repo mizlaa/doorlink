@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
+import { memo, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { useFrame, type ThreeEvent } from '@react-three/fiber'
 import { Html } from '@react-three/drei'
 import * as THREE from 'three'
@@ -15,6 +15,9 @@ import { addGumTree, addShrub, emptyPlantSet, Plants } from '../three/Plants'
 import { Stage } from '../three/Stage'
 import type { CameraBus, CameraView } from '../three/CameraRig'
 import { TIERS, type Tier } from '../three/quality'
+import { MergeStatic } from '../three/merge'
+import { seeded } from '../three/geometry'
+import { wakeShadows } from '../three/shadows'
 
 /**
  * Doorlink World: one suburban block with every product on it — the
@@ -113,17 +116,25 @@ function scaledViews(k: number): Record<string, CameraView> {
   // Portrait: look along the street, so the wide frontage fits a tall screen.
   const base: Record<string, CameraView> = {
     ...WORLD_VIEWS,
-    overview: { position: [15, 11, 13], target: [-5.2, 0.4, 2.4] },
-    hero: { position: [10.5, 3.6, 12.5], target: [-4.8, 0.9, 2.8] },
+    overview: { position: [11, 8, 11], target: [-5.2, 0.6, 2.2] },
+    hero: { position: [8.6, 2.4, 11.5], target: [-3.6, 1.5, 2.0] },
   }
   const out: Record<string, CameraView> = {}
   for (const [name, v] of Object.entries(base)) {
     const [px, py, pz] = v.position
     const [tx, ty, tz] = v.target
-    const f = name === 'start' ? Math.min(k, 1.4) : k
+    // The along-street portrait views already fit; they need only a little extra distance.
+    const f = name === 'start' ? Math.min(k, 1.4) : name === 'overview' || name === 'hero' ? Math.min(k, 1.35) : k
     out[name] = { target: v.target, position: [tx + (px - tx) * f, ty + (py - ty) * f, tz + (pz - tz) * f] }
   }
   return out
+}
+
+/** The portal arrival: the overview, a little closer in, so the camera can ease back out. */
+function withArrival(views: Record<string, CameraView>): Record<string, CameraView> {
+  const { position: p, target: t } = views.hero
+  const k = 0.8
+  return { ...views, arrive: { target: t, position: [t[0] + (p[0] - t[0]) * k, t[1] + (p[1] - t[1]) * k, t[2] + (p[2] - t[2]) * k] } }
 }
 
 export const PRODUCT_VIEW: Record<Product, string> = {
@@ -212,10 +223,10 @@ function Outline({ size, position }: { size: [number, number, number]; position:
     <group position={position}>
       <mesh renderOrder={20}>
         <boxGeometry args={size} />
-        <meshBasicMaterial color="#e8762b" transparent opacity={0.22} depthTest={false} depthWrite={false} />
+        <meshBasicMaterial color="#1769D2" transparent opacity={0.16} depthTest={false} depthWrite={false} />
       </mesh>
       <lineSegments geometry={edges} renderOrder={21}>
-        <lineBasicMaterial color="#ffa25e" transparent depthTest={false} />
+        <lineBasicMaterial color="#5BA0FF" transparent depthTest={false} />
       </lineSegments>
     </group>
   )
@@ -442,7 +453,7 @@ function HouseShutter({ win, state, m }: { win: typeof win1; state: WorldState; 
           <>
             <mesh position={[cx, top + 0.09, face + 0.11]} rotation={[0, 0, Math.PI / 2]}>
               <cylinderGeometry args={[0.045, 0.045, win.w, 20]} />
-              <meshStandardMaterial color="#e8762b" emissive="#e8762b" emissiveIntensity={0.6} />
+              <meshStandardMaterial color="#1769D2" emissive="#1769D2" emissiveIntensity={0.5} />
             </mesh>
             <Outline size={[0.06, win.h, 0.08]} position={[win.x - 0.03, win.y + win.h / 2, face + 0.04]} />
             <Outline size={[0.06, win.h, 0.08]} position={[win.x + win.w + 0.03, win.y + win.h / 2, face + 0.04]} />
@@ -539,7 +550,7 @@ function NightLights({ night, gate, m }: { night: boolean; gate: boolean; m: Hou
   )
 }
 
-function Street({ m, shadows }: { m: HouseMaterials; shadows: boolean }) {
+const Street = memo(function Street({ m, shadows }: { m: HouseMaterials; shadows: boolean }) {
   const plants = useMemo(() => {
     const set = emptyPlantSet()
     ;[-23, -10].forEach((x, i) => addGumTree(set, new THREE.Vector3(x, 0, 20.3), 7.5 + (i % 2) * 1.6, 60 + i))
@@ -554,6 +565,7 @@ function Street({ m, shadows }: { m: HouseMaterials; shadows: boolean }) {
   )
   return (
     <group>
+      <MergeStatic>
       <mesh position={[0, -0.075, 19.75]} material={m.concrete} receiveShadow><boxGeometry args={[200, 0.15, 0.3]} /></mesh>
       <mesh position={[0, -0.02, 21.3]} material={m.concrete} receiveShadow><boxGeometry args={[200, 0.06, 1.2]} /></mesh>
       {across.map((x, i) => (
@@ -567,10 +579,57 @@ function Street({ m, shadows }: { m: HouseMaterials; shadows: boolean }) {
       {pavers.map(([x, z], i) => (
         <mesh key={i} position={[x, 0.012, z]} material={m.concrete} receiveShadow><boxGeometry args={[0.62, 0.05, 0.62]} /></mesh>
       ))}
+      </MergeStatic>
       <Plants set={plants} m={m} shadows={shadows} />
     </group>
   )
-}
+})
+
+/**
+ * The wider suburb: rows of houses beyond the neighbours, drawn as two
+ * instanced meshes (walls and hipped roofs, about 30 houses in 2 draw
+ * calls). Far enough out that haze and depth of field soften them.
+ */
+const Suburb = memo(function Suburb() {
+  const { walls, roofs } = useMemo(() => {
+    const rand = seeded(901)
+    const spots: Array<[number, number, number, number, number]> = []
+    for (const z of [-38, -55]) for (let x = -64; x <= 58; x += 16) spots.push([x + rand() * 4, z + rand() * 4, 11 + rand() * 3, 12, 0])
+    for (const z of [50, 67]) for (let x = -60; x <= 60; x += 16) spots.push([x + rand() * 4, z + rand() * 4, 11 + rand() * 3, 12, Math.PI])
+    for (const x of [-37, -52, 26, 40, 54]) spots.push([x, -2.5, 12, 13, 0])
+    for (const x of [-30, -45, 27, 41, 55]) spots.push([x, 24, 12, 13, Math.PI])
+    const wallColours = ['#b98a6e', '#cbbb9f', '#e2dccf', '#a7725a', '#d6d0c4', '#c4a488']
+    const roofColours = ['#3d4246', '#5b6064', '#86583f', '#2f3337', '#6d6f6e']
+    const box = new THREE.BoxGeometry(1, 1, 1)
+    box.translate(0, 0.5, -0.5)
+    const cone = new THREE.ConeGeometry(Math.SQRT1_2, 1, 4, 1)
+    cone.rotateY(Math.PI / 4)
+    cone.translate(0, 0.5, -0.5)
+    const material = new THREE.MeshStandardMaterial({ roughness: 0.92, metalness: 0 })
+    const walls = new THREE.InstancedMesh(box, material, spots.length)
+    const roofs = new THREE.InstancedMesh(cone, material.clone(), spots.length)
+    const m = new THREE.Matrix4()
+    const q = new THREE.Quaternion()
+    const colour = new THREE.Color()
+    spots.forEach(([x, z, w, d, rot], i) => {
+      q.setFromAxisAngle(new THREE.Vector3(0, 1, 0), rot)
+      m.compose(new THREE.Vector3(x, 0, z), q, new THREE.Vector3(w, 2.7, d))
+      walls.setMatrixAt(i, m)
+      walls.setColorAt(i, colour.set(wallColours[i % wallColours.length]))
+      const zr = z + (rot ? -1 : 1) * 0.45
+      m.compose(new THREE.Vector3(x, 2.7, zr), q, new THREE.Vector3(w + 0.9, 2.3, d + 0.9))
+      roofs.setMatrixAt(i, m)
+      roofs.setColorAt(i, colour.set(roofColours[(i * 3) % roofColours.length]))
+    })
+    return { walls, roofs }
+  }, [])
+  return (
+    <>
+      <primitive object={walls} />
+      <primitive object={roofs} />
+    </>
+  )
+})
 
 function Hotspots({ state, onPick }: { state: WorldState; onPick: (p: Product) => void }) {
   if (!state.interactive) return null
@@ -619,12 +678,15 @@ function Property({ state, tier, onPick }: { state: WorldState; tier: Tier; onPi
   const m = useHouseMaterials(textures)
   const settings = TIERS[tier]
   useEffect(() => () => void (document.body.style.cursor = ''), [])
+  // Anything that changes sets things moving: keep shadows live until it settles.
+  useEffect(() => wakeShadows(6500), [state])
   return (
     <group>
       <House layout={layout} m={m} />
       <Interior layout={layout} m={m} />
       <Landscape layout={layout} m={m} tufts={settings.grassTufts} foliageShadows={settings.foliageShadows} letterbox={false} />
       <Street m={m} shadows={settings.foliageShadows} />
+      <Suburb />
       <Pick id="garage" state={state} onPick={onPick}>
         <Garage state={state} t={textures} m={m} />
       </Pick>
@@ -664,8 +726,10 @@ export function WorldScene({
   state,
   onPick,
   aspect,
+  initialView = 'start',
 }: {
   aspect: number
+  initialView?: string
   bus: CameraBus
   tier: Tier
   maxTier: Tier
@@ -678,7 +742,7 @@ export function WorldScene({
   // The lens is fixed when the canvas is created; views follow later resizes.
   const [fov] = useState(() => lensFor(aspect).fov)
   const k = lensFor(aspect).k
-  const views = useMemo(() => scaledViews(k), [k])
+  const views = useMemo(() => withArrival(scaledViews(k)), [k])
   return (
     <Stage
       tier={tier}
@@ -687,7 +751,7 @@ export function WorldScene({
       paused={paused}
       bus={bus}
       views={views}
-      initialView="start"
+      initialView={initialView}
       minDistance={4}
       maxDistance={30 * k}
       maxPolar={1.48}
@@ -696,6 +760,9 @@ export function WorldScene({
       night={state.night}
       blockers={WORLD_BLOCKERS}
       fov={fov}
+      onDemandShadows
+      focusFollow
+      haze={[34, 150]}
     >
       <SceneMaterialsProvider>
         <Property state={state} tier={tier} onPick={onPick} />

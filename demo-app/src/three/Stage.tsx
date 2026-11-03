@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useMemo, type ReactNode } from 'react'
+import { Suspense, useEffect, useMemo, useRef, type ReactNode } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Environment, PerformanceMonitor, Sky } from '@react-three/drei'
 import { DepthOfField, EffectComposer, N8AO, SMAA, ToneMapping } from '@react-three/postprocessing'
@@ -8,6 +8,7 @@ import { useParkEnvironment } from './assets'
 import { CameraRig, type CameraBus, type CameraView, type ViewName } from './CameraRig'
 import { prefersReducedMotion, stepDown, stepUp, TIERS, type Tier } from './quality'
 import { windUniforms } from './wind'
+import { ShadowsOnDemand } from './shadows'
 
 /** Late-morning sun from the north-east, as an Australian street would get. */
 export const SUN: [number, number, number] = [14, 17, 11]
@@ -53,6 +54,9 @@ export function Stage({
   night = false,
   blockers,
   fov = 36,
+  onDemandShadows = false,
+  focusFollow = false,
+  haze,
   children,
 }: {
   tier: Tier
@@ -76,11 +80,18 @@ export function Stage({
   blockers?: THREE.Box3[]
   /** Vertical field of view, set when the canvas is created. */
   fov?: number
+  /** Redraw the shadow map only while the scene changes (see shadows.tsx). */
+  onDemandShadows?: boolean
+  /** Depth of field that keeps the orbit target sharp and softens what lies far beyond it. */
+  focusFollow?: boolean
+  /** Fog start and end, for a hazier, deeper background. */
+  haze?: [number, number]
   children: ReactNode
 }) {
   const settings = TIERS[tier]
   const composer = settings.ambientOcclusion
   const reduced = useMemo(prefersReducedMotion, [])
+  const dof = useRef<{ target: THREE.Vector3 | null } | null>(null)
 
   return (
     <Canvas
@@ -91,6 +102,8 @@ export function Stage({
       camera={{ fov, near: 0.1, far: 260, position: views[initialView].position }}
       onCreated={({ gl }) => {
         gl.outputColorSpace = THREE.SRGBColorSpace
+        // Performance probe for the demo's own measurements (?perf in the URL only).
+        if (window.location.search.includes('perf')) (window as unknown as { __doorlinkGL: THREE.WebGLRenderer }).__doorlinkGL = gl
       }}
     >
       <PerformanceMonitor
@@ -101,9 +114,9 @@ export function Stage({
       />
       <ToneMappingSwitch composer={composer} />
       <WindClock enabled={settings.wind && !reduced} />
-      <color attach="background" args={[studio ? '#0e1216' : night ? '#0b1322' : '#cfe0ec']} />
+      <color attach="background" args={[studio ? '#E9EEF3' : night ? '#0b1322' : '#cfe0ec']} />
       {!studio && !night && <Sky sunPosition={SUN} turbidity={2.2} rayleigh={0.9} mieCoefficient={0.004} mieDirectionalG={0.86} distance={4000} />}
-      <fog attach="fog" args={studio ? ['#0e1216', 14, 34] : night ? ['#0b1322', 30, 120] : ['#d4e0e8', 45, 190]} />
+      <fog attach="fog" args={studio ? ['#E9EEF3', 14, 34] : night ? ['#0b1322', 30, 120] : ['#d9e3eb', haze?.[0] ?? 45, haze?.[1] ?? 190]} />
       <ParkLight intensity={night ? 0.07 : 0.75} rotation={2.2} />
       <hemisphereLight args={night ? ['#2c3c5c', '#0c0f12', 0.22] : ['#e3edf5', '#5f6a4a', 0.32]} />
       <directionalLight
@@ -125,16 +138,24 @@ export function Stage({
       />
       <Suspense fallback={null}>
         {children}
+        {onDemandShadows && <ShadowsOnDemand tier={tier} />}
         <Ready onReady={onReady} />
       </Suspense>
       {composer && (
         <EffectComposer multisampling={settings.multisampling} enableNormalPass={false}>
           <N8AO halfRes={settings.aoHalfRes} aoRadius={0.9} distanceFalloff={0.6} intensity={2.4} quality={settings.aoHalfRes ? 'performance' : 'medium'} />
           {settings.multisampling === 0 ? <SMAA /> : <></>}
-          {focus ? <DepthOfField target={focus} worldFocusRange={6} bokehScale={1.6} /> : <></>}
+          {focus ? (
+            <DepthOfField target={focus} worldFocusRange={6} bokehScale={1.6} />
+          ) : focusFollow ? (
+            <DepthOfField ref={dof as never} target={[0, 0, 0]} worldFocusRange={26} bokehScale={2.4} />
+          ) : (
+            <></>
+          )}
           <ToneMapping mode={ToneMappingMode.AGX} />
         </EffectComposer>
       )}
+      {focusFollow && composer && <FollowFocus effect={dof} />}
       <CameraRig
         bus={bus}
         views={views}
@@ -153,5 +174,17 @@ function Ready({ onReady }: { onReady?: () => void }) {
   useEffect(() => {
     onReady?.()
   }, [onReady])
+  return null
+}
+
+/** Keeps the depth-of-field focus on the orbit target as the camera moves. */
+function FollowFocus({ effect }: { effect: React.MutableRefObject<{ target: THREE.Vector3 | null } | null> }) {
+  const controls = useThree((s) => s.controls) as unknown as { target: THREE.Vector3 } | null
+  useFrame(() => {
+    const e = effect.current
+    if (!e || !controls) return
+    if (!e.target) e.target = new THREE.Vector3()
+    e.target.copy(controls.target)
+  })
   return null
 }

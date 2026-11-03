@@ -25,9 +25,9 @@ export type DoorPart = 'springs' | 'opener' | 'tracks' | 'panels' | 'sensors'
 
 /** Doorlink-orange highlight for a selected part (its glow can be pulsed). */
 export const HIGHLIGHT = new THREE.MeshStandardMaterial({
-  color: '#e8762b',
-  emissive: '#e8762b',
-  emissiveIntensity: 0.55,
+  color: '#1769D2',
+  emissive: '#1769D2',
+  emissiveIntensity: 0.4,
   metalness: 0.55,
   roughness: 0.32,
 })

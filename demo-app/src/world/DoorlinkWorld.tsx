@@ -53,7 +53,27 @@ const INSPECT: Record<Product, string> = {
 
 type Mode = 'intro' | 'running' | 'done'
 
-export default function DoorlinkWorld({ onExit }: { onExit: () => void }) {
+const Icon = {
+  moon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" /></svg>,
+  sun: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></svg>,
+  reset: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7" /><path d="M3 4v5h5" /></svg>,
+  exit: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 10.5 12 4l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z" /></svg>,
+  close: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>,
+}
+
+export default function DoorlinkWorld({
+  onExit,
+  arrival = false,
+  revealed = true,
+  onSceneReady,
+}: {
+  onExit: () => void
+  /** Entered through the homepage portal: start framed like the glimpse, settle once revealed. */
+  arrival?: boolean
+  revealed?: boolean
+  onSceneReady?: () => void
+}) {
+  const snapshot = useMemo(() => window.location.search.includes('snapshot'), [])
   const bus = useMemo(() => new CameraBus(), [])
   const maxTier = useMemo<Tier>(() => detectTier(), [])
   const [tier, setTier] = useState<Tier>(maxTier)
@@ -106,8 +126,18 @@ export default function DoorlinkWorld({ onExit }: { onExit: () => void }) {
   // Pull back from the garage to the whole property once it has loaded.
   const onReady = useCallback(() => {
     setReady(true)
-    window.setTimeout(() => bus.send({ type: 'view', name: 'hero' }), reduced ? 0 : 400)
-  }, [bus, reduced])
+    onSceneReady?.()
+    if (!arrival) window.setTimeout(() => bus.send({ type: 'view', name: 'hero' }), reduced ? 0 : 400)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [bus, reduced, arrival])
+
+  // Through the portal: once the glimpse has dissolved, ease back to the property overview.
+  useEffect(() => {
+    if (arrival && revealed && ready && !snapshot) {
+      const t = window.setTimeout(() => bus.send({ type: 'view', name: 'hero' }), 120)
+      return () => window.clearTimeout(t)
+    }
+  }, [arrival, revealed, ready, snapshot, bus])
 
   const finish = () => {
     later(timers, [])
@@ -230,7 +260,7 @@ export default function DoorlinkWorld({ onExit }: { onExit: () => void }) {
   const openKey = selected && selected !== 'fence' ? (selected as keyof WorldState['open']) : null
 
   return (
-    <div className="world-root" role="dialog" aria-modal="true" aria-label="Doorlink World">
+    <div className={`world-root ${arrival ? 'is-arrival' : ''} ${snapshot ? 'is-clean' : ''}`} role="dialog" aria-modal="true" aria-label="Doorlink World">
       <div className="world-canvas">
         <WorldScene
           bus={bus}
@@ -242,25 +272,32 @@ export default function DoorlinkWorld({ onExit }: { onExit: () => void }) {
           state={state}
           onPick={pick}
           aspect={aspect}
+          initialView={arrival ? 'arrive' : 'start'}
         />
       </div>
-      {!ready && <div className="xray-loading">Building the property…</div>}
+      {!ready && !arrival && <div className="xray-loading">Building the property…</div>}
       <div className={`world-fade ${fading ? 'is-on' : ''}`} aria-hidden="true" />
 
       <header className="world-top">
-        <div className="min-w-0">
-          <p className="world-eyebrow">Doorlink World</p>
-          <p className="world-sub">Garage doors, gates, fencing and shutters on one property · illustration with sample products</p>
+        <div className="world-brand min-w-0">
+          <span className="world-mark" aria-hidden="true">DL</span>
+          <div className="min-w-0">
+            <p className="world-eyebrow">Doorlink World</p>
+            <p className="world-sub">Garage doors, gates, fencing and shutters on one property · sample products</p>
+          </div>
         </div>
         <div className="world-actions">
-          <button type="button" className="xray-button-ghost" onClick={toggleNight} aria-pressed={state.night}>
-            {state.night ? '☀ Day' : '☾ Night'}
+          <button type="button" className="world-btn" onClick={toggleNight} aria-pressed={state.night} aria-label={state.night ? 'Switch to day' : 'Switch to night'}>
+            {state.night ? Icon.sun : Icon.moon}
+            <span className="world-btn-label">{state.night ? 'Day' : 'Night'}</span>
           </button>
-          <button type="button" className="xray-button-ghost" onClick={reset}>
-            Reset view
+          <button type="button" className="world-btn" onClick={reset} aria-label="Reset view">
+            {Icon.reset}
+            <span className="world-btn-label">Reset view</span>
           </button>
-          <button type="button" className="xray-button" onClick={onExit}>
-            Exit
+          <button type="button" className="world-btn is-primary" onClick={onExit} aria-label="Exit">
+            {Icon.exit}
+            <span className="world-btn-label">Exit</span>
           </button>
         </div>
       </header>
@@ -268,9 +305,12 @@ export default function DoorlinkWorld({ onExit }: { onExit: () => void }) {
       {info && selected && (
         <aside className="world-card" aria-live="polite">
           <div className="flex items-start justify-between gap-3">
-            <p className="xray-card-title">{info.title}</p>
+            <div>
+              <p className="world-kicker">{state.inspect === selected ? 'X-ray view' : 'Doorlink product'}</p>
+              <p className="xray-card-title">{info.title}</p>
+            </div>
             <button type="button" className="world-close" aria-label="Close" onClick={() => patch(() => ({ selected: null, inspect: null }))}>
-              ×
+              {Icon.close}
             </button>
           </div>
           <p className="world-body">{state.inspect === selected ? INSPECT[selected] : info.body}</p>
@@ -314,11 +354,11 @@ export default function DoorlinkWorld({ onExit }: { onExit: () => void }) {
           )}
         </div>
         {mode === 'running' ? (
-          <button type="button" className="xray-button-ghost" onClick={skip}>
+          <button type="button" className="world-btn" onClick={skip}>
             Skip to the finished property
           </button>
         ) : (
-          <button type="button" className={mode === 'intro' ? 'world-cta' : 'xray-button-ghost'} onClick={transform} disabled={!ready}>
+          <button type="button" className={mode === 'intro' ? 'world-cta' : 'world-btn'} onClick={transform} disabled={!ready}>
             {mode === 'intro' ? 'Transform my property' : 'Replay the transformation'}
           </button>
         )}
