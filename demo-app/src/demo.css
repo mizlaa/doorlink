@@ -31,3 +31,9 @@
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='360'%3E%3Ctext x='260' y='190' text-anchor='middle' transform='rotate(-28 260 180)' font-family='IBM Plex Sans, Arial, sans-serif' font-size='30' font-weight='700' fill='%23B4530A' fill-opacity='0.13' letter-spacing='3'%3ESAMPLE %E2%80%94 NOT FOR COMPLIANCE USE%3C/text%3E%3C/svg%3E");
   background-repeat: repeat;
 }
+
+/* The designer pins its preview to the top on a phone held upright; pin it
+   below the fixed demo banner instead of underneath it. */
+@media (max-width: 1023.98px) and (orientation: portrait) {
+  .max-lg\:portrait\:top-0 { top: calc(24px + env(safe-area-inset-top, 0px)); }
+}

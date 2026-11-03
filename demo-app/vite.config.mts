@@ -26,6 +26,9 @@ const ACTION_REDIRECTS: Record<string, string> = {
   'app/leads/actions.ts': 'actions/leads.ts',
   'app/pricing/actions.ts': 'actions/pricing.ts',
   'app/tools/spring-calculator/actions.ts': 'actions/spring.ts',
+  // The upgraded 3D preview: same props and exports as the app's own.
+  'components/three/ConfiguratorScene.tsx': 'three/ConfiguratorScene.tsx',
+  'lib/configurator/look.ts': 'three/look.ts',
 }
 const redirects = new Map(
   Object.entries(ACTION_REDIRECTS).map(([from, to]) => [path.join(repoSrc, from), path.join(demoSrc, to)])
