@@ -40,7 +40,7 @@ function ground(size: number) {
   return g
 }
 
-function ColorbondFence({ from, to, m }: { from: [number, number]; to: [number, number]; m: HouseMaterials }) {
+export function ColorbondFence({ from, to, m }: { from: [number, number]; to: [number, number]; m: HouseMaterials }) {
   const pieces = useMemo(() => {
     const a = new THREE.Vector2(...from)
     const b = new THREE.Vector2(...to)

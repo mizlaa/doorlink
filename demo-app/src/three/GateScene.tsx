@@ -9,6 +9,7 @@ import { useSceneTextures as usePbrTextures } from './assets'
 import { useHouseMaterials } from './materials'
 import { worldBox, seeded } from './geometry'
 import { NeighbourHouse, TileRoofBlock } from './House'
+import { ColorbondFence } from './Landscape'
 import { addDistantTree, addGumTree, addShrub, addTuft, emptyPlantSet, Plants } from './Plants'
 import { Stage } from './Stage'
 import { CameraBus, type CameraView, type ViewName } from './CameraRig'
@@ -877,13 +878,19 @@ function GateLayout({ look, isOpen }: { look: GateLook; isOpen: boolean }) {
   const { widthM: w, heightM: h, kind } = look
 
   if (kind === 'fence') {
-    return <FenceRun fromX={-w / 2} toX={w / 2} height={h} look={look} material={material} />
+    return (
+      <group>
+        <FenceRun fromX={-w / 2} toX={w / 2} height={h} look={look} material={material} />
+        <Boundary left={-w / 2} right={w / 2} height={h} cornerPosts material={material} />
+      </group>
+    )
   }
 
   const posts = kind === 'pedestrian'
   const sideRun = kind === 'sliding' ? w + 0.8 : Math.max(2.5, w * 0.6)
   const post = posts ? 0.1 : PILLAR
   const edge = w / 2 + post
+  const frontHalf = Math.max(8.5, edge + sideRun + 0.6, edge + Math.max(2.5, w * 0.6) + 0.6)
 
   return (
     <group>
@@ -908,11 +915,60 @@ function GateLayout({ look, isOpen }: { look: GateLook; isOpen: boolean }) {
       )}
       <FenceRun fromX={-edge} toX={-edge - Math.max(2.5, w * 0.6)} height={h} look={look} material={material} />
       <FenceRun fromX={edge} toX={edge + sideRun} height={h} look={look} material={material} />
+      {/* The front fence carries on to the side boundaries, which return
+          back along the block, so the property is enclosed. */}
+      <FenceRun fromX={-edge - Math.max(2.5, w * 0.6)} toX={-frontHalf} height={h} look={look} material={material} />
+      <FenceRun fromX={edge + sideRun} toX={frontHalf} height={h} look={look} material={material} />
+      <Boundary left={-frontHalf} right={frontHalf} height={h} cornerPosts={posts} material={material} pillars={!posts} />
       {kind === 'sliding' ? (
         <SlidingGate look={look} isOpen={isOpen} material={material} />
       ) : (
         <SwingGate look={look} isOpen={isOpen} material={material} posts={posts} />
       )}
+    </group>
+  )
+}
+
+/**
+ * Corner posts (or pillars) where the front fence meets the side
+ * boundaries, Colorbond side fences running back along the block, and
+ * the house at the end of the driveway.
+ */
+function Boundary({
+  left,
+  right,
+  height,
+  cornerPosts,
+  pillars = false,
+  material,
+}: {
+  left: number
+  right: number
+  height: number
+  cornerPosts: boolean
+  pillars?: boolean
+  material: THREE.Material
+}) {
+  const m = useHouseMaterials(usePbrTextures())
+  const depth = 16
+  return (
+    <group>
+      {pillars ? (
+        <>
+          <Pillar x={left - PILLAR / 2} height={height + 0.15} />
+          <Pillar x={right + PILLAR / 2} height={height + 0.15} />
+        </>
+      ) : cornerPosts ? (
+        <>
+          <Box args={[0.1, height + 0.1, 0.1]} position={[left - 0.05, (height + 0.1) / 2, 0]} material={material} />
+          <Box args={[0.1, height + 0.1, 0.1]} position={[right + 0.05, (height + 0.1) / 2, 0]} material={material} />
+        </>
+      ) : null}
+      <ColorbondFence from={[left - 0.1, 0.12]} to={[left - 0.1, depth]} m={m} />
+      <ColorbondFence from={[right + 0.1, 0.12]} to={[right + 0.1, depth]} m={m} />
+      <group rotation={[0, Math.PI, 0]} position={[0, 0, depth + 3]}>
+        <NeighbourHouse position={[0, 0, 0]} width={Math.min(14, right - left - 2)} depth={12} m={m} doorColor="#3d4144" />
+      </group>
     </group>
   )
 }
@@ -930,6 +986,14 @@ function ShutterBuilding({ look }: { look: GateLook }) {
     <group>
       <Slab size={[w, h, depth]} position={[0, h / 2, -depth / 2 - 0.125]} material={shop ? m.render : m.brick} />
       <TileRoofBlock width={w} depth={depth + 0.25} cx={0} cz={-depth / 2} y={h} m={m} />
+      {/* Neighbours either side, softened by the depth of field, with
+          their own driveways, so the street does not feel empty. */}
+      {[-1, 1].map((side) => (
+        <group key={side} position={[side * (w / 2 + 9.5), 0, -3]}>
+          <NeighbourHouse position={[0, 0, 0]} width={11} depth={12} m={m} doorColor={side < 0 ? '#e7e4dc' : '#4a4e51'} />
+          <Slab size={[5.4, 0.06, 9]} position={[-5.5 + 0.8 + 2.4, -0.014, 4.5]} material={m.concrete} />
+        </group>
+      ))}
     </group>
   )
 }
@@ -988,10 +1052,11 @@ export function GateScene({
       bus={bus ?? fallbackBus}
       views={views}
       initialView="angle"
-      minDistance={2}
-      maxDistance={40}
+      minDistance={3}
+      maxDistance={30}
       shadowSpan={Math.max(12, look.widthM * 1.6)}
       onReady={onReady}
+      focus={shutter ? [0, (look.kind === 'shop' ? 0 : 0.9) + look.heightM / 2, 0] : undefined}
     >
       <SceneMaterialsProvider>
         <Ground

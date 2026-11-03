@@ -1,7 +1,7 @@
 import { Suspense, useEffect, useMemo, type ReactNode } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Environment, PerformanceMonitor, Sky } from '@react-three/drei'
-import { EffectComposer, N8AO, SMAA, ToneMapping } from '@react-three/postprocessing'
+import { DepthOfField, EffectComposer, N8AO, SMAA, ToneMapping } from '@react-three/postprocessing'
 import { ToneMappingMode } from 'postprocessing'
 import * as THREE from 'three'
 import { useParkEnvironment } from './assets'
@@ -48,6 +48,7 @@ export function Stage({
   maxPolar,
   shadowSpan,
   onReady,
+  focus,
   children,
 }: {
   tier: Tier
@@ -62,6 +63,8 @@ export function Stage({
   maxPolar?: number
   shadowSpan: number
   onReady?: () => void
+  /** When set, a gentle depth of field keeps this point sharp and softens the background. */
+  focus?: [number, number, number]
   children: ReactNode
 }) {
   const settings = TIERS[tier]
@@ -73,7 +76,7 @@ export function Stage({
       shadows={{ type: THREE.PCFShadowMap }}
       dpr={settings.dpr}
       frameloop={paused ? 'never' : 'always'}
-      gl={{ antialias: !composer, powerPreference: 'high-performance', stencil: false }}
+      gl={{ antialias: true, powerPreference: 'high-performance', stencil: false }}
       camera={{ fov: 36, near: 0.1, far: 260, position: views[initialView].position }}
       onCreated={({ gl }) => {
         gl.outputColorSpace = THREE.SRGBColorSpace
@@ -81,6 +84,7 @@ export function Stage({
     >
       <PerformanceMonitor
         flipflops={4}
+        bounds={(refresh) => (refresh > 90 ? [50, 90] : [36, 55])}
         onDecline={() => onTier(stepDown(tier))}
         onIncline={() => onTier(stepUp(tier, maxTier))}
       />
@@ -115,7 +119,8 @@ export function Stage({
       {composer && (
         <EffectComposer multisampling={settings.multisampling} enableNormalPass={false}>
           <N8AO halfRes={settings.aoHalfRes} aoRadius={0.9} distanceFalloff={0.6} intensity={2.4} quality={settings.aoHalfRes ? 'performance' : 'medium'} />
-          <SMAA />
+          {settings.multisampling === 0 ? <SMAA /> : <></>}
+          {focus ? <DepthOfField target={focus} worldFocusRange={6} bokehScale={1.6} /> : <></>}
           <ToneMapping mode={ToneMappingMode.AGX} />
         </EffectComposer>
       )}

@@ -49,9 +49,9 @@ interface Flight {
 
 /**
  * Orbit, zoom and animated views. Changing a door setting never moves the
- * camera: only the user, or a view button, does. On touch screens a
- * vertical swipe scrolls the page (the preview stays put) and a sideways
- * drag turns the view; two fingers zoom.
+ * camera: only the user, or a view button, does. The viewer owns its
+ * touches: one finger orbits, two fingers zoom, and the page stays put.
+ * Polar and distance limits keep the camera above ground and out of walls.
  */
 export function CameraRig({
   bus,
@@ -59,8 +59,8 @@ export function CameraRig({
   initial,
   minDistance,
   maxDistance,
-  minPolar = 0.32,
-  maxPolar = 1.5,
+  minPolar = 0.22,
+  maxPolar = 1.42,
 }: {
   bus: CameraBus
   views: Record<ViewName, CameraView>
@@ -93,7 +93,7 @@ export function CameraRig({
     instance.target.set(...viewsRef.current[initial].target)
     instance.update()
     const element = instance.domElement as HTMLElement | undefined
-    if (element) element.style.touchAction = 'pan-y'
+    if (element) element.style.touchAction = 'none'
     const stop = () => {
       flight.current = null
       if (instance.autoRotate) {
@@ -148,10 +148,10 @@ export function CameraRig({
   useFrame(() => {
     const instance = controls.current
     if (!instance) return
-    // The controls re-attach to the canvas wrapper after the first frames
-    // and switch page scrolling off; keep vertical swipes for the page.
+    // Touches on the viewer belong to the viewer: drags orbit, pinches
+    // zoom, and the page does not scroll or bounce underneath.
     const element = instance.domElement as HTMLElement | undefined
-    if (element && element.style.touchAction !== 'pan-y') element.style.touchAction = 'pan-y'
+    if (element && element.style.touchAction !== 'none') element.style.touchAction = 'none'
     const f = flight.current
     if (f) {
       const k = smootherstep((clock.elapsedTime - f.start) / f.duration)
@@ -165,6 +165,8 @@ export function CameraRig({
       if (k >= 1) flight.current = null
     }
     instance.update()
+    // Belt and braces with the polar limit: never at or below the ground.
+    if (camera.position.y < 0.45) camera.position.y = 0.45
   })
 
   return (

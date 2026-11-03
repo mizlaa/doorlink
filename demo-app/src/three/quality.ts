@@ -17,9 +17,11 @@ export interface TierSettings {
 }
 
 export const TIERS: Record<Tier, TierSettings> = {
-  high: { dpr: [1, 2], shadowMapSize: 2048, ambientOcclusion: true, aoHalfRes: false, multisampling: 4, foliageShadows: true, grassTufts: 520, wind: true },
-  medium: { dpr: [1, 1.6], shadowMapSize: 2048, ambientOcclusion: true, aoHalfRes: true, multisampling: 0, foliageShadows: true, grassTufts: 300, wind: true },
-  low: { dpr: [0.85, 1.25], shadowMapSize: 1024, ambientOcclusion: false, aoHalfRes: true, multisampling: 0, foliageShadows: false, grassTufts: 140, wind: true },
+  // Sharpness first: device pixel ratio up to 2 and 4x MSAA on every tier
+  // (cheap on mobile tile GPUs); the tiers trade shadows, AO and foliage.
+  high: { dpr: [1.25, 2], shadowMapSize: 4096, ambientOcclusion: true, aoHalfRes: false, multisampling: 4, foliageShadows: true, grassTufts: 520, wind: true },
+  medium: { dpr: [1, 2], shadowMapSize: 2048, ambientOcclusion: true, aoHalfRes: true, multisampling: 4, foliageShadows: true, grassTufts: 300, wind: true },
+  low: { dpr: [1, 1.5], shadowMapSize: 1536, ambientOcclusion: false, aoHalfRes: true, multisampling: 4, foliageShadows: false, grassTufts: 140, wind: true },
 }
 
 export function detectTier(): Tier {

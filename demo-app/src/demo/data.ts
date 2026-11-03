@@ -606,8 +606,9 @@ export const SEED_REVIEWS: DemoReview[] = [
   }),
 ]
 
-export const PRODUCT_CATEGORIES: string[] = seed.product_categories
-export const BRANDS: string[] = seed.brands
+export const PRODUCT_CATEGORIES: string[] = [...seed.product_categories, 'Fencing']
+/** Fictional brands: the seed's five plus a fencing and a motor brand. */
+export const BRANDS: string[] = [...seed.brands, 'Kurrajong', 'Aldgate']
 
 export interface SeedLead {
   reference: string
@@ -757,6 +758,10 @@ export const SEED_LISTINGS: SeedListing[] = [
   ['Shop shutter curtain, 3600 wide', 'Roller shutters', 'Crestview', 'CV-SS77', 'NEW', 248000, 'company_05'],
   ['Weather seal kit, sectional door', 'Springs & hardware', 'Westline', 'S-WS24', 'NEW', 7900, 'company_01'],
   ['Extension spring pair (heavy)', 'Springs & hardware', 'Summit Entry', 'SE-EX90', 'NEW', 11900, 'company_02'],
+  ['Slat fence panel, 2.4 m bay', 'Fencing', 'Kurrajong', 'KF-65', 'NEW', 42900, 'company_10'],
+  ['Pool fence panel with gate kit', 'Fencing', 'Kurrajong', 'KF-PF12', 'NEW', 61900, 'company_06'],
+  ['Chain-drive opener, double door', 'Openers & motors', 'Aldgate', 'AG-1200', 'NEW', 74900, 'company_11'],
+  ['Roller door operator, ex-demo', 'Openers & motors', 'Aldgate', 'AG-R90', 'REFURBISHED', 39900, 'company_09'],
 ].map(([title, category, brand, model, condition, priceCents, sellerCompanyId], i) => {
   const seller = COMPANIES.find((c) => c.id === sellerCompanyId)!
   return {

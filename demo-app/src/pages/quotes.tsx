@@ -19,6 +19,7 @@ import { BRANDS, companyById } from '../demo/data'
 import { businessCard, portfolioFor, reviewsFor, type DemoCard } from '../demo/cards'
 import { DemoTag, SignInPrompt, Stars as ReviewStars } from './shared'
 import { NotFoundPage } from './NotFound'
+import { isFramed } from '../router'
 
 /* ------------------------------------------------------------------ */
 /* /quote: "Compare free quotes" (src/app/quote/page.tsx)              */
@@ -406,6 +407,72 @@ function Row({ label, value, strong = false }: { label: string; value: string; s
   )
 }
 
+/** The document header of a quotation: who, when, how long it holds, and what. */
+function QuotationHeader({
+  quote,
+  customerName,
+  rows,
+}: {
+  quote: AutomatedQuote
+  customerName: string
+  rows: Array<{ label: string; value: string }>
+}) {
+  const details = useDemo((s) => s.businessDetails[quote.companyId])
+  const company = companyById(quote.companyId)!
+  const issued = new Date(quote.createdAt)
+  const validUntil = new Date(issued.getTime() + 30 * 86_400_000)
+  const date = (d: Date) => d.toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' })
+  return (
+    <section className="mt-6 overflow-hidden rounded-lg border border-line bg-paper shadow-panel" aria-label="Quotation details">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line bg-rail px-5 py-3">
+        <p className="text-sm font-semibold uppercase tracking-wide text-graphite">Quotation</p>
+        <p className="font-code text-sm text-zinc-deep">{quote.reference}</p>
+      </div>
+      <dl className="grid gap-4 px-5 py-4 text-sm sm:grid-cols-3">
+        <div>
+          <dt className="text-micro font-medium uppercase tracking-wide text-zinc-deep">Prepared by</dt>
+          <dd className="mt-1 text-graphite">
+            <span className="block font-medium">{details?.businessName ?? company.name}</span>
+            <span className="block text-graphite-soft">{company.suburb}</span>
+            <span className="block text-graphite-soft">ABN {details?.abn ?? company.abn}</span>
+            <span className="block text-graphite-soft">{details?.phone ?? company.phone}</span>
+          </dd>
+        </div>
+        <div>
+          <dt className="text-micro font-medium uppercase tracking-wide text-zinc-deep">Prepared for</dt>
+          <dd className="mt-1 text-graphite">
+            <span className="block font-medium">{customerName}</span>
+            <span className="block text-graphite-soft">Postcode {quote.postcode}</span>
+          </dd>
+        </div>
+        <div>
+          <dt className="text-micro font-medium uppercase tracking-wide text-zinc-deep">Dates</dt>
+          <dd className="mt-1 text-graphite">
+            <span className="block">Issued {date(issued)}</span>
+            <span className="block text-graphite-soft">Valid until {date(validUntil)}</span>
+            <span className="block text-graphite-soft">
+              Lead time about {quote.leadTimeDays} days · warranty {quote.warranty}
+            </span>
+          </dd>
+        </div>
+      </dl>
+      <div className="border-t border-line px-5 py-4">
+        <p className="text-micro font-medium uppercase tracking-wide text-zinc-deep">Your design</p>
+        <p className="mt-1 text-sm text-graphite-soft">
+          {rows
+            .slice(0, 10)
+            .map((r) => `${r.label}: ${r.value}`)
+            .join(' · ')}
+        </p>
+      </div>
+      <p className="border-t border-line bg-rail px-5 py-2.5 text-micro text-zinc-deep">
+        Quotes and designs are free for customers on Doorlink. Prices are indicative demo figures from fictional businesses, worked out from
+        each business&rsquo;s sample price list for this size and options.
+      </p>
+    </section>
+  )
+}
+
 export function QuoteViewPage({ params }: { params: Record<string, string> }) {
   const reference = params.reference
   const session = useDemo((s) => s.session)
@@ -440,12 +507,14 @@ export function QuoteViewPage({ params }: { params: Record<string, string> }) {
             </Link>
           </div>
         </div>
-        <PrintButton />
+        {!isFramed && <PrintButton />}
       </div>
 
       <p className="mt-4 flex flex-wrap items-center gap-2 text-micro text-zinc-deep">
         <DemoTag>Indicative demo quote</DemoTag> Not an actual offer from a real business.
       </p>
+
+      <QuotationHeader quote={quote} customerName={isCustomer ? session.name : 'Customer'} rows={rows} />
 
       <section className="mt-6">
         {quote.status === 'CUSTOM_REQUESTED' && (

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import * as THREE from 'three'
 import { useTexture } from '@react-three/drei'
+import { useThree } from '@react-three/fiber'
 import { HDRLoader } from 'three/examples/jsm/loaders/HDRLoader.js'
 import brickColor from './textures/brick_color.webp'
 import brickNormal from './textures/brick_normal.webp'
@@ -82,7 +83,8 @@ const COLOR_MAPS = new Set(['brickColor', 'renderColor', 'roofColor', 'concreteC
 let configured = false
 
 /** Loads (once, cached) and configures every texture the scenes use. */
-export function useSceneTextures(anisotropy = 4): SceneTextures {
+export function useSceneTextures(): SceneTextures {
+  const anisotropy = Math.min(16, useThree((s) => s.gl.capabilities.getMaxAnisotropy()))
   const textures = useTexture(URLS) as unknown as SceneTextures
   if (!configured) {
     configured = true

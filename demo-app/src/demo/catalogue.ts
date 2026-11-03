@@ -32,6 +32,12 @@ export const FINDER_MODELS: FinderModel[] = [
   ['Crestview', 'Swing gates', 'CV Swing', 'CV-SG18', 'CV-SG18 Swing Leaf', 'Aluminium slat swing gate leaf, 1800 high.'],
   ['Crestview', 'Roller shutters', 'CV Shutters', 'CV-WS39', 'CV-WS39 Window Shutter', '39 mm aluminium window roller shutter, manual or motorised.'],
   ['Crestview', 'Springs & hardware', 'Torsion', 'CV-TS218', 'CV-TS218 Torsion Pair', 'Torsion spring pair, 218 mm × 6.0 mm wire.'],
+  ['Kurrajong', 'Fencing', 'Slat fencing', 'KF-65', 'KF-65 Slat Panel', 'Aluminium slat fence panel, 65 mm slats, 2.4 m bays.'],
+  ['Kurrajong', 'Fencing', 'Pool fencing', 'KF-PF12', 'KF-PF12 Pool Panel', 'Tubular aluminium pool fence panel with self-closing gate kit.'],
+  ['Kurrajong', 'Swing gates', 'Gates', 'KF-PG10', 'KF-PG10 Pedestrian Gate', 'Pedestrian gate to match KF-65 fencing, 1 m wide.'],
+  ['Aldgate', 'Openers & motors', 'Sectional openers', 'AG-1200', 'AG-1200 Chain Drive', 'Chain-drive opener for double sectional doors up to 150 kg.'],
+  ['Aldgate', 'Openers & motors', 'Roller openers', 'AG-R90', 'AG-R90 Roller Operator', 'Roller door operator with auto-close and obstruction sensing.'],
+  ['Aldgate', 'Remotes & accessories', 'Controls', 'AG-Link', 'AG-Link Smart Hub', 'Phone control and open/close alerts for Aldgate openers.'],
 ].map(([brand, category, productLine, modelCode, name, summary], i) => ({
   id: `mdl-${i + 1}`,
   brand,

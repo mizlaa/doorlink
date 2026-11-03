@@ -118,9 +118,9 @@ export const GarageScene = memo(function GarageScene({
       bus={bus}
       views={views}
       initialView="angle"
-      minDistance={2.2}
-      maxDistance={30}
-      shadowSpan={17}
+      minDistance={3.4}
+      maxDistance={24}
+      shadowSpan={15}
       onReady={onReady}
     >
       <GarageContents look={look} isOpen={isOpen} layout={layout} tier={tier} />

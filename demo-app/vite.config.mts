@@ -29,6 +29,8 @@ const ACTION_REDIRECTS: Record<string, string> = {
   // The upgraded 3D preview: same props and exports as the app's own.
   'components/three/ConfiguratorScene.tsx': 'three/ConfiguratorScene.tsx',
   'lib/configurator/look.ts': 'three/look.ts',
+  // Sample reviews are labelled demo reviews, never "verified".
+  'components/quotes/Stars.tsx': 'components/Stars.tsx',
 }
 const redirects = new Map(
   Object.entries(ACTION_REDIRECTS).map(([from, to]) => [path.join(repoSrc, from), path.join(demoSrc, to)])
