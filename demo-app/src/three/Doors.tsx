@@ -20,6 +20,40 @@ const DOOR_Z = -WALL_T - 0.035
 const TRACK_R = 0.38
 const OPEN_SECONDS = 4.2
 
+/** Parts the X-ray view can pick out. */
+export type DoorPart = 'springs' | 'opener' | 'tracks' | 'panels' | 'sensors'
+
+/** Doorlink-orange highlight for a selected part (its glow can be pulsed). */
+export const HIGHLIGHT = new THREE.MeshStandardMaterial({
+  color: '#e8762b',
+  emissive: '#e8762b',
+  emissiveIntensity: 0.55,
+  metalness: 0.55,
+  roughness: 0.32,
+})
+
+/** Where a sectional door's mechanism sits, for labels and cameras. */
+export function sectionalLayout(W: number, H: number) {
+  const doorH = H + 0.04
+  const verticalH = H + 0.02
+  const horizontalL = doorH + 0.25
+  return {
+    doorZ: DOOR_Z,
+    verticalH,
+    trackR: TRACK_R,
+    horizontalL,
+    doorWidth: W + 0.1,
+    shaftY: verticalH + TRACK_R + 0.12,
+    shaftZ: -WALL_T - 0.1,
+    railY: verticalH + TRACK_R + 0.09,
+    railFront: -WALL_T - 0.22,
+    railLength: horizontalL + 0.3,
+    openTravel: verticalH + (Math.PI / 2) * TRACK_R + 0.06,
+  }
+}
+
+export type Travel = { t: number; eased: number }
+
 function thicknessFor(insulation?: string) {
   return insulation === 'insulated' ? 0.042 : insulation === 'backed' ? 0.032 : 0.022
 }
@@ -287,7 +321,19 @@ function trackPoint(s: number, verticalH: number, out: THREE.Vector2) {
   return out.set(verticalH + TRACK_R, DOOR_Z - TRACK_R - (s - verticalH - arc))
 }
 
-function TrackRail({ x, verticalH, horizontalL, m }: { x: number; verticalH: number; horizontalL: number; m: HouseMaterials }) {
+function TrackRail({
+  x,
+  verticalH,
+  horizontalL,
+  m,
+  material,
+}: {
+  x: number
+  verticalH: number
+  horizontalL: number
+  m: HouseMaterials
+  material?: THREE.Material
+}) {
   const geometry = useMemo(() => {
     const path = new THREE.CurvePath<THREE.Vector3>()
     path.add(new THREE.LineCurve3(new THREE.Vector3(x, 0, DOOR_Z), new THREE.Vector3(x, verticalH, DOOR_Z)))
@@ -307,7 +353,7 @@ function TrackRail({ x, verticalH, horizontalL, m }: { x: number; verticalH: num
     return new THREE.TubeGeometry(path, 80, 0.022, 6, false)
   }, [x, verticalH, horizontalL])
   useEffect(() => () => geometry.dispose(), [geometry])
-  return <mesh geometry={geometry} material={m.steel} castShadow />
+  return <mesh geometry={geometry} material={material ?? m.steel} castShadow />
 }
 
 function helixGeometry(length: number, radius: number, wire: number, turns: number) {
@@ -329,6 +375,7 @@ function Opener({
   length,
   trolleyZ,
   m,
+  glow = false,
 }: {
   kind: string
   y: number
@@ -336,6 +383,7 @@ function Opener({
   length: number
   trolleyZ: React.MutableRefObject<number>
   m: HouseMaterials
+  glow?: boolean
 }) {
   const trolley = useRef<THREE.Group>(null)
   useFrame(() => {
@@ -364,9 +412,9 @@ function Opener({
       {/* Motor head (fixed at the back unless direct drive) */}
       {!direct && (
         <group position={[0, -0.06, backZ - 0.2]}>
-          <mesh castShadow>
+          <mesh castShadow material={glow ? HIGHLIGHT : undefined}>
             <boxGeometry args={[0.34, 0.18, 0.44]} />
-            <meshStandardMaterial color="#e9e9e6" roughness={0.45} />
+            {!glow && <meshStandardMaterial color="#e9e9e6" roughness={0.45} />}
           </mesh>
           <mesh position={[0, -0.091, 0.05]}>
             <boxGeometry args={[0.22, 0.004, 0.2]} />
@@ -376,9 +424,9 @@ function Opener({
       )}
       {/* Trolley, or the travelling motor on a direct-drive opener */}
       <group ref={trolley}>
-        <mesh position={[0, direct ? -0.08 : -0.035, 0]} castShadow>
+        <mesh position={[0, direct ? -0.08 : -0.035, 0]} castShadow material={glow ? HIGHLIGHT : undefined}>
           <boxGeometry args={direct ? [0.26, 0.16, 0.32] : [0.07, 0.05, 0.12]} />
-          <meshStandardMaterial color={direct ? '#e9e9e6' : '#3a3d40'} roughness={0.45} metalness={direct ? 0 : 0.5} />
+          {!glow && <meshStandardMaterial color={direct ? '#e9e9e6' : '#3a3d40'} roughness={0.45} metalness={direct ? 0 : 0.5} />}
         </mesh>
       </group>
     </group>
@@ -394,6 +442,9 @@ export function SectionalDoor({
   isOpen,
   t,
   m,
+  travelRef,
+  highlight = null,
+  panelMaterial = null,
 }: {
   look: DoorLook
   W: number
@@ -401,10 +452,18 @@ export function SectionalDoor({
   isOpen: boolean
   t: SceneTextures
   m: HouseMaterials
+  /** Drive the door from outside (the X-ray demos) instead of isOpen. */
+  travelRef?: React.MutableRefObject<Travel>
+  highlight?: DoorPart | null
+  panelMaterial?: THREE.Material | null
 }) {
-  const material = useDoorMaterial(look, t)
+  const doorMaterial = useDoorMaterial(look, t)
+  const material = panelMaterial ?? doorMaterial
   const hardware = useHardwareMaterial(look.hardwareColor)
-  const travel = useTravel(isOpen)
+  const ownTravel = useTravel(isOpen)
+  const travel = travelRef ?? ownTravel
+  const hl = (part: DoorPart, base: THREE.Material) => (highlight === part ? HIGHLIGHT : base)
+  const springs = useRef<Array<THREE.Mesh | null>>([])
   const thickness = thicknessFor(look.insulation)
   const n = Math.max(3, Math.min(6, look.panelCount || 4))
   const DW = W + 0.1
@@ -439,6 +498,10 @@ export function SectionalDoor({
     }
     // Cable drums turn as the cable winds on.
     for (const d of drums.current) if (d) d.rotation.x = -s0 / 0.055
+    // The springs wind up as the door closes and give that energy back as it opens.
+    springs.current.forEach((sp, i) => {
+      if (sp) sp.rotation.x = (i === 0 ? 1 : -1) * (openTravel - s0) * 0.9
+    })
     // Lift cables from the drums down to the bottom brackets.
     trackPoint(s0, verticalH, a)
     cables.current.forEach((c, i) => {
@@ -469,10 +532,10 @@ export function SectionalDoor({
           ))}
           {[-1, 1].map((side) => (
             <group key={side} position={[side * (DW / 2 + 0.005), ph / 2, 0]}>
-              <mesh rotation={[0, 0, Math.PI / 2]} material={m.steel}>
+              <mesh rotation={[0, 0, Math.PI / 2]} material={hl('tracks', m.steel)}>
                 <cylinderGeometry args={[0.006, 0.006, 0.06, 6]} />
               </mesh>
-              <mesh position={[side * 0.03, 0, 0]} rotation={[0, 0, Math.PI / 2]} material={m.rubber}>
+              <mesh position={[side * 0.03, 0, 0]} rotation={[0, 0, Math.PI / 2]} material={hl('tracks', m.rubber)}>
                 <cylinderGeometry args={[0.024, 0.024, 0.016, 12]} />
               </mesh>
             </group>
@@ -487,39 +550,56 @@ export function SectionalDoor({
       ))}
 
       {[-1, 1].map((side) => (
-        <TrackRail key={side} x={side * (DW / 2 + 0.035)} verticalH={verticalH} horizontalL={horizontalL} m={m} />
+        <TrackRail key={side} x={side * (DW / 2 + 0.035)} verticalH={verticalH} horizontalL={horizontalL} m={m} material={hl('tracks', m.steel)} />
       ))}
       {/* Rear hangers from the ceiling */}
       {[-1, 1].map((side) => (
-        <mesh key={side} position={[side * (DW / 2 + 0.035), verticalH + TRACK_R + 0.12, DOOR_Z - TRACK_R - horizontalL + 0.05]} material={m.darkSteel}>
+        <mesh key={side} position={[side * (DW / 2 + 0.035), verticalH + TRACK_R + 0.12, DOOR_Z - TRACK_R - horizontalL + 0.05]} material={hl('tracks', m.darkSteel)}>
           <boxGeometry args={[0.04, 0.24, 0.04]} />
         </mesh>
       ))}
 
       {/* Torsion spring assembly above the opening */}
       <group position={[0, shaftY, shaftZ]}>
-        <mesh rotation={[0, 0, Math.PI / 2]} material={m.steel} castShadow>
+        <mesh rotation={[0, 0, Math.PI / 2]} material={hl('springs', m.steel)} castShadow>
           <cylinderGeometry args={[0.013, 0.013, DW + 0.14, 10]} />
         </mesh>
-        <mesh geometry={springGeometry} position={[-0.36, 0, 0]} material={m.darkSteel} />
-        <mesh geometry={springGeometry} position={[0.36, 0, 0]} material={m.darkSteel} />
-        <mesh material={m.darkSteel} position={[0, 0, 0.03]}>
+        <mesh ref={(el) => (springs.current[0] = el)} geometry={springGeometry} position={[-0.36, 0, 0]} material={hl('springs', m.darkSteel)} />
+        <mesh ref={(el) => (springs.current[1] = el)} geometry={springGeometry} position={[0.36, 0, 0]} material={hl('springs', m.darkSteel)} />
+        <mesh material={hl('springs', m.darkSteel)} position={[0, 0, 0.03]}>
           <boxGeometry args={[0.1, 0.16, 0.012]} />
         </mesh>
         {[-1, 1].map((side, i) => (
-          <mesh key={side} ref={(el) => (drums.current[i] = el)} position={[side * (DW / 2 + 0.005), 0, 0]} rotation={[0, 0, Math.PI / 2]} material={m.steel}>
+          <mesh key={side} ref={(el) => (drums.current[i] = el)} position={[side * (DW / 2 + 0.005), 0, 0]} rotation={[0, 0, Math.PI / 2]} material={hl('springs', m.steel)}>
             <cylinderGeometry args={[0.055, 0.05, 0.05, 14]} />
           </mesh>
         ))}
       </group>
       {[0, 1].map((i) => (
-        <mesh key={i} ref={(el) => (cables.current[i] = el)} material={m.darkSteel}>
+        <mesh key={i} ref={(el) => (cables.current[i] = el)} material={hl('springs', m.darkSteel)}>
           <cylinderGeometry args={[0.0025, 0.0025, 1, 4]} />
         </mesh>
       ))}
 
-      <Opener kind={look.opener ?? 'belt'} y={railY} frontZ={railFront} length={railLength} trolleyZ={trolleyZ} m={m} />
-      <OpenerArm travel={travel} openTravel={openTravel} verticalH={verticalH} doorH={doorH} railY={railY} trolleyZ={trolleyZ} kind={look.opener ?? 'belt'} m={m} />
+      <Opener
+        kind={look.opener ?? 'belt'}
+        y={railY}
+        frontZ={railFront}
+        length={railLength}
+        trolleyZ={trolleyZ}
+        m={highlight === 'opener' ? { ...m, steel: HIGHLIGHT, darkSteel: HIGHLIGHT } : m}
+        glow={highlight === 'opener'}
+      />
+      <OpenerArm
+        travel={travel}
+        openTravel={openTravel}
+        verticalH={verticalH}
+        doorH={doorH}
+        railY={railY}
+        trolleyZ={trolleyZ}
+        kind={look.opener ?? 'belt'}
+        m={highlight === 'opener' ? { ...m, darkSteel: HIGHLIGHT } : m}
+      />
     </group>
   )
 }
@@ -534,7 +614,7 @@ function OpenerArm({
   kind,
   m,
 }: {
-  travel: React.MutableRefObject<{ eased: number }>
+  travel: React.MutableRefObject<Travel>
   openTravel: number
   verticalH: number
   doorH: number

@@ -95,6 +95,15 @@ The demo replaces the app's 3D preview with an upgraded scene in `demo-app/src/t
 
 These hosts were not reachable from the build environment, so nothing here pretends to be one of them.
 
+## X-Ray Garage
+
+On the home page, open the garage door fully and an invitation appears over the hero: *Ever wondered what makes your garage door work?* **Activate X-ray mode** opens a full-screen, see-through garage (`src/xray/`, loaded only when asked for). It reuses the designer's sectional door, camera rig and lighting.
+
+- **Stations:** springs, motor and opener, tracks and rollers, safety sensors, door panels. Pick one from the chips or tap its label in the scene. The camera flies there and the part glows orange.
+- **Test your garage:** a see-through open and close cycle; an obstruction test (a box breaks the photo-eye beam, the door stops and reverses); an insulated vs single-skin thermal view; and a comparison of belt, chain, direct and manual openers.
+- Everything is labelled as an illustration. There are no figures for energy, performance or certification, and no instructions for adjusting springs.
+- The camera stays above the floor and within zoom limits. Reset view, play/pause and Exit (or Escape) are always available. Reduced motion makes camera moves instant.
+
 ## Build
 
 ```bash

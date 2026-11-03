@@ -49,6 +49,7 @@ export function Stage({
   shadowSpan,
   onReady,
   focus,
+  studio = false,
   children,
 }: {
   tier: Tier
@@ -56,7 +57,7 @@ export function Stage({
   onTier: (tier: Tier) => void
   paused: boolean
   bus: CameraBus
-  views: Record<ViewName, CameraView>
+  views: Record<string, CameraView>
   initialView: ViewName
   minDistance: number
   maxDistance: number
@@ -65,6 +66,8 @@ export function Stage({
   onReady?: () => void
   /** When set, a gentle depth of field keeps this point sharp and softens the background. */
   focus?: [number, number, number]
+  /** A dark engineering-studio backdrop instead of the sky (the X-ray view). */
+  studio?: boolean
   children: ReactNode
 }) {
   const settings = TIERS[tier]
@@ -90,9 +93,9 @@ export function Stage({
       />
       <ToneMappingSwitch composer={composer} />
       <WindClock enabled={settings.wind && !reduced} />
-      <color attach="background" args={['#cfe0ec']} />
-      <Sky sunPosition={SUN} turbidity={2.2} rayleigh={0.9} mieCoefficient={0.004} mieDirectionalG={0.86} distance={4000} />
-      <fog attach="fog" args={['#d4e0e8', 45, 190]} />
+      <color attach="background" args={[studio ? '#0e1216' : '#cfe0ec']} />
+      {!studio && <Sky sunPosition={SUN} turbidity={2.2} rayleigh={0.9} mieCoefficient={0.004} mieDirectionalG={0.86} distance={4000} />}
+      <fog attach="fog" args={studio ? ['#0e1216', 14, 34] : ['#d4e0e8', 45, 190]} />
       <ParkLight intensity={0.75} rotation={2.2} />
       <hemisphereLight args={['#e3edf5', '#5f6a4a', 0.32]} />
       <directionalLight

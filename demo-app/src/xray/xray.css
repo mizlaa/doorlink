@@ -1,0 +1,127 @@
+/* Doorlink X-Ray Garage: dark engineering-studio look, orange accents. */
+.xray-root {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr);
+  background: #0e1216;
+  color: #e6edf3;
+  padding-top: env(safe-area-inset-top, 0px);
+  animation: xray-in 0.45s ease-out;
+}
+@media (min-width: 900px) {
+  .xray-root {
+    grid-template-columns: minmax(0, 1fr) 380px;
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+  .xray-top { grid-column: 1 / -1; }
+  .xray-panel { grid-row: 2; grid-column: 2; max-height: none !important; border-top: 0 !important; border-left: 1px solid #222c35; }
+}
+@keyframes xray-in { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .xray-root { animation: none; } }
+
+.xray-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px));
+  border-bottom: 1px solid #222c35;
+}
+.xray-eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #f0904f; }
+.xray-sub { margin-top: 2px; font-size: 12px; color: #93a1ae; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.xray-button,
+.xray-button-ghost {
+  height: 36px;
+  border-radius: 999px;
+  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 600;
+  touch-action: manipulation;
+  transition: background-color 0.15s, color 0.15s;
+}
+.xray-button { background: #e8762b; color: #0e1216; }
+.xray-button:hover { background: #f0904f; }
+.xray-button-ghost { border: 1px solid #33414d; color: #d6e0ea; }
+.xray-button-ghost:hover { background: #1b232b; }
+
+.xray-stage { position: relative; min-height: 0; touch-action: none; }
+.xray-loading {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  font-size: 13px; color: #93a1ae; background: #0e1216;
+}
+.xray-transport {
+  position: absolute; left: 12px; bottom: 12px; display: flex; gap: 6px; align-items: center;
+  padding: 4px; border-radius: 999px; background: rgba(14, 18, 22, 0.72); border: 1px solid #24303a; backdrop-filter: blur(6px);
+}
+.xray-icon {
+  width: 34px; height: 34px; border-radius: 999px; font-size: 13px; font-weight: 600; color: #e6edf3;
+  display: inline-flex; align-items: center; justify-content: center; touch-action: manipulation;
+}
+.xray-icon:hover { background: #1f2932; }
+.xray-status {
+  position: absolute; right: 12px; bottom: 16px; max-width: min(46%, 380px); text-align: right;
+  font-size: 12px; line-height: 1.4; color: #c4d0db; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); pointer-events: none;
+}
+@media (max-width: 640px) {
+  .xray-status { left: 12px; right: 12px; top: 10px; bottom: auto; max-width: none; text-align: left; }
+}
+
+.xray-panel {
+  overflow-y: auto;
+  max-height: 46vh;
+  border-top: 1px solid #222c35;
+  background: #12171c;
+  padding: 12px max(16px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.xray-stations { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
+.xray-stations::-webkit-scrollbar { display: none; }
+.xray-chip {
+  flex: none; height: 32px; padding: 0 12px; border-radius: 999px; font-size: 13px; font-weight: 500;
+  color: #d6e0ea; border: 1px solid #2c3944; background: #161d23; touch-action: manipulation;
+  transition: border-color 0.15s, background-color 0.15s, color 0.15s;
+}
+.xray-chip:hover { border-color: #46576a; }
+.xray-chip.is-active { border-color: #e8762b; color: #ffd9bf; background: rgba(232, 118, 43, 0.14); }
+.xray-card { border: 1px solid #222c35; border-radius: 12px; background: #161c22; padding: 14px; }
+.xray-card-title { font-size: 15px; font-weight: 600; color: #f1f5f9; }
+.xray-card-body { margin-top: 6px; font-size: 13px; line-height: 1.55; color: #aebbc7; }
+.xray-label { margin-bottom: 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #8796a4; }
+.xray-note { margin-top: 8px; font-size: 12px; line-height: 1.5; color: #8796a4; }
+.xray-gauge { display: block; height: 8px; border-radius: 999px; background: #222c35; overflow: hidden; }
+.xray-gauge-fill { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #e8762b, #f6b27e); border-radius: 999px; }
+.xray-swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; vertical-align: -1px; margin: 0 2px 0 6px; }
+.xray-swatch.is-warm { background: #e0632a; }
+.xray-swatch.is-cool { background: #2f6fb5; }
+
+/* Labels in the 3D view */
+.xray-hotspot {
+  display: inline-flex; align-items: center; gap: 6px; padding: 3px 9px 3px 4px; border-radius: 999px;
+  background: rgba(14, 18, 22, 0.78); border: 1px solid #33414d; color: #e6edf3; font-size: 11px; font-weight: 600;
+  white-space: nowrap; cursor: pointer; touch-action: manipulation; backdrop-filter: blur(4px);
+  transition: border-color 0.15s, background-color 0.15s;
+}
+.xray-hotspot:hover, .xray-hotspot.is-active { border-color: #e8762b; background: rgba(232, 118, 43, 0.2); }
+.xray-hotspot-dot { width: 10px; height: 10px; border-radius: 999px; background: #e8762b; box-shadow: 0 0 0 3px rgba(232, 118, 43, 0.25); }
+@media (max-width: 640px) {
+  .xray-hotspot-label { display: none; }
+  .xray-hotspot { padding: 4px; }
+  .xray-hotspot.is-active .xray-hotspot-label { display: inline; }
+}
+
+/* Homepage invitation, shown once the hero door is fully open */
+.xray-invite {
+  position: absolute; left: 50%; top: 46%; transform: translate(-50%, -50%);
+  display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center;
+  padding: 14px 18px; border-radius: 14px; background: rgba(14, 18, 22, 0.78); border: 1px solid rgba(232, 118, 43, 0.45);
+  color: #e6edf3; backdrop-filter: blur(6px); width: max-content; max-width: calc(100% - 32px);
+  animation: xray-invite 0.5s ease-out both; z-index: 5;
+}
+.xray-invite p { font-size: 14px; font-weight: 500; }
+@keyframes xray-invite { from { opacity: 0; transform: translate(-50%, -42%); } to { opacity: 1; transform: translate(-50%, -50%); } }
+@media (prefers-reduced-motion: reduce) { .xray-invite { animation: none; } }

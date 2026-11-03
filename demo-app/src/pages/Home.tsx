@@ -1,4 +1,4 @@
-import { GarageDoorHero } from '@/components/garage-door/GarageDoorHero'
+import { GarageDoorHero } from '../xray/GarageDoorHero'
 import { TaskTile } from '@/components/ui/TaskTile'
 import {
   CalculatorIcon,

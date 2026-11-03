@@ -4,8 +4,12 @@ import { OrbitControls } from '@react-three/drei'
 import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib'
 import * as THREE from 'three'
 import { smootherstep } from './geometry'
+import { prefersReducedMotion } from './quality'
 
-export type ViewName = 'angle' | 'front' | 'side' | 'inside'
+const reducedMotion = prefersReducedMotion()
+
+// The configurator's four views, or any named view a scene adds (the X-ray stations).
+export type ViewName = 'angle' | 'front' | 'side' | 'inside' | (string & {})
 
 export interface CameraView {
   position: [number, number, number]
@@ -63,7 +67,7 @@ export function CameraRig({
   maxPolar = 1.42,
 }: {
   bus: CameraBus
-  views: Record<ViewName, CameraView>
+  views: Record<string, CameraView>
   initial: ViewName
   minDistance: number
   maxDistance: number
@@ -135,7 +139,7 @@ export function CameraRig({
         to.theta = from.theta + delta
         flight.current = {
           start: clock.elapsedTime,
-          duration: command.type === 'zoom' ? 0.45 : 1.1,
+          duration: reducedMotion ? 0.01 : command.type === 'zoom' ? 0.45 : 1.1,
           fromTarget,
           toTarget,
           from,
