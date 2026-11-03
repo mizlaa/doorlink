@@ -9,6 +9,7 @@ import { notify } from '@/lib/notifications'
 import { prisma } from '@/lib/prisma'
 import { makeReference } from '@/lib/reference'
 import { createJobCheckout, processingFeeFor, refundJobPayment } from './connect'
+import { DEMO_PAYMENT_NOTE, isDemo } from '@/lib/demo/mode'
 
 /**
  * Money on a marketplace job: what is due, taking it through Stripe, and
@@ -98,6 +99,20 @@ export async function startCheckout(input: {
   if (!transaction || !transaction.stripeAccountId) throw new Error('payment not found')
   if (transaction.status === TransactionStatus.PAID) throw new Error('already paid')
 
+  if (isDemo()) {
+    // No Stripe. The payment is recorded exactly as a confirmed one would be,
+    // so the job moves on the same way, and every screen says it was simulated.
+    await applyCheckoutCompleted({
+      sessionId: `demo_checkout_${transaction.id}`,
+      accountId: transaction.stripeAccountId,
+      paymentIntentId: `demo_pi_${transaction.id}`,
+      paymentStatus: 'paid',
+      amountTotal: transaction.grossCents,
+      transactionId: transaction.id,
+    })
+    return `${input.siteUrl}/jobs/${input.jobId}?paid=1&demo=1`
+  }
+
   const session = await createJobCheckout({
     accountId: transaction.stripeAccountId,
     transactionId: transaction.id,
@@ -124,7 +139,7 @@ export async function startCheckout(input: {
       data: {
         transactionId: transaction.id,
         type: TransactionStatus.REQUIRES_ACTION,
-        note: 'Checkout started.',
+        note: isDemo() ? 'Demo checkout started.' : 'Checkout started.',
         payload: { checkoutSessionId: session.id },
       },
     }),
@@ -179,7 +194,7 @@ export async function applyCheckoutCompleted(event: CheckoutCompletion) {
       data: {
         transactionId: transaction.id,
         type: TransactionStatus.PAID,
-        note: 'Stripe confirmed payment.',
+        note: isDemo() ? DEMO_PAYMENT_NOTE : 'Stripe confirmed payment.',
         amountCents: transaction.grossCents,
         payload: { paymentIntentId: event.paymentIntentId, processingFeeCents: fee },
       },
@@ -194,7 +209,7 @@ export async function applyCheckoutCompleted(event: CheckoutCompletion) {
           jobId: job.id,
           fromStatus: job.status,
           toStatus: JobStatus.PAYMENT_CONFIRMED,
-          note: `${transaction.kind === PaymentKind.DEPOSIT ? 'Deposit' : 'Payment'} of ${amount} confirmed by Stripe.`,
+          note: `${transaction.kind === PaymentKind.DEPOSIT ? 'Deposit' : 'Payment'} of ${amount} ${isDemo() ? 'simulated in demo mode, nothing was charged.' : 'confirmed by Stripe.'}`,
         },
       })
     }

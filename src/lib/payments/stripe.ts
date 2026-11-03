@@ -18,8 +18,11 @@ import type {
   VerifiedWebhookEvent,
 } from './types'
 import { PaymentsNotConfiguredError } from './types'
+import { DemoBlockedError, isDemo } from '../demo/mode'
 
 function secretKey(): string | null {
+  // Demo mode never has a usable key, so nothing can reach Stripe.
+  if (isDemo()) return null
   const key = process.env.STRIPE_SECRET_KEY
   return key && key.length > 0 ? key : null
 }
@@ -35,6 +38,7 @@ function notConfigured(action: string): never {
 
 /** Shared Stripe client for checkout, webhooks, and subscription sync. */
 export function getStripeClient(): Stripe {
+  if (isDemo()) throw new DemoBlockedError('Stripe')
   const key = secretKey()
   if (!key) throw new PaymentsNotConfiguredError('call Stripe')
   return new Stripe(key)

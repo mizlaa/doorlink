@@ -87,11 +87,13 @@ export function ConfirmBookingForm({
 }
 
 export function AcceptAndPayForm({
+  demo = false,
   jobId,
   online,
   dueNow,
   dueLater,
 }: {
+  demo?: boolean
   jobId: string
   online: boolean
   dueNow: string
@@ -114,11 +116,13 @@ export function AcceptAndPayForm({
       </label>
       <ErrorNote state={state} />
       <Button type="submit" disabled={isPending} className="h-12 text-base">
-        {isPending ? 'Working…' : online ? `Pay ${dueNow} securely` : 'Accept price and terms'}
+        {isPending ? 'Working…' : online ? (demo ? `Pay ${dueNow} (demo, simulated)` : `Pay ${dueNow} securely`) : 'Accept price and terms'}
       </Button>
       {online && (
         <p className="text-center text-micro text-zinc-deep">
-          Card payment by Stripe, paid to the business. Doorlink adds no fees to your price.
+          {demo
+            ? 'Demo: payment is simulated. Nothing is charged, and no card details are asked for.'
+            : 'Card payment by Stripe, paid to the business. Doorlink adds no fees to your price.'}
         </p>
       )}
     </form>

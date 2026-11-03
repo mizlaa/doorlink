@@ -4,6 +4,8 @@ import { SignInForm } from '@/components/auth/SignInForm'
 import { NotConnected } from '@/components/ui/NotConnected'
 import { isConnected } from '@/lib/integrations'
 import { safeNextPath } from '@/lib/safe-next'
+import { devSessionAllowed, isDemo } from '@/lib/demo/mode'
+import { DEMO_SIGN_IN_ACCOUNTS } from '@/lib/demo/accounts'
 
 export const metadata: Metadata = {
   title: 'Sign in',
@@ -15,7 +17,7 @@ export default async function SignInPage({ searchParams }: { searchParams: Promi
   const { next: rawNext } = await searchParams
   const next = safeNextPath(rawNext, '')
   const supabaseAuth = isConnected('auth')
-  const devModeAvailable = !supabaseAuth && process.env.NODE_ENV !== 'production'
+  const devModeAvailable = !supabaseAuth && devSessionAllowed()
 
   return (
     <div className="mx-auto max-w-sm px-4 py-16">
@@ -30,7 +32,7 @@ export default async function SignInPage({ searchParams }: { searchParams: Promi
         {supabaseAuth ? (
           <SignInForm mode="supabase" next={next || undefined} />
         ) : devModeAvailable ? (
-          <SignInForm mode="dev" next={next || undefined} />
+          <SignInForm mode="dev" next={next || undefined} accounts={isDemo() ? DEMO_SIGN_IN_ACCOUNTS : undefined} />
         ) : (
           <NotConnected feature="Sign-in" reason="No authentication provider is connected in production yet." />
         )}

@@ -1,4 +1,9 @@
 import { PrismaClient } from '@prisma/client'
+import { assertDemoDatabaseIfDemo } from './demo/guard'
+
+// Demo mode refuses to start against anything but a demo database.
+// This runs before the client exists, so nothing can connect first.
+assertDemoDatabaseIfDemo()
 
 const globalForPrisma = globalThis as unknown as { prisma?: PrismaClient }
 

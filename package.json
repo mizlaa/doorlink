@@ -14,6 +14,8 @@
     "db:push": "prisma db push",
     "db:migrate": "prisma migrate dev",
     "db:seed": "tsx prisma/seed.ts",
+    "demo:seed": "tsx prisma/seed-demo.ts",
+    "demo:assets": "node scripts/demo/build-assets.mjs",
     "db:studio": "prisma studio",
     "test": "vitest run",
     "manuals:import": "tsx scripts/manuals/import.ts",

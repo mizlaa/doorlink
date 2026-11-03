@@ -2,6 +2,8 @@ import 'server-only'
 
 import { describeSpec, familyOf, type DoorSpec } from '@/lib/configurator/options'
 import { PREVIEW_NOTE_MAX_WORDS, previewNoteWordCount } from '@/lib/configurator/preview-prompt'
+import { demoSampleBase64, DEMO_SAMPLES } from '@/lib/demo/assets'
+import { isDemo } from '@/lib/demo/mode'
 
 /**
  * The image provider call for AI design visualisations (OpenAI Images).
@@ -16,7 +18,8 @@ const EDITS_URL = 'https://api.openai.com/v1/images/edits'
 const TIMEOUT_MS = 90_000
 
 export function aiImagesAvailable(): boolean {
-  return !!process.env.OPENAI_API_KEY
+  // Demo: the panel works and returns a bundled sample image, labelled as one.
+  return isDemo() || !!process.env.OPENAI_API_KEY
 }
 
 const SUBJECT: Record<ReturnType<typeof familyOf>, string> = {
@@ -54,6 +57,11 @@ export async function callImageProvider(input: {
   prompt: string
   photo: { bytes: Uint8Array; type: string } | null
 }): Promise<ProviderResult> {
+  // Demo: no OpenAI call. A bundled sample image stands in for the result.
+  if (isDemo()) {
+    const sample = DEMO_SAMPLES.ai[Math.floor(Math.random() * DEMO_SAMPLES.ai.length)]
+    return { ok: true, b64: demoSampleBase64(sample), usage: { demo: true, sample } }
+  }
   const key = process.env.OPENAI_API_KEY
   if (!key) return { ok: false, error: 'AI visualisation isn’t connected yet.', status: null }
   const controller = new AbortController()

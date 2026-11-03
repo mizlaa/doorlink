@@ -3,7 +3,7 @@ import 'server-only'
 import { createHash } from 'node:crypto'
 import { Prisma } from '@prisma/client'
 import type { DoorSpec } from '@/lib/configurator/options'
-import { mediaUploadsAvailable, newMediaKey, saveMedia } from '@/lib/media'
+import { mediaUploadsAvailable, mediaUrl, newMediaKey, saveMedia } from '@/lib/media'
 import { prisma } from '@/lib/prisma'
 import { AI_MODEL, AI_PROVIDER, callImageProvider, designPrompt } from './design-image'
 import { aiSettings } from './settings'
@@ -78,7 +78,7 @@ export async function generateDesignImage(input: {
         costCents: 0,
       },
     })
-    return { ok: true, imageUrl: `/api/media/${hit.imageKey}?g=${row.id}`, cached: true, generationId: row.id }
+    return { ok: true, imageUrl: `${mediaUrl(hit.imageKey)}?g=${row.id}`, cached: true, generationId: row.id }
   }
 
   // 2. Fair use.
@@ -152,7 +152,7 @@ export async function generateDesignImage(input: {
   })
   return {
     ok: true,
-    imageUrl: imageKey ? `/api/media/${imageKey}` : `data:image/png;base64,${result.b64}`,
+    imageUrl: imageKey ? (mediaUrl(imageKey) ?? '') : `data:image/png;base64,${result.b64}`,
     cached: false,
     generationId: row.id,
   }

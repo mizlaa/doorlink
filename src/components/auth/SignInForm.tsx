@@ -17,7 +17,15 @@ const DEMO_ACCOUNTS = [
 
 const initialState: SignInState = {}
 
-export function SignInForm({ mode, next }: { mode: 'dev' | 'supabase'; next?: string }) {
+export function SignInForm({
+  mode,
+  next,
+  accounts = DEMO_ACCOUNTS,
+}: {
+  mode: 'dev' | 'supabase'
+  next?: string
+  accounts?: ReadonlyArray<{ email: string; label: string }>
+}) {
   const [state, formAction, isPending] = useActionState(signInAction, initialState)
 
   return (
@@ -41,7 +49,7 @@ export function SignInForm({ mode, next }: { mode: 'dev' | 'supabase'; next?: st
         <div className="border-t border-line pt-6">
           <p className="mb-3 text-sm font-medium text-graphite">Quick sign-in as a demo account</p>
           <div className="flex flex-wrap gap-2">
-            {DEMO_ACCOUNTS.map((account) => (
+            {accounts.map((account) => (
               <form key={account.email} action={formAction} onSubmit={keepValuesOnSubmit(formAction)}>
                 <input type="hidden" name="email" value={account.email} />
                 {next && <input type="hidden" name="next" value={next} />}

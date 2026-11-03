@@ -1,18 +1,24 @@
-import { isDemoMode } from '@/lib/integrations'
+import Link from 'next/link'
+import { demoBanner } from '@/lib/demo/banner'
 
-// This used to say the whole catalogue was invented sample data. That
-// stopped being true the moment real manufacturer documents (FAAC, BFT)
-// were ingested alongside the seeded demo models — a blanket "none of
-// this is real" is just as dishonest as a blanket "all of this is
-// verified". The per-record <SourceBadge /> does the precise work; this
-// banner only points at it.
+/**
+ * The demo banner: a small fixed strip on every page, only when
+ * DOORLINK_DEMO=true. To switch it off in code, return null from demoBanner().
+ */
 export function DemoBanner() {
-  if (!isDemoMode) return null
+  const banner = demoBanner()
+  if (!banner) return null
 
   return (
-    <div className="bg-caution-tint px-4 py-2 text-center text-sm text-caution">
-      Demo mode: this build mixes real manufacturer documents with invented sample data. Every record
-      is labelled with where it came from.
+    <div
+      role="status"
+      data-demo-banner
+      className="fixed inset-x-0 top-0 z-[100] flex h-6 items-center justify-center gap-3 bg-caution-tint px-3 text-[11px] font-medium leading-none text-caution"
+    >
+      <span>{banner.text}</span>
+      <Link href={banner.tourHref} className="underline underline-offset-2 hover:text-graphite">
+        Guided tour
+      </Link>
     </div>
   )
 }

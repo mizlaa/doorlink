@@ -3,6 +3,7 @@ import 'server-only'
 import type Stripe from 'stripe'
 import { getStripeClient } from './stripe'
 import { PaymentsNotConfiguredError } from './types'
+import { DEMO_PAYMENT_NOTE, isDemo } from '../demo/mode'
 
 /**
  * Stripe Connect for marketplace jobs.
@@ -20,11 +21,13 @@ import { PaymentsNotConfiguredError } from './types'
  * and checked before any checkout is created.
  */
 
+/** In demo mode payments are simulated in the app, so the flow counts as connected. */
 export function connectConfigured(): boolean {
-  return !!process.env.STRIPE_SECRET_KEY
+  return isDemo() || !!process.env.STRIPE_SECRET_KEY
 }
 
 export function connectWebhookConfigured(): boolean {
+  if (isDemo()) return false
   return connectConfigured() && !!process.env.STRIPE_CONNECT_WEBHOOK_SECRET
 }
 
@@ -128,6 +131,7 @@ export async function createJobCheckout(input: {
 
 /** Stripe's processing fee on a paid intent, from its balance transaction. */
 export async function processingFeeFor(accountId: string, paymentIntentId: string): Promise<number | null> {
+  if (isDemo()) return null
   const stripe = getStripeClient()
   const intent = await stripe.paymentIntents.retrieve(
     paymentIntentId,
@@ -151,6 +155,7 @@ export async function refundJobPayment(input: {
   amountCents?: number
   idempotencyKey: string
 }): Promise<string> {
+  if (isDemo()) return `demo_refund_${input.idempotencyKey}`
   const stripe = getStripeClient()
   const refund = await stripe.refunds.create(
     { payment_intent: input.paymentIntentId, amount: input.amountCents, refund_application_fee: true },

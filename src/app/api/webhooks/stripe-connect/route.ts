@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { isDemo } from '@/lib/demo/mode'
 import { connectWebhookConfigured, verifyConnectWebhook } from '@/lib/payments/connect'
 import { handleConnectEvent } from '@/lib/payments/connect-events'
 
@@ -11,6 +12,8 @@ import { handleConnectEvent } from '@/lib/payments/connect-events'
 export const dynamic = 'force-dynamic'
 
 export async function POST(request: Request) {
+  // Demo mode has no Stripe to send events. Nothing is accepted.
+  if (isDemo()) return NextResponse.json({ error: 'not_found' }, { status: 404 })
   if (!connectWebhookConfigured()) {
     return NextResponse.json({ error: 'payments_not_configured' }, { status: 503 })
   }

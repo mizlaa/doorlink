@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { isDemo } from '@/lib/demo/mode'
 import { PayoutStatus } from '@prisma/client'
 import type Stripe from 'stripe'
 import { paymentProvider, isPaymentsNotConfigured } from '@/lib/payments'
@@ -30,6 +31,8 @@ import {
 export const dynamic = 'force-dynamic'
 
 export async function POST(request: Request) {
+  // Demo mode has no Stripe to send events. Nothing is accepted.
+  if (isDemo()) return NextResponse.json({ error: 'not_found' }, { status: 404 })
   const provider = paymentProvider()
   if (!provider) {
     return NextResponse.json(

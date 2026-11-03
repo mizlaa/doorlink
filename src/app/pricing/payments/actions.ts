@@ -6,6 +6,7 @@ import { getSession } from '@/lib/auth'
 import { canManageBusiness, ensureBusinessProfile } from '@/lib/business/profile'
 import { prisma } from '@/lib/prisma'
 import { businessKeyFor, encodeBusinessKey, loadBusinessDetails, pricingSession } from '@/lib/pricing/business'
+import { isDemo } from '@/lib/demo/mode'
 import {
   connectConfigured,
   createConnectedAccount,
@@ -28,6 +29,22 @@ export async function connectStripeAction(): Promise<void> {
   if (!connectConfigured()) redirect('/pricing/payments?error=not-configured')
 
   const profile = await ensureBusinessProfile(key)
+  if (isDemo()) {
+    // Demo: no Stripe onboarding. The account is marked verified in the demo
+    // database so the online-payment path can be walked through.
+    await prisma.businessProfile.update({
+      where: { id: profile.id },
+      data: {
+        stripeAccountId: profile.stripeAccountId ?? `acct_demo_${profile.id}`,
+        stripeChargesEnabled: true,
+        stripePayoutsEnabled: true,
+        stripeDetailsSubmitted: true,
+        stripeUpdatedAt: new Date(),
+      },
+    })
+    revalidatePath('/pricing/payments')
+    redirect('/pricing/payments?demo=simulated')
+  }
   let accountId = profile.stripeAccountId
   let url: string
   try {
@@ -62,7 +79,7 @@ export async function refreshStripeAction(): Promise<void> {
   const session = await pricingSession(await getSession())
   if (!session) return
   const profile = await ensureBusinessProfile(businessKeyFor(session))
-  if (!profile.stripeAccountId || !connectConfigured()) return
+  if (isDemo() || !profile.stripeAccountId || !connectConfigured()) return
   try {
     const state = await retrieveAccountState(profile.stripeAccountId)
     await prisma.businessProfile.update({

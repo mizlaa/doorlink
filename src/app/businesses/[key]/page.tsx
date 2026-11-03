@@ -10,6 +10,7 @@ import { mediaUrl } from '@/lib/media'
 import { businessCard, businessKeyFor, businessUserIds, decodeBusinessKey, encodeBusinessKey } from '@/lib/pricing/business'
 import { productLabel } from '@/lib/pricing/products'
 import { Badge } from '@/components/ui/Badge'
+import { isDemo } from '@/lib/demo/mode'
 import { Stars } from '@/components/quotes/Stars'
 import { ReviewReportButton } from './ReviewReportButton'
 
@@ -168,6 +169,7 @@ export default async function BusinessProfilePage({ params, searchParams }: Prop
                           <span className="text-line">{'★'.repeat(5 - review.rating)}</span>
                         </span>
                         <Badge tone="good">Verified job</Badge>
+                        {isDemo() && <Badge tone="caution">Demo review</Badge>}
                       </span>
                       <span className="text-micro text-zinc-deep">
                         {review.author.name.split(' ')[0]} ·{' '}

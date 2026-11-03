@@ -17,6 +17,7 @@ import { productLabel } from '@/lib/pricing/products'
 import { JOB_STATUS_LABELS, JOB_STATUS_TONE, TRANSACTION_STATUS_LABELS } from '@/lib/labels'
 import { JobTransitionControls, ReviewForm, ReviewReplyForm } from './JobControls'
 import { AcceptAndPayForm, ConfirmBookingForm, JobUpdateForm, PayBalanceForm } from './FlowForms'
+import { isDemo } from '@/lib/demo/mode'
 import { completeOverdueJobs } from '@/lib/jobs/auto-complete'
 import { connectConfigured } from '@/lib/payments/connect'
 import { jobHasOnlinePayment } from '@/lib/payments/job-payments'
@@ -28,7 +29,7 @@ export const metadata: Metadata = { title: 'Job' }
 
 type PageProps = {
   params: Promise<{ id: string }>
-  searchParams: Promise<{ booked?: string; paid?: string; payment?: string }>
+  searchParams: Promise<{ booked?: string; paid?: string; payment?: string; demo?: string }>
 }
 
 export default async function JobDetailPage({ params, searchParams }: PageProps) {
@@ -227,7 +228,7 @@ export default async function JobDetailPage({ params, searchParams }: PageProps)
               </div>
             )}
           </dl>
-          <AcceptAndPayForm jobId={current.id} online={online} dueNow={dueNow} dueLater={online ? dueLater : null} />
+          <AcceptAndPayForm jobId={current.id} online={online} demo={isDemo()} dueNow={dueNow} dueLater={online ? dueLater : null} />
         </div>
       ) : (
         <div className={`${box} border-line bg-paper`}>
@@ -307,8 +308,12 @@ export default async function JobDetailPage({ params, searchParams }: PageProps)
           {query.paid === '1' && actor === 'customer' && (
             <p className="mt-4 rounded-md border border-good/40 bg-natural/10 px-4 py-3 text-sm text-graphite">
               {job.status === JobStatus.AWAITING_PAYMENT
-                ? 'Thanks. Stripe is confirming your payment; this page updates once it does.'
-                : 'Payment confirmed. Thank you.'}
+                ? query.demo === '1'
+                  ? 'Demo: payment simulated, nothing was charged.'
+                  : 'Thanks. Stripe is confirming your payment; this page updates once it does.'
+                : query.demo === '1'
+                  ? 'Demo: payment simulated, nothing was charged. Thank you.'
+                  : 'Payment confirmed. Thank you.'}
             </p>
           )}
           {query.payment === 'cancelled' && actor === 'customer' && (

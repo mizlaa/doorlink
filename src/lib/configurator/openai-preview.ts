@@ -1,6 +1,8 @@
 import 'server-only'
 
 import { doorPreviewPrompt } from './preview-prompt'
+import { demoSampleBase64, DEMO_SAMPLES } from '@/lib/demo/assets'
+import { isDemo } from '@/lib/demo/mode'
 import { PREVIEW_IMAGE_MAX_BYTES, sniffPreviewImageMime, type PreviewImageMime } from './preview-image-mime'
 import { previewFailureRefundsCredit } from './preview-failure'
 import type { DoorSpec } from './options'
@@ -23,6 +25,11 @@ export async function generateDoorPreviewFromPhoto(input: {
   imageBytes: Uint8Array
   note?: string
 }): Promise<PreviewGenerationResult> {
+  // Demo: no OpenAI call. A bundled sample image is the 'photo preview'.
+  if (isDemo()) {
+    const sample = DEMO_SAMPLES.ai[Math.floor(Math.random() * DEMO_SAMPLES.ai.length)]
+    return { ok: true, dataUrl: `data:image/png;base64,${demoSampleBase64(sample)}` }
+  }
   const key = process.env.OPENAI_API_KEY
   if (!key) {
     return { ok: false, error: 'Photo preview is not connected yet.', refundCredit: true }

@@ -1,3 +1,4 @@
+import { devSessionAllowed } from '@/lib/demo/mode'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { RegisterForm } from '@/components/auth/RegisterForm'
@@ -13,7 +14,7 @@ export default async function RegisterPage({ searchParams }: { searchParams: Pro
   const { as } = await searchParams
   const initialRole = as === 'business' ? 'TECHNICIAN' : 'CUSTOMER'
   const supabaseAuth = isConnected('auth')
-  const devModeAvailable = !supabaseAuth && process.env.NODE_ENV !== 'production'
+  const devModeAvailable = !supabaseAuth && devSessionAllowed()
 
   return (
     <div className="mx-auto max-w-md px-4 py-12 sm:py-16">

@@ -1,3 +1,5 @@
+import { isDemo } from './demo/mode'
+
 // The single place that decides whether a feature is actually live.
 // Everything else checks this and renders <NotConnected /> when the
 // answer is no — nothing in the UI pretends to be connected.
@@ -67,6 +69,10 @@ export const integrations: Record<IntegrationKey, IntegrationStatus> = {
 }
 
 export function isConnected(key: IntegrationKey): boolean {
+  // Demo mode: payments are simulated inside the app (shown as connected so
+  // the booking flow runs); every other provider reads as not connected and is
+  // never called.
+  if (isDemo()) return key === 'payments'
   switch (key) {
     case 'auth':
       return authEnabled()
@@ -82,5 +88,3 @@ export function isConnected(key: IntegrationKey): boolean {
       return aiEnabled()
   }
 }
-
-export const isDemoMode = process.env.DOORLINK_DEMO_MODE !== 'false'

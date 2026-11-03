@@ -8,6 +8,8 @@ import { MobileTabBar } from '@/components/layout/MobileTabBar'
 import { InstallPrompt } from '@/components/layout/InstallPrompt'
 import { ServiceWorkerRegister } from '@/components/layout/ServiceWorkerRegister'
 import { NavigationSpinner } from '@/components/layout/NavigationSpinner'
+import { DemoBanner } from '@/components/layout/DemoBanner'
+import { isDemo } from '@/lib/demo/mode'
 import { toJsonLd } from '@/lib/json-ld'
 import './globals.css'
 
@@ -70,8 +72,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <style>{'[data-reveal]{opacity:1!important;transform:none!important}'}</style>
         </noscript>
       </head>
-      <body className="flex min-h-screen flex-col overflow-x-hidden bg-paper font-sans text-graphite antialiased">
+      <body className={`flex min-h-screen flex-col overflow-x-hidden bg-paper font-sans text-graphite antialiased${isDemo() ? ' pt-6' : ''}`}>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(websiteJsonLd) }} />
+        <DemoBanner />
         <SkipLink />
         <Suspense fallback={<div className="h-16 border-b border-line" role="status" aria-label="Loading navigation" />}>
           <Header />

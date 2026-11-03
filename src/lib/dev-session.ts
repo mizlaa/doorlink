@@ -9,6 +9,7 @@ import { prisma } from './prisma'
 import { isDatabaseUnreachable } from './db-errors'
 import { readSignUpBusiness, registerDoorlinkUser } from './register-user'
 import { DEV_SESSION_COOKIE } from './session-cookie'
+import { devSessionAllowed } from './demo/mode'
 
 // Everything in this file is the dev-only stand-in for real authentication:
 // no passwords, a plain cookie, and it refuses to run in production (see
@@ -23,7 +24,7 @@ const signInSchema = z.object({
 })
 
 export async function devSignInAction(_prevState: SignInState, formData: FormData): Promise<SignInState> {
-  if (process.env.NODE_ENV === 'production') {
+  if (!devSessionAllowed()) {
     return { error: 'Sign-in is not available in production yet — no authentication provider is connected.' }
   }
 
@@ -67,7 +68,7 @@ const registerSchema = z
   )
 
 export async function devRegisterAction(_prevState: RegisterState, formData: FormData): Promise<RegisterState> {
-  if (process.env.NODE_ENV === 'production') {
+  if (!devSessionAllowed()) {
     return {
       error: 'Registration is not available in production yet — no authentication provider is connected.',
     }

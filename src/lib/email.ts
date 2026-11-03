@@ -1,5 +1,7 @@
 import 'server-only'
 
+import { isDemo } from '@/lib/demo/mode'
+
 /**
  * Transactional email through Resend's HTTP API — only when it is set up.
  *
@@ -10,6 +12,8 @@ import 'server-only'
  */
 
 export function emailConfigured(): boolean {
+  // Demo mode sends nothing; notifications stay in the app.
+  if (isDemo()) return false
   return Boolean(process.env.RESEND_API_KEY?.trim() && process.env.EMAIL_FROM?.trim())
 }
 

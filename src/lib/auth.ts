@@ -5,6 +5,7 @@ import { prisma } from './prisma'
 import { isDatabaseUnreachable } from './db-errors'
 import { isConnected } from './integrations'
 import { DEV_SESSION_COOKIE } from './session-cookie'
+import { devSessionAllowed } from './demo/mode'
 import { withSupabaseServerClient } from './supabase/server'
 import { AuthServiceUnavailableError } from './supabase/auth-service'
 import { hasSupabaseSessionCookie } from './supabase/session-cookie'
@@ -48,7 +49,7 @@ async function doorlinkSessionFromEmail(email: string): Promise<Session | null> 
 // stand in for real authentication once deployed.
 class DevCookieSessionProvider implements SessionProvider {
   async getSession(): Promise<Session | null> {
-    if (process.env.NODE_ENV === 'production') return null
+    if (!devSessionAllowed()) return null
 
     const store = await cookies()
     const email = store.get(DEV_SESSION_COOKIE)?.value

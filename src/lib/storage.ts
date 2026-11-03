@@ -1,4 +1,5 @@
 import { isConnected } from './integrations'
+import { isDemo } from './demo/mode'
 
 // File storage behind one interface so the Supabase Storage adapter can
 // replace the local one without any caller changing.
@@ -127,6 +128,7 @@ export class StorageUnavailableError extends Error {
 }
 
 export function canUpload(): boolean {
+  if (isDemo()) return false
   return activeStorageBackend() === 'supabase'
 }
 

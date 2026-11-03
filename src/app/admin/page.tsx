@@ -6,8 +6,11 @@ import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { Panel, PanelBody } from '@/components/ui/Panel'
 import { NotConnected } from '@/components/ui/NotConnected'
 import { ACTIVE_JOB_STATUSES, QUOTABLE_LEAD_STATUSES } from '@/lib/marketplace'
+import { isDemo } from '@/lib/demo/mode'
+import { ResetDemoPanel } from './demo/ResetDemoPanel'
 
-export default async function AdminOverviewPage() {
+export default async function AdminOverviewPage({ searchParams }: { searchParams: Promise<{ demo?: string }> }) {
+  const { demo } = await searchParams
   const session = await getSession()
   // The layout has already redirected anyone without catalogue:write, so
   // a session exists here; what varies is whether it can also see the
@@ -56,6 +59,7 @@ export default async function AdminOverviewPage() {
 
   return (
     <div className="flex flex-col gap-10">
+      {isDemo() && <ResetDemoPanel justReset={demo === 'reset'} />}
       <section>
         <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-zinc-deep">Catalogue</h2>
         <StatGrid stats={catalogueStats} />

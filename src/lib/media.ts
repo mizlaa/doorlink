@@ -3,6 +3,8 @@ import 'server-only'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { activeStorageBackend, signedFileUrl, StorageUnavailableError, uploadFile } from './storage'
+import { demoSampleKey } from './demo/assets'
+import { isDemo } from './demo/mode'
 
 /**
  * Images people add: business logos and portfolios, job progress photos,
@@ -34,7 +36,9 @@ function localAllowed(): boolean {
   return process.env.NODE_ENV !== 'production'
 }
 
+/** Demo mode accepts uploads in the forms, but stores bundled samples instead (see demo/assets). */
 export function mediaUploadsAvailable(): boolean {
+  if (isDemo()) return true
   return activeStorageBackend() === 'supabase' || localAllowed()
 }
 
@@ -78,12 +82,16 @@ function safeKey(key: string): string {
 
 /** A fresh key under a prefix: "<prefix>/<owner>/<random>.<ext>". */
 export function newMediaKey(prefix: MediaPrefix, owner: string, type: string): string {
+  // Demo: the upload is not stored; the record points at a bundled sample.
+  if (isDemo()) return demoSampleKey(prefix)
   const ext = IMAGE_TYPES[type] ?? 'bin'
   const random = crypto.randomUUID().replace(/-/g, '')
   return safeKey(`${prefix}/${owner.replace(/[^A-Za-z0-9_-]/g, '')}/${random}.${ext}`)
 }
 
 export async function saveMedia(key: string, bytes: Uint8Array, contentType: string): Promise<void> {
+  // Demo: nothing is written anywhere. The key points at a bundled sample.
+  if (isDemo()) return
   safeKey(key)
   if (activeStorageBackend() === 'supabase') {
     await uploadFile({ key, body: bytes, contentType })
@@ -117,5 +125,8 @@ export async function mediaSource(
 
 /** The URL pages use for an image. Access is checked when it is fetched. */
 export function mediaUrl(key: string | null | undefined): string | null {
-  return key ? `/api/media/${key}` : null
+  if (!key) return null
+  // Bundled demo samples are public static files, not stored uploads.
+  if (key.startsWith('demo/')) return `/${key}`
+  return `/api/media/${key}`
 }
