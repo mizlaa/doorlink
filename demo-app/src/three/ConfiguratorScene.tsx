@@ -30,6 +30,41 @@ export const ConfiguratorScene = memo(function ConfiguratorScene({
   const [ready, setReady] = useState(false)
   const [spinning, setSpinning] = useState(false)
   const wrapper = useRef<HTMLDivElement>(null)
+  // Full screen: the same canvas, re-laid out over the whole viewport.
+  const [immersive, setImmersive] = useState(false)
+  useEffect(() => {
+    if (!immersive) return
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    // Ancestors with a backdrop filter, transform or their own stacking context (the
+    // sticky preview columns) would trap a fixed element; lift them while full screen.
+    const lifted: Array<[HTMLElement, string]> = []
+    for (let n = wrapper.current?.parentElement; n && n !== document.body; n = n.parentElement) {
+      const c = getComputedStyle(n)
+      const stacked = c.zIndex !== 'auto' || c.position === 'sticky' || c.position === 'fixed'
+      if (c.backdropFilter !== 'none' || c.transform !== 'none' || c.filter !== 'none' || c.contain !== 'none' || stacked) {
+        lifted.push([n, n.style.cssText])
+        n.style.setProperty('backdrop-filter', 'none')
+        n.style.setProperty('-webkit-backdrop-filter', 'none')
+        n.style.setProperty('transform', 'none')
+        n.style.setProperty('filter', 'none')
+        n.style.setProperty('contain', 'none')
+        if (stacked) n.style.setProperty('z-index', '300')
+      }
+    }
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setImmersive(false)
+    window.addEventListener('keydown', onKey)
+    return () => {
+      for (const [n, css] of lifted) n.style.cssText = css
+      document.body.style.overflow = previous
+      window.removeEventListener('keydown', onKey)
+    }
+  }, [immersive])
+  // Reframe for the new shape once the canvas has resized.
+  useEffect(() => {
+    const t = window.setTimeout(() => bus.send({ type: 'view', name: 'angle' }), 80)
+    return () => window.clearTimeout(t)
+  }, [immersive, bus])
 
   useEffect(() => {
     setSupported(supportsThreeWebGL())
@@ -71,8 +106,14 @@ export const ConfiguratorScene = memo(function ConfiguratorScene({
   return (
     <div
       ref={wrapper}
-      className="demo-scene relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gradient-to-b from-sky-100 via-slate-100 to-slate-200 sm:aspect-[16/10]"
+      className={
+        immersive
+          ? 'demo-scene is-immersive fixed inset-0 z-[300] overflow-hidden bg-gradient-to-b from-sky-100 via-slate-100 to-slate-200'
+          : 'demo-scene relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gradient-to-b from-sky-100 via-slate-100 to-slate-200 sm:aspect-[16/10]'
+      }
       data-demo-scene
+      role={immersive ? 'dialog' : undefined}
+      aria-label={immersive ? '3D preview, full screen' : undefined}
     >
       {supported &&
         (preview.scene === 'garage' ? (
@@ -105,7 +146,17 @@ export const ConfiguratorScene = memo(function ConfiguratorScene({
           </span>
         </div>
       )}
-      <ViewControls bus={bus} spinning={spinning} insideLabel={scene === 'garage' ? 'Inside' : 'Street'} />
+      <ViewControls bus={bus} spinning={spinning} insideLabel={scene === 'garage' ? 'Inside' : 'Street'} immersive={immersive} onImmersive={setImmersive} />
+      {immersive && (
+        <button
+          type="button"
+          onClick={() => setImmersive(false)}
+          className="absolute right-3 top-[max(12px,env(safe-area-inset-top))] flex h-10 items-center gap-2 rounded-full bg-white/90 px-4 text-sm font-semibold text-graphite shadow-md backdrop-blur"
+        >
+          <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" /></svg>
+          Exit full screen
+        </button>
+      )}
     </div>
   )
 })
@@ -137,7 +188,19 @@ function ControlButton({
   )
 }
 
-function ViewControls({ bus, spinning, insideLabel }: { bus: CameraBus; spinning: boolean; insideLabel: string }) {
+function ViewControls({
+  bus,
+  spinning,
+  insideLabel,
+  immersive,
+  onImmersive,
+}: {
+  bus: CameraBus
+  spinning: boolean
+  insideLabel: string
+  immersive: boolean
+  onImmersive: (on: boolean) => void
+}) {
   const [view, setView] = useState<ViewName>('angle')
   const go = (name: ViewName) => {
     setView(name)
@@ -145,7 +208,7 @@ function ViewControls({ bus, spinning, insideLabel }: { bus: CameraBus; spinning
   }
   const reduced = useMemo(prefersReducedMotion, [])
   return (
-    <div className="pointer-events-none absolute inset-x-2 bottom-2 flex items-end justify-between gap-2">
+    <div className={`pointer-events-none absolute inset-x-2 flex items-end justify-between gap-2 ${immersive ? 'bottom-[max(12px,env(safe-area-inset-bottom))]' : 'bottom-2'}`}>
       <div className="pointer-events-auto flex gap-1 rounded-full bg-black/10 p-1 shadow-sm backdrop-blur-sm" role="group" aria-label="Camera view">
         <ControlButton label="Three-quarter view" onClick={() => go('angle')} active={view === 'angle' && !spinning}>
           3/4
@@ -169,6 +232,11 @@ function ViewControls({ bus, spinning, insideLabel }: { bus: CameraBus; spinning
         <ControlButton label="Zoom out" onClick={() => bus.send({ type: 'zoom', factor: 1.28 })}>
           <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" aria-hidden="true">
             <path d="M3 8h10" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+          </svg>
+        </ControlButton>
+        <ControlButton label={immersive ? 'Exit full screen' : 'Full screen'} onClick={() => onImmersive(!immersive)} active={immersive}>
+          <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" aria-hidden="true">
+            <path d={immersive ? 'M6 2v4H2M10 2v4h4M6 14v-4H2M10 14v-4h4' : 'M2 6V2h4M14 6V2h-4M2 10v4h4M14 10v4h-4'} fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </ControlButton>
         {!reduced && (

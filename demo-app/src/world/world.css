@@ -72,8 +72,10 @@
 .world-root.is-clean .world-top, .world-root.is-clean .world-bottom { display: none; }
 
 @media (max-width: 720px) {
-  .portal-invite { bottom: 24%; gap: 7px; }
-  .portal-invite-button { height: 40px; padding: 0 18px; }
+  .portal-invite { top: 46%; bottom: auto; gap: 6px; }
+  .portal-invite-title { font-size: 13px; letter-spacing: 0.18em; }
+  .portal-invite-button { height: 38px; padding: 0 18px; font-size: 11px; }
+  .portal-invite-link { font-size: 11px; padding: 2px 10px; }
   .world-sub, .world-btn .world-btn-label { display: none; }
   .world-btn { padding: 0 11px; }
   .world-top { padding-bottom: 20px; }
@@ -134,13 +136,17 @@
 .portal-invite-link:hover { background: rgba(255, 255, 255, 0.9); }
 @keyframes portal-invite { from { opacity: 0; transform: translate(-50%, 10px); } to { opacity: 1; transform: translate(-50%, 0); } }
 
-/* The journey: the portal grows from its place in the garage to fill the screen. */
-.portal-travel { position: fixed; z-index: 195; overflow: hidden; pointer-events: none; background: #cfe0ec; will-change: top, left, width, height; }
-.portal-travel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.portal-travel-glow { position: absolute; inset: 0; box-shadow: inset 0 0 60px 20px rgba(196, 222, 252, 0.9); transition: opacity 0.6s; }
-.portal-travel.is-full .portal-travel-glow { opacity: 0; }
-.portal-travel.is-waiting img { animation: portal-breathe 2.4s ease-in-out infinite; }
-@keyframes portal-breathe { 50% { filter: brightness(1.06) saturate(1.05); } }
+/* The swirl, drawn by a shader across the garage opening. */
+.portal.is-gl { opacity: 1; }
+.portal-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+/* The journey: a full-screen swirl over the dimmed page. */
+.portal-travel { position: fixed; inset: 0; z-index: 195; pointer-events: none; }
+.portal-dim { position: absolute; inset: 0; background: #17324D; opacity: 0; animation: portal-dim 0.7s ease-out forwards; }
+@keyframes portal-dim { to { opacity: 0.55; } }
+.portal-travel-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.portal-travel-fallback { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; animation: portal-grow 0.9s cubic-bezier(0.65, 0, 0.35, 1) both; }
+@keyframes portal-grow { from { clip-path: circle(12% at 50% 45%); } to { clip-path: circle(80% at 50% 50%); } }
 
 @media (prefers-reduced-motion: reduce) {
   .world-root, .world-card, .portal-invite { animation: none; }

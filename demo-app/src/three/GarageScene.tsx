@@ -111,6 +111,7 @@ export const GarageScene = memo(function GarageScene({
   const views = useMemo(() => garageViews(layout), [layout])
   return (
     <Stage
+      fitAspect
       tier={tier}
       maxTier={maxTier}
       onTier={onTier}

@@ -1046,6 +1046,7 @@ export function GateScene({
   const shutter = isShutterKind(look.kind)
   return (
     <Stage
+      fitAspect
       tier={tier}
       maxTier={maxTier}
       onTier={onTier}

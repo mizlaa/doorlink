@@ -66,6 +66,7 @@ export function CameraRig({
   minPolar = 0.22,
   maxPolar = 1.42,
   blockers,
+  fitAspect = false,
 }: {
   bus: CameraBus
   views: Record<string, CameraView>
@@ -76,6 +77,8 @@ export function CameraRig({
   maxPolar?: number
   /** Boxes the camera may not enter (buildings): it is pushed out of the nearest face. */
   blockers?: THREE.Box3[]
+  /** Pull every view back on screens narrower than 16:10, so the whole product stays in frame. */
+  fitAspect?: boolean
 }) {
   const controls = useRef<OrbitControlsImpl>(null)
   const { camera, clock } = useThree()
@@ -86,11 +89,19 @@ export function CameraRig({
   const limits = useRef({ minDistance, maxDistance })
   limits.current = { minDistance, maxDistance }
 
+  const fit = () => {
+    if (!fitAspect) return 1
+    const cam = camera as THREE.PerspectiveCamera
+    const t = Math.tan((cam.fov * Math.PI) / 360)
+    return Math.min(2.2, Math.max(1, Math.tan(Math.atan(t * 1.6)) / Math.tan(Math.atan(t * cam.aspect))))
+  }
+
   // First placement only; later setting changes leave the camera alone.
   if (!placed.current) {
     placed.current = true
     const v = views[initial]
-    camera.position.set(...v.position)
+    const k = fit()
+    camera.position.set(...v.position).sub(new THREE.Vector3(...v.target)).multiplyScalar(k).add(new THREE.Vector3(...v.target))
     camera.lookAt(...v.target)
   }
 
@@ -131,6 +142,7 @@ export function CameraRig({
           const v = viewsRef.current[command.name]
           toTarget = new THREE.Vector3(...v.target)
           to = new THREE.Spherical().setFromVector3(new THREE.Vector3(...v.position).sub(toTarget))
+          to.radius *= fit()
         } else {
           toTarget = fromTarget.clone()
           to = from.clone()
@@ -159,6 +171,7 @@ export function CameraRig({
     // zoom, and the page does not scroll or bounce underneath.
     const element = instance.domElement as HTMLElement | undefined
     if (element && element.style.touchAction !== 'none') element.style.touchAction = 'none'
+    if (fitAspect) instance.maxDistance = maxDistance * fit()
     const f = flight.current
     if (f) {
       const k = smootherstep((clock.elapsedTime - f.start) / f.duration)

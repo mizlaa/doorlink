@@ -25,7 +25,7 @@ export function GarageDoorHero({ poweredBy }: { poweredBy: string | null }) {
   const [revealed, setRevealed] = useState(false)
   const sim = useRef<HTMLDivElement>(null)
   const enter = () => {
-    const frame = document.querySelector('.portal-frame')
+    const frame = document.querySelector('.garage-door-opening')
     setWorldReady(false)
     setRevealed(false)
     setTripFull(false)
@@ -103,6 +103,7 @@ export function GarageDoorHero({ poweredBy }: { poweredBy: string | null }) {
 
         <div className="garage-door-sim" ref={sim}>
           <PortalGarageScene
+            paused={world || xray}
             progress={progress}
             isDragging={isDragging}
             dragHandlers={dragHandlers}

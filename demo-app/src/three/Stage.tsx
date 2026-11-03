@@ -57,6 +57,7 @@ export function Stage({
   onDemandShadows = false,
   focusFollow = false,
   haze,
+  fitAspect = false,
   children,
 }: {
   tier: Tier
@@ -86,6 +87,7 @@ export function Stage({
   focusFollow?: boolean
   /** Fog start and end, for a hazier, deeper background. */
   haze?: [number, number]
+  fitAspect?: boolean
   children: ReactNode
 }) {
   const settings = TIERS[tier]
@@ -164,6 +166,7 @@ export function Stage({
         maxDistance={maxDistance}
         maxPolar={maxPolar}
         blockers={blockers}
+        fitAspect={fitAspect}
       />
     </Canvas>
   )
