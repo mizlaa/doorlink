@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Doorlink Demo</title>
+<style>
+:root{--bg:#F3F5F8;--card:#FFFFFF;--ink:#0F1B2D;--muted:#64748B;--line:#E2E8F0;--blue:#1F5FD6;--blue2:#1749B0;--blue-t:#E8F0FD;--orange:#C05A12;--orange-t:#FDF0E6;--green:#2E7D46;--green-t:#E6F4EA;--red:#B42318;color-scheme:light}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0C1220;--card:#151D2E;--ink:#EAF0F8;--muted:#9AA8BC;--line:#26324A;--blue:#5B8CF0;--blue2:#7BA5F5;--blue-t:#1B2A4A;--orange:#F0A060;--orange-t:#3A2615;--green:#6CC08B;--green-t:#15301F;--red:#FF8A80;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0C1220;--card:#151D2E;--ink:#EAF0F8;--muted:#9AA8BC;--line:#26324A;--blue:#5B8CF0;--blue2:#7BA5F5;--blue-t:#1B2A4A;--orange:#F0A060;--orange-t:#3A2615;--green:#6CC08B;--green-t:#15301F;--red:#FF8A80;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{font:14px/1.45 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;padding:0 max(16px,env(safe-area-inset-left,0px)) 0 max(16px,env(safe-area-inset-right,0px));padding-top:env(safe-area-inset-top,0px);padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+.shell{max-width:430px;margin:0 auto;min-height:100vh;background:var(--bg);position:relative}
+@media (min-width:600px){body{padding-top:24px}.shell{border:1px solid var(--line);border-radius:28px;overflow:hidden;min-height:820px;box-shadow:0 20px 60px -20px rgba(15,27,45,.25);background:var(--bg)}}
+.demo-strip{background:var(--orange-t);color:var(--orange);font-size:11px;font-weight:600;text-align:center;padding:5px 8px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.logo{font-weight:700;font-size:18px;letter-spacing:-.01em;display:flex;gap:8px;align-items:center;background:none;border:0;padding:0}
+.logo i{width:24px;height:24px;border-radius:6px;background:var(--ink);display:inline-block;position:relative}
+.logo i:after{content:"";position:absolute;left:5px;right:5px;bottom:5px;height:10px;background:repeating-linear-gradient(0deg,#fff 0 2px,transparent 2px 4px);opacity:.9}
+.icons{display:flex;gap:6px}
+.ib{width:36px;height:36px;border-radius:50%;border:0;background:transparent;display:grid;place-items:center;color:var(--ink)}
+.ib:hover{background:var(--blue-t)}
+.pad{padding:16px}
+h1{font-size:26px;line-height:1.12;letter-spacing:-.02em;margin:0 0 8px;text-wrap:balance}
+h1 span{color:var(--blue)}
+h2{font-size:17px;margin:0 0 10px;letter-spacing:-.01em}
+.eyebrow{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.muted{color:var(--muted)}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.btn{height:46px;padding:0 18px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-weight:600;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn.p{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn.p:hover{background:var(--blue2)}
+.btn.block{width:100%}
+.btn.sm{height:34px;padding:0 12px;font-size:13px;border-radius:9px}
+.btn:disabled{opacity:.45;cursor:default}
+.btn.ghost{background:transparent}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;min-width:0}
+.hero{background:var(--card);border-radius:0 0 22px 22px;padding:14px 16px 18px;border-bottom:1px solid var(--line)}
+.door-stage{background:linear-gradient(#DCE6F3,#EEF3F9);border-radius:16px;position:relative;overflow:hidden;margin:12px 0 10px;aspect-ratio:4/3;display:grid;place-items:end center}
+.house{position:absolute;inset:0}
+.door{position:relative;width:62%;aspect-ratio:1.18/1;margin-bottom:10%;background:#2B2F36;border-radius:4px;overflow:hidden;box-shadow:inset 0 0 0 3px #1B1E23}
+.door .panels{position:absolute;inset:0;transition:transform .9s cubic-bezier(.4,.1,.2,1)}
+.door.open .panels{transform:translateY(-102%)}
+.door .sec{position:absolute;left:0;right:0;border-bottom:2px solid #1B1E23}
+.door .win{position:absolute;left:12%;right:12%;height:10%;background:linear-gradient(#8fa6bd,#5f7690);border-radius:3px}
+.doorlabel{position:absolute;left:12px;top:10px;font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--ink);background:var(--card);padding:6px 10px;border-radius:8px;border:1px solid var(--line)}
+.btn.open-btn{position:absolute;left:50%;transform:translateX(-50%);bottom:12px;height:40px;border-radius:999px;background:var(--blue);color:#fff;border:0;padding:0 18px;font-weight:600;font-size:12px;letter-spacing:.04em;white-space:nowrap}
+.tiles{display:grid;grid-template-columns:1fr;gap:10px;margin-top:14px}
+.tile{display:flex;align-items:center;gap:14px;text-align:left;width:100%;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;color:var(--ink)}
+.tile .ic{width:40px;height:40px;border-radius:10px;background:var(--blue-t);color:var(--blue);display:grid;place-items:center;font-weight:700;flex:none}
+.tile b{display:block;font-size:15px}.tile small{color:var(--muted)}
+.tile .chev{margin-left:auto;color:var(--muted)}
+.tabs{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(430px,100%);background:var(--card);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(6,1fr);padding:8px 4px calc(8px + env(safe-area-inset-bottom,0px));z-index:30}
+@media (min-width:600px){.tabs{position:absolute;bottom:0;border-radius:0 0 28px 28px}}
+.tab{background:none;border:0;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:10.5px;color:var(--muted);padding:4px 0}
+.tab .ti{width:22px;height:22px;border-radius:7px;border:2px solid currentColor;display:block}
+.tab.on{color:var(--blue);font-weight:600}
+.tab.on .ti{background:var(--blue)}
+label.f{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--muted);min-width:0}
+.in{height:44px;border-radius:12px;border:1px solid var(--line);background:var(--card);padding:0 12px;color:var(--ink);width:100%;min-width:0}
+textarea.in{height:auto;min-height:90px;padding:10px 12px}
+.in:focus,button:focus-visible,.tab:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.seg{display:flex;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:3px;gap:3px}
+.seg button{flex:1;border:0;background:transparent;padding:9px 6px;border-radius:9px;font-size:13px;color:var(--muted);font-weight:500}
+.seg button.on{background:var(--blue);color:#fff;font-weight:600}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:7px 12px;font-size:13px}
+.chip.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.sw{width:28px;height:28px;border-radius:50%;border:2px solid var(--card);box-shadow:0 0 0 1px var(--line);cursor:pointer}
+.sw.on{box-shadow:0 0 0 2px var(--blue)}
+.pill{font-size:11px;font-weight:600;padding:3px 8px;border-radius:999px;display:inline-block;background:var(--blue-t);color:var(--blue)}
+.pill.o{background:var(--orange-t);color:var(--orange)}
+.pill.g{background:var(--green-t);color:var(--green)}
+.pill.n{background:var(--line);color:var(--muted)}
+.demo-tag{font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--orange);background:var(--orange-t);padding:2px 6px;border-radius:5px}
+.notice{background:var(--blue-t);border-radius:12px;padding:12px;font-size:13px}
+.notice.o{background:var(--orange-t);color:var(--orange)}
+.list{display:flex;flex-direction:column;gap:10px}
+.quote{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:start}
+.logo-b{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px}
+.price{font-size:22px;font-weight:700;letter-spacing:-.01em;text-align:right;white-space:nowrap}
+.kv{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 12px;font-size:13px;margin:0}
+.kv dt{color:var(--muted)}.kv dd{margin:0;text-align:right;font-weight:500}
+.total{border-top:1px solid var(--line);margin-top:8px;padding-top:10px;display:flex;justify-content:space-between;font-weight:700;font-size:16px}
+.doc{background:#fff;color:#111;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.2);padding:20px;position:relative;overflow:hidden;font-size:12.5px;line-height:1.5}
+.doc .band{background:#111;color:#fff;padding:12px 14px;margin:-20px -20px 14px;font-weight:700;letter-spacing:.02em}
+.doc .wm{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
+.doc .wm span{transform:rotate(-24deg);font-weight:800;font-size:26px;color:rgba(192,90,18,.16);letter-spacing:.08em;text-align:center}
+.screen-title{display:flex;align-items:center;gap:10px;margin:4px 0 12px}
+.back{border:0;background:transparent;font-size:14px;color:var(--blue);font-weight:600;padding:6px 0}
+.hidden{display:none!important}
+.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:13px;z-index:60;max-width:calc(100% - 32px);text-align:center;box-shadow:0 10px 30px -10px rgba(0,0,0,.4)}
+.sheet{position:absolute;inset:0;background:var(--bg);z-index:40;padding:16px;overflow:auto}
+.sheet.hidden{display:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="shell" id="shell">
+  <div class="demo-strip">DEMO — sample data, no real orders or payments</div>
+  <header class="top">
+    <button class="logo" data-go="home"><i></i>Doorlink</button>
+    <div class="icons">
+      <button class="ib" aria-label="Search" data-go="find"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+      <button class="ib" aria-label="Menu" id="menuBtn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </header>
+  <main id="app"></main>
+  <nav class="tabs" id="tabs" aria-label="Main">
+    <button class="tab" data-go="home"><span class="ti"></span>Home</button>
+    <button class="tab" data-go="find"><span class="ti"></span>Find</button>
+    <button class="tab" data-go="manuals"><span class="ti"></span>Manuals</button>
+    <button class="tab" data-go="messages"><span class="ti"></span>Messages</button>
+    <button class="tab" data-go="market"><span class="ti"></span>Market</button>
+    <button class="tab" data-go="account"><span class="ti"></span>Account</button>
+  </nav>
+  <div class="sheet hidden" id="menu" role="dialog" aria-label="Menu">
+    <div class="row" style="justify-content:space-between"><b style="font-size:18px">Menu</b><button class="btn sm" id="menuClose">Close</button></div>
+    <div class="list" style="margin-top:14px">
+      <button class="card" style="text-align:left;color:var(--ink)" data-go="hire">Hire a pro</button>
+      <button class="card" style="text-align:left;color:var(--ink)" data-go="work">Find work</button>
+      <button class="card" style="text-align:left;color:var(--ink)" data-go="market">Marketplace</button>
+      <button class="card" style="text-align:left;color:var(--ink)" data-go="manuals">Manuals</button>
+      <button class="card" style="text-align:left;color:var(--ink)" data-go="spring">Spring calculator</button>
+      <button class="card" style="text-align:left;color:var(--ink)" data-go="design">Design</button>
+      <button class="card" style="text-align:left;color:var(--ink)" data-go="identify">Identify my door</button>
+      <button class="card" style="text-align:left;color:var(--ink)" data-go="compliance">Compliance & Safety Pack</button>
+      <button class="card" style="text-align:left;color:var(--ink)" data-go="dir/supplier">Suppliers</button>
+      <button class="card" style="text-align:left;color:var(--ink)" data-go="dir/manufacturer">Manufacturers</button>
+      <button class="card" style="text-align:left;color:var(--ink)" data-go="dir/installer">Installers</button>
+      <button class="card" style="text-align:left;color:var(--ink)" data-go="dash">Dashboard</button>
+      <button class="card" style="text-align:left;color:var(--ink)" data-go="account">Sign in</button>
+    </div>
+  </div>
+  <div class="toast hidden" id="toast" role="status"></div>
+</div>
+
+<script>
+/* ===== Fictional seed data. Every name, number and review is invented for the demo. ===== */
+const BUSINESSES=[
+ {id:'westline',name:'Westline Door Systems',suburb:'Liverpool',rating:4.8,reviews:86,color:'#1F5FD6',init:'WD',mult:1.00,lead:14,types:['sectional','roller','tilt'],warranty:'5 years on door, 2 years motor',area:'Sydney South West'},
+ {id:'summit',name:'Summit Roller & Gate Co',suburb:'Prestons',rating:4.6,reviews:54,color:'#0E7C6B',init:'SR',mult:0.97,lead:10,types:['roller','sectional'],warranty:'3 years on door, 1 year motor',area:'Sydney West'},
+ {id:'bluegum',name:'Bluegum Automation',suburb:'Casula',rating:4.7,reviews:38,color:'#6B4FBF',init:'BA',mult:1.05,lead:21,types:['sectional','tilt'],warranty:'5 years on motor and door',area:'Macarthur'},
+ {id:'metrospan',name:'MetroSpan Doorworks',suburb:'Bankstown',rating:4.4,reviews:112,color:'#B4530A',init:'MD',mult:0.93,lead:7,types:['roller','sectional','tilt'],warranty:'2 years on door',area:'Inner West'},
+ {id:'crestview',name:'Crestview Access Solutions',suburb:'Parramatta',rating:4.9,reviews:29,color:'#2E7D46',init:'CA',mult:1.08,lead:28,types:['sectional','tilt'],warranty:'7 years on door, 3 years motor',area:'Parramatta & Hills'},
+ {id:'southwest',name:'Southwest Gate Studio',suburb:'Moorebank',rating:4.5,reviews:41,color:'#8A2BE2',init:'SG',mult:1.01,lead:12,types:['roller','sectional'],warranty:'3 years on door and motor',area:'Sydney South West'},
+ {id:'harbour',name:'Harbourline Shutters',suburb:'Alexandria',rating:4.3,reviews:23,color:'#0F6E8C',init:'HS',mult:0.99,lead:18,types:['roller'],warranty:'2 years on shutters',area:'Inner Sydney'},
+ {id:'precision',name:'Precision Entry Fabrication',suburb:'Wetherill Park',rating:4.6,reviews:67,color:'#5B5B5B',init:'PE',mult:1.03,lead:24,types:['sectional','roller','tilt'],warranty:'5 years on fabrication',area:'Western Sydney'}
+];
+const PRODUCTS=[['door','Garage door'],['gate','Gate'],['fence','Fence'],['shutter','Shutter']];
+const TYPES={door:[['sectional','Sectional'],['roller','Roller'],['tilt','Tilt']],gate:[['sliding','Sliding'],['swing','Swing'],['pedestrian','Pedestrian']],fence:[['colorbond','Colorbond'],['timber','Timber'],['slat','Slat']],shutter:[['window','Window'],['shop','Shop']]};
+const DEFAULT_TYPE={door:'sectional',gate:'sliding',fence:'colorbond',shutter:'window'};
+BUSINESSES.forEach(b=>{b.kind='installer';b.prods=['door']});
+BUSINESSES[1].prods=['door','gate'];BUSINESSES[2].prods=['gate'];BUSINESSES[5].prods=['gate','fence'];BUSINESSES[6].prods=['shutter'];
+const SUPPLIERS=[
+ {id:'sup-coreparts',name:'Coreparts Supply Co',suburb:'Smithfield',area:'Western Sydney',rating:4.8,reviews:47,color:'#1F5FD6',init:'CS',kind:'supplier',about:'Fictional parts supplier: springs, rollers, tracks and remotes. Sample data only.'},
+ {id:'sup-tracktown',name:'TrackTown Hardware',suburb:'Auburn',area:'Inner West',rating:4.7,reviews:31,color:'#0E7C6B',init:'TT',kind:'supplier',about:'Fictional hardware supplier for installers. Sample data only.'},
+ {id:'sup-gatefit',name:'GateFit Components',suburb:'Revesby',area:'South West',rating:4.9,reviews:22,color:'#6B4FBF',init:'GF',kind:'supplier',about:'Fictional gate hardware supplier. Sample data only.'}
+];
+const MANUFACTURERS=[
+ {id:'man-northgate',name:'Northgate',suburb:'Dandenong',area:'Australia (fictional)',rating:4.8,reviews:64,color:'#17324D',init:'NG',kind:'manufacturer',about:'Fictional manufacturer of sectional doors and motors. All models are sample data.'},
+ {id:'man-veltrix',name:'Veltrix',suburb:'Campbellfield',area:'Australia (fictional)',rating:4.7,reviews:58,color:'#B4530A',init:'VX',kind:'manufacturer',about:'Fictional manufacturer of roller doors and gate motors. Sample data only.'},
+ {id:'man-harbrook',name:'Harbrook',suburb:'Wetherill Park',area:'Australia (fictional)',rating:4.6,reviews:40,color:'#2E7D46',init:'HB',kind:'manufacturer',about:'Fictional manufacturer of tilt doors and accessories. Sample data only.'}
+];
+const REVIEW_LINES=['Quote matched the install, crew were tidy and on time.','Good communication. The motor setup took a few minutes and works well.','Clear pricing, no surprises on the invoice.','Solid job. Would book again.','Install ran a day later than planned but they kept me updated.'];
+const CATALOGUE=[
+ {id:'m1',brand:'Northgate',model:'NG-SX 2400',type:'Sectional',cat:'Garage door',price:'$1,890–$2,640',cond:'New',mfr:'Northgate'},
+ {id:'m2',brand:'Veltrix',model:'VX-RL 2200',type:'Roller',cat:'Garage door',price:'$1,240–$1,780',cond:'New',mfr:'Veltrix'},
+ {id:'m3',brand:'Harbrook',model:'HB-TL 2100',type:'Tilt',cat:'Garage door',price:'$1,560–$2,100',cond:'New',mfr:'Harbrook'},
+ {id:'m4',brand:'Northgate',model:'NG-M4 motor',type:'Motor',cat:'Opener',price:'$640–$880',cond:'New',mfr:'Northgate'},
+ {id:'m5',brand:'Veltrix',model:'VX-SL 4000',type:'Sliding gate motor',cat:'Gate',price:'$980–$1,350',cond:'New',mfr:'Veltrix'},
+ {id:'m6',brand:'Harbrook',model:'HB-Remote x4',type:'Remote kit',cat:'Accessory',price:'$79–$120',cond:'New',mfr:'Harbrook'},
+ {id:'m7',brand:'Northgate',model:'NG-SX 2100 (used)',type:'Sectional',cat:'Garage door',price:'$690–$980',cond:'Used, good',mfr:'Northgate'},
+ {id:'m8',brand:'Veltrix',model:'VX-KP keypad',type:'Keypad',cat:'Accessory',price:'$140–$190',cond:'New',mfr:'Veltrix'}
+];
+const MANUALS=[
+ {id:'man1',title:'Sectional door: installation checklist (sample)',brand:'Northgate',model:'NG-SX',pages:6},
+ {id:'man2',title:'Roller door: user guide (sample)',brand:'Veltrix',model:'VX-RL',pages:8},
+ {id:'man3',title:'Tilt door: maintenance schedule (sample)',brand:'Harbrook',model:'HB-TL',pages:4},
+ {id:'man4',title:'Motor: remote programming steps (sample)',brand:'Northgate',model:'NG-M4',pages:3},
+ {id:'man5',title:'Sliding gate motor: wiring diagram (sample)',brand:'Veltrix',model:'VX-SL',pages:2},
+ {id:'man6',title:'Keypad: reset instructions (sample)',brand:'Veltrix',model:'VX-KP',pages:2}
+];
+const PRODUCT_TIPS=[['Check the data plate','The plate is usually on the inside edge of the door or near the motor. It shows brand, model and serial.'],['Look at the remote','Remote controls often show the brand name and a model number on the back.'],['Photograph the whole unit','A clear photo of the full door or gate helps match the model. Upload is simulated in this demo.']];
+const COMPLIANCE=[
+ {id:'c1',group:'Business',title:'Business information & document register'},
+ {id:'c2',group:'Business',title:'Contractor compliance requirements & declaration'},
+ {id:'c3',group:'WHS & safety',title:'WHS responsibilities statement'},
+ {id:'c4',group:'WHS & safety',title:'Safe work method statement (SWMS)'},
+ {id:'c5',group:'WHS & safety',title:'Risk assessment & hazard register'},
+ {id:'c6',group:'WHS & safety',title:'Emergency management plan'},
+ {id:'c7',group:'Inspections',title:'Master maintenance checklist'},
+ {id:'c8',group:'Inspections',title:'Work incident & near-miss report'},
+ {id:'c9',group:'Inspections',title:'Health & safety management plan'},
+ {id:'c10',group:'Customer',title:'Warranty certificate template'},
+ {id:'c11',group:'Customer',title:'Induction statement & record'},
+ {id:'c12',group:'Customer',title:'Alcohol & fatigue policy'},
+ {id:'c13',group:'Customer',title:'Subcontractor safety agreement'},
+ {id:'c14',group:'WHS & safety',title:'Electrical safety checklist'},
+ {id:'c15',group:'Inspections',title:'Site safety walk-through checklist'}
+];
+const ROLES={
+ customer:{email:'customer@demo.doorlink.test',name:'Alex Demo',tabs:['home','find','manuals','messages','market','account']},
+ installer:{email:'installer@demo.doorlink.test',name:'Sam Installer',tabs:['home','work','manuals','messages','market','account']},
+ supplier:{email:'supplier@demo.doorlink.test',name:'Jordan Supplier',tabs:['home','find','manuals','messages','market','account']},
+ manufacturer:{email:'manufacturer@demo.doorlink.test',name:'Riley Maker',tabs:['home','find','manuals','messages','market','account']},
+ admin:{email:'admin@demo.doorlink.test',name:'Dana Admin',tabs:['home','find','manuals','messages','market','account']}
+};
+const PASSWORD='Demo123!';
+
+/* ===== Local state (per browser, reset from Account) ===== */
+const KEY='doorlink-demo-v1';
+const defaults={session:null,design:{product:'door',type:'sectional',width:2400,height:2100,color:'Charcoal',finish:'Satin',panels:'Raised',sections:4,windows:'Top row',hardware:'Brushed',insulation:'Backed',opener:'Belt drive'},jobs:[],requests:[],posts:[],rates:{door:{sectional:620,roller:520,tilt:580},gate:{sliding:900,swing:760,pedestrian:520},fence:{colorbond:260,timber:340,slat:420},shutter:{window:540,shop:700}},listings:[]};
+let S=load();
+function load(){try{const v=JSON.parse(localStorage.getItem(KEY));return v?{...defaults,...v}:structuredClone(defaults)}catch(e){return structuredClone(defaults)}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+
+/* ===== Pricing: deterministic, documented, no randomness =====
+   ex-GST = area(m²) × rate[type] × finish factor + opener + installation
+   Business totals = ex-GST × business.mult, then GST (10%) added. */
+const FINISH={Matte:1.00,Satin:1.04,Gloss:1.08,Woodgrain:1.14};
+const COLOURS={Charcoal:1.00,'Slate grey':1.00,White:0.98,Monument:1.02};
+const OPENERS={'None':0,'Belt drive':680,'Chain drive':520,'Smart motor':890};
+const INSTALL=640;
+function exGst(d){
+  const m2=d.width*d.height/1e6;
+  const rate=((S.rates||{})[d.product||'door']||{})[d.type]||400;
+  const base=m2*rate*(FINISH[d.finish]||1)*(COLOURS[d.color]||1);
+  const sectionAdj=d.type==='sectional'?(d.sections-3)*35:0;
+  return Math.round(base+sectionAdj+(OPENERS[d.opener]||0)+INSTALL);
+}
+function quoteFor(b,d){const ex=Math.round(exGst(d)*b.mult);const gst=Math.round(ex*0.1);return{ex,gst,total:ex+gst}}
+const money=c=>'$'+c.toLocaleString('en-AU');
+
+/* ===== Helpers ===== */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+function toast(t){const el=$('#toast');el.textContent=t;el.classList.remove('hidden');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.add('hidden'),2400)}
+function go(v){location.hash=v}
+function setTabs(){const role=S.session?S.session.role:'customer';document.querySelectorAll('.tab').forEach(t=>{t.classList.toggle('on',location.hash.slice(1).split('/')[0]===t.dataset.go);t.classList.toggle('hidden',S.session&&!ROLES[role].tabs.includes(t.dataset.go))})}
+
+/* ===== Door preview (SVG-free CSS door with section lines) ===== */
+function doorHTML(d,open){
+  const n=Math.max(2,Math.min(6,+d.sections||4));
+  let secs='';for(let i=1;i<n;i++){secs+=`<div class="sec" style="top:${(100/n)*i}%"></div>`}
+  const win=(d.windows==='None')?'':`<div class="win" style="top:${(100/n)*0.25}%"></div>`;
+  const col={Charcoal:'#2B2F36','Slate grey':'#5B6672',White:'#E9ECEF',Monument:'#3A3F47'}[d.color]||'#2B2F36';
+  return `<div class="door ${open?'open':''}" style="width:${Math.min(70,30+d.width/120)}%;aspect-ratio:${d.width/d.height}"><div class="panels" style="background:${col}">${secs}${win}</div><span class="doorlabel">${((TYPES[d.product||'door']||[]).find(t=>t[0]===d.type)||[0,'Door'])[1].toUpperCase()} · ${d.width}×${d.height}</span></div>`;
+}
+
+/* ===== Views ===== */
+const V={};
+V.home=()=>{
+  const d=S.design;
+  $('#app').innerHTML=`
+  <section class="hero">
+    <div class="eyebrow">Doorlink</div>
+    <h1>Everything for your door. <span>One connected system.</span></h1>
+    <div class="row" style="margin-top:10px"><button class="btn p" data-go="hire">Hire a pro</button><button class="btn" data-go="design">Design yours</button></div>
+    <div class="door-stage">
+      <div class="house" style="background:linear-gradient(180deg,#C9D8EA 0 55%,#D9DEE6 55%)"></div>
+      <div style="position:relative;width:100%;display:grid;place-items:end center;height:100%">${doorHTML({...d,sections:5,windows:'Top row',width:2400,height:2100},S.heroOpen)}</div>
+      <button class="open-btn btn" id="heroBtn">${S.heroOpen?'CLOSE THE DOOR':'OPEN THE DOOR'}</button>
+    </div>
+  </section>
+  <div class="pad">
+    <div class="eyebrow">Services</div>
+    <h2>What do you need?</h2>
+    <div class="tiles">
+      <button class="tile" data-go="hire"><span class="ic">H</span><span><b>Hire a pro</b><small>Post a job. Local techs reply.</small></span><span class="chev">›</span></button>
+      <button class="tile" data-go="work"><span class="ic">F</span><span><b>Find work</b><small>Installer job board.</small></span><span class="chev">›</span></button>
+      <button class="tile" data-go="market"><span class="ic">M</span><span><b>Marketplace</b><small>Parts and products from sellers.</small></span><span class="chev">›</span></button>
+      <button class="tile" data-go="manuals"><span class="ic">D</span><span><b>Manuals</b><small>Search brand and model documents.</small></span><span class="chev">›</span></button>
+      <button class="tile" data-go="spring"><span class="ic">S</span><span><b>Spring calculator</b><small>Guided questions. Illustrative only.</small></span><span class="chev">›</span></button>
+      <button class="tile" data-go="identify"><span class="ic">?</span><span><b>Don't know your model?</b><small>Tips to identify your door.</small></span><span class="chev">›</span></button>
+      <button class="tile" data-go="compliance"><span class="ic">C</span><span><b>Compliance & Safety Pack</b><small>Sample documents, $29.99 (purchasing disabled)</small></span><span class="chev">›</span></button>
+    </div>
+  </div>`;
+  $('#heroBtn').onclick=()=>{S.heroOpen=!S.heroOpen;save();V.home()};
+};
+
+V.hire=()=>{
+  const f=S.postForm||{};
+  $('#app').innerHTML=`
+  <div class="pad">
+    <div class="screen-title"><div><div class="eyebrow">Hire a pro</div><h1 style="font-size:22px">Post a job</h1></div></div>
+    <form id="postForm" class="card" style="display:flex;flex-direction:column;gap:12px" novalidate>
+      <div class="eyebrow">What needs doing</div>
+      <label class="f">Job title<input class="in" name="title" value="${esc(f.title||'')}" placeholder="e.g. Replace sectional garage door"></label>
+      <label class="f">Type of work<select class="in" name="kind"><option ${f.kind==='Install'?'selected':''}>Install</option><option ${f.kind==='Repair'?'selected':''}>Repair</option><option ${f.kind==='Service'?'selected':''}>Service</option><option ${f.kind==='Not sure'?'selected':''}>Not sure yet</option></select></label>
+      <label class="f">Describe the problem<textarea class="in" name="desc" placeholder="What is happening, and what do you want done?">${esc(f.desc||'')}</textarea></label>
+      <label class="f">When do you need it<select class="in" name="when"><option>Standard, within a couple of weeks</option><option>Urgent, within 48 hours</option><option>Flexible</option></select></label>
+      <div class="grid2" style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <label class="f">Budget from (AUD)<input class="in" name="from" inputmode="numeric" value="${esc(f.from||'')}"></label>
+        <label class="f">Budget to (AUD)<input class="in" name="to" inputmode="numeric" value="${esc(f.to||'')}"></label>
+      </div>
+      <div class="eyebrow" style="margin-top:4px">How to reach you</div>
+      <label class="f">Your name<input class="in" name="name" value="${esc(f.name||'')}"></label>
+      <label class="f">Email<input class="in" name="email" type="email" value="${esc(f.email||'')}"></label>
+      <label class="f">Phone<input class="in" name="phone" value="${esc(f.phone||'')}"></label>
+      <div class="grid2" style="display:grid;grid-template-columns:1fr 70px 90px;gap:10px">
+        <label class="f">Suburb<input class="in" name="suburb" value="${esc(f.suburb||'')}"></label>
+        <label class="f">State<select class="in" name="state"><option>NSW</option><option>VIC</option><option>QLD</option></select></label>
+        <label class="f">Postcode<input class="in" name="postcode" inputmode="numeric" maxlength="4" value="${esc(f.postcode||'')}"></label>
+      </div>
+      <p id="postErr" class="hidden" style="color:var(--red);margin:0;font-size:13px"></p>
+      <button class="btn p block" type="submit">Post job</button>
+      <p class="muted" style="font-size:12px;margin:0">Demo: this job is saved in this browser only. No email or SMS is sent.</p>
+    </form>
+  </div>`;
+  $('#postForm').onsubmit=e=>{
+    e.preventDefault();const fd=Object.fromEntries(new FormData(e.target));
+    S.postForm=fd;
+    const err=[];
+    if(!fd.title.trim())err.push('Add a job title.');
+    if(!fd.desc.trim())err.push('Describe the problem.');
+    if(!/^\d{4}$/.test(fd.postcode||''))err.push('Enter a four-digit postcode.');
+    if(!/^\S+@\S+\.\S+$/.test(fd.email||''))err.push('Enter a valid email.');
+    if(err.length){const p=$('#postErr');p.textContent=err.join(' ');p.classList.remove('hidden');save();return}
+    const job={id:'JOB-'+(S.jobs.length+101),title:fd.title,kind:fd.kind,desc:fd.desc,when:fd.when,from:fd.from,to:fd.to,suburb:fd.suburb,state:fd.state,postcode:fd.postcode,status:'Posted',created:new Date().toLocaleDateString('en-AU')};
+    S.jobs.unshift(job);S.postForm=null;save();toast('Job posted (demo). Installers can see it in Find work.');go('jobs/'+job.id);
+  };
+};
+
+V.jobs=(args=[])=>{
+  if(args[0]){const j=S.jobs.find(x=>x.id===args[0]);if(!j)return V.jobs([]);
+    const stat=['Posted','Installer replied','Scheduled','Completed'];
+    $('#app').innerHTML=`<div class="pad"><button class="back" data-go="jobs">‹ Jobs</button><div class="eyebrow" style="margin-top:6px">${j.id}</div><h1 style="font-size:22px">${esc(j.title)}</h1>
+    <div class="row" style="margin:8px 0 12px"><span class="pill">${j.status}</span><span class="pill n">${esc(j.kind)}</span></div>
+    <div class="card"><dl class="kv"><dt>Timing</dt><dd>${esc(j.when)}</dd><dt>Budget</dt><dd>${j.from||'—'} to ${j.to||'—'} AUD</dd><dt>Location</dt><dd>${esc(j.suburb)} ${esc(j.state)} ${esc(j.postcode)}</dd><dt>Posted</dt><dd>${j.created}</dd></dl>
+    <p style="margin:12px 0 0">${esc(j.desc)}</p></div>
+    <h2 style="margin-top:16px">Progress</h2><div class="list">${stat.map((s,i)=>`<div class="card row" style="justify-content:space-between"><span>${s}</span><span class="pill ${i<stat.indexOf(j.status)+1?'g':'n'}">${i<stat.indexOf(j.status)+1?'Done':'To come'}</span></div>`).join('')}</div>
+    <div class="row" style="margin-top:14px">${j.status==='Posted'?`<button class="btn p" id="adv">Simulate installer reply</button>`:''}${j.status==='Installer replied'?`<button class="btn p" id="adv">Simulate: job scheduled</button>`:''}${j.status==='Scheduled'?`<button class="btn p" id="adv">Simulate: job completed</button>`:''}</div>
+    <p class="muted" style="font-size:12px">Demo: installer replies are simulated and nothing is sent to real businesses.</p></div>`;
+    const adv=$('#adv');if(adv)adv.onclick=()=>{const i=stat.indexOf(j.status);j.status=stat[i+1];save();V.jobs([j.id]);toast('Status updated (demo)')};
+    return;}
+  $('#app').innerHTML=`<div class="pad"><div class="eyebrow">Your jobs</div><h1>Jobs</h1>
+  ${S.jobs.length?`<div class="list" style="margin-top:10px">${S.jobs.map(j=>`<button class="card" style="text-align:left;color:var(--ink)" data-go="jobs/${j.id}"><div class="row" style="justify-content:space-between"><b>${esc(j.title)}</b><span class="pill">${j.status}</span></div><div class="muted" style="font-size:13px">${esc(j.suburb)} ${esc(j.postcode)} · ${esc(j.id)}</div></button>`).join('')}</div>`:`<div class="card" style="margin-top:12px"><b>No jobs yet.</b><p class="muted" style="margin:6px 0 12px">Post a job or get installed quotes to see them here.</p><div class="row"><button class="btn p" data-go="hire">Post a job</button><button class="btn" data-go="design">Design a door</button></div></div>`}
+  </div>`;
+};
+
+V.work=()=>{
+  const jobs=[{t:'Replace roller door, Penrith',k:'Install',loc:'2750',b:'$1,400–$1,900'},{t:'Repair sectional door spring',k:'Repair',loc:'2150',b:'$250–$400'},{t:'Automate sliding gate',k:'Install',loc:'2170',b:'$900–$1,300'}];
+  $('#app').innerHTML=`<div class="pad"><div class="eyebrow">Find work</div><h1>Installer job board</h1><p class="muted">Sample jobs posted by fictional customers. Expressing interest is simulated and sent to nobody.</p>
+  <div class="list" style="margin-top:12px">${jobs.map((j,i)=>`<div class="card"><div class="row" style="justify-content:space-between"><b>${j.t}</b><span class="demo-tag">Demo</span></div><div class="muted" style="font-size:13px;margin:4px 0 10px">${j.k} · postcode ${j.loc} · ${j.b} AUD</div><button class="btn sm" data-interest="${i}">Express interest</button></div>`).join('')}</div></div>`;
+  document.querySelectorAll('[data-interest]').forEach(b=>b.onclick=()=>{b.textContent='Interest recorded (demo)';b.disabled=true;toast('Demo: interest recorded locally')});
+};
+
+V.design=(args=[])=>{
+  if(args[0]==='quotes')return V.quotes();
+  const d=S.design;
+  const types=TYPES[d.product||'door'];
+  const sw=(name,hex)=>`<button class="sw ${d.color===name?'on':''}" data-col="${name}" aria-label="${name}" style="background:${hex}"></button>`;
+  $('#app').innerHTML=`
+  <div class="pad">
+    <div class="eyebrow">Design</div><h1 style="font-size:22px">Pick a style and size, then get quotes</h1>
+    <div class="card" style="padding:12px;margin-top:10px">
+      <div class="door-stage" style="margin:0;aspect-ratio:4/3">
+        <div class="house" style="background:linear-gradient(180deg,#C9D8EA 0 55%,#D9DEE6 55%)"></div>
+        <div style="position:relative;width:100%;height:100%;display:grid;place-items:end center">${doorHTML(d,S.designOpen)}</div>
+        <button class="open-btn btn" id="dBtn">${S.designOpen?'CLOSE THE DOOR':'OPEN THE DOOR'}</button>
+      </div>
+      <p class="muted" style="font-size:12px;margin:8px 0 0">Preview is illustrative. Drag to explore is not available in this demo.</p>
+    </div>
+    <div class="card" style="margin-top:12px;display:flex;flex-direction:column;gap:14px">
+      <div><div class="eyebrow">Product</div>
+      <div class="seg" style="margin-top:6px">${PRODUCTS.map(([k,l])=>`<button class="${(d.product||'door')===k?'on':''}" data-prod="${k}">${l}</button>`).join('')}</div></div>
+      <div><div class="eyebrow">Type</div><div class="seg" style="margin-top:6px">${types.map(([k,l])=>`<button class="${d.type===k?'on':''}" data-type="${k}">${l}</button>`).join('')}</div></div>
+      <div class="grid2" style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <label class="f">Width (mm)<input class="in" id="dw" type="number" min="2000" max="6000" step="50" value="${d.width}"></label>
+        <label class="f">Height (mm)<input class="in" id="dh" type="number" min="1800" max="3000" step="50" value="${d.height}"></label>
+      </div>
+      <div><div class="eyebrow">Colour</div><div class="row" style="margin-top:8px">${sw('Charcoal','#2B2F36')}${sw('Slate grey','#5B6672')}${sw('White','#E9ECEF')}${sw('Monument','#3A3F47')}<span class="muted" style="font-size:13px">${d.color}</span></div></div>
+      <div><div class="eyebrow">Finish</div><div class="chips" style="margin-top:8px">${Object.keys(FINISH).map(f=>`<button class="chip ${d.finish===f?'on':''}" data-fin="${f}">${f}</button>`).join('')}</div></div>
+      <div><div class="eyebrow">Panel style</div><div class="chips" style="margin-top:8px">${['Flush','Raised','Ribbed'].map(p=>`<button class="chip ${d.panels===p?'on':''}" data-pan="${p}">${p}</button>`).join('')}</div></div>
+      <div><div class="eyebrow">Sections</div><div class="chips" style="margin-top:8px">${[3,4,5,6].map(n=>`<button class="chip ${+d.sections===n?'on':''}" data-sec="${n}">${n} sections</button>`).join('')}</div></div>
+      <div><div class="eyebrow">Windows</div><div class="chips" style="margin-top:8px">${['None','Top row','Wide top row'].map(w=>`<button class="chip ${d.windows===w?'on':''}" data-win="${w}">${w}</button>`).join('')}</div></div>
+      <div><div class="eyebrow">Insulation</div><div class="chips" style="margin-top:8px">${['None','Backed','Fully insulated'].map(w=>`<button class="chip ${d.insulation===w?'on':''}" data-ins="${w}">${w}</button>`).join('')}</div></div>
+      <div><div class="eyebrow">Opener</div><div class="chips" style="margin-top:8px">${Object.keys(OPENERS).map(o=>`<button class="chip ${d.opener===o?'on':''}" data-op="${o}">${o==='None'?'No opener':o}</button>`).join('')}</div></div>
+      <div class="notice"><b>Your illustrative estimate</b><div class="muted" style="font-size:12px;margin-top:4px">Estimated from size, finish and opener. Final prices come from each business quote.</div>
+        <div style="font-size:20px;font-weight:700;margin-top:6px">From ${money(quoteFor(BUSINESSES[0],d).total)} inc GST</div></div>
+      <button class="btn p block" id="getq">Get instant quotes</button>
+    </div>
+  </div>`;
+  const save2=()=>{save();V.design()};
+  $('#dBtn').onclick=()=>{S.designOpen=!S.designOpen;save();V.design()};
+  document.querySelectorAll('[data-prod]').forEach(b=>b.onclick=()=>{d.product=b.dataset.prod;d.type=DEFAULT_TYPE[d.product];save2()});
+  document.querySelectorAll('[data-type]').forEach(b=>b.onclick=()=>{d.type=b.dataset.type;save2()});
+  document.querySelectorAll('[data-col]').forEach(b=>b.onclick=()=>{d.color=b.dataset.col;S.design=d;save2()});
+  document.querySelectorAll('[data-fin]').forEach(b=>b.onclick=()=>{d.finish=b.dataset.fin;save2()});
+  document.querySelectorAll('[data-pan]').forEach(b=>b.onclick=()=>{d.panels=b.dataset.pan;save2()});
+  document.querySelectorAll('[data-sec]').forEach(b=>b.onclick=()=>{d.sections=+b.dataset.sec;save2()});
+  document.querySelectorAll('[data-win]').forEach(b=>b.onclick=()=>{d.windows=b.dataset.win;save2()});
+  document.querySelectorAll('[data-ins]').forEach(b=>b.onclick=()=>{d.insulation=b.dataset.ins;save2()});
+  document.querySelectorAll('[data-op]').forEach(b=>b.onclick=()=>{d.opener=b.dataset.op;save2()});
+  const clamp=(v,lo,hi)=>Math.min(hi,Math.max(lo,v));
+  $('#dw').onchange=e=>{d.width=clamp(+e.target.value||2400,2000,6000);save2()};
+  $('#dh').onchange=e=>{d.height=clamp(+e.target.value||2100,1800,3000);save2()};
+  $('#getq').onclick=()=>{S.design=d;save();go('design/quotes')};
+};
+
+V.quotes=()=>{
+  const d=S.design;
+  const sortBy=S.sortBy||'price';
+  const prod=d.product||'door';
+  const list=BUSINESSES.filter(b=>b.kind==='installer'&&b.prods.includes(prod)&&(prod!=='door'||b.types.includes(d.type))).map(b=>({b,q:quoteFor(b,d)}));
+  if(sortBy==='price')list.sort((a,c)=>a.q.total-c.q.total);
+  if(sortBy==='rating')list.sort((a,c)=>c.b.rating-a.b.rating);
+  if(sortBy==='lead')list.sort((a,c)=>a.b.lead-c.b.lead);
+  $('#app').innerHTML=`<div class="pad">
+    <button class="back" data-go="design">‹ Design</button>
+    <div class="eyebrow" style="margin-top:6px">Installed quotes</div>
+    <h1 style="font-size:22px">${d.width}×${d.height} mm ${d.type} · ${d.color} · ${d.finish}</h1>
+    <p class="muted" style="font-size:13px;margin:4px 0 10px">Indicative demo quotes from fictional businesses. Not an actual offer.</p>
+    <div class="chips" style="margin-bottom:12px">${[['price','Lowest price'],['rating','Top rated'],['lead','Soonest install']].map(([k,l])=>`<button class="chip ${sortBy===k?'on':''}" data-sort="${k}">${l}</button>`).join('')}</div>
+    <div class="list">${list.map(({b,q})=>`<article class="card quote">
+      <div class="logo-b" style="background:${b.color}">${b.init}</div>
+      <div style="min-width:0">
+        <div class="row" style="justify-content:space-between;align-items:flex-start"><div><b>${esc(b.name)}</b><div class="muted" style="font-size:12px">${esc(b.suburb)} · ${esc(b.area)}</div></div><div class="price">${money(q.total)}</div></div>
+        <div class="row" style="margin-top:6px;gap:6px"><span class="pill g">★ ${b.rating.toFixed(1)}</span><span class="muted" style="font-size:12px">${b.reviews} reviews</span><span class="demo-tag">Demo data</span></div>
+        <div class="muted" style="font-size:12px;margin-top:6px">${money(q.ex)} ex GST + ${money(q.gst)} GST · ${b.lead} days lead · ${esc(b.warranty)}</div>
+        <div class="row" style="margin-top:10px;gap:8px"><button class="btn sm p" data-req="${b.id}">Request this quote</button><button class="btn sm" data-biz="${b.id}">Profile</button></div>
+      </div></article>`).join('')||'<div class="card">No business in this demo offers this type.</div>'}</div>
+    <p class="muted" style="font-size:12px;margin-top:12px">Quotes are calculated from your design. Changing the design updates them.</p></div>`;
+  document.querySelectorAll('[data-sort]').forEach(b=>b.onclick=()=>{S.sortBy=b.dataset.sort;save();V.quotes()});
+  document.querySelectorAll('[data-req]').forEach(b=>b.onclick=()=>{const biz=BUSINESSES.find(x=>x.id===b.dataset.req);const q=quoteFor(biz,d);S.requests.unshift({id:'REQ-'+(S.requests.length+201),biz:biz.name,total:q.total,design:{...d},status:'Requested (demo)'});save();toast('Quote request saved locally. Nothing sent to the business.');go('account')});
+  document.querySelectorAll('[data-biz]').forEach(b=>b.onclick=()=>go('biz/'+b.dataset.biz));
+};
+
+V.find=()=>{
+  const q=(S.findQ||'').toLowerCase();
+  const cat=S.findCat||'All';
+  const cats=['All','Garage door','Gate','Opener','Accessory'];
+  const rows=CATALOGUE.filter(c=>(cat==='All'||c.cat===cat)&&(!q||(c.brand+' '+c.model+' '+c.type).toLowerCase().includes(q)));
+  $('#app').innerHTML=`<div class="pad">
+    <div class="eyebrow">Find your product</div><h1 style="font-size:22px">Pick the category, brand and model</h1>
+    <div class="card" style="margin-top:10px;display:flex;flex-direction:column;gap:12px">
+      <input class="in" id="fq" placeholder="Search brand, model or type" value="${esc(S.findQ||'')}">
+      <div class="chips">${cats.map(c=>`<button class="chip ${cat===c?'on':''}" data-cat="${c}">${c}</button>`).join('')}</div>
+    </div>
+    <div class="list" style="margin-top:12px">${rows.length?rows.map(c=>`<div class="card"><div class="row" style="justify-content:space-between"><b>${esc(c.brand)} ${esc(c.model)}</b><span class="demo-tag">Sample</span></div><div class="muted" style="font-size:13px;margin:4px 0 8px">${esc(c.type)} · ${esc(c.cat)} · ${esc(c.cond)} · ${esc(c.price)} AUD</div><div class="row"><button class="btn sm" data-mkt="${c.id}">View in Market</button></div></div>`).join(''):`<div class="card"><b>Nothing matches yet.</b><p class="muted" style="margin:6px 0 0">Try a different brand, model or category. Sample results only.</p></div>`}</div>
+    <div class="row" style="margin-top:14px"><button class="btn ghost" data-go="identify">I don't know my model</button></div></div>`;
+  $('#fq').oninput=e=>{S.findQ=e.target.value;save();const pos=e.target.selectionStart;V.find();const el=$('#fq');el.focus();el.setSelectionRange(pos,pos)};
+  document.querySelectorAll('[data-cat]').forEach(b=>b.onclick=()=>{S.findCat=b.dataset.cat;save();V.find()});
+  document.querySelectorAll('[data-mkt]').forEach(b=>b.onclick=()=>go('market'));
+};
+
+V.market=()=>{
+  const q=(S.mktQ||'').toLowerCase();
+  const rows=CATALOGUE.filter(c=>!q||(c.brand+' '+c.model+' '+c.type+' '+c.cat).toLowerCase().includes(q));
+  $('#app').innerHTML=`<div class="pad">
+    <div class="eyebrow">Marketplace</div><h1 style="font-size:22px">Parts and products</h1>
+    <input class="in" id="mq" style="margin-top:10px" placeholder="Search products" value="${esc(S.mktQ||'')}">
+    <div class="list" style="margin-top:12px">${rows.map(c=>`<div class="card"><div class="row" style="justify-content:space-between"><b>${esc(c.brand)} ${esc(c.model)}</b><span class="demo-tag">Sample</span></div><div class="muted" style="font-size:13px;margin:4px 0 8px">${esc(c.cat)} · ${esc(c.cond)} · ${esc(c.price)} AUD · Seller: ${esc(c.mfr)} (fictional)</div><div class="row"><button class="btn sm" data-msg="${c.id}">Message seller (demo)</button></div></div>`).join('')||'<div class="card">No listings match. Try another search.</div>'}</div></div>`;
+  $('#mq').oninput=e=>{S.mktQ=e.target.value;save();const pos=e.target.selectionStart;V.market();const el=$('#mq');el.focus();el.setSelectionRange(pos,pos)};
+  document.querySelectorAll('[data-msg]').forEach(b=>b.onclick=()=>{toast('Message saved in Messages (demo). Nothing is sent.')});
+};
+
+V.manuals=(args=[])=>{
+  const q=(S.manQ||'').toLowerCase();
+  const rows=MANUALS.filter(m=>!q||(m.title+' '+m.brand+' '+m.model).toLowerCase().includes(q));
+  if(args[0]){const m=MANUALS.find(x=>x.id===args[0]);if(m)return $('#app').innerHTML=`<div class="pad"><button class="back" data-go="manuals">‹ Manuals</button><div class="doc" style="margin-top:10px"><div class="band">SAMPLE — NOT FOR COMPLIANCE USE</div><b>${esc(m.title)}</b><p>Brand: ${esc(m.brand)} · Model: ${esc(m.model)} · ${m.pages} pages</p><p>This is an illustrative sample page. It is not a real manufacturer document, and it is not installation or safety advice.</p><div class="wm"><span>SAMPLE<br>DEMO ONLY</span></div></div></div>`;}
+  $('#app').innerHTML=`<div class="pad"><div class="eyebrow">Manuals</div><h1 style="font-size:22px">Search brand, model or document</h1>
+  <div class="row" style="margin:10px 0"><input class="in" id="manq" style="flex:1" placeholder="e.g. Northgate NG-SX" value="${esc(S.manQ||'')}"></div>
+  <button class="btn block" id="manup">Submit a manual (demo upload)</button>
+  <div class="list" style="margin-top:12px">${rows.length?rows.map(m=>`<button class="card" style="text-align:left;color:var(--ink)" data-man="${m.id}"><b>${esc(m.title)}</b><div class="muted" style="font-size:13px">${esc(m.brand)} · ${esc(m.model)} · ${m.pages} pages</div></button>`).join(''):'<div class="card">No manuals match this search.</div>'}</div></div>`;
+  $('#manq').oninput=e=>{S.manQ=e.target.value;save();const pos=e.target.selectionStart;V.manuals([]);const el=$('#manq');el.focus();el.setSelectionRange(pos,pos)};
+  document.querySelectorAll('[data-man]').forEach(b=>b.onclick=()=>go('manuals/'+b.dataset.man));
+  $('#manup').onclick=()=>toast('Demo: upload shown as received. Nothing is stored.');
+};
+
+V.spring=()=>{
+  const st=S.spring||{unit:'kg/mm',type:null,step:1};
+  $('#app').innerHTML=`<div class="pad"><button class="back" data-go="home">‹ Back</button>
+  <div class="eyebrow" style="margin-top:6px">Spring calculator</div><h1 style="font-size:22px">Step ${st.step} of 2</h1>
+  <div class="notice o" style="margin:10px 0">Illustrative only. Not engineering guidance. Spring work needs a trained professional.</div>
+  <div class="seg" style="margin-bottom:12px"><button class="${st.unit==='kg/mm'?'on':''}" data-unit="kg/mm">kg / mm</button><button class="${st.unit==='lb/in'?'on':''}" data-unit="lb/in">lb / in</button></div>
+  ${st.step===1?`<div class="eyebrow">What type of spring system do you have?</div><div class="list" style="margin-top:8px">
+   ${[['torsion','Torsion spring','Mounted above the door on a shaft.'],['extension','Extension spring','Runs alongside the horizontal tracks.'],['unsure',"I'm not sure",'Stand inside the garage with the door shut and look above it.']].map(([k,t,d])=>`<button class="card" style="text-align:left;color:var(--ink)" data-type="${k}"><b>${t}</b><div class="muted" style="font-size:13px">${d}</div></button>`).join('')}</div>`
+  :`<div class="eyebrow">Measurements (illustrative)</div><div class="card" style="margin-top:8px;display:flex;flex-direction:column;gap:12px">
+     <label class="f">Door weight (${st.unit==='kg/mm'?'kg':'lb'})<input class="in" id="dwt" type="number" value="${st.weight||45}"></label>
+     <label class="f">Number of springs<select class="in" id="nsp">${[1,2].map(n=>`<option ${st.count==n?'selected':''}>${n}</option>`).join('')}</select></label>
+     <button class="btn p block" id="calc">Show illustrative result</button>
+     ${st.result?`<div class="notice">${st.result}</div>`:''}</div>`}
+  </div>`;
+  document.querySelectorAll('[data-unit]').forEach(b=>b.onclick=()=>{st.unit=b.dataset.unit;S.spring=st;save();V.spring()});
+  document.querySelectorAll('[data-type]').forEach(b=>b.onclick=()=>{st.type=b.dataset.type;st.step=2;S.spring=st;save();V.spring()});
+  const c=$('#calc');if(c)c.onclick=()=>{st.weight=+$('#dwt').value||45;st.count=+$('#nsp').value;st.result=`Illustrative only: a ${st.weight} ${st.unit.startsWith('kg')?'kg':'lb'} door with ${st.count} ${st.type||'unknown'} spring${st.count>1?'s':''} needs a professional check. No spring size is given here.`;S.spring=st;save();V.spring()};
+};
+
+V.identify=()=>{
+  $('#app').innerHTML=`<div class="pad"><button class="back" data-go="home">‹ Back</button><div class="eyebrow" style="margin-top:6px">Identify my door</div><h1 style="font-size:22px">Don't know your model?</h1>
+  <p class="muted">Try these first. Most products can be identified from the plate or the remote.</p>
+  <div class="list" style="margin-top:10px">${PRODUCT_TIPS.map(([t,d],i)=>`<div class="card"><b>${i+1}. ${t}</b><div class="muted" style="font-size:13px;margin-top:4px">${d}</div></div>`).join('')}</div>
+  <div class="card" style="margin-top:12px"><b>Upload a photo</b><p class="muted" style="font-size:13px;margin:4px 0 10px">The photo stays on this device. The demo shows a preview only and does not identify the product.</p><input type="file" accept="image/*" id="photo" class="in" style="height:auto;padding:10px"><div id="pv" style="margin-top:10px"></div></div>
+  <div class="notice" style="margin-top:12px">Demo identification, not AI verified. No real result is given.</div></div>`;
+  $('#photo').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{$('#pv').innerHTML=`<img src="${r.result}" alt="Preview of your photo" style="max-width:100%;border-radius:12px;border:1px solid var(--line)"><div class="muted" style="font-size:12px;margin-top:6px">Preview only. Demo identification, not AI verified.</div>`};r.readAsDataURL(f)};
+};
+
+V.compliance=(args=[])=>{
+  if(args[0]){const c=COMPLIANCE.find(x=>x.id===args[0]);if(!c)return V.compliance([]);
+    $('#app').innerHTML=`<div class="pad"><button class="back" data-go="compliance">‹ Compliance pack</button>
+    <div class="doc" style="margin-top:10px"><div class="band">SAMPLE — NOT FOR COMPLIANCE USE</div><b style="font-size:15px">${esc(c.title)}</b>
+    <p style="margin:10px 0">This is a sample layout for the demo. It is not a legal template, not safety advice, and not a certified document.</p>
+    <table style="width:100%;border-collapse:collapse;font-size:12px"><tr><td style="border:1px solid #ddd;padding:6px">Business name</td><td style="border:1px solid #ddd;padding:6px">[Sample text]</td></tr><tr><td style="border:1px solid #ddd;padding:6px">Date</td><td style="border:1px solid #ddd;padding:6px">[Sample text]</td></tr><tr><td style="border:1px solid #ddd;padding:6px">Signed</td><td style="border:1px solid #ddd;padding:6px">[Sample text]</td></tr></table>
+    <div class="wm"><span>SAMPLE<br>NOT FOR COMPLIANCE USE</span></div></div></div>`;return;}
+  const groups=[...new Set(COMPLIANCE.map(c=>c.group))];
+  $('#app').innerHTML=`<div class="pad"><div class="eyebrow">Compliance & Safety Pack</div><h1 style="font-size:22px">15 sample documents</h1>
+  <div class="card" style="margin-top:10px"><div class="row" style="justify-content:space-between"><b style="font-size:22px">$29.99</b><span class="pill o">Purchasing disabled in demo</span></div><p class="muted" style="font-size:13px;margin:8px 0 0">The price is shown as in the original app. Nothing can be bought here.</p></div>
+  ${groups.map(g=>`<div class="eyebrow" style="margin:16px 0 8px">${g}</div><div class="list">${COMPLIANCE.filter(c=>c.group===g).map(c=>`<button class="card" style="text-align:left;color:var(--ink)" data-doc="${c.id}"><b>${esc(c.title)}</b><div class="muted" style="font-size:12px;margin-top:2px">Sample preview</div></button>`).join('')}</div>`).join('')}</div>`;
+  document.querySelectorAll('[data-doc]').forEach(b=>b.onclick=()=>go('compliance/'+b.dataset.doc));
+};
+
+V.messages=()=>{
+  $('#app').innerHTML=`<div class="pad"><div class="eyebrow">Messages</div><h1>Conversations</h1><div class="list" style="margin-top:10px">
+  <div class="card"><div class="row" style="justify-content:space-between"><b>Westline Door Systems</b><span class="pill">2</span></div><div class="muted" style="font-size:13px">Demo: Thanks for your enquiry. We can visit this week.</div></div>
+  <div class="card"><div class="row" style="justify-content:space-between"><b>Support (demo)</b></div><div class="muted" style="font-size:13px">Demo: messages are kept on this device only.</div></div></div></div>`;
+};
+
+V.account=()=>{
+  if(!S.session){return V.signin()}
+  const r=ROLES[S.session.role];
+  $('#app').innerHTML=`<div class="pad"><div class="eyebrow">Account</div><h1 style="font-size:22px">${esc(r.name)}</h1>
+  <div class="muted" style="font-size:13px">${esc(r.email)} · role: ${S.session.role}</div>
+  <div class="card" style="margin-top:12px"><b>Your quote requests</b>${S.requests.length?`<div class="list" style="margin-top:8px">${S.requests.map(x=>`<div class="row" style="justify-content:space-between;font-size:13px"><span>${esc(x.biz)}</span><span>${money(x.total)} · ${esc(x.status)}</span></div>`).join('')}</div>`:'<p class="muted" style="margin:6px 0 0;font-size:13px">None yet. Get installed quotes from the Design page.</p>'}</div>
+  <div class="card" style="margin-top:12px"><b>Demo controls</b><div class="row" style="margin-top:10px"><button class="btn p" data-go="dash">Open dashboard</button><button class="btn" id="resetBtn">Reset demo</button><button class="btn ghost" id="outBtn">Sign out</button></div></div>
+  </div>`;
+  $('#resetBtn').onclick=()=>{S=structuredClone(defaults);S.session=null;save();toast('Demo reset');go('account')};
+  $('#outBtn').onclick=()=>{S.session=null;save();go('account')};
+};
+
+V.signin=()=>{
+  $('#app').innerHTML=`<div class="pad">
+    <div class="eyebrow">Sign in</div><h1>Sign in to Doorlink</h1>
+    <p class="muted" style="margin:0 0 12px">Demo accounts only. Passwords are shown on purpose so you can try each role.</p>
+    <form id="sf" class="card" style="display:flex;flex-direction:column;gap:12px">
+      <label class="f">Email<input class="in" id="em" type="email" autocomplete="username" placeholder="you@example.com"></label>
+      <label class="f">Password<input class="in" id="pw" type="password" autocomplete="current-password"></label>
+      <p id="serr" class="hidden" style="color:var(--red);margin:0;font-size:13px"></p>
+      <button class="btn p block" type="submit">Sign in</button>
+    </form>
+    <div class="notice" style="margin-top:14px"><b>Demo accounts</b>
+      <div class="muted" style="font-size:12px;margin:6px 0 8px;font-family:'IBM Plex Mono',monospace">Password for every account: ${PASSWORD}</div>
+      ${Object.entries(ROLES).map(([k,r])=>`<div class="row" style="justify-content:space-between;margin-top:6px"><span style="font-size:12px;font-family:'IBM Plex Mono',monospace">${r.email}</span><button class="btn sm" data-try="${k}">Try as ${k[0].toUpperCase()+k.slice(1)}</button></div>`).join('')}
+    </div>
+    <p class="muted" style="font-size:12px;margin-top:12px">Demo sign-in is local to this browser. No account is created and no password is stored.</p>
+  </div>`;
+  const signIn=(email,pw)=>{const role=Object.keys(ROLES).find(k=>ROLES[k].email===email.trim().toLowerCase());
+    if(!role||pw!==PASSWORD){const e=$('#serr');e.textContent='That email or password is not right. Use one of the demo accounts below.';e.classList.remove('hidden');return}
+    S.session={role,email:ROLES[role].email};save();toast('Signed in as '+ROLES[role].name);go('home')};
+  $('#sf').onsubmit=e=>{e.preventDefault();signIn($('#em').value,$('#pw').value)};
+  document.querySelectorAll('[data-try]').forEach(b=>b.onclick=()=>signIn(ROLES[b.dataset.try].email,PASSWORD));
+};
+
+V.dir=(args=[])=>{
+  const kind=args[0]||'supplier';
+  const q=(S.dirQ||'').toLowerCase();
+  const pool=kind==='manufacturer'?MANUFACTURERS:kind==='installer'?BUSINESSES:SUPPLIERS;
+  const list=pool.filter(b=>!q||(b.name+' '+b.suburb+' '+b.area).toLowerCase().includes(q));
+  $('#app').innerHTML=`<div class="pad"><div class="eyebrow">Directory</div><h1 style="font-size:22px">${kind==='manufacturer'?'Manufacturers':kind==='installer'?'Installers':'Suppliers'}</h1>
+  <div class="seg" style="margin:10px 0"><button class="${kind==='supplier'?'on':''}" data-dk="supplier">Suppliers</button><button class="${kind==='manufacturer'?'on':''}" data-dk="manufacturer">Makers</button><button class="${kind==='installer'?'on':''}" data-dk="installer">Installers</button></div>
+  <input class="in" id="dq" placeholder="Search name or area" value="${esc(S.dirQ||'')}">
+  <div class="list" style="margin-top:12px">${list.map(b=>`<button class="card" style="text-align:left;color:var(--ink)" data-biz="${b.id}"><div class="row" style="gap:12px;flex-wrap:nowrap"><div class="logo-b" style="background:${b.color}">${b.init}</div><div style="min-width:0"><b>${esc(b.name)}</b><div class="muted" style="font-size:12px">${esc(b.suburb)} · ${esc(b.area)}</div><div class="row" style="gap:6px;margin-top:4px"><span class="pill g">★ ${b.rating.toFixed(1)}</span><span class="muted" style="font-size:12px">${b.reviews} reviews</span><span class="demo-tag">Demo</span></div></div></div></button>`).join('')||'<div class="card">No matches.</div>'}</div></div>`;
+  $('#dq').oninput=e=>{S.dirQ=e.target.value;save();const p=e.target.selectionStart;V.dir(args);const el=$('#dq');el.focus();el.setSelectionRange(p,p)};
+  document.querySelectorAll('[data-dk]').forEach(b=>b.onclick=()=>go('dir/'+b.dataset.dk));
+  document.querySelectorAll('[data-biz]').forEach(b=>b.onclick=()=>go('biz/'+b.dataset.biz));
+};
+V.biz=(args=[])=>{
+  const b=[...BUSINESSES,...SUPPLIERS,...MANUFACTURERS].find(x=>x.id===args[0]);
+  if(!b)return go('dir/supplier');
+  const reviews=[['Maya T.','Quote matched the install. Crew were tidy and on time.'],['Tom H.','Clear pricing and great communication from start to finish.'],['Priya N.','Excellent product and fast delivery. Would order again.']];
+  const items=CATALOGUE.filter(c=>c.mfr===b.name).slice(0,4);
+  $('#app').innerHTML=`<div class="pad"><button class="back" data-go="dir/${b.kind}">‹ Directory</button>
+  <div class="card" style="margin-top:10px"><div class="row" style="gap:12px;flex-wrap:nowrap"><div class="logo-b" style="width:56px;height:56px;font-size:16px;background:${b.color}">${b.init}</div><div style="min-width:0"><div class="eyebrow">${b.kind}</div><b style="font-size:17px">${esc(b.name)}</b><div class="muted" style="font-size:12px">${esc(b.suburb)} · ${esc(b.area)}</div></div></div>
+  <p style="margin:12px 0 0">${esc(b.about||'Fictional installer for the demo. Services and prices are sample data.')}</p>
+  <div class="row" style="margin-top:10px"><span class="pill g">★ ${b.rating.toFixed(1)} · ${b.reviews} reviews</span><span class="demo-tag">Demo data</span></div>
+  <div class="row" style="margin-top:12px"><button class="btn sm p" id="contact">Send enquiry (demo)</button></div></div>
+  <h2 style="margin-top:16px">Sample five-star reviews</h2><div class="list">${reviews.map(([n,t])=>`<div class="card"><div class="row" style="justify-content:space-between"><b>${n}</b><span style="color:#E0A100">★★★★★</span></div><p class="muted" style="margin:6px 0 0;font-size:13px">${esc(t)}</p><span class="demo-tag" style="margin-top:8px;display:inline-block">Demo review</span></div>`).join('')}</div>
+  <h2 style="margin-top:16px">${b.kind==='installer'?'Services':'Catalogue'}</h2><div class="list">${(items.length?items:CATALOGUE.slice(0,2)).map(c=>`<div class="card"><b>${esc(c.brand)} ${esc(c.model)}</b><div class="muted" style="font-size:13px">${esc(c.cat)} · ${esc(c.price)} AUD · sample</div></div>`).join('')}</div></div>`;
+  $('#contact').onclick=()=>toast('Enquiry saved locally. Nothing is sent to the business.');
+};
+V.dash=()=>{
+  if(!S.session)return go('account');
+  const role=S.session.role;
+  let body='';
+  if(role==='admin'){
+    body=`<h2>Price rules</h2><p class="muted" style="font-size:13px">Indicative rate per m² (AUD). Designer estimates and quotes update straight away.</p><div class="list" style="margin-top:8px">${Object.entries(S.rates).flatMap(([p,t])=>Object.entries(t).map(([k,v])=>`<label class="card" style="display:flex;flex-direction:row;justify-content:space-between;align-items:center;gap:10px"><span>${p} · ${k}</span><input class="in" data-rate="${p}|${k}" type="number" min="1" value="${v}" style="max-width:120px;text-align:right"></label>`)).join('')}</div><button class="btn p block" id="saveRates" style="margin-top:12px">Save price rules</button>`;
+  } else if(role==='supplier'){
+    body=`<h2>Your listings</h2><div class="list">${(S.listings||[]).concat(CATALOGUE.slice(0,2)).map(c=>`<div class="card"><b>${esc(c.brand)} ${esc(c.model)}</b><div class="muted" style="font-size:13px">${esc(c.cat)} · ${esc(c.price)} AUD</div></div>`).join('')}</div>
+    <h2 style="margin-top:14px">Add a listing</h2><form id="addL" class="card" style="display:flex;flex-direction:column;gap:10px"><input class="in" name="model" placeholder="Model name (sample)" required><input class="in" name="price" placeholder="Price range, e.g. $500–$700"><button class="btn p block" type="submit">Add listing (demo)</button></form>`;
+  } else if(role==='manufacturer'){
+    body=`<h2>Your models</h2><div class="list">${CATALOGUE.filter(c=>c.mfr==='Northgate').map(c=>`<div class="card"><b>${esc(c.model)}</b><div class="muted" style="font-size:13px">${esc(c.type)} · ${esc(c.price)} AUD</div></div>`).join('')}</div><p class="muted" style="font-size:12px;margin-top:10px">Sample data for the demo manufacturer account.</p>`;
+  } else if(role==='installer'){
+    body=`<h2>Jobs near you</h2><p class="muted" style="font-size:13px">Sample jobs from fictional customers.</p><div class="row"><button class="btn sm" data-go="work">Open job board</button></div>`;
+  } else {
+    body=`<h2>Your activity</h2><div class="list">${S.jobs.length?S.jobs.map(j=>`<div class="card"><b>${esc(j.title)}</b> <span class="pill">${j.status}</span></div>`).join(''):'<div class="card muted">No jobs yet.</div>'}</div><div class="row" style="margin-top:10px"><button class="btn sm" data-go="design">Design a door</button><button class="btn sm" data-go="hire">Post a job</button></div>`;
+  }
+  $('#app').innerHTML=`<div class="pad"><div class="eyebrow">Dashboard · ${role}</div><h1 style="font-size:22px">Welcome, ${esc(ROLES[role].name)}</h1><div style="margin-top:12px">${body}</div></div>`;
+  document.querySelectorAll('[data-go]').forEach(()=>{});
+  const sv=$('#saveRates');if(sv)sv.onclick=()=>{document.querySelectorAll('[data-rate]').forEach(i=>{const[p,k]=i.dataset.rate.split('|');S.rates[p][k]=Math.max(1,+i.value||1)});save();toast('Price rules saved. Designer and quotes updated.')};
+  const addL=$('#addL');if(addL)addL.onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);S.listings=[{brand:'Your brand',model:f.get('model'),cat:'Sample',price:f.get('price')||'TBC',cond:'New',mfr:'You'},...(S.listings||[])];save();toast('Listing added (demo)');V.dash()};
+};
+
+/* ===== Router ===== */
+function route(){
+  const h=(location.hash||'#home').slice(1);
+  const [name,...args]=h.split('/');
+  const shell=$('#shell');
+  $('#menu').classList.add('hidden');
+  const gate=!S.session&&!['signin','account'].includes(name);
+  if(gate){location.hash='account';return}
+  const map={home:V.home,hire:V.hire,jobs:V.jobs,work:V.work,design:V.design,find:V.find,market:V.market,manuals:V.manuals,spring:V.spring,identify:V.identify,compliance:V.compliance,messages:V.messages,account:V.account,signin:V.signin,dash:V.dash,dir:V.dir,biz:V.biz};
+  (map[name]||V.home)(args);
+  setTabs();
+  window.scrollTo(0,0);
+}
+document.addEventListener('click',e=>{
+  const t=e.target.closest('[data-go]');
+  if(t&&!t.matches('.tab, nav *')){ e.preventDefault(); go(t.dataset.go); return }
+  const tab=e.target.closest('.tab');
+  if(tab){go(tab.dataset.go)}
+});
+$('#menuBtn').onclick=()=>$('#menu').classList.remove('hidden');
+$('#menuClose').onclick=()=>$('#menu').classList.add('hidden');
+window.addEventListener('hashchange',route);
+route();
+</script>
+</body>
+</html>
