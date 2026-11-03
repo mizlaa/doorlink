@@ -142,3 +142,9 @@ export function useParkEnvironment(): THREE.DataTexture | null {
   }, [])
   return texture
 }
+
+/** Warms the texture and HDR caches in the background, so Design opens quickly. */
+export function preloadSceneAssets() {
+  useTexture.preload(Object.values(URLS))
+  hdrPromise ??= loadHdr(parkHdr)
+}

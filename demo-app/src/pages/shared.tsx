@@ -90,3 +90,23 @@ export function InlineConfirm({
     </span>
   )
 }
+
+/** Five stars with partial fill, so 3.5 shows three and a half. */
+export function Stars({ value, className = '' }: { value: number; className?: string }) {
+  const label = `${Number.isInteger(value) ? value : value.toFixed(1)} out of 5`
+  return (
+    <span role="img" aria-label={label} title={label} className={`inline-flex items-center gap-px align-[-2px] ${className}`}>
+      {[0, 1, 2, 3, 4].map((i) => {
+        const fill = Math.max(0, Math.min(1, value - i))
+        return (
+          <span key={i} className="relative inline-block h-[1em] w-[1em] leading-none" aria-hidden="true">
+            <span className="absolute inset-0 text-line">★</span>
+            <span className="absolute inset-0 overflow-hidden text-caution" style={{ width: `${fill * 100}%` }}>
+              ★
+            </span>
+          </span>
+        )
+      })}
+    </span>
+  )
+}

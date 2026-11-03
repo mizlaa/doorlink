@@ -62,10 +62,13 @@ describe('seed data', () => {
   })
 
   it('populates businesses, reviews, listings and manuals', () => {
-    expect(COMPANIES).toHaveLength(8)
+    expect(COMPANIES.length).toBeGreaterThanOrEqual(14)
     expect(SEED_REVIEWS.length).toBeGreaterThanOrEqual(20)
     expect(SEED_LISTINGS.length).toBeGreaterThanOrEqual(20)
-    expect(SEED_MANUALS.length).toBeGreaterThanOrEqual(6)
+    expect(SEED_MANUALS.length).toBeGreaterThanOrEqual(24)
+    expect(new Set(SEED_MANUALS.map((m) => m.slug)).size).toBe(SEED_MANUALS.length)
+    const ratings = new Set(SEED_REVIEWS.map((r) => r.rating))
+    for (const r of [1, 2, 3, 3.5, 4, 4.5, 5]) expect(ratings.has(r)).toBe(true)
     for (const company of COMPANIES) expect(reviewsFor(company.id, getDemo()).length).toBeGreaterThan(0)
   })
 })

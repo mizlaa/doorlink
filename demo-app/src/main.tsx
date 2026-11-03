@@ -14,3 +14,14 @@ createRoot(document.getElementById('root')!).render(
     <App />
   </StrictMode>
 )
+
+// Once the first page is up, fetch the 3D designer and its textures in the
+// background so opening Design is quick.
+window.setTimeout(() => {
+  const start = () => {
+    void import('@/components/three/ConfiguratorScene')
+    void import('./three/assets').then((m) => m.preloadSceneAssets())
+  }
+  if ('requestIdleCallback' in window) window.requestIdleCallback(start, { timeout: 4000 })
+  else start()
+}, 2500)

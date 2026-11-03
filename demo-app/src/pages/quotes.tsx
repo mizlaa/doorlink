@@ -17,7 +17,7 @@ import { cn } from '@/lib/utils'
 import { useDemo, type AutomatedQuote } from '../demo/store'
 import { BRANDS, companyById } from '../demo/data'
 import { businessCard, portfolioFor, reviewsFor, type DemoCard } from '../demo/cards'
-import { DemoTag, SignInPrompt } from './shared'
+import { DemoTag, SignInPrompt, Stars as ReviewStars } from './shared'
 import { NotFoundPage } from './NotFound'
 
 /* ------------------------------------------------------------------ */
@@ -698,11 +698,7 @@ export function BusinessProfilePage({ params }: { params: Record<string, string>
                 <li key={review.id} className="rounded-lg border border-line bg-paper p-4">
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <span className="flex items-center gap-2">
-                      <span className="text-caution" aria-label={`${review.rating} out of 5`}>
-                        {'★'.repeat(review.rating)}
-                        <span className="text-line">{'★'.repeat(5 - review.rating)}</span>
-                      </span>
-                      <Badge tone="good">Verified job</Badge>
+                      <ReviewStars value={review.rating} />
                       <Badge tone="caution">Demo review</Badge>
                     </span>
                     <span className="text-micro text-zinc-deep">

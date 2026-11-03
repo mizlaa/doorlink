@@ -15,7 +15,7 @@ import { useDemo, type Job } from '../demo/store'
 import { companyById } from '../demo/data'
 import { allowedTransitions, actorFor, isReviewable } from '../demo/marketplace'
 import { confirmBooking, postUpdate, transition, replyToReview, DEMO_PAYMENT_NOTE } from '../demo/flows'
-import { DemoTag, SignInPrompt } from './shared'
+import { DemoTag, SignInPrompt, Stars } from './shared'
 import { NotFoundPage } from './NotFound'
 
 const ACTIVE: Job['status'][] = ['REQUESTED', 'ACCEPTED', 'AWAITING_PAYMENT', 'PAYMENT_CONFIRMED', 'SCHEDULED', 'IN_PROGRESS', 'BUSINESS_COMPLETED']
@@ -328,9 +328,8 @@ export function JobPage({ params }: { params: Record<string, string> }) {
             <section className="mt-8 scroll-mt-24" id="review">
               <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-deep">Customer review</h2>
               <div className="rounded-md border border-line bg-paper p-4">
-                <p className="text-caution" aria-label={`${job.review.rating} out of 5`}>
-                  {'★'.repeat(job.review.rating)}
-                  <span className="text-line">{'★'.repeat(5 - job.review.rating)}</span>
+                <p>
+                  <Stars value={job.review.rating} />
                 </p>
                 {job.review.body && <p className="mt-2 whitespace-pre-line text-sm text-graphite">{job.review.body}</p>}
                 <ReviewReplyForm reviewId={job.id} existing={job.review.reply} />

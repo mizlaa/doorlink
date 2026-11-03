@@ -37,3 +37,26 @@
 @media (max-width: 1023.98px) and (orientation: portrait) {
   .max-lg\:portrait\:top-0 { top: calc(24px + env(safe-area-inset-top, 0px)); }
 }
+
+/* Quick, steady touch: no double-tap zoom delay, no grey tap flash, no
+   sideways drift, and the page does not bounce away from its edges. */
+html,
+body {
+  overflow-x: clip;
+  overscroll-behavior: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a,
+button,
+input,
+select,
+textarea,
+label,
+summary,
+[role='button'] {
+  touch-action: manipulation;
+}
+button:not(:disabled):active,
+.demo-scene-button:active {
+  transform: scale(0.97);
+}

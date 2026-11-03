@@ -20,7 +20,7 @@ import { resetDemo, signInAs, update, useDemo, type DemoSession } from '../demo/
 import { BRANDS, COMPANIES, companyById, DEMO_ACCOUNTS, PRODUCT_CATEGORIES, SEED_MANUALS } from '../demo/data'
 import { FINDER_MODELS } from '../demo/catalogue'
 import { businessCard, reviewsFor } from '../demo/cards'
-import { DemoTag, SignInPrompt } from './shared'
+import { DemoTag, SignInPrompt, Stars } from './shared'
 
 /* Mirrors src/app/admin/layout.tsx: catalogue screens are open to
    manufacturers too; marketplace and business screens are staff only. */
@@ -720,9 +720,7 @@ export function AdminReviewsPage() {
                 <li key={r.id} className={`rounded-lg border border-line bg-paper p-4 ${hidden ? 'opacity-60' : ''}`}>
                   <div className="flex flex-wrap items-start justify-between gap-3">
                     <p className="text-sm font-medium text-graphite">
-                      <span className="text-caution" aria-label={`${r.rating} out of 5`}>
-                        {'★'.repeat(r.rating)}
-                      </span>{' '}
+                      <Stars value={r.rating} />{' '}
                       {r.author} on {companyById(r.companyId)?.name}
                     </p>
                     <div className="flex items-center gap-2">

@@ -44,7 +44,7 @@ import { SEED_MANUALS } from '../demo/data'
 import { businessCard, reviewsFor } from '../demo/cards'
 import { pricingBusinessFor, pricingHref, setAdminPricingTarget } from '../demo/pricing-target'
 import { deleteRuleAction, toggleRuleAction } from '../actions/pricing'
-import { DemoTag, InlineConfirm, SignInPrompt } from './shared'
+import { DemoTag, InlineConfirm, SignInPrompt, Stars } from './shared'
 import { NotFoundPage } from './NotFound'
 
 const FEE_BPS = DEFAULT_COMMISSION_BPS
@@ -1188,9 +1188,7 @@ export function DashboardPage() {
             {reviews.map((r) => (
               <li key={r.id} className="rounded-lg border border-line bg-paper p-4">
                 <p className="text-sm font-medium text-graphite">
-                  <span className="text-caution" aria-label={`${r.rating} out of 5`}>
-                    {'★'.repeat(r.rating)}
-                  </span>{' '}
+                  <Stars value={r.rating} />{' '}
                   {r.author} · {r.when}
                 </p>
                 <p className="mt-1 text-sm text-graphite-soft">{r.text}</p>
