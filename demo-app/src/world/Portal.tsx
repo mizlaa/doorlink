@@ -69,7 +69,7 @@ function PortalGlimpse({ progress, paused }: { progress: number; paused: boolean
   useEffect(() => {
     const el = canvas.current
     if (!show || paused || fallback || !el) return
-    const renderer = createPortalRenderer(el, glimpseFor(), 1.5)
+    const renderer = createPortalRenderer(el, glimpseFor(), 2)
     if (!renderer) {
       setFallback(true)
       return
@@ -85,7 +85,8 @@ function PortalGlimpse({ progress, paused }: { progress: number; paused: boolean
       if (!onScreen || document.hidden) return
       renderer.resize()
       const d = diskIn(el.clientWidth, el.clientHeight)
-      renderer.draw({ centerX: d.x, centerY: d.y, radius: d.radius, travel: 0, reveal: reveal.current, zoom: d.zoom, blur: 0 }, reduced ? 2 : (now - t0) / 1000)
+      const time = reduced ? 2 : (now - t0) / 1000
+      renderer.draw({ centerX: d.x, centerY: d.y, radius: d.radius, travel: 0, reveal: reveal.current, zoom: d.zoom, blur: 0, spin: time * 0.3 }, time)
     }
     raf = requestAnimationFrame(frame)
     return () => {
@@ -173,7 +174,8 @@ export function PortalTravel({
 
   useLayoutEffect(() => {
     const el = canvas.current
-    const renderer = el ? createPortalRenderer(el, src, 1.25) : null
+    const heavy = window.innerWidth * window.innerHeight * (window.devicePixelRatio || 1) ** 2 > 3.5e6
+    const renderer = el ? createPortalRenderer(el, src, heavy ? 1.25 : 1.5) : null
     const W = window.innerWidth
     const H = window.innerHeight
     const small = W < 720
@@ -201,9 +203,17 @@ export function PortalTravel({
     }
     const t0 = performance.now()
     let raf = 0
+    let last = t0
+    let spin = 1.2
     const frame = (now: number) => {
       raf = requestAnimationFrame(frame)
       const t = Math.min(1, (now - t0) / duration)
+      // Integrate the swirl's speed so its acceleration is smooth, never a jump.
+      const dt = Math.min(0.05, (now - last) / 1000)
+      last = now
+      if (!reduced) spin += dt * (0.3 + t * t * 3.6)
+      // While holding on the glimpse for the world to load, drift slowly forward.
+      const hold = Math.max(0, (now - t0 - duration) / 1000)
       // Slow pull at first, then a rush through: radius and depth grow geometrically.
       const accel = t < 1 ? t * t * (2.2 - 1.2 * t) : 1
       const move = t * t * (3 - 2 * t)
@@ -215,8 +225,9 @@ export function PortalTravel({
           radius: start.r * Math.pow(end / start.r, accel),
           travel: t,
           reveal: 1,
-          zoom: zoom0 * Math.pow(1 / zoom0, accel),
+          zoom: zoom0 * Math.pow(1 / zoom0, accel) * (1 - Math.min(0.04, hold * 0.012)),
           blur: reduced ? 0 : Math.sin(Math.PI * t) * 1.4,
+          spin,
         },
         reduced ? 2 : (now - t0) / 1000 + 4
       )

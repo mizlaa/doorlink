@@ -105,6 +105,18 @@ Once the hero garage door is fully open, **Enter Doorlink World** (`src/world/`,
 - **Night** switches to moonlight, lit windows, wall lanterns, path and garden lights, and closes the gates, shutters and garage in turn.
 - The camera orbits all the way round, but stays above the ground, within zoom limits and out of the buildings: if it would enter one, it slides towards its target instead. Portrait screens get a wider lens and views pulled back to the same framing.
 
+### The guided introduction
+
+On a first visit, captions introduce Doorlink as the hero door rises ("Welcome to Doorlink."). They stay on screen through the portal, and the story then continues in the world:
+- garage doors: the new door is fitted, then opens;
+- gates: the sliding gate goes in and opens;
+- shutters and fencing: the fence goes in, then the shutters lower and rise;
+- professionals: a quote comparison built from the demo's fictional businesses;
+- the Doorlink experience: what each part of the app does;
+- a final pull-back and logo reveal.
+
+All of it is one timeline in `DoorlinkWorld.tsx` (`runIntro`). It reuses the world's views and product animations, and the text is in `world/Intro.tsx`. Captions type themselves out quickly and never hold a scene back. **Skip intro** is always available, **Intro** in the top bar replays it, and a `localStorage` flag (`doorlink:intro-seen-v1`) stops it replaying on return visits. There's no narration: captions only.
+
 ### The portal and performance
 
 - **Portal:** as the hero door rises, a luminous doorway fades in on the garage's back wall, showing a glimpse of Doorlink World (`public/images/world/glimpse-*.webp`, captured from the live scene at its arrival framing). It is pure CSS, so the homepage doesn't use WebGL. **Enter Doorlink World** grows the portal to fill the screen while the hero dollies in. The world mounts behind it only once the portal fills the screen, so the expansion never stutters; until the scene is ready the glimpse holds on screen. The glimpse then dissolves into the matching live view, and the camera eases back to the overview. The world's code is fetched while the door is still opening. Reduced-motion and small screens get a shorter version. To refresh the glimpses after changing the scene, open `?snapshot=1#/` and enter the world: it opens at the arrival framing with no interface.

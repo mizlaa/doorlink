@@ -134,7 +134,9 @@ function scaledViews(k: number): Record<string, CameraView> {
 function withArrival(views: Record<string, CameraView>): Record<string, CameraView> {
   const { position: p, target: t } = views.hero
   const k = 0.8
-  return { ...views, arrive: { target: t, position: [t[0] + (p[0] - t[0]) * k, t[1] + (p[1] - t[1]) * k, t[2] + (p[2] - t[2]) * k] } }
+  const o = views.overview
+  const reveal: CameraView = { target: o.target, position: [o.target[0] + (o.position[0] - o.target[0]) * 1.18, o.target[1] + (o.position[1] - o.target[1]) * 1.18, o.target[2] + (o.position[2] - o.target[2]) * 1.18] }
+  return { ...views, reveal, arrive: { target: t, position: [t[0] + (p[0] - t[0]) * k, t[1] + (p[1] - t[1]) * k, t[2] + (p[2] - t[2]) * k] } }
 }
 
 export const PRODUCT_VIEW: Record<Product, string> = {
@@ -753,7 +755,7 @@ export function WorldScene({
       views={views}
       initialView={initialView}
       minDistance={4}
-      maxDistance={30 * k}
+      maxDistance={34 * k}
       maxPolar={1.48}
       shadowSpan={22}
       onReady={onReady}

@@ -3,6 +3,7 @@ import './world.css'
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { CameraBus } from '../three/CameraRig'
 import { detectTier, prefersReducedMotion, type Tier } from '../three/quality'
+import { IntroCaption, IntroOverlays, markIntroSeen, type IntroOverlay } from './Intro'
 import { AFTER, BEFORE, FENCE_STYLES, PRODUCT_VIEW, WorldScene, type Product, type WorldState } from './WorldScene'
 
 const XRayGarage = lazy(() => import('../xray/XRayGarage'))
@@ -51,9 +52,10 @@ const INSPECT: Record<Product, string> = {
   fence: 'X-ray: each post and the concrete footing below ground that holds it.',
 }
 
-type Mode = 'intro' | 'running' | 'done'
+type Mode = 'intro' | 'running' | 'done' | 'tour'
 
 const Icon = {
+  play: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" /></svg>,
   moon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" /></svg>,
   sun: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></svg>,
   reset: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7" /><path d="M3 4v5h5" /></svg>,
@@ -66,12 +68,15 @@ export default function DoorlinkWorld({
   arrival = false,
   revealed = true,
   onSceneReady,
+  intro = false,
 }: {
   onExit: () => void
   /** Entered through the homepage portal: start framed like the glimpse, settle once revealed. */
   arrival?: boolean
   revealed?: boolean
   onSceneReady?: () => void
+  /** Play the guided introduction once the visitor arrives (first visit only). */
+  intro?: boolean
 }) {
   const snapshot = useMemo(() => window.location.search.includes('snapshot'), [])
   const bus = useMemo(() => new CameraBus(), [])
@@ -80,6 +85,10 @@ export default function DoorlinkWorld({
   const reduced = useMemo(prefersReducedMotion, [])
   const [ready, setReady] = useState(false)
   const [mode, setMode] = useState<Mode>('intro')
+  const [introLine, setIntroLine] = useState<string | null>(null)
+  const [introScene, setIntroScene] = useState(1)
+  const [overlay, setOverlay] = useState<IntroOverlay>(null)
+  const toured = useRef(false)
   const [step, setStep] = useState(-1)
   const [caption, setCaption] = useState('A standard suburban home. One touch shows what Doorlink can do with it.')
   const [fading, setFading] = useState(false)
@@ -97,7 +106,7 @@ export default function DoorlinkWorld({
   xrayOpen.current = xray
 
   const patch = useCallback((fn: (s: WorldState) => Partial<WorldState>) => setState((s) => ({ ...s, ...fn(s) })), [])
-  const view = useCallback((name: string) => bus.send({ type: 'view', name }), [bus])
+  const view = useCallback((name: string, duration?: number) => bus.send({ type: 'view', name, duration }), [bus])
   const later = (list: React.MutableRefObject<number[]>, steps: Array<[number, () => void]>) => {
     list.current.forEach(clearTimeout)
     list.current = steps.map(([at, fn]) => window.setTimeout(fn, at))
@@ -110,18 +119,24 @@ export default function DoorlinkWorld({
     }, reduced ? 0 : 380)
   }
 
+  // The parent may hand a new onExit on every render; keep the latest without
+  // re-running this effect (which would cancel the running sequence's timers).
+  const exitRef = useRef(onExit)
+  exitRef.current = onExit
   useEffect(() => {
     const previous = document.body.style.overflow
     document.body.style.overflow = 'hidden'
-    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && !xrayOpen.current && onExit()
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && !xrayOpen.current && exitRef.current()
     window.addEventListener('keydown', onKey)
     return () => {
       document.body.style.overflow = previous
       window.removeEventListener('keydown', onKey)
       timers.current.forEach(clearTimeout)
       nightTimers.current.forEach(clearTimeout)
+      bus.send({ type: 'spin', on: false })
     }
-  }, [onExit])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   // Pull back from the garage to the whole property once it has loaded.
   const onReady = useCallback(() => {
@@ -134,10 +149,113 @@ export default function DoorlinkWorld({
   // Through the portal: once the glimpse has dissolved, ease back to the property overview.
   useEffect(() => {
     if (arrival && revealed && ready && !snapshot) {
-      const t = window.setTimeout(() => bus.send({ type: 'view', name: 'hero' }), 120)
-      return () => window.clearTimeout(t)
+      const t = window.setTimeout(() => bus.send({ type: 'view', name: 'hero', duration: 1.6 }), 120)
+      const u = intro && !toured.current ? window.setTimeout(runIntro, 1500) : 0
+      return () => {
+        window.clearTimeout(t)
+        window.clearTimeout(u)
+      }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [arrival, revealed, ready, snapshot, bus])
+
+  /**
+   * The guided introduction, scenes 2–7: one timeline of camera moves,
+   * product animations (the same ones the transformation uses), captions and
+   * overlays. Captions never hold the scene back: each scene starts on time.
+   */
+  const runIntro = () => {
+    toured.current = true
+    setMode('tour')
+    setOverlay(null)
+    patch(() => ({ selected: null, inspect: null, interactive: false }))
+    const line = (scene: number, text: string) => () => {
+      setIntroScene(scene)
+      setIntroLine(text)
+    }
+    const up = (fn: (s: WorldState) => Partial<WorldState>) => () => patch(fn)
+    later(timers, [
+      [0, () => {
+        line(1, 'More than just garage doors.')()
+        view('garage', 2.4)
+        patch((s) => ({ upgraded: { ...s.upgraded, garage: true }, open: { ...s.open, garage: false } }))
+      }],
+      [2900, line(1, 'Explore, customise and visualise the perfect solution for your property.')],
+      [6400, up((s) => ({ open: { ...s.open, garage: true } }))],
+      [7600, () => {
+        line(2, 'From swing gates to sliding gates, we’ve got you covered.')()
+        view('gate', 2.6)
+        patch((s) => ({ upgraded: { ...s.upgraded, gate: true } }))
+      }],
+      [9800, up((s) => ({ open: { ...s.open, gate: true } }))],
+      [10600, line(2, 'Discover solutions designed around your space, style and requirements.')],
+      [14000, () => {
+        line(3, 'And we don’t stop there.')()
+        view('fence', 2.6)
+        patch((s) => ({ upgraded: { ...s.upgraded, fence: true } }))
+      }],
+      [16800, () => {
+        line(3, 'Explore roller shutters, fencing and more — all in one place.')()
+        view('shutters', 2.4)
+        patch((s) => ({ upgraded: { ...s.upgraded, shutters: true }, open: { ...s.open, shutters: true } }))
+      }],
+      [18100, up((s) => ({ open: { ...s.open, shutters: false } }))],
+      [18700, up((s) => ({ open: { ...s.open, pedestrian: true } }))],
+      [21300, up((s) => ({ open: { ...s.open, shutters: true } }))],
+      [22600, () => {
+        line(4, 'Your vision. The right professionals.')()
+        view('overview', 2.8)
+        setOverlay('market')
+        window.setTimeout(() => !reduced && bus.send({ type: 'spin', on: true }), 3000)
+      }],
+      [25600, line(4, 'Doorlink connects customers with businesses and skilled tradespeople.')],
+      [28600, line(4, 'Compare quotes, explore providers and choose with confidence.')],
+      [31800, () => {
+        line(5, 'Design it. Visualise it. Compare it. Connect.')()
+        setOverlay('features')
+      }],
+      [34800, line(5, 'From your first idea to finding the right professional, Doorlink makes the process simpler.')],
+      [38600, () => {
+        line(6, 'Welcome to a smarter way forward.')()
+        setOverlay(null)
+        bus.send({ type: 'spin', on: false })
+        view('reveal', 3.4)
+      }],
+      [42200, () => {
+        setIntroLine(null)
+        setOverlay('logo')
+      }],
+      [48500, endIntro],
+    ])
+  }
+
+  const endIntro = () => {
+    markIntroSeen()
+    setIntroLine(null)
+    setOverlay(null)
+    bus.send({ type: 'spin', on: false })
+    patch(() => ({ interactive: true }))
+    finish()
+  }
+
+  const skipIntro = () => {
+    later(timers, [])
+    fade(() => setState((s) => ({ ...s, ...AFTER, epoch: s.epoch + 1 })))
+    endIntro()
+  }
+
+  const replayIntro = () => {
+    later(timers, [])
+    setOverlay(null)
+    fade(() => {
+      setState((s) => ({ ...s, ...BEFORE, epoch: s.epoch + 1, selected: null, inspect: null, night: false }))
+      view('hero')
+    })
+    setMode('tour')
+    setIntroScene(1)
+    setIntroLine('Back to the start…')
+    later(timers, [[reduced ? 300 : 1300, runIntro]])
+  }
 
   const finish = () => {
     later(timers, [])
@@ -287,7 +405,13 @@ export default function DoorlinkWorld({
           </div>
         </div>
         <div className="world-actions">
-          <button type="button" className="world-btn" onClick={toggleNight} aria-pressed={state.night} aria-label={state.night ? 'Switch to day' : 'Switch to night'}>
+          {mode !== 'tour' && (
+            <button type="button" className="world-btn" onClick={replayIntro} aria-label="Replay the introduction">
+              {Icon.play}
+              <span className="world-btn-label">Intro</span>
+            </button>
+          )}
+          <button type="button" className="world-btn" onClick={toggleNight} disabled={mode === 'tour'} aria-pressed={state.night} aria-label={state.night ? 'Switch to day' : 'Switch to night'}>
             {state.night ? Icon.sun : Icon.moon}
             <span className="world-btn-label">{state.night ? 'Day' : 'Night'}</span>
           </button>
@@ -342,7 +466,16 @@ export default function DoorlinkWorld({
         </aside>
       )}
 
-      <div className="world-bottom">
+      {mode === 'tour' && <IntroCaption text={introLine} scene={introScene} placement="world" />}
+      <IntroOverlays overlay={overlay} onContinue={endIntro} />
+
+      <div className={`world-bottom ${mode === 'tour' ? 'is-tour' : ''}`}>
+        {mode === 'tour' ? (
+          <button type="button" className="world-btn" onClick={skipIntro}>
+            Skip intro
+          </button>
+        ) : (
+        <>
         <div className="world-caption" aria-live="polite">
           <p>{caption}</p>
           {mode !== 'intro' && (
@@ -361,6 +494,8 @@ export default function DoorlinkWorld({
           <button type="button" className={mode === 'intro' ? 'world-cta' : 'world-btn'} onClick={transform} disabled={!ready}>
             {mode === 'intro' ? 'Transform my property' : 'Replay the transformation'}
           </button>
+        )}
+        </>
         )}
       </div>
 

@@ -16,7 +16,7 @@ export interface CameraView {
   target: [number, number, number]
 }
 
-export type CameraCommand = { type: 'view'; name: ViewName } | { type: 'zoom'; factor: number } | { type: 'spin'; on: boolean }
+export type CameraCommand = { type: 'view'; name: ViewName; duration?: number } | { type: 'zoom'; factor: number } | { type: 'spin'; on: boolean }
 
 /** Buttons outside the canvas talk to the rig inside it through this. */
 export class CameraBus {
@@ -154,7 +154,7 @@ export function CameraRig({
         to.theta = from.theta + delta
         flight.current = {
           start: clock.elapsedTime,
-          duration: reducedMotion ? 0.01 : command.type === 'zoom' ? 0.45 : 1.1,
+          duration: reducedMotion ? 0.01 : command.type === 'zoom' ? 0.45 : command.type === 'view' && command.duration ? command.duration : 1.1,
           fromTarget,
           toTarget,
           from,

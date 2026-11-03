@@ -1,6 +1,7 @@
 import { NavigationLink as Link } from '@/components/ui/NavigationLink'
 import { lazy, Suspense, useCallback, useEffect, useRef, useState } from 'react'
 import { PortalGarageScene, PortalTravel } from '../world/Portal'
+import { HOME_LINES, IntroCaption, introSeen } from '../world/Intro'
 import { useDoorDrag } from '@/components/garage-door/useDoorDrag'
 import './xray.css'
 import '../world/world.css'
@@ -24,7 +25,13 @@ export function GarageDoorHero({ poweredBy }: { poweredBy: string | null }) {
   const [worldReady, setWorldReady] = useState(false)
   const [revealed, setRevealed] = useState(false)
   const sim = useRef<HTMLDivElement>(null)
+  // Scene 1 of the guided introduction (first visit only): captions as the door rises.
+  const [playIntro, setPlayIntro] = useState(false)
+  const [homeLine, setHomeLine] = useState(-1)
+  const homeTimers = useRef<number[]>([])
+  useEffect(() => () => homeTimers.current.forEach(clearTimeout), [])
   const enter = () => {
+    setPlayIntro(!introSeen())
     const frame = document.querySelector('.garage-door-opening')
     setWorldReady(false)
     setRevealed(false)
@@ -50,6 +57,11 @@ export function GarageDoorHero({ poweredBy }: { poweredBy: string | null }) {
   const { progress, isDragging, open, toggle, dragHandlers } = useDoorDrag({
     onOpened: markPlayed,
   })
+  useEffect(() => {
+    if (homeLine >= 0 || progress < 0.04 || introSeen()) return
+    setHomeLine(0)
+    homeTimers.current = [window.setTimeout(() => setHomeLine(1), 2300), window.setTimeout(() => setHomeLine(2), 4800)]
+  }, [progress > 0.04])
 
   useEffect(() => {
     setMounted(true)
@@ -109,6 +121,7 @@ export function GarageDoorHero({ poweredBy }: { poweredBy: string | null }) {
             dragHandlers={dragHandlers}
             poweredBy={poweredBy}
           />
+          {homeLine >= 0 && progress >= 0.04 && !world && <IntroCaption text={HOME_LINES[homeLine]} scene={0} placement="hero" />}
           {fullyOpen && !xray && !world && (
             <div className="portal-invite">
               <p className="portal-invite-title">YOUR WORLD. YOUR DESIGN.</p>
@@ -155,9 +168,13 @@ export function GarageDoorHero({ poweredBy }: { poweredBy: string | null }) {
             onExit={leave}
             arrival
             revealed={revealed || !trip}
+            intro={playIntro}
             onSceneReady={() => setWorldReady(true)}
           />
         </Suspense>
+      )}
+      {world && trip && !revealed && (
+        <IntroCaption text={playIntro ? HOME_LINES[Math.max(homeLine, 2)] : 'Arriving in Doorlink World…'} scene={0} placement="fixed" />
       )}
       {world && trip && !revealed && (
         <PortalTravel

@@ -11,7 +11,7 @@ const VERT = `attribute vec2 p; varying vec2 vUv; void main(){ vUv = p * 0.5 + 0
 const FRAG = `precision highp float;
 varying vec2 vUv;
 uniform vec2 uRes, uCenter;
-uniform float uRadius, uTime, uTravel, uReveal, uZoom, uTexAspect, uHasTex, uBlur;
+uniform float uRadius, uTime, uTravel, uReveal, uZoom, uTexAspect, uHasTex, uBlur, uSpin;
 uniform sampler2D uTex;
 
 float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
@@ -33,7 +33,7 @@ void main() {
   float k = r / uRadius;
   float a = atan(d.y, d.x);
   float unwind = 1.0 - smoothstep(0.7, 1.0, uTravel);
-  float spin = uTime * (0.3 + uTravel * 3.2);
+  float spin = uSpin;
 
   // Inside: the world, twisted towards the rim and drawn in from depth.
   float twist = pow(clamp(k, 0.0, 1.0), 2.6) * (0.65 + uTravel * 3.4) * unwind + sin(uTime * 0.5) * 0.03 * unwind;
@@ -75,6 +75,8 @@ export interface PortalUniforms {
   reveal: number
   zoom: number
   blur: number
+  /** Accumulated swirl angle, integrated by the caller so speed changes stay smooth. */
+  spin: number
 }
 
 export interface PortalRenderer {
@@ -111,7 +113,7 @@ export function createPortalRenderer(canvas: HTMLCanvasElement, imageSrc: string
   const U = (n: string) => gl.getUniformLocation(prog, n)
   const u = {
     res: U('uRes'), center: U('uCenter'), radius: U('uRadius'), time: U('uTime'), travel: U('uTravel'), reveal: U('uReveal'),
-    zoom: U('uZoom'), texAspect: U('uTexAspect'), hasTex: U('uHasTex'), blur: U('uBlur'),
+    zoom: U('uZoom'), texAspect: U('uTexAspect'), hasTex: U('uHasTex'), blur: U('uBlur'), spin: U('uSpin'),
   }
   gl.uniform1f(u.hasTex, 0)
   gl.uniform1f(u.texAspect, 1.6)
@@ -157,6 +159,7 @@ export function createPortalRenderer(canvas: HTMLCanvasElement, imageSrc: string
       gl.uniform1f(u.reveal, s.reveal)
       gl.uniform1f(u.zoom, s.zoom)
       gl.uniform1f(u.blur, s.blur)
+      gl.uniform1f(u.spin, s.spin)
       gl.clearColor(0, 0, 0, 0)
       gl.clear(gl.COLOR_BUFFER_BIT)
       gl.drawArrays(gl.TRIANGLES, 0, 3)
