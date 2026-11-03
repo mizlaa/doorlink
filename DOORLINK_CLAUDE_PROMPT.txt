@@ -1,0 +1,113 @@
+# CLAUDE CODE MASTER IMPLEMENTATION PROMPT — DOORLINK INTERACTIVE DEMO
+
+You are a principal full-stack engineer, senior UX designer, and QA lead. Build a production-quality **DEMO-ONLY** interactive web reconstruction of **Doorlink**, using the attached screen-reference package extracted from two actual mobile screen recordings. The demo is a realistic click-through and functional simulation for investors, clients, businesses and stakeholders. It is not a real marketplace and must never collect payments or initiate real jobs.
+
+## 0. NON-NEGOTIABLE FIRST STEP — AUDIT, DON'T DESTROY
+
+1. Inspect the existing repository before coding: package.json, framework, routes, API services, database, components, CSS/tokens, assets, auth, tests, environment variables, existing 3D viewer and current workflows.
+2. Do not overwrite, delete, refactor or break production Doorlink or its current data. Prefer a dedicated isolated demo branch, separate demo route/feature flag, or standalone app folder. If inside the current project, gate demo via `DEMO_MODE=true` and `/demo/*`; retain existing behaviour when false.
+3. Produce a short inventory and implementation plan, then implement without waiting for follow-up questions. Respect the existing stack. Prefer TypeScript, reusable components and accessible semantics.
+4. Use the reference PNGs as **visual references, not full-screen background images or the actual UI**. Rebuild real HTML/CSS/forms/buttons and the design model so the result is interactive, responsive and keyboard accessible.
+5. Do not claim a button is functional unless it works in demo mode. Avoid dead ends and infinite skeleton loaders.
+6. All third-party names and user submissions within seeded mock data must be fictional, clearly identifiable as demonstration content. Never fabricate genuine vendor verification or customer testimonials. Show small 'Demo data' labels in relevant quote/review/provider areas and an unobtrusive persistent top banner 'DEMO — sample data, no real orders or payments'.
+
+## 1. REFERENCE IMAGE MANIFEST / VISUAL ORDER
+
+The directory `selected_screens/` contains 47 numbered PNG files (512×1112, mobile portrait) with the exact order in `SCREEN_INDEX.csv`. `frames/` contains the full second-by-second 171-frame set from both recordings. `contact_sheets/` has overview grids. `DEMO_DATA.json` contains preseeded fictional records. Read all these files and use the numbered images in the following implementation order:
+
+- **01–03**: Mobile home: Doorlink logo and header icons; hero headline 'Everything for your door. One connected system.'; 'Hire a pro' and 'Design yours' CTAs; interactive garage hero with OPEN/CLOSE button, service tiles, persistent bottom navigation.
+- **04–06**: Hire a pro / Post a job: job description, desired timeframe, type, preferred times, budget in AUD, name, email, phone, suburb, state, postcode and blue submit button.
+- **07–10**: Create account and roles: customer, installer, supplier, manufacturer; business name, phone, ABN optional and location. Supply both role-specific signup demonstration and sign-in.
+- **11**: Marketplace list/search, product categories, manufacturer and condition filters. Empty states in the original must be replaced with seeded listings.
+- **12**: User manuals: brand/model/text search, results, upload/manual submission demonstration, document detail screen.
+- **13–17**: Spring calculator: unit selector kg/mm versus lb/in, torsion/extension/unsure cards, diagrams explaining spring location, garage dimensions, number of springs and advanced measurements. Demo calculated results must be labelled **illustrative only, not engineering guidance**; do not pretend to provide verified spring sizing/installation safety advice.
+- **18–29**: Design: bright minimalist 3D exterior, camera angle changes, garage door/gate/fence/shutter tabs, sectional/roller/tilt types, dimensions, colours, finish (matte/gloss/woodgrain), panel profile (flush/raised/ribbed), number of sections, windows, hardware colour, insulation, motor/opener; live geometry/material preview; open/close animation; save design; get installed quotes. Screenshot 29 reveals a failed server quote endpoint: in demo implement a **local mock quote result**, never the failure. Do not use screenshots as fake 3D interactions. If real 3D already exists, reuse it; otherwise build a modest honest interactive 3D scene or graceful CSS/canvas fallback with working change controls.
+- **30–31**: Find your product: categories, brand, model and identification workflow. Replace 'Nothing matches yet' with seeded sample records, plus a deliberate searchable empty-result state only for unmatched queries.
+- **32–41**: Compliance & Safety Pack: observed $29.99 price, 15 safety documents described, payment/sign-in messaging, long sample PDF pack, visual black/orange/white document styling, business registration details, contractor compliance declarations, WHS, safe work methods, risk assessment and master maintenance checklists. Build browseable *sample document previews*; no live sale, checkout or legally operative certification. Put prominent 'SAMPLE — NOT FOR COMPLIANCE USE' watermark on every generated example page. Do not extract, reproduce or claim legal adequacy of source document text blindly; content is illustrative.
+- **42**: 'Don't know your model?' identification tips — check data plate, look at remote, photograph whole unit; fake local image-upload preview with no external image transmission.
+- **43–45**: More of the compliance pack with document catalogue and categories. Use accessible accordion/list and sample PDF preview navigation.
+- **46–47**: Mobile hamburger menu and email/password sign-in. Ensure cross-navigation and stable demo account.
+
+## 2. SCREEN AND ROUTE MAP
+
+Build routes or equivalent in-app screens: `/demo`, `/demo/hire`, `/demo/jobs/new`, `/demo/jobs`, `/demo/jobs/:id`, `/demo/find-work`, `/demo/marketplace`, `/demo/marketplace/:id`, `/demo/manuals`, `/demo/manuals/:id`, `/demo/spring-calculator`, `/demo/design`, `/demo/design/quotes`, `/demo/design/quote/:id`, `/demo/identify`, `/demo/compliance`, `/demo/compliance/preview/:id`, `/demo/login`, `/demo/register`, `/demo/account`, `/demo/business/:id`, `/demo/messages`, `/demo/dashboard`, and role-specific installer/supplier/manufacturer/admin dashboards as appropriate to the stack. Add functional breadcrumbs/back buttons, nav menu, mobile bottom tabs (Home, Find, Manuals, Market, Account), active states and route guards without forcing users to register for basic browsing.
+
+For desktop provide a centered responsive marketing/demo experience with an expanded nav and clean dashboard layout; for mobile respect iPhone safe-area insets, touch targets, long forms, keyboard focus and scroll restoration. Follow the actual screenshots' predominantly light/white/slate palette, cobalt-blue CTA and card style; improve typography, spacing, image sharpness, loading experience and legibility without changing Doorlink branding. Preserve the animated garage-door hero and distinctive workflow.
+
+## 3. DEMO SIGN-IN / ROLES
+
+All accounts are seeded **locally and for demonstration only**, with visibly published credentials. The following are fake credentials; there is no production authentication or password storage involved:
+
+- Customer: `customer@demo.doorlink.test` / `Demo123!`
+- Installer: `installer@demo.doorlink.test` / `Demo123!`
+- Supplier: `supplier@demo.doorlink.test` / `Demo123!`
+- Manufacturer: `manufacturer@demo.doorlink.test` / `Demo123!`
+- Admin: `admin@demo.doorlink.test` / `Demo123!`
+
+Add one-click 'Try as Customer', 'Try as Installer', 'Try as Supplier', 'Try as Manufacturer', and 'Try as Admin' buttons. Role selection should change dashboard, menu permissions and example data. Login/session is client-side demo simulation and must be isolated from production auth. Persist demo session and demo-created records in localStorage or a separate in-memory store; reset with 'Reset demo'. Do not store real PII. For signup, show success and sample profile while clearly staying in demo mode.
+
+## 4. SEEDED REALISTIC FICTIONAL MARKETPLACE
+
+Load `DEMO_DATA.json` as the default seed. All business and customer profiles are entirely fictional, and all quote/review numbers are illustrative. Expand with 20–30 coherent product listings (photos/illustrations or properly licensed assets), model/SKU, model types, colours, dimensions, warranty, availability and AU-dollar indicative price ranges. Seed installer and service business pages with specialty, service area, availability, job history, portfolio thumbnails, and sample reviews. Populate manufacturer selector, supplier selector, quote comparisons, service cards, marketplace items, manual results and job listings from the same normalized model.
+
+Example fictional businesses supplied in the seed: Westline Door Systems (Liverpool), Summit Roller & Gate Co (Prestons), Bluegum Automation (Casula), MetroSpan Doorworks (Bankstown), Crestview Access Solutions (Parramatta), Southwest Gate Studio (Moorebank), Harbourline Shutters (Alexandria) and Precision Entry Fabrication (Wetherill Park). These are invented identities; do not imply they exist or can be contacted. Make business selection, filtering, sort, favourite and detail navigation work.
+
+## 5. REALISTIC QUOTE FLOW — THE CENTERPIECE
+
+Flow: Open Designer → choose product (garage door / gate / fence / shutter) → dimensions in millimetres → colour → finish/panel → windows/insulation → opener/motor and installation → preview updates → `Get installed quotes` → compare 4–8 fake companies side by side → filter by price, rating, area and earliest availability → open individual quote → choose company → `Request this quote` (local-only demonstration) → confirmation and sample message thread → simulated review left after job marked completed.
+
+Each quote must have: fictional business name/logo/area, demo rating/review count, services included, breakdown with product + optional motor + installation + GST, total AUD including GST, illustrative lead time, warranty and inclusions/exclusions, and a clearly visible 'Indicative demo quote — not an actual offer' notice. The seeded quote example is 2400mm wide × 2100mm high sectional door in Monument matte with smart motor and installation. Changing design dimensions/options should **deterministically recompute illustrative estimates**, not just show unrelated fixed values. Use a clear documented mock pricing function with unit tests, not arbitrary random changes. Explicitly no deposits, payment fields, Stripe, checkout, real requests, webhooks, invoicing or messages to real companies.
+
+## 6. OTHER WORKING DEMO FLOWS
+
+- **Jobs:** customer post form validates; submission creates a local job record and takes user to job detail; installer can browse, filter and submit fictional expression of interest; customer sees responses and can mark a job scheduled/completed; upon completion, demo reviews can be submitted locally.
+- **Marketplace:** product category/make/model search, product cards, detail view, image gallery, condition filters, saved items, simulated seller contact with in-app messages and no real delivery.
+- **Manuals:** 6+ seeded manuals, searches and filtering; manual viewer with useful locally authored example content or rights-cleared documents only; demo upload with file name/status shown without external storage.
+- **Identify my door:** guided steps and reference images; sample selection and local image preview; mock result labelled 'Demo identification — not AI verified'.
+- **Spring calculator:** reproduce explanatory selection UI; safe demonstrative sample with labelled unverified/illustrative results and no specific actionable spring fabrication/installation instructions. Units and wizard progression work, show validation and note that spring sizing requires trained professional verification.
+- **Compliance:** catalogue of at least 15 sample documents grouped by business, contractor, WHS/safety, inspections and customer documentation; tap to view long-form mock preview, navigate pages, optionally download a sample with demo watermark, non-operative checklists/fields; $29.99 shown only as an original-app reference, clearly marked 'Purchasing disabled in demo'.
+- **Messages and notifications:** conversations, unread badges and simulated messages local-only. No sending email, SMS or push.
+- **Admin:** sample dashboards with fictional providers, category lists, price rule table, quotes, work orders, ratings moderation and reset demo button. Admin edits should immediately update demo client quote screens, reinforcing how Doorlink would eventually work.
+
+## 7. UX AND QUALITY REQUIREMENTS
+
+- Show convincing populated default states and meaningful empty/search-no-match states, not empty database errors.
+- Add clear status labels: Draft, Demo Quoted, Selected, Scheduled, Completed. No false claims of business verification or real bookings.
+- All navigation, forms, settings, modals, accordion items, designer selections, filters, sample previews, quote requests, demo messages and reset behaviour should be clickable and actually update state.
+- Use accessible semantic HTML, labels, validation, error announcements and WCAG AA-minded contrast.
+- No external API requests for payments, generative image services, live pricing or company lookup. All data local and deterministic. If external image assets are used, validate their licences and provide fallbacks.
+- Ensure no source secrets or API keys are exposed, no production auth bypass, no production database writes and no API billable operations.
+- Avoid using any actual user contact details from the recordings in sample data; replace with fixtures.
+- Optimise performance and lazy-load 3D/PDF samples. On a slow phone, the demo should still navigate and show previews.
+
+## 8. IMPLEMENTATION ORDER
+
+1. Inventory existing project; isolate demo entry point/branch; establish route and component map.
+2. Create theme tokens, layout, header, mobile tabs, menu, demo banner, login, accounts and local fixture store.
+3. Rebuild home, hire job form, work board, business directory and marketplace.
+4. Rebuild interactive designer using reference images 18–28. Preserve/reuse current 3D assets if possible.
+5. Build simulated quote pricing, compare, select, job status and review flows.
+6. Build manuals, identification wizard, spring calculator and compliance catalogue/previews.
+7. Build role-specific dashboards, messages, admin mock pricing and demo reset.
+8. Add tests for routes, login role switching, forms, quote recompute, GST calculations, reviews, reset, and sample document previews. Test on iPhone-sized viewport and desktop.
+9. Run local preview, fix compile errors, missing assets, broken links and console errors; provide final URL/command and sample credentials. Screenshot each major rendered route for visual regression against supplied numbered references.
+
+## 9. ACCEPTANCE TESTS — MUST PASS BEFORE DELIVERY
+
+- I can enter as demo customer without registration and see the populated home/service cards.
+- I can select a garage door, modify colour/type/size/motor, and watch the preview change.
+- `Get installed quotes` reliably displays at least 4 relevant fictional company options, with ratings, review samples, GST-inclusive AUD totals and selection actions.
+- Choosing a company creates a **local-only** demo quote request visible in customer dashboard.
+- As demo installer, I see local jobs and respond; as demo admin I can edit an indicative price rule and then see pricing change in the customer designer.
+- I can find manufacturer/supplier businesses and products using search/filter, not just blank dropdowns.
+- I can browse manuals and identify-my-model content and go through spring calculator wizard.
+- I can browse compliance pack cards and example PDF-like pages without payment/sign-in dead ends.
+- Demo session, local saves and demo reset behave predictably.
+- No checkout, real money movement, external messages, billable calls or production changes.
+- No visually broken screen, stuck skeleton, blank detail page or uncaught 500/server error.
+
+## 10. FINAL HANDOFF
+
+Return a concise audit of what already existed, files changed, routes created, component architecture, how mock data is managed, demo credentials, how to run locally and deploy preview, tests executed with results, screenshots of implementation, and any limitations. Do not say 'complete' until the demo can be navigated end-to-end and the quote comparison works. Prioritise a functioning demo over adding unnecessary backend complexity.
+
+**Start now by reading `SCREEN_INDEX.csv`, `DEMO_DATA.json`, and every reference image in `selected_screens/`, then inspect the repository and implement the isolated demo.**

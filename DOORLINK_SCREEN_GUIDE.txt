@@ -1,0 +1,42 @@
+# DOORLINK — VIDEO WALKTHROUGH AND SCREEN REFERENCE GUIDE
+
+**Source:** Two uploaded iPhone screen recordings, captured 2026-11-03. Video 1 is approximately 81 seconds and Video 2 approximately 89 seconds. Files extracted at 1 frame per second at the recording's native 512×1112 resolution. The 171 raw frames include repeated states, scrolling and loading views; 47 selected PNGs capture the major views and interactions. This guide describes visible actions. It does not imply that all backend features currently work.
+
+## Recording 1 — home, service flows, design and attempted quotation
+
+- **00:00–00:03**: Doorlink home with blue/white interface and headline. Hero picture of a modern charcoal garage door, plus a button that opens/closes the door and changes the state visually. 'Hire a pro' and 'Design yours' above. As user moves/scrolls, service links appear.
+- **00:04–00:08**: Taps/visits the **Post a job** workflow. Fields include title, description, product kind, timeframe/preferred time, budget and contact/postcode/state. Bottom navigation persists.
+- **00:09–00:18**: Returns to service menu and visits account registration. Role tabs visibly include customer, installer, supplier and manufacturer; registration then reveals business details for business-oriented roles. This demonstrates a multi-sided platform, not solely a customer-facing app.
+- **00:19–00:20**: Marketplace with search, categories, manufacturer and condition filters. Currently shows 'No active listings yet'; demo must seed this.
+- **00:22–00:23**: Manuals library with a brand/model/document title search and submit manual option; recorded search result is empty. Demo should include sample results.
+- **00:27–00:47**: Spring calculator. Initial instructions and unit switch, chooses among torsion spring, extension spring and unsure. Explanatory spring illustrations displayed; next phase shows garage measurements (door weight, number of springs) and advanced measurements. There is no verified engineered sizing result shown in the recording.
+- **00:49–00:57**: Door and gate design module. 3D/illustrative house exterior and garage, different angles, garage door, gate, shutter and fence examples. Interactive scene is central, not a static photograph.
+- **00:58–01:08**: Configures door type (sectional/roller/tilt), width/height, paint colour, finish, panel style, sections, windows, hardware, insulation and opener. A blue 'Get installed quotes' control is reached at the bottom.
+- **01:09–01:13**: Instead of quotes, an application/server error is visibly displayed, then user exits. This does NOT evidence any working provider marketplace, quote data, or payments in the current build. The demo should implement these as new mocked interactions, and must not repeat the failure.
+- **01:14 onward**: Device/home/blank screen material, not helpful for app reconstruction.
+
+## Recording 2 — product lookup, compliance sample, identification and login
+
+- **00:00–00:05**: Scrolls through expanded home service list and opens **Find your product**. Category chooser and a message 'Nothing matches yet' appear. Populate fictional model/brand/category results in the demo.
+- **00:06–00:14**: Opens **Compliance & Safety Pack**. The screen shows a $29.99 advertised one-off price and indicates 15 safety documents with preview PDF link and sign-in purchase prompt. Reproduce visible marketing presentation but DISABLE payment in demo.
+- **00:15–00:49**: Long sample compliance PDF is opened and scrolled rapidly over many pages, including company/business document details, safety agreements/declarations, contractor compliance, WHS responsibilities, safety management, risk assessment and maintenance checklists. The PDF preview indicates many pages (64 visible in counters). Extracted frames show portions of pages, NOT full source PDF contents. Avoid claiming a legally valid template from these screenshots; create sample-only mock document previews with prominent watermarks.
+- **00:50–00:52**: Leaves the document and returns to home.
+- **00:53–01:00**: Opens **Don't know your model?** / identification guide. Steps suggest looking for a data plate, remote control details, or photographing the entire unit. No real image recognition output was shown.
+- **01:01–01:23**: Revisits compliance pack and scrolls its list, showing categories including contractor documents, WHS responsibilities, safety procedures, SWMS, master maintenance checklist, work incident/near-miss reports, emergency management and warranty certificate. These should each link to illustrative document cards.
+- **01:24–01:28**: Opens hamburger navigation and visits the email/password sign-in screen, with registration entry.
+
+## Major UI elements and intended interactions
+
+**Global:** Light background, narrow top bar with Doorlink icon/name, search/menu icons, blue accents, mobile bottom nav Home/Find/Manuals/Market/Account. Main service menu contains Hire a pro, Find work, Marketplace, Manuals, Spring calculator, Design, Identify my door, Compliance pack, and Not sure?.
+
+**Design:** Bright lightly stylised exterior, model selection and live visual update. Reference screenshots 18–28. This should lead to an indicative mock quote flow, provider comparison, and simulated selection/review workflow. Supplier/manufacturer quotes were *requested for the future demo*; they are not working results visible in the recording.
+
+**Two-sided/three-sided marketplace:** Customers post projects and design products. Installers respond to job leads. Suppliers and manufacturers manage mock profiles and items. Admin view offers illustrative pricing rule setup and moderation. Seed all roles, product cards, rankings, sample reviews and quotes with clearly labelled fictional data.
+
+## Visual reference legend
+
+The exact mapping from filename to source video and second is in `SCREEN_INDEX.csv`. `selected_screens/` includes 47 screenshots named numerically; for example `01_01_home.png` is the first reference, and `47_47_sign_in.png` is the final. (Use the actual file names in the index rather than assuming a pattern.) `contact_sheets/curated_*.jpg` provides a quick grid reference, while `frames/` holds every timestamped frame including repeated intermediate states.
+
+## Demo guardrails
+
+No actual payment, checkout, genuine order submission, shipping, contractor booking, SMS, email, live quote, unverified claim of accreditation, or real customer review. Demo content must be labelled; compliance content must be sample-only and not professional/engineering/legal safety advice. Do not copy any personal information, secrets or external user identifiers visible in recordings.
