@@ -1,41 +1,81 @@
 # Doorlink interactive demo (demo only)
 
-A standalone, fictional click-through of the Doorlink app, built from the screen pack
-on this branch. Sample data only. No payments, orders, emails or supplier connections.
-It does not touch the Next.js app or any production settings.
+A clickable copy of the Doorlink app for showing to people. It uses the app's own screens and components from `src/`: the home page with the opening garage door, the 3D designer for garage doors, gates, fences and shutters, quote comparison, bookings, the job board and the dashboards. A browser-only demo layer stands in for the server.
 
-## Demo accounts (password for all: `Demo123!`)
+Everything is fictional and stays in the visitor's browser:
 
-| Role | Email |
-| --- | --- |
-| Customer | customer@demo.doorlink.test |
-| Installer | installer@demo.doorlink.test |
-| Supplier | supplier@demo.doorlink.test |
-| Manufacturer | manufacturer@demo.doorlink.test |
-| Admin | admin@demo.doorlink.test |
+- fictional businesses, prices, reviews and people;
+- no payments, Stripe charges, orders, emails, texts, push notifications or supplier connections;
+- no database, no server calls, and no image generation.
 
-## Preview on iPhone
+A banner on every page says so.
 
-Option 1, from a computer on the same Wi-Fi:
+## Try it
+
+| Role | Email | What to look at |
+| --- | --- | --- |
+| Customer | customer@demo.doorlink.test | Design, Get installed quotes, book, pay (simulated), review |
+| Installer | installer@demo.doorlink.test | Job board: quote on customer jobs |
+| Supplier | supplier@demo.doorlink.test | Dashboard, automated prices, listings, enquiries |
+| Manufacturer | manufacturer@demo.doorlink.test | Dashboard, catalogue, dealers |
+| Admin | admin@demo.doorlink.test | Businesses, price rules, reviews, metrics, reset |
+
+The password for every account is `Demo123!`. The sign-in page also has one-tap "Try it" buttons. The **Demo guide** link in the banner has a ten-step tour.
+
+Things to try:
+
+- **Admin pricing.** As admin, open Admin, then Price rules. Change a price, or raise a business's prices by 5%. Compare quotes again as the customer and the new price is used.
+- **Reset.** Account, then Reset demo, or Admin, then Reset demo data. Either puts the sample data back.
+
+## Preview on an iPhone
+
+**Option 1: the single file.** `demo-app/doorlink-demo.html` contains the whole demo: script, styles, fonts and pictures. Put it on any static host and open the link in Safari. GitHub Pages, Netlify Drop and a shared preview link all work. Then tap Share and choose Add to Home Screen to open it full screen.
+
+**Option 2: from a computer on the same Wi-Fi.**
 
 ```bash
-cd demo-app
-python3 -m http.server 8080
+npm install
+npx vite build --config demo-app/vite.config.mts
+python3 -m http.server 4300 --directory demo-app/dist --bind 0.0.0.0
 ```
 
-Find the computer's local address (for example `192.168.1.20`), then on the iPhone open
-Safari at `http://192.168.1.20:8080`. Use "Add to Home Screen" to open it full screen.
+Find the computer's local IP address, for example `192.168.1.20`. On the iPhone, open `http://192.168.1.20:4300` in Safari. While editing, `npx vite --config demo-app/vite.config.mts` serves a live-reloading copy on port 5199.
 
-Option 2: open the published preview link on the iPhone.
+## Build
+
+```bash
+# Multi-file build into demo-app/dist
+npx vite build --config demo-app/vite.config.mts
+
+# Single self-contained file: demo-app/doorlink-demo.html
+DEMO_SINGLE=1 npx vite build --config demo-app/vite.config.mts
+node demo-app/scripts/single-file.mjs
+```
 
 ## Tests
 
-The smoke test uses the Playwright Chromium in the sandbox. Serve the folder on port 8092 and run:
-
 ```bash
-node demo-app/tests/smoke.test.js
+# Unit tests: seed data, quote pricing and GST, admin price edits,
+# suspensions, the job board, overlap checks, reset.
+npx vitest run --config demo-app/vitest.config.mts
+
+# Type check
+npx tsc -p demo-app/tsconfig.json
+
+# Browser checks, against a served build on port 4300:
+#   every route for every role, with no errors or sideways scrolling
+#   at iPhone width (add --desktop for 1366 px)
+node demo-app/tests/e2e-routes.cjs
+#   the cross-role flows: post a job, installer quotes, customer accepts,
+#   admin price change shows in quotes, suspension, supplier price edit,
+#   new listing, messages, moderation, reset
+node demo-app/tests/e2e-flows.cjs
 ```
 
-## Reset
+## How it is kept apart from the real app
 
-Account > Reset demo clears everything saved in the browser.
+- **Separate folder and build.** The demo lives in `demo-app/` and builds with its own Vite config. The Next.js app, its settings and its data are untouched.
+- **Server actions replaced.** The real server actions (`src/app/**/actions.ts`) are swapped for local versions in `demo-app/src/actions/` at build time. They use the same validation and the same pricing engine (`src/lib/pricing`), but write to the browser's local storage.
+- **Server code blocked.** The build fails if anything imports the database, auth, email or payment modules.
+- **Next.js stand-ins.** `next/link`, `next/navigation` and the Prisma enums are replaced by small browser versions in `demo-app/src/stubs/`.
+- **Pictures made by the demo itself.** The business portfolio pictures in `public/portfolio/` were rendered by the demo's own 3D designer.

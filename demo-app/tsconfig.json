@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "incremental": false,
+    "jsx": "react-jsx",
+    "plugins": [],
+    "baseUrl": "..",
+    "types": ["vite/client"],
+    "paths": {
+      "@/*": ["src/*"],
+      "@demo/*": ["demo-app/src/*"],
+      "next/link": ["demo-app/src/stubs/next-link.tsx"],
+      "next/navigation": ["demo-app/src/stubs/next-navigation.ts"],
+      "next/dynamic": ["demo-app/src/stubs/next-dynamic.tsx"],
+      "next/cache": ["demo-app/src/stubs/next-cache.ts"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": []
+}

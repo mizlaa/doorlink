@@ -1,0 +1,33 @@
+/* Demo-only additions. Everything else is the app's own globals.css. */
+.demo-banner {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  display: flex;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 12px;
+  padding-top: env(safe-area-inset-top, 0px);
+  box-sizing: content-box;
+  background: #f6e9dd;
+  color: #b4530a;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+}
+.demo-banner a { text-decoration: underline; text-underline-offset: 2px; }
+.demo-pad-top { padding-top: calc(24px + env(safe-area-inset-top, 0px)); }
+
+/* Compliance documents: every page reads as a sample in the demo. */
+.demo-watermark { position: relative; }
+.demo-watermark::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='360'%3E%3Ctext x='260' y='190' text-anchor='middle' transform='rotate(-28 260 180)' font-family='IBM Plex Sans, Arial, sans-serif' font-size='30' font-weight='700' fill='%23B4530A' fill-opacity='0.13' letter-spacing='3'%3ESAMPLE %E2%80%94 NOT FOR COMPLIANCE USE%3C/text%3E%3C/svg%3E");
+  background-repeat: repeat;
+}

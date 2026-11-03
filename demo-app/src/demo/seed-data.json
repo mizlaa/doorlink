@@ -1,0 +1,601 @@
+{
+  "notice": "All organisations, ratings, reviews, quotes, customers, products, and jobs below are fictional demo data.",
+  "demo_accounts": [
+    {
+      "role": "customer",
+      "email": "customer@demo.doorlink.test",
+      "password": "Demo123!"
+    },
+    {
+      "role": "installer",
+      "email": "installer@demo.doorlink.test",
+      "password": "Demo123!"
+    },
+    {
+      "role": "supplier",
+      "email": "supplier@demo.doorlink.test",
+      "password": "Demo123!"
+    },
+    {
+      "role": "manufacturer",
+      "email": "manufacturer@demo.doorlink.test",
+      "password": "Demo123!"
+    },
+    {
+      "role": "admin",
+      "email": "admin@demo.doorlink.test",
+      "password": "Demo123!"
+    }
+  ],
+  "companies": [
+    {
+      "id": "company_01",
+      "name": "Westline Door Systems",
+      "suburb": "Liverpool NSW",
+      "specialty": "garage_doors",
+      "rating": 4.9,
+      "reviewCount": 128,
+      "isDemo": true,
+      "verifiedDemo": true,
+      "responseTime": "Within 2 hours",
+      "completedDemoJobs": 24
+    },
+    {
+      "id": "company_02",
+      "name": "Summit Roller & Gate Co",
+      "suburb": "Prestons NSW",
+      "specialty": "garage_doors",
+      "rating": 4.8,
+      "reviewCount": 96,
+      "isDemo": true,
+      "verifiedDemo": true,
+      "responseTime": "Same day",
+      "completedDemoJobs": 37
+    },
+    {
+      "id": "company_03",
+      "name": "Bluegum Automation",
+      "suburb": "Casula NSW",
+      "specialty": "automation",
+      "rating": 4.9,
+      "reviewCount": 74,
+      "isDemo": true,
+      "verifiedDemo": true,
+      "responseTime": "Within 2 hours",
+      "completedDemoJobs": 50
+    },
+    {
+      "id": "company_04",
+      "name": "MetroSpan Doorworks",
+      "suburb": "Bankstown NSW",
+      "specialty": "garage_doors",
+      "rating": 4.7,
+      "reviewCount": 186,
+      "isDemo": true,
+      "verifiedDemo": true,
+      "responseTime": "Same day",
+      "completedDemoJobs": 63
+    },
+    {
+      "id": "company_05",
+      "name": "Crestview Access Solutions",
+      "suburb": "Parramatta NSW",
+      "specialty": "commercial",
+      "rating": 5.0,
+      "reviewCount": 41,
+      "isDemo": true,
+      "verifiedDemo": true,
+      "responseTime": "Within 2 hours",
+      "completedDemoJobs": 76
+    },
+    {
+      "id": "company_06",
+      "name": "Southwest Gate Studio",
+      "suburb": "Moorebank NSW",
+      "specialty": "gates",
+      "rating": 4.8,
+      "reviewCount": 113,
+      "isDemo": true,
+      "verifiedDemo": true,
+      "responseTime": "Same day",
+      "completedDemoJobs": 89
+    },
+    {
+      "id": "company_07",
+      "name": "Harbourline Shutters",
+      "suburb": "Alexandria NSW",
+      "specialty": "shutters",
+      "rating": 4.7,
+      "reviewCount": 52,
+      "isDemo": true,
+      "verifiedDemo": true,
+      "responseTime": "Within 2 hours",
+      "completedDemoJobs": 102
+    },
+    {
+      "id": "company_08",
+      "name": "Precision Entry Fabrication",
+      "suburb": "Wetherill Park NSW",
+      "specialty": "manufacturing",
+      "rating": 4.9,
+      "reviewCount": 69,
+      "isDemo": true,
+      "verifiedDemo": true,
+      "responseTime": "Same day",
+      "completedDemoJobs": 115
+    }
+  ],
+  "product_categories": [
+    "Sectional garage doors",
+    "Roller doors",
+    "Tilt doors",
+    "Sliding gates",
+    "Swing gates",
+    "Roller shutters",
+    "Openers & motors",
+    "Remotes & accessories",
+    "Springs & hardware",
+    "Safety sensors"
+  ],
+  "brands": [
+    "Westline",
+    "Summit Entry",
+    "MetroSpan",
+    "Crestview",
+    "Bluegum"
+  ],
+  "quotes": [
+    {
+      "id": "DQ-2601",
+      "companyId": "company_01",
+      "configuration": {
+        "widthMm": 2400,
+        "heightMm": 2100,
+        "doorType": "sectional",
+        "finish": "matte",
+        "colour": "Monument",
+        "motor": "Smart motor",
+        "installation": true
+      },
+      "priceExGstAUD": 2681.82,
+      "gstAUD": 268.18,
+      "totalIncGstAUD": 2950,
+      "leadTimeDays": 7,
+      "warrantyYears": 3,
+      "isDemo": true
+    },
+    {
+      "id": "DQ-2602",
+      "companyId": "company_02",
+      "configuration": {
+        "widthMm": 2400,
+        "heightMm": 2100,
+        "doorType": "sectional",
+        "finish": "matte",
+        "colour": "Monument",
+        "motor": "Smart motor",
+        "installation": true
+      },
+      "priceExGstAUD": 2977.27,
+      "gstAUD": 297.73,
+      "totalIncGstAUD": 3275,
+      "leadTimeDays": 9,
+      "warrantyYears": 4,
+      "isDemo": true
+    },
+    {
+      "id": "DQ-2603",
+      "companyId": "company_03",
+      "configuration": {
+        "widthMm": 2400,
+        "heightMm": 2100,
+        "doorType": "sectional",
+        "finish": "matte",
+        "colour": "Monument",
+        "motor": "Smart motor",
+        "installation": true
+      },
+      "priceExGstAUD": 3163.64,
+      "gstAUD": 316.36,
+      "totalIncGstAUD": 3480,
+      "leadTimeDays": 11,
+      "warrantyYears": 5,
+      "isDemo": true
+    },
+    {
+      "id": "DQ-2604",
+      "companyId": "company_04",
+      "configuration": {
+        "widthMm": 2400,
+        "heightMm": 2100,
+        "doorType": "sectional",
+        "finish": "matte",
+        "colour": "Monument",
+        "motor": "Smart motor",
+        "installation": true
+      },
+      "priceExGstAUD": 2809.09,
+      "gstAUD": 280.91,
+      "totalIncGstAUD": 3090,
+      "leadTimeDays": 13,
+      "warrantyYears": 6,
+      "isDemo": true
+    },
+    {
+      "id": "DQ-2605",
+      "companyId": "company_05",
+      "configuration": {
+        "widthMm": 2400,
+        "heightMm": 2100,
+        "doorType": "sectional",
+        "finish": "matte",
+        "colour": "Monument",
+        "motor": "Smart motor",
+        "installation": true
+      },
+      "priceExGstAUD": 3263.64,
+      "gstAUD": 326.36,
+      "totalIncGstAUD": 3590,
+      "leadTimeDays": 15,
+      "warrantyYears": 3,
+      "isDemo": true
+    },
+    {
+      "id": "DQ-2606",
+      "companyId": "company_06",
+      "configuration": {
+        "widthMm": 2400,
+        "heightMm": 2100,
+        "doorType": "sectional",
+        "finish": "matte",
+        "colour": "Monument",
+        "motor": "Smart motor",
+        "installation": true
+      },
+      "priceExGstAUD": 3072.73,
+      "gstAUD": 307.27,
+      "totalIncGstAUD": 3380,
+      "leadTimeDays": 17,
+      "warrantyYears": 4,
+      "isDemo": true
+    },
+    {
+      "id": "DQ-2607",
+      "companyId": "company_07",
+      "configuration": {
+        "widthMm": 2400,
+        "heightMm": 2100,
+        "doorType": "sectional",
+        "finish": "matte",
+        "colour": "Monument",
+        "motor": "Smart motor",
+        "installation": true
+      },
+      "priceExGstAUD": 2900.0,
+      "gstAUD": 290.0,
+      "totalIncGstAUD": 3190,
+      "leadTimeDays": 19,
+      "warrantyYears": 5,
+      "isDemo": true
+    },
+    {
+      "id": "DQ-2608",
+      "companyId": "company_08",
+      "configuration": {
+        "widthMm": 2400,
+        "heightMm": 2100,
+        "doorType": "sectional",
+        "finish": "matte",
+        "colour": "Monument",
+        "motor": "Smart motor",
+        "installation": true
+      },
+      "priceExGstAUD": 3318.18,
+      "gstAUD": 331.82,
+      "totalIncGstAUD": 3650,
+      "leadTimeDays": 21,
+      "warrantyYears": 6,
+      "isDemo": true
+    }
+  ],
+  "reviews": [
+    {
+      "id": "review_1",
+      "companyId": "company_01",
+      "author": "Demo Customer 1",
+      "rating": 4,
+      "text": "Great communication and clean installation.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_2",
+      "companyId": "company_02",
+      "author": "Demo Customer 2",
+      "rating": 5,
+      "text": "The quote was clear and the finish looks excellent.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_3",
+      "companyId": "company_03",
+      "author": "Demo Customer 3",
+      "rating": 5,
+      "text": "Helpful advice on choosing a motor.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_4",
+      "companyId": "company_04",
+      "author": "Demo Customer 4",
+      "rating": 5,
+      "text": "Arrived as arranged and explained the options.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_5",
+      "companyId": "company_05",
+      "author": "Demo Customer 5",
+      "rating": 4,
+      "text": "Great communication and clean installation.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_6",
+      "companyId": "company_06",
+      "author": "Demo Customer 6",
+      "rating": 5,
+      "text": "The quote was clear and the finish looks excellent.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_7",
+      "companyId": "company_07",
+      "author": "Demo Customer 7",
+      "rating": 5,
+      "text": "Helpful advice on choosing a motor.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_8",
+      "companyId": "company_08",
+      "author": "Demo Customer 8",
+      "rating": 5,
+      "text": "Arrived as arranged and explained the options.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_9",
+      "companyId": "company_01",
+      "author": "Demo Customer 9",
+      "rating": 4,
+      "text": "Great communication and clean installation.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_10",
+      "companyId": "company_02",
+      "author": "Demo Customer 10",
+      "rating": 5,
+      "text": "The quote was clear and the finish looks excellent.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_11",
+      "companyId": "company_03",
+      "author": "Demo Customer 11",
+      "rating": 5,
+      "text": "Helpful advice on choosing a motor.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_12",
+      "companyId": "company_04",
+      "author": "Demo Customer 12",
+      "rating": 5,
+      "text": "Arrived as arranged and explained the options.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_13",
+      "companyId": "company_05",
+      "author": "Demo Customer 13",
+      "rating": 4,
+      "text": "Great communication and clean installation.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_14",
+      "companyId": "company_06",
+      "author": "Demo Customer 14",
+      "rating": 5,
+      "text": "The quote was clear and the finish looks excellent.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_15",
+      "companyId": "company_07",
+      "author": "Demo Customer 15",
+      "rating": 5,
+      "text": "Helpful advice on choosing a motor.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_16",
+      "companyId": "company_08",
+      "author": "Demo Customer 16",
+      "rating": 5,
+      "text": "Arrived as arranged and explained the options.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_17",
+      "companyId": "company_01",
+      "author": "Demo Customer 17",
+      "rating": 4,
+      "text": "Great communication and clean installation.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_18",
+      "companyId": "company_02",
+      "author": "Demo Customer 18",
+      "rating": 5,
+      "text": "The quote was clear and the finish looks excellent.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_19",
+      "companyId": "company_03",
+      "author": "Demo Customer 19",
+      "rating": 5,
+      "text": "Helpful advice on choosing a motor.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_20",
+      "companyId": "company_04",
+      "author": "Demo Customer 20",
+      "rating": 5,
+      "text": "Arrived as arranged and explained the options.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_21",
+      "companyId": "company_05",
+      "author": "Demo Customer 21",
+      "rating": 4,
+      "text": "Great communication and clean installation.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_22",
+      "companyId": "company_06",
+      "author": "Demo Customer 22",
+      "rating": 5,
+      "text": "The quote was clear and the finish looks excellent.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_23",
+      "companyId": "company_07",
+      "author": "Demo Customer 23",
+      "rating": 5,
+      "text": "Helpful advice on choosing a motor.",
+      "demoLabel": "Sample review — not a real customer review"
+    },
+    {
+      "id": "review_24",
+      "companyId": "company_08",
+      "author": "Demo Customer 24",
+      "rating": 5,
+      "text": "Arrived as arranged and explained the options.",
+      "demoLabel": "Sample review — not a real customer review"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "JOB-4100",
+      "title": "Replace damaged roller door",
+      "suburb": "Liverpool",
+      "status": "Open",
+      "budgetAUD": 2400,
+      "description": "Existing door sticks halfway",
+      "isDemo": true
+    },
+    {
+      "id": "JOB-4101",
+      "title": "Install automated sliding gate",
+      "suburb": "Prestons",
+      "status": "Quoted",
+      "budgetAUD": 5200,
+      "description": "New driveway installation",
+      "isDemo": true
+    },
+    {
+      "id": "JOB-4102",
+      "title": "Service sectional door springs",
+      "suburb": "Casula",
+      "status": "Scheduled",
+      "budgetAUD": 550,
+      "description": "Noisy operation on opening",
+      "isDemo": true
+    },
+    {
+      "id": "JOB-4103",
+      "title": "Install two garage doors",
+      "suburb": "Moorebank",
+      "status": "Open",
+      "budgetAUD": 6900,
+      "description": "Double garage residential",
+      "isDemo": true
+    },
+    {
+      "id": "JOB-4104",
+      "title": "Commercial shutter inspection",
+      "suburb": "Bankstown",
+      "status": "Quoted",
+      "budgetAUD": 850,
+      "description": "Routine inspection and report",
+      "isDemo": true
+    },
+    {
+      "id": "JOB-4105",
+      "title": "Motor and remote upgrade",
+      "suburb": "Fairfield",
+      "status": "Scheduled",
+      "budgetAUD": 1250,
+      "description": "Replace older opener with smart model",
+      "isDemo": true
+    }
+  ],
+  "manuals": [
+    {
+      "id": "MAN-001",
+      "brand": "Westline",
+      "model": "S240 Sectional",
+      "type": "garage door",
+      "isDemo": true,
+      "contentKind": "local sample guidance only"
+    },
+    {
+      "id": "MAN-002",
+      "brand": "Summit Entry",
+      "model": "R220 Roller",
+      "type": "garage door",
+      "isDemo": true,
+      "contentKind": "local sample guidance only"
+    },
+    {
+      "id": "MAN-003",
+      "brand": "Bluegum",
+      "model": "BG-600 SmartDrive",
+      "type": "opener",
+      "isDemo": true,
+      "contentKind": "local sample guidance only"
+    },
+    {
+      "id": "MAN-004",
+      "brand": "MetroSpan",
+      "model": "MT-450 Tilt",
+      "type": "garage door",
+      "isDemo": true,
+      "contentKind": "local sample guidance only"
+    },
+    {
+      "id": "MAN-005",
+      "brand": "Crestview",
+      "model": "CV-900 Slide",
+      "type": "gate",
+      "isDemo": true,
+      "contentKind": "local sample guidance only"
+    },
+    {
+      "id": "MAN-006",
+      "brand": "Westline",
+      "model": "RF4 Handset",
+      "type": "remote",
+      "isDemo": true,
+      "contentKind": "local sample guidance only"
+    }
+  ]
+}
