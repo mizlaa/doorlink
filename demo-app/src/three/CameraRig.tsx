@@ -65,6 +65,7 @@ export function CameraRig({
   maxDistance,
   minPolar = 0.22,
   maxPolar = 1.42,
+  blockers,
 }: {
   bus: CameraBus
   views: Record<string, CameraView>
@@ -73,6 +74,8 @@ export function CameraRig({
   maxDistance: number
   minPolar?: number
   maxPolar?: number
+  /** Boxes the camera may not enter (buildings): it is pushed out of the nearest face. */
+  blockers?: THREE.Box3[]
 }) {
   const controls = useRef<OrbitControlsImpl>(null)
   const { camera, clock } = useThree()
@@ -171,6 +174,7 @@ export function CameraRig({
     instance.update()
     // Belt and braces with the polar limit: never at or below the ground.
     if (camera.position.y < 0.45) camera.position.y = 0.45
+    if (blockers) for (const box of blockers) keepOut(camera.position, instance.target, box)
   })
 
   return (
@@ -190,4 +194,39 @@ export function CameraRig({
       maxPolarAngle={maxPolar}
     />
   )
+}
+
+/**
+ * Keeps the camera out of a building: if it ends up inside one, it slides
+ * along its line of sight towards the target until it is just clear, so a
+ * wall never fills the view. (If the target itself is inside, it is pushed
+ * out through the nearest side instead.)
+ */
+const ray = new THREE.Ray()
+const hit = new THREE.Vector3()
+function keepOut(p: THREE.Vector3, target: THREE.Vector3, box: THREE.Box3) {
+  if (!box.containsPoint(p)) return
+  if (!box.containsPoint(target)) {
+    ray.origin.copy(target)
+    ray.direction.copy(p).sub(target).normalize()
+    if (ray.intersectBox(box, hit)) {
+      p.copy(hit).addScaledVector(ray.direction, -0.15)
+      return
+    }
+  }
+  pushOut(p, box)
+}
+
+/** Moves a point inside a box out through the nearest side or the top. */
+function pushOut(p: THREE.Vector3, box: THREE.Box3) {
+  if (!box.containsPoint(p)) return
+  const exits: Array<[number, () => void]> = [
+    [p.x - box.min.x, () => (p.x = box.min.x)],
+    [box.max.x - p.x, () => (p.x = box.max.x)],
+    [p.z - box.min.z, () => (p.z = box.min.z)],
+    [box.max.z - p.z, () => (p.z = box.max.z)],
+    [box.max.y - p.y, () => (p.y = box.max.y)],
+  ]
+  exits.sort((a, b) => a[0] - b[0])
+  exits[0][1]()
 }

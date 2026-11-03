@@ -3,6 +3,7 @@ import { lazy, Suspense, useCallback, useEffect, useState } from 'react'
 import { GarageDoorScene } from '@/components/garage-door/GarageDoorScene'
 import { useDoorDrag } from '@/components/garage-door/useDoorDrag'
 import './xray.css'
+import '../world/world.css'
 
 /**
  * Demo copy of src/components/garage-door/GarageDoorHero.tsx: the same
@@ -10,11 +11,13 @@ import './xray.css'
  * open. The X-ray experience itself loads only when someone opens it.
  */
 const XRayGarage = lazy(() => import('./XRayGarage'))
+const DoorlinkWorld = lazy(() => import('../world/DoorlinkWorld'))
 
 const SESSION_KEY = 'doorlink:garage-door-intro-seen'
 
 export function GarageDoorHero({ poweredBy }: { poweredBy: string | null }) {
   const [xray, setXray] = useState(false)
+  const [world, setWorld] = useState(false)
   const [mounted, setMounted] = useState(false)
   const [hasPlayed, setHasPlayed] = useState(false)
 
@@ -81,11 +84,14 @@ export function GarageDoorHero({ poweredBy }: { poweredBy: string | null }) {
             dragHandlers={dragHandlers}
             poweredBy={poweredBy}
           />
-          {fullyOpen && !xray && (
+          {fullyOpen && !xray && !world && (
             <div className="xray-invite">
-              <p>Ever wondered what makes your garage door work?</p>
-              <button type="button" className="xray-button" onClick={() => setXray(true)}>
-                Activate X-ray mode
+              <p>Doorlink is more than garage doors.</p>
+              <button type="button" className="xray-button world-explore" onClick={() => setWorld(true)}>
+                Explore Doorlink World
+              </button>
+              <button type="button" className="world-link" onClick={() => setXray(true)}>
+                or X-ray this garage door
               </button>
             </div>
           )}
@@ -116,6 +122,11 @@ export function GarageDoorHero({ poweredBy }: { poweredBy: string | null }) {
       {xray && (
         <Suspense fallback={<div className="xray-root"><div className="xray-loading">Preparing the X-ray view…</div></div>}>
           <XRayGarage onExit={() => setXray(false)} />
+        </Suspense>
+      )}
+      {world && (
+        <Suspense fallback={<div className="world-root"><div className="xray-loading">Building the property…</div></div>}>
+          <DoorlinkWorld onExit={() => setWorld(false)} />
         </Suspense>
       )}
     </section>

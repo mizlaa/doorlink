@@ -1,0 +1,67 @@
+/* Doorlink World: full-bleed property scene with floating, minimal controls. */
+.world-root {
+  position: fixed; inset: 0; z-index: 190; background: #0b1322; color: #e6edf3;
+  overscroll-behavior: contain; animation: xray-in 0.4s ease-out both;
+}
+.world-canvas { position: absolute; inset: 0; }
+.world-canvas canvas { touch-action: none; }
+.world-root .xray-loading { z-index: 36; background: #0b1322; }
+.world-fade { position: absolute; inset: 0; z-index: 35; background: #05080c; opacity: 0; pointer-events: none; transition: opacity 0.38s ease; }
+.world-fade.is-on { opacity: 1; }
+
+.world-top {
+  position: absolute; top: 0; left: 0; right: 0; z-index: 40; display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 12px; padding: max(14px, env(safe-area-inset-top)) 16px 30px; pointer-events: none;
+  background: linear-gradient(rgba(6, 10, 16, 0.7), rgba(6, 10, 16, 0));
+}
+.world-top > * { pointer-events: auto; }
+.world-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #f0904f; }
+.world-sub { margin-top: 3px; font-size: 12px; color: #c3cdd7; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
+.world-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+.world-actions .xray-button-ghost { background: rgba(12, 17, 23, 0.6); backdrop-filter: blur(6px); }
+
+.world-bottom {
+  position: absolute; left: 50%; bottom: max(18px, env(safe-area-inset-bottom)); z-index: 40; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 10px; width: min(560px, calc(100% - 32px));
+}
+.world-bottom .xray-button-ghost { background: rgba(12, 17, 23, 0.72); backdrop-filter: blur(6px); }
+.world-caption {
+  width: 100%; padding: 10px 14px; border-radius: 14px; text-align: center; font-size: 14px; line-height: 1.45;
+  background: rgba(10, 14, 20, 0.74); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(8px);
+}
+.world-steps { display: flex; justify-content: center; gap: 6px; margin-top: 8px; }
+.world-steps span { width: 28px; height: 3px; border-radius: 2px; background: rgba(255, 255, 255, 0.18); transition: background-color 0.3s; }
+.world-steps span.is-now { background: rgba(232, 118, 43, 0.55); }
+.world-steps span.is-done { background: #e8762b; }
+.world-cta {
+  min-height: 52px; padding: 0 28px; border-radius: 999px; background: #e8762b; color: #10151a; font-size: 14px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; box-shadow: 0 10px 30px rgba(232, 118, 43, 0.35); transition: background-color 0.15s, transform 0.15s;
+}
+.world-cta:hover { background: #f0904f; }
+.world-cta:active { transform: scale(0.98); }
+.world-cta:disabled { opacity: 0.5; }
+
+.world-card {
+  position: absolute; right: 16px; top: 88px; z-index: 40; width: 340px; padding: 14px; border-radius: 14px;
+  background: rgba(15, 20, 26, 0.88); border: 1px solid #26313b; backdrop-filter: blur(10px);
+  animation: xray-in 0.25s ease-out both;
+}
+.world-body { margin-top: 6px; font-size: 13px; line-height: 1.55; color: #b8c4cf; }
+.world-close { width: 28px; height: 28px; border-radius: 999px; color: #b8c4cf; font-size: 20px; line-height: 1; }
+.world-close:hover { background: #1f2830; }
+.world-swatch { display: inline-block; width: 12px; height: 12px; margin-right: 6px; border-radius: 3px; vertical-align: -1px; border: 1px solid rgba(255, 255, 255, 0.25); }
+
+.xray-invite .world-explore { text-transform: uppercase; letter-spacing: 0.1em; font-size: 12px; }
+.xray-invite .world-link { font-size: 12px; color: #c3cdd7; text-decoration: underline; text-underline-offset: 3px; }
+.xray-invite .world-link:hover { color: #fff; }
+
+@media (max-width: 720px) {
+  .world-sub { display: none; }
+  .world-top { padding-bottom: 18px; }
+  .world-card { left: 12px; right: 12px; top: auto; bottom: calc(max(18px, env(safe-area-inset-bottom)) + 150px); width: auto; max-height: 42vh; overflow: auto; }
+  .world-caption { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .world-root, .world-card { animation: none; }
+  .world-fade { transition: none; }
+}

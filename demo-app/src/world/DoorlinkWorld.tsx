@@ -1,0 +1,334 @@
+import '../xray/xray.css'
+import './world.css'
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { CameraBus } from '../three/CameraRig'
+import { detectTier, prefersReducedMotion, type Tier } from '../three/quality'
+import { AFTER, BEFORE, FENCE_STYLES, PRODUCT_VIEW, WorldScene, type Product, type WorldState } from './WorldScene'
+
+const XRayGarage = lazy(() => import('../xray/XRayGarage'))
+
+/**
+ * Doorlink World: the whole property in one scene, opened from the
+ * homepage hero. A one-touch transformation fits every product in turn,
+ * then each one operates when tapped. Visual demo only: nothing here
+ * touches quotes, accounts or real products.
+ */
+
+const STEPS = ['Garage door', 'Driveway gate', 'Fencing', 'Roller shutters', 'Automation']
+
+const INFO: Record<Product, { title: string; body: string; verbs?: [string, string] }> = {
+  garage: {
+    title: 'Sectional garage door',
+    body: 'Hinged panels roll up curved tracks to sit under the ceiling. Springs balance the door’s weight, so the opener only has to guide it.',
+    verbs: ['Open', 'Close'],
+  },
+  gate: {
+    title: 'Automated sliding gate',
+    body: 'The gate rolls on wheels along a ground track and runs back behind the fence. A motor beside the track drives it along a toothed rack.',
+    verbs: ['Open', 'Close'],
+  },
+  pedestrian: {
+    title: 'Pedestrian gate',
+    body: 'A single leaf on hinges with a latch on the far pillar, styled to match the fence and driveway gate.',
+    verbs: ['Open', 'Close'],
+  },
+  shutters: {
+    title: 'Window roller shutters',
+    body: 'Slats run down guide rails and roll onto an axle in the housing above the window, where a tubular motor turns them. They add shade and privacy.',
+    verbs: ['Raise', 'Lower'],
+  },
+  fence: {
+    title: 'Perimeter fencing',
+    body: 'Panels sit between posts set in concrete footings. Try another style: the gates change with it, so the frontage stays matched.',
+  },
+}
+
+const INSPECT: Record<Product, string> = {
+  garage: 'The door turns see-through and the opener glows: its motor pulls a trolley along the rail above the door.',
+  gate: 'X-ray: the gate motor, its ground track and the guide post that keeps the leaf upright.',
+  pedestrian: 'X-ray: the two hinges on the left pillar and the latch on the right.',
+  shutters: 'X-ray: the housing turns see-through to show the axle the slats roll onto, and the guide rails either side.',
+  fence: 'X-ray: each post and the concrete footing below ground that holds it.',
+}
+
+type Mode = 'intro' | 'running' | 'done'
+
+export default function DoorlinkWorld({ onExit }: { onExit: () => void }) {
+  const bus = useMemo(() => new CameraBus(), [])
+  const maxTier = useMemo<Tier>(() => detectTier(), [])
+  const [tier, setTier] = useState<Tier>(maxTier)
+  const reduced = useMemo(prefersReducedMotion, [])
+  const [ready, setReady] = useState(false)
+  const [mode, setMode] = useState<Mode>('intro')
+  const [step, setStep] = useState(-1)
+  const [caption, setCaption] = useState('A standard suburban home. One touch shows what Doorlink can do with it.')
+  const [fading, setFading] = useState(false)
+  const [xray, setXray] = useState(false)
+  const [state, setState] = useState<WorldState>({ ...BEFORE, epoch: 0, night: false, fence: FENCE_STYLES[0], selected: null, inspect: null })
+  const [aspect, setAspect] = useState(() => window.innerWidth / Math.max(1, window.innerHeight))
+  useEffect(() => {
+    const onResize = () => setAspect(window.innerWidth / Math.max(1, window.innerHeight))
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
+  const timers = useRef<number[]>([])
+  const nightTimers = useRef<number[]>([])
+  const xrayOpen = useRef(false)
+  xrayOpen.current = xray
+
+  const patch = useCallback((fn: (s: WorldState) => Partial<WorldState>) => setState((s) => ({ ...s, ...fn(s) })), [])
+  const view = useCallback((name: string) => bus.send({ type: 'view', name }), [bus])
+  const later = (list: React.MutableRefObject<number[]>, steps: Array<[number, () => void]>) => {
+    list.current.forEach(clearTimeout)
+    list.current = steps.map(([at, fn]) => window.setTimeout(fn, at))
+  }
+  const fade = (fn: () => void) => {
+    setFading(true)
+    window.setTimeout(() => {
+      fn()
+      window.setTimeout(() => setFading(false), 140)
+    }, reduced ? 0 : 380)
+  }
+
+  useEffect(() => {
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && !xrayOpen.current && onExit()
+    window.addEventListener('keydown', onKey)
+    return () => {
+      document.body.style.overflow = previous
+      window.removeEventListener('keydown', onKey)
+      timers.current.forEach(clearTimeout)
+      nightTimers.current.forEach(clearTimeout)
+    }
+  }, [onExit])
+
+  // Pull back from the garage to the whole property once it has loaded.
+  const onReady = useCallback(() => {
+    setReady(true)
+    window.setTimeout(() => bus.send({ type: 'view', name: 'hero' }), reduced ? 0 : 400)
+  }, [bus, reduced])
+
+  const finish = () => {
+    later(timers, [])
+    setMode('done')
+    setStep(STEPS.length)
+    setCaption('Your upgraded property. Tap a product to operate it.')
+    view('overview')
+  }
+
+  const runSequence = () => {
+    setMode('running')
+    setStep(0)
+    patch(() => ({ selected: null, inspect: null, interactive: false }))
+    const at = (ms: number) => (reduced ? Math.round(ms * 0.8) : ms)
+    later(timers, [
+      [0, () => {
+        setCaption('Fitting a timber-look sectional garage door…')
+        view('garage')
+        patch((s) => ({ upgraded: { ...s.upgraded, garage: true }, open: { ...s.open, garage: false } }))
+      }],
+      [at(5800), () => {
+        setStep(1)
+        setCaption('Installing an automated sliding gate between new pillars…')
+        view('gate')
+        patch((s) => ({ upgraded: { ...s.upgraded, gate: true } }))
+      }],
+      [at(8200), () => {
+        setStep(2)
+        setCaption('Replacing the old pickets with a matching slat fence and pedestrian gate…')
+        view('fence')
+        patch((s) => ({ upgraded: { ...s.upgraded, fence: true } }))
+      }],
+      [at(12200), () => {
+        setStep(3)
+        setCaption('Fitting roller shutters to the front windows…')
+        view('shutters')
+        patch((s) => ({ upgraded: { ...s.upgraded, shutters: true }, open: { ...s.open, shutters: true } }))
+      }],
+      [at(13500), () => patch((s) => ({ open: { ...s.open, shutters: false } }))],
+      [at(16000), () => {
+        setStep(4)
+        setCaption('Everything automated, working together.')
+        view('hero')
+        patch((s) => ({ open: { ...s.open, garage: true } }))
+      }],
+      [at(16500), () => patch((s) => ({ open: { ...s.open, gate: true } }))],
+      [at(17000), () => patch((s) => ({ open: { ...s.open, pedestrian: true } }))],
+      [at(17500), () => patch((s) => ({ open: { ...s.open, shutters: true } }))],
+      [at(21000), () => {
+        patch(() => ({ interactive: true }))
+        finish()
+      }],
+    ])
+  }
+
+  const transform = () => {
+    if (mode === 'intro') return runSequence()
+    // Replay: cut back to the original property, then run it again.
+    later(timers, [])
+    fade(() => {
+      setState((s) => ({ ...s, ...BEFORE, epoch: s.epoch + 1, selected: null, inspect: null }))
+      view('hero')
+    })
+    setMode('running')
+    setStep(-1)
+    setCaption('Back to the original property…')
+    later(timers, [[reduced ? 300 : 1300, runSequence]])
+  }
+
+  const skip = () => {
+    later(timers, [])
+    fade(() => setState((s) => ({ ...s, ...AFTER, epoch: s.epoch + 1 })))
+    finish()
+  }
+
+  const toggle = (p: Product) =>
+    patch((s) => {
+      if (p === 'fence') return {}
+      const key = p as keyof WorldState['open']
+      return { open: { ...s.open, [key]: !s.open[key] } }
+    })
+
+  const pick = (p: Product) => {
+    if (state.selected !== p) view(PRODUCT_VIEW[p])
+    toggle(p)
+    patch((s) => ({ selected: p, inspect: s.inspect === p ? p : null }))
+  }
+
+  const inspect = (p: Product) => {
+    const on = state.inspect !== p
+    patch(() => ({ inspect: on ? p : null }))
+    if (on) view(p === 'gate' ? 'gateInside' : PRODUCT_VIEW[p])
+  }
+
+  const toggleNight = () => {
+    const night = !state.night
+    fade(() => patch(() => ({ night })))
+    setCaption(night ? 'Evening: the lights come on and the property secures itself.' : 'Daytime.')
+    if (!state.upgraded.gate) return
+    later(
+      nightTimers,
+      night
+        ? [
+            [900, () => patch((s) => ({ open: { ...s.open, gate: false } }))],
+            [1400, () => patch((s) => ({ open: { ...s.open, pedestrian: false } }))],
+            [1900, () => patch((s) => ({ open: { ...s.open, shutters: false } }))],
+            [2400, () => patch((s) => ({ open: { ...s.open, garage: false } }))],
+          ]
+        : [[900, () => patch((s) => ({ open: { ...s.open, shutters: true } }))]]
+    )
+  }
+
+  const reset = () => {
+    patch(() => ({ selected: null, inspect: null }))
+    view(mode === 'done' ? 'overview' : 'hero')
+  }
+
+  const selected = state.selected
+  const info = selected ? INFO[selected] : null
+  const openKey = selected && selected !== 'fence' ? (selected as keyof WorldState['open']) : null
+
+  return (
+    <div className="world-root" role="dialog" aria-modal="true" aria-label="Doorlink World">
+      <div className="world-canvas">
+        <WorldScene
+          bus={bus}
+          tier={tier}
+          maxTier={maxTier}
+          onTier={setTier}
+          paused={xray}
+          onReady={onReady}
+          state={state}
+          onPick={pick}
+          aspect={aspect}
+        />
+      </div>
+      {!ready && <div className="xray-loading">Building the property…</div>}
+      <div className={`world-fade ${fading ? 'is-on' : ''}`} aria-hidden="true" />
+
+      <header className="world-top">
+        <div className="min-w-0">
+          <p className="world-eyebrow">Doorlink World</p>
+          <p className="world-sub">Garage doors, gates, fencing and shutters on one property · illustration with sample products</p>
+        </div>
+        <div className="world-actions">
+          <button type="button" className="xray-button-ghost" onClick={toggleNight} aria-pressed={state.night}>
+            {state.night ? '☀ Day' : '☾ Night'}
+          </button>
+          <button type="button" className="xray-button-ghost" onClick={reset}>
+            Reset view
+          </button>
+          <button type="button" className="xray-button" onClick={onExit}>
+            Exit
+          </button>
+        </div>
+      </header>
+
+      {info && selected && (
+        <aside className="world-card" aria-live="polite">
+          <div className="flex items-start justify-between gap-3">
+            <p className="xray-card-title">{info.title}</p>
+            <button type="button" className="world-close" aria-label="Close" onClick={() => patch(() => ({ selected: null, inspect: null }))}>
+              ×
+            </button>
+          </div>
+          <p className="world-body">{state.inspect === selected ? INSPECT[selected] : info.body}</p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {openKey && info.verbs && (
+              <button type="button" className="xray-chip is-active" onClick={() => toggle(selected)}>
+                {state.open[openKey] ? info.verbs[1] : info.verbs[0]}
+              </button>
+            )}
+            <button type="button" className={`xray-chip ${state.inspect === selected ? 'is-active' : ''}`} aria-pressed={state.inspect === selected} onClick={() => inspect(selected)}>
+              X-ray
+            </button>
+            {selected === 'garage' && (
+              <button type="button" className="xray-chip" onClick={() => setXray(true)}>
+                Full X-ray garage
+              </button>
+            )}
+          </div>
+          {selected === 'fence' && (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {FENCE_STYLES.map((f) => (
+                <button key={f.id} type="button" className={`xray-chip ${state.fence.id === f.id ? 'is-active' : ''}`} aria-pressed={state.fence.id === f.id} onClick={() => patch(() => ({ fence: f }))}>
+                  <span className="world-swatch" style={{ background: f.color }} aria-hidden="true" />
+                  {f.label}
+                </button>
+              ))}
+            </div>
+          )}
+        </aside>
+      )}
+
+      <div className="world-bottom">
+        <div className="world-caption" aria-live="polite">
+          <p>{caption}</p>
+          {mode !== 'intro' && (
+            <div className="world-steps" aria-hidden="true">
+              {STEPS.map((s, i) => (
+                <span key={s} className={i < step || mode === 'done' ? 'is-done' : i === step ? 'is-now' : ''} title={s} />
+              ))}
+            </div>
+          )}
+        </div>
+        {mode === 'running' ? (
+          <button type="button" className="xray-button-ghost" onClick={skip}>
+            Skip to the finished property
+          </button>
+        ) : (
+          <button type="button" className={mode === 'intro' ? 'world-cta' : 'xray-button-ghost'} onClick={transform} disabled={!ready}>
+            {mode === 'intro' ? 'Transform my property' : 'Replay the transformation'}
+          </button>
+        )}
+      </div>
+
+      {xray && (
+        <Suspense fallback={<div className="xray-root"><div className="xray-loading">Preparing the X-ray view…</div></div>}>
+          <XRayGarage onExit={() => setXray(false)} />
+        </Suspense>
+      )}
+    </div>
+  )
+}

@@ -92,11 +92,14 @@ export const Landscape = memo(function Landscape({
   m,
   tufts,
   foliageShadows,
+  letterbox = true,
 }: {
   layout: HouseLayout
   m: HouseMaterials
   tufts: number
   foliageShadows: boolean
+  /** The world scene puts a gate where the letterbox stands. */
+  letterbox?: boolean
 }) {
   const { doorW, garageW, garageD, houseW, houseFront } = layout
   const driveW = Math.max(doorW + 0.8, 3.2)
@@ -191,13 +194,13 @@ export const Landscape = memo(function Landscape({
       <WheelieBin position={[garageW / 2 + 0.62, 0, -1.4]} lid="#c8302d" m={m} />
       <WheelieBin position={[garageW / 2 + 0.62, 0, -2.25]} lid="#e8b923" m={m} />
       {/* Brick letterbox pillar by the driveway */}
-      <group position={[-driveW / 2 - 0.55, 0, FRONT_BOUNDARY - 0.3]}>
+      {letterbox && <group position={[-driveW / 2 - 0.55, 0, FRONT_BOUNDARY - 0.3]}>
         <Slab size={[0.46, 1.15, 0.46]} position={[0, 0.575, 0]} material={m.brick} />
         <Slab size={[0.52, 0.06, 0.52]} position={[0, 1.18, 0]} material={m.colorbond} />
         <mesh position={[0, 0.88, 0.232]} material={m.darkSteel}>
           <boxGeometry args={[0.26, 0.04, 0.006]} />
         </mesh>
-      </group>
+      </group>}
       {/* Neighbours either side */}
       <NeighbourHouse position={[rightFence + 7.6, 0, -1.6]} width={12} depth={14} m={m} doorColor="#e7e4dc" />
       <NeighbourHouse position={[leftFence - 7.4, 0, -2.2]} width={12} depth={14} m={m} doorColor="#5a5d5f" />

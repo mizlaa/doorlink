@@ -71,7 +71,7 @@ const STEEL = '#9aa0a6'
 const UP = new THREE.Vector3(0, 1, 0)
 
 /** One shared material per look, so a 60-slat fence is not 60 materials. */
-function usePanelMaterial(look: GateLook): THREE.MeshStandardMaterial {
+export function usePanelMaterial(look: GateLook): THREE.MeshStandardMaterial {
   const textures = useSceneTextures()
   const material = useMemo(() => {
     const woodgrain = look.finish === 'woodgrain'
@@ -117,7 +117,7 @@ function Box({
  * A framed panel with its infill, built from its bottom-left corner so a
  * swing leaf can rotate about x = 0 without an offset.
  */
-function InfillPanel({
+export function InfillPanel({
   width,
   height,
   infill,
@@ -225,7 +225,7 @@ function InfillPanel({
   return <group>{items}</group>
 }
 
-function Pillar({ x, height }: { x: number; height: number }) {
+export function Pillar({ x, height }: { x: number; height: number }) {
   const textures = useSceneTextures()
   return (
     <group position={[x, 0, 0]}>
@@ -248,7 +248,7 @@ function Pillar({ x, height }: { x: number; height: number }) {
 }
 
 /** A run of fence panels between posts, panels no wider than 2.4 m. */
-function FenceRun({
+export function FenceRun({
   fromX,
   toX,
   height,
@@ -399,7 +399,7 @@ function SlidingMotor({ position }: { position: [number, number, number] }) {
   )
 }
 
-function SlidingGate({
+export function SlidingGate({
   look,
   isOpen,
   material,
@@ -648,7 +648,7 @@ function Leaf({
   )
 }
 
-function SwingGate({
+export function SwingGate({
   look,
   isOpen,
   material,

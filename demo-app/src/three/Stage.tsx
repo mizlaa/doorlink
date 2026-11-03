@@ -50,6 +50,9 @@ export function Stage({
   onReady,
   focus,
   studio = false,
+  night = false,
+  blockers,
+  fov = 36,
   children,
 }: {
   tier: Tier
@@ -68,6 +71,11 @@ export function Stage({
   focus?: [number, number, number]
   /** A dark engineering-studio backdrop instead of the sky (the X-ray view). */
   studio?: boolean
+  /** Moonlight and a night sky; the scene adds its own warm lights. */
+  night?: boolean
+  blockers?: THREE.Box3[]
+  /** Vertical field of view, set when the canvas is created. */
+  fov?: number
   children: ReactNode
 }) {
   const settings = TIERS[tier]
@@ -80,7 +88,7 @@ export function Stage({
       dpr={settings.dpr}
       frameloop={paused ? 'never' : 'always'}
       gl={{ antialias: true, powerPreference: 'high-performance', stencil: false }}
-      camera={{ fov: 36, near: 0.1, far: 260, position: views[initialView].position }}
+      camera={{ fov, near: 0.1, far: 260, position: views[initialView].position }}
       onCreated={({ gl }) => {
         gl.outputColorSpace = THREE.SRGBColorSpace
       }}
@@ -93,16 +101,16 @@ export function Stage({
       />
       <ToneMappingSwitch composer={composer} />
       <WindClock enabled={settings.wind && !reduced} />
-      <color attach="background" args={[studio ? '#0e1216' : '#cfe0ec']} />
-      {!studio && <Sky sunPosition={SUN} turbidity={2.2} rayleigh={0.9} mieCoefficient={0.004} mieDirectionalG={0.86} distance={4000} />}
-      <fog attach="fog" args={studio ? ['#0e1216', 14, 34] : ['#d4e0e8', 45, 190]} />
-      <ParkLight intensity={0.75} rotation={2.2} />
-      <hemisphereLight args={['#e3edf5', '#5f6a4a', 0.32]} />
+      <color attach="background" args={[studio ? '#0e1216' : night ? '#0b1322' : '#cfe0ec']} />
+      {!studio && !night && <Sky sunPosition={SUN} turbidity={2.2} rayleigh={0.9} mieCoefficient={0.004} mieDirectionalG={0.86} distance={4000} />}
+      <fog attach="fog" args={studio ? ['#0e1216', 14, 34] : night ? ['#0b1322', 30, 120] : ['#d4e0e8', 45, 190]} />
+      <ParkLight intensity={night ? 0.07 : 0.75} rotation={2.2} />
+      <hemisphereLight args={night ? ['#2c3c5c', '#0c0f12', 0.22] : ['#e3edf5', '#5f6a4a', 0.32]} />
       <directionalLight
         key={settings.shadowMapSize}
-        position={SUN}
-        intensity={3.1}
-        color="#fff2df"
+        position={night ? [-10, 18, 8] : SUN}
+        intensity={night ? 0.32 : 3.1}
+        color={night ? '#a9bde6' : '#fff2df'}
         castShadow
         shadow-mapSize={[settings.shadowMapSize, settings.shadowMapSize]}
         shadow-bias={-0.00025}
@@ -134,6 +142,7 @@ export function Stage({
         minDistance={minDistance}
         maxDistance={maxDistance}
         maxPolar={maxPolar}
+        blockers={blockers}
       />
     </Canvas>
   )

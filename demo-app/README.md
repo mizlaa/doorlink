@@ -95,6 +95,16 @@ The demo replaces the app's 3D preview with an upgraded scene in `demo-app/src/t
 
 These hosts were not reachable from the build environment, so nothing here pretends to be one of them.
 
+## Doorlink World
+
+Once the hero garage door is fully open, **Explore Doorlink World** (`src/world/`, loaded only when asked for) pulls the camera back from the garage to the whole property. It's built from the designer's own house, landscape, sectional door, gate, fence and pillar parts, with neighbours on both sides and across the street.
+
+- **Transform my property** runs one sequence: a new garage door is fitted while the old one is up, then an automated sliding gate between new pillars, then the old pickets are swapped for a matching slat fence and pedestrian gate, then roller shutters go on the front windows, and finally everything operates together. It can be skipped and replayed.
+- Afterwards, tap any product (or its label) to operate it. Each card has an **X-ray** view: gate motor and track, gate hinges and latch, shutter axle and guide rails, fence posts and footings. The garage card also opens the full X-Ray Garage.
+- Fence styles (charcoal slats, timber-look slats, pale pickets, solid grey) restyle the gates as well.
+- **Night** switches to moonlight, lit windows, wall lanterns, path and garden lights, and closes the gates, shutters and garage in turn.
+- The camera orbits all the way round, but stays above the ground, within zoom limits and out of the buildings: if it would enter one, it slides towards its target instead. Portrait screens get a wider lens and views pulled back to the same framing.
+
 ## X-Ray Garage
 
 On the home page, open the garage door fully and an invitation appears over the hero: *Ever wondered what makes your garage door work?* **Activate X-ray mode** opens a full-screen, see-through garage (`src/xray/`, loaded only when asked for). It reuses the designer's sectional door, camera rig and lighting.
