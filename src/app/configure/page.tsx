@@ -1,8 +1,10 @@
+import Link from 'next/link'
 import type { Metadata } from 'next'
 import { getSession } from '@/lib/auth'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { parseSpec } from '@/lib/configurator/options'
 import { aiImagesAvailable } from '@/lib/ai/design-image'
+import { FEATURE_3D_V2 } from '@/lib/feature-flags'
 import { loadMotorCandidates } from '@/lib/motors/catalogue'
 import { Configurator } from './Configurator'
 
@@ -41,6 +43,11 @@ export default async function ConfigurePage({ searchParams }: PageProps) {
       <header className="mb-6 max-w-prose">
         <h1 className="text-2xl font-semibold tracking-tight text-graphite">Design</h1>
         <p className="mt-1 text-graphite-soft">Pick a style and size, then get quotes.</p>
+        {FEATURE_3D_V2 && (
+          <Link href="/doorlink" className="mt-2 inline-block text-sm font-medium text-signal hover:text-signal-hover">
+            Explore the Doorlink property
+          </Link>
+        )}
       </header>
 
       <Configurator
