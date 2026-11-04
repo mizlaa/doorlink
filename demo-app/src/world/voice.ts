@@ -30,17 +30,27 @@ if (ok) window.speechSynthesis.onvoiceschanged = () => (voice = pickVoice())
 export const voiceAvailable = ok
 export const isMuted = () => muted
 
+/** Called from the Enter tap: a real, audible line inside the gesture is what unlocks speech on iOS. */
 export function unlockVoice() {
   if (!ok || muted) return
-  const u = new SpeechSynthesisUtterance(' ')
-  u.volume = 0
-  window.speechSynthesis.speak(u)
+  speak('Entering Doorlink World.')
 }
 
+let pending = 0
 export function say(text: string) {
   if (!ok || muted) return
   const synth = window.speechSynthesis
-  synth.cancel()
+  window.clearTimeout(pending)
+  // iOS drops an utterance spoken straight after cancel(): cancel, then speak a beat later.
+  if (synth.speaking || synth.pending) {
+    synth.cancel()
+    pending = window.setTimeout(() => speak(text), 120)
+  } else speak(text)
+}
+
+function speak(text: string) {
+  const synth = window.speechSynthesis
+  synth.resume()
   const u = new SpeechSynthesisUtterance(text)
   voice ??= pickVoice()
   if (voice) u.voice = voice
@@ -51,7 +61,9 @@ export function say(text: string) {
 }
 
 export function hush() {
-  if (ok) window.speechSynthesis.cancel()
+  if (!ok) return
+  window.clearTimeout(pending)
+  window.speechSynthesis.cancel()
 }
 
 export function setMuted(on: boolean) {

@@ -708,6 +708,22 @@ function Precompile() {
   return null
 }
 
+/**
+ * The products only re-render when their own part of the world state
+ * changes. Every intro scene and every tap patches the state; without this
+ * each change re-reconciled hundreds of fence and gate parts at once, a
+ * small hitch exactly at each scene change.
+ */
+type St = { state: WorldState }
+const same = (a: WorldState, b: WorldState, keys: Array<(s: WorldState) => unknown>) => keys.every((k) => k(a) === k(b))
+const FenceM = memo(Fence, (a: St, b: St) => same(a.state, b.state, [(s) => s.upgraded.fence, (s) => s.epoch, (s) => s.fence, (s) => s.inspect]))
+const GatesM = memo(Gates, (a: St, b: St) =>
+  same(a.state, b.state, [(s) => s.upgraded.gate, (s) => s.upgraded.fence, (s) => s.open.gate, (s) => s.open.pedestrian, (s) => s.epoch, (s) => s.fence, (s) => s.inspect])
+)
+const ShutterM = memo(HouseShutter, (a, b) => a.win === b.win && a.m === b.m && same(a.state, b.state, [(s) => s.upgraded.shutters, (s) => s.open.shutters, (s) => s.epoch, (s) => s.inspect]))
+const GarageM = memo(Garage, (a, b) => a.t === b.t && a.m === b.m && same(a.state, b.state, [(s) => s.upgraded.garage, (s) => s.open.garage, (s) => s.epoch, (s) => s.inspect]))
+const NightLightsM = memo(NightLights)
+
 function Property({ state, tier, onPick }: { state: WorldState; tier: Tier; onPick: (p: Product) => void }) {
   const textures = useSceneTextures()
   const m = useHouseMaterials(textures)
@@ -723,12 +739,12 @@ function Property({ state, tier, onPick }: { state: WorldState; tier: Tier; onPi
       <Street m={m} shadows={settings.foliageShadows} />
       <Suburb />
       <Pick id="garage" state={state} onPick={onPick}>
-        <Garage state={state} t={textures} m={m} />
+        <GarageM state={state} t={textures} m={m} />
       </Pick>
       <Pick id="fence" state={state} onPick={onPick}>
-        <Fence state={state} />
+        <FenceM state={state} />
       </Pick>
-      <Gates state={state} />
+      <GatesM state={state} />
       <Pick id="gate" state={state} onPick={onPick}>
         <mesh position={[0, 0.85, FB - 0.3]}>
           <boxGeometry args={[GATE_W + 0.4, 1.7, 0.6]} />
@@ -742,10 +758,10 @@ function Property({ state, tier, onPick }: { state: WorldState; tier: Tier; onPi
         </mesh>
       </Pick>
       <Pick id="shutters" state={state} onPick={onPick}>
-        <HouseShutter win={win1} state={state} m={m} />
-        <HouseShutter win={win2} state={state} m={m} />
+        <ShutterM win={win1} state={state} m={m} />
+        <ShutterM win={win2} state={state} m={m} />
       </Pick>
-      <NightLights night={state.night} gate={state.upgraded.gate} m={m} />
+      <NightLightsM night={state.night} gate={state.upgraded.gate} m={m} />
       <Hotspots state={state} onPick={onPick} />
       <Precompile />
     </group>

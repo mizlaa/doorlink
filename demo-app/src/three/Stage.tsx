@@ -1,4 +1,4 @@
-import { Suspense, useEffect, useMemo, useRef, type ReactNode } from 'react'
+import { memo, Suspense, useEffect, useMemo, useRef, type ReactNode } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Environment, PerformanceMonitor, Sky } from '@react-three/drei'
 import { DepthOfField, EffectComposer, N8AO, SMAA, ToneMapping } from '@react-three/postprocessing'
@@ -156,20 +156,7 @@ export function Stage({
         {onDemandShadows && <ShadowsOnDemand tier={tier} />}
         <Ready onReady={onReady} />
       </Suspense>
-      {composer && (
-        <EffectComposer multisampling={settings.multisampling} enableNormalPass={false}>
-          {settings.ambientOcclusion ? <N8AO halfRes={settings.aoHalfRes} aoRadius={0.9} distanceFalloff={0.6} intensity={2.4} quality={settings.aoHalfRes ? 'performance' : 'medium'} /> : <></>}
-          {settings.multisampling === 0 ? <SMAA /> : <></>}
-          {focus ? (
-            <DepthOfField target={focus} worldFocusRange={6} bokehScale={1.6} />
-          ) : focusFollow && settings.ambientOcclusion ? (
-            <DepthOfField ref={dof as never} target={[0, 0, 0]} worldFocusRange={26} bokehScale={2.4} />
-          ) : (
-            <></>
-          )}
-          <ToneMapping mode={ToneMappingMode.AGX} />
-        </EffectComposer>
-      )}
+      {composer && <Effects settings={settings} focus={focus} focusFollow={focusFollow} dof={dof} />}
       {focusFollow && <FollowFocus effect={dof} />}
       <CameraRig
         bus={bus}
@@ -184,6 +171,39 @@ export function Stage({
     </Canvas>
   )
 }
+
+/**
+ * The post-processing chain, memoised: the scene's own state changes (every
+ * intro scene, every door) re-render the Stage, and an unmemoised composer
+ * would rebuild its effect pass each time — a hitch on every transition.
+ */
+const DOF_ORIGIN: [number, number, number] = [0, 0, 0]
+const Effects = memo(function Effects({
+  settings,
+  focus,
+  focusFollow,
+  dof,
+}: {
+  settings: (typeof TIERS)[Tier]
+  focus?: [number, number, number]
+  focusFollow: boolean
+  dof: React.MutableRefObject<{ target: THREE.Vector3 | null } | null>
+}) {
+  return (
+    <EffectComposer multisampling={settings.multisampling} enableNormalPass={false}>
+      {settings.ambientOcclusion ? <N8AO halfRes={settings.aoHalfRes} aoRadius={0.9} distanceFalloff={0.6} intensity={2.4} quality={settings.aoHalfRes ? 'performance' : 'medium'} /> : <></>}
+      {settings.multisampling === 0 ? <SMAA /> : <></>}
+      {focus ? (
+        <DepthOfField target={focus} worldFocusRange={6} bokehScale={1.6} />
+      ) : focusFollow && settings.ambientOcclusion ? (
+        <DepthOfField ref={dof as never} target={DOF_ORIGIN} worldFocusRange={26} bokehScale={2.4} />
+      ) : (
+        <></>
+      )}
+      <ToneMapping mode={ToneMappingMode.AGX} />
+    </EffectComposer>
+  )
+})
 
 /** Renders once everything inside the Suspense boundary has loaded. */
 function Ready({ onReady }: { onReady?: () => void }) {
