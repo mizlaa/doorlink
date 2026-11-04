@@ -1,0 +1,55 @@
+const { chromium } = require('playwright')
+const OUT = process.env.SHOTS || '/tmp/doorlink-shots'
+const mobile = process.argv.includes('--mobile')
+;(async () => {
+  const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium', args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
+  const page = await browser.newPage(mobile ? { viewport: { width: 430, height: 932 }, isMobile: true, hasTouch: true } : { viewport: { width: 1280, height: 760 } })
+  await page.addInitScript(() => { try { localStorage.setItem('doorlink:intro-seen-v1', '1') } catch {} })
+  const errs = []; page.on('pageerror', (e) => errs.push(e.message)); page.on('console', (m) => m.type() === 'error' && errs.push(m.text().slice(0, 160)))
+  const p = mobile ? 'm-' : ''
+  let fails = 0
+  const step = async (name, fn) => { try { await fn(); console.log('OK  ', name) } catch (e) { fails++; console.log('FAIL', name, e.message.split('\n')[0]); await page.screenshot({ path: `${OUT}/${p}pfail.png` }) } }
+  await page.goto('http://localhost:4300/#/')
+  await page.evaluate(() => sessionStorage.clear()); await page.reload()
+  await step('no portal while the door is closed', async () => { if (await page.locator('.portal').count()) throw new Error('portal shown') })
+  await step('portal fades in as the door opens; invitation appears', async () => {
+    await page.getByRole('button', { name: /OPEN THE DOOR/ }).click()
+    await page.locator('.portal-invite').waitFor({ timeout: 15000 })
+    await page.waitForTimeout(900)
+    if (!(await page.locator('.portal.is-gl canvas.portal-canvas').count())) throw new Error('swirl shader not running (CSS fallback)')
+    const drawn = await page.locator('.portal-canvas').evaluate((c) => c.width > 0 && c.height > 0)
+    if (!drawn) throw new Error('portal canvas empty')
+    if (!(await page.getByText('YOUR WORLD. YOUR DESIGN.').count())) throw new Error('title missing')
+    await page.screenshot({ path: `${OUT}/${p}p1-portal.png` })
+  })
+  await step('entering grows the portal to fill the screen', async () => {
+    await page.getByRole('button', { name: 'Enter Doorlink World' }).click()
+    await page.locator('.portal-travel-canvas').waitFor({ timeout: 3000 })
+    await page.waitForTimeout(500); await page.screenshot({ path: `${OUT}/${p}p2-travel.png`, timeout: 120000 })
+    await page.waitForTimeout(500); await page.screenshot({ path: `${OUT}/${p}p3-full.png`, timeout: 120000 })
+  })
+  await step('the glimpse dissolves into the live world, which settles and is interactive', async () => {
+    await page.waitForFunction(() => !document.querySelector('.portal-travel') && document.querySelector('.world-root canvas'), null, { timeout: 120000 })
+    await page.waitForTimeout(4000)
+    await page.screenshot({ path: `${OUT}/${p}p4-arrived.png` })
+    await page.getByRole('button', { name: /Transform my property/i }).waitFor({ timeout: 5000 })
+  })
+  await step('exit returns to the homepage with the door open', async () => {
+    await page.getByRole('button', { name: 'Exit', exact: true }).click()
+    await page.waitForTimeout(600)
+    if (await page.locator('.world-root, .portal-travel').count()) throw new Error('still open')
+    await page.getByRole('button', { name: 'Enter Doorlink World' }).waitFor({ timeout: 5000 })
+    const t = await page.locator('.garage-door-sim').evaluate((el) => getComputedStyle(el).transform)
+    if (t !== 'none' && t !== 'matrix(1, 0, 0, 1, 0, 0)') throw new Error('hero still zoomed: ' + t)
+    if ((await page.evaluate(() => document.body.style.overflow)) === 'hidden') throw new Error('scroll locked')
+    await page.screenshot({ path: `${OUT}/${p}p5-back.png` })
+  })
+  await step('re-entering works a second time', async () => {
+    await page.getByRole('button', { name: 'Enter Doorlink World' }).click()
+    await page.waitForFunction(() => !document.querySelector('.portal-travel') && document.querySelector('.world-root canvas'), null, { timeout: 120000 })
+    await page.getByRole('button', { name: 'Exit', exact: true }).click()
+  })
+  console.log(errs.length ? errs.join('\n') : 'no errors')
+  console.log(fails ? `${fails} FAILED` : 'PORTAL OK')
+  await browser.close()
+})()
