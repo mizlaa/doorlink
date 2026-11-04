@@ -1,10 +1,21 @@
 /**
- * Narration with the browser's own speech synthesis: free, offline, no
- * service. Prefers a natural Australian or British English voice. Muting is
- * remembered. iOS only allows speech after a tap, so unlockVoice() is
- * called from the Enter button.
+ * Narration: pre-recorded clips (generated once with an open-source voice,
+ * public/audio/*.mp3, ~190 KB) played through one <audio> element. Unlike
+ * the Web Speech API, media audio plays with the iPhone silent switch on and
+ * inside the app's artifact viewer. The Enter tap starts the element, which
+ * lets the later lines play from timers on iOS. Muting is remembered.
  */
-const ok = typeof window !== 'undefined' && 'speechSynthesis' in window
+const CLIPS: Array<[string, string]> = [
+  ['Entering Doorlink World', '/audio/enter.mp3'],
+  ['More than just garage doors', '/audio/garage.mp3'],
+  ['From swing gates', '/audio/gate.mp3'],
+  ['And we don’t stop there', '/audio/fence.mp3'],
+  ['Explore roller shutters', '/audio/shutters.mp3'],
+  ['Doorlink connects customers', '/audio/market.mp3'],
+  ['Design it. Visualise it', '/audio/features.mp3'],
+  ['Welcome to a smarter way forward', '/audio/reveal.mp3'],
+  ['Doorlink. Your vision', '/audio/logo.mp3'],
+]
 const KEY = 'doorlink:voice-muted'
 let muted = (() => {
   try {
@@ -13,57 +24,42 @@ let muted = (() => {
     return false
   }
 })()
-let voice: SpeechSynthesisVoice | null = null
-
-function pickVoice(): SpeechSynthesisVoice | null {
-  const voices = window.speechSynthesis.getVoices()
-  const nice = /natural|neural|premium|enhanced|siri|google|karen|catherine|serena|daniel|samantha/i
-  for (const lang of [/^en-AU/i, /^en-GB/i, /^en-US/i, /^en/i]) {
-    const list = voices.filter((v) => lang.test(v.lang))
-    const best = list.find((v) => nice.test(v.name)) ?? list[0]
-    if (best) return best
+let audio: HTMLAudioElement | null = null
+const player = () => {
+  if (!audio) {
+    audio = new Audio()
+    audio.preload = 'auto'
+    audio.setAttribute('playsinline', '')
   }
-  return null
+  return audio
 }
-if (ok) window.speechSynthesis.onvoiceschanged = () => (voice = pickVoice())
 
-export const voiceAvailable = ok
+export const voiceAvailable = typeof window !== 'undefined' && typeof Audio !== 'undefined'
 export const isMuted = () => muted
 
-/** Called from the Enter tap: a real, audible line inside the gesture is what unlocks speech on iOS. */
+function play(text: string) {
+  const clip = CLIPS.find(([start]) => text.startsWith(start))
+  if (!clip) return
+  const a = player()
+  a.pause()
+  a.src = clip[1]
+  a.currentTime = 0
+  void a.play().catch(() => undefined)
+}
+
+/** Called from the Enter tap: starting the element inside the gesture unlocks it on iOS. */
 export function unlockVoice() {
-  if (!ok || muted) return
-  speak('Entering Doorlink World.')
+  if (!voiceAvailable || muted) return
+  play('Entering Doorlink World')
 }
 
-let pending = 0
 export function say(text: string) {
-  if (!ok || muted) return
-  const synth = window.speechSynthesis
-  window.clearTimeout(pending)
-  // iOS drops an utterance spoken straight after cancel(): cancel, then speak a beat later.
-  if (synth.speaking || synth.pending) {
-    synth.cancel()
-    pending = window.setTimeout(() => speak(text), 120)
-  } else speak(text)
-}
-
-function speak(text: string) {
-  const synth = window.speechSynthesis
-  synth.resume()
-  const u = new SpeechSynthesisUtterance(text)
-  voice ??= pickVoice()
-  if (voice) u.voice = voice
-  u.lang = voice?.lang ?? 'en-AU'
-  u.rate = 1.02
-  u.pitch = 1
-  synth.speak(u)
+  if (!voiceAvailable || muted) return
+  play(text)
 }
 
 export function hush() {
-  if (!ok) return
-  window.clearTimeout(pending)
-  window.speechSynthesis.cancel()
+  audio?.pause()
 }
 
 export function setMuted(on: boolean) {

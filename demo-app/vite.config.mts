@@ -69,7 +69,7 @@ function demoRedirects(): Plugin {
  */
 const SINGLE = process.env.DEMO_SINGLE === '1'
 const publicDir = path.join(demoRoot, 'public')
-const MIME: Record<string, string> = { '.webp': 'image/webp', '.jpg': 'image/jpeg', '.png': 'image/png', '.pdf': 'application/pdf', '.svg': 'image/svg+xml' }
+const MIME: Record<string, string> = { '.mp3': 'audio/mpeg', '.webp': 'image/webp', '.jpg': 'image/jpeg', '.png': 'image/png', '.pdf': 'application/pdf', '.svg': 'image/svg+xml' }
 
 function listPublic(dir: string, prefix = ''): string[] {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) =>
