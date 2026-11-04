@@ -82,7 +82,7 @@ export function useHouseMaterials(t: SceneTextures): HouseMaterials {
       concrete: new THREE.MeshStandardMaterial({ map: t.concreteColor, normalMap: t.concreteNormal, normalScale: new THREE.Vector2(0.6, 0.6), roughness: 0.88 }),
       slab: new THREE.MeshStandardMaterial({ color: '#c9c5bd', map: t.concreteColor, roughness: 0.6, envMapIntensity: 0.5 }),
       asphalt: new THREE.MeshStandardMaterial({ color: '#56595c', map: t.concreteColor, normalMap: t.concreteNormal, roughness: 0.96 }),
-      lawn: new THREE.MeshStandardMaterial({ map: t.grassColor, normalMap: t.grassNormal, normalScale: new THREE.Vector2(0.8, 0.8), roughness: 0.98, envMapIntensity: 0.5 }),
+      lawn: withLawnVariation(new THREE.MeshStandardMaterial({ map: t.grassColor, normalMap: t.grassNormal, normalScale: new THREE.Vector2(0.8, 0.8), roughness: 0.98, envMapIntensity: 0.5 })),
       mulch: new THREE.MeshStandardMaterial({ map: t.mulchColor, normalMap: t.mulchNormal, roughness: 1 }),
       bark: new THREE.MeshStandardMaterial({ color: '#b3a998', map: t.barkColor, normalMap: t.barkNormal, roughness: 0.85 }),
       steel: new THREE.MeshStandardMaterial({ color: '#a7abb0', roughness: 0.32, metalness: 0.9, envMapIntensity: 1.2 }),
@@ -112,4 +112,39 @@ export function useHouseMaterials(t: SceneTextures): HouseMaterials {
     [materials]
   )
   return materials
+}
+
+/**
+ * Lawn as a real lawn looks from a distance: patches a little greener,
+ * drier or shaded, at two scales, from the world position. Breaks up the
+ * texture's repeat at no texture cost.
+ */
+function withLawnVariation(material: THREE.MeshStandardMaterial) {
+  material.onBeforeCompile = (shader) => {
+    shader.vertexShader = shader.vertexShader
+      .replace('#include <common>', '#include <common>\nvarying vec2 vLawnXZ;')
+      .replace('#include <begin_vertex>', '#include <begin_vertex>\nvLawnXZ = (modelMatrix * vec4(transformed, 1.0)).xz;')
+    shader.fragmentShader = shader.fragmentShader
+      .replace(
+        '#include <common>',
+        `#include <common>
+varying vec2 vLawnXZ;
+float lawnHash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
+float lawnNoise(vec2 p) {
+  vec2 i = floor(p), f = fract(p);
+  f = f * f * (3.0 - 2.0 * f);
+  return mix(mix(lawnHash(i), lawnHash(i + vec2(1.0, 0.0)), f.x), mix(lawnHash(i + vec2(0.0, 1.0)), lawnHash(i + vec2(1.0, 1.0)), f.x), f.y);
+}`
+      )
+      .replace(
+        '#include <map_fragment>',
+        `#include <map_fragment>
+{
+  float n = lawnNoise(vLawnXZ * 0.07) * 0.6 + lawnNoise(vLawnXZ * 0.33) * 0.4;
+  diffuseColor.rgb *= mix(vec3(0.84, 0.9, 0.78), vec3(1.08, 1.06, 0.93), n);
+}`
+      )
+  }
+  material.customProgramCacheKey = () => 'lawn-variation'
+  return material
 }

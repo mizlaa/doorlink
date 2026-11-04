@@ -31,7 +31,8 @@ export const HOME_LINES = [
   'Established in 2026, Doorlink is transforming how customers and professionals connect.',
 ]
 
-export const SCENE_TITLES = ['Welcome', 'Garage doors', 'Gates & access', 'Shutters & fencing', 'Professionals', 'The Doorlink experience', 'Doorlink']
+export const SCENE_TITLES = ['Welcome', 'Garage doors', 'Sliding gates', 'Fencing', 'Roller shutters', 'Professionals', 'The Doorlink experience', 'Doorlink']
+const pad = (n: number) => String(n).padStart(2, '0')
 
 /** One caption bubble: fades in and types itself out quickly, never holding the scene up. */
 export function IntroCaption({ text, scene, placement }: { text: string | null; scene: number; placement: 'hero' | 'fixed' | 'world' }) {
@@ -59,10 +60,10 @@ export function IntroCaption({ text, scene, placement }: { text: string | null; 
     <div className={`intro-caption is-${placement}`} role="status" aria-live="polite">
       <p className="intro-kicker">
         <span className="intro-dot" aria-hidden="true" />
-        {SCENE_TITLES[scene] ?? 'Doorlink'}
         <span className="intro-count">
-          {scene + 1} / {SCENE_TITLES.length}
-        </span>
+          {pad(scene + 1)} / {pad(SCENE_TITLES.length)}
+        </span>{' '}
+        <span>— {SCENE_TITLES[scene] ?? 'Doorlink'}</span>
       </p>
       <p key={text} className="intro-line">
         <span className="sr-only">{text}</span>

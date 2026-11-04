@@ -8,7 +8,7 @@ import { useParkEnvironment } from './assets'
 import { CameraRig, type CameraBus, type CameraView, type ViewName } from './CameraRig'
 import { prefersReducedMotion, stepDown, stepUp, TIERS, type Tier } from './quality'
 import { windUniforms } from './wind'
-import { ShadowsOnDemand } from './shadows'
+import { ShadowsOnDemand, wakeShadows } from './shadows'
 
 /** Late-morning sun from the north-east, as an Australian street would get. */
 export const SUN: [number, number, number] = [14, 17, 11]
@@ -91,7 +91,20 @@ export function Stage({
   children: ReactNode
 }) {
   const settings = TIERS[tier]
-  const composer = settings.ambientOcclusion
+  // The composer stays mounted on every tier: removing it switches the
+  // renderer's output path, which recompiles every material in the scene (a
+  // visible freeze mid-animation). Quality tiers only toggle the AO pass.
+  const composer = true
+  const light = useRef<THREE.DirectionalLight>(null)
+  useEffect(() => {
+    // Resize the existing shadow map instead of remounting the light.
+    const l = light.current
+    if (!l) return
+    l.shadow.mapSize.set(settings.shadowMapSize, settings.shadowMapSize)
+    l.shadow.map?.dispose()
+    ;(l.shadow as { map: THREE.WebGLRenderTarget | null }).map = null
+    wakeShadows(1500)
+  }, [settings.shadowMapSize])
   const reduced = useMemo(prefersReducedMotion, [])
   const dof = useRef<{ target: THREE.Vector3 | null } | null>(null)
 
@@ -122,7 +135,7 @@ export function Stage({
       <ParkLight intensity={night ? 0.07 : 0.75} rotation={2.2} />
       <hemisphereLight args={night ? ['#2c3c5c', '#0c0f12', 0.22] : ['#e3edf5', '#5f6a4a', 0.32]} />
       <directionalLight
-        key={settings.shadowMapSize}
+        ref={light}
         position={night ? [-10, 18, 8] : SUN}
         intensity={night ? 0.32 : 3.1}
         color={night ? '#a9bde6' : '#fff2df'}
@@ -145,11 +158,11 @@ export function Stage({
       </Suspense>
       {composer && (
         <EffectComposer multisampling={settings.multisampling} enableNormalPass={false}>
-          <N8AO halfRes={settings.aoHalfRes} aoRadius={0.9} distanceFalloff={0.6} intensity={2.4} quality={settings.aoHalfRes ? 'performance' : 'medium'} />
+          {settings.ambientOcclusion ? <N8AO halfRes={settings.aoHalfRes} aoRadius={0.9} distanceFalloff={0.6} intensity={2.4} quality={settings.aoHalfRes ? 'performance' : 'medium'} /> : <></>}
           {settings.multisampling === 0 ? <SMAA /> : <></>}
           {focus ? (
             <DepthOfField target={focus} worldFocusRange={6} bokehScale={1.6} />
-          ) : focusFollow ? (
+          ) : focusFollow && settings.ambientOcclusion ? (
             <DepthOfField ref={dof as never} target={[0, 0, 0]} worldFocusRange={26} bokehScale={2.4} />
           ) : (
             <></>
@@ -157,7 +170,7 @@ export function Stage({
           <ToneMapping mode={ToneMappingMode.AGX} />
         </EffectComposer>
       )}
-      {focusFollow && composer && <FollowFocus effect={dof} />}
+      {focusFollow && <FollowFocus effect={dof} />}
       <CameraRig
         bus={bus}
         views={views}

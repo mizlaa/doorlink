@@ -154,8 +154,17 @@ function LeafInstances({ cards, material, depth, geometry, shadows }: { cards: C
     const m = mesh.current
     if (!m) return
     const matrix = new THREE.Matrix4()
-    cards.forEach((c, i) => m.setMatrixAt(i, matrix.compose(c.position, c.quaternion, c.scale)))
+    const tint = new THREE.Color()
+    cards.forEach((c, i) => {
+      m.setMatrixAt(i, matrix.compose(c.position, c.quaternion, c.scale))
+      // Each card a little lighter, darker, warmer or cooler: foliage stops reading as one repeated texture.
+      const h = Math.sin(i * 12.9898 + c.position.x * 3.1) * 43758.5453
+      const r = h - Math.floor(h)
+      const k = 0.8 + r * 0.32
+      m.setColorAt(i, tint.setRGB(k * (0.96 + r * 0.1), k, k * (1.02 - r * 0.1)))
+    })
     m.instanceMatrix.needsUpdate = true
+    if (m.instanceColor) m.instanceColor.needsUpdate = true
     m.computeBoundingSphere()
   }, [cards])
   if (cards.length === 0) return null
@@ -166,7 +175,6 @@ function LeafInstances({ cards, material, depth, geometry, shadows }: { cards: C
       castShadow={shadows}
       receiveShadow
       customDepthMaterial={depth}
-      frustumCulled={false}
     />
   )
 }

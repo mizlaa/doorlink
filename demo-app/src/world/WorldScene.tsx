@@ -1,5 +1,5 @@
 import { memo, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
-import { useFrame, type ThreeEvent } from '@react-three/fiber'
+import { useFrame, useThree, type ThreeEvent } from '@react-three/fiber'
 import { Html } from '@react-three/drei'
 import * as THREE from 'three'
 import { SceneMaterialsProvider } from '@/components/three/SceneMaterials'
@@ -675,6 +675,53 @@ function Pick({ id, state, onPick, children }: { id: Product; state: WorldState;
   )
 }
 
+/**
+ * Compiles every shader and uploads every texture once the property has
+ * mounted — including products still hidden until their scene (shutters,
+ * the new fence, the pedestrian gate). Without this the GPU compiles them
+ * the first frame they appear, which stalled the fence → shutter move. Runs
+ * while the portal still covers the screen.
+ */
+function Precompile() {
+  const { gl, scene, camera } = useThree()
+  useEffect(() => {
+    const id = requestAnimationFrame(() => {
+      const hidden: THREE.Object3D[] = []
+      scene.traverse((o) => {
+        if (!o.visible) {
+          hidden.push(o)
+          o.visible = true
+        }
+      })
+      try {
+        gl.compile(scene, camera)
+        // compile() skips the shadow-map depth shaders; one full render with
+        // everything visible builds those too (hidden under the portal).
+        gl.shadowMap.needsUpdate = true
+        gl.render(scene, camera)
+      } finally {
+        for (const o of hidden) o.visible = false
+        gl.shadowMap.needsUpdate = true
+      }
+      const seen = new Set<THREE.Texture>()
+      scene.traverse((o) => {
+        const m = (o as THREE.Mesh).material
+        for (const mat of Array.isArray(m) ? m : m ? [m] : []) {
+          for (const v of Object.values(mat)) {
+            const tex = v as THREE.Texture
+            if (tex && tex.isTexture && !seen.has(tex)) {
+              seen.add(tex)
+              gl.initTexture(tex)
+            }
+          }
+        }
+      })
+    })
+    return () => cancelAnimationFrame(id)
+  }, [gl, scene, camera])
+  return null
+}
+
 function Property({ state, tier, onPick }: { state: WorldState; tier: Tier; onPick: (p: Product) => void }) {
   const textures = useSceneTextures()
   const m = useHouseMaterials(textures)
@@ -714,6 +761,7 @@ function Property({ state, tier, onPick }: { state: WorldState; tier: Tier; onPi
       </Pick>
       <NightLights night={state.night} gate={state.upgraded.gate} m={m} />
       <Hotspots state={state} onPick={onPick} />
+      <Precompile />
     </group>
   )
 }

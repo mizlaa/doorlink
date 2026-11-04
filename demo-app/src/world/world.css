@@ -219,3 +219,34 @@
 @media (prefers-reduced-motion: reduce) {
   .intro-caption, .intro-line, .intro-panel, .intro-quotes li, .intro-features li, .intro-logo, .intro-logo-mark, .intro-logo-word, .intro-logo-tag, .intro-logo .world-btn, .intro-dot { animation: none; }
 }
+
+/* ---------- Intro controls: countdown ring (top right) and arrows (bottom right) ---------- */
+.tour-timer {
+  position: absolute; right: 16px; top: calc(max(14px, env(safe-area-inset-top)) + 58px); z-index: 41; display: flex; align-items: center; gap: 8px;
+  padding: 5px 12px 5px 5px; border-radius: 999px; color: #17324D; background: rgba(255, 255, 255, 0.88); border: 1px solid #DCE4EC;
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 6px 18px rgba(23, 50, 77, 0.1);
+  font-family: var(--font-plex-sans), system-ui, sans-serif;
+}
+.tour-timer svg { width: 36px; height: 36px; transform: rotate(-90deg); }
+.tour-timer-track { fill: none; stroke: #E3EAF1; stroke-width: 3; }
+.tour-timer-ring { fill: none; stroke: #1769D2; stroke-width: 3; stroke-linecap: round; }
+.tour-timer-text { position: absolute; left: 5px; width: 36px; text-align: center; font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.tour-timer-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #5A6A80; }
+.tour-nav {
+  position: absolute; right: 16px; bottom: max(18px, env(safe-area-inset-bottom)); z-index: 41; display: flex; gap: 4px; padding: 4px; border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88); border: 1px solid #DCE4EC; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 8px 22px rgba(23, 50, 77, 0.12);
+}
+.tour-arrow { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 999px; color: #17324D; touch-action: manipulation; transition: background-color 0.15s, transform 0.15s; }
+.tour-arrow:hover { background: #EEF3F8; }
+.tour-arrow:active { transform: scale(0.94); }
+.tour-arrow:disabled { opacity: 0.35; pointer-events: none; }
+.tour-arrow.is-next { background: #1769D2; color: #fff; }
+.tour-arrow.is-next:hover { background: #1257B0; }
+.tour-arrow svg { width: 18px; height: 18px; }
+@media (max-width: 720px) {
+  .world-bottom.is-tour { left: 16px; transform: none; width: auto; align-items: flex-start; }
+  .tour-timer { top: calc(max(14px, env(safe-area-inset-top)) + 50px); }
+  .intro-caption.is-world { right: 128px; }
+  .tour-timer-label { display: none; }
+  .tour-timer { padding-right: 5px; }
+}
