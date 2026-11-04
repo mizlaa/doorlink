@@ -6,7 +6,7 @@ import { ToneMappingMode } from 'postprocessing'
 import * as THREE from 'three'
 import { useParkEnvironment } from './assets'
 import { CameraRig, type CameraBus, type CameraView, type ViewName } from './CameraRig'
-import { prefersReducedMotion, stepDown, stepUp, TIERS, type Tier } from './quality'
+import { prefersReducedMotion, stepDown, TIERS, type Tier } from './quality'
 import { windUniforms } from './wind'
 import { ShadowsOnDemand, wakeShadows } from './shadows'
 
@@ -125,7 +125,7 @@ export function Stage({
         flipflops={4}
         bounds={(refresh) => (refresh > 90 ? [50, 90] : [36, 55])}
         onDecline={() => onTier(stepDown(tier))}
-        onIncline={() => onTier(stepUp(tier, maxTier))}
+        // Quality only steps down: bouncing between tiers was itself a source of hitches.
       />
       <ToneMappingSwitch composer={composer} />
       <WindClock enabled={settings.wind && !reduced} />

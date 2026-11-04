@@ -2,6 +2,7 @@ import { NavigationLink as Link } from '@/components/ui/NavigationLink'
 import { lazy, Suspense, useCallback, useEffect, useRef, useState } from 'react'
 import { PortalGarageScene, PortalTravel } from '../world/Portal'
 import { HOME_LINES, IntroCaption, introSeen } from '../world/Intro'
+import { unlockVoice } from '../world/voice'
 import { useDoorDrag } from '@/components/garage-door/useDoorDrag'
 import './xray.css'
 import '../world/world.css'
@@ -31,6 +32,7 @@ export function GarageDoorHero({ poweredBy }: { poweredBy: string | null }) {
   const homeTimers = useRef<number[]>([])
   useEffect(() => () => homeTimers.current.forEach(clearTimeout), [])
   const enter = () => {
+    unlockVoice()
     setPlayIntro(!introSeen())
     const frame = document.querySelector('.garage-door-opening')
     setWorldReady(false)

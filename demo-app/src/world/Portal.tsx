@@ -69,7 +69,7 @@ function PortalGlimpse({ progress, paused }: { progress: number; paused: boolean
   useEffect(() => {
     const el = canvas.current
     if (!show || paused || fallback || !el) return
-    const renderer = createPortalRenderer(el, glimpseFor(), 2)
+    const renderer = createPortalRenderer(el, glimpseFor(), 1.5)
     if (!renderer) {
       setFallback(true)
       return

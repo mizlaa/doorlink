@@ -31,7 +31,8 @@ export function detectTier(): Tier {
   const cores = navigator.hardwareConcurrency || 4
   const memory = (navigator as Navigator & { deviceMemory?: number }).deviceMemory ?? 4
   if (!touch && cores >= 8 && memory >= 8) return 'high'
-  if (touch && (memory <= 2 || cores <= 2)) return 'low'
+  // Phones and tablets: the light tier (no AO, depth of field or foliage shadows) keeps it smooth.
+  if (touch) return 'low'
   return 'medium'
 }
 

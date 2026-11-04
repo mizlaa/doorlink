@@ -694,29 +694,14 @@ function Precompile() {
           o.visible = true
         }
       })
+      // compileAsync hands the work to the driver's parallel compiler and
+      // returns at once, so arrival never freezes; it only reads which
+      // materials exist, so visibility can be restored straight away.
       try {
-        gl.compile(scene, camera)
-        // compile() skips the shadow-map depth shaders; one full render with
-        // everything visible builds those too (hidden under the portal).
-        gl.shadowMap.needsUpdate = true
-        gl.render(scene, camera)
+        void gl.compileAsync(scene, camera).catch(() => undefined)
       } finally {
         for (const o of hidden) o.visible = false
-        gl.shadowMap.needsUpdate = true
       }
-      const seen = new Set<THREE.Texture>()
-      scene.traverse((o) => {
-        const m = (o as THREE.Mesh).material
-        for (const mat of Array.isArray(m) ? m : m ? [m] : []) {
-          for (const v of Object.values(mat)) {
-            const tex = v as THREE.Texture
-            if (tex && tex.isTexture && !seen.has(tex)) {
-              seen.add(tex)
-              gl.initTexture(tex)
-            }
-          }
-        }
-      })
     })
     return () => cancelAnimationFrame(id)
   }, [gl, scene, camera])

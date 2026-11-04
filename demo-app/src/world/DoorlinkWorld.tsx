@@ -4,6 +4,7 @@ import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } fro
 import { CameraBus } from '../three/CameraRig'
 import { detectTier, prefersReducedMotion, type Tier } from '../three/quality'
 import { IntroCaption, IntroOverlays, markIntroSeen, type IntroOverlay } from './Intro'
+import { hush, isMuted, say, setMuted, voiceAvailable } from './voice'
 import { AFTER, BEFORE, FENCE_STYLES, PRODUCT_VIEW, WorldScene, type Product, type WorldState } from './WorldScene'
 
 const XRayGarage = lazy(() => import('../xray/XRayGarage'))
@@ -55,6 +56,8 @@ const INSPECT: Record<Product, string> = {
 type Mode = 'intro' | 'running' | 'done' | 'tour'
 
 const Icon = {
+  sound: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 6v12l-4.5-3.5H4z" /><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" /></svg>,
+  mute: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 6v12l-4.5-3.5H4z" /><path d="M16 9.5l5 5M21 9.5l-5 5" /></svg>,
   prev: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg>,
   next: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg>,
   pause: <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="7" y="5.5" width="3.4" height="13" rx="1" /><rect x="13.6" y="5.5" width="3.4" height="13" rx="1" /></svg>,
@@ -173,6 +176,7 @@ export default function DoorlinkWorld({
       timers.current.forEach(clearTimeout)
       nightTimers.current.forEach(clearTimeout)
       bus.send({ type: 'spin', on: false })
+      hush()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -209,16 +213,23 @@ export default function DoorlinkWorld({
   const tour = useRef({ index: -1, timers: [] as number[], start: 0, elapsed: 0, paused: false })
   const [tourIndex, setTourIndex] = useState(-1)
   const [tourPaused, setTourPaused] = useState(false)
+  const [voiceOn, setVoiceOn] = useState(() => voiceAvailable && !isMuted())
+  const toggleVoice = () => {
+    const on = !voiceOn
+    setMuted(!on)
+    setVoiceOn(on)
+    if (on && introLine) say(introLine)
+  }
   const set = (fn: (s: WorldState) => Partial<WorldState>) => () => patch(fn)
   const TOUR = useMemo(
     () => [
-      { key: 'garage', view: 'garage', duration: 6500, lines: [[0, 'More than just garage doors.'], [2600, 'Explore, customise and visualise the perfect solution for your property.']] as Array<[number, string]>, cues: [] as Array<[number, () => void]> },
-      { key: 'gate', view: 'gate', duration: 6500, lines: [[0, 'From swing gates to sliding gates, we’ve got you covered.'], [2800, 'Discover solutions designed around your space, style and requirements.']] as Array<[number, string]>, cues: [[1800, set((s) => ({ open: { ...s.open, gate: true } }))]] as Array<[number, () => void]> },
-      { key: 'fence', view: 'fence', duration: 4800, lines: [[0, 'And we don’t stop there.']] as Array<[number, string]>, cues: [[2400, set((s) => ({ open: { ...s.open, pedestrian: true } }))]] as Array<[number, () => void]> },
-      { key: 'shutters', view: 'shutters', duration: 5600, lines: [[0, 'Explore roller shutters, fencing and more — all in one place.']] as Array<[number, string]>, cues: [[900, set((s) => ({ open: { ...s.open, shutters: false } }))], [3500, set((s) => ({ open: { ...s.open, shutters: true } }))]] as Array<[number, () => void]> },
-      { key: 'market', view: 'overview', overlay: 'market' as IntroOverlay, duration: 7800, lines: [[0, 'Your vision. The right professionals.'], [2600, 'Doorlink connects customers with businesses and skilled tradespeople.'], [5200, 'Compare quotes, explore providers and choose with confidence.']] as Array<[number, string]>, cues: [[2600, () => !reduced && bus.send({ type: 'spin', on: true })]] as Array<[number, () => void]> },
-      { key: 'features', view: 'overview', overlay: 'features' as IntroOverlay, duration: 6500, lines: [[0, 'Design it. Visualise it. Compare it. Connect.'], [2800, 'From your first idea to finding the right professional, Doorlink makes the process simpler.']] as Array<[number, string]>, cues: [[400, () => !reduced && bus.send({ type: 'spin', on: true })]] as Array<[number, () => void]> },
-      { key: 'reveal', view: 'reveal', duration: 7000, lines: [[0, 'Welcome to a smarter way forward.']] as Array<[number, string]>, cues: [[2800, () => { setIntroLine(null); setOverlay('logo') }]] as Array<[number, () => void]> },
+      { key: 'garage', view: 'garage', duration: 5500, lines: [[0, 'More than just garage doors. Explore, customise and visualise the perfect door for your property.']] as Array<[number, string]>, cues: [] as Array<[number, () => void]> },
+      { key: 'gate', view: 'gate', duration: 4500, lines: [[0, 'From swing gates to sliding gates, we’ve got you covered.']] as Array<[number, string]>, cues: [[1200, set((s) => ({ open: { ...s.open, gate: true } }))]] as Array<[number, () => void]> },
+      { key: 'fence', view: 'fence', duration: 3500, lines: [[0, 'And we don’t stop there.']] as Array<[number, string]>, cues: [[1400, set((s) => ({ open: { ...s.open, pedestrian: true } }))]] as Array<[number, () => void]> },
+      { key: 'shutters', view: 'shutters', duration: 4500, lines: [[0, 'Explore roller shutters, fencing and more — all in one place.']] as Array<[number, string]>, cues: [[700, set((s) => ({ open: { ...s.open, shutters: false } }))], [3000, set((s) => ({ open: { ...s.open, shutters: true } }))]] as Array<[number, () => void]> },
+      { key: 'market', view: 'overview', overlay: 'market' as IntroOverlay, duration: 6500, lines: [[0, 'Doorlink connects customers with businesses and skilled tradespeople. Compare quotes and choose with confidence.']] as Array<[number, string]>, cues: [] as Array<[number, () => void]> },
+      { key: 'features', view: 'overview', overlay: 'features' as IntroOverlay, duration: 4500, lines: [[0, 'Design it. Visualise it. Compare it. Connect.']] as Array<[number, string]>, cues: [] as Array<[number, () => void]> },
+      { key: 'reveal', view: 'reveal', duration: 5000, lines: [[0, 'Welcome to a smarter way forward.']] as Array<[number, string]>, cues: [[2300, () => { setIntroLine(null); setOverlay('logo'); say('Doorlink. Your vision. Our connection.') }]] as Array<[number, () => void]> },
     ],
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [reduced, bus]
@@ -236,7 +247,7 @@ export default function DoorlinkWorld({
     const at = (ms: number, fn: () => void) => {
       if (ms > from || (ms === 0 && from === 0)) t.timers.push(window.setTimeout(fn, ms - from))
     }
-    for (const [ms, text] of sc.lines) if (ms > 0) at(ms, () => setIntroLine(text))
+    for (const [ms, text] of sc.lines) if (ms > 0) at(ms, () => (setIntroLine(text), say(text)))
     for (const [ms, fn] of sc.cues) at(ms, fn)
     at(sc.duration, () => goScene(i + 1))
     t.start = performance.now() - from
@@ -259,7 +270,8 @@ export default function DoorlinkWorld({
     patch((s) => ({ ...sceneState(i, s), selected: null, inspect: null, interactive: false }))
     setOverlay(sc.overlay ?? null)
     setIntroLine(sc.lines[0][1])
-    view(sc.view, reduced ? undefined : 2.2)
+    say(sc.lines[0][1])
+    view(sc.view, reduced ? undefined : 1.6)
     if (stayPaused) {
       t.paused = true
       t.elapsed = 0
@@ -274,6 +286,7 @@ export default function DoorlinkWorld({
     t.timers = []
     t.elapsed = performance.now() - t.start
     t.paused = true
+    hush()
     setTourPaused(true)
     bus.send({ type: 'spin', on: false })
   }
@@ -314,6 +327,7 @@ export default function DoorlinkWorld({
     tour.current.timers = []
     tour.current.index = -1
     tour.current.paused = false
+    hush()
     setTourPaused(false)
     setTourIndex(-1)
     markIntroSeen()
@@ -561,6 +575,11 @@ export default function DoorlinkWorld({
         <>
           <Countdown tour={tour} durations={TOUR.map((t) => t.duration)} last={tourIndex === TOUR.length - 1} />
           <div className="tour-nav" role="group" aria-label="Introduction controls">
+            {voiceAvailable && (
+              <button type="button" className="tour-arrow" onClick={toggleVoice} aria-pressed={voiceOn} aria-label={voiceOn ? 'Mute narration' : 'Turn narration on'}>
+                {voiceOn ? Icon.sound : Icon.mute}
+              </button>
+            )}
             <button type="button" className="tour-arrow" onClick={() => goScene(tour.current.index - 1, true)} disabled={tourIndex === 0} aria-label="Previous scene">
               {Icon.prev}
             </button>
