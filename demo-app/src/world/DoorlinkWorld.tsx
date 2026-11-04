@@ -461,6 +461,8 @@ export default function DoorlinkWorld({
     view(mode === 'done' ? 'overview' : 'hero')
   }
 
+  // Test probe (?perf only): the live world state, for the demo's own browser checks.
+  if (window.location.search.includes('perf')) Object.assign(window, { __doorlinkWorld: { state, tourIndex, mode } })
   const selected = state.selected
   const info = selected ? INFO[selected] : null
   const openKey = selected && selected !== 'fence' ? (selected as keyof WorldState['open']) : null

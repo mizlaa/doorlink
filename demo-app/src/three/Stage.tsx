@@ -115,10 +115,10 @@ export function Stage({
       frameloop={paused ? 'never' : 'always'}
       gl={{ antialias: true, powerPreference: 'high-performance', stencil: false }}
       camera={{ fov, near: 0.1, far: 260, position: views[initialView].position }}
-      onCreated={({ gl }) => {
+      onCreated={({ gl, camera }) => {
         gl.outputColorSpace = THREE.SRGBColorSpace
         // Performance probe for the demo's own measurements (?perf in the URL only).
-        if (window.location.search.includes('perf')) (window as unknown as { __doorlinkGL: THREE.WebGLRenderer }).__doorlinkGL = gl
+        if (window.location.search.includes('perf')) Object.assign(window, { __doorlinkGL: gl, __doorlinkCam: camera })
       }}
     >
       <PerformanceMonitor

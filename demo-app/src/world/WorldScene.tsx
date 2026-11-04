@@ -111,10 +111,11 @@ export function lensFor(aspect: number) {
   const half = Math.atan(Math.tan(((fov / 2) * Math.PI) / 180) * aspect)
   return { fov, k: Math.min(2.4, Math.max(1, Math.tan(DESKTOP_HALF) / Math.tan(half))) }
 }
-function scaledViews(k: number): Record<string, CameraView> {
+function scaledViews(k: number, portrait: boolean): Record<string, CameraView> {
   if (k === 1) return WORLD_VIEWS
   // Portrait: look along the street, so the wide frontage fits a tall screen.
-  const base: Record<string, CameraView> = {
+  // Only true portrait screens look along the street; landscape keeps the frontage view, pulled back.
+  const base: Record<string, CameraView> = !portrait ? WORLD_VIEWS : {
     ...WORLD_VIEWS,
     overview: { position: [11, 8, 11], target: [-5.2, 0.6, 2.2] },
     hero: { position: [8.6, 2.4, 11.5], target: [-3.6, 1.5, 2.0] },
@@ -792,7 +793,8 @@ export function WorldScene({
   // The lens is fixed when the canvas is created; views follow later resizes.
   const [fov] = useState(() => lensFor(aspect).fov)
   const k = lensFor(aspect).k
-  const views = useMemo(() => withArrival(scaledViews(k)), [k])
+  const portrait = aspect < 1
+  const views = useMemo(() => withArrival(scaledViews(k, portrait)), [k, portrait])
   return (
     <Stage
       tier={tier}
