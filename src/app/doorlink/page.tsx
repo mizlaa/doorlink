@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
+import { redirect } from 'next/navigation'
 import { FEATURE_3D_V2 } from '@/lib/feature-flags'
 import { introBusinesses } from '@/lib/pricing/intro-businesses'
 import { DoorlinkExperience } from './DoorlinkExperience'
@@ -13,8 +13,9 @@ export const metadata: Metadata = {
 }
 
 export default async function DoorlinkPage() {
-  // Off unless the 3D experience is switched on for this build.
-  if (!FEATURE_3D_V2) notFound()
+  // Off unless the 3D experience is switched on for this build. A redirect,
+  // not a not-found page: the latter is streamed with a 200 status.
+  if (!FEATURE_3D_V2) redirect('/')
   const businesses = await introBusinesses()
   return <DoorlinkExperience businesses={businesses} />
 }

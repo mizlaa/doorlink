@@ -24,6 +24,13 @@ const nextConfig = {
       bodySizeLimit: '10mb',
     },
   },
+  // The 3D experience page is hidden unless its flag is on for this build.
+  // Redirect at the config level so the answer is a real 307, not a streamed 200.
+  async redirects() {
+    return process.env.NEXT_PUBLIC_FEATURE_3D_V2 === '1'
+      ? []
+      : [{ source: '/doorlink', destination: '/', permanent: false }]
+  },
   async headers() {
     const framingHeaders = isReplitPreview
       ? [
