@@ -5,6 +5,8 @@ import { getSession } from '@/lib/auth'
 import { poweredByName } from '@/lib/powered-by'
 import { findWorkHref } from '@/lib/find-work'
 import { GarageDoorHero } from '@/components/garage-door/GarageDoorHero'
+import { FEATURE_3D_V2 } from '@/lib/feature-flags'
+import { introBusinesses } from '@/lib/pricing/intro-businesses'
 import { TaskTile } from '@/components/ui/TaskTile'
 import {
   CalculatorIcon,
@@ -53,10 +55,12 @@ export default async function HomePage() {
   const [manuals, session] = await Promise.all([manualCount(), getSession()])
   const workHref = findWorkHref(session)
   const poweredBy = await poweredByName(session)
+  // The 3D intro lists real approved businesses; read only when it is switched on.
+  const businesses = FEATURE_3D_V2 ? await introBusinesses() : []
 
   return (
     <div>
-      <GarageDoorHero poweredBy={poweredBy} />
+      <GarageDoorHero poweredBy={poweredBy} businesses={businesses} />
 
       <section className="mx-auto max-w-shell px-4 pb-16 pt-4 sm:pb-20">
         <h2 className="text-2xl font-semibold tracking-tight text-graphite">What do you need?</h2>

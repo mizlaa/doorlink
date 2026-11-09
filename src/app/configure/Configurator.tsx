@@ -1,7 +1,6 @@
 'use client'
 
 import { useActionState, useDeferredValue, useMemo, useState } from 'react'
-import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import {
   saveConfigurationAction,
@@ -23,7 +22,7 @@ import {
   type ProductFamily,
   type ProductType,
 } from '@/lib/configurator/options'
-import { previewFromSpec } from '@/lib/configurator/look'
+import { ConfiguratorScene, previewFromSpec } from './designer-renderer'
 import type { MotorCandidate } from '@/lib/motors/specs'
 import { MotorShortlist } from './MotorShortlist'
 import { Button } from '@/components/ui/Button'
@@ -33,13 +32,6 @@ import { cn } from '@/lib/utils'
 // The scene is WebGL and several hundred kB; it has no business in the
 // bundle of anyone who never opens the configurator, and it cannot be
 // server-rendered at all.
-const ConfiguratorScene = dynamic(
-  () => import('@/components/three/ConfiguratorScene').then((m) => m.ConfiguratorScene),
-  {
-    ssr: false,
-    loading: () => <div className="aspect-[4/3] w-full animate-pulse rounded-2xl bg-rail sm:aspect-[16/10]" />,
-  }
-)
 
 const initialState: ConfigurationActionState = {}
 
