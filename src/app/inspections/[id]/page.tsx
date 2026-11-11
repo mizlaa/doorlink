@@ -266,6 +266,7 @@ export default async function InspectionPage({ params }: { params: Promise<{ id:
             <p className="mt-1 text-graphite-soft">
               Recorded on{' '}
               {previous?.submittedAt?.toLocaleDateString('en-AU', {
+                timeZone: 'Australia/Sydney',
                 day: 'numeric',
                 month: 'short',
                 year: 'numeric',

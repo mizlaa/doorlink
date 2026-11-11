@@ -240,6 +240,7 @@ export default async function InspectionsPage({
                     <span>{inspection.technician.name}</span>
                     <span>
                       {(inspection.submittedAt ?? inspection.createdAt).toLocaleDateString('en-AU', {
+                        timeZone: 'Australia/Sydney',
                         day: 'numeric',
                         month: 'short',
                         year: 'numeric',

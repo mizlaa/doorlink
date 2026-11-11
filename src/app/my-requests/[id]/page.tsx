@@ -197,6 +197,7 @@ export default async function RequestDetailPage({ params }: PageProps) {
                             <dt className="inline font-medium text-graphite-soft">Available from: </dt>
                             <dd className="inline">
                               {quote.availableFrom.toLocaleDateString('en-AU', {
+                                timeZone: 'Australia/Sydney',
                                 day: 'numeric',
                                 month: 'short',
                                 year: 'numeric',

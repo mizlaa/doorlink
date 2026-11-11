@@ -118,7 +118,7 @@ export default async function ManualSubmissionsPage() {
                     <dd className="text-graphite">
                       {submission.submittedBy.name ?? submission.submittedBy.email}
                       {' · '}
-                      {submission.createdAt.toLocaleString('en-AU')}
+                      {submission.createdAt.toLocaleString('en-AU', { timeZone: 'Australia/Sydney' })}
                     </dd>
                   </div>
                   <div>

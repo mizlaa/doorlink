@@ -81,6 +81,7 @@ export default async function NotificationsPage() {
                   </p>
                   <span className="text-micro text-zinc-deep">
                     {notification.createdAt.toLocaleString('en-AU', {
+                      timeZone: 'Australia/Sydney',
                       dateStyle: 'medium',
                       timeStyle: 'short',
                     })}

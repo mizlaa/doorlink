@@ -115,7 +115,7 @@ export default async function AdminSubscriptionsPage() {
                     <span className="mt-0.5 block text-micro text-zinc-deep">
                       {subscription.user.email} · {subscription.plan.name}
                       {subscription.currentPeriodEnd &&
-                        ` · ${subscription.cancelAtPeriodEnd ? 'ends' : 'renews'} ${subscription.currentPeriodEnd.toLocaleDateString('en-AU', { dateStyle: 'medium' })}`}
+                        ` · ${subscription.cancelAtPeriodEnd ? 'ends' : 'renews'} ${subscription.currentPeriodEnd.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', dateStyle: 'medium' })}`}
                     </span>
                   </span>
                   <Badge

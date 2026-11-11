@@ -17,7 +17,7 @@ function value(profile: ProfileLike, key: ProfileKey | null): string {
   if (!key) return ''
   const raw = profile[key]
   if (raw === null || raw === undefined) return ''
-  if (raw instanceof Date) return raw.toLocaleDateString('en-AU')
+  if (raw instanceof Date) return raw.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney' })
   return String(raw)
 }
 

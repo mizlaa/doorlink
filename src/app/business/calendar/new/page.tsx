@@ -56,6 +56,11 @@ export default async function NewVisitPage({ searchParams }: PageProps) {
           </Notice>
         </div>
       )}
+      {params.job && !job && (
+        <div className="mb-5">
+          <Notice tone="warn">That job is finished or closed, so this visit won’t be added to it. Book it on its own, or pick an open job.</Notice>
+        </div>
+      )}
       <Card>
         <BookingForm
           jobs={jobs.map((j) => ({

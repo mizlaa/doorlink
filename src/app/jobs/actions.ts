@@ -161,7 +161,7 @@ export async function transitionJobAction(
         title: CUSTOMER_EMAILS[next]!,
         body:
           next === JobStatus.SCHEDULED && parsed.data.scheduledAt
-            ? `Booked for ${new Date(parsed.data.scheduledAt).toLocaleString('en-AU', { dateStyle: 'full', timeStyle: 'short' })}.`
+            ? `Booked for ${new Date(parsed.data.scheduledAt).toLocaleString('en-AU', { timeZone: 'Australia/Sydney', dateStyle: 'full', timeStyle: 'short' })}.`
             : (parsed.data.note ?? `Job ${job.reference}.`),
         href: `/jobs/${job.id}`,
       }, { email: true })

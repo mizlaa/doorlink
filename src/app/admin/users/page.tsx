@@ -131,7 +131,7 @@ export default async function AdminUsersPage({ searchParams }: PageProps) {
                   {user._count.requestedLeads > 0 && ` · ${user._count.requestedLeads} requests`}
                   {user._count.jobs > 0 && ` · ${user._count.jobs} jobs`}
                   {' · joined '}
-                  {user.createdAt.toLocaleDateString('en-AU', { dateStyle: 'medium' })}
+                  {user.createdAt.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', dateStyle: 'medium' })}
                 </span>
               </span>
               <span className="flex shrink-0 flex-wrap items-center gap-2">

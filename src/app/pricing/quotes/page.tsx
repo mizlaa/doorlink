@@ -113,7 +113,7 @@ export default async function QuotesIssuedPage() {
                         <Badge tone={JOB_STATUS_TONE[quote.job!.status]}>{JOB_STATUS_LABELS[quote.job!.status]}</Badge>
                       </span>
                       <span className="block text-sm text-zinc-deep">
-                        {quote.customer.name.split(' ')[0]} · {quote.createdAt.toLocaleDateString('en-AU')}
+                        {quote.customer.name.split(' ')[0]} · {quote.createdAt.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney' })}
                       </span>
                     </span>
                     <span className="text-right font-semibold text-graphite">
@@ -146,7 +146,7 @@ export default async function QuotesIssuedPage() {
                     {quote.status === 'DECLINED' && <Badge>Declined</Badge>}
                   </span>
                   <span className="block text-sm text-zinc-deep">
-                    {quote.customer.name.split(' ')[0]} · {quote.postcode ?? ''} · {quote.createdAt.toLocaleDateString('en-AU')} ·{' '}
+                    {quote.customer.name.split(' ')[0]} · {quote.postcode ?? ''} · {quote.createdAt.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney' })} ·{' '}
                     <span className="font-code">{quote.reference}</span>
                   </span>
                 </span>

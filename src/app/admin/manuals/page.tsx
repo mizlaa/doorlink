@@ -154,7 +154,7 @@ export default async function AdminManualsPage() {
                       {doc.reviewReason ?? 'No reason recorded'}
                       {doc.lastHttpStatus ? ` · HTTP ${doc.lastHttpStatus}` : ''}
                       {doc.lastVerifiedAt
-                        ? ` · checked ${doc.lastVerifiedAt.toLocaleDateString('en-AU')}`
+                        ? ` · checked ${doc.lastVerifiedAt.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney' })}`
                         : ''}
                     </p>
                     {doc.sourceUrl && (

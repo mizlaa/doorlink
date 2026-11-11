@@ -165,6 +165,7 @@ export default async function TechnicianProfilePage({ params }: PageProps) {
                           cert.issuer,
                           cert.expiresAt &&
                             `expires ${cert.expiresAt.toLocaleDateString('en-AU', {
+                              timeZone: 'Australia/Sydney',
                               month: 'short',
                               year: 'numeric',
                             })}`,
@@ -201,6 +202,7 @@ export default async function TechnicianProfilePage({ params }: PageProps) {
                       <span className="text-micro text-zinc-deep">
                         {review.job.lead?.suburb && `${review.job.lead.suburb} · `}
                         {review.createdAt.toLocaleDateString('en-AU', {
+                          timeZone: 'Australia/Sydney',
                           month: 'short',
                           year: 'numeric',
                         })}

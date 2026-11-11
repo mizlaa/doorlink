@@ -124,6 +124,7 @@ function JobSection({
                     {viewingAsCustomer ? 'Technician' : 'Customer'}: {counterparty}
                     {job.scheduledAt &&
                       ` · scheduled ${job.scheduledAt.toLocaleDateString('en-AU', {
+                        timeZone: 'Australia/Sydney',
                         day: 'numeric',
                         month: 'short',
                       })}`}

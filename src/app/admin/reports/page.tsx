@@ -90,7 +90,7 @@ export default async function AdminReportsPage() {
                         {' · reported by '}
                         {report.reporter.name}
                         {' · '}
-                        {report.createdAt.toLocaleDateString('en-AU', { dateStyle: 'medium' })}
+                        {report.createdAt.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', dateStyle: 'medium' })}
                       </p>
                     </div>
                     <Badge tone={STATUS_TONE[report.status]}>{STATUS_LABELS[report.status]}</Badge>

@@ -132,7 +132,7 @@ export default async function AdminAiPage() {
                   </span>
                   <span className={g.status === 'FAILED' ? 'text-bad' : g.cached ? 'text-zinc-deep' : 'text-graphite'}>
                     {g.status === 'FAILED' ? 'failed' : g.cached ? 'cache' : g.costCents !== null ? formatMoney(g.costCents) : 'generated'} ·{' '}
-                    {g.createdAt.toLocaleString('en-AU', { dateStyle: 'short', timeStyle: 'short' })}
+                    {g.createdAt.toLocaleString('en-AU', { timeZone: 'Australia/Sydney', dateStyle: 'short', timeStyle: 'short' })}
                   </span>
                 </li>
               ))}

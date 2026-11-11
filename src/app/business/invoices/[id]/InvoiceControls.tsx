@@ -72,7 +72,7 @@ export function ShareForm({ id, active }: { id: string; active: boolean }) {
   const [copied, setCopied] = useState(false)
   return (
     <div className="flex flex-col gap-3">
-      <form action={formAction} className="flex flex-wrap gap-2">
+      <form action={formAction} onSubmit={keepValuesOnSubmit(formAction)} className="flex flex-wrap gap-2">
         <input type="hidden" name="id" value={id} />
         <Button type="submit" variant="secondary" disabled={pending}>
           {active ? 'Show the link' : 'Create a link'}

@@ -116,7 +116,7 @@ export default async function SubscriptionPage({ searchParams }: PageProps) {
             {current.currentPeriodEnd && (
               <p className="mt-4 text-sm text-graphite-soft">
                 {current.cancelAtPeriodEnd ? 'Access ends' : 'Renews'} on{' '}
-                {current.currentPeriodEnd.toLocaleDateString('en-AU', { dateStyle: 'long' })}.
+                {current.currentPeriodEnd.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', dateStyle: 'long' })}.
               </p>
             )}
 
@@ -190,7 +190,7 @@ export default async function SubscriptionPage({ searchParams }: PageProps) {
                 <span className="text-graphite">{row.plan.name}</span>
                 <span className="flex items-center gap-3">
                   <span className="text-micro text-zinc-deep">
-                    started {row.createdAt.toLocaleDateString('en-AU', { dateStyle: 'medium' })}
+                    started {row.createdAt.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', dateStyle: 'medium' })}
                   </span>
                   <Badge tone="neutral">
                     {row.cancelAtPeriodEnd && row.status !== 'CANCELLED'

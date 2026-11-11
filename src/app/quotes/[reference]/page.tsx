@@ -100,7 +100,7 @@ export default async function QuoteViewPage({ params }: { params: Promise<{ refe
           <p className="mt-1 text-sm text-graphite-soft">
             {style ? `${style} ${productLabel(quote.product).toLowerCase()}` : productLabel(quote.product)} ·{' '}
             {quote.widthMm} × {quote.heightMm} mm ·{' '}
-            {quote.createdAt.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' })}
+            {quote.createdAt.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', day: 'numeric', month: 'long', year: 'numeric' })}
           </p>
           {card && (
             <div className="mt-2 flex flex-wrap items-center gap-3">
@@ -232,7 +232,7 @@ export default async function QuoteViewPage({ params }: { params: Promise<{ refe
           <p className="text-sm text-graphite">
             <span className="font-semibold">Booked</span>
             {quote.bookedAt &&
-              ` on ${quote.bookedAt.toLocaleDateString('en-AU', { day: 'numeric', month: 'long' })}`}
+              ` on ${quote.bookedAt.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', day: 'numeric', month: 'long' })}`}
             . {isCustomer ? `${quote.businessName} confirms the booking next.` : 'Confirm or decline it from the job.'}
           </p>
           {quote.jobId && (

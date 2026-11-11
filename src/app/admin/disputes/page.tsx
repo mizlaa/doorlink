@@ -107,7 +107,7 @@ export default async function AdminDisputesPage() {
                     <p className="text-micro font-semibold uppercase tracking-wide text-zinc-deep">
                       Raised by {dispute.raisedBy.name}
                       {' · '}
-                      {dispute.createdAt.toLocaleDateString('en-AU', { dateStyle: 'medium' })}
+                      {dispute.createdAt.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', dateStyle: 'medium' })}
                     </p>
                     <p className="mt-1 font-medium text-graphite">{dispute.reason}</p>
                     {dispute.detail && (

@@ -33,7 +33,7 @@ export const metadata: Metadata = { title: 'Inspection report', robots: { index:
 
 function formatDate(date: Date | null | undefined): string {
   if (!date) return '—'
-  return date.toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' })
+  return date.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', day: 'numeric', month: 'long', year: 'numeric' })
 }
 
 export default async function InspectionReportPage({ params }: { params: Promise<{ id: string }> }) {

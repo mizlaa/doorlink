@@ -27,7 +27,7 @@ export const metadata: Metadata = { title: 'Asset' }
 
 function formatDate(date: Date | null): string {
   if (!date) return '—'
-  return date.toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' })
+  return date.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', day: 'numeric', month: 'short', year: 'numeric' })
 }
 
 export default async function AssetPage({ params }: { params: Promise<{ id: string }> }) {

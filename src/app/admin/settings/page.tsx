@@ -155,6 +155,7 @@ export default async function AdminSettingsPage() {
                     </span>
                     <span className="text-micro text-zinc-deep">
                       {entry.createdAt.toLocaleString('en-AU', {
+                        timeZone: 'Australia/Sydney',
                         dateStyle: 'medium',
                         timeStyle: 'short',
                       })}

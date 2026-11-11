@@ -137,7 +137,7 @@ export default async function EarningsPage() {
                     <p className="mt-0.5 font-code text-micro text-zinc-deep">
                       {transaction.reference}
                       {' · '}
-                      {transaction.createdAt.toLocaleDateString('en-AU', { dateStyle: 'medium' })}
+                      {transaction.createdAt.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', dateStyle: 'medium' })}
                     </p>
                   </div>
                   <Badge
@@ -182,7 +182,7 @@ export default async function EarningsPage() {
                   <p className="mt-2 text-micro text-zinc-deep">
                     Payout {transaction.payout.status.toLowerCase()}
                     {transaction.payout.paidAt &&
-                      ` on ${transaction.payout.paidAt.toLocaleDateString('en-AU', { dateStyle: 'medium' })}`}
+                      ` on ${transaction.payout.paidAt.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', dateStyle: 'medium' })}`}
                   </p>
                 )}
               </li>

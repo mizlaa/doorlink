@@ -122,7 +122,7 @@ export default async function ConversationPage({ params }: PageProps) {
               </div>
               <p className="mt-1 px-1 text-micro text-zinc-deep">
                 {mine ? 'You' : name} ·{' '}
-                {message.createdAt.toLocaleString('en-AU', { dateStyle: 'medium', timeStyle: 'short' })}
+                {message.createdAt.toLocaleString('en-AU', { timeZone: 'Australia/Sydney', dateStyle: 'medium', timeStyle: 'short' })}
               </p>
             </li>
           )

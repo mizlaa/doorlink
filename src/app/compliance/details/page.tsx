@@ -76,7 +76,7 @@ export default async function ComplianceDetailsPage() {
               {warnings.map((warning) => (
                 <li key={warning.label}>
                   {warning.label} {warning.expired ? 'expired' : 'expires'} on{' '}
-                  {warning.date.toLocaleDateString('en-AU')}
+                  {warning.date.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney' })}
                   {warning.expired ? '.' : `, ${warning.daysRemaining} days away.`}
                 </li>
               ))}

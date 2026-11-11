@@ -94,7 +94,7 @@ export default async function AdminVerificationPage() {
                       label="Insurance expires"
                       value={
                         profile.insuranceExpiresAt
-                          ? profile.insuranceExpiresAt.toLocaleDateString('en-AU', { dateStyle: 'medium' })
+                          ? profile.insuranceExpiresAt.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', dateStyle: 'medium' })
                           : null
                       }
                     />

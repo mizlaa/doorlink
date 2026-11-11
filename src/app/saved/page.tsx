@@ -79,7 +79,7 @@ export default async function SavedPage() {
                   <div className="flex flex-wrap items-baseline justify-between gap-3">
                     <p className="font-medium text-graphite">{configuration.name}</p>
                     <span className="text-micro text-zinc-deep">
-                      {configuration.updatedAt.toLocaleDateString('en-AU', { dateStyle: 'medium' })}
+                      {configuration.updatedAt.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', dateStyle: 'medium' })}
                     </span>
                   </div>
 

@@ -180,7 +180,7 @@ export default async function BusinessProfilePage({ params, searchParams }: Prop
                       </span>
                       <span className="text-micro text-zinc-deep">
                         {review.author.name.split(' ')[0]} ·{' '}
-                        {review.createdAt.toLocaleDateString('en-AU', { month: 'short', year: 'numeric' })}
+                        {review.createdAt.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', month: 'short', year: 'numeric' })}
                         {review.job.automatedQuote && ` · ${productLabel(review.job.automatedQuote.product)}`}
                         {review.editedAt && ' · edited'}
                       </span>

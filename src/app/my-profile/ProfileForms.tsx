@@ -461,7 +461,7 @@ export function CertificationEditor({
                     cert.issuer,
                     cert.reference,
                     cert.expiresAt &&
-                      `expires ${cert.expiresAt.toLocaleDateString('en-AU', { month: 'short', year: 'numeric' })}`,
+                      `expires ${cert.expiresAt.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney', month: 'short', year: 'numeric' })}`,
                     cert.verified ? 'checked by Doorlink' : 'not yet checked',
                   ]
                     .filter(Boolean)

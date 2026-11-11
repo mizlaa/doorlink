@@ -59,6 +59,7 @@ export default async function MessagesPage() {
                   {conversation.lastMessageAt && (
                     <span className="text-micro text-zinc-deep">
                       {conversation.lastMessageAt.toLocaleDateString('en-AU', {
+                        timeZone: 'Australia/Sydney',
                         day: 'numeric',
                         month: 'short',
                       })}

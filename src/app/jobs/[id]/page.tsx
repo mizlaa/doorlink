@@ -112,6 +112,8 @@ export default async function JobDetailPage({ params, searchParams }: PageProps)
   if (!job) notFound()
 
   const actor = await resolveJobActor(job, session)
+  // Dates in the business's own zone (the server runs in UTC).
+  const tz = (job.businessId && (await prisma.businessProfile.findUnique({ where: { id: job.businessId }, select: { timezone: true } }))?.timezone) || 'Australia/Sydney'
   // Which side of the linked work (visits, invoices) this person sees.
   const businessRole = job.businessId && actor === 'worker' ? await roleInBusiness(session, job.businessId) : null
   const workViewer: 'manager' | 'technician' | 'customer' | null =
@@ -172,13 +174,13 @@ export default async function JobDetailPage({ params, searchParams }: PageProps)
   if (job.scheduledAt) {
     details.push({
       label: 'Scheduled',
-      value: job.scheduledAt.toLocaleString('en-AU', { dateStyle: 'medium', timeStyle: 'short' }),
+      value: job.scheduledAt.toLocaleString('en-AU', { timeZone: tz, dateStyle: 'medium', timeStyle: 'short' }),
     })
   }
   if (job.completedAt) {
     details.push({
       label: 'Completed',
-      value: job.completedAt.toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' }),
+      value: job.completedAt.toLocaleDateString('en-AU', { timeZone: tz, day: 'numeric', month: 'short', year: 'numeric' }),
     })
   }
   const location = booking
@@ -249,7 +251,7 @@ export default async function JobDetailPage({ params, searchParams }: PageProps)
           <p className="mt-1 text-sm text-graphite-soft">
             Confirm it’s done{balanceDue ? ' and pay the balance' : ''}, or raise a problem below.
             {current.autoCompleteAt &&
-              ` If you do neither, it completes automatically on ${current.autoCompleteAt.toLocaleDateString('en-AU', { day: 'numeric', month: 'long' })}.`}
+              ` If you do neither, it completes automatically on ${current.autoCompleteAt.toLocaleDateString('en-AU', { timeZone: tz, day: 'numeric', month: 'long' })}.`}
           </p>
           {balanceDue && (
             <div className="mt-3">
@@ -456,7 +458,7 @@ export default async function JobDetailPage({ params, searchParams }: PageProps)
                   <li key={update.id} className="rounded-md border border-line bg-paper px-4 py-3 text-sm">
                     <p className="text-micro text-zinc-deep">
                       {update.author.name} ·{' '}
-                      {update.createdAt.toLocaleString('en-AU', { dateStyle: 'medium', timeStyle: 'short' })}
+                      {update.createdAt.toLocaleString('en-AU', { timeZone: tz, dateStyle: 'medium', timeStyle: 'short' })}
                     </p>
                     {update.note && <p className="mt-1 whitespace-pre-line text-graphite">{update.note}</p>}
                     {update.photoKeys.length > 0 && (
@@ -489,7 +491,7 @@ export default async function JobDetailPage({ params, searchParams }: PageProps)
                         : JOB_STATUS_LABELS[event.toStatus]}
                     </span>
                     <span className="text-micro text-zinc-deep">
-                      {event.createdAt.toLocaleString('en-AU', { dateStyle: 'medium', timeStyle: 'short' })}
+                      {event.createdAt.toLocaleString('en-AU', { timeZone: tz, dateStyle: 'medium', timeStyle: 'short' })}
                       {event.actor && ` · ${event.actor.name}`}
                     </span>
                   </div>

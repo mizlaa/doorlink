@@ -55,7 +55,7 @@ export default async function MyQuotesPage() {
                   </span>
                   <span className="block text-sm text-zinc-deep">
                     {productLabel(quote.product)} · {quote.widthMm} × {quote.heightMm} mm ·{' '}
-                    {quote.createdAt.toLocaleDateString('en-AU')}
+                    {quote.createdAt.toLocaleDateString('en-AU', { timeZone: 'Australia/Sydney' })}
                   </span>
                 </span>
                 {quote.options[0] && (
