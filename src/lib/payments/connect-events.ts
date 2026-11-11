@@ -5,6 +5,7 @@ import type Stripe from 'stripe'
 import { notify } from '@/lib/notifications'
 import { prisma } from '@/lib/prisma'
 import { accountState } from './connect'
+import { applyInvoiceCheckout, failInvoiceCheckout } from '@/lib/invoices/delivery'
 import {
   applyCheckoutCompleted,
   applyCheckoutExpired,
@@ -65,6 +66,19 @@ async function apply(event: Stripe.Event): Promise<boolean> {
     case 'checkout.session.completed':
     case 'checkout.session.async_payment_succeeded': {
       const session = event.data.object as Stripe.Checkout.Session
+      // A company's own invoice, paid by card.
+      if (session.metadata?.invoicePaymentId) {
+        const invoiceResult = await applyInvoiceCheckout({
+          invoicePaymentId: session.metadata.invoicePaymentId,
+          sessionId: session.id,
+          accountId: event.account ?? null,
+          paymentIntentId: typeof session.payment_intent === 'string' ? session.payment_intent : (session.payment_intent?.id ?? null),
+          paymentStatus: session.payment_status,
+          amountTotal: session.amount_total,
+        })
+        if (!invoiceResult.ok && invoiceResult.reason !== 'not_paid') console.error('Invoice checkout not applied', event.id, invoiceResult.reason)
+        return invoiceResult.ok
+      }
       const result = await applyCheckoutCompleted({
         sessionId: session.id,
         accountId: event.account ?? null,
@@ -77,17 +91,27 @@ async function apply(event: Stripe.Event): Promise<boolean> {
       return result.ok
     }
     case 'checkout.session.expired': {
-      await applyCheckoutExpired((event.data.object as Stripe.Checkout.Session).id)
+      const expired = event.data.object as Stripe.Checkout.Session
+      if (expired.metadata?.invoicePaymentId) await failInvoiceCheckout(expired.metadata.invoicePaymentId, 'The checkout expired before payment.')
+      else await applyCheckoutExpired(expired.id)
       return true
     }
     case 'checkout.session.async_payment_failed': {
       const session = event.data.object as Stripe.Checkout.Session
+      if (session.metadata?.invoicePaymentId) {
+        await failInvoiceCheckout(session.metadata.invoicePaymentId, 'The payment did not go through.')
+        return true
+      }
       const intent = typeof session.payment_intent === 'string' ? session.payment_intent : (session.payment_intent?.id ?? '')
       await applyConnectPaymentFailed(intent, session.metadata?.transactionId ?? null, 'The payment did not go through.')
       return true
     }
     case 'payment_intent.payment_failed': {
       const intent = event.data.object as Stripe.PaymentIntent
+      if (intent.metadata?.invoicePaymentId) {
+        await failInvoiceCheckout(intent.metadata.invoicePaymentId, intent.last_payment_error?.message ?? 'The payment was declined.')
+        return true
+      }
       await applyConnectPaymentFailed(
         intent.id,
         intent.metadata?.transactionId ?? null,

@@ -26,3 +26,4 @@ data/manuals/harvested/
 # Local development image uploads (never used in production)
 .uploads/
 .sim/
+.outbox/

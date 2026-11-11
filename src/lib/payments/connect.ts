@@ -127,6 +127,50 @@ export async function createJobCheckout(input: {
 }
 
 /** Stripe's processing fee on a paid intent, from its balance transaction. */
+/**
+ * Checkout for an invoice a business issued to its own customer. A direct
+ * charge on the business's account with no Doorlink fee: the fee applies
+ * to marketplace bookings, not to a company's own invoicing.
+ */
+export async function createInvoiceCheckout(input: {
+  accountId: string
+  invoiceId: string
+  invoicePaymentId: string
+  amountCents: number
+  currency: string
+  description: string
+  customerEmail: string | null
+  successUrl: string
+  cancelUrl: string
+}): Promise<{ id: string; url: string }> {
+  const stripe = getStripeClient()
+  const metadata = { invoiceId: input.invoiceId, invoicePaymentId: input.invoicePaymentId }
+  const session = await stripe.checkout.sessions.create(
+    {
+      mode: 'payment',
+      line_items: [
+        {
+          quantity: 1,
+          price_data: {
+            currency: input.currency.toLowerCase(),
+            unit_amount: input.amountCents,
+            product_data: { name: input.description },
+          },
+        },
+      ],
+      payment_intent_data: { metadata },
+      metadata,
+      customer_email: input.customerEmail ?? undefined,
+      success_url: input.successUrl,
+      cancel_url: input.cancelUrl,
+      expires_at: Math.floor(Date.now() / 1000) + 60 * 60,
+    },
+    { stripeAccount: input.accountId, idempotencyKey: `invoice-checkout-${input.invoicePaymentId}` }
+  )
+  if (!session.url) throw new Error('Stripe returned no checkout URL')
+  return { id: session.id, url: session.url }
+}
+
 export async function processingFeeFor(accountId: string, paymentIntentId: string): Promise<number | null> {
   const stripe = getStripeClient()
   const intent = await stripe.paymentIntents.retrieve(
