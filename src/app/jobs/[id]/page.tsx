@@ -7,7 +7,8 @@ import { prisma } from '@/lib/prisma'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { formatMoney } from '@/lib/money'
 import { formatCommissionRate } from '@/lib/commission'
-import { allowedTransitions, isReviewable, jobActorFor } from '@/lib/marketplace'
+import { allowedTransitions, isReviewable } from '@/lib/marketplace'
+import { resolveJobActor } from '@/lib/business/access'
 import { isConnected } from '@/lib/integrations'
 import { NotConnected } from '@/components/ui/NotConnected'
 import { Badge } from '@/components/ui/Badge'
@@ -108,7 +109,7 @@ export default async function JobDetailPage({ params, searchParams }: PageProps)
 
   if (!job) notFound()
 
-  const actor = jobActorFor(job, session.userId, can(session.role, 'job:write:any'))
+  const actor = await resolveJobActor(job, session)
   if (!actor) notFound()
 
   const paid = await jobHasOnlinePayment(job.id)

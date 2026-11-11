@@ -5,14 +5,15 @@ import { JobStatus, NotificationType } from '@prisma/client'
 import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
 import { getSession, type Session } from '@/lib/auth'
-import { can, requireSession, RbacError } from '@/lib/rbac'
+import { requireSession, RbacError } from '@/lib/rbac'
 import { isDatabaseUnreachable, isRecordNotFound } from '@/lib/db-errors'
-import { AUTO_COMPLETE_DAYS, canTransition, jobActorFor, isReviewable, recomputeWorkerRating } from '@/lib/marketplace'
+import { AUTO_COMPLETE_DAYS, canTransition, isReviewable, recomputeWorkerRating } from '@/lib/marketplace'
 import { jobHasOnlinePayment, refundJob } from '@/lib/payments/job-payments'
 import { connectConfigured } from '@/lib/payments/connect'
 import { notifyCustomer } from '@/lib/pricing/notify'
 import { mediaUploadsAvailable, newMediaKey, readImageFile, saveMedia } from '@/lib/media'
 import { notify } from '@/lib/notifications'
+import { resolveJobActor } from '@/lib/business/access'
 import { JOB_STATUS_LABELS } from '@/lib/labels'
 
 export type JobActionState = { error?: string; ok?: boolean }
@@ -64,7 +65,7 @@ export async function transitionJobAction(
     const job = await prisma.job.findUnique({ where: { id: parsed.data.jobId } })
     if (!job) return { error: 'Job not found.' }
 
-    const actor = jobActorFor(job, session.userId, can(session.role, 'job:write:any'))
+    const actor = await resolveJobActor(job, session)
     // Neither party to the job, and not an admin — indistinguishable
     // from the job not existing.
     if (!actor) return { error: 'Job not found.' }

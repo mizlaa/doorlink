@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { getSession } from '@/lib/auth'
-import { jobActorFor } from '@/lib/marketplace'
+import { resolveJobActor } from '@/lib/business/access'
 import { mediaSource } from '@/lib/media'
 import { prisma } from '@/lib/prisma'
 import { can } from '@/lib/rbac'
@@ -40,9 +40,9 @@ export async function GET(_request: Request, { params }: { params: Promise<{ key
   } else if (prefix === 'jobs') {
     const update = await prisma.jobUpdate.findFirst({
       where: { photoKeys: { has: key } },
-      select: { job: { select: { customerId: true, workerId: true } } },
+      select: { job: { select: { id: true, customerId: true, workerId: true, businessId: true } } },
     })
-    allowed = !!update && !!session && !!jobActorFor(update.job, session.userId, admin)
+    allowed = !!update && !!session && !!(await resolveJobActor(update.job, session))
   } else if (prefix === 'ai') {
     // Visible to anyone with their own generation record for it (a cache hit gets one too).
     allowed =

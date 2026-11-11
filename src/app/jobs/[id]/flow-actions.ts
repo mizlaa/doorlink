@@ -5,8 +5,8 @@ import { revalidatePath } from 'next/cache'
 import { JobStatus, NotificationType, PaymentKind } from '@prisma/client'
 import { getSession, type Session } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { can, requireSession } from '@/lib/rbac'
-import { jobActorFor } from '@/lib/marketplace'
+import { requireSession } from '@/lib/rbac'
+import { resolveJobActor } from '@/lib/business/access'
 import { formatMoney } from '@/lib/money'
 import { notify } from '@/lib/notifications'
 import { notifyCustomer } from '@/lib/pricing/notify'
@@ -27,7 +27,7 @@ async function loadFor(session: Session, jobId: string) {
     include: { automatedQuote: { select: { id: true, reference: true, comparisonId: true, businessOrganizationId: true, businessUserId: true } } },
   })
   if (!job) return null
-  const actor = jobActorFor(job, session.userId, can(session.role, 'job:write:any'))
+  const actor = await resolveJobActor(job, session)
   return actor ? { job, actor } : null
 }
 
