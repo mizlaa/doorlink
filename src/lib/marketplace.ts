@@ -1,4 +1,5 @@
 import { JobStatus, LeadStatus, NotificationType, Prisma, QuoteStatus } from '@prisma/client'
+import { linkJob } from '@/lib/business/links'
 import { prisma } from './prisma'
 import { calculateSplit } from './commission'
 import { commissionBpsForWorker } from './commission-settings'
@@ -182,6 +183,8 @@ export async function acceptQuote(quoteId: string, acceptingUserId: string) {
         currency: quote.currency,
       },
     })
+
+    await linkJob(tx, job.id)
 
     await tx.jobStatusEvent.create({
       data: {

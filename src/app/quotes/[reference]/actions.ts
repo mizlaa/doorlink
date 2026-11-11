@@ -4,6 +4,7 @@ import { redirect } from 'next/navigation'
 import { revalidatePath } from 'next/cache'
 import { JobStatus, NotificationType, Prisma } from '@prisma/client'
 import { getSession, type Session } from '@/lib/auth'
+import { linkJob } from '@/lib/business/links'
 import { describeSpec, parseSpec } from '@/lib/configurator/options'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { formatMoney } from '@/lib/money'
@@ -141,6 +142,8 @@ export async function bookQuoteAction(_prev: BookingState, formData: FormData): 
             bookingNotes: b.notes,
           },
         })
+        // The company's customer and property records, from what was just typed.
+        await linkJob(tx, job.id)
         return job.id
       },
       { isolationLevel: Prisma.TransactionIsolationLevel.Serializable }

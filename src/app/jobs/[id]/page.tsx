@@ -24,6 +24,8 @@ import { jobHasOnlinePayment } from '@/lib/payments/job-payments'
 import { mediaUploadsAvailable, mediaUrl } from '@/lib/media'
 import { JobStatus } from '@prisma/client'
 import { OpenConversationButton } from '@/app/messages/OpenConversation'
+import { roleAtLeast, roleInBusiness } from '@/lib/business/access'
+import { JobWorkPanel } from '@/components/jobs/JobWorkPanel'
 
 export const metadata: Metadata = { title: 'Job' }
 
@@ -110,6 +112,10 @@ export default async function JobDetailPage({ params, searchParams }: PageProps)
   if (!job) notFound()
 
   const actor = await resolveJobActor(job, session)
+  // Which side of the linked work (visits, invoices) this person sees.
+  const businessRole = job.businessId && actor === 'worker' ? await roleInBusiness(session, job.businessId) : null
+  const workViewer: 'manager' | 'technician' | 'customer' | null =
+    actor === 'customer' ? 'customer' : actor === 'admin' ? 'manager' : actor === 'worker' ? (businessRole && !roleAtLeast(businessRole, 'MANAGER') ? 'technician' : 'manager') : null
   if (!actor) notFound()
 
   const paid = await jobHasOnlinePayment(job.id)
@@ -495,6 +501,7 @@ export default async function JobDetailPage({ params, searchParams }: PageProps)
         </div>
 
         <aside className="lg:w-72 lg:shrink-0">
+          {workViewer && <JobWorkPanel jobId={job.id} viewer={workViewer} />}
           <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-deep">Details</h2>
           <SpecList items={details} columns={1} />
 
