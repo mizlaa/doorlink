@@ -1,9 +1,10 @@
 import type { DoorKind, DoorLook } from '@/components/three-v2/GarageScene'
 import type { GateInfill, GateKind, GateLook, SwingMotorStyle } from '@/components/three-v2/GateScene'
-import { colourHex, DEFAULT_SPEC, familyOf, hardwareHex, isMotorised, type DoorSpec } from '@/lib/configurator/options'
+import { DEFAULT_SPEC, familyOf, hardwareHex, isMotorised, specColourHex, type DoorSpec } from '@/lib/configurator/options'
 
 /**
- * Demo copy of src/lib/configurator/look.ts. Same mapping, plus the real
+ * The designer's look mapping (src/lib/configurator/look.ts is the older
+ * renderer's). Same mapping, plus the real
  * opening size in millimetres and the insulation and opener choices, so
  * the upgraded scene can draw the door at true size with its mechanism.
  *
@@ -46,10 +47,11 @@ export function lookFromSpec(spec: DoorSpec): DoorLook {
 
   return {
     kind,
-    finish: spec.finish,
+    // Walnut is a timber look whatever sheen is chosen.
+    finish: spec.colour === 'walnut' ? 'woodgrain' : spec.finish,
     widthScale,
     heightScale,
-    color: colourHex(spec.colour),
+    color: specColourHex(spec),
     hardwareColor: hardwareHex(spec.hardware),
     panelCount,
     profile: kind === 'roller' ? 'ribbed' : spec.panelProfile,
@@ -60,6 +62,7 @@ export function lookFromSpec(spec: DoorSpec): DoorLook {
     heightMm: spec.heightMm,
     insulation: spec.insulation,
     opener: spec.opener,
+    handles: spec.handles,
   }
 }
 
@@ -82,7 +85,7 @@ export function gateLookFromSpec(spec: DoorSpec): GateLook {
     kind: GATE_KIND[spec.productType] ?? 'swing',
     widthM: spec.widthMm / 1000,
     heightM: spec.heightMm / 1000,
-    color: colourHex(spec.colour),
+    color: specColourHex(spec),
     hardwareColor: hardwareHex(spec.hardware),
     finish: spec.finish,
     // Powder-coated metal reads a touch more metallic than a painted door.

@@ -1,0 +1,1283 @@
+/*
+ * The designer ("Build My Door").
+ *
+ * A dark, self-contained screen laid out from the client-approved mobile
+ * design: compact navy header with a curved edge over the house, an
+ * edge-to-edge viewer, four icon tabs, door-style cards, colour swatches,
+ * local quotes, one blue action and a five-item bottom bar. Everything is
+ * prefixed `dz-` and scoped under `.dz`, so none of it reaches the rest of
+ * the app.
+ */
+
+.dz {
+  --dz-bg: #0b1522;
+  --dz-header: #0e1a2a;
+  --dz-surface: #121f30;
+  --dz-surface-2: #17263a;
+  --dz-line: rgba(255, 255, 255, 0.075);
+  --dz-line-strong: rgba(255, 255, 255, 0.14);
+  --dz-text: #f3f6fa;
+  --dz-muted: #9aabc0;
+  --dz-dim: #6f8198;
+  --dz-blue: #1f7cff;
+  --dz-blue-press: #1667dd;
+  --dz-blue-glow: rgba(31, 124, 255, 0.55);
+  --dz-gold: #f5a524;
+  --dz-nav-h: 60px;
+  --dz-gutter: 16px;
+
+  color-scheme: dark;
+  position: relative;
+  min-height: 100dvh;
+  background: var(--dz-bg);
+  color: var(--dz-text);
+  -webkit-tap-highlight-color: transparent;
+  padding-bottom: calc(var(--dz-nav-h) + env(safe-area-inset-bottom) + 8px);
+}
+
+.dz *,
+.dz *::before,
+.dz *::after {
+  box-sizing: border-box;
+}
+
+.dz button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.dz :focus-visible {
+  outline: 2px solid var(--dz-blue);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ------------------------------------------------------------ header */
+
+.dz-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--dz-header);
+  padding-top: env(safe-area-inset-top);
+}
+
+.dz-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+  padding: 0 var(--dz-gutter);
+  max-width: 78rem;
+  margin: 0 auto;
+}
+
+.dz-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+  color: var(--dz-text);
+}
+
+.dz-logo-mark {
+  width: 34px;
+  height: 34px;
+  flex: none;
+}
+
+.dz-logo-word {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.dz-logo-word b {
+  font-weight: 600;
+  color: var(--dz-blue);
+}
+
+.dz-logo-tag {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--dz-muted);
+  white-space: nowrap;
+}
+
+.dz-header-nav {
+  display: none;
+  align-items: center;
+  gap: 26px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.dz-header-nav a {
+  color: var(--dz-muted);
+  text-decoration: none;
+}
+
+.dz-header-nav a:hover,
+.dz-header-nav a[aria-current='page'] {
+  color: var(--dz-text);
+}
+
+.dz-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-right: -10px;
+  border-radius: 10px;
+  color: var(--dz-muted);
+}
+
+/* ------------------------------------------------------------ viewer */
+
+.dz-stage {
+  position: relative;
+}
+
+/* The header's curved edge: its colour runs down the right side of the
+   viewer and sweeps back up to the left, with the line underneath it. */
+.dz-curve {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  z-index: 4;
+  width: 50%;
+  max-width: 270px;
+  height: 62px;
+  pointer-events: none;
+}
+
+.dz-curve svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.dz-tagline {
+  position: absolute;
+  top: 4px;
+  right: var(--dz-gutter);
+  width: 118px;
+  z-index: 5;
+  margin: 0;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  line-height: 1.38;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dz-muted);
+  pointer-events: none;
+}
+
+.dz-viewer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 390 / 216;
+  overflow: hidden;
+  background: linear-gradient(#b9d0e2, #dfe7ee);
+  isolation: isolate;
+}
+
+.dz-scene,
+.dz-scene-fallback {
+  position: absolute;
+  inset: 0;
+}
+
+.dz-scene canvas {
+  display: block;
+  /* The viewer owns its touches: dragging turns the house, the page stays still. */
+  touch-action: none;
+  outline: none;
+}
+
+.dz-scene-fallback > * {
+  width: 100%;
+  height: 100%;
+}
+
+.dz-scene-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(11, 21, 34, 0.5);
+  backdrop-filter: blur(3px);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--dz-text);
+  pointer-events: none;
+}
+
+.dz-scene-loading-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background: var(--dz-blue);
+  animation: dz-pulse 1.1s ease-in-out infinite;
+}
+
+@keyframes dz-pulse {
+  50% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+}
+
+/* 2D | 3D */
+.dz-mode {
+  position: absolute;
+  top: 70px;
+  right: 12px;
+  z-index: 6;
+  display: flex;
+  padding: 0;
+  border-radius: 9px;
+  overflow: hidden;
+  background: rgba(13, 24, 38, 0.82);
+  box-shadow: 0 6px 18px -8px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+}
+
+.dz .dz-mode button {
+  min-width: 46px;
+  height: 34px;
+  padding: 0 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--dz-muted);
+  transition: background 0.16s, color 0.16s;
+}
+
+.dz .dz-mode button[aria-pressed='true'] {
+  background: var(--dz-blue);
+  color: #fff;
+}
+
+.dz .dz-expand,
+.dz .dz-viewer-chip {
+  position: absolute;
+  z-index: 6;
+  bottom: 10px;
+  background: rgba(13, 24, 38, 0.86);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 18px -8px rgba(0, 0, 0, 0.7);
+}
+
+.dz .dz-expand {
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 99px;
+  color: #fff;
+}
+
+.dz .dz-viewer-chip {
+  left: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 30px;
+  padding: 0 11px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--dz-text);
+}
+
+.dz-viewer-chip svg {
+  color: var(--dz-muted);
+}
+
+/* Expanded viewer: the same canvas, laid over the whole screen. */
+.dz-stage.is-expanded {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: #0b1522;
+}
+
+.dz-stage.is-expanded .dz-viewer {
+  aspect-ratio: auto;
+  height: 100%;
+}
+
+.dz-stage.is-expanded .dz-curve,
+.dz-stage.is-expanded .dz-tagline {
+  display: none;
+}
+
+.dz-stage.is-expanded .dz-mode {
+  top: calc(12px + env(safe-area-inset-top));
+}
+
+.dz-stage.is-expanded .dz-expand {
+  bottom: calc(14px + env(safe-area-inset-bottom));
+}
+
+.dz-stage.is-expanded .dz-viewer-chip {
+  bottom: calc(19px + env(safe-area-inset-bottom));
+}
+
+.dz-expanded-bar {
+  position: absolute;
+  z-index: 6;
+  left: 12px;
+  top: calc(12px + env(safe-area-inset-top));
+  display: flex;
+  gap: 8px;
+}
+
+.dz .dz-pill-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: 99px;
+  background: rgba(13, 24, 38, 0.86);
+  backdrop-filter: blur(6px);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 6px 18px -8px rgba(0, 0, 0, 0.7);
+}
+
+.dz-expanded-tools {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  bottom: calc(14px + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+/* -------------------------------------------------------------- tabs */
+
+.dz-tabs {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  border-bottom: 1px solid var(--dz-line);
+  background: var(--dz-bg);
+}
+
+.dz .dz-tab {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 11px 4px 10px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--dz-muted);
+  transition: color 0.16s, background 0.16s;
+}
+
+.dz .dz-tab svg {
+  width: 24px;
+  height: 24px;
+}
+
+.dz .dz-tab[aria-selected='true'] {
+  color: var(--dz-blue);
+  background: linear-gradient(180deg, rgba(31, 124, 255, 0.07), rgba(31, 124, 255, 0.02));
+}
+
+.dz .dz-tab[aria-selected='true']::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--dz-blue);
+}
+
+.dz-panel {
+  padding: 12px var(--dz-gutter) 0;
+}
+
+.dz-panel-section + .dz-panel-section {
+  margin-top: 16px;
+}
+
+/* ------------------------------------------------- door-style cards */
+
+.dz-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.dz-cards[data-count='3'] {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.dz-cards[data-count='5'] {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.dz .dz-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 5px 8px;
+  border-radius: 9px;
+  border: 1.5px solid transparent;
+  background: var(--dz-surface);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--dz-text);
+  line-height: 1.15;
+  text-align: center;
+  transition: border-color 0.16s, box-shadow 0.16s, background 0.16s;
+}
+
+.dz .dz-card svg {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  display: block;
+}
+
+.dz .dz-card[aria-pressed='true'] {
+  border-color: var(--dz-blue);
+  background: #0f1d31;
+  box-shadow: 0 0 0 1px rgba(31, 124, 255, 0.35), 0 0 14px -2px var(--dz-blue-glow);
+}
+
+.dz-cards[data-count='5'] .dz-card {
+  font-size: 0.6875rem;
+  padding: 6px 3px 7px;
+}
+
+/* ------------------------------------------------------------ colours */
+
+.dz-row-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 9px;
+}
+
+.dz-row-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--dz-muted);
+}
+
+.dz-row-title strong {
+  font-weight: 500;
+  color: var(--dz-text);
+  margin-left: 6px;
+  font-size: 0.875rem;
+}
+
+.dz .dz-row-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 28px;
+  margin-right: -8px;
+  color: var(--dz-muted);
+}
+
+.dz-swatches {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 4px;
+}
+
+.dz .dz-swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--dz-text);
+  line-height: 1.1;
+}
+
+.dz-swatch-dot {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  border-radius: 99px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.dz .dz-swatch[aria-pressed='true'] .dz-swatch-dot {
+  border-color: var(--dz-blue);
+  box-shadow: 0 0 0 2px var(--dz-bg), 0 0 0 4px var(--dz-blue), 0 0 12px 2px var(--dz-blue-glow);
+}
+
+.dz-swatch-dot.is-wood {
+  background-image: repeating-linear-gradient(
+    96deg,
+    rgba(0, 0, 0, 0.22) 0 1px,
+    transparent 1px 5px,
+    rgba(255, 255, 255, 0.07) 5px 6px,
+    transparent 6px 10px
+  );
+}
+
+.dz-swatch-dot.is-custom {
+  background: conic-gradient(#ff4d4d, #ffb84d, #f4f44d, #4ddb6a, #4dc3ff, #6a5cff, #e04dff, #ff4d4d);
+}
+
+.dz-swatch-dot.is-custom::after {
+  content: '';
+  position: absolute;
+  inset: 9px;
+  border-radius: 99px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.dz-swatch-dot.is-custom[data-picked]::after {
+  background: var(--dz-picked);
+}
+
+.dz-swatch input[type='color'] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------- chips */
+
+.dz-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dz .dz-chip {
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 99px;
+  border: 1px solid var(--dz-line-strong);
+  background: var(--dz-surface);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--dz-text);
+  transition: border-color 0.16s, background 0.16s, box-shadow 0.16s;
+}
+
+.dz .dz-chip[aria-pressed='true'] {
+  border-color: var(--dz-blue);
+  background: rgba(31, 124, 255, 0.16);
+  box-shadow: 0 0 10px -3px var(--dz-blue-glow);
+}
+
+.dz-note {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--dz-muted);
+  line-height: 1.45;
+}
+
+.dz .dz-link {
+  color: #63a4ff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------- quotes */
+
+.dz-quotes {
+  margin-top: 18px;
+  padding: 16px var(--dz-gutter) 0;
+  border-top: 1px solid var(--dz-line);
+}
+
+.dz-quotes-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.dz-quotes-title {
+  margin: 0;
+  font-size: 1.1875rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--dz-text);
+}
+
+.dz-quotes-sub {
+  margin: 3px 0 0;
+  font-size: 0.8125rem;
+  color: var(--dz-muted);
+}
+
+.dz-place {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  font-size: 0.875rem;
+  color: var(--dz-text);
+}
+
+.dz-place-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 44vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dz-place-name svg {
+  flex: none;
+  color: var(--dz-blue);
+}
+
+.dz .dz-place-change {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #4d9bff;
+  padding: 3px 0 3px 12px;
+}
+
+.dz-company-list {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dz-company {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) auto 16px;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 11px;
+  background: var(--dz-surface);
+  border: 1px solid var(--dz-line);
+  text-decoration: none;
+  color: var(--dz-text);
+}
+
+.dz-company-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 9px;
+  background: var(--dz-surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #cfe0f5;
+  letter-spacing: 0.02em;
+}
+
+.dz-company-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dz-company-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.dz-company-name span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dz-badge {
+  flex: none;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--dz-blue);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.dz-company-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 3px;
+  font-size: 0.75rem;
+  color: var(--dz-muted);
+}
+
+.dz-stars {
+  display: inline-flex;
+  gap: 1px;
+  color: var(--dz-gold);
+}
+
+.dz-company-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 9px;
+  margin-top: 3px;
+  font-size: 0.6875rem;
+  color: var(--dz-dim);
+}
+
+.dz-company-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+}
+
+.dz-company-price {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.dz-company-price b {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.dz-company-price small {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.6875rem;
+  color: var(--dz-muted);
+}
+
+.dz-company > svg {
+  color: #4d9bff;
+}
+
+.dz-empty {
+  margin: 12px 0 0;
+  padding: 18px 14px;
+  border-radius: 11px;
+  border: 1px dashed var(--dz-line-strong);
+  background: rgba(18, 31, 48, 0.6);
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--dz-muted);
+  line-height: 1.45;
+}
+
+.dz-empty b {
+  display: block;
+  margin-bottom: 2px;
+  font-weight: 600;
+  color: var(--dz-text);
+}
+
+.dz-skeleton {
+  height: 68px;
+  border-radius: 11px;
+  background: linear-gradient(90deg, var(--dz-surface), var(--dz-surface-2), var(--dz-surface));
+  background-size: 200% 100%;
+  animation: dz-shimmer 1.3s linear infinite;
+}
+
+@keyframes dz-shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+/* --------------------------------------------------------- main action */
+
+.dz-action {
+  padding: 14px var(--dz-gutter) 0;
+}
+
+.dz .dz-measure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  height: 54px;
+  border-radius: 11px;
+  background: var(--dz-blue);
+  box-shadow: 0 10px 26px -12px var(--dz-blue-glow);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.16s, transform 0.1s;
+}
+
+.dz .dz-measure:active {
+  background: var(--dz-blue-press);
+  transform: scale(0.995);
+}
+
+.dz-measure .dz-measure-arrow {
+  margin-left: 2px;
+}
+
+.dz-trust {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.8125rem;
+  color: var(--dz-muted);
+}
+
+.dz-trust li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.dz-trust svg {
+  color: #4d9bff;
+}
+
+.dz-extras {
+  margin-top: 18px;
+  padding: 0 var(--dz-gutter);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dz-extras-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  font-size: 0.875rem;
+}
+
+.dz-box {
+  padding: 14px;
+  border-radius: 11px;
+  background: var(--dz-surface);
+  border: 1px solid var(--dz-line);
+}
+
+.dz-box h3 {
+  margin: 0 0 8px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.dz-fine {
+  margin: 0;
+  text-align: center;
+  font-size: 0.6875rem;
+  color: var(--dz-dim);
+  line-height: 1.5;
+}
+
+/* The app's light form controls, re-toned for the dark surface. */
+.dz-light {
+  color-scheme: light;
+  border-radius: 11px;
+  background: #f3f6f8;
+  color: #17324d;
+  padding: 14px;
+}
+
+/* ---------------------------------------------------------- bottom nav */
+
+.dz-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  background: rgba(11, 21, 34, 0.96);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--dz-line);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.dz-nav ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+.dz-nav a,
+.dz .dz-nav button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 100%;
+  height: var(--dz-nav-h);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--dz-muted);
+  text-decoration: none;
+}
+
+.dz-nav svg {
+  width: 24px;
+  height: 24px;
+}
+
+.dz-nav [aria-current='page'] {
+  color: var(--dz-blue);
+}
+
+.dz-nav [aria-current='page']::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  right: 30%;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--dz-blue);
+}
+
+/* --------------------------------------------------------------- sheets */
+
+.dz-sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(3, 8, 14, 0.62);
+  animation: dz-fade 0.16s ease-out;
+}
+
+.dz-sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 91;
+  max-height: 88dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border-radius: 18px 18px 0 0;
+  background: var(--dz-surface);
+  border-top: 1px solid var(--dz-line-strong);
+  padding: 8px var(--dz-gutter) calc(18px + env(safe-area-inset-bottom));
+  animation: dz-rise 0.2s ease-out;
+}
+
+.dz-sheet::before {
+  content: '';
+  display: block;
+  width: 38px;
+  height: 4px;
+  margin: 2px auto 12px;
+  border-radius: 4px;
+  background: var(--dz-line-strong);
+}
+
+.dz-sheet-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.dz-sheet-title {
+  margin: 0;
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+
+.dz-sheet h3 {
+  margin: 18px 0 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dz-dim);
+}
+
+.dz-menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 11px;
+  overflow: hidden;
+  border: 1px solid var(--dz-line);
+}
+
+.dz-menu-list li + li {
+  border-top: 1px solid var(--dz-line);
+}
+
+.dz-menu-list a,
+.dz .dz-menu-list button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--dz-text);
+  text-decoration: none;
+  text-align: left;
+  background: var(--dz-surface-2);
+}
+
+.dz-menu-list [aria-pressed='true'],
+.dz-menu-list [aria-current='true'] {
+  color: #6db0ff;
+}
+
+.dz-field {
+  display: block;
+}
+
+.dz-field span {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--dz-muted);
+}
+
+.dz .dz-input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid var(--dz-line-strong);
+  background: var(--dz-bg);
+  font: inherit;
+  font-size: 1rem;
+  color: var(--dz-text);
+}
+
+.dz .dz-input:focus {
+  outline: 2px solid var(--dz-blue);
+  outline-offset: 1px;
+  border-color: transparent;
+}
+
+.dz-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.dz .dz-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  margin-top: 14px;
+  border-radius: 11px;
+  background: var(--dz-blue);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+
+.dz .dz-primary:disabled {
+  opacity: 0.55;
+}
+
+.dz-error {
+  margin: 10px 0 0;
+  font-size: 0.875rem;
+  color: #ff8f8f;
+}
+
+.dz-ok {
+  margin: 10px 0 0;
+  font-size: 0.875rem;
+  color: #7fdc9b;
+}
+
+@keyframes dz-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes dz-rise {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dz-sheet,
+  .dz-sheet-backdrop,
+  .dz-skeleton,
+  .dz-scene-loading-dot {
+    animation: none;
+  }
+}
+
+/* Small phones: keep every control reachable, a little tighter. */
+@media (max-width: 359px) {
+  .dz {
+    --dz-gutter: 12px;
+  }
+  .dz .dz-tab {
+    font-size: 0.75rem;
+  }
+  .dz .dz-card,
+  .dz .dz-swatch {
+    font-size: 0.6875rem;
+  }
+  .dz-swatch-dot {
+    width: 34px;
+    height: 34px;
+  }
+  .dz-trust {
+    gap: 12px;
+    font-size: 0.75rem;
+  }
+  .dz-logo-tag {
+    display: none;
+  }
+}
+
+/* Short phones in landscape: the viewer mustn't take the whole screen. */
+@media (orientation: landscape) and (max-height: 520px) {
+  .dz-stage:not(.is-expanded) .dz-viewer {
+    aspect-ratio: auto;
+    height: 62dvh;
+  }
+}
+
+/* ------------------------------------------------- tablet and desktop */
+
+@media (min-width: 700px) {
+  .dz {
+    --dz-gutter: 24px;
+  }
+  .dz-stage:not(.is-expanded) .dz-viewer {
+    aspect-ratio: 16 / 8.2;
+  }
+  .dz-main {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .dz-curve {
+    display: none;
+  }
+  .dz-tagline {
+    top: 14px;
+    z-index: 6;
+    color: #fff;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+  }
+  .dz-mode {
+    top: 14px;
+    right: auto;
+    left: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dz {
+    padding-bottom: 40px;
+  }
+  .dz-header-nav {
+    display: flex;
+  }
+  .dz-nav {
+    display: none;
+  }
+  .dz-main {
+    max-width: 78rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(360px, 1fr);
+    gap: 28px;
+    align-items: start;
+    padding: 24px 24px 0;
+  }
+  .dz-stage:not(.is-expanded) {
+    position: sticky;
+    top: 78px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .dz-stage:not(.is-expanded) .dz-viewer {
+    aspect-ratio: 16 / 10;
+  }
+  .dz-controls {
+    border-radius: 16px;
+    background: #0d1827;
+    border: 1px solid var(--dz-line);
+    padding-bottom: 20px;
+    overflow: hidden;
+  }
+  .dz-sheet {
+    left: 50%;
+    right: auto;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    width: min(520px, 92vw);
+    border-radius: 18px;
+    border: 1px solid var(--dz-line-strong);
+    animation: dz-fade 0.16s ease-out;
+  }
+  .dz-sheet::before {
+    display: none;
+  }
+}

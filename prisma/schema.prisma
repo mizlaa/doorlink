@@ -271,6 +271,11 @@ enum NotificationType {
   SUBSCRIPTION_STATUS
   REVIEW_RECEIVED
   VERIFICATION_STATUS
+  SERVICE_REQUEST
+  APPOINTMENT
+  INVOICE
+  STOCK_ALERT
+  TEAM
 }
 
 // Which market a document was published for. A US opener manual and its
@@ -413,6 +418,14 @@ model User {
   comparisons     QuoteComparison[]
   aiGenerations   AiGeneration[]
   jobUpdates      JobUpdate[]
+
+  businessMemberships BusinessMember[]    @relation("BusinessMemberUser")
+  businessCustomers   BusinessCustomer[]  @relation("BusinessCustomerUser")
+  serviceRequests     ServiceRequest[]    @relation("ServiceRequestCustomer")
+  appointments        Appointment[]       @relation("AppointmentTechnician")
+  timeOff             TechnicianTimeOff[] @relation("TimeOffTechnician")
+  mfaCredential       MfaCredential?
+  mfaRecoveryCodes    MfaRecoveryCode[]
 }
 
 model Organization {
@@ -1108,6 +1121,25 @@ model Job {
   autoCompleteAt      DateTime?
   updates             JobUpdate[]
 
+  // The company's own records this job belongs to, so the customer,
+  // property and design entered once follow the work to the calendar and
+  // the invoice. Null on jobs made before these existed (see lib/business/links).
+  business           BusinessProfile?   @relation(fields: [businessId], references: [id], onDelete: SetNull)
+  businessId         String?
+  businessCustomer   BusinessCustomer?  @relation(fields: [businessCustomerId], references: [id], onDelete: SetNull)
+  businessCustomerId String?
+  property           Property?          @relation(fields: [propertyId], references: [id], onDelete: SetNull)
+  propertyId         String?
+  design             DoorConfiguration? @relation(fields: [designId], references: [id], onDelete: SetNull)
+  designId           String?
+  serviceRequest     ServiceRequest?    @relation(fields: [serviceRequestId], references: [id], onDelete: SetNull)
+  serviceRequestId   String?            @unique
+  title              String?
+  // Itemised price the business set after a measure: [{ kind, description, quantityX100, unitPriceCents, gstApplicable }].
+  priceLines         Json?
+  appointments       Appointment[]
+  invoices           Invoice[]
+
   statusEvents  JobStatusEvent[]
   transactions  Transaction[]
   workerReview  WorkerReview?
@@ -1118,6 +1150,7 @@ model Job {
   @@index([status])
   @@index([customerId])
   @@index([workerId])
+  @@index([businessId, status])
 }
 
 // An append-only history of how a job moved through its lifecycle.
@@ -1559,6 +1592,9 @@ model DoorConfiguration {
   shareSlug String?  @unique
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  jobs            Job[]
+  serviceRequests ServiceRequest[]
 
   @@index([userId])
 }
@@ -2946,12 +2982,45 @@ model BusinessProfile {
   stripeDetailsSubmitted Boolean   @default(false)
   stripeUpdatedAt        DateTime?
 
+  // Brand and invoicing, set once and reused on the marketplace profile,
+  // quotes, invoices, receipts and the customer portal.
+  addressLine      String?
+  gstRegistered    Boolean @default(false)
+  invoiceTermsDays Int     @default(7)
+  // Printed at the foot of invoices: how to pay, bank details, thanks.
+  invoiceFooter    String?
+  timezone         String  @default("Australia/Sydney")
+  brandColour      String?
+  accentColour     String?
+  // The in-app logo builder's choices, when the logo was made there.
+  logoDesign       Json?
+  // The current logo as an immutable copy that issued invoices point at.
+  logoVersionId    String?
+  // What the public profile shows. The business name and suburb always show.
+  showPhone        Boolean @default(true)
+  showEmail        Boolean @default(false)
+  showAbn          Boolean @default(true)
+  showAddress      Boolean @default(false)
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   serviceAreas BusinessServiceArea[]
   accessories  BusinessAccessory[]
   portfolio    BusinessPortfolioItem[]
+
+  members           BusinessMember[]
+  customers         BusinessCustomer[]
+  properties        Property[]
+  requestRecipients ServiceRequestRecipient[]
+  jobs              Job[]
+  appointments      Appointment[]
+  timeOff           TechnicianTimeOff[]
+  invoices          Invoice[]
+  counters          BusinessCounter[]
+  logoVersions      BusinessLogoVersion[]
+  stockItems        StockItem[]
+  apiKeys           ApiKey[]
 
   @@index([status])
 }
@@ -3029,4 +3098,546 @@ model AiGeneration {
   @@index([cacheKey, status])
   @@index([userId, createdAt])
   @@index([createdAt])
+}
+
+// =====================================================================
+// Company operations: team, customers, requests, calendar, invoices, stock
+// =====================================================================
+// Everything below belongs to one business (BusinessProfile) and is only
+// ever read or written through that business's id, checked on the server.
+
+enum BusinessMemberRole {
+  // Requests, calendar, jobs, customers and invoices; not the team, brand or payouts.
+  MANAGER
+  // Their own assigned visits and the jobs those belong to.
+  TECHNICIAN
+}
+
+enum BusinessMemberStatus {
+  INVITED
+  ACTIVE
+  REMOVED
+}
+
+// Someone who works for a business besides its owner. The owner is the
+// account (or organisation owner) behind the BusinessProfile and has no row.
+model BusinessMember {
+  id          String               @id @default(cuid())
+  business    BusinessProfile      @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  businessId  String
+  user        User                 @relation("BusinessMemberUser", fields: [userId], references: [id], onDelete: Cascade)
+  userId      String
+  role        BusinessMemberRole   @default(TECHNICIAN)
+  status      BusinessMemberStatus @default(INVITED)
+  invitedById String?
+  createdAt   DateTime             @default(now())
+  acceptedAt  DateTime?
+  removedAt   DateTime?
+
+  @@unique([businessId, userId])
+  @@index([userId, status])
+}
+
+// A business's own record of a customer. Linked to a Doorlink account
+// when the customer has one, which is what the customer portal reads.
+model BusinessCustomer {
+  id         String          @id @default(cuid())
+  business   BusinessProfile @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  businessId String
+  user       User?           @relation("BusinessCustomerUser", fields: [userId], references: [id], onDelete: SetNull)
+  userId     String?
+  name       String
+  email      String?
+  phone      String?
+  notes      String?
+  archivedAt DateTime?
+  createdAt  DateTime        @default(now())
+  updatedAt  DateTime        @updatedAt
+
+  properties   Property[]
+  jobs         Job[]
+  appointments Appointment[]
+  invoices     Invoice[]
+
+  @@unique([businessId, userId])
+  @@index([businessId, name])
+}
+
+// Where the work is. One customer can have several.
+model Property {
+  id          String           @id @default(cuid())
+  business    BusinessProfile  @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  businessId  String
+  customer    BusinessCustomer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  customerId  String
+  addressLine String
+  suburb      String
+  state       String
+  postcode    String
+  accessNotes String?
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+
+  jobs         Job[]
+  appointments Appointment[]
+  invoices     Invoice[]
+
+  @@index([businessId])
+  @@index([customerId])
+}
+
+enum ServiceRequestKind {
+  MEASURE
+}
+
+enum ServiceRequestStatus {
+  // Waiting for a company to accept.
+  OPEN
+  ACCEPTED
+  CANCELLED
+  // Nobody accepted in time, or every company declined.
+  CLOSED
+}
+
+enum RequestRecipientStatus {
+  PENDING
+  ACCEPTED
+  DECLINED
+  // Another company accepted first.
+  MISSED
+}
+
+// A customer's free request for an on-site measure, made from the
+// designer. It carries the design and the address once, and the company
+// that accepts it gets a job with both attached.
+model ServiceRequest {
+  id         String               @id @default(cuid())
+  reference  String               @unique
+  kind       ServiceRequestKind   @default(MEASURE)
+  status     ServiceRequestStatus @default(OPEN)
+  customer   User                 @relation("ServiceRequestCustomer", fields: [customerId], references: [id], onDelete: Cascade)
+  customerId String
+
+  contactName  String
+  contactPhone String
+  contactEmail String
+  addressLine  String
+  suburb       String
+  state        String
+  postcode     String
+
+  design   DoorConfiguration? @relation(fields: [designId], references: [id], onDelete: SetNull)
+  designId String?
+  // The design as it was when the request was made.
+  spec     Json
+  product  PricedProduct
+  widthMm  Int
+  heightMm Int
+
+  preferredTimes String?
+  notes          String?
+  // Sent by the form so a double tap or a retry makes one request, not two.
+  idempotencyKey String?   @unique
+  acceptedAt     DateTime?
+  cancelledAt    DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  recipients ServiceRequestRecipient[]
+  job        Job?
+
+  @@index([customerId])
+  @@index([status, postcode])
+}
+
+model ServiceRequestRecipient {
+  id            String                 @id @default(cuid())
+  request       ServiceRequest         @relation(fields: [requestId], references: [id], onDelete: Cascade)
+  requestId     String
+  business      BusinessProfile        @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  businessId    String
+  status        RequestRecipientStatus @default(PENDING)
+  respondedAt   DateTime?
+  declineReason String?
+  createdAt     DateTime               @default(now())
+
+  @@unique([requestId, businessId])
+  @@index([businessId, status])
+}
+
+enum AppointmentKind {
+  MEASURE
+  INSTALL
+  SERVICE
+  REPAIR
+  OTHER
+}
+
+enum AppointmentStatus {
+  BOOKED
+  EN_ROUTE
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+  NO_SHOW
+}
+
+// A visit on the calendar. Times are stored in UTC; `timezone` is the
+// business's zone when it was booked, so it always displays as booked.
+// Two live visits for one technician can never overlap: the booking
+// action checks under a lock, and prisma/constraints.sql adds an
+// exclusion constraint so the database refuses it too.
+model Appointment {
+  id           String            @id @default(cuid())
+  reference    String            @unique
+  business     BusinessProfile   @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  businessId   String
+  job          Job?              @relation(fields: [jobId], references: [id], onDelete: SetNull)
+  jobId        String?
+  customer     BusinessCustomer? @relation(fields: [customerId], references: [id], onDelete: SetNull)
+  customerId   String?
+  property     Property?         @relation(fields: [propertyId], references: [id], onDelete: SetNull)
+  propertyId   String?
+  technician   User?             @relation("AppointmentTechnician", fields: [technicianId], references: [id], onDelete: SetNull)
+  technicianId String?
+
+  kind     AppointmentKind   @default(MEASURE)
+  status   AppointmentStatus @default(BOOKED)
+  title    String
+  notes    String?
+  startsAt DateTime
+  endsAt   DateTime
+  timezone String
+  // Bumped on every change, so two people editing can't overwrite each other.
+  version  Int               @default(1)
+
+  completedAt     DateTime?
+  completionNotes String?
+  cancelledAt     DateTime?
+  cancelReason    String?
+  reminderSentAt  DateTime?
+  createdById     String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+
+  events AppointmentEvent[]
+
+  @@index([businessId, startsAt])
+  @@index([technicianId, startsAt])
+  @@index([jobId])
+}
+
+model AppointmentEvent {
+  id            String      @id @default(cuid())
+  appointment   Appointment @relation(fields: [appointmentId], references: [id], onDelete: Cascade)
+  appointmentId String
+  type          String
+  note          String?
+  actorId       String?
+  createdAt     DateTime    @default(now())
+
+  @@index([appointmentId])
+}
+
+// A stretch a technician can't be booked: leave, training, a day off.
+model TechnicianTimeOff {
+  id           String          @id @default(cuid())
+  business     BusinessProfile @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  businessId   String
+  technician   User            @relation("TimeOffTechnician", fields: [technicianId], references: [id], onDelete: Cascade)
+  technicianId String
+  startsAt     DateTime
+  endsAt       DateTime
+  reason       String?
+  createdAt    DateTime        @default(now())
+
+  @@index([businessId, technicianId, startsAt])
+}
+
+enum InvoiceStatus {
+  DRAFT
+  ISSUED
+  VOID
+}
+
+enum InvoiceLineKind {
+  DOOR
+  MOTOR
+  PART
+  INSTALLATION
+  LABOUR
+  OTHER
+}
+
+enum InvoicePaymentMethod {
+  CASH
+  BANK_TRANSFER
+  CARD_IN_PERSON
+  CHEQUE
+  STRIPE
+  OTHER
+}
+
+enum InvoicePaymentStatus {
+  // Started with the payment provider, not yet confirmed by it.
+  PENDING
+  CONFIRMED
+  FAILED
+  // A recorded payment the business reversed (entered by mistake, bounced).
+  REVERSED
+}
+
+enum DeliveryStatus {
+  QUEUED
+  // The email provider accepted it.
+  SENT
+  // The provider confirmed it reached the inbox.
+  DELIVERED
+  FAILED
+}
+
+// A company's invoice. Editable while DRAFT. Issuing gives it the next
+// number for that company and freezes a copy (`snapshot`) of everything
+// printed on it, so a later change of logo, address or price can't alter
+// an invoice a customer already holds. Amounts are worked out on the server.
+model Invoice {
+  id         String           @id @default(cuid())
+  business   BusinessProfile  @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  businessId String
+  number     Int?
+  status     InvoiceStatus    @default(DRAFT)
+  customer   BusinessCustomer @relation(fields: [customerId], references: [id])
+  customerId String
+  property   Property?        @relation(fields: [propertyId], references: [id], onDelete: SetNull)
+  propertyId String?
+  job        Job?             @relation(fields: [jobId], references: [id], onDelete: SetNull)
+  jobId      String?
+
+  // Whether the prices typed on the lines already contain GST.
+  pricesIncludeGst Boolean   @default(true)
+  issueDate        DateTime?
+  dueDate          DateTime?
+  notes            String?
+
+  // Set at issue, from the lines, and never recalculated afterwards.
+  gstRegistered      Boolean @default(false)
+  subtotalExGstCents Int     @default(0)
+  gstCents           Int     @default(0)
+  totalCents         Int     @default(0)
+  // Confirmed payments so far; kept in step by lib/invoices/payments.
+  paidCents          Int     @default(0)
+  currency           String  @default("AUD")
+  snapshot           Json?
+  logoVersionId      String?
+
+  // A link the customer can open without signing in. Only its hash is stored.
+  shareTokenHash      String?   @unique
+  shareTokenExpiresAt DateTime?
+
+  createdById String?
+  issuedAt    DateTime?
+  voidedAt    DateTime?
+  voidReason  String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  lines      InvoiceLine[]
+  payments   InvoicePayment[]
+  deliveries InvoiceDelivery[]
+
+  @@unique([businessId, number])
+  @@index([businessId, status])
+  @@index([customerId])
+  @@index([jobId])
+}
+
+model InvoiceLine {
+  id             String          @id @default(cuid())
+  invoice        Invoice         @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+  invoiceId      String
+  sortOrder      Int             @default(0)
+  kind           InvoiceLineKind @default(OTHER)
+  description    String
+  // Quantity in hundredths: 150 is 1.5 (hours, metres, items).
+  quantityX100   Int             @default(100)
+  unitPriceCents Int
+  gstApplicable  Boolean         @default(true)
+  stockItem      StockItem?      @relation(fields: [stockItemId], references: [id], onDelete: SetNull)
+  stockItemId    String?
+
+  stockMovement StockMovement?
+
+  @@index([invoiceId])
+}
+
+// Money received against an invoice. A Stripe payment is CONFIRMED only
+// by Stripe's signed webhook; a payment the business records by hand says
+// who recorded it. Each confirmed payment has a receipt number.
+model InvoicePayment {
+  id                String               @id @default(cuid())
+  invoice           Invoice              @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+  invoiceId         String
+  amountCents       Int
+  method            InvoicePaymentMethod
+  status            InvoicePaymentStatus @default(CONFIRMED)
+  receivedAt        DateTime             @default(now())
+  reference         String?
+  note              String?
+  receiptNumber     Int?
+  recordedById      String?
+  // A deposit or balance already taken on the job through Doorlink.
+  transactionId     String?              @unique
+  provider          String?
+  providerRef       String?              @unique
+  checkoutSessionId String?              @unique
+  // From the form or the provider event: the same payment is never recorded twice.
+  idempotencyKey    String?              @unique
+  failureReason     String?
+  createdAt         DateTime             @default(now())
+  updatedAt         DateTime             @updatedAt
+
+  @@index([invoiceId])
+}
+
+// Every attempt to send an invoice. A failed send keeps the invoice and
+// can be retried; retrying never issues another invoice.
+model InvoiceDelivery {
+  id          String         @id @default(cuid())
+  invoice     Invoice        @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+  invoiceId   String
+  channel     String         @default("email")
+  recipient   String
+  status      DeliveryStatus @default(QUEUED)
+  providerId  String?        @unique
+  error       String?
+  createdById String?
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  @@index([invoiceId])
+}
+
+// The next invoice and receipt number for each business. Read and bumped
+// inside the issuing transaction under a row lock, so numbers are unique
+// and gap-free per company.
+model BusinessCounter {
+  business   BusinessProfile @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  businessId String
+  name       String
+  next       Int             @default(1)
+
+  @@id([businessId, name])
+}
+
+// An immutable copy of a logo. Invoices point at the version that was
+// current when they were issued.
+model BusinessLogoVersion {
+  id          String          @id @default(cuid())
+  business    BusinessProfile @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  businessId  String
+  sha256      String
+  // "image/png", "image/jpeg", or "application/x-doorlink-logo" for a built logo (see `design`).
+  contentType String
+  bytes       Bytes?
+  design      Json?
+  createdAt   DateTime        @default(now())
+
+  @@unique([businessId, sha256])
+}
+
+model StockItem {
+  id             String          @id @default(cuid())
+  business       BusinessProfile @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  businessId     String
+  sku            String?
+  name           String
+  unit           String          @default("each")
+  // In hundredths, like invoice quantities.
+  onHandX100     Int             @default(0)
+  reorderX100    Int             @default(0)
+  costCents      Int?
+  sellPriceCents Int?
+  // Set when the low-stock alert was sent, cleared when stock is back above the level.
+  lowAlertedAt   DateTime?
+  archivedAt     DateTime?
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+
+  movements    StockMovement[]
+  invoiceLines InvoiceLine[]
+
+  @@index([businessId, name])
+}
+
+model StockMovement {
+  id            String       @id @default(cuid())
+  item          StockItem    @relation(fields: [itemId], references: [id], onDelete: Cascade)
+  itemId        String
+  deltaX100     Int
+  reason        String
+  note          String?
+  jobId         String?
+  // One movement per invoice line, so issuing twice can't take stock twice.
+  invoiceLine   InvoiceLine? @relation(fields: [invoiceLineId], references: [id], onDelete: SetNull)
+  invoiceLineId String?      @unique
+  createdById   String?
+  createdAt     DateTime     @default(now())
+
+  @@index([itemId, createdAt])
+}
+
+// A key a business makes to read its own data over the API (see docs/API.md).
+// Only a hash is stored; the key is shown once.
+model ApiKey {
+  id          String          @id @default(cuid())
+  business    BusinessProfile @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  businessId  String
+  name        String
+  prefix      String          @unique
+  keyHash     String
+  lastUsedAt  DateTime?
+  revokedAt   DateTime?
+  createdById String?
+  createdAt   DateTime        @default(now())
+
+  @@index([businessId])
+}
+
+// =====================================================================
+// Account security
+// =====================================================================
+
+// Authenticator-app sign-in (TOTP). The secret is stored encrypted.
+model MfaCredential {
+  id           String    @id @default(cuid())
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId       String    @unique
+  secretEnc    String
+  confirmedAt  DateTime?
+  // The last time-step accepted, so a code can't be replayed.
+  lastUsedStep Int?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
+
+// One-time recovery codes for when the phone is lost. Only hashes are stored.
+model MfaRecoveryCode {
+  id        String    @id @default(cuid())
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+  codeHash  String
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  @@unique([userId, codeHash])
+}
+
+// Fixed-window counters for rate limiting, shared by every server instance.
+model RateLimit {
+  key         String
+  windowStart DateTime
+  count       Int      @default(0)
+
+  @@id([key, windowStart])
+  @@index([windowStart])
 }

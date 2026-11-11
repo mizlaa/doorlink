@@ -11,7 +11,7 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "db:generate": "prisma generate",
-    "db:push": "prisma db push",
+    "db:push": "prisma db push && npm run db:constraints",
     "db:migrate": "prisma migrate dev",
     "db:seed": "tsx prisma/seed.ts",
     "db:studio": "prisma studio",
@@ -21,7 +21,9 @@
     "manuals:audit": "tsx scripts/manuals/audit-links.ts",
     "manuals:verify": "tsx scripts/manuals/verify.ts",
     "manuals:report": "tsx scripts/manuals/report.ts",
-    "manuals:harvest": "tsx scripts/manuals/harvest.ts"
+    "manuals:harvest": "tsx scripts/manuals/harvest.ts",
+    "db:constraints": "prisma db execute --file prisma/constraints.sql --schema prisma/schema.prisma",
+    "db:rls": "prisma db execute --file prisma/rls.sql --schema prisma/schema.prisma"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"

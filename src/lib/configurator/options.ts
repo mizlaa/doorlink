@@ -117,14 +117,17 @@ export const OPTION_GROUPS: OptionGroup[] = [
     help: 'Indicative colours, not a manufacturer’s range.',
     values: [
       { id: 'charcoal', label: 'Charcoal', hex: '#2C3033' },
+      { id: 'black', label: 'Black', hex: '#1F2124' },
+      { id: 'chalk', label: 'White', hex: '#E8E6E1' },
+      { id: 'sand', label: 'Sandstone', hex: '#C8BBA4' },
+      { id: 'walnut', label: 'Walnut', hex: '#6B4630', description: 'A timber-look finish.' },
       { id: 'slate', label: 'Slate grey', hex: '#585E63' },
       { id: 'pewter', label: 'Pewter', hex: '#8A9098' },
-      { id: 'chalk', label: 'Chalk white', hex: '#E8E6E1' },
-      { id: 'sand', label: 'Sand', hex: '#C8BBA4' },
       { id: 'ironbark', label: 'Ironbark', hex: '#3E3A34' },
       { id: 'forest', label: 'Deep forest', hex: '#2E4034' },
       { id: 'oxide', label: 'Oxide red', hex: '#6E3A32' },
-      { id: 'black', label: 'Satin black', hex: '#1F2124' },
+      // Any colour the customer picks; the hex is kept in `customColour`.
+      { id: 'custom', label: 'Custom' },
     ],
   },
   {
@@ -145,6 +148,18 @@ export const OPTION_GROUPS: OptionGroup[] = [
       { id: 'flush', label: 'Flush', description: 'Flat face, no stamping. The cleanest look.' },
       { id: 'raised', label: 'Raised panel', description: 'Classic stamped rectangles.' },
       { id: 'ribbed', label: 'Ribbed', description: 'Repeating horizontal lines.' },
+      {
+        id: 'carriage',
+        label: 'Carriage',
+        description: 'Vertical boards with trim, like a pair of coach-house doors.',
+        only: ['sectional'],
+      },
+      {
+        id: 'full-view',
+        label: 'Full view',
+        description: 'Glass panels in an aluminium frame.',
+        only: ['sectional'],
+      },
     ],
   },
   {
@@ -165,6 +180,18 @@ export const OPTION_GROUPS: OptionGroup[] = [
       { id: 'none', label: 'None' },
       { id: 'top-row', label: 'Top row', description: 'Glazing across the top section.' },
       { id: 'top-row-wide', label: 'Wide top row', description: 'Full-width glazing across the top.' },
+      {
+        id: 'right-stack',
+        label: 'Side stack, right',
+        description: 'A narrow window in each section, stacked down the right side.',
+        only: ['sectional'],
+      },
+      {
+        id: 'left-stack',
+        label: 'Side stack, left',
+        description: 'A narrow window in each section, stacked down the left side.',
+        only: ['sectional'],
+      },
     ],
   },
   {
@@ -231,6 +258,21 @@ export const OPTION_GROUPS: OptionGroup[] = [
       { id: 'brushed', label: 'Brushed steel', hex: '#B7BBC0' },
       { id: 'black', label: 'Matte black', hex: '#2A2C2E' },
       { id: 'chrome', label: 'Chrome', hex: '#D8DCE0' },
+    ],
+  },
+  {
+    id: 'handles',
+    label: 'Handles',
+    only: GARAGE,
+    values: [
+      { id: 'lock', label: 'Lock handle', description: 'A centre lock and pull.' },
+      {
+        id: 'decorative',
+        label: 'Decorative',
+        description: 'Pull handles and strap hinges, the coach-house look.',
+        only: ['sectional', 'tilt'],
+      },
+      { id: 'none', label: 'None', description: 'A clean face. The opener does the lifting.' },
     ],
   },
   {
@@ -329,11 +371,14 @@ export const OPTION_GROUPS: OptionGroup[] = [
 export type DoorSpec = {
   productType: ProductType
   colour: string
+  /** The colour when `colour` is 'custom': "#RRGGBB". */
+  customColour: string
   finish: string
   panelProfile: string
   panelCount: string
   windows: string
   hardware: string
+  handles: string
   insulation: string
   opener: string
   infill: string
@@ -351,11 +396,13 @@ export type DoorSpec = {
 export const DEFAULT_SPEC: DoorSpec = {
   productType: 'sectional',
   colour: 'charcoal',
+  customColour: '#2C3033',
   finish: 'satin',
   panelProfile: 'raised',
   panelCount: '4',
   windows: 'top-row',
   hardware: 'brushed',
+  handles: 'lock',
   insulation: 'backed',
   opener: 'belt',
   infill: 'slats',
@@ -461,7 +508,82 @@ export function specForType(spec: DoorSpec, productType: ProductType): DoorSpec 
   const brandFits = groupsFor(productType)
     .find((group) => group.id === 'motorBrand')
     ?.values.some((value) => value.id === next.motorBrand)
-  return brandFits === false ? { ...next, motorBrand: 'any' } : next
+  // Likewise a profile, window layout or handle only a sectional door has.
+  return parseSpec(brandFits === false ? { ...next, motorBrand: 'any' } : next)
+}
+
+/**
+ * The four door looks the designer leads with. Each is a starting point
+ * over the detailed options, not a separate product: choosing one sets the
+ * panel profile, windows and handles, and the customer can still change
+ * any of them.
+ */
+export type DoorStyleId = 'modern' | 'traditional' | 'carriage' | 'full-view'
+
+export const DOOR_STYLES: Array<{
+  id: DoorStyleId
+  label: string
+  description: string
+  set: Pick<DoorSpec, 'panelProfile' | 'windows' | 'handles'>
+}> = [
+  {
+    id: 'modern',
+    label: 'Modern',
+    description: 'Flush horizontal panels with a stack of slim windows.',
+    set: { panelProfile: 'flush', windows: 'right-stack', handles: 'none' },
+  },
+  {
+    id: 'traditional',
+    label: 'Traditional',
+    description: 'Raised panels with a row of windows across the top.',
+    set: { panelProfile: 'raised', windows: 'top-row', handles: 'lock' },
+  },
+  {
+    id: 'carriage',
+    label: 'Carriage',
+    description: 'Coach-house boards, trim, handles and hinges.',
+    set: { panelProfile: 'carriage', windows: 'top-row', handles: 'decorative' },
+  },
+  {
+    id: 'full-view',
+    label: 'Full View',
+    description: 'Glass panels in a slim aluminium frame.',
+    set: { panelProfile: 'full-view', windows: 'none', handles: 'none' },
+  },
+]
+
+/** Which of the four looks a sectional door currently has, from its profile. */
+export function doorStyleOf(spec: Pick<DoorSpec, 'productType' | 'panelProfile'>): DoorStyleId | null {
+  if (spec.productType !== 'sectional') return null
+  if (spec.panelProfile === 'raised') return 'traditional'
+  if (spec.panelProfile === 'carriage') return 'carriage'
+  if (spec.panelProfile === 'full-view') return 'full-view'
+  return 'modern'
+}
+
+export function applyDoorStyle(spec: DoorSpec, style: DoorStyleId): DoorSpec {
+  const preset = DOOR_STYLES.find((candidate) => candidate.id === style)
+  if (!preset) return spec
+  const sectional = spec.productType === 'sectional' ? spec : specForType(spec, 'sectional')
+  return parseSpec({ ...sectional, ...preset.set })
+}
+
+/**
+ * Where the designer starts: the door in the approved design, a charcoal
+ * double sectional door with flush panels and a stack of slim windows on
+ * the right. `DEFAULT_SPEC` stays the fallback for stored designs.
+ */
+export const DESIGNER_START_SPEC: DoorSpec = {
+  ...DEFAULT_SPEC,
+  colour: 'charcoal',
+  finish: 'matte',
+  panelProfile: 'flush',
+  panelCount: '4',
+  windows: 'right-stack',
+  handles: 'none',
+  hardware: 'black',
+  widthMm: 4800,
+  heightMm: 2100,
 }
 
 export function groupsFor(productType: ProductType): OptionGroup[] {
@@ -478,6 +600,23 @@ export function optionLabel(groupId: string, valueId: string): string {
 
 export function colourHex(colourId: string): string {
   return OPTION_GROUPS.find((g) => g.id === 'colour')?.values.find((v) => v.id === colourId)?.hex ?? '#2C3033'
+}
+
+const HEX_COLOUR = /^#[0-9a-fA-F]{6}$/
+
+export function isHexColour(value: unknown): value is string {
+  return typeof value === 'string' && HEX_COLOUR.test(value)
+}
+
+/** The colour a design is actually drawn in, custom colours included. */
+export function specColourHex(spec: Pick<DoorSpec, 'colour' | 'customColour'>): string {
+  if (spec.colour === 'custom') return isHexColour(spec.customColour) ? spec.customColour.toUpperCase() : '#2C3033'
+  return colourHex(spec.colour)
+}
+
+/** "Charcoal", or "Custom #A1B2C3" for a picked colour. */
+export function specColourLabel(spec: Pick<DoorSpec, 'colour' | 'customColour'>): string {
+  return spec.colour === 'custom' ? `Custom ${specColourHex(spec)}` : optionLabel('colour', spec.colour)
 }
 
 export function hardwareHex(hardwareId: string): string {
@@ -502,7 +641,14 @@ export function parseSpec(raw: unknown): DoorSpec {
   const pick = (groupId: string, fallback: string): string => {
     const group = OPTION_GROUPS.find((candidate) => candidate.id === groupId)
     const value = input[groupId as keyof DoorSpec]
-    return typeof value === 'string' && group?.values.some((option) => option.id === value) ? value : fallback
+    if (typeof value !== 'string') return fallback
+    const option = group?.values.find((candidate) => candidate.id === value)
+    if (!option) return fallback
+    // A value that belongs to another product type (a carriage profile on a
+    // tilt door) falls back, but only when the group applies to this type.
+    const applies = !group?.only || group.only.includes(productType)
+    if (applies && option.only && !option.only.includes(productType)) return fallback
+    return value
   }
 
   const limits = sizeLimitsFor(productType)
@@ -517,11 +663,13 @@ export function parseSpec(raw: unknown): DoorSpec {
   return {
     productType,
     colour: pick('colour', DEFAULT_SPEC.colour),
+    customColour: isHexColour(input.customColour) ? input.customColour.toUpperCase() : DEFAULT_SPEC.customColour,
     finish: pick('finish', DEFAULT_SPEC.finish),
     panelProfile: pick('panelProfile', DEFAULT_SPEC.panelProfile),
     panelCount: pick('panelCount', DEFAULT_SPEC.panelCount),
     windows: pick('windows', DEFAULT_SPEC.windows),
     hardware: pick('hardware', DEFAULT_SPEC.hardware),
+    handles: pick('handles', DEFAULT_SPEC.handles),
     insulation: pick('insulation', DEFAULT_SPEC.insulation),
     opener: pick('opener', DEFAULT_SPEC.opener),
     infill: pick('infill', DEFAULT_SPEC.infill),
@@ -546,7 +694,7 @@ export function describeSpec(spec: DoorSpec): Array<{ label: string; value: stri
   const rows: Array<{ label: string; value: string }> = [
     { label: 'Door type', value: type?.label ?? spec.productType },
     { label: 'Opening', value: `${spec.widthMm} × ${spec.heightMm} mm` },
-    { label: 'Colour', value: optionLabel('colour', spec.colour) },
+    { label: 'Colour', value: specColourLabel(spec) },
     { label: 'Finish', value: optionLabel('finish', spec.finish) },
   ]
 
@@ -559,6 +707,7 @@ export function describeSpec(spec: DoorSpec): Array<{ label: string; value: stri
   }
 
   rows.push({ label: 'Hardware', value: optionLabel('hardware', spec.hardware) })
+  rows.push({ label: 'Handles', value: optionLabel('handles', spec.handles) })
   rows.push({ label: 'Insulation', value: optionLabel('insulation', spec.insulation) })
   rows.push({ label: 'Opener', value: optionLabel('opener', spec.opener) })
   return rows
@@ -587,7 +736,7 @@ function describeOutdoor(
     rows.push({ label: 'Opening', value: `${spec.widthMm} × ${spec.heightMm} mm` })
   }
 
-  rows.push({ label: 'Colour', value: optionLabel('colour', spec.colour) })
+  rows.push({ label: 'Colour', value: specColourLabel(spec) })
   rows.push({ label: 'Finish', value: optionLabel('finish', spec.finish) })
 
   const groupRow = (groupId: keyof DoorSpec, label: string) => {

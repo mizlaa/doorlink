@@ -1,6 +1,6 @@
 import type { DoorKind, DoorLook } from '@/components/three/GarageDoorScene'
 import type { GateInfill, GateKind, GateLook, SwingMotorStyle } from '@/components/three/GateScene'
-import { colourHex, DEFAULT_SPEC, familyOf, hardwareHex, isMotorised, type DoorSpec } from './options'
+import { DEFAULT_SPEC, familyOf, hardwareHex, isMotorised, specColourHex, type DoorSpec } from './options'
 
 /**
  * Turns a saved spec into the handful of numbers the 3D scene needs.
@@ -16,6 +16,11 @@ const FINISH_MATERIAL: Record<string, { roughness: number; metalness: number }> 
   gloss: { roughness: 0.18, metalness: 0.3 },
   woodgrain: { roughness: 0.74, metalness: 0.02 },
 }
+
+// The older renderer draws three profiles and three window layouts; the
+// newer ones fall back to their nearest look there.
+const V1_PROFILE: Record<string, string> = { flush: 'flush', raised: 'raised', ribbed: 'ribbed', carriage: 'raised', 'full-view': 'flush' }
+const V1_WINDOWS: Record<string, string> = { none: 'none', 'top-row': 'top-row', 'top-row-wide': 'top-row-wide', 'right-stack': 'top-row', 'left-stack': 'top-row' }
 
 const WIDTH_SCALE_MIN = 0.85
 const WIDTH_SCALE_MAX = 1.45
@@ -45,11 +50,11 @@ export function lookFromSpec(spec: DoorSpec): DoorLook {
     finish: spec.finish,
     widthScale,
     heightScale,
-    color: colourHex(spec.colour),
+    color: specColourHex(spec),
     hardwareColor: hardwareHex(spec.hardware),
     panelCount,
-    profile: kind === 'roller' ? 'ribbed' : spec.panelProfile,
-    windows: kind === 'roller' ? 'none' : spec.windows,
+    profile: kind === 'roller' ? 'ribbed' : V1_PROFILE[spec.panelProfile] ?? 'flush',
+    windows: kind === 'roller' ? 'none' : V1_WINDOWS[spec.windows] ?? 'none',
     roughness: material.roughness,
     metalness: material.metalness,
   }
@@ -74,7 +79,7 @@ export function gateLookFromSpec(spec: DoorSpec): GateLook {
     kind: GATE_KIND[spec.productType] ?? 'swing',
     widthM: spec.widthMm / 1000,
     heightM: spec.heightMm / 1000,
-    color: colourHex(spec.colour),
+    color: specColourHex(spec),
     hardwareColor: hardwareHex(spec.hardware),
     finish: spec.finish,
     // Powder-coated metal reads a touch more metallic than a painted door.

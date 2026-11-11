@@ -37,6 +37,8 @@ export interface DoorLook {
   heightMm?: number
   insulation?: string
   opener?: string
+  /** 'lock' (default), 'decorative' or 'none'. */
+  handles?: string
 }
 
 export const DEFAULT_LOOK: DoorLook = {

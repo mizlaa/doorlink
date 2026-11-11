@@ -96,6 +96,7 @@ export const Landscape = memo(function Landscape({
   tufts,
   foliageShadows,
   letterbox = true,
+  bins = true,
 }: {
   layout: HouseLayout
   m: HouseMaterials
@@ -103,6 +104,8 @@ export const Landscape = memo(function Landscape({
   foliageShadows: boolean
   /** The world scene puts a gate where the letterbox stands. */
   letterbox?: boolean
+  /** Wheelie bins beside the garage. The designer's tidy street view leaves them out. */
+  bins?: boolean
 }) {
   const { doorW, garageW, garageD, houseW, houseFront } = layout
   const driveW = Math.max(doorW + 0.8, 3.2)
@@ -165,7 +168,7 @@ export const Landscape = memo(function Landscape({
   }, [driveW])
 
   return (
-    <MergeStatic bakeKey={`${doorW}:${letterbox}`}>
+    <MergeStatic bakeKey={`${doorW}:${letterbox}:${bins}`}>
     <group>
       {/* Lawn everywhere, the hard surfaces on top of it */}
       <mesh geometry={groundGeometry} material={m.lawn} receiveShadow />
@@ -195,8 +198,8 @@ export const Landscape = memo(function Landscape({
       <ColorbondFence from={[rightFence, -0.4]} to={[rightFence, -20]} m={m} />
       <ColorbondFence from={[leftFence, houseFront - 0.5]} to={[leftFence, -20]} m={m} />
       <ColorbondFence from={[leftFence, -20]} to={[rightFence, -20]} m={m} />
-      <WheelieBin position={[garageW / 2 + 0.62, 0, -1.4]} lid="#c8302d" m={m} />
-      <WheelieBin position={[garageW / 2 + 0.62, 0, -2.25]} lid="#e8b923" m={m} />
+      {bins && <WheelieBin position={[garageW / 2 + 0.62, 0, -1.4]} lid="#c8302d" m={m} />}
+      {bins && <WheelieBin position={[garageW / 2 + 0.62, 0, -2.25]} lid="#e8b923" m={m} />}
       {/* Brick letterbox pillar by the driveway */}
       {letterbox && <group position={[-driveW / 2 - 0.55, 0, FRONT_BOUNDARY - 0.3]}>
         <Slab size={[0.46, 1.15, 0.46]} position={[0, 0.575, 0]} material={m.brick} />

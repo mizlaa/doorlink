@@ -158,12 +158,15 @@ function sectionGeometry(width: number, height: number, thickness: number, profi
 }
 
 /** Raised (embossed) fields on a section, as one merged mesh. */
-function raisedFieldsGeometry(width: number, height: number, rows: number) {
-  const across = Math.max(2, Math.round(width / 0.62))
+function raisedFieldsGeometry(width: number, height: number, rows: number, span?: [number, number]) {
+  // `span` keeps the fields clear of a side window stack.
+  const x0 = span ? span[0] : -width / 2
+  const usable = span ? span[1] - span[0] : width
+  const across = Math.max(2, Math.round(usable / 0.62))
   const gap = 0.09
   const margin = 0.14
   const bevel = 0.022
-  const fw = (width - margin * 2 - gap * (across - 1)) / across
+  const fw = (usable - margin * 2 - gap * (across - 1)) / across
   const fh = (height - 0.1 * (rows + 1)) / rows
   const parts: THREE.BufferGeometry[] = []
   for (let r = 0; r < rows; r++) {
@@ -184,7 +187,7 @@ function raisedFieldsGeometry(width: number, height: number, rows: number) {
         bevelSegments: 1,
         UVGenerator: extrudeUV,
       })
-      const x = -width / 2 + margin + fw / 2 + i * (fw + gap)
+      const x = x0 + margin + fw / 2 + i * (fw + gap)
       const y = -height / 2 + 0.1 + fh / 2 + r * (fh + 0.1)
       g.translate(x, y, 0)
       parts.push(g)
@@ -243,6 +246,118 @@ const glassMaterial = new THREE.MeshPhysicalMaterial({
   clearcoatRoughness: 0.02,
 })
 
+/** Obscure glazing for a full-view door: light gets through, the garage's contents don't show. */
+const frostedGlassMaterial = new THREE.MeshPhysicalMaterial({
+  color: '#3b4a54',
+  roughness: 0.16,
+  metalness: 0.15,
+  envMapIntensity: 2.2,
+  clearcoat: 1,
+  clearcoatRoughness: 0.08,
+  side: THREE.DoubleSide,
+})
+
+/** The shadow line between boards on a carriage door. */
+const grooveMaterial = new THREE.MeshBasicMaterial({ color: '#000000', transparent: true, opacity: 0.32, depthWrite: false })
+
+/** One framed lite, as extruded frame plus pane, centred on (x, 0). */
+function liteGeometries(x: number, gw: number, gh: number) {
+  const f = 0.03
+  const outer = new THREE.Shape()
+  outer.moveTo(x - gw / 2 - f, -gh / 2 - f)
+  outer.lineTo(x + gw / 2 + f, -gh / 2 - f)
+  outer.lineTo(x + gw / 2 + f, gh / 2 + f)
+  outer.lineTo(x - gw / 2 - f, gh / 2 + f)
+  outer.closePath()
+  const hole = new THREE.Path()
+  hole.moveTo(x - gw / 2, -gh / 2)
+  hole.lineTo(x - gw / 2, gh / 2)
+  hole.lineTo(x + gw / 2, gh / 2)
+  hole.lineTo(x + gw / 2, -gh / 2)
+  hole.closePath()
+  outer.holes.push(hole)
+  const frames = new THREE.ExtrudeGeometry(outer, { depth: 0.004, bevelEnabled: true, bevelThickness: 0.006, bevelSize: 0.006, bevelSegments: 2, UVGenerator: extrudeUV })
+  const glass = new THREE.PlaneGeometry(gw, gh)
+  glass.translate(x, 0, -0.002)
+  return { frames, glass }
+}
+
+/** Where a side stack's lite sits on a section, and how big it is. */
+export function stackLite(width: number, sectionH: number, side: 1 | -1) {
+  const gw = THREE.MathUtils.clamp(width * 0.2, 0.62, 1.0)
+  const gh = Math.min(0.3, sectionH * 0.46)
+  const x = side * (width / 2 - 0.3 - gw / 2)
+  return { x, gw, gh }
+}
+
+/** How many bays (pairs of leaves) a carriage door is drawn with. */
+function carriageBays(width: number) {
+  return width > 3.4 ? 2 : 1
+}
+
+/**
+ * Carriage-door trim for one section: stiles at every leaf edge, a rail
+ * along the bottom of the door, the top, and under the window row, and the
+ * shadow lines between vertical boards.
+ */
+function carriageGeometries(width: number, height: number, index: number, count: number, avoid: [number, number] | null, boards: boolean) {
+  const leaves = carriageBays(width) * 2
+  const leafW = width / leaves
+  const tb = 0.1
+  const proud = 0.012
+  const trim: THREE.BufferGeometry[] = []
+  const grooves: THREE.BufferGeometry[] = []
+  const box = (w: number, h: number, x: number, y: number) => {
+    const g = new THREE.BoxGeometry(w, h, proud)
+    g.translate(x, y, proud / 2)
+    return g
+  }
+  for (let k = 0; k < leaves; k++) {
+    const x0 = -width / 2 + k * leafW
+    trim.push(box(tb, height, x0 + tb / 2, 0), box(tb, height, x0 + leafW - tb / 2, 0))
+    const inner = leafW - tb * 2
+    const cx = x0 + leafW / 2
+    if (index === 0) trim.push(box(inner, tb, cx, -height / 2 + tb / 2))
+    if (index === count - 1) trim.push(box(inner, tb, cx, height / 2 - tb / 2), box(inner, tb, cx, -height / 2 + tb / 2))
+    if (boards) {
+      const n = Math.max(2, Math.round(inner / 0.13))
+      for (let j = 1; j < n; j++) {
+        const x = x0 + tb + (inner * j) / n
+        if (avoid && x > avoid[0] && x < avoid[1]) continue
+        const g = new THREE.BoxGeometry(0.006, height, 0.001)
+        g.translate(x, 0, 0.0012)
+        grooves.push(g)
+      }
+    }
+  }
+  const result = { trim: mergeGeometries(trim), grooves: grooves.length ? mergeGeometries(grooves) : null }
+  trim.forEach((g) => g.dispose())
+  grooves.forEach((g) => g.dispose())
+  return result
+}
+
+/** A full-view section: an aluminium frame with one pane behind it. */
+function fullViewGeometries(width: number, height: number, thickness: number) {
+  const rail = 0.045
+  const stile = 0.05
+  const lites = Math.max(2, Math.round(width / 1.2))
+  const parts: THREE.BufferGeometry[] = []
+  const box = (w: number, h: number, x: number, y: number) => {
+    const g = new THREE.BoxGeometry(w, h, thickness)
+    g.translate(x, y, 0)
+    return g
+  }
+  parts.push(box(width, rail, 0, height / 2 - rail / 2), box(width, rail, 0, -height / 2 + rail / 2))
+  for (let i = 0; i <= lites; i++) {
+    const x = -width / 2 + stile / 2 + ((width - stile) * i) / lites
+    parts.push(box(stile, height - rail * 2, x, 0))
+  }
+  const frame = mergeGeometries(parts)
+  parts.forEach((g) => g.dispose())
+  const glass = new THREE.PlaneGeometry(width - stile, height - rail * 2)
+  return { frame, glass }
+}
+
 function SectionFace({
   width,
   height,
@@ -251,25 +366,51 @@ function SectionFace({
   material,
   windows,
   rows = 1,
+  index = 0,
+  count = 1,
 }: {
   width: number
   height: number
   thickness: number
   look: DoorLook
   material: THREE.Material
+  /** This section carries the top row of windows, when the door has one. */
   windows: boolean
   rows?: number
+  /** Which section this is, from the floor, and how many there are. */
+  index?: number
+  count?: number
 }) {
-  const body = useMemo(() => sectionGeometry(width, height, thickness, look.profile), [width, height, thickness, look.profile])
-  const raised = useMemo(
-    () => (look.profile === 'raised' && !windows ? raisedFieldsGeometry(width, height, rows) : null),
-    [look.profile, width, height, windows, rows]
+  const fullView = look.profile === 'full-view'
+  const carriage = look.profile === 'carriage'
+  const stackSide: 1 | -1 | 0 = fullView ? 0 : look.windows === 'right-stack' ? 1 : look.windows === 'left-stack' ? -1 : 0
+  const topRow = windows && !fullView && (look.windows === 'top-row' || look.windows === 'top-row-wide')
+  const lite = useMemo(() => (stackSide ? stackLite(width, height, stackSide) : null), [stackSide, width, height])
+
+  const body = useMemo(
+    () => (fullView ? null : sectionGeometry(width, height, thickness, carriage ? 'flush' : look.profile)),
+    [fullView, carriage, width, height, thickness, look.profile]
   )
-  const glazing = useMemo(
-    () => (windows && look.windows !== 'none' ? windowGeometries(width, Math.min(height, 0.62), look.windows) : null),
-    [windows, look.windows, width, height]
+  const raised = useMemo(() => {
+    if (look.profile !== 'raised' || topRow) return null
+    if (!lite) return raisedFieldsGeometry(width, height, rows)
+    const edge = lite.x - Math.sign(lite.x) * (lite.gw / 2 + 0.16)
+    return raisedFieldsGeometry(width, height, rows, lite.x > 0 ? [-width / 2, edge] : [edge, width / 2])
+  }, [look.profile, width, height, topRow, rows, lite])
+  const glazing = useMemo(() => {
+    if (topRow) return windowGeometries(width, Math.min(height, 0.62), look.windows)
+    if (lite) return liteGeometries(lite.x, lite.gw, lite.gh)
+    return null
+  }, [topRow, lite, look.windows, width, height])
+  const trim = useMemo(
+    () =>
+      carriage
+        ? carriageGeometries(width, height, index, count, lite ? [lite.x - lite.gw / 2 - 0.06, lite.x + lite.gw / 2 + 0.06] : null, !topRow)
+        : null,
+    [carriage, width, height, index, count, lite, topRow]
   )
-  useEffect(() => () => body.dispose(), [body])
+  const glazed = useMemo(() => (fullView ? fullViewGeometries(width, height, thickness) : null), [fullView, width, height, thickness])
+  useEffect(() => () => body?.dispose(), [body])
   useEffect(() => () => raised?.dispose(), [raised])
   useEffect(
     () => () => {
@@ -278,17 +419,108 @@ function SectionFace({
     },
     [glazing]
   )
-  const glazingY = rows > 1 ? height / 2 - Math.min(height, 0.62) / 2 - 0.08 : 0
+  useEffect(
+    () => () => {
+      trim?.trim.dispose()
+      trim?.grooves?.dispose()
+    },
+    [trim]
+  )
+  useEffect(
+    () => () => {
+      glazed?.frame.dispose()
+      glazed?.glass.dispose()
+    },
+    [glazed]
+  )
+  const glazingY = topRow && rows > 1 ? height / 2 - Math.min(height, 0.62) / 2 - 0.08 : 0
   return (
     <group>
-      <mesh geometry={body} material={material} castShadow receiveShadow />
+      {body && <mesh geometry={body} material={material} castShadow receiveShadow />}
+      {glazed && (
+        <>
+          <mesh geometry={glazed.frame} material={material} castShadow receiveShadow />
+          <mesh geometry={glazed.glass} material={frostedGlassMaterial} castShadow />
+        </>
+      )}
       {raised && <mesh geometry={raised} material={material} position={[0, 0, thickness / 2 - 0.004]} castShadow receiveShadow />}
+      {trim && (
+        <group position={[0, 0, thickness / 2]}>
+          <mesh geometry={trim.trim} material={material} castShadow receiveShadow />
+          {trim.grooves && <mesh geometry={trim.grooves} material={grooveMaterial} />}
+        </group>
+      )}
       {glazing && (
         <group position={[0, glazingY, thickness / 2]}>
           <mesh geometry={glazing.frames} material={material} castShadow />
           <mesh geometry={glazing.glass} material={glassMaterial} />
         </group>
       )}
+    </group>
+  )
+}
+
+/**
+ * What sits on the face of one section: the centre lock handle, or the
+ * coach-house set (a pair of pulls where the leaves meet, strap hinges at
+ * the top and bottom of each leaf's outer edge), or nothing.
+ */
+function SectionHardware({
+  look,
+  width,
+  height,
+  index,
+  count,
+  material,
+}: {
+  look: DoorLook
+  width: number
+  height: number
+  index: number
+  count: number
+  material: THREE.Material
+}) {
+  const style = look.handles ?? 'lock'
+  if (style === 'none' || look.profile === 'full-view') return null
+  if (style !== 'decorative') return index === Math.min(1, count - 1) ? <LockHandle material={material} /> : null
+  const bays = carriageBays(width)
+  const bayW = width / bays
+  // The section whose middle is nearest a comfortable hand height.
+  const handleIndex = Math.min(count - 1, Math.max(0, Math.round(1.0 / height - 0.5)))
+  const hinge = index === 0 || index === count - 1
+  return (
+    <group>
+      {Array.from({ length: bays }, (_, b) => {
+        const cx = -width / 2 + bayW * (b + 0.5)
+        return (
+          <group key={b}>
+            {index === handleIndex &&
+              [-1, 1].map((side) => (
+                <group key={side} position={[cx + side * 0.085, 0, 0.012]}>
+                  <mesh material={material} position={[0, 0, 0.022]} castShadow>
+                    <boxGeometry args={[0.022, Math.min(0.3, height * 0.6), 0.02]} />
+                  </mesh>
+                  {[-1, 1].map((end) => (
+                    <mesh key={end} material={material} position={[0, end * Math.min(0.12, height * 0.24), 0.008]}>
+                      <boxGeometry args={[0.04, 0.05, 0.016]} />
+                    </mesh>
+                  ))}
+                </group>
+              ))}
+            {hinge &&
+              [-1, 1].map((side) => (
+                <group key={side} position={[cx + side * (bayW / 2 - 0.03), 0, 0.014]}>
+                  <mesh material={material} position={[-side * 0.17, 0, 0]} castShadow>
+                    <boxGeometry args={[0.34, 0.04, 0.008]} />
+                  </mesh>
+                  <mesh material={material} position={[-side * 0.36, 0, 0]} rotation={[0, 0, Math.PI / 4]}>
+                    <boxGeometry args={[0.05, 0.05, 0.008]} />
+                  </mesh>
+                </group>
+              ))}
+          </group>
+        )
+      })}
     </group>
   )
 }
@@ -520,12 +752,10 @@ export function SectionalDoor({
     <group>
       {Array.from({ length: n }, (_, i) => (
         <group key={`${n}-${i}`} ref={(el) => (panels.current[i] = el)}>
-          <SectionFace width={DW} height={ph} thickness={thickness} look={look} material={material} windows={i === n - 1} />
-          {i === Math.min(1, n - 1) && (
-            <group position={[0, 0, thickness / 2]}>
-              <LockHandle material={hardware} />
-            </group>
-          )}
+          <SectionFace width={DW} height={ph} thickness={thickness} look={look} material={material} windows={i === n - 1} index={i} count={n} />
+          <group position={[0, 0, thickness / 2]}>
+            <SectionHardware look={look} width={DW} height={ph} index={i} count={n} material={hardware} />
+          </group>
           {/* Hinges on the inside face and rollers into the tracks */}
           {[-DW / 2 + 0.06, -DW / 4, 0, DW / 4, DW / 2 - 0.06].map((x) => (
             <mesh key={x} position={[x, ph / 2, -thickness / 2 - 0.006]} material={m.steel}>

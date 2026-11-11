@@ -1,61 +1,59 @@
-import Link from 'next/link'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
+import { cookies } from 'next/headers'
 import { getSession } from '@/lib/auth'
-import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { parseSpec } from '@/lib/configurator/options'
 import { aiImagesAvailable } from '@/lib/ai/design-image'
-import { FEATURE_3D_V2 } from '@/lib/feature-flags'
+import { LOCATION_COOKIE, parseLocationCookie, readLocation } from '@/lib/location'
 import { loadMotorCandidates } from '@/lib/motors/catalogue'
-import { Configurator } from './Configurator'
+import { Designer } from './Designer'
 
 export const metadata: Metadata = {
-  title: 'Design your door, gate or shutter',
+  title: 'Design your garage door',
   description:
-    'Design a garage door, gate, fence or window shutter, see it in 3D, match a motor to it, and get quotes from technicians.',
+    'Design a garage door, gate, fence or shutter on a house in 3D, compare local companies’ own prices and request a free on-site measure.',
   alternates: { canonical: '/configure' },
 }
 
-type PageProps = { searchParams: Promise<{ spec?: string }> }
+export const viewport: Viewport = {
+  themeColor: '#0E1A2A',
+  viewportFit: 'cover',
+  width: 'device-width',
+  initialScale: 1,
+}
+
+type PageProps = { searchParams: Promise<{ spec?: string; postcode?: string; suburb?: string }> }
 
 export default async function ConfigurePage({ searchParams }: PageProps) {
   const params = await searchParams
-  const { spec } = params
   const session = await getSession()
 
-  // A spec can arrive in the URL (from a shared link or a back button).
-  // It is parsed through the same validator as a stored one — nothing
-  // from a query string is trusted to be a well-formed configuration.
+  // A design can arrive in the URL (a shared link, coming back from sign-in).
+  // It goes through the same validator as a stored one: nothing from a
+  // query string is trusted to be a well-formed design.
   let initialSpec
-  if (spec) {
+  if (params.spec) {
     try {
-      initialSpec = parseSpec(JSON.parse(spec))
+      initialSpec = parseSpec(JSON.parse(params.spec))
     } catch {
       initialSpec = undefined
     }
   }
 
-  const previewAvailable = aiImagesAvailable()
+  const store = await cookies()
+  const initialLocation =
+    (params.postcode ? readLocation({ postcode: params.postcode, suburb: params.suburb }) : null) ??
+    parseLocationCookie(store.get(LOCATION_COOKIE)?.value)
 
   const motors = await loadMotorCandidates()
 
   return (
-    <div className="mx-auto w-full min-w-0 max-w-shell overflow-x-clip px-4 py-10 sm:py-14">
-      <header className="mb-6 max-w-prose">
-        <h1 className="text-2xl font-semibold tracking-tight text-graphite">Design</h1>
-        <p className="mt-1 text-graphite-soft">Pick a style and size, then get quotes.</p>
-        {FEATURE_3D_V2 && (
-          <Link href="/doorlink" className="mt-2 inline-block text-sm font-medium text-signal hover:text-signal-hover">
-            Explore the Doorlink property
-          </Link>
-        )}
-      </header>
-
-      <Configurator
-        signedIn={Boolean(session)}
-        motors={motors}
-        initialSpec={initialSpec}
-        previewAvailable={previewAvailable}
-      />
-    </div>
+    <Designer
+      signedIn={Boolean(session)}
+      role={session?.role ?? null}
+      motors={motors}
+      initialSpec={initialSpec}
+      initialLocation={initialLocation}
+      previewAvailable={aiImagesAvailable()}
+    />
   )
 }

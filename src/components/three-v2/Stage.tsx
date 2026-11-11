@@ -60,6 +60,7 @@ export function Stage({
   focusFollow = false,
   haze,
   fitAspect = false,
+  rig,
   children,
 }: {
   tier: Tier
@@ -90,6 +91,8 @@ export function Stage({
   /** Fog start and end, for a hazier, deeper background. */
   haze?: [number, number]
   fitAspect?: boolean
+  /** A camera controller to use instead of the standard orbit rig (the designer's 2D/3D viewer). */
+  rig?: ReactNode
   children: ReactNode
 }) {
   const settings = TIERS[tier]
@@ -160,16 +163,18 @@ export function Stage({
       </Suspense>
       {composer && <Effects settings={settings} focus={focus} focusFollow={focusFollow} dof={dof} />}
       {focusFollow && <FollowFocus effect={dof} />}
-      <CameraRig
-        bus={bus}
-        views={views}
-        initial={initialView}
-        minDistance={minDistance}
-        maxDistance={maxDistance}
-        maxPolar={maxPolar}
-        blockers={blockers}
-        fitAspect={fitAspect}
-      />
+      {rig ?? (
+        <CameraRig
+          bus={bus}
+          views={views}
+          initial={initialView}
+          minDistance={minDistance}
+          maxDistance={maxDistance}
+          maxPolar={maxPolar}
+          blockers={blockers}
+          fitAspect={fitAspect}
+        />
+      )}
     </Canvas>
   )
 }

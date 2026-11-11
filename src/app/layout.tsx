@@ -8,6 +8,7 @@ import { MobileTabBar } from '@/components/layout/MobileTabBar'
 import { InstallPrompt } from '@/components/layout/InstallPrompt'
 import { ServiceWorkerRegister } from '@/components/layout/ServiceWorkerRegister'
 import { NavigationSpinner } from '@/components/layout/NavigationSpinner'
+import { SiteChrome } from '@/components/layout/SiteChrome'
 import { toJsonLd } from '@/lib/json-ld'
 import './globals.css'
 
@@ -73,21 +74,27 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="flex min-h-screen flex-col overflow-x-hidden bg-paper font-sans text-graphite antialiased">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: toJsonLd(websiteJsonLd) }} />
         <SkipLink />
-        <Suspense fallback={<div className="h-16 border-b border-line" role="status" aria-label="Loading navigation" />}>
-          <Header />
-        </Suspense>
+        <SiteChrome>
+          <Suspense fallback={<div className="h-16 border-b border-line" role="status" aria-label="Loading navigation" />}>
+            <Header />
+          </Suspense>
+        </SiteChrome>
         <main id="main" className="flex-1">
           {children}
         </main>
-        <Footer />
-        <Suspense fallback={null}>
-          <MobileTabBar />
-        </Suspense>
+        <SiteChrome>
+          <Footer />
+          <Suspense fallback={null}>
+            <MobileTabBar />
+          </Suspense>
+        </SiteChrome>
         {/* useSearchParams needs a boundary, or every page would opt out of static rendering. */}
         <Suspense fallback={null}>
           <NavigationSpinner />
         </Suspense>
-        <InstallPrompt />
+        <SiteChrome>
+          <InstallPrompt />
+        </SiteChrome>
         <ServiceWorkerRegister />
       </body>
     </html>
