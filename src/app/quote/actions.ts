@@ -1,5 +1,6 @@
 'use server'
 
+import { limitFor, tooManyMessage } from '@/lib/rate-limit'
 import { redirect } from 'next/navigation'
 import { z } from 'zod'
 import { getSession, type Session } from '@/lib/auth'
@@ -25,6 +26,8 @@ const schema = z.object({
  * here; every price comes from the businesses' own rules on the server.
  */
 export async function compareQuotesAction(_prev: CompareState, formData: FormData): Promise<CompareState> {
+  const limited = await limitFor('localQuotes')
+  if (!limited.ok) return { error: tooManyMessage(limited) }
   let session: Session
   try {
     session = requirePermission(await getSession(), 'quote:request')

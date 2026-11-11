@@ -50,6 +50,8 @@ const nextConfig = {
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           ...framingHeaders,
           { key: 'Permissions-Policy', value: 'camera=(self), geolocation=(self), microphone=()' },
+          // HTTPS only, once deployed (browsers ignore this over plain http in development).
+          ...(process.env.NODE_ENV === 'production' ? [{ key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' }] : []),
         ],
       },
     ]

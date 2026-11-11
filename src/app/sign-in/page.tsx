@@ -4,6 +4,8 @@ import { SignInForm } from '@/components/auth/SignInForm'
 import { NotConnected } from '@/components/ui/NotConnected'
 import { isConnected } from '@/lib/integrations'
 import { safeNextPath } from '@/lib/safe-next'
+import { redirect } from 'next/navigation'
+import { getPendingMfaSession } from '@/lib/auth'
 
 export const metadata: Metadata = {
   title: 'Sign in',
@@ -14,6 +16,8 @@ export default async function SignInPage({ searchParams }: { searchParams: Promi
   // say — but only ever to a page on this site.
   const { next: rawNext } = await searchParams
   const next = safeNextPath(rawNext, '')
+  // Password done, code still owed: straight to the code screen.
+  if (await getPendingMfaSession()) redirect(`/account/mfa?next=${encodeURIComponent(next || '/')}`)
   const supabaseAuth = isConnected('auth')
   const devModeAvailable = !supabaseAuth && process.env.NODE_ENV !== 'production'
 
@@ -36,6 +40,13 @@ export default async function SignInPage({ searchParams }: { searchParams: Promi
         )}
       </div>
 
+      {supabaseAuth && (
+        <p className="mt-6 text-sm">
+          <Link href="/forgot-password" className="font-medium text-signal hover:text-signal-hover">
+            Forgot your password?
+          </Link>
+        </p>
+      )}
       <p className="mt-8 text-sm text-zinc-deep">
         No account?{' '}
         <Link href="/register" className="font-medium text-signal hover:text-signal-hover">

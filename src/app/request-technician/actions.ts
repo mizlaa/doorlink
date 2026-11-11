@@ -1,5 +1,6 @@
 'use server'
 
+import { limitFor, tooManyMessage } from '@/lib/rate-limit'
 import { redirect } from 'next/navigation'
 import { z } from 'zod'
 import { LeadStatus, UrgencyLevel } from '@prisma/client'
@@ -48,6 +49,8 @@ export async function createLeadAction(
   _prevState: RequestFormState,
   formData: FormData
 ): Promise<RequestFormState> {
+  const limited = await limitFor('publicForm')
+  if (!limited.ok) return { error: tooManyMessage(limited) }
   const parsed = createLeadSchema.safeParse({
     name: formData.get('name'),
     email: formData.get('email'),

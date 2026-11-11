@@ -1,5 +1,6 @@
 'use server'
 
+import { limitFor, tooManyMessage } from '@/lib/rate-limit'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { safeNextPath } from './safe-next'
@@ -9,7 +10,8 @@ import { prisma } from './prisma'
 import { isDatabaseUnreachable } from './db-errors'
 import { isConnected } from './integrations'
 import { readSignUpBusiness, registerDoorlinkUser } from './register-user'
-import { DEV_SESSION_COOKIE } from './session-cookie'
+import { DEV_SESSION_COOKIE, MFA_COOKIE } from './session-cookie'
+import { afterSignInPath } from './mfa/after-sign-in'
 import { createSupabaseAdminClient } from './supabase/admin'
 import { withSupabaseServerClient } from './supabase/server'
 import { AUTH_UNAVAILABLE_MESSAGE, AuthServiceUnavailableError } from './supabase/auth-service'
@@ -85,7 +87,7 @@ async function supabaseSignInAction(_prevState: SignInState, formData: FormData)
     throw err
   }
 
-  redirect(safeNextPath(formData.get('next')))
+  redirect(await afterSignInPath(parsed.data.email, safeNextPath(formData.get('next'))))
 }
 
 async function supabaseRegisterAction(_prevState: RegisterState, formData: FormData): Promise<RegisterState> {
@@ -154,15 +156,26 @@ async function supabaseSignOutAction(_formData: FormData): Promise<void> {
   await withSupabaseServerClient((supabase) => supabase.auth.signOut())
   const store = await cookies()
   store.delete(DEV_SESSION_COOKIE)
+  store.delete(MFA_COOKIE)
   redirect('/')
 }
 
 export async function signInAction(prev: SignInState, formData: FormData): Promise<SignInState> {
+  // Per network and per account, so neither guessing one password nor spraying many accounts gets far.
+  const byClient = await limitFor('signIn')
+  if (!byClient.ok) return { error: tooManyMessage(byClient) }
+  const email = String(formData.get('email') ?? '').trim().toLowerCase()
+  if (email) {
+    const byAccount = await limitFor('signInPerAccount', email)
+    if (!byAccount.ok) return { error: tooManyMessage(byAccount) }
+  }
   if (isConnected('auth')) return supabaseSignInAction(prev, formData)
   return devSignInAction(prev, formData)
 }
 
 export async function registerAction(prev: RegisterState, formData: FormData): Promise<RegisterState> {
+  const limited = await limitFor('register')
+  if (!limited.ok) return { error: tooManyMessage(limited) }
   if (isConnected('auth')) return supabaseRegisterAction(prev, formData)
   return devRegisterAction(prev, formData)
 }

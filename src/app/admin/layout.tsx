@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { Role } from '@prisma/client'
 import { getSession } from '@/lib/auth'
+import { adminMfaRequired } from '@/lib/mfa/policy'
+import { prisma } from '@/lib/prisma'
 import { can, type Permission } from '@/lib/rbac'
 import { tradeSubscriptionAccess } from '@/lib/trade-subscription'
 import { TradeSubscriptionPaywall } from '@/components/subscription/TradeSubscriptionPaywall'
@@ -43,6 +45,11 @@ export default async function AdminLayout({ children }: { children: ReactNode })
   const session = await getSession()
   if (!session) redirect('/sign-in')
   if (!can(session.role, 'catalogue:write')) redirect('/')
+  // Admin accounts can change anyone's access, so they must use two-step sign-in.
+  if (session.role === Role.ADMIN && adminMfaRequired()) {
+    const credential = await prisma.mfaCredential.findUnique({ where: { userId: session.userId }, select: { confirmedAt: true } })
+    if (!credential?.confirmedAt) redirect('/account/security?required=1')
+  }
 
   if (session.role === Role.MANUFACTURER) {
     const access = await tradeSubscriptionAccess(session)

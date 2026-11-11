@@ -21,6 +21,8 @@ export interface RateLimitResult {
 }
 
 export async function rateLimit(key: string, limit: number, windowSeconds: number): Promise<RateLimitResult> {
+  // Local automated runs sign in many times from one machine. Never honoured in production.
+  if (process.env.NODE_ENV !== 'production' && process.env.DOORLINK_RATE_LIMITS === 'off') return { ok: true, remaining: limit, retryAfter: 0 }
   const windowMs = windowSeconds * 1000
   const now = Date.now()
   const windowStart = new Date(Math.floor(now / windowMs) * windowMs)
@@ -51,7 +53,12 @@ export async function sweepRateLimits(): Promise<number> {
  */
 export async function clientKey(): Promise<string> {
   const h = await headers()
-  const forwarded = h.get('x-forwarded-for')?.split(',')[0]?.trim()
+  // With TRUSTED_PROXY_HOPS set, count that many entries in from the right:
+  // those were added by the host's own proxies, so a caller can't forge them.
+  // Without it, the first entry is used (the most common proxy setup).
+  const chain = (h.get('x-forwarded-for') ?? '').split(',').map((part) => part.trim()).filter(Boolean)
+  const hops = Number(process.env.TRUSTED_PROXY_HOPS ?? '')
+  const forwarded = Number.isInteger(hops) && hops > 0 && chain.length >= hops ? chain[chain.length - hops] : chain[0]
   const ip = forwarded || h.get('x-real-ip') || 'unknown'
   return createHash('sha256')
     .update(`${process.env.AUTH_SECRET ?? 'doorlink'}:${ip}`)

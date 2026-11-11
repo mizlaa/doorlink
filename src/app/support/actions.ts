@@ -1,5 +1,6 @@
 'use server'
 
+import { limitFor, tooManyMessage } from '@/lib/rate-limit'
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { z } from 'zod'
@@ -24,6 +25,8 @@ export async function createTicketAction(
   _prevState: SupportFormState,
   formData: FormData
 ): Promise<SupportFormState> {
+  const limited = await limitFor('publicForm')
+  if (!limited.ok) return { error: tooManyMessage(limited) }
   let session: Session
   try {
     session = requireSession(await getSession())

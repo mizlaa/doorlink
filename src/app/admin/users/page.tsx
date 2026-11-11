@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { ResetMfaForm } from './ResetMfaForm'
 import { redirect } from 'next/navigation'
 import { Role, type Prisma } from '@prisma/client'
 import { getSession } from '@/lib/auth'
@@ -48,6 +49,7 @@ export default async function AdminUsersPage({ searchParams }: PageProps) {
         take: PAGE_SIZE,
         include: {
           technicianProfile: { select: { verified: true, businessName: true } },
+          mfaCredential: { select: { confirmedAt: true } },
           _count: { select: { requestedLeads: true, jobs: true } },
         },
       }),
@@ -136,6 +138,8 @@ export default async function AdminUsersPage({ searchParams }: PageProps) {
               </span>
               <span className="flex shrink-0 flex-wrap items-center gap-2">
                 {user.technicianProfile?.verified && <Badge tone="good">Verified</Badge>}
+                {user.mfaCredential?.confirmedAt && <Badge tone="neutral">Two-step on</Badge>}
+                {user.mfaCredential?.confirmedAt && user.id !== session.userId && <ResetMfaForm userId={user.id} />}
                 <Badge tone="neutral">{user.role.charAt(0) + user.role.slice(1).toLowerCase()}</Badge>
                 {user.technicianProfile && (
                   <Link

@@ -1,5 +1,6 @@
 'use server'
 
+import { limitFor, tooManyMessage } from '@/lib/rate-limit'
 import { revalidatePath } from 'next/cache'
 import { NotificationType, Prisma } from '@prisma/client'
 import { getSession } from '@/lib/auth'
@@ -21,6 +22,8 @@ export type CustomQuoteState = { error?: string; ok?: boolean }
  */
 export async function requestCustomQuoteAction(_prev: CustomQuoteState, formData: FormData): Promise<CustomQuoteState> {
   const session = requirePermission(await getSession(), 'quote:request')
+  const limited = await limitFor('publicForm', session.userId)
+  if (!limited.ok) return { error: tooManyMessage(limited) }
   const reference = String(formData.get('comparison') ?? '')
   const businessKey = String(formData.get('business') ?? '')
   const message = String(formData.get('message') ?? '').trim().slice(0, 1000)

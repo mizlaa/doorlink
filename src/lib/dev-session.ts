@@ -8,7 +8,8 @@ import { Role } from '@prisma/client'
 import { prisma } from './prisma'
 import { isDatabaseUnreachable } from './db-errors'
 import { readSignUpBusiness, registerDoorlinkUser } from './register-user'
-import { DEV_SESSION_COOKIE } from './session-cookie'
+import { DEV_SESSION_COOKIE, MFA_COOKIE } from './session-cookie'
+import { afterSignInPath } from './mfa/after-sign-in'
 
 // Everything in this file is the dev-only stand-in for real authentication:
 // no passwords, a plain cookie, and it refuses to run in production (see
@@ -45,7 +46,7 @@ export async function devSignInAction(_prevState: SignInState, formData: FormDat
     throw error
   }
 
-  redirect(safeNextPath(formData.get('next')))
+  redirect(await afterSignInPath(parsed.data.email, safeNextPath(formData.get('next'))))
 }
 
 const REGISTRABLE_ROLES = ['CUSTOMER', 'TECHNICIAN', 'SUPPLIER', 'MANUFACTURER'] as const
@@ -112,5 +113,6 @@ export async function devRegisterAction(_prevState: RegisterState, formData: For
 export async function devSignOutAction(_formData: FormData): Promise<void> {
   const store = await cookies()
   store.delete(DEV_SESSION_COOKIE)
+  store.delete(MFA_COOKIE)
   redirect('/')
 }
