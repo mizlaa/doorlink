@@ -78,6 +78,12 @@ function text(pen: Pen, value: string, x: number, y: number, options: { size?: n
   return width
 }
 
+/** "12 Nov 2026" from "2026-11-12". */
+function shortDate(date: string): string {
+  const [y, m, d] = date.split('-').map(Number)
+  return new Intl.DateTimeFormat('en-AU', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(Date.UTC(y, m - 1, d)))
+}
+
 function rule(pen: Pen, y: number, x1 = MARGIN, x2 = A4[0] - MARGIN, colour: RGB = RULE, thickness = 0.8) {
   pen.page.drawLine({ start: { x: x1, y }, end: { x: x2, y }, thickness, color: colour })
 }
@@ -182,8 +188,10 @@ async function header(pen: Pen, snapshot: InvoiceSnapshot, logo: LogoSource, tit
   const right = A4[0] - MARGIN
   text(pen, title.toUpperCase(), right, top - 16, { size: 19, bold: true, colour: brand, align: 'right' })
   let fy = top - 40
+  // Labels line up just left of the widest value, so a long date never runs into its label.
+  const valueWidth = Math.max(...facts.map(([, value]) => pen.bold.widthOfTextAtSize(safe(pen.bold, value), 9.5)))
   for (const [label, value] of facts) {
-    text(pen, label, right - 122, fy, { colour: MUTED, size: 9 })
+    text(pen, label, right - valueWidth - 12, fy, { colour: MUTED, size: 9, align: 'right' })
     text(pen, value, right, fy, { bold: true, size: 9.5, align: 'right' })
     fy -= 14
   }
@@ -272,6 +280,9 @@ export async function renderInvoicePdf(input: {
   let y = pen.y - 20
   const labelX = 350
   const totalRow = (label: string, value: string, options: { bold?: boolean; size?: number; colour?: RGB } = {}) => {
+    const size = options.size ?? 9.5
+    const room = COLS.amount - (options.bold ? pen.bold : pen.regular).widthOfTextAtSize(value, size) - 10 - labelX
+    label = wrap(options.bold ? pen.bold : pen.regular, label, size, room)[0] ?? label
     text(pen, label, labelX, y, { colour: options.bold ? INK : MUTED, bold: options.bold, size: options.size ?? 9.5 })
     text(pen, value, COLS.amount, y, { align: 'right', bold: options.bold, size: options.size ?? 9.5, colour: options.colour })
     y -= (options.size ?? 9.5) + 7
@@ -284,8 +295,9 @@ export async function renderInvoicePdf(input: {
   y -= 4
   totalRow(snapshot.gstRegistered ? 'Total including GST' : 'Total', money(snapshot.totals.totalCents, currency), { bold: true, size: 11.5 })
   for (const payment of payments) {
-    totalRow(`Paid ${longDate(payment.date)} · ${PAYMENT_METHOD_LABELS[payment.method] ?? payment.method}`, `-${money(payment.amountCents, currency)}`, { size: 8.8 })
+    totalRow(`Paid ${shortDate(payment.date)}, ${(PAYMENT_METHOD_LABELS[payment.method] ?? payment.method).toLowerCase()}`, `-${money(payment.amountCents, currency)}`, { size: 8.8 })
   }
+  y -= payments.length > 0 ? 6 : 0
   const brand = hex(snapshot.issuer.brandColour)
   pen.page.drawRectangle({ x: labelX - 10, y: y - 12, width: A4[0] - MARGIN - labelX + 10, height: 28, color: balance === 0 ? rgb(0.9, 0.96, 0.92) : rgb(0.95, 0.97, 1) })
   text(pen, balance === 0 ? 'Paid in full' : 'Balance due', labelX, y - 2, { bold: true, size: 11 })
