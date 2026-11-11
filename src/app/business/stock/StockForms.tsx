@@ -1,6 +1,6 @@
 'use client'
 
-import { useActionState, useState } from 'react'
+import { useActionState, useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { Field, Input, Select } from '@/components/ui/Field'
 import { keepValuesOnSubmit } from '@/lib/keep-form-values'
@@ -14,8 +14,13 @@ function Result({ state }: { state: StockState }) {
 
 export function AddItemForm() {
   const [state, action, pending] = useActionState(addStockItemAction, {})
+  const formRef = useRef<HTMLFormElement>(null)
+  // Clear after a success so the same thing isn't added twice; keep it after an error.
+  useEffect(() => {
+    if (state.ok) formRef.current?.reset()
+  }, [state])
   return (
-    <form action={action} onSubmit={keepValuesOnSubmit(action)} className="flex flex-col gap-3">
+    <form ref={formRef} action={action} onSubmit={keepValuesOnSubmit(action)} className="flex flex-col gap-3">
       <Field label="Item" htmlFor="name">
         <Input id="name" name="name" required maxLength={120} placeholder="Torsion spring 225 mm" />
       </Field>

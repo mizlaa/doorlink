@@ -1,6 +1,6 @@
 'use client'
 
-import { useActionState } from 'react'
+import { useActionState, useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/Button'
 import { Field, Input, Select } from '@/components/ui/Field'
 import { keepValuesOnSubmit } from '@/lib/keep-form-values'
@@ -14,8 +14,13 @@ function Result({ state }: { state: TeamState }) {
 
 export function InviteForm() {
   const [state, action, pending] = useActionState(inviteMemberAction, {})
+  const formRef = useRef<HTMLFormElement>(null)
+  // Clear after a success so the same thing isn't added twice; keep it after an error.
+  useEffect(() => {
+    if (state.ok) formRef.current?.reset()
+  }, [state])
   return (
-    <form action={action} onSubmit={keepValuesOnSubmit(action)} className="flex flex-col gap-3">
+    <form ref={formRef} action={action} onSubmit={keepValuesOnSubmit(action)} className="flex flex-col gap-3">
       <div className="grid gap-3 sm:grid-cols-[1fr_11rem]">
         <Field label="Their email on Doorlink" htmlFor="email">
           <Input id="email" name="email" type="email" required autoComplete="off" />
@@ -61,8 +66,13 @@ export function MemberControls({ id, role }: { id: string; role: string }) {
 
 export function TimeOffForm({ people, today }: { people: Array<{ id: string; name: string }>; today: string }) {
   const [state, action, pending] = useActionState(addTimeOffAction, {})
+  const formRef = useRef<HTMLFormElement>(null)
+  // Clear after a success so the same thing isn't added twice; keep it after an error.
+  useEffect(() => {
+    if (state.ok) formRef.current?.reset()
+  }, [state])
   return (
-    <form action={action} onSubmit={keepValuesOnSubmit(action)} className="flex flex-col gap-3">
+    <form ref={formRef} action={action} onSubmit={keepValuesOnSubmit(action)} className="flex flex-col gap-3">
       <div className="grid gap-3 sm:grid-cols-3">
         <Field label="Who" htmlFor="technicianId">
           <Select id="technicianId" name="technicianId">
