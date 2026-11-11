@@ -7,7 +7,8 @@ import { prisma } from '@/lib/prisma'
 import { loadBusinessProfile } from '@/lib/business/profile'
 import { formatRange } from '@/lib/business/coverage'
 import { mediaUrl } from '@/lib/media'
-import { businessCard, businessKeyFor, businessUserIds, decodeBusinessKey, encodeBusinessKey } from '@/lib/pricing/business'
+import { businessCard, businessKeyFor, businessUserIds, decodeBusinessKey, encodeBusinessKey, loadBusinessDetails } from '@/lib/pricing/business'
+import { formatAbn } from '@/lib/business-details'
 import { productLabel } from '@/lib/pricing/products'
 import { Badge } from '@/components/ui/Badge'
 import { Stars } from '@/components/quotes/Stars'
@@ -42,6 +43,14 @@ export default async function BusinessProfilePage({ params, searchParams }: Prop
   if (profile.status !== 'APPROVED' && !own && !(session && can(session.role, 'admin:settings'))) notFound()
 
   const userIds = await businessUserIds(key)
+  // Only the contact details the business chose to publish in Settings.
+  const details = await loadBusinessDetails(key)
+  const contact = {
+    phone: profile.showPhone ? details?.phone || null : null,
+    email: profile.showEmail ? details?.email || null : null,
+    abn: profile.showAbn && details?.abn ? formatAbn(details.abn) : null,
+    address: profile.showAddress && profile.addressLine ? [profile.addressLine, details?.suburb, details?.state, details?.postcode].filter(Boolean).join(' ') : null,
+  }
   const reviews = await prisma.workerReview.findMany({
     where: { workerId: { in: userIds }, status: 'PUBLISHED' },
     orderBy: { createdAt: 'desc' },
@@ -224,6 +233,29 @@ export default async function BusinessProfilePage({ params, searchParams }: Prop
             <div>
               <h2 className="mb-1 font-medium text-graphite">Availability</h2>
               <p className="text-graphite-soft">Usually installs within {profile.leadTimeDays} days of booking.</p>
+            </div>
+          )}
+          {(contact.phone || contact.email || contact.address || contact.abn) && (
+            <div>
+              <h2 className="mb-1 font-medium text-graphite">Contact</h2>
+              <ul className="flex flex-col gap-0.5 text-graphite-soft">
+                {contact.phone && (
+                  <li>
+                    <a href={`tel:${contact.phone.replace(/\s/g, '')}`} className="text-signal hover:text-signal-hover">
+                      {contact.phone}
+                    </a>
+                  </li>
+                )}
+                {contact.email && (
+                  <li className="break-all">
+                    <a href={`mailto:${contact.email}`} className="text-signal hover:text-signal-hover">
+                      {contact.email}
+                    </a>
+                  </li>
+                )}
+                {contact.address && <li>{contact.address}</li>}
+                {contact.abn && <li>ABN {contact.abn}</li>}
+              </ul>
             </div>
           )}
           <div>

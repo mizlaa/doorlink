@@ -168,7 +168,7 @@ export async function businessCard(key: BusinessKey): Promise<BusinessCard | nul
     }),
     prisma.businessProfile.findUnique({
       where: { businessKey: encodeBusinessKey(key) },
-      select: { logoKey: true, warranty: true, leadTimeDays: true },
+      select: { logoKey: true, logoVersionId: true, warranty: true, leadTimeDays: true },
     }),
   ])
 
@@ -196,7 +196,8 @@ export async function businessCard(key: BusinessKey): Promise<BusinessCard | nul
     ratingCount: reviews._count._all,
     jobsCompleted: users.reduce((sum, u) => sum + (u.technicianProfile?.jobsCompleted ?? 0), 0),
     baseSuburb: profile?.baseSuburb ?? null,
-    logoUrl: profileRow?.logoKey ? `/api/media/${profileRow.logoKey}` : null,
+    // The logo set in Settings (uploaded or built) wins over the older profile upload.
+    logoUrl: profileRow?.logoVersionId ? `/api/logo/${profileRow.logoVersionId}` : profileRow?.logoKey ? `/api/media/${profileRow.logoKey}` : null,
     verified: !!profile?.verified,
     warranty: profileRow?.warranty ?? null,
     leadTimeDays: profileRow?.leadTimeDays ?? null,

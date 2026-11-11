@@ -60,7 +60,7 @@ ADD COLUMN     "logoVersionId" TEXT,
 ADD COLUMN     "showAbn" BOOLEAN NOT NULL DEFAULT true,
 ADD COLUMN     "showAddress" BOOLEAN NOT NULL DEFAULT false,
 ADD COLUMN     "showEmail" BOOLEAN NOT NULL DEFAULT false,
-ADD COLUMN     "showPhone" BOOLEAN NOT NULL DEFAULT true,
+ADD COLUMN     "showPhone" BOOLEAN NOT NULL DEFAULT false,
 ADD COLUMN     "timezone" TEXT NOT NULL DEFAULT 'Australia/Sydney';
 
 -- AlterTable

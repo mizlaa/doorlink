@@ -164,6 +164,21 @@ async function customerSteps(session: Session): Promise<OnboardingStep[]> {
   ]
 }
 
+/** Brand and invoicing: a logo and the GST/terms settings saved once. */
+async function brandStep(session: Session): Promise<OnboardingStep> {
+  const businessKey = session.organizationId ? `o_${session.organizationId}` : `u_${session.userId}`
+  const profile = await prisma.businessProfile.findUnique({ where: { businessKey }, select: { id: true, logoVersionId: true } })
+  const settings = profile ? await prisma.auditLog.count({ where: { action: 'business.settings.update', entityId: profile.id } }) : 0
+  return {
+    key: 'brand',
+    title: 'Set up your brand and invoicing',
+    description: 'Your logo (upload one or create one free), GST status and payment terms. They go on your profile, quotes, invoices and receipts.',
+    href: '/business/setup',
+    cta: 'Set up brand',
+    done: !!profile?.logoVersionId && settings > 0,
+  }
+}
+
 async function technicianSteps(session: Session): Promise<OnboardingStep[]> {
   const profile = await prisma.technicianProfile.findUnique({
     where: { userId: session.userId },
@@ -206,6 +221,7 @@ async function technicianSteps(session: Session): Promise<OnboardingStep[]> {
       cta: 'Add postcodes',
       done: (profile?._count.serviceAreas ?? 0) > 0,
     },
+    await brandStep(session),
     {
       key: 'availability',
       title: 'Set the hours you work',

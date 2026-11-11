@@ -117,7 +117,8 @@ function textWidth(text: string, size: number, bold: boolean, spacing = 0): numb
     if (' .,:;!|\'il'.includes(ch)) units += 0.3
     else if ('MW'.includes(ch)) units += 0.9
     else if ('mw'.includes(ch)) units += 0.84
-    else if (ch >= 'A' && ch <= 'Z') units += 0.7
+    else if ('OQGCD'.includes(ch)) units += 0.78
+    else if (ch >= 'A' && ch <= 'Z') units += 0.72
     else if (ch >= '0' && ch <= '9') units += 0.58
     else units += 0.56
   }
@@ -243,7 +244,7 @@ export function logoDrawing(design: LogoDesign): LogoDrawing {
   // bar
   const size = 32
   const tw = textWidth(upper, size, true, 1)
-  const w = Math.max(180, Math.ceil(tw + 26))
+  const w = Math.max(180, Math.ceil(tw + 40))
   prims.push({ t: 'rect', x: 0, y: 0, w: 10, h: 84, fill: accent })
   prims.push({ t: 'text', x: 24, y: 40, size, bold: true, fill: primary, text: upper, anchor: 'start', spacing: 1 })
   prims.push({ t: 'text', x: 25, y: 66, size: 13, bold: false, fill: primary, text: 'GARAGE DOORS  ·  GATES  ·  SERVICE', anchor: 'start', spacing: 1.6 })

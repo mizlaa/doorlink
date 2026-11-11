@@ -2997,7 +2997,7 @@ model BusinessProfile {
   // The current logo as an immutable copy that issued invoices point at.
   logoVersionId    String?
   // What the public profile shows. The business name and suburb always show.
-  showPhone        Boolean @default(true)
+  showPhone        Boolean @default(false)
   showEmail        Boolean @default(false)
   showAbn          Boolean @default(true)
   showAddress      Boolean @default(false)
