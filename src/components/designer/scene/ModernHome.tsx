@@ -16,11 +16,11 @@ import { TileRoofBlock, WALL_T, WindowUnit, type HouseLayout } from '@/component
  */
 
 const EAVE = 0.45
-const UPPER_H = 2.6
+const UPPER_H = 2.4
 const UPPER_D = 8
 
 export function modernLayout(doorW: number, doorH: number): HouseLayout {
-  const garageH = Math.max(2.95, doorH + 0.8)
+  const garageH = Math.max(2.72, doorH + 0.62)
   return {
     doorW,
     doorH,
@@ -186,12 +186,12 @@ export const ModernHome = memo(function ModernHome({ layout, m }: { layout: Hous
           <Box args={[portico.w + 0.5, 0.07, 0.42]} position={[portico.w / 2, 0.035, portico.d + 0.21]} material={m.concrete} />
           {[0.17, portico.w - 0.17].map((x) => (
             <group key={x} position={[x, 0, portico.d - 0.19]}>
-              <Box args={[0.3, 2.62, 0.3]} position={[0, 1.31, 0]} material={m.render} />
+              <Box args={[0.3, 2.5, 0.3]} position={[0, 1.25, 0]} material={m.render} />
               <Box args={[0.38, 0.95, 0.38]} position={[0, 0.475, 0]} material={m.renderFeature} />
             </group>
           ))}
-          <Box args={[portico.w + 0.3, 0.26, portico.d + 0.16]} position={[portico.w / 2, 2.75, portico.d / 2 + 0.02]} material={m.colorbond} />
-          <Box args={[portico.w + 0.1, 0.012, portico.d]} position={[portico.w / 2, 2.615, portico.d / 2]} material={m.soffit} cast={false} />
+          <Box args={[portico.w + 0.3, 0.26, portico.d + 0.16]} position={[portico.w / 2, 2.63, portico.d / 2 + 0.02]} material={m.colorbond} />
+          <Box args={[portico.w + 0.1, 0.012, portico.d]} position={[portico.w / 2, 2.495, portico.d / 2]} material={m.soffit} cast={false} />
         </group>
 
         {/* ---------- Upper floor ---------- */}
@@ -202,24 +202,24 @@ export const ModernHome = memo(function ModernHome({ layout, m }: { layout: Hous
         {/* A dark band where the two storeys meet, along the wing */}
         <Box args={[houseW + 0.04, 0.22, 0.05]} position={[houseX0 + houseW / 2, upperY + 0.02, upperFront + 0.025]} material={m.colorbond} />
         {overGarage.map((x) => (
-          <group key={x} position={[x - 0.62, upperY + 0.95, upperFront + 0.001]}>
+          <group key={x} position={[x - 0.62, upperY + 0.8, upperFront + 0.001]}>
             <WindowUnit w={1.24} h={1.3} m={m} surface sill={false} />
           </group>
         ))}
-        <group position={[houseX0 + 1.5, upperY + 0.95, upperFront + 0.001]}>
+        <group position={[houseX0 + 1.5, upperY + 0.8, upperFront + 0.001]}>
           <WindowUnit w={2.2} h={1.3} m={m} surface sill={false} />
         </group>
-        <group position={[houseX0 + houseW - 2.1, upperY + 0.95, upperFront + 0.001]}>
+        <group position={[houseX0 + houseW - 2.1, upperY + 0.8, upperFront + 0.001]}>
           <WindowUnit w={1.24} h={1.3} m={m} surface sill={false} />
         </group>
         {/* Side windows, so the house reads as lived-in from either side */}
         {[-3, -6.2].map((z) => (
-          <group key={z} position={[upperX0 + upperW + 0.001, upperY + 0.95, z]} rotation={[0, Math.PI / 2, 0]}>
+          <group key={z} position={[upperX0 + upperW + 0.001, upperY + 0.8, z]} rotation={[0, Math.PI / 2, 0]}>
             <WindowUnit w={1.3} h={1.3} m={m} surface sill={false} />
           </group>
         ))}
         {[-2.2, -5.4].map((z) => (
-          <group key={z} position={[upperX0 - 0.001, upperY + 0.95, z]} rotation={[0, -Math.PI / 2, 0]}>
+          <group key={z} position={[upperX0 - 0.001, upperY + 0.8, z]} rotation={[0, -Math.PI / 2, 0]}>
             <WindowUnit w={1.3} h={1.3} m={m} surface sill={false} />
           </group>
         ))}

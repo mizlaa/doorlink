@@ -99,6 +99,15 @@ const FAMILY_WORDS: Record<ProductFamily, { noun: string; open: string; close: s
 
 const QUICK_COLOURS = ['charcoal', 'black', 'chalk', 'sand', 'walnut']
 
+/** Names that fit under a swatch. */
+const SHORT_LABELS: Record<string, string> = {
+  'Slate grey': 'Slate',
+  'Deep forest': 'Forest',
+  'Oxide red': 'Oxide',
+  'Brushed steel': 'Brushed',
+  'Matte black': 'Black',
+}
+
 const SIZE_PRESETS: Array<{ label: string; widthMm: number; heightMm: number }> = [
   { label: 'Single · 2.4 m', widthMm: 2400, heightMm: 2100 },
   { label: 'Double · 4.8 m', widthMm: 4800, heightMm: 2100 },
@@ -181,7 +190,14 @@ export function Designer({
     setSpec((current) => ({ ...current, [key]: value }))
   }, [])
   const setType = useCallback((productType: ProductType) => {
-    setSpec((current) => specForType(current, productType))
+    setSpec((current) => {
+      const next = specForType(current, productType)
+      // Coming back to garage doors from a gate or shutter starts at the
+      // designer's double door again, not a single.
+      return familyOf(productType) === 'garage' && familyOf(current.productType) !== 'garage'
+        ? { ...next, widthMm: DESIGNER_START_SPEC.widthMm, heightMm: DESIGNER_START_SPEC.heightMm }
+        : next
+    })
     setOpen(false)
   }, [])
 
@@ -306,7 +322,7 @@ export function Designer({
               {group.values.map((option) => (
                 <button key={option.id} type="button" className="dz-swatch" aria-pressed={value === option.id} onClick={() => set('hardware', option.id)}>
                   <span className="dz-swatch-dot" style={{ backgroundColor: option.hex }} />
-                  {option.label.replace(' steel', '').replace('Matte ', '')}
+                  {SHORT_LABELS[option.label] ?? option.label}
                 </button>
               ))}
             </div>
@@ -418,7 +434,7 @@ export function Designer({
             </h2>
           </div>
           <div className="dz-swatches">
-            {colourGroup?.values.filter((v) => v.id !== 'custom').map((option) => swatch(option.id, option.label.replace(' grey', '').replace('Deep ', '').replace(' red', ''), option.hex))}
+            {colourGroup?.values.filter((v) => v.id !== 'custom').map((option) => swatch(option.id, SHORT_LABELS[option.label] ?? option.label, option.hex))}
             {customSwatch}
           </div>
         </section>
