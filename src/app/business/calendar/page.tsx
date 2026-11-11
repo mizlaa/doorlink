@@ -216,7 +216,7 @@ function TimeGrid({ days, today, appointments, tz, dayHref }: { days: string[]; 
           ))}
         </div>
         {days.map((day, d) => (
-          <div key={day} className={cn('relative border-l border-line', day === today && 'bg-signal-tint/40')} style={{ height }}>
+          <div key={day} className={cn('relative border-l border-line', day === today && 'bg-signal/[0.05]')} style={{ height }}>
             {hours.map((hour, i) => (
               <div key={hour} className="absolute inset-x-0 border-t border-line/70" style={{ top: i * HOUR_PX }} />
             ))}

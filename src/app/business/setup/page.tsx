@@ -22,7 +22,15 @@ export default async function SetupPage({ searchParams }: { searchParams: Promis
   const settingsTouched = await prisma.auditLog.count({ where: { action: 'business.settings.update', entityId: business.businessId } })
   const steps = [
     { done: !!brand.name && !!brand.phone && !!brand.email, title: 'Business details', detail: brand.abn && isValidAbn(brand.abn) ? `${brand.name} · ABN ${brand.abn}` : 'Trading name, ABN, phone and email', href: '/pricing/business' },
-    { done: areas > 0, title: 'Where you work', detail: areas > 0 ? `${areas} postcode range${areas === 1 ? '' : 's'}` : 'The postcodes you service. Customers there will see you.', href: '/pricing/profile' },
+    {
+      done: areas > 0 && business.profile.products.length > 0,
+      title: 'What you do and where',
+      detail:
+        areas > 0 && business.profile.products.length > 0
+          ? `${business.profile.products.length} product${business.profile.products.length === 1 ? '' : 's'} · ${areas} postcode range${areas === 1 ? '' : 's'}`
+          : 'The products you supply and the postcodes you cover. Customers there will see you.',
+      href: '/pricing/profile',
+    },
     { done: settingsTouched > 0, title: 'GST and invoice terms', detail: settingsTouched > 0 ? `${brand.gstRegistered ? 'GST registered' : 'Not registered for GST'} · ${brand.invoiceTermsDays === 0 ? 'due on receipt' : `${brand.invoiceTermsDays} days`}` : 'Whether you charge GST, payment terms and how to pay you', href: '/business/settings' },
     { done: !!brand.logoVersionId, title: 'Logo', detail: brand.logoVersionId ? 'Done. It’s on your invoices and profile.' : 'Upload yours, or create one in a minute', href: '/business/settings/logo?next=setup' },
   ]

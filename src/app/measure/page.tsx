@@ -1,3 +1,4 @@
+import { randomUUID } from 'node:crypto'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { cookies } from 'next/headers'
@@ -111,6 +112,7 @@ export default async function MeasurePage({ searchParams }: PageProps) {
         </div>
       ) : (
         <MeasureForm
+          idempotencyKey={randomUUID().replace(/-/g, '')}
           spec={encoded}
           companies={companies}
           preselected={params.business ?? null}

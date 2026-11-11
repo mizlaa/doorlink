@@ -113,10 +113,11 @@ export function ShareForm({ id, active }: { id: string; active: boolean }) {
   )
 }
 
-export function PaymentForm({ id, balance, today }: { id: string; balance: string; today: string }) {
+export function PaymentForm({ id, balance, today, initialKey }: { id: string; balance: string; today: string; initialKey: string }) {
   const [state, formAction, pending] = useActionState(recordPaymentAction, initial)
   // One key per form: tapping twice, or retrying after a timeout, records one payment.
-  const [key, setKey] = useState(() => crypto.randomUUID().replace(/-/g, ''))
+  // Made on the server so the page hydrates cleanly; a fresh one after each recorded payment.
+  const [key, setKey] = useState(initialKey)
   // Once a payment has gone through, the next one is a different payment.
   useEffect(() => {
     if (state.ok) setKey(crypto.randomUUID().replace(/-/g, ''))

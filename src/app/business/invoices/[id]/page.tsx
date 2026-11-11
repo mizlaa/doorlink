@@ -1,3 +1,4 @@
+import { randomUUID } from 'node:crypto'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -150,7 +151,7 @@ export default async function InvoicePage({ params, searchParams }: { params: Pr
               {owing > 0 && (
                 <Card>
                   <SectionTitle>Record a payment</SectionTitle>
-                  <PaymentForm id={id} balance={(owing / 100).toFixed(2)} today={localDateString(new Date(), tz)} />
+                  <PaymentForm id={id} balance={(owing / 100).toFixed(2)} today={localDateString(new Date(), tz)} initialKey={randomUUID().replace(/-/g, '')} />
                 </Card>
               )}
             </>

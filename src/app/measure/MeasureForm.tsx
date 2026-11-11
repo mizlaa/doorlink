@@ -29,7 +29,10 @@ export function MeasureForm({
   defaults,
   companies,
   preselected,
+  idempotencyKey: initialKey,
 }: {
+  /** Made on the server so the page hydrates cleanly. */
+  idempotencyKey: string
   spec: string
   defaults: { name: string; email: string; phone: string; suburb: string; state: string; postcode: string }
   companies: MeasureCompany[]
@@ -37,7 +40,7 @@ export function MeasureForm({
 }) {
   const [state, formAction, pending] = useActionState(requestMeasureAction, initialState)
   // Made once per form, so a double tap or a retry is the same request.
-  const [idempotencyKey] = useState(() => crypto.randomUUID().replace(/-/g, ''))
+  const [idempotencyKey] = useState(initialKey)
   const [chosen, setChosen] = useState<string[]>(() =>
     preselected && companies.some((c) => c.key === preselected) ? [preselected] : companies.slice(0, 5).map((c) => c.key)
   )
