@@ -17,6 +17,7 @@
     "mfa:reset": "tsx scripts/reset-mfa.ts",
     "db:studio": "prisma studio",
     "test": "vitest run",
+    "test:db": "DOORLINK_DB_TESTS=1 DOORLINK_EMAIL_OUTBOX=1 vitest run src/lib/integration",
     "manuals:import": "tsx scripts/manuals/import.ts",
     "manuals:ingest": "tsx scripts/manuals/ingest-list.ts",
     "manuals:audit": "tsx scripts/manuals/audit-links.ts",
