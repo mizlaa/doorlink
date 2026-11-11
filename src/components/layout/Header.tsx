@@ -1,5 +1,6 @@
 import { NavigationLink as Link } from '@/components/ui/NavigationLink'
 import { getSession } from '@/lib/auth'
+import { workHomeFor } from '@/lib/business/home'
 import { AUTH_UNAVAILABLE_MESSAGE, isAuthServiceUnavailable } from '@/lib/supabase/auth-service'
 import { can } from '@/lib/rbac'
 import { roleRequiresTradeSubscription } from '@/lib/trade-subscription'
@@ -61,6 +62,9 @@ export async function Header() {
       countOrZero(() => unreadMessageCount(session.userId)),
       countOrZero(() => unreadNotificationCount(session.userId)),
     ])
+    // Each person's main place first: their business, their day, or their own records.
+    const work = await workHomeFor(session)
+    if (work) accountLinks.push(work)
     accountLinks.push({
       href: '/messages',
       label: messageCount > 0 ? `Messages (${messageCount})` : 'Messages',
@@ -72,6 +76,7 @@ export async function Header() {
     accountLinks.push({ href: '/cart', label: cartCount > 0 ? `Cart (${cartCount})` : 'Cart' })
     accountLinks.push({ href: '/saved', label: 'Saved' })
     accountLinks.push({ href: '/account', label: 'Account' })
+    accountLinks.push({ href: '/account/security', label: 'Sign-in security' })
     if (can(session.role, 'listing:write:own')) {
       accountLinks.push({ href: '/my-listings', label: 'My listings' })
     }

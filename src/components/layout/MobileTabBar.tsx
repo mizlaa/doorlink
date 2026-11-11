@@ -1,5 +1,6 @@
 import { NavigationLink as Link } from '@/components/ui/NavigationLink'
 import { getSession } from '@/lib/auth'
+import { workHomeFor } from '@/lib/business/home'
 
 function HomeIcon() {
   return (
@@ -62,6 +63,7 @@ function JobIcon() {
 // takes over.
 export async function MobileTabBar() {
   const session = await getSession()
+  const work = session ? await workHomeFor(session) : null
 
   // Signed in, the fourth tab is the work you have on rather than the
   // shop — a technician opens this app between jobs, not to browse.
@@ -69,8 +71,9 @@ export async function MobileTabBar() {
     { href: '/', label: 'Home', icon: <HomeIcon /> },
     { href: '/find', label: 'Find', icon: <SearchIcon /> },
     { href: '/manuals', label: 'Manuals', icon: <BookIcon /> },
+    // A customer's own records, a business's work, or a technician's day.
     session
-      ? { href: '/jobs', label: 'Jobs', icon: <JobIcon /> }
+      ? { href: work?.href ?? '/jobs', label: work?.label ?? 'Jobs', icon: <JobIcon /> }
       : { href: '/marketplace', label: 'Market', icon: <BagIcon /> },
     session
       ? { href: '/account', label: 'Account', icon: <UserIcon /> }

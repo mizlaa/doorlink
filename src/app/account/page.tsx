@@ -131,7 +131,7 @@ export default async function AccountPage() {
             href="/leads"
             className="flex flex-col gap-1 rounded-md border border-line p-5 transition-colors hover:border-signal"
           >
-            <p className="text-sm text-zinc-deep">Requests you've claimed</p>
+            <p className="text-sm text-zinc-deep">Requests you’ve claimed</p>
             <p className="text-2xl font-semibold text-graphite">{data.claimedLeadCount}</p>
           </Link>
         )}
