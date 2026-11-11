@@ -501,7 +501,7 @@ export function Designer({
           {/* The header's curved edge and the line that sits in it. */}
           <div className="dz-curve" aria-hidden="true">
             <svg viewBox="0 0 270 62" preserveAspectRatio="none">
-              <path d="M0 0H270V62H146C104 62 96 0 44 0Z" fill="#0e1a2a" />
+              <path d="M0 0H270V62H84C50 62 42 0 8 0Z" fill="#0e1a2a" />
             </svg>
           </div>
           <p className="dz-tagline">
