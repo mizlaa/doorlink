@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { getSession } from '@/lib/auth'
-import { currentBusiness, roleAtLeast } from '@/lib/business/access'
+import { businessContexts, currentBusiness, roleAtLeast } from '@/lib/business/access'
+import { BusinessSwitcher } from './BusinessSwitcher'
 import { isDatabaseUnreachable } from '@/lib/db-errors'
 import { prisma } from '@/lib/prisma'
 import { BusinessNav, type BusinessNavItem } from './BusinessNav'
@@ -14,11 +15,15 @@ export default async function BusinessLayout({ children }: { children: ReactNode
   const session = await getSession()
   let items: BusinessNavItem[] = []
   let name: string | null = null
+  let choices: Array<{ id: string; name: string }> = []
+  let currentId: string | null = null
   if (session) {
     try {
       const business = await currentBusiness(session)
       if (business) {
         name = business.name
+        currentId = business.businessId
+        choices = (await businessContexts(session)).map((c) => ({ id: c.businessId, name: c.name }))
         if (roleAtLeast(business.role, 'MANAGER')) {
           const [pending, overdue] = await Promise.all([
             prisma.serviceRequestRecipient.count({ where: { businessId: business.businessId, status: 'PENDING', request: { status: 'OPEN' } } }),
@@ -53,7 +58,12 @@ export default async function BusinessLayout({ children }: { children: ReactNode
     <div className="mx-auto w-full max-w-shell px-4 py-6 sm:py-8 print:max-w-none print:p-0">
       {items.length > 0 && (
         <div className="mb-6 border-b border-line pb-3 print:hidden">
-          {name && <p className="mb-2 text-micro font-semibold uppercase tracking-wide text-zinc-deep">{name}</p>}
+          {name && (
+            <div className="mb-2 flex items-center justify-between gap-3">
+              <p className="min-w-0 truncate text-micro font-semibold uppercase tracking-wide text-zinc-deep">{name}</p>
+              {choices.length > 1 && currentId && <BusinessSwitcher choices={choices} currentId={currentId} />}
+            </div>
+          )}
           <BusinessNav items={items} />
         </div>
       )}

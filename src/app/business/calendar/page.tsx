@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { BusinessLogoTile } from '@/components/business/BusinessBrand'
 import { assignableTechnicians } from '@/lib/business/access'
 import { businessPage } from '@/lib/business/guard'
 import { appointmentsBetween, type AppointmentWithRelations } from '@/lib/appointments'
 import { dayLabel, hourRange, monthGrid, monthLabel, placeDay, shiftDate, weekDays } from '@/lib/appointments/calendar'
 import { isLive, KIND_LABELS, STATUS_LABELS } from '@/lib/appointments/rules'
 import { dayRange, formatInZone, formatTimeRange, localDateString, parseDateString, zoneAbbreviation } from '@/lib/timezone'
-import { Empty, PageHeader, PrimaryLink } from '@/components/business/ui'
+import { Empty, PrimaryLink } from '@/components/business/ui'
 import { cn } from '@/lib/utils'
 
 export const dynamic = 'force-dynamic'
@@ -67,11 +68,23 @@ export default async function CalendarPage({ searchParams }: PageProps) {
 
   return (
     <>
-      <PageHeader
-        title="Calendar"
-        subtitle={`Times are ${zoneAbbreviation(new Date(), tz)} (${tz.replace('Australia/', '')}).`}
-        action={<PrimaryLink href={`/business/calendar/new?date=${date}`}>Book a visit</PrimaryLink>}
-      />
+      {/* The company's own brand: the same profile and logo version its invoices use. */}
+      <header className="mb-5 flex items-center justify-between gap-3">
+        <div className="flex min-w-0 items-center gap-3">
+          <BusinessLogoTile name={business.name} logoVersionId={business.profile.logoVersionId} brandColour={business.profile.brandColour} />
+          <div className="min-w-0">
+            <p className="truncate text-sm font-semibold text-graphite sm:text-base">{business.name}</p>
+            <h1 className="text-xl font-semibold tracking-tight text-graphite sm:text-2xl">Calendar</h1>
+            <p className="text-micro text-zinc-deep">
+              Times are {zoneAbbreviation(new Date(), tz)} ({tz.replace('Australia/', '')})
+            </p>
+          </div>
+        </div>
+        <PrimaryLink href={`/business/calendar/new?date=${date}`} className="shrink-0 px-4">
+          <span className="sm:hidden">Book</span>
+          <span className="hidden sm:inline">Book a visit</span>
+        </PrimaryLink>
+      </header>
 
       <div className="mb-4 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex items-center gap-2">

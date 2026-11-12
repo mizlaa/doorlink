@@ -107,12 +107,27 @@ export async function businessContexts(session: Session, options: { ensureOwn?: 
 export async function currentBusiness(session: Session): Promise<BusinessContext | null> {
   const contexts = await businessContexts(session)
   if (contexts.length > 0) {
-    // An account that both owns a business and works for another keeps its own first.
-    return contexts[0]
+    // Someone who works in more than one business picks which one they're in;
+    // the choice only counts if they still belong to it. Otherwise their own comes first.
+    const chosen = await chosenBusinessId()
+    return contexts.find((c) => c.businessId === chosen) ?? contexts[0]
   }
   if (!can(session.role, 'pricing:write:own')) return null
   const [own] = await businessContexts(session, { ensureOwn: true })
   return own ?? null
+}
+
+/** The cookie that remembers which business someone is working in. Read only through businessContexts, so it can't grant access. */
+export const BUSINESS_COOKIE = 'doorlink-business'
+
+async function chosenBusinessId(): Promise<string | null> {
+  try {
+    const { cookies } = await import('next/headers')
+    return (await cookies()).get(BUSINESS_COOKIE)?.value ?? null
+  } catch {
+    // Outside a request (scripts, tests): no choice made.
+    return null
+  }
 }
 
 /** The gate for business pages and actions. Throws BusinessAccessError. */
