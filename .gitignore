@@ -4,6 +4,8 @@ node_modules
 .next-preview.lock
 .env
 .env.local
+.env.*
+!.env.example
 /prisma/*.db
 .DS_Store
 *.tsbuildinfo

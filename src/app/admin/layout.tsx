@@ -38,6 +38,7 @@ const ADMIN_NAV: Array<{
   { href: '/admin/reports', label: 'Reports', permission: 'admin:settings' },
   { href: '/admin/subscriptions', label: 'Subscriptions', permission: 'admin:settings' },
   { href: '/admin/metrics', label: 'Metrics', permission: 'admin:settings' },
+  { href: '/admin/integrations', label: 'Integrations', permission: 'admin:settings' },
   { href: '/admin/settings', label: 'Settings', permission: 'admin:settings' },
 ]
 

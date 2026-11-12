@@ -58,7 +58,9 @@ export function deliveryChannels(): { inApp: true; email: boolean; push: boolean
   return {
     inApp: true,
     email: isConnected('email'),
-    push: isConnected('push'),
+    // VAPID keys alone send nothing: there is no push sender or service-worker
+    // handler yet, so push is reported as off until one is built.
+    push: false,
   }
 }
 

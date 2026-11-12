@@ -45,7 +45,11 @@ rename instead: `ALTER TYPE "AssetType" RENAME TO asset_type;`.
 | `RESEND_API_KEY`, `EMAIL_FROM` | Sending invoices, reminders | `EMAIL_FROM` must be on a domain verified in Resend |
 | `RESEND_WEBHOOK_SECRET` | Marking invoice emails delivered/bounced | From the Resend webhook you create in step 3 |
 | `STRIPE_SECRET_KEY`, `STRIPE_CONNECT_WEBHOOK_SECRET` | Customers paying invoices by card into the company's own Stripe account | Use test-mode keys in staging |
-| `CRON_SECRET` | `/api/cron/jobs` (daily) and `/api/cron/reminders` (hourly) | |
+| `CRON_SECRET` | `/api/cron/jobs` (daily) and `/api/cron/reminders` (hourly) | At least 24 characters (`openssl rand -hex 32`) |
+| `STRIPE_WEBHOOK_SECRET` | Platform webhook `/api/webhooks/stripe` (subscriptions, marketplace payments) | |
+| `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_FROM` | Appointment reminder texts | `TWILIO_FROM` is a +61 number or a Messaging Service SID |
+| `ANTHROPIC_API_KEY` | Automatic review of submitted manuals | |
+| `OPENAI_API_KEY` | Photo preview of a design on `/configure` | |
 | `TRUSTED_PROXY_HOPS` | Rate limits keyed on the real client address | See section 5 |
 | `MFA_REQUIRE_ADMIN` | Requiring two-step sign-in for admins outside production | Production always requires it |
 
@@ -83,7 +87,21 @@ GET https://<site>/api/cron/jobs        (daily)    Authorization: Bearer $CRON_S
 
 Both are safe to run twice: each reminder is claimed before it is sent.
 
-**SMS.** Not connected. Reminders go in-app and by email only.
+**SMS (Twilio).** Set `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN` and
+`TWILIO_FROM`. Each text asks Twilio to report its status to
+`https://<site>/api/webhooks/twilio` (signed with the auth token and
+verified), so there is no dashboard webhook to add. A visit records
+"SMS sent" only when Twilio accepts the message, and "delivered" or
+"failed" only when Twilio reports it. A trial account texts verified numbers
+only.
+
+**Push notifications.** Not built. The VAPID variables have no effect yet.
+
+**Checking each one.** Admin → Integrations lists every service, the
+variable names still missing (never their values), the callback URLs to
+register, and a "Check connection" button that makes one read-only call
+(nothing is sent, charged or written). Each check is recorded in the audit
+log as `integration.check`.
 
 ## 4. Two-step sign-in and account recovery
 
