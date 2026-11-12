@@ -1,8 +1,8 @@
 import 'server-only'
 
-import { PDFDocument, PDFFont, PDFPage, rgb, StandardFonts, type RGB } from 'pdf-lib'
+import { PDFDocument, PDFFont, PDFImage, PDFPage, rgb, StandardFonts, type RGB } from 'pdf-lib'
 import { formatAbn } from '@/lib/business-details'
-import { logoDrawing, type LogoDesign } from '@/lib/branding/logo'
+import { logoDrawing, type LogoDesign, type LogoDrawing } from '@/lib/branding/logo'
 import { formatQuantity, receiptNumberLabel } from './money'
 import { longDate, PAYMENT_METHOD_LABELS, type InvoiceSnapshot, type PaymentLine } from './snapshot'
 
@@ -61,12 +61,33 @@ function wrap(font: PDFFont, text: string, size: number, maxWidth: number): stri
   return lines
 }
 
+/** A logo ready to draw any number of times: the image embedded once, or the builder's shapes. */
+type PreparedLogo = { kind: 'image'; image: PDFImage } | { kind: 'design'; drawing: LogoDrawing } | null
+
 interface Pen {
   doc: PDFDocument
   page: PDFPage
   regular: PDFFont
   bold: PDFFont
   y: number
+  /** Stamped faintly across the lower part of every page, before anything else is drawn on it. */
+  watermark: PreparedLogo
+}
+
+/** Watermark strength. Judged on printed A4: visible on white, never competing with totals or terms. */
+export const WATERMARK_OPACITY = 0.05
+/** The box the watermark fits inside: the page's full text width, across the lower part above the footer. */
+export const WATERMARK_BOX = { x: MARGIN, bottom: 52, width: A4[0] - MARGIN * 2, height: 200 }
+
+async function prepareLogo(doc: PDFDocument, logo: LogoSource): Promise<PreparedLogo> {
+  if (!logo) return null
+  if (logo.kind === 'design') return { kind: 'design', drawing: logoDrawing(logo.design) }
+  try {
+    return { kind: 'image', image: logo.contentType === 'image/png' ? await doc.embedPng(logo.bytes) : await doc.embedJpg(logo.bytes) }
+  } catch {
+    // An unreadable stored image shouldn't stop the invoice from rendering.
+    return null
+  }
 }
 
 function text(pen: Pen, value: string, x: number, y: number, options: { size?: number; bold?: boolean; colour?: RGB; align?: 'left' | 'right' } = {}) {
@@ -91,26 +112,48 @@ function rule(pen: Pen, y: number, x1 = MARGIN, x2 = A4[0] - MARGIN, colour: RGB
 function newPage(pen: Pen) {
   pen.page = pen.doc.addPage(A4)
   pen.y = A4[1] - MARGIN
+  stampWatermark(pen)
+}
+
+/**
+ * The company's own logo, faint and wide, centred across the lower part of
+ * the page. Drawn first, so every line of the invoice sits on top of it.
+ * It never moves the pen, so it can't change the layout or the page count.
+ */
+function stampWatermark(pen: Pen) {
+  const logo = pen.watermark
+  if (!logo) return
+  const box = WATERMARK_BOX
+  const natural = logo.kind === 'image' ? { width: logo.image.width, height: logo.image.height } : logo.drawing
+  const scale = Math.min(box.width / natural.width, box.height / natural.height)
+  const width = natural.width * scale
+  const height = natural.height * scale
+  const x = box.x + (box.width - width) / 2
+  const top = box.bottom + (box.height + height) / 2
+  drawPrepared(pen, logo, x, top, width, height, WATERMARK_OPACITY)
 }
 
 /** Draws the logo with its top-left corner at (x, top), fitted inside a box. Returns the height used. */
 async function drawLogo(pen: Pen, logo: LogoSource, x: number, top: number, maxWidth: number, maxHeight: number): Promise<number> {
-  if (!logo) return 0
-  if (logo.kind === 'image') {
-    try {
-      const image = logo.contentType === 'image/png' ? await pen.doc.embedPng(logo.bytes) : await pen.doc.embedJpg(logo.bytes)
-      const scale = Math.min(maxWidth / image.width, maxHeight / image.height, 1)
-      const width = image.width * scale
-      const height = image.height * scale
-      pen.page.drawImage(image, { x, y: top - height, width, height })
-      return height
-    } catch {
-      return 0
-    }
+  const prepared = await prepareLogo(pen.doc, logo)
+  if (!prepared) return 0
+  if (prepared.kind === 'image') {
+    const scale = Math.min(maxWidth / prepared.image.width, maxHeight / prepared.image.height, 1)
+    return drawPrepared(pen, prepared, x, top, prepared.image.width * scale, prepared.image.height * scale)
   }
-  const drawing = logoDrawing(logo.design)
-  const scale = Math.min(maxWidth / drawing.width, maxHeight / drawing.height)
-  const path = (d: string, colour: string) => pen.page.drawSvgPath(d, { x, y: top, scale, color: hex(colour), borderWidth: 0 })
+  const scale = Math.min(maxWidth / prepared.drawing.width, maxHeight / prepared.drawing.height)
+  return drawPrepared(pen, prepared, x, top, prepared.drawing.width * scale, prepared.drawing.height * scale)
+}
+
+/** Draws a prepared logo into a width × height box (already in proportion) with its top-left at (x, top). */
+function drawPrepared(pen: Pen, logo: Exclude<PreparedLogo, null>, x: number, top: number, width: number, height: number, opacity = 1): number {
+  if (logo.kind === 'image') {
+    pen.page.drawImage(logo.image, { x, y: top - height, width, height, opacity })
+    return height
+  }
+  const drawing = logo.drawing
+  const scale = width / drawing.width
+  const path = (d: string, colour: string) => pen.page.drawSvgPath(d, { x, y: top, scale, color: hex(colour), borderWidth: 0, opacity })
   for (const p of drawing.prims) {
     if (p.t === 'rect') {
       const r = Math.min(p.rx ?? 0, p.w / 2, p.h / 2)
@@ -123,29 +166,29 @@ async function drawLogo(pen: Pen, logo: LogoSource, x: number, top: number, maxW
     } else if (p.t === 'poly') {
       path(`M ${p.points.map(([px, py]) => `${px} ${py}`).join(' L ')} Z`, p.fill)
     } else if (p.t === 'circle') {
-      pen.page.drawCircle({ x: x + p.cx * scale, y: top - p.cy * scale, size: p.r * scale, color: hex(p.fill) })
+      pen.page.drawCircle({ x: x + p.cx * scale, y: top - p.cy * scale, size: p.r * scale, color: hex(p.fill), opacity })
     } else if (p.t === 'line') {
-      pen.page.drawLine({ start: { x: x + p.x1 * scale, y: top - p.y1 * scale }, end: { x: x + p.x2 * scale, y: top - p.y2 * scale }, thickness: p.width * scale, color: hex(p.stroke) })
+      pen.page.drawLine({ start: { x: x + p.x1 * scale, y: top - p.y1 * scale }, end: { x: x + p.x2 * scale, y: top - p.y2 * scale }, thickness: p.width * scale, color: hex(p.stroke), opacity })
     } else {
       const font = p.bold ? pen.bold : pen.regular
       const size = p.size * scale
       const clean = safe(font, p.text)
       const spacing = (p.spacing ?? 0) * scale
-      const width = font.widthOfTextAtSize(clean, size) + spacing * Math.max(0, clean.length - 1)
-      let cx = x + p.x * scale - (p.anchor === 'middle' ? width / 2 : p.anchor === 'end' ? width : 0)
+      const textWidth = font.widthOfTextAtSize(clean, size) + spacing * Math.max(0, clean.length - 1)
+      let cx = x + p.x * scale - (p.anchor === 'middle' ? textWidth / 2 : p.anchor === 'end' ? textWidth : 0)
       const cy = top - p.y * scale
-      if (!spacing) pen.page.drawText(clean, { x: cx, y: cy, size, font, color: hex(p.fill) })
+      if (!spacing) pen.page.drawText(clean, { x: cx, y: cy, size, font, color: hex(p.fill), opacity })
       else
         for (const ch of clean) {
-          pen.page.drawText(ch, { x: cx, y: cy, size, font, color: hex(p.fill) })
+          pen.page.drawText(ch, { x: cx, y: cy, size, font, color: hex(p.fill), opacity })
           cx += font.widthOfTextAtSize(ch, size) + spacing
         }
     }
   }
-  return drawing.height * scale
+  return height
 }
 
-async function start(title: string, author: string, created: Date): Promise<Pen> {
+async function start(title: string, author: string, created: Date, watermark: LogoSource = null): Promise<Pen> {
   const doc = await PDFDocument.create()
   doc.setTitle(title)
   doc.setAuthor(author)
@@ -157,7 +200,9 @@ async function start(title: string, author: string, created: Date): Promise<Pen>
   const regular = await doc.embedFont(StandardFonts.Helvetica)
   const bold = await doc.embedFont(StandardFonts.HelveticaBold)
   const page = doc.addPage(A4)
-  return { doc, page, regular, bold, y: A4[1] - MARGIN }
+  const pen: Pen = { doc, page, regular, bold, y: A4[1] - MARGIN, watermark: await prepareLogo(doc, watermark) }
+  stampWatermark(pen)
+  return pen
 }
 
 function issuerLines(snapshot: InvoiceSnapshot): string[] {
@@ -239,7 +284,7 @@ export async function renderInvoicePdf(input: {
   voided: boolean
 }): Promise<Uint8Array> {
   const { snapshot, payments } = input
-  const pen = await start(`${snapshot.title} ${snapshot.number}`, snapshot.issuer.name, input.issuedAt)
+  const pen = await start(`${snapshot.title} ${snapshot.number}`, snapshot.issuer.name, input.issuedAt, input.logo)
   const currency = snapshot.currency
 
   await header(pen, snapshot, input.logo, snapshot.title, [
@@ -257,7 +302,8 @@ export async function renderInvoicePdf(input: {
       newPage(pen)
       tableHead(pen, snapshot)
     }
-    if (i % 2 === 1) pen.page.drawRectangle({ x: MARGIN, y: pen.y - height, width: A4[0] - MARGIN * 2, height, color: rgb(0.97, 0.98, 0.99) })
+    // Tinted, not opaque, so the watermark underneath shows through evenly.
+    if (i % 2 === 1) pen.page.drawRectangle({ x: MARGIN, y: pen.y - height, width: A4[0] - MARGIN * 2, height, color: rgb(0.86, 0.9, 0.95), opacity: 0.25 })
     let y = pen.y - 15
     for (const part of wrapped) {
       text(pen, part, COLS.description, y)
@@ -299,7 +345,7 @@ export async function renderInvoicePdf(input: {
   }
   y -= payments.length > 0 ? 6 : 0
   const brand = hex(snapshot.issuer.brandColour)
-  pen.page.drawRectangle({ x: labelX - 10, y: y - 12, width: A4[0] - MARGIN - labelX + 10, height: 28, color: balance === 0 ? rgb(0.9, 0.96, 0.92) : rgb(0.95, 0.97, 1) })
+  pen.page.drawRectangle({ x: labelX - 10, y: y - 12, width: A4[0] - MARGIN - labelX + 10, height: 28, color: balance === 0 ? rgb(0.6, 0.85, 0.68) : rgb(0.7, 0.8, 1), opacity: balance === 0 ? 0.25 : 0.17 })
   text(pen, balance === 0 ? 'Paid in full' : 'Balance due', labelX, y - 2, { bold: true, size: 11 })
   text(pen, money(balance, currency), COLS.amount, y - 2, { align: 'right', bold: true, size: 13, colour: balance === 0 ? rgb(0.18, 0.49, 0.27) : brand })
 
@@ -356,7 +402,7 @@ export async function renderReceiptPdf(input: {
 }): Promise<Uint8Array> {
   const { snapshot, payment } = input
   const number = receiptNumberLabel(payment.receiptNumber)
-  const pen = await start(`Receipt ${number}`, snapshot.issuer.name, input.receivedAt)
+  const pen = await start(`Receipt ${number}`, snapshot.issuer.name, input.receivedAt, input.logo)
   await header(pen, snapshot, input.logo, 'Receipt', [
     ['Receipt number', number],
     ['Date received', longDate(payment.date)],

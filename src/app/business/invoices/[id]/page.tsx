@@ -13,6 +13,7 @@ import { formatInZone, localDateString } from '@/lib/timezone'
 import { InvoiceDocument } from '@/components/invoices/InvoiceDocument'
 import { Card, Notice, PageHeader, Pill, SecondaryLink, SectionTitle, type PillTone } from '@/components/business/ui'
 import { Steps } from '../Steps'
+import { PrintLink } from '@/components/invoices/PrintLink'
 import { DiscardDraftButton, IssueButton, PaymentForm, ReversePaymentForm, SendForm, ShareForm, VoidForm } from './InvoiceControls'
 
 export const dynamic = 'force-dynamic'
@@ -39,6 +40,7 @@ export default async function InvoicePage({ params, searchParams }: { params: Pr
     const snapshot = await previewSnapshot(business, invoice)
     return (
       <div className="mx-auto max-w-3xl">
+        <div className="print:hidden">
         <PageHeader title="Preview and issue" back={{ href: `/business/invoices/${id}/edit`, label: 'Items and price' }} subtitle="This is exactly what your customer will receive." />
         <Steps current={3} />
         {invoice.lines.length === 0 && (
@@ -46,8 +48,9 @@ export default async function InvoicePage({ params, searchParams }: { params: Pr
             <Notice tone="warn">There are no items yet. Go back and add at least one.</Notice>
           </div>
         )}
+        </div>
         <InvoiceDocument snapshot={snapshot} logoUrl={logoUrl(business.profile.logoVersionId)} />
-        <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between print:hidden">
           <IssueButton id={id} />
           <div className="flex gap-2">
             <SecondaryLink href={`/business/invoices/${id}/edit`}>Edit items</SecondaryLink>
@@ -69,6 +72,7 @@ export default async function InvoicePage({ params, searchParams }: { params: Pr
 
   return (
     <>
+      <div className="print:hidden">
       <PageHeader
         title={`Invoice ${invoiceNumberLabel(invoice.number)}`}
         back={{ href: '/business/invoices', label: 'Invoices' }}
@@ -94,8 +98,9 @@ export default async function InvoicePage({ params, searchParams }: { params: Pr
           </Notice>
         </div>
       )}
+      </div>
 
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_22rem]">
+      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_22rem] print:block">
         <div className="min-w-0">
           <InvoiceDocument
             snapshot={snapshot}
@@ -105,7 +110,7 @@ export default async function InvoicePage({ params, searchParams }: { params: Pr
           />
         </div>
 
-        <aside className="flex flex-col gap-5">
+        <aside className="flex flex-col gap-5 print:hidden">
           <Card>
             <a
               href={`/api/invoices/${id}/pdf`}
@@ -113,6 +118,7 @@ export default async function InvoicePage({ params, searchParams }: { params: Pr
             >
               Download PDF
             </a>
+            <PrintLink />
             {invoice.job && (
               <Link href={`/jobs/${invoice.job.id}`} className="mt-3 block text-center text-sm font-medium text-signal hover:text-signal-hover">
                 Job {invoice.job.reference}

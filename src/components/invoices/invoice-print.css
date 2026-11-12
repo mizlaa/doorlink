@@ -1,0 +1,48 @@
+/*
+ * Printing an invoice from the browser: A4, only the invoice itself, and
+ * the company's faint logo across the lower part of every printed page.
+ * A fixed element repeats on each printed page, so long invoices get the
+ * watermark on the first, middle and last pages, as the PDF does.
+ */
+.invoice-watermark {
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  bottom: 4%;
+  height: min(22%, 13rem);
+  width: 88%;
+  object-fit: contain;
+  object-position: center;
+  opacity: 0.05;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+  html,
+  body {
+    background: #fff !important;
+  }
+  .invoice-doc {
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+  .invoice-doc .invoice-watermark {
+    position: fixed;
+    left: 6%;
+    right: 6%;
+    bottom: 14mm;
+    width: 88%;
+    height: 62mm;
+  }
+  .invoice-doc tr,
+  .invoice-doc dl {
+    break-inside: avoid;
+  }
+}

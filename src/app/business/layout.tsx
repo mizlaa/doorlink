@@ -50,9 +50,9 @@ export default async function BusinessLayout({ children }: { children: ReactNode
   }
 
   return (
-    <div className="mx-auto w-full max-w-shell px-4 py-6 sm:py-8">
+    <div className="mx-auto w-full max-w-shell px-4 py-6 sm:py-8 print:max-w-none print:p-0">
       {items.length > 0 && (
-        <div className="mb-6 border-b border-line pb-3">
+        <div className="mb-6 border-b border-line pb-3 print:hidden">
           {name && <p className="mb-2 text-micro font-semibold uppercase tracking-wide text-zinc-deep">{name}</p>}
           <BusinessNav items={items} />
         </div>

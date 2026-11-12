@@ -9,6 +9,7 @@ import { formatMoney } from '@/lib/money'
 import { prisma } from '@/lib/prisma'
 import { InvoiceDocument } from './InvoiceDocument'
 import { PayButton } from './PayButton'
+import { PrintLink } from './PrintLink'
 
 /**
  * What the customer sees, whether signed in or through a share link: the
@@ -45,7 +46,7 @@ export async function CustomerInvoice({
 
   return (
     <div className="mx-auto max-w-3xl px-4 pb-16 pt-6">
-      <div className="mb-5 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <div className="mb-5 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between print:hidden">
         <div>
           <p className="text-micro font-semibold uppercase tracking-wide text-zinc-deep">{snapshot.issuer.name}</p>
           <h1 className="text-2xl font-semibold text-graphite">
@@ -55,24 +56,27 @@ export async function CustomerInvoice({
             {invoice.status === InvoiceStatus.VOID ? 'This invoice was cancelled.' : owing > 0 ? `${formatMoney(owing, invoice.currency)} to pay · ${PAYMENT_STATE_LABELS[state]}` : 'Paid in full. Thank you.'}
           </p>
         </div>
-        <a href={`${base}/pdf`} className="inline-flex h-11 items-center justify-center rounded border border-line bg-rail px-4 text-sm font-medium text-graphite hover:bg-paper">
-          Download PDF
-        </a>
+        <span className="flex gap-2">
+          <a href={`${base}/pdf`} className="inline-flex h-11 items-center justify-center rounded border border-line bg-rail px-4 text-sm font-medium text-graphite hover:bg-paper">
+            Download PDF
+          </a>
+          <PrintLink compact />
+        </span>
       </div>
 
       {returned === 'paid' && owing > 0 && (
-        <p role="status" className="mb-4 rounded border border-line bg-rail p-3 text-sm text-graphite">
+        <p role="status" className="mb-4 print:hidden rounded border border-line bg-rail p-3 text-sm text-graphite">
           Thanks. We’re waiting for the card provider to confirm your payment. This page will show it as paid, with a receipt, once it’s confirmed. Refresh in a moment.
         </p>
       )}
       {returned === 'cancelled' && (
-        <p role="status" className="mb-4 rounded border border-line bg-rail p-3 text-sm text-graphite">
+        <p role="status" className="mb-4 print:hidden rounded border border-line bg-rail p-3 text-sm text-graphite">
           The payment was cancelled. Nothing was charged.
         </p>
       )}
 
       {invoice.status === InvoiceStatus.ISSUED && owing > 0 && (
-        <div className="mb-5">
+        <div className="mb-5 print:hidden">
           {canPay && !pending ? (
             <PayButton action={pay} fields={payFields} label={`Pay ${formatMoney(owing, invoice.currency)} by card`} />
           ) : canPay && pending ? (

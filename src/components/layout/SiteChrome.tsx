@@ -13,5 +13,6 @@ const OWN_CHROME = ['/configure']
 export function SiteChrome({ children }: { children: ReactNode }) {
   const pathname = usePathname()
   if (OWN_CHROME.some((path) => pathname === path || pathname.startsWith(`${path}/`))) return null
-  return <>{children}</>
+  // Out of the way when printing: a printed invoice or report is the document alone.
+  return <div className="contents print:hidden">{children}</div>
 }

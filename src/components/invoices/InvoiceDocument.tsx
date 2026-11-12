@@ -1,3 +1,4 @@
+import './invoice-print.css'
 import { formatAbn } from '@/lib/business-details'
 import { formatQuantity, receiptNumberLabel } from '@/lib/invoices/money'
 import { longDate, PAYMENT_METHOD_LABELS, type InvoiceSnapshot, type PaymentLine } from '@/lib/invoices/snapshot'
@@ -28,13 +29,15 @@ export function InvoiceDocument({
   const issuer = snapshot.issuer
   const brand = issuer.brandColour
   return (
-    <article className="relative overflow-hidden rounded-lg border border-line bg-white text-[#17212f] shadow-panel" aria-label={`${snapshot.title} ${snapshot.number}`}>
+    <article className="invoice-doc relative overflow-hidden rounded-lg border border-line bg-white text-[#17212f] shadow-panel" aria-label={`${snapshot.title} ${snapshot.number}`}>
+      {/* The company's own logo again, faint and wide across the lower part: decoration only, same as the PDF. */}
+      {logoUrl && <img src={logoUrl} alt="" aria-hidden="true" className="invoice-watermark" />}
       {voided && (
         <p className="pointer-events-none absolute inset-0 flex items-center justify-center text-[22vw] font-black text-bad/10 sm:text-[9rem]" aria-hidden="true">
           VOID
         </p>
       )}
-      <div className="p-5 sm:p-8">
+      <div className="relative p-5 sm:p-8">
         <header className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
           <div className="min-w-0">
             {logoUrl ? (
@@ -105,7 +108,7 @@ export function InvoiceDocument({
             </thead>
             <tbody>
               {snapshot.lines.map((line, i) => (
-                <tr key={i} className={i % 2 ? 'bg-[#f7f9fb]' : undefined}>
+                <tr key={i} className={i % 2 ? 'bg-[#dbe4ef]/25' : undefined}>
                   <td className="px-3 py-2.5 align-top">
                     {line.description}
                     {/* On a phone the quantity, rate and GST sit under the description. */}
