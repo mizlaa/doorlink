@@ -120,42 +120,6 @@
   position: relative;
 }
 
-/* The header's curved edge: its colour runs down the right side of the
-   viewer and sweeps back up to the left, with the line underneath it. */
-.dz-curve {
-  position: absolute;
-  top: -1px;
-  right: 0;
-  z-index: 4;
-  width: 52%;
-  max-width: 280px;
-  height: 68px;
-  pointer-events: none;
-}
-
-.dz-curve svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.dz-tagline {
-  position: absolute;
-  top: 6px;
-  right: var(--dz-gutter);
-  width: max-content;
-  max-width: 44%;
-  z-index: 5;
-  margin: 0;
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: #b8c6d9;
-  pointer-events: none;
-}
-
 .dz-viewer {
   position: relative;
   width: 100%;
@@ -216,7 +180,7 @@
 /* 2D | 3D */
 .dz-mode {
   position: absolute;
-  top: 76px;
+  top: 12px;
   right: 12px;
   z-index: 6;
   display: flex;
@@ -292,11 +256,6 @@
 .dz-stage.is-expanded .dz-viewer {
   aspect-ratio: auto;
   height: 100%;
-}
-
-.dz-stage.is-expanded .dz-curve,
-.dz-stage.is-expanded .dz-tagline {
-  display: none;
 }
 
 .dz-stage.is-expanded .dz-mode {
@@ -1190,21 +1149,6 @@
   .dz-main {
     max-width: 760px;
     margin: 0 auto;
-  }
-  .dz-curve {
-    display: none;
-  }
-  .dz-tagline {
-    /* No curve on wide screens: a soft navy card keeps it legible over sky or roof alike. */
-    top: 14px;
-    right: 14px;
-    z-index: 6;
-    padding: 9px 13px;
-    border-radius: 10px;
-    background: rgba(14, 26, 42, 0.72);
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
-    color: #e6edf6;
   }
   .dz-mode {
     top: 14px;

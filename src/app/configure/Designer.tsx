@@ -516,20 +516,6 @@ export function Designer({
 
       <div className="dz-main">
         <div className={`dz-stage${expanded ? ' is-expanded' : ''}`}>
-          {/* The header's curved edge and the line that sits in it. */}
-          <div className="dz-curve" aria-hidden="true">
-            <svg viewBox="0 0 270 68" preserveAspectRatio="none">
-              <path d="M0 0H270V68H50C24 68 18 0 0 0Z" fill="#0e1a2a" />
-            </svg>
-          </div>
-          <p className="dz-tagline">
-            A better
-            <br />
-            garage starts
-            <br />
-            at home
-          </p>
-
           <div className="dz-viewer" role={expanded ? 'dialog' : undefined} aria-label={expanded ? 'Your design, full screen' : undefined}>
             <DesignerScene preview={scenePreview} isOpen={open} mode={mode} rigBus={rigBus} onToggle={() => setOpen((v) => !v)} />
 
