@@ -12,13 +12,13 @@
 .dz {
   --dz-bg: #0b1522;
   --dz-header: #0e1a2a;
-  --dz-surface: #121f30;
-  --dz-surface-2: #17263a;
-  --dz-line: rgba(255, 255, 255, 0.075);
-  --dz-line-strong: rgba(255, 255, 255, 0.14);
+  --dz-surface: #16263b;
+  --dz-surface-2: #1c2e46;
+  --dz-line: rgba(255, 255, 255, 0.11);
+  --dz-line-strong: rgba(255, 255, 255, 0.2);
   --dz-text: #f3f6fa;
-  --dz-muted: #9aabc0;
-  --dz-dim: #6f8198;
+  --dz-muted: #a7b6c9;
+  --dz-dim: #8396ae;
   --dz-blue: #1f7cff;
   --dz-blue-press: #1667dd;
   --dz-blue-glow: rgba(31, 124, 255, 0.55);
@@ -421,7 +421,7 @@
   gap: 6px;
   padding: 7px 5px 8px;
   border-radius: 9px;
-  border: 1.5px solid transparent;
+  border: 1.5px solid var(--dz-line);
   background: var(--dz-surface);
   font-size: 0.8125rem;
   font-weight: 500;
@@ -440,7 +440,7 @@
 
 .dz .dz-card[aria-pressed='true'] {
   border-color: var(--dz-blue);
-  background: #0f1d31;
+  background: #132a48;
   box-shadow: 0 0 0 1px rgba(31, 124, 255, 0.35), 0 0 14px -2px var(--dz-blue-glow);
 }
 
