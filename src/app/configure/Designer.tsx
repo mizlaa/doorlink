@@ -28,7 +28,8 @@ import type { LocalCompany } from '@/lib/pricing/local'
 import { requestFromSpec } from '@/lib/pricing/products'
 import type { MotorCandidate } from '@/lib/motors/specs'
 import { PREVIEW_NOTE_MAX_WORDS, previewNoteWordCount } from '@/lib/configurator/preview-prompt'
-import { DoorGlyph, DoorlinkMark, icons, Stars } from '@/components/designer/glyphs'
+import { DoorGlyph, icons, Stars } from '@/components/designer/glyphs'
+import { DoorlinkLogo } from '@/components/brand/DoorlinkLogo'
 import { RigBus, type ViewMode } from '@/components/designer/scene/DesignerRig'
 import { Button } from '@/components/ui/Button'
 import { Field, Input, Textarea } from '@/components/ui/Field'
@@ -474,13 +475,7 @@ export function Designer({
       <header className="dz-header">
         <div className="dz-header-bar">
           <Link href="/" className="dz-logo" aria-label="Doorlink home">
-            <DoorlinkMark className="dz-logo-mark" />
-            <span>
-              <span className="dz-logo-word">
-                Door<b>link</b>
-              </span>
-              <span className="dz-logo-tag">DESIGN&nbsp;&nbsp;COMPARE&nbsp;&nbsp;INSTALL</span>
-            </span>
+            <DoorlinkLogo tone="onDark" />
           </Link>
           <nav className="dz-header-nav" aria-label="Designer">
             <Link href="/configure" aria-current="page">
@@ -500,8 +495,8 @@ export function Designer({
         <div className={`dz-stage${expanded ? ' is-expanded' : ''}`}>
           {/* The header's curved edge and the line that sits in it. */}
           <div className="dz-curve" aria-hidden="true">
-            <svg viewBox="0 0 270 62" preserveAspectRatio="none">
-              <path d="M0 0H270V62H84C50 62 42 0 8 0Z" fill="#0e1a2a" />
+            <svg viewBox="0 0 270 68" preserveAspectRatio="none">
+              <path d="M0 0H270V68H50C24 68 18 0 0 0Z" fill="#0e1a2a" />
             </svg>
           </div>
           <p className="dz-tagline">

@@ -1,6 +1,7 @@
 import { NavigationLink as Link } from '@/components/ui/NavigationLink'
 import { getSession } from '@/lib/auth'
 import { workHomeFor } from '@/lib/business/home'
+import { DoorlinkLogo } from '@/components/brand/DoorlinkLogo'
 import { AUTH_UNAVAILABLE_MESSAGE, isAuthServiceUnavailable } from '@/lib/supabase/auth-service'
 import { can } from '@/lib/rbac'
 import { roleRequiresTradeSubscription } from '@/lib/trade-subscription'
@@ -125,11 +126,8 @@ export async function Header() {
     )}
     <header className="relative z-20 border-b border-line bg-paper">
       <div className="mx-auto flex h-16 max-w-shell items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2.5 text-lg font-semibold tracking-tight text-graphite">
-          <span className="flex h-7 w-7 items-center justify-center rounded bg-graphite text-[10px] font-bold tracking-normal text-paper">
-            DL
-          </span>
-          <span>Doorlink</span>
+        <Link href="/" className="text-lg text-graphite" aria-label="Doorlink home">
+          <DoorlinkLogo />
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">

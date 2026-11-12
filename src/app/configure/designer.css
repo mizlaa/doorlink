@@ -77,40 +77,12 @@
 }
 
 .dz-logo {
+  /* The official logo (components/brand/DoorlinkLogo), sized from its wordmark. */
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+  padding: 6px 0;
+  font-size: 1.25rem;
   text-decoration: none;
-  color: var(--dz-text);
-}
-
-.dz-logo-mark {
-  width: 34px;
-  height: 34px;
-  flex: none;
-}
-
-.dz-logo-word {
-  display: block;
-  font-size: 1.3rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  line-height: 1;
-}
-
-.dz-logo-word b {
-  font-weight: 600;
-  color: var(--dz-blue);
-}
-
-.dz-logo-tag {
-  display: block;
-  margin-top: 3px;
-  font-size: 0.5rem;
-  font-weight: 500;
-  letter-spacing: 0.16em;
-  color: var(--dz-muted);
-  white-space: nowrap;
 }
 
 .dz-header-nav {
@@ -155,9 +127,9 @@
   top: -1px;
   right: 0;
   z-index: 4;
-  width: 50%;
-  max-width: 270px;
-  height: 62px;
+  width: 52%;
+  max-width: 280px;
+  height: 68px;
   pointer-events: none;
 }
 
@@ -169,17 +141,18 @@
 
 .dz-tagline {
   position: absolute;
-  top: 4px;
+  top: 6px;
   right: var(--dz-gutter);
-  width: 118px;
+  width: max-content;
+  max-width: 44%;
   z-index: 5;
   margin: 0;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  line-height: 1.38;
-  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--dz-muted);
+  color: #b8c6d9;
   pointer-events: none;
 }
 
@@ -243,7 +216,7 @@
 /* 2D | 3D */
 .dz-mode {
   position: absolute;
-  top: 70px;
+  top: 76px;
   right: 12px;
   z-index: 6;
   display: flex;
@@ -1195,9 +1168,6 @@
     gap: 12px;
     font-size: 0.75rem;
   }
-  .dz-logo-tag {
-    display: none;
-  }
 }
 
 /* Short phones in landscape: the viewer mustn't take the whole screen. */
@@ -1225,10 +1195,16 @@
     display: none;
   }
   .dz-tagline {
+    /* No curve on wide screens: a soft navy card keeps it legible over sky or roof alike. */
     top: 14px;
+    right: 14px;
     z-index: 6;
-    color: #fff;
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+    padding: 9px 13px;
+    border-radius: 10px;
+    background: rgba(14, 26, 42, 0.72);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    color: #e6edf6;
   }
   .dz-mode {
     top: 14px;
