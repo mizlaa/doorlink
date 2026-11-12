@@ -95,6 +95,8 @@ export function gateLookFromSpec(spec: DoorSpec): GateLook {
       ? spec.infill
       : 'slats') as GateInfill,
     leaves: spec.leaves === '1' ? 1 : 2,
+    opensOut: spec.swingDirection === 'out',
+    slidesLeft: spec.slideDirection === 'left',
     swingMotor: (['ram', 'arm', 'underground'].includes(spec.swingMotor)
       ? spec.swingMotor
       : 'ram') as SwingMotorStyle,

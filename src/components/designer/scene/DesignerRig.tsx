@@ -6,6 +6,7 @@ import { OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 import { smootherstep } from '@/components/three-v2/geometry'
 import { prefersReducedMotion } from '@/components/three-v2/quality'
+import type { RigFraming } from './framing'
 
 /**
  * The designer's camera.
@@ -61,17 +62,7 @@ interface Flight {
 
 const rad = (deg: number) => (deg * Math.PI) / 180
 
-export function DesignerRig({
-  mode,
-  doorW,
-  doorH,
-  bus,
-}: {
-  mode: ViewMode
-  doorW: number
-  doorH: number
-  bus: RigBus
-}) {
+export function DesignerRig({ mode, framing, bus }: { mode: ViewMode; framing: RigFraming; bus: RigBus }) {
   const controls = useRef<ComponentRef<typeof OrbitControls>>(null)
   const { camera, clock, size, scene } = useThree()
   const flight = useRef<Flight | null>(null)
@@ -80,9 +71,11 @@ export function DesignerRig({
   // Where the person left the 3D view, so coming back from 2D returns there.
   const last3d = useRef<THREE.Spherical | null>(null)
 
-  // The orbit pivots on the garage: the middle of the opening, a little
-  // above the door so the house sits in frame with the door low in it.
-  const centre = useMemo(() => new THREE.Vector3(0, doorH + 0.3, 0), [doorH])
+  // The orbit pivots on the product (for a garage, a little above the door
+  // so the house sits in frame with the door low in it).
+  const [cx, cy, cz] = framing.centre
+  const centre = useMemo(() => new THREE.Vector3(cx, cy, cz), [cx, cy, cz])
+  const frame = framing
 
   /** How far back the camera must be for `width` × `height` metres to fit, at a field of view. */
   const distanceToFit = (width: number, height: number, fov: number) => {
@@ -96,19 +89,18 @@ export function DesignerRig({
     // photo taken walking up to the house. The door takes about half the
     // width and two-fifths of the height; a narrow screen backs off far
     // enough to keep the whole door and both piers.
-    const radius = distanceToFit(doorW / 0.44, doorH / 0.36, FOV_3D)
-    const eye = 1.62
-    const polar = Math.acos(THREE.MathUtils.clamp((eye - centre.y) / radius, -0.5, 0.5))
-    return { target: centre.clone(), spherical: new THREE.Spherical(radius, polar, rad(13)), fov: FOV_3D }
+    const radius = distanceToFit(frame.fit3d[0], frame.fit3d[1], FOV_3D)
+    const polar = Math.acos(THREE.MathUtils.clamp((frame.eye - centre.y) / radius, -0.5, 0.5))
+    return { target: centre.clone(), spherical: new THREE.Spherical(radius, polar, rad(frame.azimuth)), fov: FOV_3D }
   }
 
   const home2d = (): Pose => {
-    const radius = distanceToFit(doorW + 2.4, doorH + 2.5, FOV_2D)
-    // Stand the house on a strip of ground near the bottom of the frame,
+    const radius = distanceToFit(frame.fit2d[0], frame.fit2d[1], FOV_2D)
+    // Stand the product on a strip of ground near the bottom of the frame,
     // whatever shape the viewer is: on a tall screen the sky fills the rest.
     const halfHeight = radius * Math.tan(rad(FOV_2D) / 2)
     return {
-      target: new THREE.Vector3(0, halfHeight * 0.76, 0),
+      target: new THREE.Vector3(frame.centreX2d, halfHeight * frame.ground2d, 0),
       spherical: new THREE.Spherical(radius, Math.PI / 2, 0),
       fov: FOV_2D,
     }
@@ -169,14 +161,13 @@ export function DesignerRig({
       c.maxAzimuthAngle = 0
     } else {
       const fit = home3d().spherical.radius
-      c.minDistance = Math.min(3.2, fit * 0.5)
+      c.minDistance = frame.minDistance ?? Math.min(3.2, fit * 0.5)
       c.maxDistance = fit * 1.9
-      // From either side of the door, never round the back, over the roof
-      // or through the neighbour's fence.
-      c.minPolarAngle = rad(70)
-      c.maxPolarAngle = rad(100)
-      c.minAzimuthAngle = rad(-58)
-      c.maxAzimuthAngle = rad(58)
+      // From either side, never round the back, over the roof or through the neighbour's fence.
+      c.minPolarAngle = rad(frame.polar[0])
+      c.maxPolarAngle = rad(frame.polar[1])
+      c.minAzimuthAngle = rad(frame.azimuthRange[0])
+      c.maxAzimuthAngle = rad(frame.azimuthRange[1])
     }
     // A long lens through the scene's haze would wash the house out.
     const fog = scene.fog as THREE.Fog | null
@@ -259,21 +250,24 @@ export function DesignerRig({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [size.width, size.height])
 
-  // A different door size moves what the orbit is centred on, gently.
-  const sized = useRef(`${doorW}:${doorH}`)
+  // A different size or product moves what the orbit is centred on, gently.
+  const sized = useRef(frame.key)
   useEffect(() => {
-    const next = `${doorW}:${doorH}`
+    const next = frame.key
     if (sized.current === next) return
+    const productChanged = sized.current.split(':')[0] !== next.split(':')[0]
     sized.current = next
+    if (productChanged) last3d.current = null
     if (current.current === '2d') fly(home2d(), 0.4)
     else {
       const pose = poseNow()
       pose.target = centre.clone()
       pose.spherical.radius = Math.max(pose.spherical.radius, home3d().spherical.radius * 0.6)
-      fly(pose, 0.4)
+      // A different product starts from its own opening view; a new size keeps the angle.
+      fly(productChanged ? home3d() : pose, productChanged ? 0.6 : 0.4)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [doorW, doorH])
+  }, [frame.key])
 
   useEffect(
     () =>
@@ -294,7 +288,7 @@ export function DesignerRig({
         fly(pose, 0.3)
       }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [bus, doorW, doorH, size.width, size.height]
+    [bus, frame.key, size.width, size.height]
   )
 
   useFrame(() => {
@@ -332,10 +326,10 @@ export function DesignerRig({
     }
     if (current.current === '2d') {
       // Panning can't lose the house: the view centre stays over the facade.
-      c.target.x = THREE.MathUtils.clamp(c.target.x, -(doorW / 2 + 2.5), doorW / 2 + 2.5)
-      c.target.y = THREE.MathUtils.clamp(c.target.y, 0.2, Math.max(doorH + 2.4, home2d().target.y))
+      c.target.x = THREE.MathUtils.clamp(c.target.x, frame.panX[0], frame.panX[1])
+      c.target.y = THREE.MathUtils.clamp(c.target.y, 0.2, Math.max(frame.panMaxY, home2d().target.y))
       c.target.z = 0
-      setNear(Math.max(0.1, camera.position.z - 6.2))
+      setNear(Math.max(0.1, camera.position.z - frame.clipDepth))
     } else {
       c.target.copy(centre)
     }

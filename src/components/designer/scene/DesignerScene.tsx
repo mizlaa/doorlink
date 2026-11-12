@@ -17,6 +17,7 @@ import { CameraBus, type CameraView } from '@/components/three-v2/CameraRig'
 import { detectTier, TIERS, type Tier } from '@/components/three-v2/quality'
 import { ModernHome, modernLayout } from './ModernHome'
 import { DesignerRig, RigBus, type ViewMode } from './DesignerRig'
+import { garageFraming, gateFraming } from './framing'
 
 export { RigBus, type ViewMode } from './DesignerRig'
 
@@ -68,6 +69,7 @@ const GarageView = memo(function GarageView({
 }) {
   const { W, H } = doorMetres(look)
   const stageBus = useMemo(() => new CameraBus(), [])
+  const framing = useMemo(() => garageFraming(W, H), [W, H])
   return (
     <Stage
       tier={tier}
@@ -81,7 +83,7 @@ const GarageView = memo(function GarageView({
       maxDistance={40}
       shadowSpan={17}
       onReady={onReady}
-      rig={<DesignerRig mode={mode} doorW={W} doorH={H} bus={rigBus} />}
+      rig={<DesignerRig mode={mode} framing={framing} bus={rigBus} />}
     >
       <GarageContents look={look} isOpen={isOpen} tier={tier} />
     </Stage>
@@ -137,19 +139,6 @@ export const DesignerScene = memo(function DesignerScene({
     setReady(false)
   }, [scene])
 
-  // Gates, fences and shutters keep their own scene; 2D there is its front view.
-  useEffect(() => {
-    if (scene !== 'gate') return
-    gateBus.send({ type: 'view', name: mode === '2d' ? 'front' : 'angle', duration: 0.7 })
-  }, [mode, scene, gateBus])
-  useEffect(() => {
-    if (scene !== 'gate') return
-    return rigBus.listen((command) => {
-      if (command === 'reset') gateBus.send({ type: 'view', name: mode === '2d' ? 'front' : 'angle' })
-      else gateBus.send({ type: 'zoom', factor: command === 'zoom-in' ? 0.78 : 1.28 })
-    })
-  }, [scene, rigBus, gateBus, mode])
-
   if (supported === false) {
     return (
       <div ref={wrapper} className="dz-scene-fallback">
@@ -182,6 +171,8 @@ export const DesignerScene = memo(function DesignerScene({
             isOpen={isOpen}
             look={preview.look}
             bus={gateBus}
+            rig={<DesignerRig mode={mode} framing={gateFraming(preview.look)} bus={rigBus} />}
+            flat={mode === '2d'}
             tier={tier}
             maxTier={maxTier}
             onTier={setTier}

@@ -242,6 +242,24 @@ export const OPTION_GROUPS: OptionGroup[] = [
     ],
   },
   {
+    id: 'swingDirection',
+    label: 'Opens',
+    only: ['swing-gate', 'pedestrian-gate'],
+    values: [
+      { id: 'in', label: 'Inward', description: 'Into the property. The usual choice, and what most councils expect.' },
+      { id: 'out', label: 'Outward', description: 'Towards the street, for a driveway that slopes up behind the gate. Check your council allows it.' },
+    ],
+  },
+  {
+    id: 'slideDirection',
+    label: 'Slides',
+    only: ['sliding-gate'],
+    values: [
+      { id: 'right', label: 'Opens to the right', description: 'The gate runs back along the fence on the right, seen from the street.' },
+      { id: 'left', label: 'Opens to the left', description: 'The gate runs back along the fence on the left, seen from the street.' },
+    ],
+  },
+  {
     id: 'slat',
     label: 'Slat size',
     only: ['window-shutter'],
@@ -384,6 +402,10 @@ export type DoorSpec = {
   infill: string
   material: string
   leaves: string
+  /** Swing and pedestrian gates: 'in' (into the property) or 'out'. */
+  swingDirection: string
+  /** Sliding gates: which side the gate runs back to, seen from the street. */
+  slideDirection: string
   slat: string
   operation: string
   swingMotor: string
@@ -408,6 +430,8 @@ export const DEFAULT_SPEC: DoorSpec = {
   infill: 'slats',
   material: 'aluminium',
   leaves: '2',
+  swingDirection: 'in',
+  slideDirection: 'right',
   slat: '39',
   operation: 'motorised',
   swingMotor: 'ram',
@@ -675,6 +699,9 @@ export function parseSpec(raw: unknown): DoorSpec {
     infill: pick('infill', DEFAULT_SPEC.infill),
     material: pick('material', DEFAULT_SPEC.material),
     leaves: pick('leaves', DEFAULT_SPEC.leaves),
+    // Designs saved before these existed open the way every gate used to: inward, sliding right.
+    swingDirection: pick('swingDirection', DEFAULT_SPEC.swingDirection),
+    slideDirection: pick('slideDirection', DEFAULT_SPEC.slideDirection),
     slat: pick('slat', DEFAULT_SPEC.slat),
     operation: pick('operation', TYPE_DEFAULTS[productType]?.operation ?? DEFAULT_SPEC.operation),
     swingMotor: pick('swingMotor', DEFAULT_SPEC.swingMotor),
@@ -743,6 +770,8 @@ function describeOutdoor(
     if (has(groupId)) rows.push({ label, value: optionLabel(groupId, String(spec[groupId])) })
   }
   groupRow('leaves', 'Leaves')
+  groupRow('swingDirection', 'Opens')
+  groupRow('slideDirection', 'Slides')
   groupRow('infill', 'Infill')
   groupRow('material', 'Material')
   groupRow('slat', 'Slat size')

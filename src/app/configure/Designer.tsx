@@ -30,6 +30,7 @@ import type { MotorCandidate } from '@/lib/motors/specs'
 import { PREVIEW_NOTE_MAX_WORDS, previewNoteWordCount } from '@/lib/configurator/preview-prompt'
 import { DoorGlyph, icons, Stars } from '@/components/designer/glyphs'
 import { DoorlinkLogo } from '@/components/brand/DoorlinkLogo'
+import { CARD_GROUPS, OptionGlyph, ProductGlyph } from '@/components/designer/productGlyphs'
 import { RigBus, type ViewMode } from '@/components/designer/scene/DesignerRig'
 import { Button } from '@/components/ui/Button'
 import { Field, Input, Textarea } from '@/components/ui/Field'
@@ -86,7 +87,7 @@ const TABS: Record<ProductFamily, Array<{ id: TabId; label: string; icon: ReactN
 /** Which option groups each tab shows, per family. Groups that don't apply to the product are skipped. */
 const TAB_GROUPS: Record<ProductFamily, Partial<Record<TabId, string[]>>> = {
   garage: { windows: ['panelCount'], hardware: ['hardware', 'handles', 'opener', 'insulation'] },
-  gate: { type: ['leaves'], build: ['infill', 'material'], hardware: ['hardware', 'operation', 'swingMotor', 'motorBrand'] },
+  gate: { type: ['leaves', 'swingDirection', 'slideDirection'], build: ['infill', 'material'], hardware: ['hardware', 'operation', 'swingMotor', 'motorBrand'] },
   fence: { type: ['infill'], build: ['material'] },
   shutter: { type: ['slat'], hardware: ['control', 'operation', 'motorBrand'] },
 }
@@ -310,6 +311,27 @@ export function Designer({
       const group = groups.find((g) => g.id === id)
       if (!group) return null
       const value = String(effective[id as keyof DoorSpec])
+      // Choices that change what the product looks like get picture cards, like the garage door styles.
+      if (CARD_GROUPS.has(id)) {
+        return (
+          <section key={id} className="dz-panel-section">
+            <div className="dz-row-head">
+              <h2 className="dz-row-title">
+                {group.label}
+                <strong>{group.values.find((v) => v.id === value)?.label}</strong>
+              </h2>
+            </div>
+            <div className="dz-cards" data-count={Math.min(4, group.values.length)} role="group" aria-label={group.label}>
+              {group.values.map((option) => (
+                <button key={option.id} type="button" className="dz-card" title={option.description} aria-pressed={value === option.id} onClick={() => set(id as keyof DoorSpec, option.id as never)}>
+                  {OptionGlyph({ group: id, value: option.id, type: effective.productType })}
+                  {option.label.replace(/^Opens to the (.)/, (_m, first: string) => first.toUpperCase())}
+                </button>
+              ))}
+            </div>
+          </section>
+        )
+      }
       if (id === 'hardware') {
         return (
           <section key={id} className="dz-panel-section">
@@ -390,17 +412,18 @@ export function Designer({
           </>
         ) : (
           familyTypes.length > 1 && (
-            <div className="dz-chips" role="group" aria-label={`${words.noun} type`}>
+            <div className="dz-cards" data-count={Math.min(4, familyTypes.length)} role="group" aria-label={`${words.noun} type`}>
               {familyTypes.map((type) => (
                 <button
                   key={type.id}
                   type="button"
-                  className="dz-chip"
+                  className="dz-card"
                   title={type.description}
                   aria-pressed={effective.productType === type.id}
                   onClick={() => setType(type.id as ProductType)}
                 >
-                  {type.label}
+                  <ProductGlyph type={type.id} infill={effective.infill} />
+                  {type.label.replace(' gate', '').replace(' shutter', '')}
                 </button>
               ))}
             </div>

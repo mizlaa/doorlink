@@ -61,6 +61,7 @@ export function Stage({
   haze,
   fitAspect = false,
   rig,
+  flat = false,
   children,
 }: {
   tier: Tier
@@ -93,6 +94,8 @@ export function Stage({
   fitAspect?: boolean
   /** A camera controller to use instead of the standard orbit rig (the designer's 2D/3D viewer). */
   rig?: ReactNode
+  /** A flat 2D elevation: the `focus` depth of field is switched off (kept mounted, so nothing recompiles). */
+  flat?: boolean
   children: ReactNode
 }) {
   const settings = TIERS[tier]
@@ -112,6 +115,7 @@ export function Stage({
   }, [settings.shadowMapSize])
   const reduced = useMemo(prefersReducedMotion, [])
   const dof = useRef<{ target: THREE.Vector3 | null } | null>(null)
+  const focusDof = useRef<{ bokehScale: number } | null>(null)
 
   return (
     <Canvas
@@ -161,7 +165,8 @@ export function Stage({
         {onDemandShadows && <ShadowsOnDemand tier={tier} />}
         <Ready onReady={onReady} />
       </Suspense>
-      {composer && <Effects settings={settings} focus={focus} focusFollow={focusFollow} dof={dof} />}
+      {composer && <Effects settings={settings} focus={focus} focusFollow={focusFollow} dof={dof} focusDof={focusDof} />}
+      {focus && <FlatFocus effect={focusDof} flat={flat} />}
       {focusFollow && <FollowFocus effect={dof} />}
       {rig ?? (
         <CameraRig
@@ -190,18 +195,20 @@ const Effects = memo(function Effects({
   focus,
   focusFollow,
   dof,
+  focusDof,
 }: {
   settings: (typeof TIERS)[Tier]
   focus?: [number, number, number]
   focusFollow: boolean
   dof: React.MutableRefObject<{ target: THREE.Vector3 | null } | null>
+  focusDof: React.MutableRefObject<{ bokehScale: number } | null>
 }) {
   return (
     <EffectComposer multisampling={settings.multisampling} enableNormalPass={false}>
       {settings.ambientOcclusion ? <N8AO halfRes={settings.aoHalfRes} aoRadius={0.9} distanceFalloff={0.6} intensity={2.4} quality={settings.aoHalfRes ? 'performance' : 'medium'} /> : <></>}
       {settings.multisampling === 0 ? <SMAA /> : <></>}
       {focus ? (
-        <DepthOfField target={focus} worldFocusRange={6} bokehScale={1.6} />
+        <DepthOfField ref={focusDof as never} target={focus} worldFocusRange={6} bokehScale={FOCUS_BOKEH} />
       ) : focusFollow && settings.ambientOcclusion ? (
         <DepthOfField ref={dof as never} target={DOF_ORIGIN} worldFocusRange={26} bokehScale={2.4} />
       ) : (
@@ -211,6 +218,18 @@ const Effects = memo(function Effects({
     </EffectComposer>
   )
 })
+
+const FOCUS_BOKEH = 1.6
+
+/** A long-lens 2D elevation has no depth to soften: the blur goes to zero, without rebuilding the effect chain. */
+function FlatFocus({ effect, flat }: { effect: React.MutableRefObject<{ bokehScale: number } | null>; flat: boolean }) {
+  useFrame(() => {
+    const e = effect.current
+    const want = flat ? 0 : FOCUS_BOKEH
+    if (e && e.bokehScale !== want) e.bokehScale = want
+  })
+  return null
+}
 
 /** Renders once everything inside the Suspense boundary has loaded. */
 function Ready({ onReady }: { onReady?: () => void }) {

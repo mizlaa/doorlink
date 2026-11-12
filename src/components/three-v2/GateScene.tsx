@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, type ReactElement } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { RoundedBox } from '@react-three/drei'
+import type { ReactNode } from 'react'
 import * as THREE from 'three'
 import { SceneMaterialsProvider, useSceneTextures } from '@/components/three/SceneMaterials'
 import { useSceneTextures as usePbrTextures } from './assets'
@@ -56,6 +57,10 @@ export interface GateLook {
   metalness: number
   infill: GateInfill
   leaves: 1 | 2
+  /** Swing leaves open away from the viewer (outward) instead of towards them. */
+  opensOut?: boolean
+  /** A sliding gate runs back to the left instead of the right. */
+  slidesLeft?: boolean
   swingMotor: SwingMotorStyle
   motorised: boolean
   /** Shutter slat height, metres. */
@@ -665,8 +670,9 @@ export function SwingGate({
   const gap = 0.02
   const leafWidth = w / leaves - gap
   const hingeZ = posts ? 0.07 : PILLAR / 2 - 0.06
+  // Outward is the same gate and motors seen from the other side: mirrored front to back.
   return (
-    <group>
+    <group scale={[1, 1, look.opensOut ? -1 : 1]}>
       <Leaf
         hingeX={-w / 2 + gap / 2}
         width={leafWidth}
@@ -879,10 +885,14 @@ function GateLayout({ look, isOpen }: { look: GateLook; isOpen: boolean }) {
   const { widthM: w, heightM: h, kind } = look
 
   if (kind === 'fence') {
+    // A short run sits in a block of ordinary width, the rest of the front in
+    // plain Colorbond: side fences only a metre apart would wall the camera in.
+    const half = Math.max(w / 2, BLOCK_MIN_HALF)
     return (
       <group>
         <FenceRun fromX={-w / 2} toX={w / 2} height={h} look={look} material={material} />
-        <Boundary left={-w / 2} right={w / 2} height={h} cornerPosts material={material} />
+        {half > w / 2 && <FenceInfill half={half} w={w} />}
+        <Boundary left={-half} right={half} height={h} cornerPosts={half === w / 2} material={material} />
       </group>
     )
   }
@@ -893,8 +903,9 @@ function GateLayout({ look, isOpen }: { look: GateLook; isOpen: boolean }) {
   const edge = w / 2 + post
   const frontHalf = Math.max(8.5, edge + sideRun + 0.6, edge + Math.max(2.5, w * 0.6) + 0.6)
 
+  // Sliding to the left is the whole installation mirrored side to side.
   return (
-    <group>
+    <group scale={[kind === 'sliding' && look.slidesLeft ? -1 : 1, 1, 1]}>
       {posts ? (
         <>
           <Box
@@ -927,6 +938,19 @@ function GateLayout({ look, isOpen }: { look: GateLook; isOpen: boolean }) {
         <SwingGate look={look} isOpen={isOpen} material={material} posts={posts} />
       )}
     </group>
+  )
+}
+
+const BLOCK_MIN_HALF = 3
+
+/** Plain neighbour-style fencing either side of a short run, so the new section stands out. */
+function FenceInfill({ half, w }: { half: number; w: number }) {
+  const m = useHouseMaterials(usePbrTextures())
+  return (
+    <>
+      <ColorbondFence from={[-half, 0]} to={[-w / 2 - 0.06, 0]} m={m} />
+      <ColorbondFence from={[w / 2 + 0.06, 0]} to={[half, 0]} m={m} />
+    </>
   )
 }
 
@@ -1031,6 +1055,8 @@ export function GateScene({
   onTier = () => undefined,
   paused = false,
   onReady,
+  rig,
+  flat = false,
 }: {
   look: GateLook
   isOpen: boolean
@@ -1040,6 +1066,10 @@ export function GateScene({
   onTier?: (tier: Tier) => void
   paused?: boolean
   onReady?: () => void
+  /** A camera controller to use instead of the standard orbit rig (the designer's 2D/3D viewer). */
+  rig?: ReactNode
+  /** Seen as a flat 2D elevation: everything in focus, no depth of field. */
+  flat?: boolean
 }) {
   const fallbackBus = useMemo(() => new CameraBus(), [])
   const views = useMemo(() => gateViews(look), [look.kind, look.widthM, look.heightM])
@@ -1058,6 +1088,8 @@ export function GateScene({
       maxDistance={30}
       shadowSpan={Math.max(12, look.widthM * 1.6)}
       onReady={onReady}
+      rig={rig}
+      flat={flat}
       focus={shutter ? [0, (look.kind === 'shop' ? 0 : 0.9) + look.heightM / 2, 0] : undefined}
     >
       <SceneMaterialsProvider>

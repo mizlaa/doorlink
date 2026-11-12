@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { cookies } from 'next/headers'
 import { getSession } from '@/lib/auth'
-import { parseSpec } from '@/lib/configurator/options'
+import { DESIGNER_START_SPEC, parseSpec, PRODUCT_TYPES, specForType, type ProductType } from '@/lib/configurator/options'
 import { aiImagesAvailable } from '@/lib/ai/design-image'
 import { LOCATION_COOKIE, parseLocationCookie, readLocation } from '@/lib/location'
 import { loadMotorCandidates } from '@/lib/motors/catalogue'
@@ -21,7 +21,7 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
-type PageProps = { searchParams: Promise<{ spec?: string; postcode?: string; suburb?: string }> }
+type PageProps = { searchParams: Promise<{ spec?: string; product?: string; postcode?: string; suburb?: string }> }
 
 export default async function ConfigurePage({ searchParams }: PageProps) {
   const params = await searchParams
@@ -37,6 +37,9 @@ export default async function ConfigurePage({ searchParams }: PageProps) {
     } catch {
       initialSpec = undefined
     }
+  } else if (params.product && PRODUCT_TYPES.some((type) => type.id === params.product)) {
+    // A link straight to one product ("/configure?product=swing-gate"), starting from its own defaults.
+    initialSpec = specForType(DESIGNER_START_SPEC, params.product as ProductType)
   }
 
   const store = await cookies()
