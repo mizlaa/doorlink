@@ -11,6 +11,7 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "db:generate": "prisma generate",
+    "db:check": "prisma migrate diff --from-schema-datasource prisma/schema.prisma --to-schema-datamodel prisma/schema.prisma --exit-code",
     "db:push": "prisma db push && npm run db:constraints",
     "db:migrate": "prisma migrate dev",
     "db:seed": "tsx prisma/seed.ts",
