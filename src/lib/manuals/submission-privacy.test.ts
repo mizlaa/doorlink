@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { isPubliclyServable, resolveFileUrl } from '../storage'
 import { submissionFileKey } from './submission-files'
 
@@ -8,6 +8,13 @@ import { submissionFileKey } from './submission-files'
 // upload looks exactly like a working one.
 
 describe('an unapproved submission is not public', () => {
+  beforeEach(() => {
+    // These cases exercise local-public storage, independently of the
+    // developer's real connected storage configuration.
+    vi.stubEnv('SUPABASE_STORAGE_BUCKET', '')
+  })
+  afterEach(() => vi.unstubAllEnvs())
+
   const key = submissionFileKey('sub_123', 'application/pdf')
 
   it('stores submissions outside the publicly servable prefix', () => {
